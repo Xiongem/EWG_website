@@ -195,6 +195,8 @@ switch ($genre) {
     var dateGoal = <?=$dateGoal?>;
     if (dateGoal == 0) {
         document.getElementById("no-goal_date").checked = true;
+        document.getElementById("goal_date").disabled = true;
+        document.getElementById("goal_date").value = 0000-00-00;
     }
 
     function noDate() {
