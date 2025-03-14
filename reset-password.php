@@ -50,6 +50,8 @@
             <h1>Reset Your Password</h1>
             <div class="fuck-you">
                 <form action="php-processes/process-resetPassword" method="post" id="signup">
+                    <input required placeholder="Email" name="email" id="email" type="email">
+                    <br>
                     <input required placeholder="Password" autocomplete="new-password" name="pwd" id="pwd" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
                     <br>

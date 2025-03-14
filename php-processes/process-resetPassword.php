@@ -25,26 +25,18 @@ $password_hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 
 // prepare and bind
-$stmt = $conn -> prepare("UPDATE users SET password_hash=? WHERE id=?");
-$stmt->bind_param("si",
-                    $_POST["username"],
-                    $_POST["email"],
-                    $password_hash);
+$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET password_hash=? WHERE id=?");
+$stmt->bind_param("ss",
+                        $password_hash,
+                        $_POST["email"]);
 
-if ($stmt -> execute()) {
-    $sql = sprintf("SELECT * FROM users
-                    WHERE username = '%s'",
-                    $conn->real_escape_string($_POST["username"]));
-
-    $result = $conn->query($sql);
-
-    $user = $result->fetch_assoc();
-
-        $_SESSION['loggedin'] = true;
-        $_SESSION["user_id"] = $user["id"];
-
-        header("Location: /profile-create.html");
+    if ($stmt -> execute()) {
+        header("Location: /login.php");
+        // echo "Record updated successfully";
         exit;
     } else {
-        die("email already taken");
-}
+        die("an unexpected error occured");
+    }
+    $stmt -> close();
+    mysqli_close($conn);
+?>
