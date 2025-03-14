@@ -90,12 +90,11 @@
     </script>
 </head>
 <body>
-    <!-- php-processes/process-signup -->
     <div class="body">
         <div class="login">
             <h1>Create Your Account</h1>
             <div class="fuck-you">
-                <form action="" method="post" id="signup">
+                <form action="php-processes/process-signup" method="post" id="signup">
                     <input required placeholder="Username" autocomplete="new-username" name="username" id="username" type="text" minlength="3" maxlength="30" onkeyup="checkName();">
                     <br>
                     <span id="user-availability-status"></span>
