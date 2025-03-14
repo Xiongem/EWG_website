@@ -183,6 +183,7 @@ switch ($genre) {
     <?php makeFooter() ?>
     <script>
         var genre = <?=$genre?>;
+        console.log(genre);
         var selected = document.getElementById('new-project-genre');
         selected.selectedIndex = genre;
         console.log(selected.value);
