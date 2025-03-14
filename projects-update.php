@@ -122,7 +122,7 @@ switch ($genre) {
                                         
                                         var genre = <?=$genre?>;
                                         var selected = document.getElementById('new-project-genre');
-                                        selected.value = genre;
+                                        selected.selectedIndex = genre;
                                         console.log(selected.value);
                                         
                                     </script>
