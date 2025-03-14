@@ -5,7 +5,7 @@ session_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
-if (! empty($_POST["username"])) {
+// if (! empty($_POST["username"])) {
     $sql = "SELECT * FROM users WHERE username=?";
     $statement = $_SESSION["conn"]->prepare($sql);
         $statement->bind_param('s', 
@@ -18,5 +18,5 @@ if (! empty($_POST["username"])) {
         echo "Username Available";
     }
  exit();
-}
+// }
 ?>
