@@ -13,7 +13,7 @@ dbConnect();
         $statement->execute();
     $result = $statement->get_result();
     if ($result->num_rows > 0) {
-        echo "Username Already Exist";
+        echo "Username Already Exists";
     } else {
         echo "Username Available";
     }
