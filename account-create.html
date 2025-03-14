@@ -46,30 +46,23 @@
         // }
 
     function checkname(){
-        var name=document.getElementById( "username" ).value;
+        var username=document.getElementById( "username" ).value;
         
         if(name){
             $.ajax({
             type: 'post',
             url: 'php-processes/checkdata.php',
             data: {
-                username:name,
+                username:username,
             },
             success: function (response) {
-                $( '#name_status' ).html(response);
-                if(response=="Username Available")	
-                {
-                    return true;	
-                }
-                else
-                {
-                    return false;	
-                }
+                $( 'user-availability-status' ).html(response);
             }
             });
         }
         else{
-            $( '#name_status' ).html("");
+            $( 'user-availability-status' ).html("");
+            console.log("Something went wrong")
             return false;
         }
     }
@@ -83,7 +76,7 @@
             <div class="fuck-you">
                 <form action="" method="post" id="signup">
                     <input required placeholder="Username" autocomplete="new-username" name="username" id="username" type="text" minlength="3" maxlength="30" onkeyup="checkname();">
-                    <span id="name_status"></span>
+                    <span id="user-availability-status"></span>
                     <br>
                     <input required placeholder="Email" name="email" id="email" type="email">
                     <br>
