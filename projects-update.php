@@ -20,6 +20,8 @@ $user = $result->fetch_assoc();
 
     if ($date == "0000-00-00"){
         $dateGoal = 0;
+    } else {
+        $dailyGoal = $user["goal_date"];
     }
 switch ($genre) {
     case '1':
@@ -190,7 +192,9 @@ switch ($genre) {
     </div>
     <?php makeFooter() ?>
     <script>
-  
+    if (<?=$dateGoal?> == 0) {
+        document.getElementById("no-goal_date").checked = true;
+    }
 
     function noDate() {
         var checkBox = document.getElementById("no-goal_date");
