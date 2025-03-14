@@ -19,4 +19,18 @@ if (! empty($_POST["username"])) {
     }
  exit();
 }
+if (! empty($_POST["email"])) {
+    $sql = "SELECT * FROM users WHERE email=?";
+    $statement = $_SESSION["conn"]->prepare($sql);
+        $statement->bind_param('s', 
+                    $_POST["email"]);
+        $statement->execute();
+    $result = $statement->get_result();
+    if ($result->num_rows > 0) {
+        echo "Email Already in Use";
+    } else {
+        echo "";
+    }
+ exit();
+}
 ?>
