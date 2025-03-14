@@ -187,6 +187,7 @@ switch ($genre) {
         var selected = document.getElementById('new-project-genre');
         selected.selectedIndex = genre - 1;
         console.log(selected.value);
+        switchImage();
     // switch (userGenre) {
     //     case '1':
     //         var selectedGenre = document.getElementById('adventure');
