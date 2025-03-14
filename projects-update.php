@@ -200,7 +200,7 @@ switch ($genre) {
 
         if (checkBox.checked == true) {
             document.getElementById("goal_date").disabled = true;
-            document.getElementById("goal_date").value = "";
+            document.getElementById("goal_date").value = 0;
         } else if (checkBox.checked == false) {
             document.getElementById("goal_date").disabled = false;
         }
