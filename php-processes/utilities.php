@@ -117,7 +117,8 @@ function makePopup() {
             <div class="container">
             <div class="not-logged-in" id="not-logged-in">
                 <p>Psst, hey you. If you already have an account just click the Login link above. 
-                    If you're new click <a href="account-create.html">here</a> to sign up and 
+                <br>    
+                If you're new click <a href="account-create.html">here</a> to sign up and 
                     start earning badges!</p>
             </div>
         HTML;
