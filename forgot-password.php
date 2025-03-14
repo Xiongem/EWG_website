@@ -23,8 +23,8 @@
             <form id="forget-form" method="post" action="php-processes/send-password-reset">
                 <div class="fuck-you">
                     <div class="forget-info-wrapper">
-                        <label class="label" for="email">email</label><br>
-                        <input type="email" name="email" id="forget-email">
+                        <!-- <label class="label" for="email">email</label><br> -->
+                        <input type="email" name="email" id="forget-email" placeholder="email address">
                         <button id="submit" class="submit-btn">Send</button>
                     </div>
                 </div>
