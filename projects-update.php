@@ -192,7 +192,10 @@ switch ($genre) {
     </div>
     <?php makeFooter() ?>
     <script>
-
+    var dateGoal = <?=$dateGoal?>;
+    if (dateGoal == 0) {
+        document.getElementById("no-goal_date").checked = true;
+    }
 
     function noDate() {
         var checkBox = document.getElementById("no-goal_date");
