@@ -185,7 +185,7 @@ switch ($genre) {
         var genre = <?=$genre?>;
         console.log(genre);
         var selected = document.getElementById('new-project-genre');
-        selected.selectedIndex = genre;
+        selected.selectedIndex = genre - 1;
         console.log(selected.value);
     // switch (userGenre) {
     //     case '1':
