@@ -7,13 +7,13 @@ dbConnect();
 
 if (! empty($_POST["username"])) {
     $sql = "SELECT * FROM users WHERE username=?";
-        $statement = $_SESSION["conn"]->prepare($sql);
+    $statement = $_SESSION["conn"]->prepare($sql);
         $statement->bind_param('s', 
                     $_POST["username"]);
         $statement->execute();
-        $result = $statement->get_result();
+    $result = $statement->get_result();
     if ($result->num_rows > 0) {
-        echo "User Name Already Exist";
+        echo "Username Already Exist";
     } else {
         echo "Username Available";
     }
