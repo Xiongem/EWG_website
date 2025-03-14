@@ -116,7 +116,9 @@ function makePopup() {
         $htmlContent = <<<HTML
             <div class="container">
             <div class="not-logged-in" id="not-logged-in">
-                <p>Looks like you're not logged in. Click <a href="login.php">here</a> to login or sign up!</p>
+                <p>Psst, hey you. If you already have an account just click the Login link above. 
+                    If you're new click <a href="account-create.html">here</a> to sign up and 
+                    start earning badges!</p>
             </div>
         HTML;
             echo $htmlContent;
