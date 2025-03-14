@@ -120,10 +120,7 @@ switch ($genre) {
                                 <select id="new-project-genre" name="switch" onchange="switchImage();">
                                     <script>
                                         
-                                        var genre = <?=$genre?>;
-                                        var selected = document.getElementById('new-project-genre');
-                                        selected.selectedIndex = genre;
-                                        console.log(selected.value);
+                                        
                                         
                                     </script>
                                     <option class="genre" name="adventure" id="adventure" value="1">Adventure</option>
@@ -185,6 +182,10 @@ switch ($genre) {
     </div>
     <?php makeFooter() ?>
     <script>
+        var genre = <?=$genre?>;
+        var selected = document.getElementById('new-project-genre');
+        selected.selectedIndex = genre;
+        console.log(selected.value);
     // switch (userGenre) {
     //     case '1':
     //         var selectedGenre = document.getElementById('adventure');
