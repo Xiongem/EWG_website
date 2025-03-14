@@ -123,8 +123,8 @@ switch ($genre) {
                                         var genre = <?=$genre?>;
                                         var select = document.querySelector('select');
                                         select.value = genre;
-
-                                        console.log(genre)
+                                        var selected = document.getElementById('new-project-genre');
+                                        console.log(selected.value);
                                         
                                     </script>
                                     <option class="genre" name="adventure" id="adventure" value="1">Adventure</option>
