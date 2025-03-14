@@ -53,7 +53,7 @@
             type: 'post',
             url: 'php-processes/checkdata.php',
             data: {
-                username:username,
+                'username':username,
             },
             success: function (data) {
                 $( '#user-availability-status' ).html(data);
