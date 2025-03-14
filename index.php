@@ -143,8 +143,6 @@ $_SESSION["current_count"] = $current_count;
 $_SESSION["goal"] = $goal;
 $_SESSION["days"] = $days;
 $_SESSION["daily"] = $daily;
-
-echo "Testing Testing";
 ?>
 
 <!DOCTYPE html>
