@@ -120,7 +120,7 @@ switch ($genre) {
                                 <select id="new-project-genre" name="switch" onchange="switchImage();">
                                     <script>
                                         
-
+                                        var genre = <?=$genre?>;
                                         const select = document.querySelector('select');
                                         select.value = genre;
 
