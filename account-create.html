@@ -55,8 +55,8 @@
             data: {
                 username:username,
             },
-            success: function (response) {
-                $( '#user-availability-status' ).html(response);
+            success: function (data) {
+                $( '#user-availability-status' ).html(data);
             }
             });
         }
