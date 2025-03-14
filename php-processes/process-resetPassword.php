@@ -25,7 +25,7 @@ $password_hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 
 // prepare and bind
-$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET password_hash=? WHERE id=?");
+$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET password_hash=? WHERE email=?");
 $stmt->bind_param("ss",
                         $password_hash,
                         $_POST["email"]);
