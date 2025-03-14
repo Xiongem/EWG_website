@@ -18,7 +18,7 @@
     <h1>Forgot Password</h1>
     <div class="form-wrapper">
         <div class="form-contents">
-            <h3 id="instruct">Sumbit your email address associated with your account 
+            <h3 id="instruct">Enter the email address associated with your account 
                 to receive a one-time email to reset your password.</h3>
             <form id="forget-form" method="post" action="php-processes/send-password-reset">
                 <div class="fuck-you">
