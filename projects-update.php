@@ -121,7 +121,7 @@ switch ($genre) {
                                     <script>
                                         
                                         var genre = <?=$genre?>;
-                                        const select = document.querySelector('select');
+                                        var select = document.querySelector('select');
                                         select.value = genre;
 
                                         console.log(genre)
