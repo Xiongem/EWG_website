@@ -56,12 +56,12 @@
                 username:username,
             },
             success: function (response) {
-                $( 'user-availability-status' ).html(response);
+                $( '#user-availability-status' ).html(response);
             }
             });
         }
         else{
-            $( 'user-availability-status' ).html("");
+            $( '#user-availability-status' ).html("");
             console.log("Something went wrong")
             return false;
         }
