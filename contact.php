@@ -32,7 +32,7 @@ dbConnect();
                     <div class="user-info">
                         <div class="contact-contents">
                             <label for="username">Username</label>
-                            <input type="text" id="username" name="username" placeholder="required" require>
+                            <input type="text" id="username" name="username">
                         </div>
                         <div class="contact-contents">
                             <label for="email">Email</label>
