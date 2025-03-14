@@ -45,7 +45,7 @@
         // }
         // }
 
-    function checkname(){
+    function checkName(){
         var username=document.getElementById( "username" ).value;
         
         if(username){
@@ -66,6 +66,27 @@
             return false;
         }
     }
+    function checkEmail(){
+        var email=document.getElementById( "email" ).value;
+        
+        if(email){
+            $.ajax({
+            type: 'post',
+            url: 'php-processes/checkdata',
+            data: {
+                email: email,
+            },
+            success: function (data) {
+                $( '#email-availability-status' ).html(data);
+            }
+            });
+        }
+        else{
+            $( '#email-availability-status' ).html("");
+            console.log("Something went wrong")
+            return false;
+        }
+    }
     </script>
 </head>
 <body>
@@ -75,11 +96,13 @@
             <h1>Create Your Account</h1>
             <div class="fuck-you">
                 <form action="" method="post" id="signup">
-                    <input required placeholder="Username" autocomplete="new-username" name="username" id="username" type="text" minlength="3" maxlength="30" onkeyup="checkname();">
+                    <input required placeholder="Username" autocomplete="new-username" name="username" id="username" type="text" minlength="3" maxlength="30" onkeyup="checkName();">
                     <br>
                     <span id="user-availability-status"></span>
                     <br>
                     <input required placeholder="Email" name="email" id="email" type="email">
+                    <br>
+                    <span id="email-availability-status"></span>
                     <br>
                     <input required placeholder="Password" autocomplete="new-password" name="pwd" id="pwd" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
