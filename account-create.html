@@ -44,15 +44,21 @@
         //     errorElement.classList.add('success');
         // }
         // }
-        
+
     function checkname(){
-        var username = $('#username').val();
+        var username=document.getElementById( "username" ).value;
         
         if(username){
-            $.post("php-processes/checkdata", {
-            //DATA
-            username: username,
-        });
+            $.ajax({
+            type: 'post',
+            url: 'php-processes/checkdata',
+            data: {
+                username: username,
+            },
+            success: function (data) {
+                $( '#user-availability-status' ).html(data);
+            }
+            });
         }
         else{
             $( '#user-availability-status' ).html("");
