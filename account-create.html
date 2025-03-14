@@ -44,21 +44,15 @@
         //     errorElement.classList.add('success');
         // }
         // }
-
-    function checkname(){
-        var username=document.getElementById( "username" ).value;
         
-        if(name){
-            $.ajax({
-            type: 'post',
-            url: 'php-processes/checkdata.php',
-            data: {
-                'username':username,
-            },
-            success: function (data) {
-                $( '#user-availability-status' ).html(data);
-            }
-            });
+    function checkname(){
+        var username = $('#username').val();
+        
+        if(username){
+            $.post("php-processes/update-badges", {
+            //DATA
+            username: username,
+        });
         }
         else{
             $( '#user-availability-status' ).html("");
