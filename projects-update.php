@@ -192,6 +192,86 @@ switch ($genre) {
     </div>
     <?php makeFooter() ?>
     <script>
+    var userGenre = <?=$genre?>;
+    switch (userGenre) {
+        case '1':
+            var selectedGenre = document.getElementById('adventure');
+            selectedGenre.selected = true;
+            break;
+        case '2':
+            var selectedGenre = document.getElementById('erotica');
+            selectedGenre.selected = true;
+            break;
+        case '3':
+            var selectedGenre = document.getElementById('fanfiction');
+            selectedGenre.selected = true;
+            break;
+        case '4':
+            var selectedGenre = document.getElementById('fantasy');
+            selectedGenre.selected = true;
+            break;
+        case '5':
+            var selectedGenre = document.getElementById('historical');
+            selectedGenre.selected = true;
+            break;
+        case '6':
+            var selectedGenre = document.getElementById('horror');
+            selectedGenre.selected = true;
+            break;
+        case '7':
+            var selectedGenre = document.getElementById('humor');
+            selectedGenre.selected = true;
+            break;
+        case '8':
+            var selectedGenre = document.getElementById('lgbt');
+            selectedGenre.selected = true;
+            break;
+        case '9':
+            var selectedGenre = document.getElementById('literary');
+            selectedGenre.selected = true;
+            break;
+        case '10':
+            var selectedGenre = document.getElementById('musical');
+            selectedGenre.selected = true;
+            break;
+        case '11':
+            var selectedGenre = document.getElementById('mystery');
+            selectedGenre.selected = true;
+            break;
+        case '12':
+            var selectedGenre = document.getElementById('personal');
+            selectedGenre.selected = true;
+            break;
+        case '13':
+            var selectedGenre = document.getElementById('religious');
+            selectedGenre.selected = true;
+            break;
+        case '14':
+            var selectedGenre = document.getElementById('romance');
+            selectedGenre.selected = true;
+            break;
+        case '15':
+            var selectedGenre = document.getElementById('scifi');
+            selectedGenre.selected = true;
+            break;
+        case '16':
+            var selectedGenre = document.getElementById('thriller');
+            selectedGenre.selected = true;
+            break;
+        case '17':
+            var selectedGenre = document.getElementById('ya');
+            selectedGenre.selected = true;
+            break;
+        case '18':
+            var selectedGenre = document.getElementById('childrens');
+            selectedGenre.selected = true;
+            break;
+        default:
+            console.log("something went wrong")
+            break;
+    }
+
+    
     var dateGoal = <?=$dateGoal?>;
     if (dateGoal == 0) {
         document.getElementById("no-goal_date").checked = true;
