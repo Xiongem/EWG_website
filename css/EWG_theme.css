@@ -122,7 +122,8 @@ header {
 #not-logged-in {
     display: flex;
     justify-content: center;
-    font-size: x-large;
+    text-align: center;
+    font-size: 18px;
 }
 .nav-menu {
     flex: 1;
