@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Elsewhere Writers Guild Official Website"> 
+    <meta property="og:description" content="The official website for the Elsewhere Writers Guild, an alternative option to NaNoWriMo."> 
+    <meta property="og:image" content="http://elsewherewriters.com/images/comp-cat-beta.png"> 
+    <meta property="og:url" content="http://elsewherewriters.com/index.html">
+    <title>Profile Creation</title>
+    <link rel="stylesheet" href="css/EWG_theme.css">
+    <link rel="stylesheet" href="css/profile-create_theme.css">
+    <link rel="website icon" type="png" href="images\comp-cat.png">
+    <script src="javascript/script.js"></script>
+</head>
+<body>
+    <div class="create-container">
+        <div class="create-content">
+            <h1>Update Your Profile</h1>
+            <form action="php-processes/process-profileCreate.php" method="post" id="profileCreation">
+                <label for="bio">Bio: Tell everyone a little about yourself</label><br>
+                <textarea name="bio" id="bio" placeholder="What genres do you like to write in or what hobbies do you have? (don't put important or private info in here, we don't have great security)"></textarea><br>
+                <label for="favs">Favorites: What are your favorite books or authors?</label><br>
+                <textarea name="favs" id="favs"></textarea><br>
+                <button value="Submit" id="profile-create-button">Update</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

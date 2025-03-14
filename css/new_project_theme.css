@@ -1,0 +1,241 @@
+/* NEW PROJECT CREATION THEME */
+:root,
+    /* light theme number 1 */
+    :root.light1{
+        --background-color: #f0d9ff;
+        --text-color: #2e1f60;
+        --reverse-text-color: #f0d9ff;
+        --accent-1: #c099d8;
+        --accent-2: #e1ba7a;
+        --accent-3: #00738a;
+        --filter-color: #2e1f607e;
+        --box-shadow: 5px 5px 12px #2e1f607e;
+        --text-shadow: 0px 0px 10px #f0d9ff;
+        --warning: #da4545;
+    }
+    /*light theme number 2 */
+    :root.light2 {
+        --background-color: #f9e7e7;
+        --text-color: #2f1f45;
+        --reverse-text-color: #f9e7e7;
+        --accent-1: #f9dbbd;
+        --accent-2: #b96ac9;
+        --accent-3: #00416c;
+        --filter-color: #2f1f457e;
+        --box-shadow: 5px 5px 12px #2e1f607e;
+        --text-shadow: 0px 0px 10px var(--accent-2);
+        --warning: #da4545;
+    }
+    /*dark theme number 1*/
+    :root.dark1 {
+        --background-color: #312257;
+        --text-color: #f9dbbd;
+        --reverse-text-color: #312257;
+        --accent-1: #502163;
+        --accent-2: #ffc680;
+        --accent-3: #3c7e85;
+        --filter-color: #f9dbbd7e;
+        --box-shadow: 0px 0px 15px #f9dbbd7e;
+        --warning: #b82a2a;
+    }
+    /*dark theme number 2 */
+    :root.dark2 {
+        --background-color: #2f1f45;
+        --text-color: #f9e7e7;
+        --reverse-text-color: #2f1f45;
+        --accent-1: #00416c;
+        --accent-2: #b96ac9;
+        --accent-3: #f9dbbd;
+        --filter-color: #f9e7e77e;
+        --box-shadow: 0px 0px 15px #f9e7e77e;
+        --warning: #9a0202;
+    }
+    /* dark theme number 3 */
+    :root.dark3 {
+        --background-color: #24184b;
+        --text-color: #dda7ff;
+        --reverse-text-color: #24184b;
+        --accent-1: #563d76;
+        --accent-2: #fbd160;
+        --accent-3: #1b85a6;
+        --filter-color: #dda7ff7e;
+        --box-shadow: 0px 0px 15px #dda7ff7e;
+        --warning: #9a0202;
+    }
+img {
+    width: 10em;
+    height: fit-content;
+}
+label {
+    font-size: 35px;
+    margin-right: 8px;
+}
+#new-project-title, #new-project-genre, #about-info, #goal, #goal_date, #daily_goal{
+    background-color: var(--background-color);
+    border-color: var(--accent-2);
+    border-style: solid;
+    border-radius: 12px;
+    color: var(--text-color);
+    accent-color: var(--accent-1);
+    padding: 8px;
+    height: 3em;
+}
+#new-project-title, #about-info, #goal {
+    width: 16em;
+    margin-bottom: 1.5em;
+}
+#goal_date,#new-project-genre {
+    width: 16em;
+}
+#daily_goal {
+    width: 8em;
+}
+#advice {
+    margin-bottom: 1.5em;
+}
+.daily_goal {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.daily-contain {
+    display: flex;
+    margin-top: 1em;
+}
+#np-submit {
+    width: 6em;
+    height: 3em;
+    background-color: var(--accent-2);
+    border-color: transparent;
+    border-radius: 16px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    float: right;
+}
+#about-info {
+    height: 20em;
+    width: 40em;
+    resize: vertical;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.contents {
+    border: 4px solid var(--accent-3);
+    border-radius: 8px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accent-1);
+}
+.stuff {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+.img-contain {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+.drop-shadow {
+    width: fit-content;
+    height: auto;
+    /*box-shadow: 0px 0px 20px 4px var(--accent-3);*/
+    filter: drop-shadow(0px 0px 25px var(--filter-color));
+}
+.about-content {
+    display: flex;
+    align-items: flex-start;
+}
+.genre-content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.goal_num, .goal_end {
+    display: flex;
+    flex-direction: row;
+}
+/* Customize the label (the container) */
+.no-goal_date {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* Hide the browser's default checkbox */
+.no-goal_date input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--background-color);
+  border: 1px solid var(--accent-2);
+  border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+/* .no-goal_date:hover input ~ .checkmark {
+  background-color: ;
+} */
+
+/* When the checkbox is checked, add a blue background */
+.no-goal_date input:checked ~ .checkmark {
+  background-color: var(--accent-3);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.no-goal_date input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.no-goal_date .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--accent-2);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#recommend {
+    font-size: 18px;
+}

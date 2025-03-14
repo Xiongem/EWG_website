@@ -1,0 +1,155 @@
+:root,
+    /* light theme number 1 */
+    :root.light1{
+        --background-color: #f0d9ff;
+        --text-color: #2e1f60;
+        --reverse-text-color: #f0d9ff;
+        --accent-1: #c099d8;
+        --accent-2: #e1ba7a;
+        --accent-3: #00738a;
+        --filter-color: #2e1f607e;
+        --box-shadow: 5px 5px 12px #2e1f607e;
+        --text-shadow: 0px 0px 10px #f0d9ff;
+        --warning: #da4545;
+    }
+    /*light theme number 2 */
+    :root.light2 {
+        --background-color: #f9e7e7;
+        --text-color: #2f1f45;
+        --reverse-text-color: #f9e7e7;
+        --accent-1: #f9dbbd;
+        --accent-2: #b96ac9;
+        --accent-3: #00416c;
+        --filter-color: #2f1f457e;
+        --box-shadow: 5px 5px 12px #2e1f607e;
+        --text-shadow: 0px 0px 10px var(--accent-2);
+        --warning: #da4545;
+    }
+    /*dark theme number 1*/
+    :root.dark1 {
+        --background-color: #312257;
+        --text-color: #f9dbbd;
+        --reverse-text-color: #312257;
+        --accent-1: #502163;
+        --accent-2: #ffc680;
+        --accent-3: #3c7e85;
+        --filter-color: #f9dbbd7e;
+        --box-shadow: 0px 0px 15px #f9dbbd7e;
+        --warning: #b82a2a;
+    }
+    /*dark theme number 2 */
+    :root.dark2 {
+        --background-color: #2f1f45;
+        --text-color: #f9e7e7;
+        --reverse-text-color: #2f1f45;
+        --accent-1: #00416c;
+        --accent-2: #b96ac9;
+        --accent-3: #f9dbbd;
+        --filter-color: #f9e7e77e;
+        --box-shadow: 0px 0px 15px #f9e7e77e;
+        --warning: #9a0202;
+    }
+    /* dark theme number 3 */
+    :root.dark3 {
+        --background-color: #24184b;
+        --text-color: #dda7ff;
+        --reverse-text-color: #24184b;
+        --accent-1: #563d76;
+        --accent-2: #fbd160;
+        --accent-3: #1b85a6;
+        --filter-color: #dda7ff7e;
+        --box-shadow: 0px 0px 15px #dda7ff7e;
+        --warning: #9a0202;
+    }
+
+label {
+    font-size: 25px;
+    margin-right: 8px;
+}
+.create-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding: 3em 0;
+}
+.create-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--accent-3);
+    border-radius: 8px;
+    background-color: var(--accent-1);
+    padding: 0 3em;
+}
+#bio{
+    height: 10em;
+    width: 40em;
+    background-color: var(--background-color);
+    border-color: var(--accent-2);
+    border-style: solid;
+    border-radius: 12px;
+    color: var(--text-color);
+    accent-color: var(--accent-1);
+    padding: 8px;
+    margin-bottom: 2em;
+}
+.fav-container {
+    display: flex;
+    flex-direction: column;
+}
+.fav-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    gap: 0.5em;
+}
+.favs {
+    height: 4em;
+    width: 35em;
+    background-color: var(--background-color);
+    border-color: var(--accent-2);
+    border-style: solid;
+    border-radius: 12px;
+    color: var(--text-color);
+    accent-color: var(--accent-1);
+    padding: 8px;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+#profile-create-button {
+    width: fit-content;
+    height: 3em;
+    background-color: var(--accent-2);
+    border-color: transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    float: right;
+    padding: 0px 8px;
+    margin-bottom: 1em;
+}
+.cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    height: 2.5em;
+    border-color: transparent;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    float: right;
+    background-color: var(--warning);
+}
+.cancel-button {
+    color: var(--reverse-text-color);
+    text-decoration: none;
+}

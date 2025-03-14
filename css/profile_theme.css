@@ -1,0 +1,558 @@
+/* PROFILE THEME */
+:root,
+    /* light theme number 1 */
+    :root.light1{
+        --background-color: #f0d9ff;
+        --text-color: #2e1f60;
+        --reverse-text-color: #f0d9ff;
+        --accent-1: #c099d8;
+        --accent-2: #e1ba7a;
+        --accent-3: #00738a;
+        --filter-color: #2e1f607e;
+        --box-shadow: 5px 5px 12px #2e1f607e;
+        --text-shadow: 0px 0px 10px #f0d9ff;
+        --warning: #da4545;
+    }
+    /*light theme number 2 */
+    :root.light2 {
+        --background-color: #f9e7e7;
+        --text-color: #2f1f45;
+        --reverse-text-color: #f9e7e7;
+        --accent-1: #f9dbbd;
+        --accent-2: #b96ac9;
+        --accent-3: #00416c;
+        --filter-color: #2f1f457e;
+        --box-shadow: 5px 5px 12px #2e1f607e;
+        --text-shadow: 0px 0px 10px var(--accent-2);
+        --warning: #da4545;
+    }
+    /*dark theme number 1*/
+    :root.dark1 {
+        --background-color: #312257;
+        --text-color: #f9dbbd;
+        --reverse-text-color: #312257;
+        --accent-1: #502163;
+        --accent-2: #ffc680;
+        --accent-3: #3c7e85;
+        --filter-color: #f9dbbd7e;
+        --box-shadow: 0px 0px 15px #f9dbbd7e;
+        --warning: #b82a2a;
+    }
+    /*dark theme number 2 */
+    :root.dark2 {
+        --background-color: #2f1f45;
+        --text-color: #f9e7e7;
+        --reverse-text-color: #2f1f45;
+        --accent-1: #00416c;
+        --accent-2: #b96ac9;
+        --accent-3: #f9dbbd;
+        --filter-color: #f9e7e77e;
+        --box-shadow: 0px 0px 15px #f9e7e77e;
+        --warning: #9a0202;
+    }
+    /* dark theme number 3 */
+    :root.dark3 {
+        --background-color: #24184b;
+        --text-color: #dda7ff;
+        --reverse-text-color: #24184b;
+        --accent-1: #563d76;
+        --accent-2: #fbd160;
+        --accent-3: #1b85a6;
+        --filter-color: #dda7ff7e;
+        --box-shadow: 0px 0px 15px #dda7ff7e;
+        --warning: #9a0202;
+}
+.add-new-container {
+    position: relative;
+    display: block;
+    float: right;
+    z-index: 1;
+    margin: 0.5em 2em 0em 0em;
+}
+.add-new-contents button {
+    height: 45px;
+    width: 9em;
+    border-radius: 30px;
+    border: transparent;
+    background-color: var(--accent-3);
+    color: var(--reverse-text-color);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    z-index: 1;
+}
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 33em;
+}
+.pfp-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-1);
+    width: 40%;
+    box-sizing: border-box;
+    border: 5px solid var(--accent-3);
+    border-radius: 16px;
+    margin: 1em;
+    color: var(--text-color);
+}
+.pfp-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    border-radius: 50%;
+}
+#overlay {
+    width: 10.5em;
+    height: 10.5em;
+    translate: 0px -3px;
+}
+.profile-pfp {
+    width: 10em;
+    height: auto;
+    margin-bottom: 1em;
+}
+.pfp-contents h1 {
+    font-size: 40px;
+    color: var(--text-color);
+    margin: 0.2em 0em 1.2em 0em;
+}
+.pfp-contents .profile-pfp {
+    margin: 0px;
+}
+.favs-container {
+    display: flex;
+    width: 100%;
+    padding: 0px 2em 0px 2em;
+    gap: 3em;
+    align-items: center;
+}
+#favs {
+    text-decoration: underline;
+}
+.bio-container {
+    width: 60%;
+    /* align-content: center; */
+    padding-left: 1em;
+}
+.bio-contents {
+    display: flex;
+    height: 40%;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.bio-contents h2 {
+    font-size: 40px;
+    margin-top: 0.5em;
+}
+.bio-contents p {
+    padding-left: 1em;
+}
+.current-container {
+    height: 50%;
+    border-top: 2px solid var(--accent-3);
+    margin-right: 1em;
+}
+.current-container h1 {
+    margin-bottom: 0.2em;
+}
+.current-content {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+}
+.current-content img {
+    width: 8em;
+    height: auto;
+}
+.current-2 {
+    padding-right: 10px;
+}
+.badge-showcase-container h1 {
+    font-size: 60px;
+    margin-bottom: 0.3em;
+    padding-bottom: 0;
+    text-decoration: underline;
+}
+.badge-showcase-container h2 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--text-color);
+    margin: 0px;
+}
+#badge-instruct {
+    text-align: center;
+    margin-bottom: 2em;
+}
+#all-time-header {
+    margin-bottom: 1em;
+}
+.badge-showcase-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+.badge-area-content {
+    display: flex;
+    flex-direction: column;
+}
+.badge-prject-contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.badge-alltime-container {
+    width: 100%;
+}
+.badge-rows-pro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px 0.8em 4em;
+}
+.badge-rows-pro .badge1 {
+    cursor: pointer;
+}
+/* .badge1 {
+    filter: drop-shadow(var(--box-shadow));
+} */
+.pop-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: first baseline;
+    align-items: center;
+
+}
+.elementToPopup {
+    background-color: #463057f2;
+    color: #ddd;
+    padding: 2px 8px;
+    border: 1px solid #e3b88b;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    z-index: 2;
+    flex-wrap: nowrap;
+}
+.elementToHover {
+    z-index: 1;
+}
+.elementToPopup h3 {
+    text-decoration: underline;
+}
+.summary {
+    display: block;
+    width: 100%;
+    height: 8.3em;
+    overflow: hidden;
+}
+.summaryPopup {
+    width: 35em;
+    translate: 42em 15em;
+    z-index: 2;
+}
+.sum-container {
+    font-size: 15px;
+    padding: 1em;
+}
+
+
+/* PROJECT - ROW 1 BADGES */
+#quarter-quomplete {
+    position: relative;
+}
+#start-1st-project {
+    position: relative;
+}
+#first-daily {
+    position: relative;
+}
+#half-way {
+    position: relative;
+}
+#all-downhill {
+    position: relative;
+}
+#cross-finish {
+    position: relative;
+}
+#out-gate {
+    position: relative;
+}
+#on-track {
+    position: relative;
+}
+
+#start-1st-project-popup {
+    display: none;
+    margin-top: -80px;
+}
+#first-daily-popup {
+    display: none;
+    margin-top: -100px;
+}
+#quarter-quomplete-popup {
+    display: none;
+    margin-top: -100px;
+}
+#half-way-popup {
+    display: none;
+    margin-top: -140px;
+}
+#all-downhill-popup {
+    display: none;
+    margin-top: -120px;
+}
+#cross-finish-popup {
+    display: none;
+    margin-top: -160px;
+}
+#on-track-popup {
+    display: none;
+    margin-top: -120px;
+}
+
+/* PROJECT - ROW 2 BADGES */
+#out-gate {
+    position: relative;
+}
+#streak-two {
+    position: relative;
+}
+#streak-three {
+    position: relative;
+}
+#streak-seven {
+    position: relative;
+}
+#streak-fourteen {
+    position: relative;
+}
+#streak-twentyOne {
+    position: relative;
+}
+#every-streak {
+    position: relative;
+}
+
+#out-gate-popup {
+    display: none;
+    margin-top: -100px;
+}
+#streak-two-popup {
+    display: none;
+    margin-top: -80px;
+}
+#streak-three-popup {
+    display: none;
+    margin-top: -80px;
+}
+#streak-seven-popup {
+    display: none;
+    margin-top: -80px;
+}
+#streak-fourteen-popup {
+    display: none;
+    margin-top: -80px;
+}
+#streak-twentyOne-popup {
+    display: none;
+    margin-top: -80px;
+}
+#every-streak-popup {
+    display: none;
+    margin-top: -120px;
+}
+
+/* PROJECT - ROW 3 BADGES */
+#back-it-up {
+    position: relative;
+}
+#outline {
+    position: relative;
+}
+#journey {
+    position: relative;
+}
+#dual-wielder {
+    position: relative;
+}
+#gathering {
+    position: relative;
+}
+#breakthrough {
+    position: relative;
+}
+
+#back-it-up-popup {
+    display: none;
+    margin-top: -140px;
+}
+#outline-popup {
+    display: none;
+    margin-top: -120px;
+}
+#journey-popup {
+    display: none;
+    margin-top: -120px;
+}
+#dual-wielder-popup {
+    display: none;
+    margin-top: -120px;
+}
+#gathering-popup {
+    display: none;
+    margin-top: -100px;
+}
+#hear-ye-popup {
+    display: none;
+    margin-top: -120px;
+}
+#breakthrough-popup {
+    display: none;
+    margin-top: -160px;
+}
+
+/* PROJECT - ROW 4 BADGES */
+#starting-fresh {
+    position: relative;
+}
+#ever-persist {
+    position: relative;
+}
+#touch-grass {
+    position: relative;
+}
+#business {
+    position: relative;
+}
+#tears-wept {
+    position: relative;
+}
+#overachiever {
+    position: relative;
+}
+#finish-him {
+    position: relative;
+}
+
+#starting-fresh-popup {
+    display: none;
+    margin-top: -80px;
+}
+#ever-persist-popup {
+    display: none;
+    margin-top: -80px;
+}
+#touch-grass-popup {
+    display: none;
+    margin-top: -120px;
+}
+#business-popup {
+    display: none;
+    margin-top: -140px;
+}
+#tears-wept-popup {
+    display: none;
+    margin-top: -100px;
+}
+#overachiever-popup {
+    display: none;
+    margin-top: -80px;
+}
+#finish-him-popup {
+    display: none;
+    margin-top: -140px;
+}
+
+
+/* ALL TIME - ROW 1 BADGES */
+#complete-one-project {
+    position: relative;
+}
+#complete-five-project {
+    position: relative;
+}
+#complete-ten-project {
+    position: relative;
+}
+
+#complete-one-project-popup {
+    display: none;
+    margin-top: -50px;
+}
+#complete-five-project-popup {
+    display: none;
+    margin-top: -50px;
+}
+#complete-ten-project-popup {
+    display: none;
+    margin-top: -50px;
+}
+
+
+/* ALL TIME - ROW 2 BADGES */
+#streak-fiend-project {
+    position: relative;
+}
+#hydra-slayer {
+    position: relative;
+}
+#vet-streaker {
+    position: relative;
+}
+#vet-guild {
+    position: relative;
+}
+
+#streak-fiend-popup {
+    display: none;
+    margin-top: -100px;
+}
+#hydra-slayer-popup {
+    display: none;
+    margin-top: -120px;
+}
+#vet-streaker-popup {
+    display: none;
+    margin-top: -100px;
+}
+#vet-guild-popup {
+    display: none;
+    margin-top: -100px;
+}
+
+
+/* ALL TIME - ROW 3 BADGES */
+#start-first-project {
+    position: relative;
+}
+#spicy-spicy {
+    position: relative;
+}
+#tears-alltime {
+    position: relative;
+}
+
+#start-first-project-popup {
+    display: none;
+    margin-top: -80px;
+}
+#spicy-spicy-popup {
+    display: none;
+    margin-top: -120px;
+}
+#tears-alltime-popup {
+    display: none;
+    margin-top: -100px;
+}

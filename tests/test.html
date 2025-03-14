@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .error {
+            color: red;
+            font-size: 0.875rem;
+        }
+        .success {
+            color: green;
+            font-size: 0.875rem;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create Account</h2>
+        <form id="signup">
+            <div class="form-group">
+                <label for="username">username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="pwd" name="pwd" placeholder="Enter Password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_pwd">Confirm Password</label>
+                <input type="password" id="confirm_pwd" name="confirm_pwd" placeholder="Confirm Password" required>
+                <span id="passwordError" class="error"></span>
+            </div>
+            <button type="submit" class="submit-btn" id="submitBtn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('signup').addEventListener('input', function () {
+            validateForm();
+        });
+
+        function validateForm() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('pwd').value;
+            const confirmPassword = document.getElementById('confirm_pwd').value;
+            const submitBtn = document.getElementById('submitBtn');
+            const errorElement = document.getElementById('passwordError');
+
+            let isValid = true;
+
+            if (!username || !password || !confirmPassword) {
+                isValid = false;
+            }
+
+            if (password !== confirmPassword) {
+                errorElement.textContent = 'Passwords do not match';
+                errorElement.classList.remove('success');
+                errorElement.classList.add('error');
+                isValid = false;
+            } else {
+                errorElement.textContent = 'Passwords match';
+                errorElement.classList.remove('error');
+                errorElement.classList.add('success');
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+<?php //echo("<h2>$title</h2>")?>
+                    <?php //echo("<p>$info</p>")?>
+                    <?php //echo("<h2>Current: $current_count</h4>")?>
+                        <?php //echo ("<h2>Goal: $goal</h3>")?>
+$userID = htmlspecialchars($_SESSION["user_id"]);
+
+$sql = "SELECT * FROM current_project WHERE id=$userID";
+$result = $_SESSION["conn"]->query($sql);
+$user = $result->fetch_assoc();
+
+$genre = $user["genre"];
+$title = $user["title"];
+$info = $user["info"];
+$current_count = $user["current_count"];
+$goal = $user["goal"];
+$date = $user["goal_date"];

@@ -1,0 +1,329 @@
+/* Settings Theme */
+:root,
+    /* light theme number 1 */
+    :root.light1{
+        --background-color: #f0d9ff;
+        --text-color: #2e1f60;
+        --reverse-text-color: #f0d9ff;
+        --accent-1: #c099d8;
+        --accent-2: #e1ba7a;
+        --accent-3: #00738a;
+        --filter-color: #2e1f607e;
+        --box-shadow: 5px 5px 12px #2e1f607e;
+        --text-shadow: 0px 0px 10px #f0d9ff;
+        --warning: #b80303;
+    }
+    /*light theme number 2 */
+    :root.light2 {
+        --background-color: #f9e7e7;
+        --text-color: #2f1f45;
+        --reverse-text-color: #f9e7e7;
+        --accent-1: #f9dbbd;
+        --accent-2: #b96ac9;
+        --accent-3: #00416c;
+        --filter-color: #2f1f457e;
+        --box-shadow: 5px 5px 12px #2e1f607e;
+        --text-shadow: 0px 0px 10px var(--accent-2);
+        --warning: #b80303;
+    }
+    /*dark theme number 1*/
+    :root.dark1 {
+        --background-color: #312257;
+        --text-color: #f9dbbd;
+        --reverse-text-color: #312257;
+        --accent-1: #502163;
+        --accent-2: #ffc680;
+        --accent-3: #3c7e85;
+        --filter-color: #f9dbbd7e;
+        --box-shadow: 0px 0px 15px #f9dbbd7e;
+        --warning: #b80303;
+    }
+    /*dark theme number 2 */
+    :root.dark2 {
+        --background-color: #2f1f45;
+        --text-color: #f9e7e7;
+        --reverse-text-color: #2f1f45;
+        --accent-1: #00416c;
+        --accent-2: #b96ac9;
+        --accent-3: #f9dbbd;
+        --filter-color: #f9e7e77e;
+        --box-shadow: 0px 0px 15px #f9e7e77e;
+        --warning: #b80303;
+    }
+    /* dark theme number 3 */
+    :root.dark3 {
+        --background-color: #24184b;
+        --text-color: #dda7ff;
+        --reverse-text-color: #24184b;
+        --accent-1: #563d76;
+        --accent-2: #fbd160;
+        --accent-3: #1b85a6;
+        --filter-color: #dda7ff7e;
+        --box-shadow: 0px 0px 15px #dda7ff7e;
+        --warning: #b80303;
+    }
+.setting-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40em;
+    width: 100%;
+}
+.rows {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 1.5em;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 1em;
+}
+.setting-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid var(--accent-3);
+    border-radius: 12px;
+    width: 30em;
+    height: 20em;
+    background-color: var(--accent-1);
+    /* padding-bottom: 2em; */
+}
+.right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.setting-pfp-change {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 1em;
+}
+.setting-pfp-change img {
+    margin-bottom: 1em;
+}
+.setting-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.setting-pfp-change button {
+    height: 45px;
+    width: 9em;
+    border-radius: 30px;
+    border: 2px solid var(--accent-2);
+    cursor: pointer;
+    color: var(--reverse-text-color);
+    background-color: var(--accent-3);
+}
+.setting-buttons button {
+    height: 3em;
+    width: 6em;
+    border-radius: 30px;
+    border: transparent;
+    cursor: pointer;
+}
+.Themes {
+    background-color: var(--accent-3);
+    border-radius: 30px;
+    border: 2px solid var(--accent-2);
+    width: 11em;
+    height: 3em;
+}
+.Theme-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.Themes a {
+    color: var(--reverse-text-color);
+    text-decoration: none;
+    font-size: 25px;
+}
+.setTheme {
+    position: relative;
+    color: var(--text-color);
+    padding: 0.5em 2em;
+    font-size: 25px;
+    cursor: pointer;
+    border-bottom: 2px solid var(--accent-3);
+}
+.setTheme:last-child {
+    border: none;
+  }
+.setTheme:hover {
+    background-color: var(--accent-3); 
+    color: var(--reverse-text-color);
+}
+.setTheme:hover:first-child {
+    border-radius: 10px 10px 0px 0px;
+}
+.setTheme:hover:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+.cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    height: 2.5em;
+    border-color: transparent;
+    border-radius: 30px;
+    text-decoration: none;
+    /* margin: 1em; */
+    cursor: pointer;
+    float: right;
+    background-color: var(--warning);
+}
+.cancel-button {
+    color: var(--reverse-text-color);
+    text-decoration: none;
+}
+.save-button {
+    background-color: var(--accent-2);
+}
+/* Style the tab */
+.tab {
+    /* overflow: hidden; */
+    /* border: 1px solid #ccc; */
+    background-color: var(--background-color);
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+/* Style the buttons inside the tab */
+.tab-link {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+/* Change background color of buttons on hover */
+.tab-link:hover {
+    text-shadow: var(--text-shadow);
+}
+
+/* Create an active/current tablink class */
+.tab-link.active {
+    color: var(--accent-3);
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #ccc;
+    border-top: none; */
+}
+.appear-contents {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;
+    /* align-items: center; */
+}
+.set-but-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+.themes-contents {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    width: 50%;
+    height: 100%;
+}
+.form-content {
+    height: 100%;
+    margin-bottom: 2em;
+}
+.delete {
+    color: var(--text-color);
+    text-decoration: none;
+    text-align: center;
+}
+.safety {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6em;
+    padding: 0px 8px;
+    height: 3em;
+    border-color: transparent;
+    border-radius: 30px;
+    text-decoration: none;
+/* margin: 1em; */
+    cursor: pointer;
+    float: right;
+    background-color: var(--accent-3);
+}
+.safety-button {
+    color: var(--text-color);
+    text-decoration: none;
+    text-align: center;
+}
+.anchor {
+    display: absolute;
+    bottom: 0;
+}
+.danger-contents {
+    padding: 0px 1em;
+    margin-bottom: 4em;
+    text-align: center;
+}
+.danger-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.danger-buttons button{
+    height: 3.5em;
+    width: 6.5em;
+    border-radius: 30px;
+    border: transparent;
+    cursor: pointer;
+    margin-bottom: 1em;
+    background-color: var(--warning);
+}
+.delete-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6em;
+    padding: 0px 8px;
+    height: 3em;
+    border-color: transparent;
+    border-radius: 30px;
+    text-decoration: none;
+/* margin: 1em; */
+    cursor: pointer;
+    float: right;
+    background-color: var(--warning);
+}
+.active {
+    display: block;
+}
