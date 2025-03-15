@@ -35,7 +35,7 @@ function makeDropDown() {
                     </div>
             </div>
         </div>
-        <script>
+        <!-- <script>
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */
             //PROFILE ICON
@@ -56,7 +56,7 @@ function makeDropDown() {
                 }
             }
             } 
-        </script>
+        </script> -->
     HTML;
         echo $htmlContent;
 } elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "images/badges/hydra-slayer-mono.png"){
@@ -72,7 +72,7 @@ function makeDropDown() {
                     </div>
             </div>
         </div>
-        <script>
+        <!-- <script>
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */
             //PROFILE ICON
@@ -93,7 +93,7 @@ function makeDropDown() {
                 }
             }
             } 
-        </script>
+        </script> -->
     HTML;
         echo $htmlContent;
         
