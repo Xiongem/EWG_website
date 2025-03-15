@@ -25,7 +25,7 @@ function makeDropDown() {
         $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
         <div class="dropdown">
-            <div class="fuck-you" onclick="myFunction()">
+            <div class="fuck-you" >
                 <img id="pfp-overlay" class="pfp-overlay pfp"src="images/hydra-slayer-overlay.png">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
                         <div id="myDropdown" class="dropdown-content">
@@ -41,7 +41,7 @@ function makeDropDown() {
     $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
         <div class="dropdown">
-            <div class="fuck-you" onclick="myFunction()">
+            <div class="fuck-you" >
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
                         <div id="myDropdown" class="dropdown-content">
                         <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
@@ -57,7 +57,7 @@ function makeDropDown() {
     $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
         <div class="dropdown">
-            <div class="fuck-you" onclick="myFunction()">
+            <div class="fuck-you" >
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
                         <div id="myDropdown" class="dropdown-content">
                         <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
