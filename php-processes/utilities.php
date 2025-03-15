@@ -42,7 +42,7 @@ function makeDropDown() {
             }
             window.onclick = function(event2) {
                 if (!event2.target.matches('.dropbtn')) {
-                    var openDropdowns = document.getElementById("myDropdown");
+                    var openDropdown = document.getElementById("myDropdown");
                     if (openDropdown.classList.contains('show')) {
                         openDropdown.classList.remove('show');
                         }
