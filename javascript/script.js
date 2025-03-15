@@ -9,22 +9,6 @@ var selectedImage = document.createNewProject.switch.options[document.createNewP
 document.genrePreview.src = imageList[selectedImage].src;
 }
 //sets the user color scheme
-// const setTheme = (theme) => {
-//   console.log(theme);
-//   // document.documentElement.className = theme;
-//   // // localStorage.key('theme');
-//   // localStorage.setItem('theme', theme);
-//   // localStorage.setItem('color-scheme', theme);
-
-// }
-// window.onload = function getTheme() {
-
-//     const theme = localStorage.getItem('theme');
-
-//     theme && setTheme(theme);
-// // console.log("goodbye");
-// }
-
 function setTheme(theme) {
   document.documentElement.className = theme;
   localStorage.setItem('theme', theme);
@@ -42,14 +26,12 @@ window.onload = function getTheme() {
       showPass.type = "password";
     }
   } 
-
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 //PROFILE ICON
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
-  
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -67,7 +49,6 @@ window.onclick = function(event) {
 function myFunction2() {
   document.getElementById("myDropdown2").classList.toggle("show2");
 }
-
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
 if (!event.target.matches('.dropbtn2')) {
@@ -75,8 +56,8 @@ if (!event.target.matches('.dropbtn2')) {
   var i;
   for (i = 0; i < dropdowns.length; i++) {
     var openDropdown = dropdowns[i];
-    if (openDropdown.classList.contains('show')) {
-      openDropdown.classList.remove('show');
+    if (openDropdown.classList.contains('show2')) {
+      openDropdown.classList.remove('show2');
     }
   }
 }
