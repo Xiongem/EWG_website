@@ -375,6 +375,8 @@ $_SESSION["daily"] = $daily;
     </div>
     <?php makeFooter() ?>
     <script>
+console.log("testing this thing");
+
     var days = "<?=$days?>";
     if (days == 0) {
         document.getElementById('daysLeft').style.display = 'none';

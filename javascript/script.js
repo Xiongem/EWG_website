@@ -16,7 +16,6 @@ function setTheme(theme) {
 window.onload = function getTheme() {
   const theme = localStorage.getItem('theme');
   theme && setTheme(theme);
-  console.log("testing testing");
 }
 //adds a show password option
   function showPassword() {
