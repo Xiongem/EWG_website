@@ -52,27 +52,37 @@ function myFunction2() {
   console.log("second success");
 }
 // Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-if (!event.target.matches('.dropbtn2')||!event.target.matches('.dropbtn')) {
-  var dropdowns = document.getElementsByClassName("dropdown-content");
-  var dropdowns2 = document.getElementsByClassName("dropdown-content2");
-  var i;
-  var a;
-  for (i = 0; i < dropdowns2.length; i++) {
-    var openDropdown2 = dropdowns2[i];
-    if (openDropdown2.classList.contains('show2')) {
-      openDropdown2.classList.remove('show2');
+// window.onclick = function(event) {
+// if (!event.target.matches('.dropbtn2')||!event.target.matches('.dropbtn')) {
+//   var dropdowns = document.getElementsByClassName("dropdown-content");
+//   var dropdowns2 = document.getElementsByClassName("dropdown-content2");
+//   var i;
+//   var a;
+//   for (i = 0; i < dropdowns2.length; i++) {
+//     var openDropdown2 = dropdowns2[i];
+//     if (openDropdown2.classList.contains('show2')) {
+//       openDropdown2.classList.remove('show2');
+//     }
+//   }
+//   for (a = 0; a < dropdowns.length; a++) {
+//     var openDropdown = dropdowns[a];
+//     if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//         console.log("first success");
+//     }
+//   }
+// }
+// }
+
+document.addEventListener('click', function(event) {
+  const dropdowns = document.querySelectorAll('.dropdown'); // Select all dropdown elements
+
+  dropdowns.forEach(function(dropdown) {
+    if (!dropdown.contains(event.target)) { // If the click is outside the dropdown
+      dropdown.classList.remove('show'); // Close the dropdown
     }
-  }
-  for (a = 0; a < dropdowns.length; a++) {
-    var openDropdown = dropdowns[a];
-    if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-        console.log("first success");
-    }
-  }
-}
-}
+  });
+});
 //~~~~~~~~~~~~~~~~~~~~~~~~~//
 //#### Button Actions #####//
 //~~~~~~~~~~~~~~~~~~~~~~~~~//
