@@ -25,7 +25,7 @@ function makeDropDown() {
         $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
         <div class="dropdown">
-            <div class="fuck-you" onclick="dropDown()">
+            <div class="fuck-you" onclick="myFunction()">
                 <img id="pfp-overlay" class="pfp-overlay pfp"src="images/hydra-slayer-overlay.png">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
                         <div id="myDropdown" class="dropdown-content">
@@ -36,18 +36,10 @@ function makeDropDown() {
             </div>
         </div>
         <script>
-            function dropDown() {
-                document.getElementById("myDropdown").classList.toggle("show");
-                console.log("first success");
-            }
-            // window.addEventListener('click', e => {
-            //     if (!e.target.matches('.dropbtn')) {
-            //         var openDropdown = document.getElementById("myDropdown");
-            //         if (openDropdown.classList.contains('show')) {
-            //             openDropdown.classList.remove('show');
-            //             }
-            //     }
-            // })
+            // function dropDown() {
+            //     document.getElementById("myDropdown").classList.toggle("show");
+            //     console.log("first success");
+            // }
         </script>
     HTML;
         echo $htmlContent;
@@ -96,8 +88,8 @@ function makeNav() {
         <nav class="nav-menu">
             <a href="index.php">Home</a>
             <div class="dropdown2">
-                <a href="#" onclick="myFunction2()" class="dropbtn2">Projects</a>
-                    <div id="myDropdown2" class="dropdown-content2">
+                <a href="#" onclick="myFunction()" class="dropbtn">Projects</a>
+                    <div id="myDropdown2" class="dropdown-content">
                         <a href="new-project.php">Create New<br>Project <img class="drpdwn-icon2" id="new-icon" src="images\add.png"></a>
                         <a href="projects.php">Current/Past<br>Projects <img class="drpdwn-icon2" id="project-icon" src="images\writing.png"></a>
                     </div>
@@ -106,22 +98,22 @@ function makeNav() {
             <a href="about.php">About</a>
         </nav>
         <script>
-            function myFunction2() {
-                document.getElementById("myDropdown2").classList.toggle("show2");
-                console.log("second success");
-            }
-            window.onclick = function(event) {
-                if (!event.target.matches('.dropbtn2')) {
-                    var dropdowns2 = document.getElementsByClassName("dropdown-content2");
-                    var i;
-                    for (i = 0; i < dropdowns2.length; i++) {
-                        var openDropdown2 = dropdowns2[i];
-                        if (openDropdown2.classList.contains('show2')) {
-                        openDropdown2.classList.remove('show2');
-                        }
-                    }
-                }
-            }
+            // function myFunction() {
+            //     document.getElementById("myDropdown2").classList.toggle("show");
+            //     console.log("second success");
+            // }
+            // window.onclick = function(event) {
+            //     if (!event.target.matches('.dropbtn2')) {
+            //         var dropdowns2 = document.getElementsByClassName("dropdown-content2");
+            //         var i;
+            //         for (i = 0; i < dropdowns2.length; i++) {
+            //             var openDropdown2 = dropdowns2[i];
+            //             if (openDropdown2.classList.contains('show2')) {
+            //             openDropdown2.classList.remove('show2');
+            //             }
+            //         }
+            //     }
+            // }
         </script>
     HTML;
         echo $htmlContent;
