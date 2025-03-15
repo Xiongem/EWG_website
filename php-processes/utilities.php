@@ -40,14 +40,14 @@ function makeDropDown() {
                 document.getElementById("myDropdown").classList.toggle("show");
                 console.log("first success");
             }
-            window.addEventListener('click', e => {
-                if (!e.target.matches('.dropbtn')) {
-                    var openDropdown = document.getElementById("myDropdown");
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                        }
-                }
-            })
+            // window.addEventListener('click', e => {
+            //     if (!e.target.matches('.dropbtn')) {
+            //         var openDropdown = document.getElementById("myDropdown");
+            //         if (openDropdown.classList.contains('show')) {
+            //             openDropdown.classList.remove('show');
+            //             }
+            //     }
+            // })
         </script>
     HTML;
         echo $htmlContent;
