@@ -38,6 +38,7 @@ function makeDropDown() {
         <script>
               function myFunction() {
               document.getElementById("myDropdown").classList.toggle("show");
+              console.log("first success");
           }
           // Close the dropdown menu if the user clicks outside of it
           window.onclick = function(event2) {
@@ -48,7 +49,7 @@ function makeDropDown() {
               var openDropdown = dropdowns[i];
               if (openDropdown.classList.contains('show')) {
                   openDropdown.classList.remove('show');
-                  console.log("first success");
+                  
               }
               }
           }
