@@ -25,7 +25,7 @@ function makeDropDown() {
         $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
         <div class="dropdown">
-            <div class="fuck-you" >
+            <div class="fuck-you" onclick="myFunctionn()">
                 <img id="pfp-overlay" class="pfp-overlay pfp"src="images/hydra-slayer-overlay.png">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
                         <div id="myDropdown" class="dropdown-content">
@@ -35,19 +35,14 @@ function makeDropDown() {
                     </div>
             </div>
         </div>
-        <script>
-            // function dropDown() {
-            //     document.getElementById("myDropdown").classList.toggle("show");
-            //     console.log("first success");
-            // }
-        </script>
+        
     HTML;
         echo $htmlContent;
 } elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "images/badges/hydra-slayer-mono.png"){
     $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
         <div class="dropdown">
-            <div class="fuck-you" >
+            <div class="fuck-you" onclick="myFunctionn()">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
                         <div id="myDropdown" class="dropdown-content">
                         <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
@@ -63,7 +58,7 @@ function makeDropDown() {
     $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
         <div class="dropdown">
-            <div class="fuck-you" >
+            <div class="fuck-you" onclick="myFunctionn()">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
                         <div id="myDropdown" class="dropdown-content">
                         <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
@@ -88,8 +83,8 @@ function makeNav() {
         <nav class="nav-menu">
             <a href="index.php">Home</a>
             <div class="dropdown2">
-                <a href="#"  class="dropbtn">Projects</a>
-                    <div id="myDropdown2" class="dropdown-content">
+                <a href="#" onclick="myFunction2()" class="dropbtn2">Projects</a>
+                    <div id="myDropdown2" class="dropdown-content2">
                         <a href="new-project.php">Create New<br>Project <img class="drpdwn-icon2" id="new-icon" src="images\add.png"></a>
                         <a href="projects.php">Current/Past<br>Projects <img class="drpdwn-icon2" id="project-icon" src="images\writing.png"></a>
                     </div>
@@ -98,22 +93,7 @@ function makeNav() {
             <a href="about.php">About</a>
         </nav>
         <script>
-            // function myFunction() {
-            //     document.getElementById("myDropdown2").classList.toggle("show");
-            //     console.log("second success");
-            // }
-            // window.onclick = function(event) {
-            //     if (!event.target.matches('.dropbtn2')) {
-            //         var dropdowns2 = document.getElementsByClassName("dropdown-content2");
-            //         var i;
-            //         for (i = 0; i < dropdowns2.length; i++) {
-            //             var openDropdown2 = dropdowns2[i];
-            //             if (openDropdown2.classList.contains('show2')) {
-            //             openDropdown2.classList.remove('show2');
-            //             }
-            //         }
-            //     }
-            // }
+         
         </script>
     HTML;
         echo $htmlContent;
