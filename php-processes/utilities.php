@@ -35,6 +35,15 @@ function makeDropDown() {
                     </div>
             </div>
         </div>
+        <script>
+            function dropDown() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            // document.addEventListener('click', e => {
+            //     if (e.target.classList.contains('dropbtn')) return;
+            //         document.querySelectorAll('.dropdown-content').forEach(div => div.classList.remove('show'))
+            //     })
+        </script>
     HTML;
         echo $htmlContent;
 } elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "images/badges/hydra-slayer-mono.png"){
