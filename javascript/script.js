@@ -58,6 +58,7 @@ if (!event.target.matches('.dropbtn2')) {
     var openDropdown2 = dropdowns2[i];
     if (openDropdown2.classList.contains('show2')) {
       openDropdown2.classList.remove('show2');
+      console.log("success");
     }
   }
 }
