@@ -52,12 +52,12 @@ function myFunction2() {
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
 if (!event.target.matches('.dropbtn2')) {
-  var dropdowns = document.getElementsByClassName("dropdown-content2");
+  var dropdowns2 = document.getElementsByClassName("dropdown-content2");
   var i;
-  for (i = 0; i < dropdowns.length; i++) {
-    var openDropdown = dropdowns[i];
-    if (openDropdown.classList.contains('show2')) {
-      openDropdown.classList.remove('show2');
+  for (i = 0; i < dropdowns2.length; i++) {
+    var openDropdown2 = dropdowns2[i];
+    if (openDropdown2.classList.contains('show2')) {
+      openDropdown2.classList.remove('show2');
     }
   }
 }
