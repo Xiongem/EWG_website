@@ -31,7 +31,7 @@ toggle between hiding and showing the dropdown content */
 //PROFILE ICON
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
-}
+
 // Close the dropdown menu if the user clicks outside of it
 // window.onclick = function(event) {
 //   if (!event.target.matches('.dropbtn')) {
@@ -80,7 +80,7 @@ document.addEventListener('click', function(event) {
   dropdowns.forEach(function(dropdown) {
     if (!dropdown.contains(event.target)) { // If the click is outside the dropdown
       dropdown.classList.remove('show'); // Close the dropdown
-    
+    }
   });
 });
 //~~~~~~~~~~~~~~~~~~~~~~~~~//
