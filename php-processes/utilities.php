@@ -35,7 +35,7 @@ function makeDropDown() {
                     </div>
             </div>
         </div>
-        <!-- <script>
+        <script>
             /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */
             //PROFILE ICON
@@ -43,8 +43,8 @@ function makeDropDown() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
             // Close the dropdown menu if the user clicks outside of it
-            window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
+            window.onclick = function(event2) {
+            if (!event2.target.matches('.dropbtn')) {
                 var dropdowns = document.getElementsByClassName("dropdown-content");
                 var i;
                 for (i = 0; i < dropdowns.length; i++) {
@@ -56,7 +56,7 @@ function makeDropDown() {
                 }
             }
             } 
-        </script> -->
+        </script>
     HTML;
         echo $htmlContent;
 } elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "images/badges/hydra-slayer-mono.png"){
