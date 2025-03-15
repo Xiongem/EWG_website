@@ -91,6 +91,12 @@ function makeNav() {
             <a href="announcements.php">Announcements</a>
             <a href="about.php">About</a>
         </nav>
+        <script>
+            function myFunction2() {
+                document.getElementById("myDropdown2").classList.toggle("show2");
+                console.log("second success");
+        }
+        </script>
     HTML;
         echo $htmlContent;
     } else {
