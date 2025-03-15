@@ -35,26 +35,6 @@ function makeDropDown() {
                     </div>
             </div>
         </div>
-        <script>
-              function myFunction() {
-              document.getElementById("myDropdown").classList.toggle("show");
-              console.log("first success");
-          }
-          // Close the dropdown menu if the user clicks outside of it
-          window.onclick = function(event2) {
-          if (!event2.target.matches('.dropbtn')) {
-              var dropdowns = document.getElementsByClassName("dropdown-content");
-              var i;
-              for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-                  
-              }
-              }
-          }
-          } 
-        </script>
     HTML;
         echo $htmlContent;
 } elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "images/badges/hydra-slayer-mono.png"){
@@ -70,28 +50,6 @@ function makeDropDown() {
                     </div>
             </div>
         </div>
-        <!-- <script>
-            /* When the user clicks on the button,
-            toggle between hiding and showing the dropdown content */
-            //PROFILE ICON
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
-            // Close the dropdown menu if the user clicks outside of it
-            window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                    console.log("first success");
-                }
-                }
-            }
-            } 
-        </script> -->
     HTML;
         echo $htmlContent;
         
@@ -108,28 +66,6 @@ function makeDropDown() {
                     </div>
             </div>
         </div>
-        <!-- <script>
-            /* When the user clicks on the button,
-            toggle between hiding and showing the dropdown content */
-            //PROFILE ICON
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
-            // Close the dropdown menu if the user clicks outside of it
-            window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                    console.log("first success");
-                }
-                }
-            }
-            } 
-        </script> -->
     HTML;
         echo $htmlContent;
     } else {
@@ -155,9 +91,6 @@ function makeNav() {
             <a href="announcements.php">Announcements</a>
             <a href="about.php">About</a>
         </nav>
-        <script>
-            
-        </script>
     HTML;
         echo $htmlContent;
     } else {
