@@ -40,10 +40,10 @@ function makeDropDown() {
                 document.getElementById("myDropdown").classList.toggle("show");
                 console.log("first success");
             }
-            // document.addEventListener('click', e => {
-            //     if (e.target.classList.contains('dropbtn')) return;
-            //         document.querySelectorAll('.dropdown-content').forEach(div => div.classList.remove('show'))
-            //     })
+            document.addEventListener('click', e => {
+                if (e.target.classList.contains('dropbtn')) return;
+                    document.querySelectorAll('.dropdown-content').forEach(div => div.classList.remove('show'))
+                })
         </script>
     HTML;
         echo $htmlContent;
