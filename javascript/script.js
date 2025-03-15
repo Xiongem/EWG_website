@@ -125,16 +125,16 @@ function hideWarning() {
         }
         // Close the dropdown menu if the user clicks outside of it
         window.onclick = function(event, events) {
-            if (!event.target.matches('.dropbtn2')) {
-                var dropdowns2 = document.getElementsByClassName("dropdown-content2");
-                var i;
-                for (i = 0; i < dropdowns2.length; i++) {
-                    var openDropdown2 = dropdowns2[i];
-                    if (openDropdown2.classList.contains('show2')) {
-                    openDropdown2.classList.remove('show2');
-                    }
-                }
-            }
+            // if (!event.target.matches('.dropbtn2')) {
+            //     var dropdowns2 = document.getElementsByClassName("dropdown-content2");
+            //     var i;
+            //     for (i = 0; i < dropdowns2.length; i++) {
+            //         var openDropdown2 = dropdowns2[i];
+            //         if (openDropdown2.classList.contains('show2')) {
+            //         openDropdown2.classList.remove('show2');
+            //         }
+            //     }
+            // }
           if (!events.target.matches('.dropbtn')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
             var i;
