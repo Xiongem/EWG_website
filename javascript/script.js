@@ -79,9 +79,8 @@ document.addEventListener('click', function(event) {
 
   dropdowns.forEach(function(dropdown) {
     if (!dropdown.contains(event.target)) { // If the click is outside the dropdown
-      dropdown.classList.remove('show');
-      kajsdjasjd // Close the dropdown
-    }
+      dropdown.classList.remove('show'); // Close the dropdown
+    
   });
 });
 //~~~~~~~~~~~~~~~~~~~~~~~~~//
