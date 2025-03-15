@@ -40,10 +40,14 @@ function makeDropDown() {
                 document.getElementById("myDropdown").classList.toggle("show");
                 console.log("first success");
             }
-            document.addEventListener('click', e => {
-                if (e.target.classList.contains('dropbtn')) return;
-                    document.querySelectorAll('.dropdown-content').forEach(div => div.classList.remove('show'))
-                })
+            window.onclick = function(event2) {
+                if (!event2.target.matches('.dropbtn')) {
+                    var openDropdowns = document.getElementById("myDropdown");
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                        }
+                }
+            }
         </script>
     HTML;
         echo $htmlContent;
