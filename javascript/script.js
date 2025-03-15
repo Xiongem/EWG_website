@@ -16,6 +16,7 @@ function setTheme(theme) {
 window.onload = function getTheme() {
   const theme = localStorage.getItem('theme');
   theme && setTheme(theme);
+  console.log("testing testing");
 }
 //adds a show password option
   function showPassword() {
@@ -47,8 +48,6 @@ function myFunction() {
 //   }
 // } 
 //PROJECTS DROPDOWN
-console.log("testing testing")
-
 function myFunction2() {
   document.getElementById("myDropdown2").classList.toggle("show2");
   console.log("second success");
