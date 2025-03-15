@@ -25,7 +25,7 @@ function makeDropDown() {
         $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
         <div class="dropdown">
-            <div class="fuck-you" onclick="myFunction()">
+            <div class="fuck-you" >
                 <img id="pfp-overlay" class="pfp-overlay pfp"src="images/hydra-slayer-overlay.png">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
                         <div id="myDropdown" class="dropdown-content">
@@ -88,7 +88,7 @@ function makeNav() {
         <nav class="nav-menu">
             <a href="index.php">Home</a>
             <div class="dropdown2">
-                <a href="#" onclick="myFunction()" class="dropbtn">Projects</a>
+                <a href="#"  class="dropbtn">Projects</a>
                     <div id="myDropdown2" class="dropdown-content">
                         <a href="new-project.php">Create New<br>Project <img class="drpdwn-icon2" id="new-icon" src="images\add.png"></a>
                         <a href="projects.php">Current/Past<br>Projects <img class="drpdwn-icon2" id="project-icon" src="images\writing.png"></a>
