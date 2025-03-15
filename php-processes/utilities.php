@@ -38,6 +38,7 @@ function makeDropDown() {
         <script>
             function dropDown() {
                 document.getElementById("myDropdown").classList.toggle("show");
+                console.log("first success");
             }
             // document.addEventListener('click', e => {
             //     if (e.target.classList.contains('dropbtn')) return;
