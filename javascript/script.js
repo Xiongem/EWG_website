@@ -99,44 +99,45 @@ function hideWarning() {
 /* When the user clicks on the button,
             toggle between hiding and showing the dropdown content */
             //PROFILE ICON
-          //   function myFunction() {
-          //     document.getElementById("myDropdown").classList.toggle("show");
-          //     console.log("first success");
-          // }
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+              console.log("first success");
+          }
           // Close the dropdown menu if the user clicks outside of it
-          // window.onclick = function(event2) {
-          // if (!event2.target.matches('.dropbtn')) {
-          //     var dropdowns = document.getElementsByClassName("dropdown-content");
-          //     var i;
-          //     for (i = 0; i < dropdowns.length; i++) {
-          //     var openDropdown = dropdowns[i];
-          //     if (openDropdown.classList.contains('show')) {
-          //         openDropdown.classList.remove('show');
-          //         console.log("first success");
-          //     }
-          //     }
-          // }
-          // } 
+          window.onclick = function(event2) {
+          if (!event2.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                  console.log("first success");
+              }
+              }
+          }
+          } 
 
 
           //  PROJECTS DROPDOWN
-        //    function myFunction2() {
-        //     document.getElementById("myDropdown2").classList.toggle("show");
-        //     console.log("second success");
-        // }
+           function myFunction2() {
+            document.getElementById("myDropdown2").classList.toggle("show");
+            console.log("second success");
+        }
         // Close the dropdown menu if the user clicks outside of it
-        // window.onclick = function(event, events) {
-          // if (!event.target.matches('.dropbtn2')) {
-          //   var dropdowns2 = document.getElementsByClassName("dropdown-content2");
-          //   var i;
-          //   for (i = 0; i < dropdowns2.length; i++) {
-          //     var openDropdown2 = dropdowns2[i];
-          //     if (openDropdown2.classList.contains('show2')) {
-          //       openDropdown2.classList.remove('show2');
-          //       console.log("second success close");
-          //     }
-          //   }
-          // }
+        window.onclick = function(event, events) {
+          if (!event.target.matches('.dropbtn2')) {
+            var dropdowns2 = document.getElementsByClassName("dropdown-content2");
+            var i;
+            for (i = 0; i < dropdowns2.length; i++) {
+              var openDropdown2 = dropdowns2[i];
+              if (openDropdown2.classList.contains('show2')) {
+                openDropdown2.classList.remove('show2');
+                console.log("second success close");
+              }
+            }
+          }
+        }
         //   if (!event.target.matches('.drop')) {
         //     var dropdowns = document.getElementsByClassName("dropdown-contents");
         //     var i;
@@ -151,17 +152,17 @@ function hideWarning() {
         // }
       
 
-        window.addEventListener('load', function() {
-          // wait until the page loads before working with HTML elements
-          document.addEventListener('click', function(event) {
-            //click listener on the document
-            document.querySelectorAll('.dropdown-contents').forEach(function(el) {
-              if (el !== event.target) el.classList.remove('show')
-              // close any showing dropdown that isn't the one just clicked
-            });
-            if (event.target.matches('.dropbtn')) {
-              event.target.closest('.dropdown').querySelector('.dropdown-contents').classList.toggle('show')
-            }
-            // if this is a dropdown button being clicked, toggle the show class
-          })
-        })
+        // window.addEventListener('load', function() {
+        //   // wait until the page loads before working with HTML elements
+        //   document.addEventListener('click', function(event) {
+        //     //click listener on the document
+        //     document.querySelectorAll('.dropdown-contents').forEach(function(el) {
+        //       if (el !== event.target) el.classList.remove('show')
+        //       // close any showing dropdown that isn't the one just clicked
+        //     });
+        //     if (event.target.matches('.dropbtn')) {
+        //       event.target.closest('.dropdown').querySelector('.dropdown-contents').classList.toggle('show')
+        //     }
+        //     // if this is a dropdown button being clicked, toggle the show class
+        //   })
+        // })
