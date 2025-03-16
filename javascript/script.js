@@ -121,7 +121,7 @@ function hideWarning() {
 
           //  PROJECTS DROPDOWN
            function myFunction2() {
-            document.getElementById("myDropdown2").classList.toggle("show");
+            document.getElementById("myDropdown2").classList.toggle("show2");
             console.log("second success");
         }
         // Close the dropdown menu if the user clicks outside of it
