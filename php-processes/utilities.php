@@ -27,8 +27,8 @@ function makeDropDown() {
         <div class="dropdown">
             <div class="fuck-you" onclick="myFunction()">
                 <img id="pfp-overlay" class="pfp-overlay pfp"src="images/hydra-slayer-overlay.png">
-                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
-                        <div id="myDropdown" class="dropdown-content">
+                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn drop">
+                        <div id="myDropdown" class="dropdown-content dropdown-contents">
                         <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
                         <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
                         <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.png"></a>
@@ -43,8 +43,8 @@ function makeDropDown() {
         $htmlContent = <<<HTML
         <div class="dropdown">
             <div class="fuck-you" onclick="myFunction()">
-                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
-                        <div id="myDropdown" class="dropdown-content">
+                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn drop">
+                        <div id="myDropdown" class="dropdown-content dropdown-contents">
                         <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
                         <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
                         <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.png"></a>
@@ -59,8 +59,8 @@ function makeDropDown() {
         $htmlContent = <<<HTML
         <div class="dropdown">
             <div class="fuck-you" onclick="myFunction()">
-                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
-                        <div id="myDropdown" class="dropdown-content">
+                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn drop">
+                        <div id="myDropdown" class="dropdown-content dropdown-contents">
                         <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
                         <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
                         <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.png"></a>
@@ -83,8 +83,8 @@ function makeNav() {
         <nav class="nav-menu">
             <a href="index.php">Home</a>
             <div class="dropdown2">
-                <a href="#" onclick="myFunction2()" class="dropbtn2">Projects</a>
-                    <div id="myDropdown2" class="dropdown-content2">
+                <a href="#" onclick="myFunction2()" class="dropbtn2 drop">Projects</a>
+                    <div id="myDropdown2" class="dropdown-content2 dropdown-contents">
                         <a href="new-project.php">Create New<br>Project <img class="drpdwn-icon2" id="new-icon" src="images\add.png"></a>
                         <a href="projects.php">Current/Past<br>Projects <img class="drpdwn-icon2" id="project-icon" src="images\writing.png"></a>
                     </div>
