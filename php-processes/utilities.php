@@ -24,10 +24,10 @@ function makeDropDown() {
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "images/badges/hydra-slayer-color.png") {
         $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
-        <div class="dropdown">
+        <div class="dropdown drop">
             <div class="fuck-you" onclick="myFunction()">
                 <img id="pfp-overlay" class="pfp-overlay pfp"src="images/hydra-slayer-overlay.png">
-                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn drop">
+                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn">
                         <div id="myDropdown" class="dropdown-content dropdown-contents">
                         <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
                         <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
