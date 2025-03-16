@@ -138,7 +138,7 @@ function hideWarning() {
             }
           }
         
-          if (!events.target.matches('.drop')) {
+          else if (!events.target.matches('.drop')) {
             var dropdowns = document.getElementsByClassName("dropdown-contents");
             var a;
             for (a = 0; a < dropdowns.length; a++) {
