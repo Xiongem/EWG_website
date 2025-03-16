@@ -108,7 +108,7 @@ function makeDropDown() {
               // close any showing dropdown that isn't the one just clicked
             });
             if (event.target.matches('.drop')) {
-              event.target.closest('.dropdown').querySelector('.dropdown-contents').classList.toggle('show')
+              event.target.closest('.drop').querySelector('.dropdown-contents').classList.toggle('show')
             }
             // if this is a dropdown button being clicked, toggle the show class
           })
@@ -149,7 +149,7 @@ function makeNav() {
               // close any showing dropdown that isn't the one just clicked
             });
             if (event.target.matches('.drop')) {
-              event.target.closest('.dropdown').querySelector('.dropdown-contents').classList.toggle('show')
+              event.target.closest('.drop').querySelector('.dropdown-contents').classList.toggle('show')
             }
             // if this is a dropdown button being clicked, toggle the show class
           })
