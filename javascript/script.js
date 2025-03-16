@@ -104,19 +104,19 @@ function hideWarning() {
               console.log("first success");
           }
           // Close the dropdown menu if the user clicks outside of it
-          window.onclick = function(event2) {
-          if (!event2.target.matches('.dropbtn')) {
-              var dropdowns = document.getElementsByClassName("dropdown-content");
-              var i;
-              for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-                  console.log("first success");
-              }
-              }
-          }
-          } 
+          // window.onclick = function(event2) {
+          // if (!event2.target.matches('.dropbtn')) {
+          //     var dropdowns = document.getElementsByClassName("dropdown-content");
+          //     var i;
+          //     for (i = 0; i < dropdowns.length; i++) {
+          //     var openDropdown = dropdowns[i];
+          //     if (openDropdown.classList.contains('show')) {
+          //         openDropdown.classList.remove('show');
+          //         console.log("first success");
+          //     }
+          //     }
+          // }
+          // } 
 
 
           //  PROJECTS DROPDOWN
@@ -137,19 +137,19 @@ function hideWarning() {
               }
             }
           }
+        
+          if (!events.target.matches('.drop')) {
+            var dropdowns = document.getElementsByClassName("dropdown-contents");
+            var a;
+            for (a = 0; a < dropdowns.length; a++) {
+              var openDropdown = dropdowns[a];
+              if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                  console.log("first success close");
+              }
+            }
+          }
         }
-        //   if (!event.target.matches('.drop')) {
-        //     var dropdowns = document.getElementsByClassName("dropdown-contents");
-        //     var i;
-        //     for (i = 0; i < dropdowns.length; i++) {
-        //       var openDropdown = dropdowns[i];
-        //       if (openDropdown.classList.contains('show')) {
-        //           openDropdown.classList.remove('show');
-        //           console.log("first success close");
-        //       }
-        //     }
-        //   }
-        // }
       
 
         // window.addEventListener('load', function() {
