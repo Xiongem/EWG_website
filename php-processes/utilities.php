@@ -35,7 +35,7 @@ function makeDropDown() {
                     </div>
             </div>
         </div>
-        <script>
+        <!-- <script>
             window.addEventListener('load', function() {
           // wait until the page loads before working with HTML elements
           document.addEventListener('click', function(event) {
@@ -50,7 +50,7 @@ function makeDropDown() {
             // if this is a dropdown button being clicked, toggle the show class
           })
         })
-        </script>
+        </script> -->
     HTML;
         echo $htmlContent;
 } elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "images/badges/hydra-slayer-mono.png"){
@@ -66,7 +66,7 @@ function makeDropDown() {
                     </div>
             </div>
         </div>
-        <script>
+        <!-- <script>
             window.addEventListener('load', function() {
           // wait until the page loads before working with HTML elements
           document.addEventListener('click', function(event) {
@@ -81,7 +81,7 @@ function makeDropDown() {
             // if this is a dropdown button being clicked, toggle the show class
           })
         })
-        </script>
+        </script> -->
     HTML;
         echo $htmlContent;
         
@@ -98,7 +98,7 @@ function makeDropDown() {
                     </div>
             </div>
         </div>
-        <script>
+        <!-- <script>
             window.addEventListener('load', function() {
           // wait until the page loads before working with HTML elements
           document.addEventListener('click', function(event) {
@@ -113,7 +113,7 @@ function makeDropDown() {
             // if this is a dropdown button being clicked, toggle the show class
           })
         })
-        </script>
+        </script> -->
     HTML;
         echo $htmlContent;
     } else {
@@ -139,7 +139,7 @@ function makeNav() {
             <a href="announcements.php">Announcements</a>
             <a href="about.php">About</a>
         </nav>
-        <script>
+        <!-- <script>
             window.addEventListener('load', function() {
           // wait until the page loads before working with HTML elements
           document.addEventListener('click', function(event) {
@@ -154,7 +154,7 @@ function makeNav() {
             // if this is a dropdown button being clicked, toggle the show class
           })
         })
-        </script>
+        </script> -->
     HTML;
         echo $htmlContent;
     } else {
