@@ -130,7 +130,7 @@ function makeNav() {
         <nav class="nav-menu">
             <a href="index.php">Home</a>
             <div class="dropdown2 drop">
-                <a href="#" onclick="myFunction2()" class="dropbtn2 dropbutn">Projects</a>
+                <a href="#"  class="dropbtn2 dropbutn">Projects</a>
                     <div id="myDropdown2" class="dropdown-content2 dropdown-contents">
                         <a href="new-project.php">Create New<br>Project <img class="drpdwn-icon2" id="new-icon" src="images\add.png"></a>
                         <a href="projects.php">Current/Past<br>Projects <img class="drpdwn-icon2" id="project-icon" src="images\writing.png"></a>
