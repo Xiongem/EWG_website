@@ -25,7 +25,7 @@ function makeDropDown() {
         $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
         <div class="dropdown drop">
-            <div class="fuck-you" onclick="myFunction()">
+            <div class="fuck-you drop" onclick="myFunction()">
                 <img id="pfp-overlay" class="pfp-overlay pfp"src="images/hydra-slayer-overlay.png">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn">
                         <div id="myDropdown" class="dropdown-content dropdown-contents">
