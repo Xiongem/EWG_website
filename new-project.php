@@ -78,7 +78,7 @@ dbConnect();
                                 <label for="daily_goal">Daily Goal:</label><br>
                                 <input type="number" name="daily_goal" id="daily_goal" placeholder="250">
                             </div>
-                            <!-- <p id="recommend">Recommended number:</p> -->
+                            <span id="recommend"></span>
                         </div>
                     </div>
                     <div class="img-contain">
