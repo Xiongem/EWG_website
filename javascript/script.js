@@ -125,31 +125,31 @@ function hideWarning() {
             console.log("second success");
         }
         // Close the dropdown menu if the user clicks outside of it
-        // window.onclick = function(event, events) {
-        //   if (!event.target.matches('.dropbtn2')) {
-        //     var dropdowns2 = document.getElementsByClassName("dropdown-content2");
-        //     var i;
-        //     for (i = 0; i < dropdowns2.length; i++) {
-        //       var openDropdown2 = dropdowns2[i];
-        //       if (openDropdown2.classList.contains('show2')) {
-        //         openDropdown2.classList.remove('show2');
-        //         console.log("second success close");
-        //       }
-        //     }
-        //   }
+        window.onclick = function(event, events) {
+          if (!event.target.matches('.dropbtn2')) {
+            var dropdowns2 = document.getElementsByClassName("dropdown-content2");
+            var i;
+            for (i = 0; i < dropdowns2.length; i++) {
+              var openDropdown2 = dropdowns2[i];
+              if (openDropdown2.classList.contains('show2')) {
+                openDropdown2.classList.remove('show2');
+                console.log("second success close");
+              }
+            }
+          }
         
-        //   else if (!events.target.matches('.dropbtn')) {
-        //     var dropdowns = document.getElementsByClassName("dropdown-contents");
-        //     var a;
-        //     for (a = 0; a < dropdowns.length; a++) {
-        //       var openDropdown = dropdowns[a];
-        //       if (openDropdown.classList.contains('show')) {
-        //           openDropdown.classList.remove('show');
-        //           console.log("first success close");
-        //       }
-        //     }
-        //   }
-        // }
+          else if (!events.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-contents");
+            var a;
+            for (a = 0; a < dropdowns.length; a++) {
+              var openDropdown = dropdowns[a];
+              if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                  console.log("first success close");
+              }
+            }
+          }
+        }
       
 
         // window.addEventListener('load', function() {

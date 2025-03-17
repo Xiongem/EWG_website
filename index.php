@@ -375,17 +375,17 @@ $_SESSION["daily"] = $daily;
     </div>
     <?php makeFooter() ?>
     <script>
-window.onclick = function(event) {
-    var dropdowns = document.getElementsByClassName("dropdown-contents"); // Replace "dropdown-content" with the appropriate class name for your dropdowns
-    for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) { // Replace 'show' with the class name you use to show the dropdown
-            if (!openDropdown.contains(event.target)) { // Check if the click was inside the dropdown
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
+// window.onclick = function(event) {
+//     var dropdowns = document.getElementsByClassName("dropdown-contents"); // Replace "dropdown-content" with the appropriate class name for your dropdowns
+//     for (var i = 0; i < dropdowns.length; i++) {
+//         var openDropdown = dropdowns[i];
+//         if (openDropdown.classList.contains('show')) { // Replace 'show' with the class name you use to show the dropdown
+//             if (!openDropdown.contains(event.target)) { // Check if the click was inside the dropdown
+//                 openDropdown.classList.remove('show');
+//             }
+//         }
+//     }
+// }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     var days = "<?=$days?>";
     if (days == 0) {
