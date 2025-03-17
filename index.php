@@ -388,7 +388,7 @@ $_SESSION["daily"] = $daily;
             }
           }
         
-          else if (!events.target.matches('.drop')) {
+          else if (!events.target.matches('.dropbtn')) {
             var dropdowns = document.getElementsByClassName("dropdown-contents");
             var a;
             for (a = 0; a < dropdowns.length; a++) {
