@@ -57,8 +57,8 @@ function makeDropDown() {
     $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
         <div class="dropdown drop">
-            <div class="fuck-you" onclick="myFunction()">
-                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn">
+            <div class="fuck-you drop" onclick="myFunction()">
+                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn drop">
                         <div id="myDropdown" class="dropdown-content dropdown-contents">
                         <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
                         <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
@@ -89,8 +89,8 @@ function makeDropDown() {
     $pfp_set = $_SESSION["pfp"];
         $htmlContent = <<<HTML
         <div class="dropdown drop">
-            <div class="fuck-you" onclick="myFunction()">
-                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn">
+            <div class="fuck-you drop" onclick="myFunction()">
+                <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn drop">
                         <div id="myDropdown" class="dropdown-content dropdown-contents">
                         <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
                         <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
