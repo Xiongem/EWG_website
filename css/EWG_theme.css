@@ -163,6 +163,8 @@ header {
     width: 3em;
     height: auto;
     cursor: pointer;
+    -webkit-filter: drop-shadow(5px 5px 5px var(--text-shadow));
+    filter: drop-shadow(5px 5px 5px var(--text-shadow));
 }
 #pfp:hover {
     -webkit-filter: drop-shadow(5px 5px 5px var(--text-shadow));
