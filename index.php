@@ -375,7 +375,7 @@ $_SESSION["daily"] = $daily;
     </div>
     <?php makeFooter() ?>
     <script>
-        window.onclick = function(event, events) {
+        window.onclick = function(event) {
           if (!event.target.matches('.dropbtn2')) {
             var dropdowns2 = document.getElementsByClassName("dropdown-content2");
             var i;
@@ -388,7 +388,7 @@ $_SESSION["daily"] = $daily;
             }
           }
         
-          else if (!events.target.matches('.dropbtn')) {
+          else if (!event.target.matches('.dropbtn')) {
             var dropdowns = document.getElementsByClassName("dropdown-contents");
             var a;
             for (a = 0; a < dropdowns.length; a++) {
