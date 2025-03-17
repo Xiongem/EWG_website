@@ -21,7 +21,7 @@ $user = $result->fetch_assoc();
     if ($date == "0000-00-00"){
         $dateGoal = 0;
     } else {
-        $dailyGoal = $user["goal_date"];
+        $dateGoal = $user["goal_date"];
     }
 switch ($genre) {
     case '1':
