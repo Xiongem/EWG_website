@@ -2,7 +2,7 @@ function findDailyGoal(){
     var goal=document.getElementById( "goal" ).value;
     var goalDate=document.getElementById( "goal_date" ).value;
     
-    if(dailyGoal){
+    if(goalDate){
         $.ajax({
         type: 'post',
         url: 'php-processes/math',
