@@ -22,6 +22,7 @@ dbConnect();
     <link rel="website icon" type="png" href="images\comp-cat.png">
     <script src="javascript/script.js"></script>
     <script src="javascript/dropDown.js"></script>
+    <script src="javascript/ajax.js"></script>
 </head>
 <body>
     <header>
@@ -67,7 +68,7 @@ dbConnect();
                         </div>
                         <div class="goal_end">
                             <label>End Date:</label>
-                            <input name="goal_date" id="goal_date" type="date">
+                            <input name="goal_date" id="goal_date" type="date" onchange="findDailyGoal()">
                         </div>
                         <label for="no-goal_date" class="container no-goal_date">Check the box if you don't want to set a goal date
                             <input type="checkbox" id="no-goal_date" name="no-goal_date" onclick="noDate()">
