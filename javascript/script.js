@@ -138,7 +138,7 @@ function hideWarning() {
             }
           }
           else if (!events.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-contents");
+            var dropdowns = document.getElementsByClassName("dropdown-content");
             var a;
             for (a = 0; a < dropdowns.length; a++) {
               var openDropdown = dropdowns[a];
