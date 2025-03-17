@@ -137,7 +137,6 @@ function hideWarning() {
               }
             }
           }
-        
           else if (!events.target.matches('.dropbtn')) {
             var dropdowns = document.getElementsByClassName("dropdown-contents");
             var a;
@@ -150,6 +149,12 @@ function hideWarning() {
             }
           }
         }
+        document.getElementById("myDropdown").addEventListener('click',function(event){
+          event.stopPropagation();
+      })
+        document.getElementById("myDropdown2").addEventListener('click',function(event){
+          event.stopPropagation();
+      })
       
 
         // window.addEventListener('load', function() {
