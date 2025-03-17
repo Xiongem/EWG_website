@@ -164,6 +164,10 @@ header {
     height: auto;
     cursor: pointer;
 }
+.pfp:hover, #pfp:hover {
+    -webkit-filter: drop-shadow(5px 5px 5px var(--text-shadow));
+    filter: drop-shadow(5px 5px 5px var(--text-shadow));
+}
 .dropbtn {
     cursor: pointer;
 }
