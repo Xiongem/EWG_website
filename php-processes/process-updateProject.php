@@ -12,7 +12,7 @@ dbConnect();
 $userID = $_SESSION["user_id"];
 
 // prepare and bind
-$stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET genre=?, title=?, info=?, goal=?, goal_date=?, daily_goal=?, 
+$stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET genre=?, title=?, info=?, goal=?, goal_date=?, daily_goal=? 
                                         WHERE users_id=$userID AND current_state='current'");
 $stmt->bind_param("sssiss",
                         $_POST["switch"],
