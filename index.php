@@ -197,7 +197,7 @@ $_SESSION["daily"] = $daily;
                 <div class="project-container">
                     <a id="goProjects" href="projects.php"><img src= <?=$genre_picture?>></a> 
                     <div class="project-title">
-                        <?php echo "<h2>$title</h2>"?>
+                        <a  href="projects.php"><?php echo "<h2>$title</h2>"?></a>
                         <p class="summary" id="summary"><?= $info?></p>
                     </div> 
                 </div>
