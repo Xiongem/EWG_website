@@ -116,7 +116,6 @@ switch ($genre) {
                             <label for="title">Title:</label>
                             <input type="text" id="new-project-title" value="<?=$title?>" name="newProjectTitle">
                         </div>
-                        <p>Make sure to reselect the correct genre</p>
                             <div class="genre-content">
                                 <label for="genre">Genre:</label>
                                 <select id="new-project-genre" name="switch" onchange="switchImage();">
@@ -139,9 +138,6 @@ switch ($genre) {
                                     <option class="genre" name="ya" id="ya" value="17">Young Adult</option>
                                     <option class="genre" name="childrens" id="childrens" value="18">Young Readers</option>
                                 </select>
-                            </div>
-                            <div  id="advice">
-                                <p>Previous Genre: <?=$realGenre?></p>
                             </div>
                         <div class="goal_num">
                             <label>Goal number:</label>
