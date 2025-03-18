@@ -98,6 +98,8 @@ switch ($genre) {
     <link rel="website icon" type="png" href="images\comp-cat.png">
     <script src="javascript/script.js"></script>
     <script src="javascript/dropDown.js"></script>
+    <script src="javascript/ajax.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -118,11 +120,6 @@ switch ($genre) {
                             <div class="genre-content">
                                 <label for="genre">Genre:</label>
                                 <select id="new-project-genre" name="switch" onchange="switchImage();">
-                                    <script>
-                                        
-                                        
-                                        
-                                    </script>
                                     <option class="genre" name="adventure" id="adventure" value="1">Adventure</option>
                                     <option class="genre" name="erotica" id="erotica" value="2">Erotica</option>
                                     <option class="genre" name="fanfiction" id="fanfiction" value="3">Fanfiction</option>
@@ -152,7 +149,7 @@ switch ($genre) {
                         </div>
                         <div class="goal_end">
                             <label>End Date:</label>
-                            <input name="goal_date" id="goal_date" type="date" value="<?=$date?>">
+                            <input name="goal_date" id="goal_date" type="date" value="<?=$date?>" onchange="findDailyGoal()">
                         </div>
                         <label for="no-goal_date" class="container no-goal_date">Check the box if you don't want to set a goal date
                             <input type="checkbox" id="no-goal_date" name="no-goal_date" onclick="noDate()">
@@ -163,7 +160,7 @@ switch ($genre) {
                                 <label for="daily_goal">Daily Goal:</label><br>
                                 <input type="number" name="daily_goal" id="daily_goal" value="<?=$daily?>">
                             </div>
-                            <!-- <p id="recommend">Recommended number:</p> -->
+                            <span id="recommend"></span>
                         </div>
                     </div>
                     <div class="img-contain">
