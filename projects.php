@@ -67,7 +67,7 @@ $user = $result->fetch_assoc();
         $daily = 0;
         $title = "Title";        
     }
-echo $interval;
+
 // Progress Bar
 if (empty($current_count) || empty($goal)) {
     $progress = 3;
