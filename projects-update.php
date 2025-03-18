@@ -181,10 +181,10 @@ switch ($genre) {
     <script>
 //Loads correct genre selection on page load
     var genre = <?=$genre?>;
-    console.log(genre);
+    // console.log(genre);
     var selected = document.getElementById('new-project-genre');
     selected.selectedIndex = genre - 1;
-    console.log(selected.value);
+    // console.log(selected.value);
     switchImage();
 //selects no goal date if user has no date set
     var dateGoal = <?=$dateGoal?>;
