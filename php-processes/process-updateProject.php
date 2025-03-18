@@ -12,14 +12,15 @@ dbConnect();
 $userID = $_SESSION["user_id"];
 
 // prepare and bind
-$stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET genre=?, title=?, info=?, goal=?, goal_date=? 
+$stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET genre=?, title=?, info=?, goal=?, goal_date=?, daily_goal=?, 
                                         WHERE users_id=$userID AND current_state='current'");
-$stmt->bind_param("sssis",
+$stmt->bind_param("sssisi",
                         $_POST["switch"],
                         $_POST["newProjectTitle"],
                         $_POST["info"],
                         $_POST["goal"],
-                        $_POST["goal_date"]);
+                        $_POST["goal_date"],
+                        $_POST["daily_goal"]);
 //echo'params bound'.'<br>';
 if ($stmt -> execute()) {
         header("Location: /projects.php");
