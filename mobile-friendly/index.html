@@ -32,12 +32,21 @@
                 <a href="about.html">About</a>
             </div>
         </div>
-        <div class="user">
+        <div class="user" id="user" onclick="userClick()">
             <img src="../images/dragon/dragon (0).png" alt="user profile picture">
+            <div class="userDropdown" id="userDropdown">
+                <div class="userContent">
+                    <a href="#">Profile <img src="../images/user.png" class="dropdown-icon" id="profile-icon" alt="profile icon"></a>
+                    <a href="#">Settings <img src="../images/settings.png" class="dropdown-icon" id="setting-icon" alt="setting icon"></a>
+                    <a href="#">Logout <img src="../images/logout.png" class="dropdown-icon" id="logout-icon" alt="logout icon"></a>
+                </div>
         </div>
     </nav>
     <script>
-        
+        function userClick() {
+            document.getElementById('userDropdown').classList.toggle('show');
+            console.log('userClick');
+        }
     </script>
 </body>
 </html>
