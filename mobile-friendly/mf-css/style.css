@@ -95,14 +95,18 @@ html {
     .mobileNav {
         display: block;
         position: absolute;
-        z-index: 1;
+        z-index: 2;
         margin: 1em 1em;
+        cursor: pointer;
     }
     .mobileNav img{
         width: 2em;
         height: fit-content;
     }
     .navMenu {
+        position: absolute;
+        z-index: 1;
+        display: none;
         width: 45%;
         background-color: var(--accent-2);
         padding: 4em 1em 1em 1em;
@@ -118,5 +122,25 @@ html {
         text-decoration: none;
         color: var(--text-color);
         padding-bottom: 1em;
+        font-size: 18px;
     }
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .user {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.7em 1em;
+    }
+    .user img{
+        width: 2.5em;
+        height: fit-content;
+        cursor: pointer;
+    }
+}
+.show {
+    display: block;
 }
