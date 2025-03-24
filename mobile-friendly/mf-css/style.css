@@ -100,7 +100,7 @@ html {
         cursor: pointer;
     }
     .mobileNav img{
-        width: 2em;
+        width: 3em;
         height: fit-content;
     }
     .navMenu {
@@ -136,7 +136,7 @@ html {
         padding: 0.7em 1em;
     }
     .user img{
-        width: 2.5em;
+        width: 3em;
         height: fit-content;
         cursor: pointer;
     }
