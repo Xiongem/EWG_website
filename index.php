@@ -56,12 +56,12 @@ if (isset($_SESSION["user_id"])) {
                     $days = "Project Past Due!";
                 }
             }
-            echo $user["goal_date"];
             $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.jpg';
             $info = $infos;
             $current_count = $current_counts;
             $goal = $goals;
         }
+        echo $user["goal_date"];
 
         if (empty($current_count) || empty($goal)) {
             $progress = 3;
