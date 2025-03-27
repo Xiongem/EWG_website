@@ -61,7 +61,6 @@ if (isset($_SESSION["user_id"])) {
             $current_count = $current_counts;
             $goal = $goals;
         }
-        echo $user["goal_date"];
 
         if (empty($current_count) || empty($goal)) {
             $progress = 3;
@@ -144,6 +143,8 @@ $_SESSION["current_count"] = $current_count;
 $_SESSION["goal"] = $goal;
 $_SESSION["days"] = $days;
 $_SESSION["daily"] = $daily;
+
+echo $goalDate;
 ?>
 
 <!DOCTYPE html>
