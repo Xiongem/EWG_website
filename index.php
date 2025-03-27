@@ -387,11 +387,9 @@ $_SESSION["daily"] = $daily;
 //     }
 // }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    var days = "<?=$days?>";
+var days = "<?=$days?>";
     if (days == 0) {
         document.getElementById('daysLeft').style.display = 'none';
-    } else {
-        document.getElementById('daysLeft').style.display = 'block';
     }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Popup percentage for bar
@@ -514,7 +512,7 @@ if (summary.scrollHeight > summary.offsetHeight) {
                     elementToPopup6.style.display = 'none';
                 });
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const elementToHover7 = document.
+            const elementToHover7 = document.
                 getElementById('on-track');
             const elementToPopup7 = document.
                 getElementById('on-track-popup');
