@@ -50,12 +50,13 @@ if (isset($_SESSION["user_id"])) {
                 $days = 0;
             } elseif (isset($goalDate)) {
                 $days = $interval;
+                if ($days == 0) {
+                    $days = "Final Day!";
+                } elseif ($days < 0) {
+                    $days = "Project Past Due!";
+                }
             }
-            if ($days == 0) {
-                $days = "Final Day!";
-            } elseif ($days < 0) {
-                $days = "Project Past Due!";
-            }
+            
             $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.jpg';
             $info = $infos;
             $current_count = $current_counts;
