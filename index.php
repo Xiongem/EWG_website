@@ -388,6 +388,7 @@ $_SESSION["daily"] = $daily;
 // }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 var days = "<?=$days?>";
+console.log(days);
     if (days == 0) {
         document.getElementById('daysLeft').style.display = 'none';
     }
