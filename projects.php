@@ -268,7 +268,7 @@ $default = 'images/genre-covers/placeholder.jpg';
         var pbPercentage = <?=$percentage?>;
         const curveProgressBar = document.getElementById('project-pb');
         if (pbPercentage >= 100) {
-            curveProgressBar.style = 'border-radius: 14px 14px 14px 14px';
+            curveProgressBar.style = 'border-radius: 14px 14px 14px 14px, width: <?=$progress?>%;';
         }
     }
     updateProgressBar();
