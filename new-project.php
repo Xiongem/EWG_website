@@ -54,13 +54,14 @@ dbConnect();
                                     <option name="literary" id="literary" value="9">Literary</option>
                                     <option name="musical" id="musical" value="10">Musical</option>
                                     <option name="mystery" id="mystery" value="11">Mystery</option>
-                                    <option name="personal" id="personal" value="12">Personal</option>
-                                    <option name="religious" id="religious" value="13">Religious/Spiritual</option>
-                                    <option name="romance" id="romance" value="14">Romance</option>
-                                    <option name="scifi" id="scifi" value="15">Sci-Fi</option>
-                                    <option name="thriller" id="thriller" value="16">Thriller</option>
-                                    <option name="ya" id="ya" value="17">Young Adult</option>
-                                    <option name="childrens" id="childrens" value="18">Young Readers</option>
+                                    <option name="nonfiction" id="nonfiction" value="12">Nonfiction</option>
+                                    <option name="personal" id="personal" value="13">Personal</option>
+                                    <option name="religious" id="religious" value="14">Religious/Spiritual</option>
+                                    <option name="romance" id="romance" value="15">Romance</option>
+                                    <option name="scifi" id="scifi" value="16">Sci-Fi</option>
+                                    <option name="thriller" id="thriller" value="17">Thriller</option>
+                                    <option name="ya" id="ya" value="18">Young Adult</option>
+                                    <option name="childrens" id="childrens" value="19">Young Readers</option>
                                 </select>
                             </div>
                         <div class="goal_num">

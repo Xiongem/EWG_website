@@ -1,6 +1,6 @@
 //Switching Genre Covers on Dropdown Selection
 var imageList = Array();
-for (var i = 1; i <= 18; i++) {
+for (var i = 1; i <= 19; i++) {
     imageList[i] = new Image(70, 70);
     imageList[i].src = "images/genre-covers/genre-covers" + i + ".jpg";
 }
