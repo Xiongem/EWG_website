@@ -58,24 +58,27 @@ switch ($genre) {
         $realGenre = "Mystery";
         break;
     case '12':
-        $realGenre = "Personal";
+        $realGenre = "Nonfiction";
         break;
     case '13':
-        $realGenre = "Religious/Spiritual";
+        $realGenre = "Personal";
         break;
     case '14':
-        $realGenre = "Romance";
+        $realGenre = "Religious/Spiritual";
         break;
     case '15':
-        $realGenre = "Sci-Fi";
+        $realGenre = "Romance";
         break;
     case '16':
-        $realGenre = "Thriller";
+        $realGenre = "Sci-Fi";
         break;
     case '17':
-        $realGenre = "Young Adult";
+        $realGenre = "Thriller";
         break;
     case '18':
+        $realGenre = "Young Adult";
+        break;
+    case '19':
         $realGenre = "Young Readers";
         break;
     default:
@@ -119,24 +122,25 @@ switch ($genre) {
                             <div class="genre-content">
                                 <label for="genre">Genre:</label>
                                 <select id="new-project-genre" name="switch" onchange="switchImage();">
-                                    <option class="genre" name="adventure" id="adventure" value="1">Adventure</option>
-                                    <option class="genre" name="erotica" id="erotica" value="2">Erotica</option>
-                                    <option class="genre" name="fanfiction" id="fanfiction" value="3">Fanfiction</option>
-                                    <option class="genre" name="fantasy" id="fantasy" value="4">Fantasy</option>
-                                    <option class="genre" name="historical" id="historical" value="5">Historical</option>
-                                    <option class="genre" name="horror" id="horror" value="6">Horror</option>
-                                    <option class="genre" name="humor" id="humor" value="7">Humor</option>
-                                    <option class="genre" name="lgbt" id="lgbt" value="8">LGBTQ+</option>
-                                    <option class="genre" name="literary" id="literary" value="9">Literary</option>
-                                    <option class="genre" name="musical" id="musical" value="10">Musical</option>
-                                    <option class="genre" name="mystery" id="mystery" value="11">Mystery</option>
-                                    <option class="genre" name="personal" id="personal" value="12">Personal</option>
-                                    <option class="genre" name="religious" id="religious" value="13">Religious/Spiritual</option>
-                                    <option class="genre" name="romance" id="romance" value="14">Romance</option>
-                                    <option class="genre" name="scifi" id="scifi" value="15">Sci-Fi</option>
-                                    <option class="genre" name="thriller" id="thriller" value="16">Thriller</option>
-                                    <option class="genre" name="ya" id="ya" value="17">Young Adult</option>
-                                    <option class="genre" name="childrens" id="childrens" value="18">Young Readers</option>
+                                <option name="adventure" id="adventure" value="1">Adventure</option>
+                                    <option name="erotica" id="erotica" value="2">Erotica</option>
+                                    <option name="fanfiction" id="fanfiction" value="3">Fanfiction</option>
+                                    <option name="fantasy" id="fantasy" value="4">Fantasy</option>
+                                    <option name="historical" id="historical" value="5">Historical</option>
+                                    <option name="horror" id="horror" value="6">Horror</option>
+                                    <option name="humor" id="humor" value="7">Humor</option>
+                                    <option name="lgbt" id="lgbt" value="8">LGBTQ+</option>
+                                    <option name="literary" id="literary" value="9">Literary</option>
+                                    <option name="musical" id="musical" value="10">Musical</option>
+                                    <option name="mystery" id="mystery" value="11">Mystery</option>
+                                    <option name="nonfiction" id="nonfiction" value="12">Nonfiction</option>
+                                    <option name="personal" id="personal" value="13">Personal</option>
+                                    <option name="religious" id="religious" value="14">Religious/Spiritual</option>
+                                    <option name="romance" id="romance" value="15">Romance</option>
+                                    <option name="scifi" id="scifi" value="16">Sci-Fi</option>
+                                    <option name="thriller" id="thriller" value="17">Thriller</option>
+                                    <option name="ya" id="ya" value="18">Young Adult</option>
+                                    <option name="childrens" id="childrens" value="19">Young Readers</option>
                                 </select>
                             </div>
                         <div class="goal_num">
