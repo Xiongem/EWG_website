@@ -8,16 +8,16 @@ use PHPMailer\PHPMailer\Exception;
 
 // require "vendor/autoload.php";
 
-require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
+// require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 
 
 // use PHPMailer\PHPMailer\PHPMailer;
 // use PHPMailer\PHPMailer\SMTP;
 // use PHPMailer\PHPMailer\Exception;
 
-// require($_SERVER['DOCUMENT_ROOT'] . '/vendor/PHPMailer/PHPMailer/src/Exception.php');
-// require($_SERVER['DOCUMENT_ROOT'] . '/vendor/PHPMailer/PHPMailer/src/PHPMailer.php');
-// require($_SERVER['DOCUMENT_ROOT'] . '/vendor/PHPMailer/PHPMailer/src/SMTP.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/vendor/PHPMailer/PHPMailer/src/Exception.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/vendor/PHPMailer/PHPMailer/src/PHPMailer.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/vendor/PHPMailer/PHPMailer/src/SMTP.php');
 
 // require '/vendor/PHPMailer/PHPMailer/src/Exception.php';
 // require '../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
