@@ -263,6 +263,14 @@ $default = 'images/genre-covers/placeholder.jpg';
             }
             showStuff();
         }
+//curve progress bar when it reaches 100
+    function updateProgressBar() {
+        var pbPercentage = <?=$percentage?>;
+        const curveProgressBar = document.getElementById('project-pb');
+        if (pbPercentage >= 100) {
+            curveProgressBar.style.border-radius = '14px 14px 14px 14px';
+        }
+    }
     </script>
 </body>
 </html>
