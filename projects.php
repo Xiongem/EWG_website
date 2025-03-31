@@ -271,6 +271,7 @@ $default = 'images/genre-covers/placeholder.jpg';
             curveProgressBar.style.border-radius = '14px 14px 14px 14px';
         }
     }
+    updateProgressBar();
     </script>
 </body>
 </html>
