@@ -13,9 +13,13 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require '../vendor/PHPMailer/PHPMailer/src/Exception.php';
-require '../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
-require '../vendor/PHPMailer/PHPMailer/src/SMTP.php';
+require($_SERVER['DOCUMENT_ROOT'] . '/vendor/PHPMailer/PHPMailer/src/Exception.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/vendor/PHPMailer/PHPMailer/src/PHPMailer.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/vendor/PHPMailer/PHPMailer/src/SMTP.php');
+
+// require '../vendor/PHPMailer/PHPMailer/src/Exception.php';
+// require '../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
+// require '../vendor/PHPMailer/PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
 try {
