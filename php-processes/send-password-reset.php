@@ -9,6 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 
+$mail = new PHPMailer\PHPMailer\PHPMailer;
 dbConnect();
 
 echo'successfully connected'.'<br>';
