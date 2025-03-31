@@ -2,7 +2,7 @@
 ini_set( 'display_errors', 1 );
 error_reporting( E_ALL );
 
-use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
@@ -23,7 +23,8 @@ require "vendor/autoload.php";
 // require '../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
 // require '../vendor/PHPMailer/PHPMailer/src/SMTP.php';
 
-$mail = new PHPMailer(true);
+// $mail = new PHPMailer(true);
+$mail = new PHPMailer\PHPMailer\PHPMailer; 
 try {
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     $mail->isSMTP();
@@ -31,7 +32,7 @@ try {
     $mail->SMTPAuth = true;
 
     $mail->Host = "smtp.hostinger.com";
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
     $mail->Username = "admin@elsewherewriters.com";
     $mail->Password = "Hi5gem601*";
