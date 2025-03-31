@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 require "vendor/autoload.php";
 
 // $mail = new PHPMailer(true);
-$mail = new PHPMailer\PHPMailer\PHPMailer; 
+$mail = new PHPMailer\PHPMailer\PHPMailer(); 
 try {
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     $mail->isSMTP();
