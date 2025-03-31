@@ -4,10 +4,32 @@ ini_set( 'display_errors', 1 );
 error_reporting( E_ALL );
 
 ob_start();
+dbConnect();
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+// require "vendor/autoload.php";
 
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
-require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
-dbConnect();
+require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
+// require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
+
+
+$mail = new PHPMailer(true);
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    $mail->isSMTP();
+    $mail->SMTPDebug = 2;
+    $mail->SMTPAuth = true;
+
+    $mail->Host = "smtp.hostinger.com";
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+    $mail->Username = "admin@elsewherewriters.com";
+    $mail->Password = "Hi5gem601*";
+
+    $mail->isHTML(true);
 
 echo'successfully connected'.'<br>';
 
