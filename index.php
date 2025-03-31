@@ -46,9 +46,9 @@ if (isset($_SESSION["user_id"])) {
             $goal = 0;
             $days = 0;
         } else{
-            if ($user["goal_date"] == "0000-00-00") {
+            if ($goalDate == "0000-00-00") {
                 $days = 0;
-            } elseif (isset($goalDate)&& $user["goal_date"] !== "0000-00-00") {
+            } elseif (isset($goalDate)&& $goalDate !== "0000-00-00") {
                 $days = $interval;
                 if ($days == 0) {
                     $days = "Final Day!";
