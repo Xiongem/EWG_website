@@ -1,8 +1,8 @@
 <?php
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
-// ini_set('log_errors', 'On');
-// ini_set('error_log', '/path/to/php_errors.log');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 'On');
+ini_set('error_log', '/path/to/php_errors.log');
 
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
@@ -48,7 +48,7 @@ if (isset($_SESSION["user_id"])) {
         } else{
             if ($user["goal_date"] == "0000-00-00") {
                 $days = 0;
-            } elseif (isset($goalDate)&& $user["goal_date"] != "0000-00-00") {
+            } elseif (isset($goalDate)&& $user["goal_date"] !== "0000-00-00") {
                 $days = $interval;
                 if ($days == 0) {
                     $days = "Final Day!";
