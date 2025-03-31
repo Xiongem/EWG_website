@@ -215,7 +215,7 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
                 <div class="current-content">
                     <a id="goProjects" href="projects.php"><img src= <?=$genre_picture?>></a>
                         <div class="current-2">
-                            <?php echo ("<h2>$title</h2>")?>
+                        <a  href="projects.php"><?php echo "<h2>$title</h2>"?></a>
                             <p class="summary" id="summary"><?= $info?></p>
                         </div>
                 </div>
