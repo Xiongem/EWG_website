@@ -3,6 +3,7 @@
 ob_start();
 
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/mailer.php');
 dbConnect();
 
 echo'successfully connected'.'<br>';
