@@ -4,7 +4,7 @@ ini_set( 'display_errors', 1 );
 error_reporting( E_ALL );
 
 ob_start();
-dbConnect();
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -15,6 +15,8 @@ use PHPMailer\PHPMailer\Exception;
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 // require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
+
+dbConnect();
 
 
 $mail = new PHPMailer(true);
