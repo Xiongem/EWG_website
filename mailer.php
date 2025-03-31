@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require "vendor/autoload.php";
 // require($_SERVER['DOCUMENT_ROOT'] . '/vendor/phpmailer/phpmailer/src/phpmailer.php');
-require($_SERVER['DOCUMENT_ROOT'] . '/vendor/phpmailer/phpmailer/src/PHPMailer.php');
+// require($_SERVER['DOCUMENT_ROOT'] . '/vendor/phpmailer/phpmailer/src/PHPMailer.php');
 // $mail = new PHPMailer(true);
 $mail = new PHPMailer\PHPMailer\PHPMailer(); 
 try {
