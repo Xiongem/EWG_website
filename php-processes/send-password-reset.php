@@ -26,7 +26,7 @@ $stmt -> execute() ;
 echo'params bound and sql executed'.'<br>';
 // FIXME: figure out what's causing this to not work 
 // if($_SESSION["conn"]->affected_rows) {
-    $mail = require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/mailer.php');
+    $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
     echo'connected to mailer.php'.'<br>';
 
     $mail -> setFrom("noreply@elsewherewriters.com");
