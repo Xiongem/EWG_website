@@ -27,7 +27,7 @@ function makeDropDown() {
         $htmlContent = <<<HTML
         <div class="dropdown drop">
             <div class="fuck-you drop" onclick="myFunction()">
-                <img id="pfp-overlay" class="pfp-overlay pfp drop"src="images/hydra-slayer-overlay.png">
+                <img id="pfp-overlay" class="pfp-overlay pfp drop"src="images/hydra-slayer-overlay.svg">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn drop">
                         <div id="myDropdown" class="dropdown-content dropdown-contents">
                         <a href="profile.php?userNAME=$username">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
@@ -129,7 +129,7 @@ function makeNav() {
         $username = $_SESSION["username"];
         $htmlContent = <<<HTML
         <div class="logo">
-            <img src="images/comp-cat-beta.png" alt="cat-using-computer">
+            <img src="images/comp-cat-beta.svg" alt="cat-using-computer">
         </div>
         <nav class="nav-menu">
             <a href="index.php">Home</a>
@@ -164,7 +164,7 @@ function makeNav() {
     } else {
         $htmlContent = <<<HTML
         <div class="logo">
-            <img src="images/comp-cat-beta.png" alt="cat-using-computer">
+            <img src="images/comp-cat-beta.svg" alt="cat-using-computer">
         </div>
         <nav class="nav-menu">
             <a href="index.php">Home</a> 
