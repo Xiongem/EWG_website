@@ -33,6 +33,7 @@ if (isset($_SESSION["user_id"])) {
     $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
         $pfp = $user["pfp"];
+        $username = $user["username"];
 
     if (empty($pfp)) {
         $pfp_set = "images/pfp-icon.png";
@@ -189,7 +190,7 @@ $_SESSION["daily"] = $daily;
         <?= $info ?>
     </div>
 </div>
-        <a href="profile_test.php?userID=<?=$userID?>">
+        <a href="profile_test.php?username=<?=$username?>">
 <!--Project and Badge areas-->
         <div class="under-PB">
             <div class="project-overview">

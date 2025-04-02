@@ -10,12 +10,13 @@ forceLogin();
 dbConnect();
 //assigns the user's id for all the sql
 // $userID = htmlspecialchars($_SESSION["user_id"]);
-$userID = htmlspecialchars($_GET["userID"]);
+$username = htmlspecialchars($_GET["username"]);
 //echos the user's profile data
-$sql = "SELECT * FROM users WHERE id=$userID";
+$sql = "SELECT * FROM users WHERE username=$username";
 $result = $_SESSION["conn"]->query($sql);
 $user = $result->fetch_assoc();
-    $username = $user["username"];
+    // $username = $user["username"];
+    $userID = $user["user_id"];
     $bio = $user["bio"];
     $fav1 = $user["fav-1"];
     $fav2 = $user["fav-2"];
