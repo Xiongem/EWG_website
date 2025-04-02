@@ -9,25 +9,26 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 // forceLogin();
 dbConnect();
 //assigns the user's id for all the sql
-$userID = htmlspecialchars($_SESSION["user_id"]);
-$userNAME = $_GET["userNAME"];
+// $userID = htmlspecialchars($_SESSION["user_id"]);
+$userID = htmlspecialchars($_GET["userNAME"]);
+// $userNAME = $_GET["userNAME"];
 echo $userNAME;
 //queries the user's profile data
-// $sql = "SELECT * FROM users WHERE username=$userNAME";
-// $result = $_SESSION["conn"]->query($sql);
-// $user = $result->fetch_assoc();
-//     // $username = $user["username"];
-//     // $userID = $user["id"];
-//     $bio = $user["bio"];
-//     $fav1 = $user["fav-1"];
-//     $fav2 = $user["fav-2"];
-//     $fav3 = $user["fav-3"];
-//     $pfp = $user["pfp"];
-// if (empty($pfp)) {
-//     $pfp_set = "images\pfp-icon.png";
-// } else{
-//     $pfp_set = $pfp;
-// }
+$sql = "SELECT * FROM users WHERE username=$userNAME";
+$result = $_SESSION["conn"]->query($sql);
+$user = $result->fetch_assoc();
+    // $username = $user["username"];
+    // $userID = $user["id"];
+    $bio = $user["bio"];
+    $fav1 = $user["fav-1"];
+    $fav2 = $user["fav-2"];
+    $fav3 = $user["fav-3"];
+    $pfp = $user["pfp"];
+if (empty($pfp)) {
+    $pfp_set = "images\pfp-icon.png";
+} else{
+    $pfp_set = $pfp;
+}
 //echos project info if there is any or default values if not
 $sql = "SELECT * FROM current_project WHERE username=$userNAME AND current_state='current'";
 $result = $_SESSION["conn"]->query($sql);
