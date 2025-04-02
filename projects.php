@@ -12,16 +12,17 @@ dbConnect();
 // $userID = htmlspecialchars($_SESSION["user_id"]);
 $username = $_GET["userNAME"];
 // Fetch profile picture info
-// $sql = "SELECT pfp FROM users WHERE id=$userID";
-// $result = $_SESSION["conn"]->query($sql);
-// $user = $result->fetch_assoc();
-//     $pfp = $user["pfp"];
+$sql = "SELECT * FROM users WHERE username='$username'";
+$result = $_SESSION["conn"]->query($sql);
+$user = $result->fetch_assoc();
+    $pfp = $user["pfp"];
+    $userID = $user["id"];
 
-//     if (empty($pfp)) {
-//         $pfp_set = "images\pfp-icon.png";
-//     } else{
-//         $pfp_set = $pfp;
-//     }
+    if (empty($pfp)) {
+        $pfp_set = "images\pfp-icon.png";
+    } else{
+        $pfp_set = $pfp;
+    }
 // Fetch project info
 $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
 $result = $_SESSION["conn"]->query($sql);
@@ -229,6 +230,16 @@ $default = 'images/genre-covers/placeholder.jpg';
             </div>
     <?php makeFooter() ?>
 <script>
+        <?php if ($_SESSION["user_id"]) { ?>
+        var getUserID = <?= $userID ?>;
+        var sessionUserID = <?= $_SESSION["user_id"] ?>;
+            if (getUserID != sessionUserID ) {
+                document.getElementById('add-new-container').style.display = 'none';
+            }
+        <?php } elseif (!isset($_SESSION["user_id"])) {?>
+            document.getElementById('add-new-container').style.display = 'none';
+    <?php } ?>
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     var days = "<?=$days?>";
     if (days == 0) {
         document.getElementById('daysLeft').style.display = 'none';

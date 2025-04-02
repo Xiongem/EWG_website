@@ -700,7 +700,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
                 for (var i = 0; i <badges.length; i++) {
                     badges[i].removeAttribute("onclick");
                 }
-            <?php } ?>
+    <?php } ?>
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 imgsrc = document.getElementById("hydra-slayer").src;
 if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.png"){
