@@ -222,9 +222,9 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
             <div class="current-container">
                 <h1>Current Project</h1>
                 <div class="current-content">
-                    <a id="goProjects" href="projects.php"><img src= <?=$genre_picture?>></a>
+                    <a id="goProjects" href="projects.php?userNAME=<?=$username?>"><img src= <?=$genre_picture?>></a>
                         <div class="current-2">
-                        <a  href="projects.php"><?php echo "<h2>$title</h2>"?></a>
+                        <a  href="projects.php?userNAME=<?=$username?>"><?php echo "<h2>$title</h2>"?></a>
                             <p class="summary" id="summary"><?= $info?></p>
                         </div>
                 </div>
