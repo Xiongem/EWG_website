@@ -16,7 +16,7 @@ $sql = "SELECT * FROM users WHERE username=$username";
 $result = $_SESSION["conn"]->query($sql);
 $user = $result->fetch_assoc();
     // $username = $user["username"];
-    $userID = $user["user_id"];
+    $userID = $user["id"];
     $bio = $user["bio"];
     $fav1 = $user["fav-1"];
     $fav2 = $user["fav-2"];
