@@ -204,7 +204,7 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
             </div>
         </div>
         <div class="bio-container">
-            <div class="add-new-container">
+            <div class="add-new-container" id="add-new-container">
                 <div class="add-new-contents">
                     <a href="update-profile.php"><button>Update Your Profile</button></a>
                 </div>
@@ -676,7 +676,11 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
             <h3 style="text-align: center;">Click on a badge to award it to yourself! Click on it again to remove it.</h3>
     <?php makeFooter() ?>
         <script>
-            
+        var username = <?= $userNAME ?>
+        var userID = <?= $_SESSION["user_id"] ?>
+        if (username != userID) {
+            document.getElementById('add-new-container').style.display = 'none';
+        }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 imgsrc = document.getElementById("hydra-slayer").src;
 if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.png"){
