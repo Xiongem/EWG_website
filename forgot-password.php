@@ -24,8 +24,8 @@
                 <div class="fuck-you">
                     <div class="forget-info-wrapper">
                         <div class="forget-inputs">
-                            <input type="username" name="username" id="username" placeholder="username">
-                            <input type="email" name="email" id="forget-email" placeholder="email address">
+                            <input type="username" name="username" id="username" placeholder="username" require>
+                            <input type="email" name="email" id="forget-email" placeholder="email address" require>
                         </div>
                         <button type="submit" id="submit-btn" class="submit-btn">Send</button>
                     </div>
