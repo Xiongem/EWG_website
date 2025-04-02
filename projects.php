@@ -9,19 +9,19 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 // forceLogin();
 dbConnect();
 
-$userID = htmlspecialchars($_SESSION["user_id"]);
+// $userID = htmlspecialchars($_SESSION["user_id"]);
 $username = $_GET["userNAME"];
 // Fetch profile picture info
-$sql = "SELECT pfp FROM users WHERE id=$userID";
-$result = $_SESSION["conn"]->query($sql);
-$user = $result->fetch_assoc();
-    $pfp = $user["pfp"];
+// $sql = "SELECT pfp FROM users WHERE id=$userID";
+// $result = $_SESSION["conn"]->query($sql);
+// $user = $result->fetch_assoc();
+//     $pfp = $user["pfp"];
 
-    if (empty($pfp)) {
-        $pfp_set = "images\pfp-icon.png";
-    } else{
-        $pfp_set = $pfp;
-    }
+//     if (empty($pfp)) {
+//         $pfp_set = "images\pfp-icon.png";
+//     } else{
+//         $pfp_set = $pfp;
+//     }
 // Fetch project info
 $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
 $result = $_SESSION["conn"]->query($sql);
