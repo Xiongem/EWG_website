@@ -78,10 +78,10 @@ html {
 * {
     box-sizing: border-box;
 }
-.slide {
-    animation: slide 0.3s linear 0s 1 normal forwards;
+.slide-right {
+    animation: slide-right 0.3s linear 0s 1 normal forwards;
 }
-@keyframes slide {
+@keyframes slide-right {
 	0% {
 		opacity: 0;
 		transform: translateX(-250px);
@@ -92,20 +92,20 @@ html {
 		transform: translateX(0);
 	}
 }
-/* .close {
-    animation: close 0.3s linear 0s 1 normal backwards;
+.slide-left {
+    animation: slide-left 0.3s linear 0s 1 normal forwards;
 }
-@keyframes close {
+@keyframes slide-left {
 	0% {
-        opacity: 1;
-		transform: translateX(0);
+		opacity: 0;
+		transform: translateX(250px);
 	}
 
 	100% {
-		opacity: 0;
-		transform: translateX(-250px);
-	}
-} */
+		opacity: 1;
+		transform: translateX(0);
+    }
+}
 
 @media only screen and (min-width: 200px) {
     body {
@@ -120,9 +120,12 @@ html {
     .logo img{
         display: none;
     }
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+    }
     .mobileNav {
         display: block;
-        position: absolute;
         z-index: 2;
         margin: 1em 1em;
         cursor: pointer;
@@ -133,6 +136,7 @@ html {
     }
     .navMenu {
         position: absolute;
+        top: 0;
         z-index: 1;
         display: none;
         width: 45%;
@@ -161,6 +165,8 @@ html {
     .user {
         display: flex;
         justify-content: flex-end;
+        width: fit-content;
+        height: fit-content;
         padding: 0.7em 1em 0em 0em;
     }
     .user img{
@@ -173,10 +179,21 @@ html {
         display: none;
     }
     .userContent {
-        position: relative;
+        position: absolute;
+        top: 0;
+        right: 0;
         z-index: 1;
         display: flex;
         flex-direction: column;
+        width: 35%;
+        background-color: var(--accent-2);
+        padding: 4em 1em 1em 1em;
+    }
+    .userContent a {
+        text-decoration: none;
+        color: var(--text-color);
+        padding-bottom: 1em;
+        font-size: 18px;
     }
     .dropdown-icon {
         width: 1em;
