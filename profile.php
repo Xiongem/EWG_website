@@ -683,6 +683,8 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
                 if (getUserID != sessionUserID ||empty(sessionUserID)) {
                     document.getElementById('add-new-container').style.display = 'none';
                 }
+        } else {
+            ...
         }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 imgsrc = document.getElementById("hydra-slayer").src;
