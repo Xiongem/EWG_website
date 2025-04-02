@@ -11,6 +11,7 @@ dbConnect();
 //assigns the user's id for all the sql
 // $userID = htmlspecialchars($_SESSION["user_id"]);
 $username = $_GET["username"];
+echo $username;
 //queries the user's profile data
 $sql = "SELECT * FROM users WHERE username=$username";
 $result = $_SESSION["conn"]->query($sql);
