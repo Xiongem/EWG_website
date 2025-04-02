@@ -32,7 +32,7 @@ echo'params bound and sql executed'.'<br>';
     $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
     echo'connected to mailer.php'.'<br>';
 
-    $mail -> setFrom("noreply@elsewherewriters.com");
+    $mail -> setFrom("admin@elsewherewriters.com");
     echo'from set'.'<br>';
     $mail -> addAddress($email);
     echo'address added'.'<br>';
