@@ -272,13 +272,14 @@ $default = 'images/genre-covers/placeholder.jpg';
                 document.getElementById('updateProject').style.display = 'none';
             }
             hideStuff();
-        }else {
-            function showStuff(){
-                document.getElementById('add-new-container').style.display = 'block';
-                document.getElementById('updateProject').style.display = 'block';
-            }
-            showStuff();
         }
+        // else {
+        //     function showStuff(){
+        //         document.getElementById('add-new-container').style.display = 'block';
+        //         document.getElementById('updateProject').style.display = 'block';
+        //     }
+        //     showStuff();
+        // }
 //curve progress bar when it reaches 100
     function updateProgressBar() {
         var pbPercentage = <?=$percentage?>;
