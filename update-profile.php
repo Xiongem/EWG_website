@@ -5,6 +5,7 @@ forceLogin();
 dbConnect();
 //assigns the user's id for all the sql
 $userID = htmlspecialchars($_SESSION["user_id"]);
+$username = $_SESSION["username"];
 //echos the user's profile data
 $sql = "SELECT * FROM users WHERE id=$userID";
 $result = $_SESSION["conn"]->query($sql);
@@ -53,7 +54,7 @@ $user = $result->fetch_assoc();
                     </div>
                 </div>
                 <div class="buttons">
-                    <a href="profile.php" class="cancel-button">
+                    <a href="profile.php?userNAME=<?=$username?>" class="cancel-button">
                         <div class="cancel">
                             Cancel
                         </div>

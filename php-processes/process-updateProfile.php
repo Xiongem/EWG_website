@@ -19,6 +19,7 @@ if (!$conn) {
  
 }
 
+$username = $_SESSION["username"];
 // prepare and bind
 $stmt = $conn -> prepare("UPDATE users SET bio=?, `fav-1`=?, `fav-2`=?, `fav-3`=? WHERE id=?");
 $stmt->bind_param("ssssi",
