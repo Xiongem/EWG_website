@@ -178,7 +178,7 @@ $_SESSION["daily"] = $daily;
     <header>
         <?php makeNav() ?>
         <?php makeDropDown() ?>
-        <a href="profile.php?userID=<?=$userID?>>
+        <a href="profile_test.php?userID=<?=$userID?>>
     </header>
 <!--Area below the nav bar-->
 <?php makePopup() ?>
