@@ -9,7 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 // forceLogin();
 dbConnect();
 
-// $userID = htmlspecialchars($_SESSION["user_id"]);
+$userID = htmlspecialchars($_SESSION["user_id"]);
 $username = $_GET["username"];
 // Fetch profile picture info
 $sql = "SELECT pfp FROM users WHERE id=$userID";
