@@ -202,9 +202,9 @@ $_SESSION["username"] = $username;
             <div class="project-overview">
                 <div class="project"><h1>Your Current Project</h1></div>
                 <div class="project-container">
-                    <a id="goProjects" href="projects.php"><img src= <?=$genre_picture?>></a> 
+                    <a id="goProjects" href="projects.php?userNAME=<?=$username?>"><img src= <?=$genre_picture?>></a> 
                     <div class="project-title">
-                        <a  href="projects.php"><?php echo "<h2>$title</h2>"?></a>
+                        <a  href="projects.php?userNAME=<?=$username?>"><?php echo "<h2>$title</h2>"?></a>
                         <p class="summary" id="summary"><?= $info?></p>
                     </div> 
                 </div>
