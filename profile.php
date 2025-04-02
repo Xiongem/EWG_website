@@ -155,7 +155,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
             $default37= "images/badges/spicy-spicy-mono.png";
             $default38= "images/badges/tears-alltime-mono.png";
 $_SESSION["overlay"] = $badge["hydra-slayer"];
-echo $userNAME;
+// echo $userNAME;
 ?>
 
 <!DOCTYPE html>
