@@ -154,14 +154,9 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
             $default36= "images/badges/start-first-project-mono.png";
             $default37= "images/badges/spicy-spicy-mono.png";
             $default38= "images/badges/tears-alltime-mono.png";
-        // if ($userNAME != $userID)
-        //     if ($badge["hydra-slayer"] == "images/badges/hydra-slayer-color.png") {
-        //         $_SESSION["overlay"] = "obtained";
-        //     } elseif ($badge["hydra-slayer"] == "images/badges/hydra-slayer-mono.png") {
-        //         $_SESSION["overlay"] = "locked";
-        //     }
+
+           $_SESSION["overlay"] = $badge["hydra-slayer"];
 // echo $userNAME;
-echo $_SESSION["overlay"];
 ?>
 
 <!DOCTYPE html>

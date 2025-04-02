@@ -886,6 +886,7 @@ function toggleImage1() {
             $("#overlay").addClass("show");
             $("#pfp-overlay").removeClass("hide");
             $("#pfp-overlay").addClass("show");
+            alert("<?php echo $_SESSION['overlay'];?>");
         });
     } 
     else {
