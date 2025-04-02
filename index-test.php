@@ -190,7 +190,7 @@ $_SESSION["daily"] = $daily;
         <?= $info ?>
     </div>
 </div>
-        <a href="profile_test.php?username=<?=$username?>">
+        <a href="profile_test.php?userNAME=<?=$username?>">
 <!--Project and Badge areas-->
         <div class="under-PB">
             <div class="project-overview">
