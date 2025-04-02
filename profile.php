@@ -161,7 +161,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
                 $_SESSION["overlay"] = "locked";
             }
 // echo $userNAME;
-echo $_SESSION["overlay"];
+// echo $_SESSION["overlay"];
 ?>
 
 <!DOCTYPE html>
