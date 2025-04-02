@@ -676,8 +676,8 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
             <h3 style="text-align: center;">Click on a badge to award it to yourself! Click on it again to remove it.</h3>
     <?php makeFooter() ?>
         <script>
-        var username = <?= $userNAME ?>
-        var userID = <?= $_SESSION["user_id"] ?>
+        var username = <?= $userNAME ?>;
+        var userID = <?= $_SESSION["user_id"] ?>;
         if (username != userID) {
             document.getElementById('add-new-container').style.display = 'none';
         }
