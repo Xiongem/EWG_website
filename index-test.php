@@ -178,7 +178,6 @@ $_SESSION["daily"] = $daily;
     <header>
         <?php makeNav() ?>
         <?php makeDropDown() ?>
-        <a href="profile_test.php?userID=<?=$userID?>>
     </header>
 <!--Area below the nav bar-->
 <?php makePopup() ?>
@@ -190,7 +189,7 @@ $_SESSION["daily"] = $daily;
         <?= $info ?>
     </div>
 </div>
-        
+        <a href="profile_test.php?userID=<?=$userID?>">
 <!--Project and Badge areas-->
         <div class="under-PB">
             <div class="project-overview">
