@@ -13,7 +13,7 @@ dbConnect();
 $userNAME = $_GET["userNAME"];
 echo $userNAME;
 //queries the user's profile data
-$sql = "SELECT * FROM users WHERE username=$userNAME";
+$sql = "SELECT * FROM users WHERE username='janedoe'";
 $result = $_SESSION["conn"]->query($sql);
 $user = $result->fetch_assoc();
     // $username = $user["username"];
