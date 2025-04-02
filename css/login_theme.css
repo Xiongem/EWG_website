@@ -178,7 +178,7 @@
 .forget-info-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 .forget-inputs {
     display: flex;
