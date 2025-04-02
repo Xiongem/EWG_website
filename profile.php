@@ -171,12 +171,12 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Elsewhere Writers Guild Official Website"> 
     <meta property="og:description" content="The official website for the Elsewhere Writers Guild, an alternative option to NaNoWriMo."> 
-    <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.png"> 
+    <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.svg"> 
     <meta property="og:url" content="http://www.elsewherewriters.com/index">
     <title>EWG Profile</title>
     <link rel="stylesheet" href="css/EWG_theme.css">
     <link rel="stylesheet" href="css/profile_theme.css">
-    <link rel="website icon" type="png" href="images\comp-cat.png">
+    <link rel="website icon" type="svg" href="images\comp-cat.svg">
     <script src="javascript/script.js"></script>
     <script src="javascript/badges.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -194,7 +194,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
     <div class="profile-container">
         <div class="pfp-contents">
             <div class="pfp-wrapper" onclick="pfpChange()">
-                <img id="overlay" class="pfp-overlay profile-pfp" src="images/hydra-slayer-overlay.png">
+                <img id="overlay" class="pfp-overlay profile-pfp" src="images/hydra-slayer-overlay.svg">
                 <a href="choose-pfp.html"><img class="profile-pfp" src="<?=$pfp_set?>"></a>
             </div>
             <?php echo ("<h1>$username</h1>")?>
@@ -703,7 +703,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
     <?php } ?>
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 imgsrc = document.getElementById("hydra-slayer").src;
-if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.png"){
+if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.svg"){
     document.getElementById('overlay').classList.remove("hide");
     document.getElementById('overlay').classList.add("show");
 }else{
