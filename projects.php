@@ -10,7 +10,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
 $userID = htmlspecialchars($_SESSION["user_id"]);
-$username = $_GET["username"];
+$username = $_GET["userNAME"];
 // Fetch profile picture info
 $sql = "SELECT pfp FROM users WHERE id=$userID";
 $result = $_SESSION["conn"]->query($sql);
