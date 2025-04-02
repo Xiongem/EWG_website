@@ -29,7 +29,7 @@ if (empty($pfp)) {
     $pfp_set = $pfp;
 }
 //echos project info if there is any or default values if not
-$sql = "SELECT * FROM current_project WHERE username=$userNAME AND current_state='current'";
+$sql = "SELECT * FROM current_project WHERE username='janedoe' AND current_state='current'";
 $result = $_SESSION["conn"]->query($sql);
 $user = $result->fetch_assoc();
     $genre = $user["genre"];
@@ -38,7 +38,7 @@ $user = $result->fetch_assoc();
     $default = "images/genre-covers/placeholder.jpg";
 
 if (isset($user["genre"])){
-    $sql = "SELECT created_at FROM current_project WHERE username=$userNAME";
+    $sql = "SELECT created_at FROM current_project WHERE username='janedoe'";
     $result = $_SESSION["conn"]->query($sql);
     $dates = $result->fetch_assoc();
         
@@ -70,7 +70,7 @@ $sql = "SELECT `start-1st-project`, `first-daily`, `quarter-quomplete`, `half-wa
 `cross-finish`, `on-track`, `out-gate`, `streak-two`, `streak-three`, `streak-seven`, 
 `streak-fourteen`, `streak-twentyOne`, `every-streak`, `back-it-up`, `outline`, `journey`, 
 `dual-wielder`, `gathering`, `hear-ye`, `breakthrough`, `starting-fresh`, `ever-persist`, 
-`touch-grass`, `business`, `tears-wept`, `overachiever`, `finish-him` FROM current_project WHERE username=$userNAME AND current_state='current'";
+`touch-grass`, `business`, `tears-wept`, `overachiever`, `finish-him` FROM current_project WHERE username='janedoe' AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
     $badge = $result->fetch_assoc();
         $badge1 = $badge["start-1st-project"];
@@ -132,7 +132,7 @@ $sql = "SELECT `start-1st-project`, `first-daily`, `quarter-quomplete`, `half-wa
             
 $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-project`, `streak-fiend`, 
 `hydra-slayer`, `vet-streaker`, `vet-guild`, `start-first-project`, `spicy-spicy`, 
-`tears-alltime` FROM users WHERE username=$userNAME";
+`tears-alltime` FROM users WHERE username='janedoe'";
     $result = $_SESSION["conn"]->query($sql);
     $badge = $result->fetch_assoc();
         $badge29 = $badge["complete-one-project"];
