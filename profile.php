@@ -682,7 +682,9 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
             if (getUserID != sessionUserID ) {
                 document.getElementById('add-new-container').style.display = 'none';
             }
-        <?php }?>
+        <?php } elseif (!isset($_SESSION["user_id"])) {?>
+            document.getElementById('add-new-container').style.display = 'none';
+            <?php } ?>
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 imgsrc = document.getElementById("hydra-slayer").src;
 if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.png"){
