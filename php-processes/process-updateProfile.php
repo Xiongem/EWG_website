@@ -29,7 +29,7 @@ $stmt->bind_param("ssssi",
                     $_SESSION["user_id"]);
 
 if ($stmt -> execute()) {
-        header("Location: /profile.php");
+        header("Location: /profile.php?userNAME=$username");
         exit;
     } else {
         die("an unexpected error occured");
