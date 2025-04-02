@@ -195,7 +195,7 @@ $default = 'images/genre-covers/placeholder.jpg';
                 <div class="prev-container">
                     <h1 class="projTitle">Previous Projects</h1>
                     <?php 
-                    $sql = "SELECT * FROM current_project WHERE users_id=$userID AND current_state='archived'";
+                    $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='archived'";
                     $result = $_SESSION["conn"]->query($sql);
                         if ($result->num_rows > 0) {
                             while ($rows = $result->fetch_assoc()) {
