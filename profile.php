@@ -676,6 +676,8 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
             <h3 style="text-align: center;">Click on a badge to award it to yourself! Click on it again to remove it.</h3>
     <?php makeFooter() ?>
         <script>
+            
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 imgsrc = document.getElementById("hydra-slayer").src;
 if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.png"){
     document.getElementById('overlay').classList.remove("hide");
