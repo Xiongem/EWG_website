@@ -155,7 +155,11 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
             $default37= "images/badges/spicy-spicy-mono.png";
             $default38= "images/badges/tears-alltime-mono.png";
 
-           $_SESSION["overlay"] = $badge["hydra-slayer"];
+            if ($badge["hydra-slayer"] == "images/badges/hydra-slayer-color.png") {
+                $_SESSION["overlay"] = "obtained";
+            } elseif ($badge["hydra-slayer"] == "images/badges/hydra-slayer-mono.png") {
+                $_SESSION["overlay"] = "locked";
+            }
 // echo $userNAME;
 ?>
 
