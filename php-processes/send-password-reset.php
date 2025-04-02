@@ -13,7 +13,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer;
 dbConnect();
 
 echo'successfully connected'.'<br>';
-
+$username = $_POST["username"];
 $email = $_POST["email"];
 $token = bin2hex(random_bytes(16));
 $token_hash = hash("sha256", $token);
@@ -36,12 +36,17 @@ echo'params bound and sql executed'.'<br>';
     echo'from set'.'<br>';
     $mail -> addAddress($email);
     echo'address added'.'<br>';
-    $mail -> setSubject("Password Reset");
+    $mail->Subject = "Password Reset";
     echo'subject set'.'<br>';
     $mail -> Body = <<<END
+        Hello <?= $username ?>,
 
-        Click <a href="http://elsewherewriters.com/reset-password.php?token=$token">here</a> 
-        to reset your password.
+        A request was made to reset your password.
+        Your password reset token will expire in 30 minutes.
+        Click <a href="http://elsewherewriters.com/reset-password.php?token=$token">here</a> to reset your password.
+
+        If you did not make this request, please ignore this email or contact support at support@elsewherewriters.com.
+        
 
     END;
     echo'body set'.'<br>';
