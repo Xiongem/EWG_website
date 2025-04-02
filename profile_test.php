@@ -9,7 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 // forceLogin();
 dbConnect();
 //assigns the user's id for all the sql
-// $userID = htmlspecialchars($_SESSION["user_id"]);
+$userID = htmlspecialchars($_SESSION["user_id"]);
 $userNAME = $_GET["userNAME"];
 echo $userNAME;
 //queries the user's profile data
