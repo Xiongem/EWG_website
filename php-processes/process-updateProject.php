@@ -10,6 +10,7 @@ dbConnect();
 //echo'connected successfully'.'<br>';
 
 $userID = $_SESSION["user_id"];
+$username = $_SESSION["username"];
 
 // prepare and bind
 $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET genre=?, title=?, info=?, goal=?, goal_date=?, daily_goal=? 
