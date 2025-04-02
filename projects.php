@@ -234,7 +234,7 @@ $default = 'images/genre-covers/placeholder.jpg';
         var getUserID = <?= $userID ?>;
         var sessionUserID = <?= $_SESSION["user_id"] ?>;
             if (getUserID != sessionUserID ) {
-                document.getElementById('updateProject').style.display = 'none';
+                // document.getElementById('updateProject').style.display = 'none';
                 document.getElementById('add-new-container').style.display = 'none';
                 console.log("complete");
             }
