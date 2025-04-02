@@ -6,12 +6,11 @@ ini_set('log_errors', 'On');
 ini_set('error_log', '/path/to/php_errors.log');
 //DB connection
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
-// forceLogin();
+forceLogin();
 dbConnect();
 //assigns the user's id for all the sql
 // $userID = htmlspecialchars($_SESSION["user_id"]);
 $userNAME = $_GET["userNAME"];
-echo $user;
 //queries the user's profile data
 $sql = "SELECT * FROM users WHERE username='$userNAME'";
 $result = $_SESSION["conn"]->query($sql);

@@ -23,13 +23,14 @@ function forceLogin() {
 function makeDropDown() {
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "images/badges/hydra-slayer-color.png") {
         $pfp_set = $_SESSION["pfp"];
+        $username = $_SESSION["username"];
         $htmlContent = <<<HTML
         <div class="dropdown drop">
             <div class="fuck-you drop" onclick="myFunction()">
                 <img id="pfp-overlay" class="pfp-overlay pfp drop"src="images/hydra-slayer-overlay.png">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn drop">
                         <div id="myDropdown" class="dropdown-content dropdown-contents">
-                        <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
+                        <a href="profile.php?userNAME=$username">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
                         <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
                         <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.png"></a>
                     </div>
@@ -55,12 +56,13 @@ function makeDropDown() {
         echo $htmlContent;
 } elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "images/badges/hydra-slayer-mono.png"){
     $pfp_set = $_SESSION["pfp"];
+    $username = $_SESSION["username"];
         $htmlContent = <<<HTML
         <div class="dropdown drop">
             <div class="fuck-you drop" onclick="myFunction()">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn drop">
                         <div id="myDropdown" class="dropdown-content dropdown-contents">
-                        <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
+                        <a href="profile.php?userNAME=$username">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
                         <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
                         <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.png"></a>
                     </div>
@@ -87,12 +89,13 @@ function makeDropDown() {
         
 } elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
     $pfp_set = $_SESSION["pfp"];
+    $username = $_SESSION["username"];
         $htmlContent = <<<HTML
         <div class="dropdown drop">
             <div class="fuck-you drop" onclick="myFunction()">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn drop">
                         <div id="myDropdown" class="dropdown-content dropdown-contents">
-                        <a href="profile.php">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
+                        <a href="profile.php?userNAME=$username">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
                         <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
                         <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.png"></a>
                     </div>

@@ -33,6 +33,7 @@ if (isset($_SESSION["user_id"])) {
     $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
         $pfp = $user["pfp"];
+        $username = $user["username"];
 
     if (empty($pfp)) {
         $pfp_set = "images/pfp-icon.png";
@@ -143,6 +144,7 @@ $_SESSION["current_count"] = $current_count;
 $_SESSION["goal"] = $goal;
 $_SESSION["days"] = $days;
 $_SESSION["daily"] = $daily;
+$_SESSION["username"] = $username;
 ?>
 
 <!DOCTYPE html>
