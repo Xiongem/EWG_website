@@ -39,12 +39,12 @@ echo'params bound and sql executed'.'<br>';
     $mail->Subject = "Password Reset";
     echo'subject set'.'<br>';
     $mail -> Body = <<<END
-        Hello <?= $username ?>,
+        Hello <?= $username ?>, <br>
 
-        A request was made to reset your password.
-        Your password reset token will expire in 30 minutes.
+        A request was made to reset your password. <br>
+        Your password reset token will expire in 30 minutes. <br>
         Click <a href="http://elsewherewriters.com/reset-password.php?token=$token">here</a> to reset your password.
-
+        <br><br>
         If you did not make this request, please ignore this email or contact support at support@elsewherewriters.com.
         
 
