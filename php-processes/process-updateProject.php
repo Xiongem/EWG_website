@@ -23,7 +23,7 @@ $stmt->bind_param("sssiss",
                         $_POST["daily_goal"]);
 //echo'params bound'.'<br>';
 if ($stmt -> execute()) {
-        header("Location: /projects.php");
+        header("Location: /projects.php?userNAME=$username");
         //echo'successfully updated project!'.'<br>';
         exit;
     } else {
