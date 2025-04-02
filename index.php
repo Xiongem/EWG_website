@@ -110,7 +110,11 @@ if (isset($_SESSION["user_id"])) {
     $sql = "SELECT `hydra-slayer` FROM users WHERE id=$userID";
         $result = $_SESSION["conn"]->query($sql);
         $badge = $result->fetch_assoc();
-            $_SESSION["overlay"] = $badge["hydra-slayer"];
+        if ($badge["hydra-slayer"] == "images/badges/hydra-slayer-color.png") {
+            $_SESSION["overlay"] = "obtained";
+        } elseif ($badge["hydra-slayer"] == "images/badges/hydra-slayer-mono.png") {
+            $_SESSION["overlay"] = "locked";
+        }
     }else {
         $pfp_set = "images\pfp-icon.png";
         $genre_picture = "images/genre-covers/placeholder.jpg";

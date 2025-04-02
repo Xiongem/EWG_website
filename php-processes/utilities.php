@@ -21,7 +21,7 @@ function forceLogin() {
 }
 
 function makeDropDown() {
-    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "images/badges/hydra-slayer-color.png") {
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "obtained") {
         $pfp_set = $_SESSION["pfp"];
         $username = $_SESSION["username"];
         $htmlContent = <<<HTML
@@ -54,7 +54,7 @@ function makeDropDown() {
         </script> -->
     HTML;
         echo $htmlContent;
-} elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "images/badges/hydra-slayer-mono.png"){
+} elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "locked"){
     $pfp_set = $_SESSION["pfp"];
     $username = $_SESSION["username"];
         $htmlContent = <<<HTML
