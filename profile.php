@@ -676,11 +676,14 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
             <h3 style="text-align: center;">Click on a badge to award it to yourself! Click on it again to remove it.</h3>
     <?php makeFooter() ?>
         <script>
-        var getUserID = <?= $userID ?>;
-        var sessionUserID = <?= $_SESSION["user_id"] ?>;
-        if (getUserID != sessionUserID ||empty($_SESSION["user_id"])) {
-            document.getElementById('add-new-container').style.display = 'none';
-        } 
+        
+        if (!empty(<?= $_SESSION["user_id"] ?>)) {
+            var getUserID = <?= $userID ?>;
+            var sessionUserID = <?= $_SESSION["user_id"] ?>;
+                if (getUserID != sessionUserID ||empty(sessionUserID)) {
+                    document.getElementById('add-new-container').style.display = 'none';
+                }
+        }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 imgsrc = document.getElementById("hydra-slayer").src;
 if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.png"){
