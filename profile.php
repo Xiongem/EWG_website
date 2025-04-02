@@ -677,14 +677,12 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
     <?php makeFooter() ?>
         <script>
         
-        if (!empty(<?= $_SESSION["user_id"] ?>)) {
+        if (typeof <?= $_SESSION["user_id"] ?> !== 'undefined' && myVar !== null) {
             var getUserID = <?= $userID ?>;
             var sessionUserID = <?= $_SESSION["user_id"] ?>;
                 if (getUserID != sessionUserID ||empty(sessionUserID)) {
                     document.getElementById('add-new-container').style.display = 'none';
                 }
-        } else {
-            var sessionUserID = null;
         }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 imgsrc = document.getElementById("hydra-slayer").src;
