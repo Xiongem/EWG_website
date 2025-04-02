@@ -315,9 +315,10 @@ function makeFooter() {
 
 function hidden() {
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+        $username = $_SESSION["username"];
         $htmlContent = <<<HTML
             <div>
-                <p id="updateBadges">Click <a href="profile.php">here</a> to update your badges!<br>There are many more where these came from.</p>
+                <p id="updateBadges">Click <a href="profile.php?userNAME=$username">here</a> to update your badges!<br>There are many more where these came from.</p>
             </div>
         HTML;
             echo $htmlContent;
