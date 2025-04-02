@@ -93,26 +93,26 @@ if (isset($_SESSION["user_id"])) {
             $badge12 = $badge["streak-fourteen"];
             $badge13 = $badge["streak-twentyOne"];
             $badge14 = $badge["every-streak"];
-                $default1="images/badges/start-1st-project-mono.png";
-                $default2= "images/badges/first-daily-mono.png";
-                $default3= "images/badges/quarter-quomplete-mono.png";
-                $default4= "images/badges/half-way-mono.png";
-                $default5= "images/badges/all-downhill-mono.png";
-                $default6= "images/badges/cross-finish-mono.png";
-                $default7= "images/badges/on-track-mono.png";
-                $default8= "images/badges/out-gate-mono.png";
-                $default9= "images/badges/streak-two-mono.png";
-                $default10= "images/badges/streak-three-mono.png";
-                $default11= "images/badges/streak-seven-mono.png";
-                $default12= "images/badges/streak-fourteen-mono.png";
-                $default13= "images/badges/streak-twentyOne-mono.png";
-                $default14= "images/badges/every-streak-mono.png";
+                $default1="images/badges/start-1st-project-mono.svg";
+                $default2= "images/badges/first-daily-mono.svg";
+                $default3= "images/badges/quarter-quomplete-mono.svg";
+                $default4= "images/badges/half-way-mono.svg";
+                $default5= "images/badges/all-downhill-mono.svg";
+                $default6= "images/badges/cross-finish-mono.svg";
+                $default7= "images/badges/on-track-mono.svg";
+                $default8= "images/badges/out-gate-mono.svg";
+                $default9= "images/badges/streak-two-mono.svg";
+                $default10= "images/badges/streak-three-mono.svg";
+                $default11= "images/badges/streak-seven-mono.svg";
+                $default12= "images/badges/streak-fourteen-mono.svg";
+                $default13= "images/badges/streak-twentyOne-mono.svg";
+                $default14= "images/badges/every-streak-mono.svg";
     $sql = "SELECT `hydra-slayer` FROM users WHERE id=$userID";
         $result = $_SESSION["conn"]->query($sql);
         $badge = $result->fetch_assoc();
-            if ($badge["hydra-slayer"] == "images/badges/hydra-slayer-color.png") {
+            if ($badge["hydra-slayer"] == "images/badges/hydra-slayer-color.svg") {
                 $_SESSION["overlay"] = "obtained";
-            } elseif ($badge["hydra-slayer"] == "images/badges/hydra-slayer-mono.png") {
+            } elseif ($badge["hydra-slayer"] == "images/badges/hydra-slayer-mono.svg") {
                 $_SESSION["overlay"] = "locked";
             }
     }else {
@@ -126,20 +126,20 @@ if (isset($_SESSION["user_id"])) {
         $percentage = 0;
         $days = 0;
         $daily = 0;
-        $default1="images/badges/start-1st-project-mono.png";
-        $default2= "images/badges/first-daily-mono.png";
-        $default3= "images/badges/quarter-quomplete-mono.png";
-        $default4= "images/badges/half-way-mono.png";
-        $default5= "images/badges/all-downhill-mono.png";
-        $default6= "images/badges/cross-finish-mono.png";
-        $default7= "images/badges/on-track-mono.png";
-        $default8= "images/badges/out-gate-mono.png";
-        $default9= "images/badges/streak-two-mono.png";
-        $default10= "images/badges/streak-three-mono.png";
-        $default11= "images/badges/streak-seven-mono.png";
-        $default12= "images/badges/streak-fourteen-mono.png";
-        $default13= "images/badges/streak-twentyOne-mono.png";
-        $default14= "images/badges/every-streak-mono.png";
+        $default1="images/badges/start-1st-project-mono.svg";
+        $default2= "images/badges/first-daily-mono.svg";
+        $default3= "images/badges/quarter-quomplete-mono.svg";
+        $default4= "images/badges/half-way-mono.svg";
+        $default5= "images/badges/all-downhill-mono.svg";
+        $default6= "images/badges/cross-finish-mono.svg";
+        $default7= "images/badges/on-track-mono.svg";
+        $default8= "images/badges/out-gate-mono.svg";
+        $default9= "images/badges/streak-two-mono.svg";
+        $default10= "images/badges/streak-three-mono.svg";
+        $default11= "images/badges/streak-seven-mono.svg";
+        $default12= "images/badges/streak-fourteen-mono.svg";
+        $default13= "images/badges/streak-twentyOne-mono.svg";
+        $default14= "images/badges/every-streak-mono.svg";
 }
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["percentage"] = $percentage;

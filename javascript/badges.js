@@ -1,11 +1,11 @@
 //BADGES
 function toggleImage1() {
     imgsrc= document.getElementById("start-1st-project").src;
-    if (imgsrc.indexOf("images/badges/start-1st-project-mono.png")!=-1){
-        document.getElementById("start-1st-project").src = "images/badges/start-1st-project-color.png";
+    if (imgsrc.indexOf("images/badges/start-1st-project-mono.svg")!=-1){
+        document.getElementById("start-1st-project").src = "images/badges/start-1st-project-color.svg";
         //assign values
         var id = "start-1st-project";
-        var badge = "images/badges/start-1st-project-color.png";
+        var badge = "images/badges/start-1st-project-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -14,10 +14,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("start-1st-project").src = "images/badges/start-1st-project-mono.png";
+        document.getElementById("start-1st-project").src = "images/badges/start-1st-project-mono.svg";
         //assign values
         var id = "start-1st-project";
-        var badge = "images/badges/start-1st-project-mono.png";
+        var badge = "images/badges/start-1st-project-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -29,11 +29,11 @@ function toggleImage1() {
   
   function toggleImage2() {
     imgsrc= document.getElementById("first-daily").src;
-    if (imgsrc.indexOf("images/badges/first-daily-mono.png")!=-1){
-        document.getElementById("first-daily").src = "images/badges/first-daily-color.png";
+    if (imgsrc.indexOf("images/badges/first-daily-mono.svg")!=-1){
+        document.getElementById("first-daily").src = "images/badges/first-daily-color.svg";
         //assign values
         var id = "first-daily";
-        var badge = "images/badges/first-daily-color.png";
+        var badge = "images/badges/first-daily-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -42,10 +42,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("first-daily").src = "images/badges/first-daily-mono.png";
+        document.getElementById("first-daily").src = "images/badges/first-daily-mono.svg";
         //assign values
         var id = "first-daily";
-        var badge = "images/badges/first-daily-mono.png";
+        var badge = "images/badges/first-daily-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -57,11 +57,11 @@ function toggleImage1() {
   
   function toggleImage3() {
     imgsrc= document.getElementById("quarter-quomplete").src;
-    if (imgsrc.indexOf("images/badges/quarter-quomplete-mono.png")!=-1){
-        document.getElementById("quarter-quomplete").src = "images/badges/quarter-quomplete-color.png";
+    if (imgsrc.indexOf("images/badges/quarter-quomplete-mono.svg")!=-1){
+        document.getElementById("quarter-quomplete").src = "images/badges/quarter-quomplete-color.svg";
         //assign values
         var id = "quarter-quomplete";
-        var badge = "images/badges/quarter-quomplete-color.png";
+        var badge = "images/badges/quarter-quomplete-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -70,10 +70,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("quarter-quomplete").src = "images/badges/quarter-quomplete-mono.png";
+        document.getElementById("quarter-quomplete").src = "images/badges/quarter-quomplete-mono.svg";
         //assign values
         var id = "quarter-quomplete";
-        var badge = "images/badges/quarter-quomplete-mono.png";
+        var badge = "images/badges/quarter-quomplete-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -85,11 +85,11 @@ function toggleImage1() {
   
   function toggleImage4() {
     imgsrc= document.getElementById("half-way").src;
-    if (imgsrc.indexOf("images/badges/half-way-mono.png")!=-1){
-        document.getElementById("half-way").src = "images/badges/half-way-color.png";
+    if (imgsrc.indexOf("images/badges/half-way-mono.svg")!=-1){
+        document.getElementById("half-way").src = "images/badges/half-way-color.svg";
         //assign values
         var id = "half-way";
-        var badge = "images/badges/half-way-color.png";
+        var badge = "images/badges/half-way-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -98,10 +98,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("half-way").src = "images/badges/half-way-mono.png";
+        document.getElementById("half-way").src = "images/badges/half-way-mono.svg";
         //assign values
         var id = "half-way";
-        var badge = "images/badges/half-way-mono.png";
+        var badge = "images/badges/half-way-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -113,11 +113,11 @@ function toggleImage1() {
   
   function toggleImage5() {
     imgsrc= document.getElementById("all-downhill").src;
-    if (imgsrc.indexOf("images/badges/all-downhill-mono.png")!=-1){
-        document.getElementById("all-downhill").src = "images/badges/all-downhill-color.png";
+    if (imgsrc.indexOf("images/badges/all-downhill-mono.svg")!=-1){
+        document.getElementById("all-downhill").src = "images/badges/all-downhill-color.svg";
         //assign values
         var id = "all-downhill";
-        var badge = "images/badges/all-downhill-color.png";
+        var badge = "images/badges/all-downhill-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -126,10 +126,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("all-downhill").src = "images/badges/all-downhill-mono.png";
+        document.getElementById("all-downhill").src = "images/badges/all-downhill-mono.svg";
         //assign values
         var id = "all-downhill";
-        var badge = "images/badges/all-downhill-mono.png";
+        var badge = "images/badges/all-downhill-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -141,11 +141,11 @@ function toggleImage1() {
   
   function toggleImage6() {
     imgsrc= document.getElementById("cross-finish").src;
-    if (imgsrc.indexOf("images/badges/cross-finish-mono.png")!=-1){
-        document.getElementById("cross-finish").src = "images/badges/cross-finish-color.png";
+    if (imgsrc.indexOf("images/badges/cross-finish-mono.svg")!=-1){
+        document.getElementById("cross-finish").src = "images/badges/cross-finish-color.svg";
         //assign values
         var id = "cross-finish";
-        var badge = "images/badges/cross-finish-color.png";
+        var badge = "images/badges/cross-finish-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -154,10 +154,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("cross-finish").src = "images/badges/cross-finish-mono.png";
+        document.getElementById("cross-finish").src = "images/badges/cross-finish-mono.svg";
         //assign values
         var id = "cross-finish";
-        var badge = "images/badges/cross-finish-mono.png";
+        var badge = "images/badges/cross-finish-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -169,11 +169,11 @@ function toggleImage1() {
   
   function toggleImage7() {
     imgsrc= document.getElementById("on-track").src;
-    if (imgsrc.indexOf("images/badges/on-track-mono.png")!=-1){
-        document.getElementById("on-track").src = "images/badges/on-track-color.png";
+    if (imgsrc.indexOf("images/badges/on-track-mono.svg")!=-1){
+        document.getElementById("on-track").src = "images/badges/on-track-color.svg";
         //assign values
         var id = "on-track";
-        var badge = "images/badges/on-track-color.png";
+        var badge = "images/badges/on-track-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -182,10 +182,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("on-track").src = "images/badges/on-track-mono.png";
+        document.getElementById("on-track").src = "images/badges/on-track-mono.svg";
          //assign values
          var id = "on-track";
-         var badge = "images/badges/on-track-mono.png";
+         var badge = "images/badges/on-track-mono.svg";
          //begin post method
          $.post("php-processes/update-badges", {
              //DATA
@@ -196,11 +196,11 @@ function toggleImage1() {
   }
   function toggleImage8() {
     imgsrc= document.getElementById("out-gate").src;
-    if (imgsrc.indexOf("images/badges/out-gate-mono.png")!=-1){
-        document.getElementById("out-gate").src = "images/badges/out-gate-color.png";
+    if (imgsrc.indexOf("images/badges/out-gate-mono.svg")!=-1){
+        document.getElementById("out-gate").src = "images/badges/out-gate-color.svg";
         //assign values
         var id = "out-gate";
-        var badge = "images/badges/out-gate-color.png";
+        var badge = "images/badges/out-gate-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -209,10 +209,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("out-gate").src = "images/badges/out-gate-mono.png";
+        document.getElementById("out-gate").src = "images/badges/out-gate-mono.svg";
         //assign values
         var id = "out-gate";
-        var badge = "images/badges/out-gate-mono.png";
+        var badge = "images/badges/out-gate-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -223,11 +223,11 @@ function toggleImage1() {
   }
   function toggleImage9() {
     imgsrc= document.getElementById("streak-two").src;
-    if (imgsrc.indexOf("images/badges/streak-two-mono.png")!=-1){
-        document.getElementById("streak-two").src = "images/badges/streak-two-color.png";
+    if (imgsrc.indexOf("images/badges/streak-two-mono.svg")!=-1){
+        document.getElementById("streak-two").src = "images/badges/streak-two-color.svg";
         //assign values
         var id = "streak-two";
-        var badge = "images/badges/streak-two-color.png";
+        var badge = "images/badges/streak-two-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -236,10 +236,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("streak-two").src = "images/badges/streak-two-mono.png";
+        document.getElementById("streak-two").src = "images/badges/streak-two-mono.svg";
         //assign values
         var id = "streak-two";
-        var badge = "images/badges/streak-two-mono.png";
+        var badge = "images/badges/streak-two-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -250,11 +250,11 @@ function toggleImage1() {
   }
   function toggleImage10() {
     imgsrc= document.getElementById("streak-three").src;
-    if (imgsrc.indexOf("images/badges/streak-three-mono.png")!=-1){
-        document.getElementById("streak-three").src = "images/badges/streak-three-color.png";
+    if (imgsrc.indexOf("images/badges/streak-three-mono.svg")!=-1){
+        document.getElementById("streak-three").src = "images/badges/streak-three-color.svg";
         //assign values
         var id = "streak-three";
-        var badge = "images/badges/streak-three-color.png";
+        var badge = "images/badges/streak-three-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -263,10 +263,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("streak-three").src = "images/badges/streak-three-mono.png";
+        document.getElementById("streak-three").src = "images/badges/streak-three-mono.svg";
         //assign values
         var id = "streak-three";
-        var badge = "images/badges/streak-three-mono.png";
+        var badge = "images/badges/streak-three-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -277,11 +277,11 @@ function toggleImage1() {
   }
   function toggleImage11() {
     imgsrc= document.getElementById("streak-seven").src;
-    if (imgsrc.indexOf("images/badges/streak-seven-mono.png")!=-1){
-        document.getElementById("streak-seven").src = "images/badges/streak-seven-color.png";
+    if (imgsrc.indexOf("images/badges/streak-seven-mono.svg")!=-1){
+        document.getElementById("streak-seven").src = "images/badges/streak-seven-color.svg";
         //assign values
         var id = "streak-seven";
-        var badge = "images/badges/streak-seven-color.png";
+        var badge = "images/badges/streak-seven-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -290,10 +290,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("streak-seven").src = "images/badges/streak-seven-mono.png";
+        document.getElementById("streak-seven").src = "images/badges/streak-seven-mono.svg";
         //assign values
         var id = "streak-seven";
-        var badge = "images/badges/streak-seven-mono.png";
+        var badge = "images/badges/streak-seven-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -304,11 +304,11 @@ function toggleImage1() {
   }
   function toggleImage12() {
     imgsrc= document.getElementById("streak-fourteen").src;
-    if (imgsrc.indexOf("images/badges/streak-fourteen-mono.png")!=-1){
-        document.getElementById("streak-fourteen").src = "images/badges/streak-fourteen-color.png";
+    if (imgsrc.indexOf("images/badges/streak-fourteen-mono.svg")!=-1){
+        document.getElementById("streak-fourteen").src = "images/badges/streak-fourteen-color.svg";
         //assign values
         var id = "streak-fourteen";
-        var badge = "images/badges/streak-fourteen-color.png";
+        var badge = "images/badges/streak-fourteen-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -317,10 +317,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("streak-fourteen").src = "images/badges/streak-fourteen-mono.png";
+        document.getElementById("streak-fourteen").src = "images/badges/streak-fourteen-mono.svg";
         //assign values
         var id = "streak-fourteen";
-        var badge = "images/badges/streak-fourteen-mono.png";
+        var badge = "images/badges/streak-fourteen-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -331,11 +331,11 @@ function toggleImage1() {
   }
   function toggleImage13() {
     imgsrc= document.getElementById("streak-twentyOne").src;
-    if (imgsrc.indexOf("images/badges/streak-twentyOne-mono.png")!=-1){
-        document.getElementById("streak-twentyOne").src = "images/badges/streak-twentyOne-color.png";
+    if (imgsrc.indexOf("images/badges/streak-twentyOne-mono.svg")!=-1){
+        document.getElementById("streak-twentyOne").src = "images/badges/streak-twentyOne-color.svg";
         //assign values
         var id = "streak-twentyOne";
-        var badge = "images/badges/streak-twentyOne-color.png";
+        var badge = "images/badges/streak-twentyOne-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -344,10 +344,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("streak-twentyOne").src = "images/badges/streak-twentyOne-mono.png";
+        document.getElementById("streak-twentyOne").src = "images/badges/streak-twentyOne-mono.svg";
         //assign values
         var id = "streak-twentyOne";
-        var badge = "images/badges/streak-twentyOne-mono.png";
+        var badge = "images/badges/streak-twentyOne-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -358,11 +358,11 @@ function toggleImage1() {
   }
   function toggleImage14() {
     imgsrc= document.getElementById("every-streak").src;
-    if (imgsrc.indexOf("images/badges/every-streak-mono.png")!=-1){
-        document.getElementById("every-streak").src = "images/badges/every-streak-color.png";
+    if (imgsrc.indexOf("images/badges/every-streak-mono.svg")!=-1){
+        document.getElementById("every-streak").src = "images/badges/every-streak-color.svg";
         //assign values
         var id = "every-streak";
-        var badge = "images/badges/every-streak-color.png";
+        var badge = "images/badges/every-streak-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -371,10 +371,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("every-streak").src = "images/badges/every-streak-mono.png";
+        document.getElementById("every-streak").src = "images/badges/every-streak-mono.svg";
         //assign values
         var id = "every-streak";
-        var badge = "images/badges/every-streak-mono.png";
+        var badge = "images/badges/every-streak-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -385,11 +385,11 @@ function toggleImage1() {
   }
   function toggleImage15() {
     imgsrc= document.getElementById("back-it-up").src;
-    if (imgsrc.indexOf("images/badges/back-it-up-mono.png")!=-1){
-        document.getElementById("back-it-up").src = "images/badges/back-it-up-color.png";
+    if (imgsrc.indexOf("images/badges/back-it-up-mono.svg")!=-1){
+        document.getElementById("back-it-up").src = "images/badges/back-it-up-color.svg";
         //assign values
         var id = "back-it-up";
-        var badge = "images/badges/back-it-up-color.png";
+        var badge = "images/badges/back-it-up-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -398,10 +398,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("back-it-up").src = "images/badges/back-it-up-mono.png";
+        document.getElementById("back-it-up").src = "images/badges/back-it-up-mono.svg";
         //assign values
         var id = "back-it-up";
-        var badge = "images/badges/back-it-up-mono.png";
+        var badge = "images/badges/back-it-up-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -412,11 +412,11 @@ function toggleImage1() {
   }
   function toggleImage16() {
     imgsrc= document.getElementById("outline").src;
-    if (imgsrc.indexOf("images/badges/outline-mono.png")!=-1){
-        document.getElementById("outline").src = "images/badges/outline-color.png";
+    if (imgsrc.indexOf("images/badges/outline-mono.svg")!=-1){
+        document.getElementById("outline").src = "images/badges/outline-color.svg";
         //assign values
         var id = "outline";
-        var badge = "images/badges/outline-color.png";
+        var badge = "images/badges/outline-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -425,10 +425,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("outline").src = "images/badges/outline-mono.png";
+        document.getElementById("outline").src = "images/badges/outline-mono.svg";
         //assign values
         var id = "outline";
-        var badge = "images/badges/outline-mono.png";
+        var badge = "images/badges/outline-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -439,11 +439,11 @@ function toggleImage1() {
   }
   function toggleImage17() {
     imgsrc= document.getElementById("journey").src;
-    if (imgsrc.indexOf("images/badges/journey-mono.png")!=-1){
-        document.getElementById("journey").src = "images/badges/journey-color.png";
+    if (imgsrc.indexOf("images/badges/journey-mono.svg")!=-1){
+        document.getElementById("journey").src = "images/badges/journey-color.svg";
         //assign values
         var id = "journey";
-        var badge = "images/badges/journey-color.png";
+        var badge = "images/badges/journey-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -452,10 +452,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("journey").src = "images/badges/journey-mono.png";
+        document.getElementById("journey").src = "images/badges/journey-mono.svg";
         //assign values
         var id = "journey";
-        var badge = "images/badges/journey-mono.png";
+        var badge = "images/badges/journey-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -466,11 +466,11 @@ function toggleImage1() {
   }
   function toggleImage18() {
     imgsrc= document.getElementById("dual-wielder").src;
-    if (imgsrc.indexOf("images/badges/dual-wielder-mono.png")!=-1){
-        document.getElementById("dual-wielder").src = "images/badges/dual-wielder-color.png";
+    if (imgsrc.indexOf("images/badges/dual-wielder-mono.svg")!=-1){
+        document.getElementById("dual-wielder").src = "images/badges/dual-wielder-color.svg";
         //assign values
         var id = "dual-wielder";
-        var badge = "images/badges/dual-wielder-color.png";
+        var badge = "images/badges/dual-wielder-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -479,10 +479,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("dual-wielder").src = "images/badges/dual-wielder-mono.png";
+        document.getElementById("dual-wielder").src = "images/badges/dual-wielder-mono.svg";
          //assign values
          var id = "dual-wielder";
-         var badge = "images/badges/dual-wielder-mono.png";
+         var badge = "images/badges/dual-wielder-mono.svg";
          //begin post method
          $.post("php-processes/update-badges", {
              //DATA
@@ -493,11 +493,11 @@ function toggleImage1() {
   }
   function toggleImage19() {
     imgsrc= document.getElementById("gathering").src;
-    if (imgsrc.indexOf("images/badges/gathering-mono.png")!=-1){
-        document.getElementById("gathering").src = "images/badges/gathering-color.png";
+    if (imgsrc.indexOf("images/badges/gathering-mono.svg")!=-1){
+        document.getElementById("gathering").src = "images/badges/gathering-color.svg";
         //assign values
         var id = "gathering";
-        var badge = "images/badges/gathering-color.png";
+        var badge = "images/badges/gathering-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -506,10 +506,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("gathering").src = "images/badges/gathering-mono.png";
+        document.getElementById("gathering").src = "images/badges/gathering-mono.svg";
         //assign values
         var id = "gathering";
-        var badge = "images/badges/gathering-mono.png";
+        var badge = "images/badges/gathering-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -520,11 +520,11 @@ function toggleImage1() {
   }
   function toggleImage20() {
     imgsrc= document.getElementById("hear-ye").src;
-    if (imgsrc.indexOf("images/badges/hear-ye-mono.png")!=-1){
-        document.getElementById("hear-ye").src = "images/badges/hear-ye-color.png";
+    if (imgsrc.indexOf("images/badges/hear-ye-mono.svg")!=-1){
+        document.getElementById("hear-ye").src = "images/badges/hear-ye-color.svg";
         //assign values
         var id = "hear-ye";
-        var badge = "images/badges/hear-ye-color.png";
+        var badge = "images/badges/hear-ye-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -533,10 +533,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("hear-ye").src = "images/badges/hear-ye-mono.png";
+        document.getElementById("hear-ye").src = "images/badges/hear-ye-mono.svg";
         //assign values
         var id = "hear-ye";
-        var badge = "images/badges/hear-ye-mono.png";
+        var badge = "images/badges/hear-ye-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -547,11 +547,11 @@ function toggleImage1() {
   }
   function toggleImage21() {
     imgsrc= document.getElementById("breakthrough").src;
-    if (imgsrc.indexOf("images/badges/breakthrough-mono.png")!=-1){
-        document.getElementById("breakthrough").src = "images/badges/breakthrough-color.png";
+    if (imgsrc.indexOf("images/badges/breakthrough-mono.svg")!=-1){
+        document.getElementById("breakthrough").src = "images/badges/breakthrough-color.svg";
         //assign values
         var id = "breakthrough";
-        var badge = "images/badges/breakthrough-color.png";
+        var badge = "images/badges/breakthrough-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -560,10 +560,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("breakthrough").src = "images/badges/breakthrough-mono.png";
+        document.getElementById("breakthrough").src = "images/badges/breakthrough-mono.svg";
          //assign values
          var id = "breakthrough";
-         var badge = "images/badges/breakthrough-mono.png";
+         var badge = "images/badges/breakthrough-mono.svg";
          //begin post method
          $.post("php-processes/update-badges", {
              //DATA
@@ -574,11 +574,11 @@ function toggleImage1() {
   }
   function toggleImage22() {
     imgsrc= document.getElementById("starting-fresh").src;
-    if (imgsrc.indexOf("images/badges/starting-fresh-mono.png")!=-1){
-        document.getElementById("starting-fresh").src = "images/badges/starting-fresh-color.png";
+    if (imgsrc.indexOf("images/badges/starting-fresh-mono.svg")!=-1){
+        document.getElementById("starting-fresh").src = "images/badges/starting-fresh-color.svg";
         //assign values
         var id = "starting-fresh";
-        var badge = "images/badges/starting-fresh-color.png";
+        var badge = "images/badges/starting-fresh-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -587,10 +587,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("starting-fresh").src = "images/badges/starting-fresh-mono.png";
+        document.getElementById("starting-fresh").src = "images/badges/starting-fresh-mono.svg";
         //assign values
         var id = "starting-fresh";
-        var badge = "images/badges/starting-fresh-mono.png";
+        var badge = "images/badges/starting-fresh-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -601,11 +601,11 @@ function toggleImage1() {
   }
   function toggleImage23() {
     imgsrc= document.getElementById("ever-persist").src;
-    if (imgsrc.indexOf("images/badges/ever-persist-mono.png")!=-1){
-        document.getElementById("ever-persist").src = "images/badges/ever-persist-color.png";
+    if (imgsrc.indexOf("images/badges/ever-persist-mono.svg")!=-1){
+        document.getElementById("ever-persist").src = "images/badges/ever-persist-color.svg";
         //assign values
         var id = "ever-persist";
-        var badge = "images/badges/ever-persist-color.png";
+        var badge = "images/badges/ever-persist-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -614,10 +614,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("ever-persist").src = "images/badges/ever-persist-mono.png";
+        document.getElementById("ever-persist").src = "images/badges/ever-persist-mono.svg";
         //assign values
         var id = "ever-persist";
-        var badge = "images/badges/ever-persist-mono.png";
+        var badge = "images/badges/ever-persist-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -628,11 +628,11 @@ function toggleImage1() {
   }
   function toggleImage24() {
     imgsrc= document.getElementById("touch-grass").src;
-    if (imgsrc.indexOf("images/badges/touch-grass-mono.png")!=-1){
-        document.getElementById("touch-grass").src = "images/badges/touch-grass-color.png";
+    if (imgsrc.indexOf("images/badges/touch-grass-mono.svg")!=-1){
+        document.getElementById("touch-grass").src = "images/badges/touch-grass-color.svg";
         //assign values
         var id = "touch-grass";
-        var badge = "images/badges/touch-grass-color.png";
+        var badge = "images/badges/touch-grass-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -641,10 +641,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("touch-grass").src = "images/badges/touch-grass-mono.png";
+        document.getElementById("touch-grass").src = "images/badges/touch-grass-mono.svg";
         //assign values
         var id = "touch-grass";
-        var badge = "images/badges/touch-grass-mono.png";
+        var badge = "images/badges/touch-grass-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -655,11 +655,11 @@ function toggleImage1() {
   }
   function toggleImage25() {
     imgsrc= document.getElementById("business").src;
-    if (imgsrc.indexOf("images/badges/business-mono.png")!=-1){
-        document.getElementById("business").src = "images/badges/business-color.png";
+    if (imgsrc.indexOf("images/badges/business-mono.svg")!=-1){
+        document.getElementById("business").src = "images/badges/business-color.svg";
         //assign values
         var id = "business";
-        var badge = "images/badges/business-color.png";
+        var badge = "images/badges/business-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -668,10 +668,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("business").src = "images/badges/business-mono.png";
+        document.getElementById("business").src = "images/badges/business-mono.svg";
         //assign values
         var id = "business";
-        var badge = "images/badges/business-mono.png";
+        var badge = "images/badges/business-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -682,11 +682,11 @@ function toggleImage1() {
   }
   function toggleImage26() {
     imgsrc= document.getElementById("tears-wept").src;
-    if (imgsrc.indexOf("images/badges/tears-wept-mono.png")!=-1){
-        document.getElementById("tears-wept").src = "images/badges/tears-wept-color.png";
+    if (imgsrc.indexOf("images/badges/tears-wept-mono.svg")!=-1){
+        document.getElementById("tears-wept").src = "images/badges/tears-wept-color.svg";
         //assign values
         var id = "tears-wept";
-        var badge = "images/badges/tears-wept-color.png";
+        var badge = "images/badges/tears-wept-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -695,10 +695,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("tears-wept").src = "images/badges/tears-wept-mono.png";
+        document.getElementById("tears-wept").src = "images/badges/tears-wept-mono.svg";
         //assign values
         var id = "tears-wept";
-        var badge = "images/badges/tears-wept-mono.png";
+        var badge = "images/badges/tears-wept-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -709,11 +709,11 @@ function toggleImage1() {
   }
   function toggleImage27() {
     imgsrc= document.getElementById("overachiever").src;
-    if (imgsrc.indexOf("images/badges/overachiever-mono.png")!=-1){
-        document.getElementById("overachiever").src = "images/badges/overachiever-color.png";
+    if (imgsrc.indexOf("images/badges/overachiever-mono.svg")!=-1){
+        document.getElementById("overachiever").src = "images/badges/overachiever-color.svg";
         //assign values
         var id = "overachiever";
-        var badge = "images/badges/overachiever-color.png";
+        var badge = "images/badges/overachiever-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -722,10 +722,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("overachiever").src = "images/badges/overachiever-mono.png";
+        document.getElementById("overachiever").src = "images/badges/overachiever-mono.svg";
         //assign values
         var id = "overachiever";
-        var badge = "images/badges/overachiever-mono.png";
+        var badge = "images/badges/overachiever-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -736,11 +736,11 @@ function toggleImage1() {
   }
   function toggleImage28() {
     imgsrc= document.getElementById("finish-him").src;
-    if (imgsrc.indexOf("images/badges/finish-him-mono.png")!=-1){
-        document.getElementById("finish-him").src = "images/badges/finish-him-color.png";
+    if (imgsrc.indexOf("images/badges/finish-him-mono.svg")!=-1){
+        document.getElementById("finish-him").src = "images/badges/finish-him-color.svg";
         //assign values
         var id = "finish-him";
-        var badge = "images/badges/finish-him-color.png";
+        var badge = "images/badges/finish-him-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -749,10 +749,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("finish-him").src = "images/badges/finish-him-mono.png";
+        document.getElementById("finish-him").src = "images/badges/finish-him-mono.svg";
         //assign values
         var id = "finish-him";
-        var badge = "images/badges/finish-him-mono.png";
+        var badge = "images/badges/finish-him-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -763,11 +763,11 @@ function toggleImage1() {
   }
   function toggleImage29() {
     imgsrc= document.getElementById("complete-one-project").src;
-    if (imgsrc.indexOf("images/badges/complete-one-project-mono.png")!=-1){
-        document.getElementById("complete-one-project").src = "images/badges/complete-one-project-color.png";
+    if (imgsrc.indexOf("images/badges/complete-one-project-mono.svg")!=-1){
+        document.getElementById("complete-one-project").src = "images/badges/complete-one-project-color.svg";
         //assign values
         var id = "complete-one-project";
-        var badge = "images/badges/complete-one-project-color.png";
+        var badge = "images/badges/complete-one-project-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -776,10 +776,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("complete-one-project").src = "images/badges/complete-one-project-mono.png";
+        document.getElementById("complete-one-project").src = "images/badges/complete-one-project-mono.svg";
         //assign values
         var id = "complete-one-project";
-        var badge = "images/badges/complete-one-project-mono.png";
+        var badge = "images/badges/complete-one-project-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -790,11 +790,11 @@ function toggleImage1() {
   }
   function toggleImage30() {
     imgsrc= document.getElementById("complete-five-project").src;
-    if (imgsrc.indexOf("images/badges/complete-five-project-mono.png")!=-1){
-        document.getElementById("complete-five-project").src = "images/badges/complete-five-project-color.png";
+    if (imgsrc.indexOf("images/badges/complete-five-project-mono.svg")!=-1){
+        document.getElementById("complete-five-project").src = "images/badges/complete-five-project-color.svg";
         //assign values
         var id = "complete-five-project";
-        var badge = "images/badges/complete-five-project-color.png";
+        var badge = "images/badges/complete-five-project-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -803,10 +803,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("complete-five-project").src = "images/badges/complete-five-project-mono.png";
+        document.getElementById("complete-five-project").src = "images/badges/complete-five-project-mono.svg";
         //assign values
         var id = "complete-five-project";
-        var badge = "images/badges/complete-five-project-mono.png";
+        var badge = "images/badges/complete-five-project-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -817,11 +817,11 @@ function toggleImage1() {
   }
   function toggleImage31() {
     imgsrc= document.getElementById("complete-ten-project").src;
-    if (imgsrc.indexOf("images/badges/complete-ten-project-mono.png")!=-1){
-        document.getElementById("complete-ten-project").src = "images/badges/complete-ten-project-color.png";
+    if (imgsrc.indexOf("images/badges/complete-ten-project-mono.svg")!=-1){
+        document.getElementById("complete-ten-project").src = "images/badges/complete-ten-project-color.svg";
         //assign values
         var id = "complete-ten-project";
-        var badge = "images/badges/complete-ten-project-color.png";
+        var badge = "images/badges/complete-ten-project-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -830,10 +830,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("complete-ten-project").src = "images/badges/complete-ten-project-mono.png";
+        document.getElementById("complete-ten-project").src = "images/badges/complete-ten-project-mono.svg";
         //assign values
         var id = "complete-ten-project";
-        var badge = "images/badges/complete-ten-project-mono.png";
+        var badge = "images/badges/complete-ten-project-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -844,11 +844,11 @@ function toggleImage1() {
   }
   function toggleImage32() {
     imgsrc= document.getElementById("streak-fiend").src;
-    if (imgsrc.indexOf("images/badges/streak-fiend-mono.png")!=-1){
-        document.getElementById("streak-fiend").src = "images/badges/streak-fiend-color.png";
+    if (imgsrc.indexOf("images/badges/streak-fiend-mono.svg")!=-1){
+        document.getElementById("streak-fiend").src = "images/badges/streak-fiend-color.svg";
          //assign values
          var id = "streak-fiend";
-         var badge = "images/badges/streak-fiend-color.png";
+         var badge = "images/badges/streak-fiend-color.svg";
          //begin post method
          $.post("php-processes/update-badges", {
              //DATA
@@ -857,10 +857,10 @@ function toggleImage1() {
          });
     } 
     else {
-        document.getElementById("streak-fiend").src = "images/badges/streak-fiend-mono.png";
+        document.getElementById("streak-fiend").src = "images/badges/streak-fiend-mono.svg";
         //assign values
         var id = "streak-fiend";
-        var badge = "images/badges/streak-fiend-mono.png";
+        var badge = "images/badges/streak-fiend-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -871,11 +871,11 @@ function toggleImage1() {
   }
   function toggleImage33() {
     imgsrc= document.getElementById("hydra-slayer").src;
-    if (imgsrc.indexOf("images/badges/hydra-slayer-mono.png")!=-1){
-        document.getElementById("hydra-slayer").src = "images/badges/hydra-slayer-color.png";
+    if (imgsrc.indexOf("images/badges/hydra-slayer-mono.svg")!=-1){
+        document.getElementById("hydra-slayer").src = "images/badges/hydra-slayer-color.svg";
         //assign values
         var id = "hydra-slayer";
-        var badge = "images/badges/hydra-slayer-color.png";
+        var badge = "images/badges/hydra-slayer-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -890,10 +890,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("hydra-slayer").src = "images/badges/hydra-slayer-mono.png";
+        document.getElementById("hydra-slayer").src = "images/badges/hydra-slayer-mono.svg";
         //assign values
         var id = "hydra-slayer";
-        var badge = "images/badges/hydra-slayer-mono.png";
+        var badge = "images/badges/hydra-slayer-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -910,11 +910,11 @@ function toggleImage1() {
   }
   function toggleImage34() {
     imgsrc= document.getElementById("vet-streaker").src;
-    if (imgsrc.indexOf("images/badges/vet-streaker-mono.png")!=-1){
-        document.getElementById("vet-streaker").src = "images/badges/vet-streaker-color.png";
+    if (imgsrc.indexOf("images/badges/vet-streaker-mono.svg")!=-1){
+        document.getElementById("vet-streaker").src = "images/badges/vet-streaker-color.svg";
         //assign values
         var id = "vet-streaker";
-        var badge = "images/badges/vet-streaker-color.png";
+        var badge = "images/badges/vet-streaker-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -923,10 +923,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("vet-streaker").src = "images/badges/vet-streaker-mono.png";
+        document.getElementById("vet-streaker").src = "images/badges/vet-streaker-mono.svg";
         //assign values
         var id = "vet-streaker";
-        var badge = "images/badges/vet-streaker-mono.png";
+        var badge = "images/badges/vet-streaker-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -937,11 +937,11 @@ function toggleImage1() {
   }
   function toggleImage35() {
     imgsrc= document.getElementById("vet-guild").src;
-    if (imgsrc.indexOf("images/badges/vet-guild-mono.png")!=-1){
-        document.getElementById("vet-guild").src = "images/badges/vet-guild-color.png";
+    if (imgsrc.indexOf("images/badges/vet-guild-mono.svg")!=-1){
+        document.getElementById("vet-guild").src = "images/badges/vet-guild-color.svg";
         //assign values
         var id = "vet-guild";
-        var badge = "images/badges/vet-guild-color.png";
+        var badge = "images/badges/vet-guild-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -950,10 +950,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("vet-guild").src = "images/badges/vet-guild-mono.png";
+        document.getElementById("vet-guild").src = "images/badges/vet-guild-mono.svg";
         //assign values
         var id = "vet-guild";
-        var badge = "images/badges/vet-guild-mono.png";
+        var badge = "images/badges/vet-guild-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -964,11 +964,11 @@ function toggleImage1() {
   }
   function toggleImage36() {
     imgsrc= document.getElementById("start-first-project").src;
-    if (imgsrc.indexOf("images/badges/start-first-project-mono.png")!=-1){
-        document.getElementById("start-first-project").src = "images/badges/start-first-project-color.png";
+    if (imgsrc.indexOf("images/badges/start-first-project-mono.svg")!=-1){
+        document.getElementById("start-first-project").src = "images/badges/start-first-project-color.svg";
         //assign values
         var id = "start-first-project";
-        var badge = "images/badges/start-first-project-color.png";
+        var badge = "images/badges/start-first-project-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -977,10 +977,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("start-first-project").src = "images/badges/start-first-project-mono.png";
+        document.getElementById("start-first-project").src = "images/badges/start-first-project-mono.svg";
         //assign values
         var id = "start-first-project";
-        var badge = "images/badges/start-first-project-mono.png";
+        var badge = "images/badges/start-first-project-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -991,11 +991,11 @@ function toggleImage1() {
   }
   function toggleImage37() {
     imgsrc= document.getElementById("spicy-spicy").src;
-    if (imgsrc.indexOf("images/badges/spicy-spicy-mono.png")!=-1){
-        document.getElementById("spicy-spicy").src = "images/badges/spicy-spicy-color.png";
+    if (imgsrc.indexOf("images/badges/spicy-spicy-mono.svg")!=-1){
+        document.getElementById("spicy-spicy").src = "images/badges/spicy-spicy-color.svg";
         //assign values
         var id = "spicy-spicy";
-        var badge = "images/badges/spicy-spicy-color.png";
+        var badge = "images/badges/spicy-spicy-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -1004,10 +1004,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("spicy-spicy").src = "images/badges/spicy-spicy-mono.png";
+        document.getElementById("spicy-spicy").src = "images/badges/spicy-spicy-mono.svg";
         //assign values
         var id = "spicy-spicy";
-        var badge = "images/badges/spicy-spicy-mono.png";
+        var badge = "images/badges/spicy-spicy-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -1018,11 +1018,11 @@ function toggleImage1() {
   }
   function toggleImage38() {
     imgsrc= document.getElementById("tears-alltime").src;
-    if (imgsrc.indexOf("images/badges/tears-alltime-mono.png")!=-1){
-        document.getElementById("tears-alltime").src = "images/badges/tears-alltime-color.png";
+    if (imgsrc.indexOf("images/badges/tears-alltime-mono.svg")!=-1){
+        document.getElementById("tears-alltime").src = "images/badges/tears-alltime-color.svg";
         //assign values
         var id = "tears-alltime";
-        var badge = "images/badges/tears-alltime-color.png";
+        var badge = "images/badges/tears-alltime-color.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA
@@ -1031,10 +1031,10 @@ function toggleImage1() {
         });
     } 
     else {
-        document.getElementById("tears-alltime").src = "images/badges/tears-alltime-mono.png";
+        document.getElementById("tears-alltime").src = "images/badges/tears-alltime-mono.svg";
         //assign values
         var id = "tears-alltime";
-        var badge = "images/badges/tears-alltime-mono.png";
+        var badge = "images/badges/tears-alltime-mono.svg";
         //begin post method
         $.post("php-processes/update-badges", {
             //DATA

@@ -1,12 +1,12 @@
 <?php
 // error reporting
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('log_errors', 'On');
-ini_set('error_log', '/path/to/php_errors.log');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('log_errors', 'On');
+// ini_set('error_log', '/path/to/php_errors.log');
 //DB connection
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
-forceLogin();
+// forceLogin();
 dbConnect();
 //assigns the user's id for all the sql
 // $userID = htmlspecialchars($_SESSION["user_id"]);
@@ -154,7 +154,14 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
             $default36= "images/badges/start-first-project-mono.png";
             $default37= "images/badges/spicy-spicy-mono.png";
             $default38= "images/badges/tears-alltime-mono.png";
-$_SESSION["overlay"] = $badge["hydra-slayer"];
+
+            if ($badge["hydra-slayer"] == "images/badges/hydra-slayer-color.png") {
+                $_SESSION["overlay"] = "obtained";
+            } elseif ($badge["hydra-slayer"] == "images/badges/hydra-slayer-mono.png") {
+                $_SESSION["overlay"] = "locked";
+            }
+// echo $userNAME;
+// echo $_SESSION["overlay"];
 ?>
 
 <!DOCTYPE html>
@@ -203,7 +210,7 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
             </div>
         </div>
         <div class="bio-container">
-            <div class="add-new-container">
+            <div class="add-new-container" id="add-new-container">
                 <div class="add-new-contents">
                     <a href="update-profile.php"><button>Update Your Profile</button></a>
                 </div>
@@ -215,9 +222,9 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
             <div class="current-container">
                 <h1>Current Project</h1>
                 <div class="current-content">
-                    <a id="goProjects" href="projects.php"><img src= <?=$genre_picture?>></a>
+                    <a id="goProjects" href="projects.php?userNAME=<?=$username?>"><img src= <?=$genre_picture?>></a>
                         <div class="current-2">
-                        <a  href="projects.php"><?php echo "<h2>$title</h2>"?></a>
+                        <a  href="projects.php?userNAME=<?=$username?>"><?php echo "<h2>$title</h2>"?></a>
                             <p class="summary" id="summary"><?= $info?></p>
                         </div>
                 </div>
@@ -675,6 +682,26 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
             <h3 style="text-align: center;">Click on a badge to award it to yourself! Click on it again to remove it.</h3>
     <?php makeFooter() ?>
         <script>
+    <?php if ($_SESSION["user_id"]) { ?>
+        var getUserID = <?= $userID ?>;
+        var sessionUserID = <?= $_SESSION["user_id"] ?>;
+            if (getUserID != sessionUserID ) {
+                document.getElementById('add-new-container').style.display = 'none';
+                var badges = document.getElementsByClassName("badge1");
+                var i;
+                for (var i = 0; i <badges.length; i++) {
+                    badges[i].removeAttribute("onclick");
+                }
+            }
+        <?php } elseif (!isset($_SESSION["user_id"])) {?>
+            document.getElementById('add-new-container').style.display = 'none';
+                var badges = document.getElementsByClassName("badge1");
+                var i;
+                for (var i = 0; i <badges.length; i++) {
+                    badges[i].removeAttribute("onclick");
+                }
+    <?php } ?>
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 imgsrc = document.getElementById("hydra-slayer").src;
 if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.png"){
     document.getElementById('overlay').classList.remove("hide");

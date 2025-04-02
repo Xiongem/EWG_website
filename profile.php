@@ -100,34 +100,34 @@ $sql = "SELECT `start-1st-project`, `first-daily`, `quarter-quomplete`, `half-wa
         $badge26 = $badge["tears-wept"];
         $badge27 = $badge["overachiever"];
         $badge28 = $badge["finish-him"];
-            $default1="images/badges/start-1st-project-mono.png";
-            $default2= "images/badges/first-daily-mono.png";
-            $default3= "images/badges/quarter-quomplete-mono.png";
-            $default4= "images/badges/half-way-mono.png";
-            $default5= "images/badges/all-downhill-mono.png";
-            $default6= "images/badges/cross-finish-mono.png";
-            $default7= "images/badges/on-track-mono.png";
-            $default8= "images/badges/out-gate-mono.png";
-            $default9= "images/badges/streak-two-mono.png";
-            $default10= "images/badges/streak-three-mono.png";
-            $default11= "images/badges/streak-seven-mono.png";
-            $default12= "images/badges/streak-fourteen-mono.png";
-            $default13= "images/badges/streak-twentyOne-mono.png";
-            $default14= "images/badges/every-streak-mono.png";
-            $default15= "images/badges/back-it-up-mono.png";
-            $default16= "images/badges/outline-mono.png";
-            $default17= "images/badges/journey-mono.png";
-            $default18= "images/badges/dual-wielder-mono.png";
-            $default19= "images/badges/gathering-mono.png";
-            $default20= "images/badges/hear-ye-mono.png";
-            $default21= "images/badges/breakthrough-mono.png";
-            $default22= "images/badges/starting-fresh-mono.png";
-            $default23= "images/badges/ever-persist-mono.png";
-            $default24= "images/badges/touch-grass-mono.png";
-            $default25= "images/badges/business-mono.png";
-            $default26= "images/badges/tears-wept-mono.png";
-            $default27= "images/badges/overachiever-mono.png";
-            $default28= "images/badges/finish-him-mono.png";
+            $default1="images/badges/start-1st-project-mono.svg";
+            $default2= "images/badges/first-daily-mono.svg";
+            $default3= "images/badges/quarter-quomplete-mono.svg";
+            $default4= "images/badges/half-way-mono.svg";
+            $default5= "images/badges/all-downhill-mono.svg";
+            $default6= "images/badges/cross-finish-mono.svg";
+            $default7= "images/badges/on-track-mono.svg";
+            $default8= "images/badges/out-gate-mono.svg";
+            $default9= "images/badges/streak-two-mono.svg";
+            $default10= "images/badges/streak-three-mono.svg";
+            $default11= "images/badges/streak-seven-mono.svg";
+            $default12= "images/badges/streak-fourteen-mono.svg";
+            $default13= "images/badges/streak-twentyOne-mono.svg";
+            $default14= "images/badges/every-streak-mono.svg";
+            $default15= "images/badges/back-it-up-mono.svg";
+            $default16= "images/badges/outline-mono.svg";
+            $default17= "images/badges/journey-mono.svg";
+            $default18= "images/badges/dual-wielder-mono.svg";
+            $default19= "images/badges/gathering-mono.svg";
+            $default20= "images/badges/hear-ye-mono.svg";
+            $default21= "images/badges/breakthrough-mono.svg";
+            $default22= "images/badges/starting-fresh-mono.svg";
+            $default23= "images/badges/ever-persist-mono.svg";
+            $default24= "images/badges/touch-grass-mono.svg";
+            $default25= "images/badges/business-mono.svg";
+            $default26= "images/badges/tears-wept-mono.svg";
+            $default27= "images/badges/overachiever-mono.svg";
+            $default28= "images/badges/finish-him-mono.svg";
             
 $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-project`, `streak-fiend`, 
 `hydra-slayer`, `vet-streaker`, `vet-guild`, `start-first-project`, `spicy-spicy`, 
@@ -144,20 +144,20 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
         $badge36 = $badge["start-first-project"];
         $badge37 = $badge["spicy-spicy"];
         $badge38 = $badge["tears-alltime"];
-            $default29= "images/badges/complete-one-project-mono.png";
-            $default30= "images/badges/complete-five-project-mono.png";
-            $default31= "images/badges/complete-ten-project-mono.png";
-            $default32= "images/badges/streak-fiend-mono.png";
-            $default33= "images/badges/hydra-slayer-mono.png";
-            $default34= "images/badges/vet-streaker-mono.png";
-            $default35= "images/badges/vet-guild-mono.png";
-            $default36= "images/badges/start-first-project-mono.png";
-            $default37= "images/badges/spicy-spicy-mono.png";
-            $default38= "images/badges/tears-alltime-mono.png";
+            $default29= "images/badges/complete-one-project-mono.svg";
+            $default30= "images/badges/complete-five-project-mono.svg";
+            $default31= "images/badges/complete-ten-project-mono.svg";
+            $default32= "images/badges/streak-fiend-mono.svg";
+            $default33= "images/badges/hydra-slayer-mono.svg";
+            $default34= "images/badges/vet-streaker-mono.svg";
+            $default35= "images/badges/vet-guild-mono.svg";
+            $default36= "images/badges/start-first-project-mono.svg";
+            $default37= "images/badges/spicy-spicy-mono.svg";
+            $default38= "images/badges/tears-alltime-mono.svg";
 
-            if ($badge["hydra-slayer"] == "images/badges/hydra-slayer-color.png") {
+            if ($badge["hydra-slayer"] == "images/badges/hydra-slayer-color.svg") {
                 $_SESSION["overlay"] = "obtained";
-            } elseif ($badge["hydra-slayer"] == "images/badges/hydra-slayer-mono.png") {
+            } elseif ($badge["hydra-slayer"] == "images/badges/hydra-slayer-mono.svg") {
                 $_SESSION["overlay"] = "locked";
             }
 // echo $userNAME;
