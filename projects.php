@@ -236,12 +236,10 @@ $default = 'images/genre-covers/placeholder.jpg';
             if (getUserID != sessionUserID ) {
                 document.getElementById('updateProject').style.display = 'none';
                 document.getElementById('add-new-container').style.display = 'none';
-                console.log("complete");
             }
     <?php } elseif (!isset($_SESSION["user_id"])) {?>
             document.getElementById('updateProject').style.display = 'none';
             document.getElementById('add-new-container').style.display = 'none';
-            console.log("complete");
     <?php } ?>
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     var days = "<?=$days?>";
