@@ -886,7 +886,7 @@ function toggleImage1() {
             $("#overlay").addClass("show");
             $("#pfp-overlay").removeClass("hide");
             $("#pfp-overlay").addClass("show");
-            alert("<?php echo $_SESSION['overlay'];?>");
+            alert("<?php echo $_SESSION['overlay'] = 'obtained';?>");
         });
     } 
     else {
@@ -904,6 +904,7 @@ function toggleImage1() {
             $("#overlay").addClass("hide");
             $("#pfp-overlay").removeClass("show");
             $("#pfp-overlay").addClass("hide");
+            alert("<?php echo $_SESSION['overlay'] = 'locked';?>");
         });
     }
   }
