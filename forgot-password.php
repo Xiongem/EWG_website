@@ -27,7 +27,7 @@
                             <input type="username" name="username" id="username" placeholder="username">
                             <input type="email" name="email" id="forget-email" placeholder="email address">
                         </div>
-                        <button id="submit" class="submit-btn">Send</button>
+                        <button type="submit" id="submit-btn" class="submit-btn">Send</button>
                     </div>
                 </div>
             </form>
