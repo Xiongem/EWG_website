@@ -689,6 +689,11 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
             }
         <?php } elseif (!isset($_SESSION["user_id"])) {?>
             document.getElementById('add-new-container').style.display = 'none';
+                var badges = document.getElementsByClassName("badge1");
+                var i;
+                for (var i = 0; i <badges.length; i++) {
+                    badges[i].removeAttribute("onclick");
+                }
             <?php } ?>
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 imgsrc = document.getElementById("hydra-slayer").src;
