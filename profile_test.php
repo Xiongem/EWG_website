@@ -10,10 +10,10 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 //assigns the user's id for all the sql
 // $userID = htmlspecialchars($_SESSION["user_id"]);
-$userNAME = $_GET["userNAME"];
-echo $userNAME;
+$user = $_GET["userNAME"];
+echo $user;
 //queries the user's profile data
-$sql = "SELECT * FROM users WHERE username='janedoe'";
+$sql = "SELECT * FROM users WHERE username=$user";
 $result = $_SESSION["conn"]->query($sql);
 $user = $result->fetch_assoc();
     $username = $user["username"];
