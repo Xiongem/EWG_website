@@ -678,7 +678,8 @@ $_SESSION["overlay"] = $badge["hydra-slayer"];
         <script>
         var username = '<?= $userNAME ?>';
         var userID = <?= $_SESSION["user_id"] ?>;
-        console.log(username userID);
+        console.log(username);
+        console.log(userID);
         if (username != userID) {
             document.getElementById('add-new-container').style.display = 'none';
         }
