@@ -126,6 +126,7 @@ function makeDropDown() {
 
 function makeNav() {
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+        $username = $_SESSION["username"];
         $htmlContent = <<<HTML
         <div class="logo">
             <img src="images/comp-cat-beta.png" alt="cat-using-computer">
@@ -136,7 +137,7 @@ function makeNav() {
                 <a href="#" onclick="myFunction2()" class="dropbtn2 dropbutn drop">Projects</a>
                     <div id="myDropdown2" class="dropdown-content2 dropdown-contents">
                         <a href="new-project.php">Create New<br>Project <img class="drpdwn-icon2" id="new-icon" src="images\add.png"></a>
-                        <a href="projects.php">Current/Past<br>Projects <img class="drpdwn-icon2" id="project-icon" src="images\writing.png"></a>
+                        <a href="projects.php?userNAME=$username">Current/Past<br>Projects <img class="drpdwn-icon2" id="project-icon" src="images\writing.png"></a>
                     </div>
             </div> 
             <a href="announcements.php">Announcements</a>

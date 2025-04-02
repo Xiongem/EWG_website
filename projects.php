@@ -6,10 +6,11 @@
 
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
-forceLogin();
+// forceLogin();
 dbConnect();
 
-$userID = htmlspecialchars($_SESSION["user_id"]);
+// $userID = htmlspecialchars($_SESSION["user_id"]);
+$username = $_GET["username"];
 // Fetch profile picture info
 $sql = "SELECT pfp FROM users WHERE id=$userID";
 $result = $_SESSION["conn"]->query($sql);
@@ -22,7 +23,7 @@ $user = $result->fetch_assoc();
         $pfp_set = $pfp;
     }
 // Fetch project info
-$sql = "SELECT * FROM current_project WHERE users_id=$userID AND current_state='current'";
+$sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
 $result = $_SESSION["conn"]->query($sql);
 $user = $result->fetch_assoc();
 

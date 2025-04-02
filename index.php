@@ -149,6 +149,7 @@ $_SESSION["goal"] = $goal;
 $_SESSION["days"] = $days;
 $_SESSION["daily"] = $daily;
 $_SESSION["username"] = $username;
+// $_SESSION['project'] = ;
 ?>
 
 <!DOCTYPE html>
