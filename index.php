@@ -36,7 +36,7 @@ if (isset($_SESSION["user_id"])) {
         $username = $user["username"];
 
     if (empty($pfp)) {
-        $pfp_set = "images/pfp-icon.png";
+        $pfp_set = "images/pfp-icon.svg";
     } else{
         $pfp_set = $pfp;
     }
@@ -116,7 +116,7 @@ if (isset($_SESSION["user_id"])) {
                 $_SESSION["overlay"] = "locked";
             }
     }else {
-        $pfp_set = "images\pfp-icon.png";
+        $pfp_set = "images\pfp-icon.svg";
         $genre_picture = "images/genre-covers/placeholder.jpg";
         $title = "";
         $info = "Looks like you're not logged in. <br><br>Click <a href=\"login.php\">here</a> to login or sign up!";

@@ -8,7 +8,7 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 if (empty($_SESSION["pfp"])) {
-    $pfp_set = "images\pfp-icon.png";
+    $pfp_set = "images\pfp-icon.svg";
 }
 ?>
 

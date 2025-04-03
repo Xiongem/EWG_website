@@ -14,7 +14,7 @@ $user = $result->fetch_assoc();
     $username = $user["username"];
     $email = $user["email"];
 if (empty($pfp)) {
-    $pfp_set = "images\pfp-icon.png";
+    $pfp_set = "images\pfp-icon.svg";
 } else{
     $pfp_set = $pfp;
 }

@@ -23,7 +23,7 @@ $user = $result->fetch_assoc();
     $fav3 = $user["fav-3"];
     $pfp = $user["pfp"];
 if (empty($pfp)) {
-    $pfp_set = "images\pfp-icon.png";
+    $pfp_set = "images\pfp-icon.svg";
 } else{
     $pfp_set = $pfp;
 }
