@@ -1,6 +1,6 @@
 <?php
-ini_set( 'display_errors', 1 );
-error_reporting( E_ALL );
+// ini_set( 'display_errors', 1 );
+// error_reporting( E_ALL );
 
 $token = $_GET["token"];
 $token_hash = hash("sha256", $token);
@@ -24,7 +24,7 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
     die("token has expired");
 }
 
-echo "token is valid and has not expired"
+// echo "token is valid and has not expired"
 ?>
 <!DOCTYPE html>
 <html>
