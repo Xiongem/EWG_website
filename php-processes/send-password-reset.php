@@ -12,31 +12,23 @@ require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 $mail = new PHPMailer\PHPMailer\PHPMailer;
 dbConnect();
 
-echo'successfully connected'.'<br>';
 $username = $_POST["username"];
 $email = $_POST["email"];
 $token = bin2hex(random_bytes(16));
 $token_hash = hash("sha256", $token);
 $expiry = date("Y-m-d H:i:s",time() + 60 * 30);
 
-echo'variables made'.'<br>';
-
 $sql = "UPDATE users SET reset_token_hash = ?, reset_token_expires_at = ? WHERE email = ?";
 $stmt = $_SESSION["conn"] -> prepare($sql);
 $stmt->bind_param("sss", $token_hash, $expiry, $email);
 $stmt -> execute() ;
 
-echo'params bound and sql executed'.'<br>';
 if($_SESSION["conn"]->affected_rows) {
     $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
-    echo'connected to mailer.php'.'<br>';
 
     $mail -> setFrom("noreply@elsewherewriters.com");
-    echo'from set'.'<br>';
     $mail -> addAddress($email);
-    echo'address added'.'<br>';
     $mail->Subject = "Password Reset";
-    echo'subject set'.'<br>';
     $mail -> Body = <<<END
         Hello $username, 
         <br><br>
@@ -48,7 +40,6 @@ if($_SESSION["conn"]->affected_rows) {
         <br><br>
         This process is automated, please do not reply to this email.
     END;
-    echo'body set'.'<br>';
     Try {
         $mail ->send();
     } catch(Exception $e) {
