@@ -3,14 +3,12 @@
 // ini_set( 'display_errors', 1 );
 // error_reporting( E_ALL );
 
-// use PHPMailer\PHPMailer\PHPMailer;
+
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 require "vendor/autoload.php";
-// require($_SERVER['DOCUMENT_ROOT'] . '/vendor/phpmailer/phpmailer/src/phpmailer.php');
-// require($_SERVER['DOCUMENT_ROOT'] . '/vendor/phpmailer/phpmailer/src/PHPMailer.php');
-// $mail = new PHPMailer(true);
+
 $mail = new PHPMailer\PHPMailer\PHPMailer(); 
 try {
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
