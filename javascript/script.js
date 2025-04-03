@@ -2,7 +2,7 @@
 var imageList = Array();
 for (var i = 1; i <= 19; i++) {
     imageList[i] = new Image(70, 70);
-    imageList[i].src = "images/genre-covers/genre-covers" + i + ".jpg";
+    imageList[i].src = "images/genre-covers/genre-covers" + i + ".webp";
 }
 function switchImage() {
 var selectedImage = document.createNewProject.switch.options[document.createNewProject.switch.selectedIndex].value;
