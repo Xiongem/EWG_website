@@ -13,7 +13,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     $mail->isSMTP();
-    $mail->SMTPDebug = 2;
+    // $mail->SMTPDebug = 2;
     $mail->SMTPAuth = true;
 
     $mail->Host = "smtp.hostinger.com";
