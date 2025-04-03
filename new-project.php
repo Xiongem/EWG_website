@@ -86,7 +86,7 @@ dbConnect();
                     </div>
                     <div class="img-contain">
                         <div class="drop-shadow">
-                            <img src="images/genre-covers/genre-covers1.jpg" name="genrePreview">
+                            <img src="images/genre-covers/genre-covers1.webp" name="genrePreview">
                         </div>
                     </div>
                 </div>

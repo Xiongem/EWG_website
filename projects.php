@@ -33,7 +33,7 @@ $user = $result->fetch_assoc();
             $genre = $user["genre"];
             $title = $user["title"];
             $goalDate = $user["goal_date"];
-            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.jpg';
+            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
             $info = $user["info"];
             $current_count = $user["current_count"];
             $daily = $user["daily_goal"];
@@ -43,7 +43,7 @@ $user = $result->fetch_assoc();
             $genre = $user["genre"];
             $title = $user["title"];
             $goalDate = $user["goal_date"];
-            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.jpg';
+            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
             $info = $user["info"];
             $current_count = $user["current_count"];
             $daily = $user["daily_goal"];
@@ -60,7 +60,7 @@ $user = $result->fetch_assoc();
             }
         }
     } else { //no project active
-        $default = 'images/genre-covers/placeholder.jpg';
+        $default = 'images/genre-covers/placeholder.webp';
         $genre_picture = $default;
         $info = "Looks like you haven't started a project yet.<br><br>Click <a href=\"new-project.php\">here</a> to get started.";
         $current_count = 0;
@@ -81,7 +81,7 @@ if (empty($current_count) || empty($goal)) {
     $progress = floor($current_count / $goal * 100);
     $percentage = $progress;
 }
-$default = 'images/genre-covers/placeholder.jpg';
+$default = 'images/genre-covers/placeholder.webp';
 ?>
 
 <!DOCTYPE html>
@@ -205,7 +205,7 @@ $default = 'images/genre-covers/placeholder.jpg';
                                 $archived_info = $rows["info"];
                                 $archived_current_count = $rows["current_count"];
                                 $archived_goal = $rows["goal"];
-                                $archived_genre_picture = 'images/genre-covers/genre-covers'.$archived_genre.'.jpg';?>
+                                $archived_genre_picture = 'images/genre-covers/genre-covers'.$archived_genre.'.webp';?>
                                 <div class="prev-content">
                                     <img src=<?=$archived_genre_picture ?>>
                                     <div class="archive-content">

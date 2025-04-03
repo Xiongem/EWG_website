@@ -41,7 +41,7 @@ if (isset($_SESSION["user_id"])) {
         $pfp_set = $pfp;
     }
         if (empty($genre)) {
-            $genre_picture = 'images/genre-covers/placeholder.jpg';
+            $genre_picture = 'images/genre-covers/placeholder.webp';
             $info = "Looks like you haven't started a project yet.<br><br>Click <a href=\"new-project.php\">here</a> to get started.";
             $current_count = 0;
             $goal = 0;
@@ -57,7 +57,7 @@ if (isset($_SESSION["user_id"])) {
                     $days = "Project Past Due!";
                 }
             }
-            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.jpg';
+            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
             $info = $infos;
             $current_count = $current_counts;
             $goal = $goals;
@@ -117,7 +117,7 @@ if (isset($_SESSION["user_id"])) {
             }
     }else {
         $pfp_set = "images\pfp-icon.svg";
-        $genre_picture = "images/genre-covers/placeholder.jpg";
+        $genre_picture = "images/genre-covers/placeholder.webp";
         $title = "";
         $info = "Looks like you're not logged in. <br><br>Click <a href=\"login.php\">here</a> to login or sign up!";
         $current_count = 0;

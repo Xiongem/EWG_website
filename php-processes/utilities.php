@@ -352,7 +352,7 @@ function makeArchivedProjects() {
                 <div class="prev-container">
                     <h1 class="projTitle">Previous Projects</h1>
                     <div class="prev-content">
-                    <img src= "images/genre-covers/placeholder.jpg">
+                    <img src= "images/genre-covers/placeholder.webp">
                         <h2>Title</h2>
                         <p id='info'>Once you archived a current project, it will show up here!</p>
                     </div>

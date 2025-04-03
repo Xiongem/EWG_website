@@ -34,7 +34,7 @@ $user = $result->fetch_assoc();
     $genre = $user["genre"];
     $title = $user["title"];
     $date = $user["goal_date"];
-    $default = "images/genre-covers/placeholder.jpg";
+    $default = "images/genre-covers/placeholder.webp";
 
 if (isset($user["genre"])){
     $sql = "SELECT created_at FROM current_project WHERE username='$userNAME'";
@@ -51,7 +51,7 @@ if (empty($genre)) {
     $current_count = 0;
     $goal = 0;
 } else{
-    $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.jpg';
+    $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
     $info = $user["info"];
     $current_count = $user["current_count"];
     $goal = $user["goal"];
