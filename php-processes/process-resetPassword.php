@@ -7,7 +7,7 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
-$token = $_GET["token"];
+$token = $_POST["token"];
 $token_hash = hash("sha256", $token);
 
 $sql = "SELECT * FROM users WHERE reset_token_hash = ?";
@@ -45,10 +45,14 @@ $password_hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
 
 // prepare and bind
-$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET password_hash=? WHERE email=?");
-$stmt->bind_param("ss",
+$stmt = $_SESSION["conn"] -> prepare("UPDATE users 
+        SET password_hash = ?,
+            reset_token_hash = NULL,
+            reset_token_expires_at = NULL
+        WHERE id = ?");
+$stmt->bind_param("si",
                         $password_hash,
-                        $_POST["email"]);
+                        $user["id"]);
 
     if ($stmt -> execute()) {
         header("Location: /login.php");
