@@ -886,7 +886,7 @@ function toggleImage1() {
             $("#overlay").addClass("show");
             $("#pfp-overlay").removeClass("hide");
             $("#pfp-overlay").addClass("show");
-            alert("Successfully updated! If the overlay does not appear, please refresh the page.");
+            alert("Successfully updated! If the overlay does not change, please refresh the page.");
         });
     } 
     else {
@@ -904,7 +904,7 @@ function toggleImage1() {
             $("#overlay").addClass("hide");
             $("#pfp-overlay").removeClass("show");
             $("#pfp-overlay").addClass("hide");
-            alert("Successfully updated! If the overlay does not appear, please refresh the page.");
+            alert("Successfully updated! If the overlay does not change, please refresh the page.");
         });
     }
   }
