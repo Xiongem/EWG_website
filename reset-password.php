@@ -24,9 +24,9 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
     die("token has expired");
 }
 
-echo "token has not expired"
+echo "token is valid and has not expired"
 ?>
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8" />
@@ -78,6 +78,7 @@ echo "token has not expired"
             <h1>Reset Your Password</h1>
             <div class="fuck-you">
                 <form action="php-processes/process-resetPassword" method="post" id="signup">
+                    <input type="hidden" name="token" value="<?=htmlspecialchars($token)?>">
                     <input required placeholder="Email" name="email" id="email" type="email">
                     <br>
                     <input required placeholder="Password" autocomplete="new-password" name="pwd" id="pwd" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -124,4 +125,4 @@ echo "token has not expired"
         </div>
     </div>
 </body>
-</html> -->
+</html>
