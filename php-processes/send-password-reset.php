@@ -27,12 +27,11 @@ $stmt->bind_param("sss", $token_hash, $expiry, $email);
 $stmt -> execute() ;
 
 echo'params bound and sql executed'.'<br>';
-// FIXME: figure out what's causing this to not work 
-// if($_SESSION["conn"]->affected_rows) {
+if($_SESSION["conn"]->affected_rows) {
     $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
     echo'connected to mailer.php'.'<br>';
 
-    $mail -> setFrom("admin@elsewherewriters.com");
+    $mail -> setFrom("noreply@elsewherewriters.com");
     echo'from set'.'<br>';
     $mail -> addAddress($email);
     echo'address added'.'<br>';
@@ -46,8 +45,8 @@ echo'params bound and sql executed'.'<br>';
         Click <a href="http://elsewherewriters.com/reset-password.php?token=$token">here</a> to reset your password.
         <br><br>
         If you did not make this request, please ignore this email or contact support at support@elsewherewriters.com.
-        
-
+        <br><br>
+        This process is automated, please do not reply to this email.
     END;
     echo'body set'.'<br>';
     Try {
@@ -55,7 +54,6 @@ echo'params bound and sql executed'.'<br>';
     } catch(Exception $e) {
         echo "Message could not be sent. Mail Sending error: {$mail->ErrorInfo}";
     }
-
-// }
+}
 
 echo "Message sent, please check your inbox.";

@@ -21,7 +21,7 @@ try {
     $mail->Host = "smtp.hostinger.com";
     // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
-    $mail->Username = "admin@elsewherewriters.com";
+    $mail->Username = "noreply@elsewherewriters.com";
     $mail->Password = "Hi5gem601*";
 
     $mail->isHTML(true);
