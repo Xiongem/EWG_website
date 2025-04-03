@@ -19,12 +19,12 @@ if (empty($_SESSION["pfp"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Elsewhere Writers Guild Official Website"> 
     <meta property="og:description" content="The official website for the Elsewhere Writers Guild, an alternative option to NaNoWriMo."> 
-    <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.png"> 
+    <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.svg"> 
     <meta property="og:url" content="http://www.elsewherewriters.com/index">
     <title>EWG Announcements</title>
     <link rel="stylesheet" href="css/EWG_theme.css">
     <link rel="stylesheet" href="css/announce_theme.css">
-    <link rel="website icon" type="png" href="images\comp-cat.png">
+    <link rel="website icon" type="svg" href="images\comp-cat-beta.svg">
     <script src="javascript/script.js"></script>
     <script src="javascript/dropDown.js"></script>
 </head>

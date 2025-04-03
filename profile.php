@@ -172,11 +172,11 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
     <meta property="og:title" content="Elsewhere Writers Guild Official Website"> 
     <meta property="og:description" content="The official website for the Elsewhere Writers Guild, an alternative option to NaNoWriMo."> 
     <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.svg"> 
-    <meta property="og:url" content="http://www.elsewherewriters.com/index">
+    <meta property="og:url" content="http://www.elsewherewriters.com/profile">
     <title>EWG Profile</title>
     <link rel="stylesheet" href="css/EWG_theme.css">
     <link rel="stylesheet" href="css/profile_theme.css">
-    <link rel="website icon" type="svg" href="images\comp-cat.svg">
+    <link rel="website icon" type="svg" href="images\comp-cat-beta.svg">
     <script src="javascript/script.js"></script>
     <script src="javascript/badges.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
