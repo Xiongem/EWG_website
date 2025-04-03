@@ -136,11 +136,7 @@ if (empty($pfp)) {
             </div>
         </div>
     </div>
-    
-    <footer>
-        <!--Make sure to keep the credit to Kohaku for the use of the cat computer logo-->
-        <p id="copyright">&copy;2024. All rights reserved. Logo by <a href="https://kohacu.com/20181205post-22321/">Kohaku!</a></p>
-    </footer>
+    <?php makeFooter() ?>
     <script>
 function clickHandle(evt, settingTab) {
   let i, tabcontent, tablinks;
