@@ -291,9 +291,9 @@ footer {
     font-size: 20px;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 4em;
+    /* gap: 4em; */
     border-top: 2px solid var(--accent-3);
     padding: 1em 0;
 }
