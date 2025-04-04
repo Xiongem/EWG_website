@@ -287,14 +287,14 @@ header {
     display:block;
 } 
 footer {
-    margin: 2em 1em 0em 1em;
+    margin: 1em 1em 0em 1em;
     font-size: 20px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     gap: 1.5em;
     border-top: 2px solid var(--accent-3);
-    padding: 0.5em 0;
+    padding: 1.5em 0 0 0;
 }
 .fuck-you {
     display: flex;
