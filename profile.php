@@ -217,7 +217,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
             </div>
             <div class="bio-contents">
                 <h2>Bio</h2>
-                <?php echo("<p>$bio</p>")?>
+                <?php echo("<p id='bio'>$bio</p>")?>
             </div>
             <div class="current-container">
                 <h1>Current Project</h1>
@@ -687,6 +687,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
         var sessionUserID = <?= $_SESSION["user_id"] ?>;
             if (getUserID != sessionUserID ) {
                 document.getElementById('add-new-container').style.display = 'none';
+                document.getElementById('bio').style = 'padding: 0 4em 0 0';
                 var badges = document.getElementsByClassName("badge1");
                 var i;
                 for (var i = 0; i <badges.length; i++) {
@@ -695,6 +696,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
             }
         <?php } elseif (!isset($_SESSION["user_id"])) {?>
             document.getElementById('add-new-container').style.display = 'none';
+            document.getElementById('bio').style = 'padding: 0 4em 0 0';
                 var badges = document.getElementsByClassName("badge1");
                 var i;
                 for (var i = 0; i <badges.length; i++) {
