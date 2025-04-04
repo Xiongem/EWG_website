@@ -689,18 +689,22 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
                 document.getElementById('add-new-container').style.display = 'none';
                 var bio = document.getElementById('bio');
                 bio.style = 'padding: 0 2em 0 0';
-                document.getElementById('pfpLink').remove();
-                var badges = document.getElementsByClassName("badge1");
-                var i;
-                for (var i = 0; i <badges.length; i++) {
-                    badges[i].removeAttribute("onclick");
-                }
+                var pfpLink = document.getElementById('pfpLink');
+                pfpLink.href = "";
+                pfpLink.style = 'cursor: default';
+                    var badges = document.getElementsByClassName("badge1");
+                    var i;
+                    for (var i = 0; i <badges.length; i++) {
+                        badges[i].removeAttribute("onclick");
+                    }
             }
         <?php } elseif (!isset($_SESSION["user_id"])) {?>
             document.getElementById('add-new-container').style.display = 'none';
             var bio = document.getElementById('bio');
             bio.style = 'padding: 0 2em 0 0';
-            document.getElementById('pfpLink').remove();
+            var pfpLink = document.getElementById('pfpLink');
+            pfpLink.href = "";
+            pfpLink.style = 'cursor: default';
                 var badges = document.getElementsByClassName("badge1");
                 var i;
                 for (var i = 0; i <badges.length; i++) {
