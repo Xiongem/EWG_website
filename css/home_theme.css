@@ -176,7 +176,7 @@
     margin: 0px 0.8em 3.5em;
 }
 #updateBadges {
-    display: flex;
+    display: block;
     text-align: center;
     font-size: 20px;
     margin-bottom: 1em;
