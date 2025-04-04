@@ -287,12 +287,12 @@ header {
     display:block;
 } 
 footer {
-    margin: 1em 0em 0em 0.5em;
+    margin: 0.5em;
     font-size: 20px;
     display: flex;
     justify-content: space-between;
     gap: 1.5em;
-    margin-top: auto;
+    /* margin-top: 0.5em; */
 }
 .fuck-you {
     display: flex;
