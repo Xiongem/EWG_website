@@ -292,6 +292,7 @@ footer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
+    align-items: center;
     gap: 1.5em;
     border-top: 2px solid var(--accent-3);
     padding: 1.5em 0 0 0;
