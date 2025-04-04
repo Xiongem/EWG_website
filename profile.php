@@ -696,6 +696,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
                     var i;
                     for (var i = 0; i <badges.length; i++) {
                         badges[i].removeAttribute("onclick");
+                        badges[i].style = "cursor: default";
                     }
             }
         <?php } elseif (!isset($_SESSION["user_id"])) {?>
@@ -709,6 +710,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
                 var i;
                 for (var i = 0; i <badges.length; i++) {
                     badges[i].removeAttribute("onclick");
+                    badges[i].style = "cursor: default";
                 }
     <?php } ?>
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
