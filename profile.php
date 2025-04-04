@@ -195,7 +195,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
         <div class="pfp-contents">
             <div class="pfp-wrapper" onclick="pfpChange()">
                 <img id="overlay" class="pfp-overlay profile-pfp" src="images/hydra-slayer-overlay.webp">
-                <a href="choose-pfp.html"><img class="profile-pfp" src="<?=$pfp_set?>"></a>
+                <a href="choose-pfp.html" id="pfpLink"><img class="profile-pfp" src="<?=$pfp_set?>"></a>
             </div>
             <?php echo ("<h1>$username</h1>")?>
             <div class="favs-container">
@@ -688,7 +688,8 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
             if (getUserID != sessionUserID ) {
                 document.getElementById('add-new-container').style.display = 'none';
                 var bio = document.getElementById('bio');
-                bio.style = 'padding: 0 2em 0 0; cursor: none;';
+                bio.style = 'padding: 0 2em 0 0';
+                document.getElementById('pfpLink').remove();
                 var badges = document.getElementsByClassName("badge1");
                 var i;
                 for (var i = 0; i <badges.length; i++) {
@@ -698,7 +699,8 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
         <?php } elseif (!isset($_SESSION["user_id"])) {?>
             document.getElementById('add-new-container').style.display = 'none';
             var bio = document.getElementById('bio');
-            bio.style = 'padding: 0 2em 0 0; cursor: none;';
+            bio.style = 'padding: 0 2em 0 0';
+            document.getElementById('pfpLink').remove();
                 var badges = document.getElementsByClassName("badge1");
                 var i;
                 for (var i = 0; i <badges.length; i++) {
