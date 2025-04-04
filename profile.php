@@ -688,7 +688,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
             if (getUserID != sessionUserID ) {
                 document.getElementById('add-new-container').style.display = 'none';
                 var bio = document.getElementById('bio');
-                bio.style = 'padding: 0 2em 0 0; cursor: default;';
+                bio.style = 'padding: 0 2em 0 0; cursor: none;';
                 var badges = document.getElementsByClassName("badge1");
                 var i;
                 for (var i = 0; i <badges.length; i++) {
@@ -698,7 +698,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
         <?php } elseif (!isset($_SESSION["user_id"])) {?>
             document.getElementById('add-new-container').style.display = 'none';
             var bio = document.getElementById('bio');
-            bio.style = 'padding: 0 2em 0 0; cursor: default;';
+            bio.style = 'padding: 0 2em 0 0; cursor: none;';
                 var badges = document.getElementsByClassName("badge1");
                 var i;
                 for (var i = 0; i <badges.length; i++) {
