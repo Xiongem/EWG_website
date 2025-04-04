@@ -682,24 +682,31 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
             <h3 style="text-align: center;">Click on a badge to award it to yourself! Click on it again to remove it.</h3>
     <?php makeFooter() ?>
         <script>
+//changes profile page look and actions for visitors
     <?php if ($_SESSION["user_id"]) { ?>
+        //assign variables
         var getUserID = <?= $userID ?>;
         var sessionUserID = <?= $_SESSION["user_id"] ?>;
-            if (getUserID != sessionUserID ) {
+            if (getUserID != sessionUserID ) {//if visitor and owner of profile are not the same and visitor is logged in
+                //remove update profile button
                 document.getElementById('add-new-container').style.display = 'none';
+                //fixes padding issue with button gone for bio area
                 var bio = document.getElementById('bio');
                 bio.style = 'padding: 0 2em 0 0';
+                //removes pfp update link from pfp
                 var pfpLink = document.getElementById('pfpLink');
                 pfpLink.href = "";
-                pfpLink.style = 'cursor: default';
+                pfpLink.style = 'cursor: default';//changes the cursor back to normal
+                    //changes badges
                     var badges = document.getElementsByClassName("badge1");
                     var i;
                     for (var i = 0; i <badges.length; i++) {
-                        badges[i].removeAttribute("onclick");
-                        badges[i].style = "cursor: default";
+                        badges[i].removeAttribute("onclick");//removes function that changes the badge image on click
+                        badges[i].style = "cursor: default";//changes cursor back to normal
                     }
             }
-        <?php } elseif (!isset($_SESSION["user_id"])) {?>
+        <?php } elseif (!isset($_SESSION["user_id"])) {?> //if visitor is not logged in
+            //exact same as if statement above
             document.getElementById('add-new-container').style.display = 'none';
             var bio = document.getElementById('bio');
             bio.style = 'padding: 0 2em 0 0';
@@ -714,6 +721,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
                 }
     <?php } ?>
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//shows or hides hydra slayer badge overlay depending on if user has "unlocked" it
 imgsrc = document.getElementById("hydra-slayer").src;
 if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.webp"){
     document.getElementById('overlay').classList.remove("hide");
@@ -723,6 +731,7 @@ if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.
     document.getElementById('overlay').classList.add("hide");
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//displays full summary of project info if it is larger than it's container on hover
 const summary = document.getElementById('summary');
 const summaryPopup = document.getElementById('summaryPopup');
 if (summary.scrollHeight > summary.offsetHeight) {
@@ -737,6 +746,7 @@ if (summary.scrollHeight > summary.offsetHeight) {
         }); 
 }        
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~BEGIN DISPLAY BADGE INFO POPUPS~~~~~~~~~~~~//
             const elementToHover1 = document.
                 getElementById('quarter-quomplete');
             const elementToPopup1 = document.
