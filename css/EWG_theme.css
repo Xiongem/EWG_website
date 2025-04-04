@@ -290,8 +290,8 @@ footer {
     margin: 1em 1em 0em 1em;
     font-size: 20px;
     display: flex;
-    /* flex-direction: row-reverse; */
-    /* justify-content: center; */
+    flex-direction: row-reverse;
+    justify-content: center;
     align-items: center;
     gap: 2em;
     border-top: 2px solid var(--accent-3);
