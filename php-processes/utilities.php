@@ -27,12 +27,12 @@ function makeDropDown() {
         $htmlContent = <<<HTML
         <div class="dropdown drop">
             <div class="fuck-you drop" onclick="myFunction()">
-                <img id="pfp-overlay" class="pfp-overlay pfp drop"src="images/hydra-slayer-overlay.svg">
+                <img id="pfp-overlay" class="pfp-overlay pfp drop"src="images/hydra-slayer-overlay.webp">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn drop">
                         <div id="myDropdown" class="dropdown-content dropdown-contents">
-                        <a href="profile.php?userNAME=$username">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
-                        <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
-                        <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.png"></a>
+                        <a href="profile.php?userNAME=$username">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.webp"></a>
+                        <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.webp"></a>
+                        <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.webp"></a>
                     </div>
             </div>
         </div>
@@ -62,9 +62,9 @@ function makeDropDown() {
             <div class="fuck-you drop" onclick="myFunction()">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn drop">
                         <div id="myDropdown" class="dropdown-content dropdown-contents">
-                        <a href="profile.php?userNAME=$username">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
-                        <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
-                        <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.png"></a>
+                        <a href="profile.php?userNAME=$username">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.webp"></a>
+                        <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.webp"></a>
+                        <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.webp"></a>
                     </div>
             </div>
         </div>
@@ -95,9 +95,9 @@ function makeDropDown() {
             <div class="fuck-you drop" onclick="myFunction()">
                 <img id="pfp" src="$pfp_set" alt="profile-picture-icon"  class="dropbtn dropbutn drop">
                         <div id="myDropdown" class="dropdown-content dropdown-contents">
-                        <a href="profile.php?userNAME=$username">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.png"></a>
-                        <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.png"></a>
-                        <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.png"></a>
+                        <a href="profile.php?userNAME=$username">Profile <img class="drpdwn-icon" id="profile-icon" src="images\user.webp"></a>
+                        <a href="settings.php">Settings <img class="drpdwn-icon" id="setting-icon" src="images\settings.webp"></a>
+                        <a href="php-processes/logout.php">Logout <img class="drpdwn-icon" id="logout-icon" src="images\logout.webp"></a>
                     </div>
             </div>
         </div>
@@ -129,15 +129,15 @@ function makeNav() {
         $username = $_SESSION["username"];
         $htmlContent = <<<HTML
         <div class="logo">
-            <img src="images/comp-cat-beta.svg" alt="cat-using-computer">
+            <img src="images/comp-cat-beta.webp" alt="cat-using-computer">
         </div>
         <nav class="nav-menu">
             <a href="index.php">Home</a>
             <div class="dropdown2 drop">
                 <a href="#" onclick="myFunction2()" class="dropbtn2 dropbutn drop">Projects</a>
                     <div id="myDropdown2" class="dropdown-content2 dropdown-contents">
-                        <a href="new-project.php">Create New<br>Project <img class="drpdwn-icon2" id="new-icon" src="images\add.png"></a>
-                        <a href="projects.php?userNAME=$username">Current/Past<br>Projects <img class="drpdwn-icon2" id="project-icon" src="images\writing.png"></a>
+                        <a href="new-project.php">Create New<br>Project <img class="drpdwn-icon2" id="new-icon" src="images\add.webp"></a>
+                        <a href="projects.php?userNAME=$username">Current/Past<br>Projects <img class="drpdwn-icon2" id="project-icon" src="images\writing.webp"></a>
                     </div>
             </div> 
             <a href="announcements.php">Announcements</a>
@@ -164,7 +164,7 @@ function makeNav() {
     } else {
         $htmlContent = <<<HTML
         <div class="logo">
-            <img src="images/comp-cat-beta.svg" alt="cat-using-computer">
+            <img src="images/comp-cat-beta.webp" alt="cat-using-computer">
         </div>
         <nav class="nav-menu">
             <a href="index.php">Home</a> 

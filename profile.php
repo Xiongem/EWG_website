@@ -23,7 +23,7 @@ $user = $result->fetch_assoc();
     $fav3 = $user["fav-3"];
     $pfp = $user["pfp"];
 if (empty($pfp)) {
-    $pfp_set = "images\pfp-icon.svg";
+    $pfp_set = "images\pfp-icon.webp";
 } else{
     $pfp_set = $pfp;
 }
@@ -155,9 +155,9 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
             $default37= "images/badges/spicy-spicy-mono.webp";
             $default38= "images/badges/tears-alltime-mono.webp";
 
-            if ($badge["hydra-slayer"] == "images/badges/hydra-slayer-color.svg") {
+            if ($badge["hydra-slayer"] == "images/badges/hydra-slayer-color.webp") {
                 $_SESSION["overlay"] = "obtained";
-            } elseif ($badge["hydra-slayer"] == "images/badges/hydra-slayer-mono.svg") {
+            } elseif ($badge["hydra-slayer"] == "images/badges/hydra-slayer-mono.webp") {
                 $_SESSION["overlay"] = "locked";
             }
 // echo $userNAME;
@@ -171,12 +171,12 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Elsewhere Writers Guild Official Website"> 
     <meta property="og:description" content="The official website for the Elsewhere Writers Guild, an alternative option to NaNoWriMo."> 
-    <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.svg"> 
+    <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.webp"> 
     <meta property="og:url" content="http://www.elsewherewriters.com/profile">
     <title>EWG Profile</title>
     <link rel="stylesheet" href="css/EWG_theme.css">
     <link rel="stylesheet" href="css/profile_theme.css">
-    <link rel="website icon" type="svg" href="images\comp-cat-beta.svg">
+    <link rel="website icon" type="webp" href="images\comp-cat-beta.webp">
     <script src="javascript/script.js"></script>
     <script src="javascript/badges.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -194,7 +194,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
     <div class="profile-container">
         <div class="pfp-contents">
             <div class="pfp-wrapper" onclick="pfpChange()">
-                <img id="overlay" class="pfp-overlay profile-pfp" src="images/hydra-slayer-overlay.svg">
+                <img id="overlay" class="pfp-overlay profile-pfp" src="images/hydra-slayer-overlay.webp">
                 <a href="choose-pfp.html"><img class="profile-pfp" src="<?=$pfp_set?>"></a>
             </div>
             <?php echo ("<h1>$username</h1>")?>
@@ -703,7 +703,7 @@ $sql = "SELECT `complete-one-project`, `complete-five-project`, `complete-ten-pr
     <?php } ?>
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 imgsrc = document.getElementById("hydra-slayer").src;
-if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.svg"){
+if(imgsrc == "https://www.elsewherewriters.com/images/badges/hydra-slayer-color.webp"){
     document.getElementById('overlay').classList.remove("hide");
     document.getElementById('overlay').classList.add("show");
 }else{

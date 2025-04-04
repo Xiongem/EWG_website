@@ -23,12 +23,12 @@ $user = $result->fetch_assoc();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Elsewhere Writers Guild Official Website"> 
         <meta property="og:description" content="The official website for the Elsewhere Writers Guild, an alternative option to NaNoWriMo."> 
-        <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.svg"> 
+        <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.webp"> 
         <meta property="og:url" content="http://www.elsewherewriters.com/index">
         <title>Choose pfp</title>
         <link rel="stylesheet" href="css/EWG_theme.css">
         <link rel="stylesheet" href="css/choose-pfp_theme.css">
-        <link rel="website icon" type="svg" href="images\comp-cat-beta.svg">
+        <link rel="website icon" type="webp" href="images\comp-cat-beta.webp">
         <script src="javascript/script.js"></script>
         <!-- <script src="javascript/pfpChange.js"></script>
         <script src="javascript/ajax.js"></script>
@@ -59,7 +59,7 @@ $user = $result->fetch_assoc();
     <script>
         const domainAndImagePath = "images/";
         const reference_bit = "reference/";
-        const svgExtension = ".svg";
+        const webpExtension = ".webp";
         const colorPrefix = "color-";
 
         const sources = [
@@ -83,7 +83,7 @@ $user = $result->fetch_assoc();
             var element = document.createElement("img");
             element.setAttribute("id", sources[i]);
             element.setAttribute("class", "badge-pfp");
-            element.setAttribute("src", domainAndImagePath + reference_bit + sources[i] + svgExtension);
+            element.setAttribute("src", domainAndImagePath + reference_bit + sources[i] + webpExtension);
             element.addEventListener("click", function (event) {
                 while (row2.firstChild) {
                     row2.removeChild(row2.firstChild);
@@ -93,7 +93,7 @@ $user = $result->fetch_assoc();
                     var element1 = document.createElement("img");
                     element1.setAttribute("id", colorPrefix + i);
                     element1.setAttribute("class", "badge-pfp");
-                    element1.setAttribute("src", domainAndImagePath + id + "/" + id +  i + ".svg");
+                    element1.setAttribute("src", domainAndImagePath + id + "/" + id +  i + ".webp");
                     element1.addEventListener("click", function (event) {
                         while (row3.firstChild) {
                             row3.removeChild(row3.firstChild);
@@ -102,7 +102,7 @@ $user = $result->fetch_assoc();
                         var element2 = document.createElement("img");
                         element2.setAttribute("id", id + "-" + index);
                         element2.setAttribute("class", "badge-pfp");
-                        element2.setAttribute("src", domainAndImagePath + id + "/" + id + "-" + index + ".svg");
+                        element2.setAttribute("src", domainAndImagePath + id + "/" + id + "-" + index + ".webp");
                         console.log(element2.src);
                         document.getElementById("choose-pfp").value = element2.src;
                         // element2.addEventListener("click", function (event) {
