@@ -153,12 +153,13 @@
     font-size: 25px;
 }
 .setTheme {
-    position: relative;
+    /*position: relative;*/
     color: var(--text-color);
     padding: 0.5em 2em;
     font-size: 25px;
     cursor: pointer;
     border-bottom: 2px solid var(--accent-3);
+    text-align: center;
 }
 .setTheme:last-child {
     border: none;
