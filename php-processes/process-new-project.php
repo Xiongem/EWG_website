@@ -69,7 +69,7 @@ if ($status == "current") {
 }
 //execute statement
 if ($stmt -> execute()) {
-    header("Location: /projects.php");
+    header("Location: /projects.php?userNAME=$username");
         exit;
     } else {
         die("unexpected error");
