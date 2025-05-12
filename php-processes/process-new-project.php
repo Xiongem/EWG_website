@@ -34,6 +34,13 @@ $date = $_POST["goal_date"];
 $dailyGoal = $_POST["daily_goal"];
 $current_state = "current";
 
+    if (!isset($_POST["goal_date"])) {
+        $_POST["goal_date"] = "00000-00-00";
+    }
+    if (!isset($_POST["daily_goal"])) {
+        $_POST["daily_goal"] = 0;
+    }
+
 echo"$username, $genre, $title, $info, $current_count, $goal, $date, $dailyGoal"."<br>";
 
 // Insert new project data
