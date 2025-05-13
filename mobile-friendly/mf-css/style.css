@@ -289,6 +289,21 @@ a {
         font-size: 16px;
     }
 }
+@media only screen and (min-width: 720px) {
+    .badge {
+        width: 5em;
+        height: fit-content;
+    }
+    footer {
+        display: flex;
+    }
+    /* #logo-link {
+        grid-column: 1;
+    } */
+    #copyright, #contact, #logo-link {
+        font-size: 18px;
+    }
+}
 .show {
     display: block;
 }

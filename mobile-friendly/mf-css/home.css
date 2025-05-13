@@ -62,6 +62,11 @@
         --warning: #b80303;
     }
 @media only screen and (min-width: 200px) {
+    .current-project-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .current-project-container {
         display: grid;
         width: 100%;
@@ -91,6 +96,7 @@
         /* justify-self: start; */
     }
     #project-summary {
+        text-align: center;
         justify-self: center;
         grid-column: span 3;
     }
@@ -107,5 +113,22 @@
     #badge-title {
         grid-column: span 5;
         justify-self: center;
+    }
+}
+@media only screen and (min-width: 720px) {
+    .current-project-container {
+        column-gap: 2em;
+    }
+    #project-img {
+        grid-row: span 2;
+    }
+    #project-title {
+        grid-column: span 2;
+    }
+    #project-summary {
+        grid-column: span 1;
+    }
+    .badge-container {
+        gap: 2em 1.5em  ;
     }
 }
