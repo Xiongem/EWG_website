@@ -136,6 +136,15 @@ a {
         height: 100%;
         width: 100%;
     }
+    h1 {
+        font-size: 34px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 20px;
+    }
     .logo img{
         display: none;
     }
