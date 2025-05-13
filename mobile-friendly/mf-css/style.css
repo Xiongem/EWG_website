@@ -254,6 +254,18 @@ a {
         width: 3.5em;
         height: fit-content;
     }
+    #footer {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+        gap: 0.5em;
+        padding: 1em 0;
+        border-top: 2px solid var(--accent-3);
+    }
+    #logo-link {
+        grid-column: span 2;
+        justify-self: center;
+    }
 }
 .show {
     display: block;
