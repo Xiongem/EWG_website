@@ -255,13 +255,16 @@ a {
         width: 3.5em;
         height: fit-content;
     }
-    #footer {
+    footer {
         display: grid;
         grid-template-columns: auto auto;
         justify-content: space-around;
         gap: 0.5em;
         padding: 1em 0.5em;
         border-top: 2px solid var(--accent-3);
+    }
+    #copyright, #contact, #logo-link {
+        font-size: 14px;
     }
     #logo-link {
         grid-column: span 2;
@@ -281,6 +284,9 @@ a {
     .badge {
         width: 4em;
         height: fit-content;
+    }
+    #copyright, #contact, #logo-link {
+        font-size: 16px;
     }
 }
 .show {
