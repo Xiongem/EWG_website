@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Elsewhere Writers Guild Official Website"> 
     <meta property="og:description" content="The official website for the Elsewhere Writers Guild, an alternative option to NaNoWriMo."> 
-    <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.png"> 
+    <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.webp"> 
     <meta property="og:url" content="http://www.elsewherewriters.com/index">
     <title>EWG Home</title>
     <link rel="stylesheet" href="mf-css/style.css">
     <link rel="stylesheet" href="mf-css/home.css">
-    <link rel="website icon" type="png" href="../images/comp-cat-beta.png">
+    <link rel="stylesheet" href="mf-css/progressBar.css">
+    <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
 </head>
 <body>
     <nav>
         <div class="logo">
-            <img src="../images/comp-cat-beta.png" alt="cat using computer logo">
+            <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
         </div>
         <div class="nav-bar">
             <div class="mobileNav" id="mobileNav" onclick="navMenuClick()">
-                <img src="../images/menu.png" alt="mobile navigation icon">
+                <img src="../images/menu.webp" alt="mobile navigation icon">
             </div>
             <div class="user" id="user" onclick="userClick()">
-                <img src="../images/dragon/dragon (0).png" alt="user profile picture">
+                <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
             </div>
         </div>
         <div class="navMenu slide-right close" id="navMenu">
@@ -39,12 +40,21 @@
         </div>
         <div class="userDropdown slide-left" id="userDropdown">
             <div class="userContent">
-                <a href="#">Profile <img src="../images/user.png" class="dropdown-icon" id="profile-icon" alt="profile icon"></a>
-                <a href="#">Settings <img src="../images/settings.png" class="dropdown-icon" id="setting-icon" alt="setting icon"></a>
-                <a href="#">Logout <img src="../images/logout.png" class="dropdown-icon" id="logout-icon" alt="logout icon"></a>
+                <a href="#">Profile <img src="../images/user.webp" class="dropdown-icon" id="profile-icon" alt="profile icon"></a>
+                <a href="#">Settings <img src="../images/settings.webp" class="dropdown-icon" id="setting-icon" alt="setting icon"></a>
+                <a href="#">Logout <img src="../images/logout.webp" class="dropdown-icon" id="logout-icon" alt="logout icon"></a>
             </div>
         </div>
     </nav>
+    <div class="pb-wrapper">
+        <div class="pb-background">
+            <h1>Project Progress</h1>
+            <div class="progress-bar">
+                <div id="percentage" class="percentage clickable"></div>
+            </div>
+        </div>
+        
+    </div>
     <script>
         function userClick() {
             document.getElementById('userDropdown').classList.toggle('show');
