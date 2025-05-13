@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="mf-css/progressBar.css">
     <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
@@ -21,7 +22,12 @@
         </div>
         <div class="nav-bar">
             <div class="mobileNav" id="mobileNav" onclick="navMenuClick()">
-                <img src="../images/menu.webp" alt="mobile navigation icon">
+                <!-- <img src="../images/menu.webp" alt="mobile navigation icon"> -->
+                 <div class="menu-icon-wrapper">
+                    <div id="menu-bar-1" class="menu-bar"></div>
+                    <div id="menu-bar-2" class="menu-bar"></div>
+                    <div id="menu-bar-3" class="menu-bar"></div>
+                 </div>
             </div>
             <div class="user" id="user" onclick="userClick()">
                 <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
@@ -40,7 +46,7 @@
         </div>
         <div class="userDropdown slide-left" id="userDropdown">
             <div class="userContent">
-                <a href="#">Profile <img src="../images/user.webp" class="dropdown-icon" id="profile-icon" alt="profile icon"></a>
+                <a href="#">Profile <i class="fa-regular fa-user" id="profile-icon" alt="profile icon"></i></a>
                 <a href="#">Settings <img src="../images/settings.webp" class="dropdown-icon" id="setting-icon" alt="setting icon"></a>
                 <a href="#">Logout <img src="../images/logout.webp" class="dropdown-icon" id="logout-icon" alt="logout icon"></a>
             </div>
@@ -51,6 +57,24 @@
             <h1>Project Progress</h1>
             <div class="progress-bar">
                 <div id="percentage" class="percentage clickable"></div>
+            </div>
+            <div class="progress-info-wrapper">
+                <div id="current" class="progress-info">
+                    <h2>Current:</h2>
+                    <h3>10,000</h3>
+                </div>
+                <div id="daysLeft" class="progress-info">
+                    <h2>Days Left:</h2>
+                    <h3>Some</h3>
+                </div>
+                <div id="dailyGoal" class="progress-info">
+                    <h2>Daily Goal:</h2>
+                    <h3>100</h3>
+                </div>
+                <div id="goal" class="progress-info">
+                    <h2>Goal:</h2>
+                    <h3>50,000</h3>
+                </div>
             </div>
         </div>
         

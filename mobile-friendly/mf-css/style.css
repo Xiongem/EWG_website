@@ -69,6 +69,9 @@
 html {
     scroll-behavior: smooth;
 }
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
 .pulse {
     transition: all 0.2s ease;
 }
@@ -77,6 +80,18 @@ html {
 }
 * {
     box-sizing: border-box;
+}
+/* MENU ICON */
+.menu-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.menu-bar {
+    background-color: var(--accent-3);
+    width: 100%;
+    /* border: 0.5px solid var(--accent-2); */
 }
 .slide-right {
     animation: slide-right 0.3s linear 0s 1 normal forwards;
@@ -129,6 +144,16 @@ html {
         z-index: 2;
         margin: 1em 1em;
         cursor: pointer;
+        width: 3em;
+        height: fit-content;
+    }
+    .menu-icon-wrapper {
+        width: 3em;
+        height: 3em;
+    }
+    .menu-bar {
+        width: 90%;
+        height: 0.3em;
     }
     .mobileNav img{
         width: 3em;
@@ -140,7 +165,10 @@ html {
         z-index: 1;
         display: none;
         width: 45%;
-        background-color: var(--accent-2);
+        background-color: var(--accent-1);
+        border-radius: 0px 0px 12px 0px;
+        border-right: 2px solid var(--accent-3);
+        border-bottom: 2px solid var(--accent-3);
         padding: 4em 1em 1em 1em;
     }
     .navContent {
@@ -177,23 +205,39 @@ html {
     }
     .userDropdown {
         display: none;
-    }
-    .userContent {
         position: absolute;
         top: 0;
         right: 0;
         z-index: 1;
+        /* display: flex;
+        flex-direction: column; */
+        width: 40%;
+        background-color: var(--accent-1);
+        border-radius: 0px 0px 0px 12px;
+        border-left: 2px solid var(--accent-3);
+        border-bottom: 2px solid var(--accent-3);
+        padding: 4em 1em 1em 1em;
+    }
+    .userContent {
+        /* position: absolute; */
+        /* top: 0;
+        right: 0; */
+        z-index: 1;
         display: flex;
         flex-direction: column;
-        width: 35%;
-        background-color: var(--accent-2);
-        padding: 4em 1em 1em 1em;
+        /* width: 35%; */
+        /* background-color: var(--accent-2); */
+        /* padding: 4em 1em 1em 1em; */
     }
     .userContent a {
         text-decoration: none;
+        width: 100%;
         color: var(--text-color);
         padding-bottom: 1em;
         font-size: 18px;
+    }
+    .userContent a:first-child {
+        padding-top: 1em;
     }
     .dropdown-icon {
         width: 1em;

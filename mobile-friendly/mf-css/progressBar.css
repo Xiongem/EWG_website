@@ -76,6 +76,10 @@
         width: 90%;
         height: fit-content;
         border-radius: 12px;
+        padding: 0.5em 0;
+    }
+    .pb-background h1 {
+        margin: 0.43em 0 0.73em 0;
     }
     .progress-bar {
         display: flex;
@@ -87,6 +91,27 @@
         border: 2px solid var(--accent-2);
         border-radius: 16px;
         box-shadow: var(--box-shadow);
-        margin-bottom: 2em;
+        margin-bottom: 0.8em;
+    }
+    .percentage {
+        display: flex;
+        width: 20%;
+        height: 35px;
+        background-color: var(--accent-2);
+        border-radius: 14px 0px 0px 14px;
+    }
+    .progress-info-wrapper {
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto auto    ;
+        gap: 0.5em;
+        justify-content: center;
+    }
+    .progress-info h2 {
+        justify-content: center;
+    }
+    .progress-info h2 {
+        text-decoration: underline;
+        margin: 0.2em 0;
     }
 }
