@@ -73,6 +73,9 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
+a {
+    color: var(--accent-3);
+}
 .pulse {
     transition: all 0.2s ease;
 }
@@ -139,11 +142,13 @@ h1, h2, h3, h4, h5, h6, p {
     .nav-bar {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 1em 0em;
     }
     .mobileNav {
         display: block;
         z-index: 2;
-        margin: 1em 1em;
+        margin: 0em 1em;
         cursor: pointer;
         width: 3em;
         height: fit-content;
@@ -194,9 +199,10 @@ h1, h2, h3, h4, h5, h6, p {
     .user {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         width: fit-content;
         height: fit-content;
-        padding: 0.7em 1em 0em 0em;
+        padding: 0em 1em 0em 0em;
     }
     .user img{
         width: 3em;
