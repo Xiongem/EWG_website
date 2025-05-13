@@ -276,6 +276,12 @@ a {
         justify-self: center;
     }
 }
+@media only screen and (min-width: 326px) {
+    .badge {
+        width: 4em;
+        height: fit-content;
+    }
+}
 .show {
     display: block;
 }
