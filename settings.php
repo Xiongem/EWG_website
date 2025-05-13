@@ -1,6 +1,6 @@
 <?php
 ob_start();
-session_start();
+
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 forceLogin();
 dbConnect();
@@ -80,11 +80,11 @@ if (empty($pfp)) {
                         <div class="dropdown2 Themes">
                             <a href="#" onclick="myFunction2()" class="dropbtn2 Theme-container">Set Theme</a>
                                 <div id="myDropdown2" class="dropdown-content2">
-                                    <p class="setTheme" onclick="setTheme('light1')">Light-1</p>
-                                    <p class="setTheme" onclick="setTheme('light2')">Light-2</p>
                                     <p class="setTheme" onclick="setTheme('dark1')">Dark-1</p>
                                     <p class="setTheme" onclick="setTheme('dark2')">Dark-2</p>
                                     <p class="setTheme" onclick="setTheme('dark3')">Dark-3</p>
+                                    <p class="setTheme" onclick="setTheme('light1')">Light-1</p>
+                                    <p class="setTheme" onclick="setTheme('light2')">Light-2</p>
                                 </div>
                         </div>
                     </div>
