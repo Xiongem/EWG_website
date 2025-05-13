@@ -64,6 +64,7 @@
 @media only screen and (min-width: 200px) {
     .current-project-container {
         display: grid;
+        width: 100%;
         justify-content: center;
         align-items: center;
         grid-template-columns: auto auto;
@@ -92,5 +93,12 @@
     #project-summary {
         justify-self: center;
         grid-column: span 3;
+    }
+    .badge-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
     }
 }

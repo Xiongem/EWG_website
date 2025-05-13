@@ -250,6 +250,10 @@ a {
         width: 1em;
         height: fit-content;
     }
+    .badge {
+        width: 4em;
+        height: fit-content;
+    }
 }
 .show {
     display: block;
