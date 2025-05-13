@@ -61,3 +61,35 @@
         --text-shadow: 0px 0px 10px var(--accent-2);
         --warning: #b80303;
     }
+@media only screen and (min-width: 200px) {
+    .current-project-container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        row-gap: 0.5em;
+        padding: 0.5em;
+    }
+    #area-title {
+        text-align: center;
+        grid-column: 1 / span 3;
+    }
+    #project-img {
+        justify-self: center;
+        /* grid-row: 2 / span 1; */
+    }
+    #project-img img{
+        width: 6em;
+        height: fit-content;
+    }
+    #project-title {
+        text-align: center;
+        grid-column: span 2;
+        justify-self: start;
+    }
+    #project-summary {
+        justify-self: center;
+        grid-column: span 3;
+    }
+}
