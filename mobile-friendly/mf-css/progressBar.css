@@ -114,4 +114,13 @@
         text-decoration: underline;
         margin: 0.2em 0;
     }
+    .added {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        padding-right: 0.5em;
+    }
+    /* #edit-pb {
+        width: 7px;
+    } */
 }
