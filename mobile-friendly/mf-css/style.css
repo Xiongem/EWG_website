@@ -5,7 +5,7 @@
         --text-color: #dda7ff;
         --reverse-text-color: #24184b;
         --accent-1: #563d76;
-        --accent-2: #fbd160;
+        --accent-2: #c99c23;
         --accent-3: #1b85a6;
         --filter-color: #dda7ff7e;
         --box-shadow: 0px 0px 15px #dda7ff7e;
@@ -79,6 +79,9 @@ a {
 .pulse {
     transition: all 0.2s ease;
 }
+/* .website-title {
+    color: var(--accent-2);
+} */
 .pulse:active {
     transform: scale(1.3);
 }
