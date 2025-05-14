@@ -145,7 +145,7 @@ a {
     p {
         font-size: 20px;
     }
-    .logo img{
+    .logo img, .desktop-navContent{
         display: none;
     }
     .nav-bar {
@@ -348,7 +348,7 @@ a {
         align-items: center;
         width: 100%;
     }
-    .navContent {
+    .desktop-navContent {
         flex: 1;
         display: flex;
         flex-direction: row;
