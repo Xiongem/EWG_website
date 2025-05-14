@@ -136,5 +136,12 @@
     .main-wrapper {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .badge-container {
+        background-color: var(--background-color);
+        border-top: none;
+        border-left: 2px solid var(--accent-3);
     }
 }
