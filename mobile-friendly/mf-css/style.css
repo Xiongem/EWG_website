@@ -117,7 +117,7 @@ a {
 @keyframes slide-left {
 	0% {
 		opacity: 0;
-		transform: translateX(150px);
+		transform: translateX(50px);
 	}
 
 	100% {
