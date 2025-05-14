@@ -264,6 +264,7 @@ a {
         display: grid;
         grid-template-columns: auto auto;
         justify-content: space-around;
+        height: 5em;
         gap: 0.5em;
         padding: 1em 0.5em;
         border-top: 2px solid var(--accent-3);

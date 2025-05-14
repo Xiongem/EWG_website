@@ -65,11 +65,11 @@
     .about-wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
         text-align: center;
         padding: 1em;
-        /* height: 70vh; */
+        height: 100%;
     }
     .about-content {
         margin: 1em 0;
