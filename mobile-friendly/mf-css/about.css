@@ -69,9 +69,13 @@
         align-items: center;
         text-align: center;
         padding: 1em;
+        /* height: 70vh; */
     }
-    .about-wrapper > p {
-        margin: 0.5em 0;
+    .about-content {
+        margin: 1em 0;
+    }
+    .about-content > p {
+        margin: 0.7em 0;
     }
     .elmo {
         height: 8em;
