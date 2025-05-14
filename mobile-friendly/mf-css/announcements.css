@@ -76,7 +76,7 @@
     .announce-contents{
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 100%;
         align-items: center;
     }
     .announce-contents h2 {
