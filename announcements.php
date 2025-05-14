@@ -52,7 +52,7 @@ if (empty($_SESSION["pfp"])) {
             </div>
             <div class="announce-contents spin">
                 <h1>No Announcements Yet</h1>
-                <img src="images\hot-dog.png">
+                <img src="images/pngs/hot-dog.png">
             </div>
         </div>
     </div>
