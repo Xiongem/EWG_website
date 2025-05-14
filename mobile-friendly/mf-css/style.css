@@ -298,6 +298,15 @@ a {
     .navMenu {
         width: 25%;
     }
+    .desktop-user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .desktop-user img{
+        width: 3.5em;
+        height: fit-content;
+    }
     .userDropdown {
         width: 20%;
     }
