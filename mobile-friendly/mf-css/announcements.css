@@ -71,7 +71,6 @@
         width: 100%;
         height: 70vh;
         justify-content: center;
-        /* align-items: center; */
     }
     .announce-contents{
         display: flex;
@@ -97,6 +96,9 @@
 @media only screen and (min-width: 720px) {
     .announce-contents p {
         font-size: 24px;
+    }
+    .announce-container {
+        height: 90vh;
     }
 }
 .hide {
