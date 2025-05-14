@@ -64,8 +64,17 @@
 @media only screen and (min-width: 200px) {
     .about-wrapper {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        padding: 1em;
+    }
+    .about-wrapper > p {
+        margin: 0.5em 0;
+    }
+    .elmo {
+        height: 8em;
+        width: fit-content;
     }
 }
