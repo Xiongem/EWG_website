@@ -268,7 +268,7 @@ a {
     #copyright, #contact, #logo-link {
         font-size: 14px;
     }
-    #logo-link {
+    #contact {
         grid-column: span 2;
         justify-self: center;
     }
