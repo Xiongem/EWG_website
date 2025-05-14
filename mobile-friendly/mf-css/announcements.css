@@ -98,12 +98,12 @@
         font-size: 24px;
     }
     .announce-container {
-        height: 100vh;
+        height: 70vh;
     }
 }
 @media only screen and (min-width: 900px) {
     .announce-container {
-        height: 70vh;
+        height: 75vh;
     }
 }
 .hide {
