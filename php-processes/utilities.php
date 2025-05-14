@@ -188,7 +188,7 @@ function makePopup() {
                     <br>
                     If you already have an account just click the Login link above. 
                     <br>    
-                    If you're new click <a href="account-create.html">here</a> to sign up and 
+                    If you're new, click <a href="account-create.html">here</a> to sign up and 
                         start earning badges!</p>
                 </div>
             </div>

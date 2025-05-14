@@ -145,7 +145,7 @@ a {
     p {
         font-size: 20px;
     }
-    .logo img, .desktop-navContent{
+    .logo img, .desktop-navContent, .container{
         display: none;
     }
     .nav-bar {
@@ -367,6 +367,12 @@ a {
     }
     .mobileNav, .navMenu, .project-dropDown-wrapper, .user {
         display: none;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0.5em 0 1em 0;
     }
 }
 .show {
