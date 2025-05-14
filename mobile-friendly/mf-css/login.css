@@ -119,6 +119,7 @@
     #submit {
         width: 8em;
         height: 3em;
+        font-weight: 600;
         background-color: var(--accent-2);
         border-color: transparent;
         border-radius: 16px;
@@ -134,5 +135,20 @@
     }
     .forgot-password > a {
         padding: 0.5em 0;
+    }
+}
+@media only screen and (min-width: 720px) {
+    .login-container {
+        width: 70%;
+    }
+    .input {
+        height: 3.5em;
+    }
+    label {
+        font-size: 20px;
+    }
+    .forgot-password {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
