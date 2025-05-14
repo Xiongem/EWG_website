@@ -140,6 +140,9 @@
         align-items: center;
         margin-top: 1em;
     }
+    .current-project-container {
+        margin: 0em 0.5em;
+    }
     #area-title {
         padding-bottom: 1em;
     }
