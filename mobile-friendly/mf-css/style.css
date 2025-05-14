@@ -207,6 +207,8 @@ a {
     }
     .user {
         display: flex;
+        z-index: 2;
+        cursor: pointer;
         justify-content: flex-end;
         align-items: center;
         width: fit-content;
@@ -290,6 +292,12 @@ a {
     }
 }
 @media only screen and (min-width: 720px) {
+    .navMenu {
+        width: 25%;
+    }
+    .userDropdown {
+        width: 20%;
+    }
     .badge {
         width: 5em;
         height: fit-content;
