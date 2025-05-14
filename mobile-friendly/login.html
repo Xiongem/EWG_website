@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Elsewhere Writers Guild Official Website"> 
+    <meta property="og:description" content="The official website for the Elsewhere Writers Guild, an alternative option to NaNoWriMo."> 
+    <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.webp"> 
+    <meta property="og:url" content="http://www.elsewherewriters.com/index">
+    <title>EWG Login</title>
+    <link rel="stylesheet" href="mf-css/style.css">
+    <link rel="stylesheet" href="mf-css/login.css">
+    <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-container">
+            <h1 id="login-title">Welcome to the<br>Elsewhere Writers Guild</h1>
+            <form method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox" onclick="showPassword()">
+                    <label for="checkbox">Show Password</label>
+                </div>
+                <div class="button" id="submit-button">
+                    <input type="submit" value="Login" id="submit">
+                </div>
+            </form>
+            <div class="forgot-password">
+                <a href="forgot-password.php">Forgot your password?</a>
+                <a href="account-create.html">Create a new account</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
