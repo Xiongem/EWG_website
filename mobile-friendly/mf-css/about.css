@@ -71,6 +71,12 @@
         height: 100%;
         margin-bottom: 1.5em;
     }
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
     .about-content {
         margin: 1em 0;
     }
@@ -78,7 +84,15 @@
         margin: 1em 0;
     }
     .elmo {
-        height: 8em;
-        width: fit-content;
+        display: none;
+    }
+}
+@media only screen and (min-width: 720px) {
+    .about-container {
+        width: 70%;
+    }
+    .elmo {
+        display: block;
+        height: 20em;
     }
 }
