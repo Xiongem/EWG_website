@@ -103,9 +103,6 @@
     .announce-container {
         height: 90vh;
     }
-    .spin {
-        width: 20em;
-    }
 }
 @media only screen and (min-width: 900px) {
     .announce-container {
