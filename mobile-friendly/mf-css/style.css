@@ -356,12 +356,13 @@ a {
         align-items:center;
         justify-content: space-evenly;
     }
-    .navContent > a {
+    .desktop-navContent > a {
         font-size: 2em;
         color: var(--text-color);
         padding: 0 2em;
+        text-decoration: none;
     }
-    .navContent > a:last-child {
+    .desktop-navContent > a:last-child {
         color: var(--accent-3);
     }
     .mobileNav, .navMenu, .project-dropDown-wrapper, .user {
