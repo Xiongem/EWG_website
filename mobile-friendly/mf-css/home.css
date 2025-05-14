@@ -140,11 +140,11 @@
         align-items: center;
         margin-top: 1em;
     }
-    #project-title {
+    #area-title {
         padding-bottom: 1em;
     }
     #project-img img{
-        width: 10em;
+        width: 12em;
         height: fit-content;
     }
     .badge-container {
