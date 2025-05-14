@@ -92,6 +92,9 @@
     width: 100%;
     justify-content: flex-end;
     }
+    .spin {
+        width: 20em;
+    }
 }
 @media only screen and (min-width: 520px) {
     .announce-contents p {
@@ -100,10 +103,16 @@
     .announce-container {
         height: 90vh;
     }
+    .spin {
+        width: 25em;
+    }
 }
 @media only screen and (min-width: 900px) {
     .announce-container {
         height: 75vh;
+    }
+    .spin {
+        width: 25em;
     }
 }
 .hide {
