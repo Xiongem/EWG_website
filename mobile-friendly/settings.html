@@ -9,8 +9,7 @@
     <meta property="og:url" content="http://www.elsewherewriters.com/index">
     <title>EWG Settings</title>
     <link rel="stylesheet" href="mf-css/style.css">
-    <link rel="stylesheet" href="mf-css/home.css">
-    <link rel="stylesheet" href="mf-css/progressBar.css">
+    <link rel="stylesheet" href="mf-css/settings.css">
     <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -69,7 +68,21 @@
     </header>
     <div class="settings-wrapper">
         <div class="settings-container">
+            <div class="tab">
+                <div class="tab-link" onclick="clickHandle(event, 'appearance')">
+                    <p>Appearance</p>
+                </div>
+                <div class="tab-link" onclick="clickHandle(event, 'account')">
+                    <p>Account</p>
+                </div>
+                <div class="tab-link" onclick="clickHandle(event, 'dangerZone')">
+                    <p>Danger Zone</p>
+                </div>
+            </div>
 
+            <div id="appearance" class="tabcontent active">
+                
+            </div>
         </div>
     </div>
 </body>
