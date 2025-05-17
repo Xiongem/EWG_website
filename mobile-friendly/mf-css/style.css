@@ -368,11 +368,41 @@ a {
         align-items:center;
         justify-content: space-evenly;
     }
-    .desktop-navContent > a {
+    .desktop-navContent a {
         font-size: 2em;
         color: var(--text-color);
         padding: 0 2em;
         text-decoration: none;
+    }
+    .projects-container {
+        display: block;
+        position: relative;
+    }
+    .projects-dropdown {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        background-color: var(--accent-1);
+        border: 2px solid var(--accent-3);
+        border-radius: 16px;
+    }
+    .projects-dropdown a {
+        font-size: 1.7em;
+        padding: 0.5em;
+    }
+    .projects-container:hover .projects-dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+    .projects-dropdown a:hover {
+        background-color: var(--accent-3);
+        color: var(--reverse-text-color);
+    }
+    .projects-dropdown a:hover:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+    .projects-dropdown a:hover:last-child {
+        border-radius: 0 0 10px 10px;
     }
     .desktop-navContent > a:last-child {
         color: var(--accent-3);
