@@ -66,11 +66,24 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+    }
+    .new-project-wrapper h1 {
+        text-align: center;
     }
     .new-project-container {
-        display: grid;
+        /* display: grid;
         grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
+        grid-template-rows: auto auto; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
     }
     .input-section {
         display: flex;
@@ -79,4 +92,8 @@
     .submit {
         grid-column: span 2;
     }
+}
+input:invalid {
+  border: var(--warning) solid 3px;
+  /* accent-color: var(--accent-2); */
 }
