@@ -346,7 +346,7 @@ a {
         display: block;
         width: 5em;
         height: auto;
-        margin-left: 1em;
+        margin: 0.5em 0 0 1em;
     }
     nav {
         display: flex;

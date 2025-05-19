@@ -76,5 +76,54 @@
             </div>
         </nav>
     </header>
+    <div class="new-project-wrapper">
+        <h1>Create a New Project</h1>
+        <div class="new-project-container">
+            <form method="post" action=""></form>
+                <div class="input-section">
+                    <label for="title">Title</label>
+                    <input required type="text" name="title" id="title">
+                    <label for="genre">Genre</label>
+                    <select required name="genre" id="genre">
+                        <option name="adventure" id="adventure" value="1">Adventure</option>
+                        <option name="erotica" id="erotica" value="2">Erotica</option>
+                        <option name="fanfiction" id="fanfiction" value="3">Fanfiction</option>
+                        <option name="fantasy" id="fantasy" value="4">Fantasy</option>
+                        <option name="historical" id="historical" value="5">Historical</option>
+                        <option name="horror" id="horror" value="6">Horror</option>
+                        <option name="humor" id="humor" value="7">Humor</option>
+                        <option name="lgbt" id="lgbt" value="8">LGBTQ+</option>
+                        <option name="literary" id="literary" value="9">Literary</option>
+                        <option name="musical" id="musical" value="10">Musical</option>
+                        <option name="mystery" id="mystery" value="11">Mystery</option>
+                        <option name="nonfiction" id="nonfiction" value="12">Nonfiction</option>
+                        <option name="personal" id="personal" value="13">Personal</option>
+                        <option name="religious" id="religious" value="14">Religious/Spiritual</option>
+                        <option name="romance" id="romance" value="15">Romance</option>
+                        <option name="scifi" id="scifi" value="16">Sci-Fi</option>
+                        <option name="thriller" id="thriller" value="17">Thriller</option>
+                        <option name="ya" id="ya" value="18">Young Adult</option>
+                        <option name="childrens" id="childrens" value="19">Young Readers</option>
+                    </select>
+                    <label for="goalNumber">Goal Number</label>
+                    <input required type="text" name="goalNumber" id="goalNumber" pattern="^\d+(,\d+)?$">
+                    <label for="endDate">End Date</label>
+                    <input type="date" name="endDate" id="endDate">
+                    <label for="noEndDate">Check the box if you don't want to set an end date</label>
+                    <input type="checkbox" name="noEndDate" id="noEndDate">
+                    <label for="dailyGoal">Daily Goal</label>
+                    <input type="number" name="dailyGoal" id="dailyGoal">
+                    <label for="summary">Summary</label>
+                    <textarea name="summary" id="summary"></textarea>
+                </div>
+                <div class="preview-section">
+
+                </div>
+                <div class="submit">
+
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
