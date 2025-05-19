@@ -108,21 +108,21 @@
                         <option name="ya" id="ya" value="18">Young Adult</option>
                         <option name="childrens" id="childrens" value="19">Young Readers</option>
                     </select>
-                    <label for="goal">Goal Number</label>
-                    <input type="text" name="goal" id="goal" pattern="^\d+(,\d+)?$"
+                    <label for="goalNumber">Goal Number</label>
+                    <input type="text" name="goalNumber" id="goalNumber" pattern="^\d+(,\d+)?$"
                         placeholder="50,000">
-                    <label for="goal_date">End Date</label>
-                    <input type="date" name="goal_date" id="goal_date" onchange="findDailyGoal()">
+                    <label for="endDate">End Date</label>
+                    <input type="date" name="endDate" id="endDate">
                         <div class="checkbox-wrapper">
-                            <label for="noEndDate">Check this box if you don't<br>want to set an end date</label>
+                            <label class="noEndDate" for="noEndDate">Check this box if you don't want to set an end date</label>
                             <input type="checkbox" name="noEndDate" id="noEndDate">
                         </div>
                     <label for="dailyGoal">Daily Goal</label>
                     <input type="text" name="dailyGoal" id="dailyGoal" pattern="^\d+(,\d+)?$"
                         placeholder="100">
                         <span id="recommend"></span>
-                    <label for="summary">Summary</label>
-                    <textarea name="summary" id="summary" maxlength="750"
+                    <label class="summary" for="summary">Summary</label>
+                    <textarea class="summary" name="summary" id="summary" maxlength="750"
                         placeholder="Tell the world about your awesome project (max: 750 characters)"></textarea>
                 </div>
                 <div class="preview-section">
