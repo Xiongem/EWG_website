@@ -101,7 +101,7 @@
     .input-section {
         display: grid;
         grid-template-columns: 35% 65%;
-        row-gap: 0.5em;
+        gap: 0.5em;
         margin: 1em 0;
         /* grid-template-rows: auto auto; */
     }
