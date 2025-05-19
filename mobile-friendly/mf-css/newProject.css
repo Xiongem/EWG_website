@@ -103,7 +103,6 @@
         grid-template-columns: 35% 65%;
         gap: 0.5em;
         margin: 1em 0;
-        /* grid-template-rows: auto auto; */
     }
     .checkbox-wrapper {
         display: flex;
@@ -125,6 +124,17 @@
     }
     .submit {
         grid-column: span 2;
+    }
+}
+@media only screen and (min-width: 720px) {
+    form {
+        width: 70%;
+    }
+    input, select {
+        height: 2.7em;
+    }
+    #summary {
+        height: 12em;
     }
 }
 input:invalid {
