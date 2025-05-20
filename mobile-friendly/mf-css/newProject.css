@@ -85,6 +85,7 @@
         flex-direction: column; */
         display: grid;
         grid-template-rows: auto auto auto;
+        row-gap: 2em;
         width: 90%;
     }
     label {
@@ -107,7 +108,7 @@
         grid-template-columns: 35% 65%;
         align-items: center;
         row-gap: 0.5em;
-        margin: 1em 0 2em 0;
+        /* margin: 1em 0 2em 0; */
     }
     .checkbox-wrapper {
         display: flex;
