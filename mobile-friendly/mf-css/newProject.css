@@ -161,6 +161,7 @@
     .grid-item:last-child {
         grid-column: span 3;
         min-height: 8em;
+        padding: 0em 0.5em;
     }
     .button {
         display: flex;
