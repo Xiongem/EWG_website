@@ -155,11 +155,12 @@
     .grid-item {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
     }
     .grid-item:last-child {
         grid-column: span 3;
+        min-height: 8em;
     }
     .button {
         display: flex;
