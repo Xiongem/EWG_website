@@ -4,14 +4,14 @@
         --text-color: #bfc0d1;
         --reverse-text-color: #1e202c;
         --accent-1: #31323c;
-        --accent-2: #60519b;
+        --accent-2: #bfc0d1;
         --accent-3: #60519b;
         --filter-color: #dda7ff7e;
         --box-shadow: 0px 0px 15px #dda7ff7e;
         --warning: #b80303;
     }
     /* dark theme number 1 */
-    :root.dark1 {
+    /* :root.dark1 {
         --background-color: #24184b;
         --text-color: #dda7ff;
         --reverse-text-color: #24184b;
@@ -21,9 +21,9 @@
         --filter-color: #dda7ff7e;
         --box-shadow: 0px 0px 15px #dda7ff7e;
         --warning: #b80303;
-    }
+    } */
     /*dark theme number 2 */
-    :root.dark2 {
+    /* :root.dark2 {
         --background-color: #2f1f45;
         --text-color: #f9e7e7;
         --reverse-text-color: #2f1f45;
@@ -33,9 +33,9 @@
         --filter-color: #f9e7e77e;
         --box-shadow: 0px 0px 15px #f9e7e77e;
         --warning: #b80303;
-    }
+    } */
     /*dark theme number 3*/
-    :root.dark3 {
+    /* :root.dark3 {
         --background-color: #312257;
         --text-color: #f9dbbd;
         --reverse-text-color: #312257;
@@ -44,6 +44,17 @@
         --accent-3: #3c7e85;
         --filter-color: #f9dbbd7e;
         --box-shadow: 0px 0px 15px #f9dbbd7e;
+        --warning: #b80303;
+    } */
+    :root.light0 {
+        --background-color: #bfc0d1;
+        --text-color: #1e202c;
+        --reverse-text-color: #bfc0d1;
+        --accent-1: #60519b;
+        --accent-2: #31323c;
+        --accent-3: #60519b;
+        --filter-color: #dda7ff7e;
+        --box-shadow: 0px 0px 15px #dda7ff7e;
         --warning: #b80303;
     }
     /* light theme number 1 */
