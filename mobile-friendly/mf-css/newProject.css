@@ -141,6 +141,7 @@
     .preview-section h1 {
         grid-column: span 3;
         text-decoration: underline;
+        padding-left: 0.5em;
     }
     .preview-section img {
         width: 8em;
