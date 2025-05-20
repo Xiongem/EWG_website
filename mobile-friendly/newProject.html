@@ -77,7 +77,7 @@
             </div>
         </nav>
     </header>
-    <div class="archive-warning">
+    <div class="archive-warning hide">
         <h3>You already have a project in progress. Click <a>here</a> to archive it.</h3>
     </div>
     <div class="new-project-wrapper">
@@ -134,26 +134,32 @@
                     <h2 id="preview-title">Title</h2>
                     <div class="grid-item">
                         <h3>Total:</h3>
-                        <span id="preview-goal">50,000</span>
+                        <span id="preview-goal">--</span>
                     </div>
                     <div class="grid-item">
                         <h3>Due on:</h3>
-                        <span id="preview-date">5/25/25</span>
+                        <span id="preview-date">--</span>
                     </div>
                     <div class="grid-item">
                         <h3>Average:</h3>
-                        <span id="preview-daily">250</span>
+                        <span id="preview-daily">--</span>
                     </div>
                     <div class="grid-item">
                         <h3>Summary:</h3>
-                        <span id="preview-summary">It was a long and windy road he found himself upon.</span>
+                        <span id="preview-summary">--</span>
                     </div>
                 </div>
                 <div class="button">
+                    <a id="cancel" onclick="goBack()">Cancel</a>
                     <input type="submit" value="Looks Good" id="submit">
                 </div>
             </form>
         </div>
     </div>
+    <footer id="footer">
+        <p id="copyright">&copy;2025. All rights reserved.</p>
+        <p id="logo-link">Logo by <a href="https://kohacu.com/20181205post-22321/">Kohaku!</a></p>
+        <p id="contact"><a href="contact.php">Contact Us</a></p>
+    </footer>
 </body>
 </html>
