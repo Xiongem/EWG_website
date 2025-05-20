@@ -85,6 +85,7 @@
     }
     .new-project-wrapper h1 {
         text-align: center;
+        margin-bottom: 0.5em;
     }
     .new-project-container {
         display: flex;
