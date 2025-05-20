@@ -141,7 +141,6 @@
     .preview-section h1 {
         grid-column: span 3;
         text-decoration: underline;
-        padding-left: 0.5em;
     }
     .preview-section img {
         width: 8em;
@@ -150,6 +149,7 @@
         grid-column: span 2;
         justify-self: center;
         text-align: center;
+        padding-left: 0.5em;
     }
     .grid-item {
         display: flex;
