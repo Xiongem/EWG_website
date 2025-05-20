@@ -81,12 +81,15 @@
         width: 100%;
     }
     form {
-        display: flex;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
+        display: grid;
+        grid-template-rows: auto auto auto;
         width: 90%;
     }
     label {
         font-size: 1.3em;
+        padding-right: 0.5em;
     }
     .input, select, textarea{
         background-color: var(--accent-1);
@@ -97,13 +100,14 @@
         padding: 8px;
     }
     .input, select {
-        height: 2.5em;
+        height: 3em;
     }
     .input-section {
         display: grid;
         grid-template-columns: 35% 65%;
-        gap: 0.5em;
-        margin: 1em 0;
+        align-items: center;
+        row-gap: 0.5em;
+        margin: 1em 0 2em 0;
     }
     .checkbox-wrapper {
         display: flex;
@@ -136,6 +140,7 @@
     }
     .preview-section h1 {
         grid-column: span 3;
+        text-decoration: underline;
     }
     .preview-section img {
         width: 8em;
@@ -186,16 +191,18 @@
         justify-content: center;
     }
     .input-section, .preview-section {
-        width: 45%;
+        /* width: 45%; */
         margin: 0 0.5em;
     }
-    .preview-section {
+    /* .preview-section {
         width: 45%;
-    }
+    } */
     form {
         width: 80%;
-        flex-direction: row;
-        justify-content: space-evenly;
+        /* flex-direction: row;
+        justify-content: space-evenly; */
+        grid-template-columns:50% 50%;
+        grid-template-rows: auto auto;
     }
     .input-section {
         padding-top: 1em;
@@ -247,6 +254,9 @@
         flex-direction: column;
         justify-self: start;
         /* align-self: start; */
+    }
+    .button {
+        grid-column: span 2;
     }
 }
 input:invalid {
