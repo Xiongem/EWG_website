@@ -1,20 +1,20 @@
 :root,
-    :root.dark0 { /*Royal Dusk*/
-        --background-color: #31323c;
+    :root.dark0 { /*Royal Midnight*/
+        --background-color: #1e202c;
         --text-color: #bfc0d1;
-        --reverse-text-color: #31323c;
-        --accent-1: #1e202c;
+        --reverse-text-color: #1e202c;
+        --accent-1: #31323c;
         --accent-2: #bfc0d1;
         --accent-3: #60519b;
         --filter-color: #dda7ff7e;
         --box-shadow: 0px 0px 15px #dda7ff7e;
         --warning: #b80303;
     }
-    :root.dark0 { /*Royal Midnight*/
-        --background-color: #1e202c;
+    :root.dark0 { /*Royal Dusk*/
+        --background-color: #31323c;
         --text-color: #bfc0d1;
-        --reverse-text-color: #1e202c;
-        --accent-1: #31323c;
+        --reverse-text-color: #31323c;
+        --accent-1: #1e202c;
         --accent-2: #bfc0d1;
         --accent-3: #60519b;
         --filter-color: #dda7ff7e;
