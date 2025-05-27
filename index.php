@@ -400,6 +400,17 @@ console.log(days);
         document.getElementById('daysLeft').style.display = 'none';
     }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//curve progress bar when it reaches 100
+    function updateProgressBar() {
+        var pbPercentage = <?=$percentage?>;
+        const curveProgressBar = document.getElementById('project-pb');
+        if (pbPercentage >= 100) {
+            curveProgressBar.style = 'border-radius: 14px 14px 14px 14px; width: 100%;';
+            // console.log("something happened");
+        }
+    }
+    updateProgressBar();
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Popup percentage for bar
     const progressBar = document.
         getElementById('project-pb');

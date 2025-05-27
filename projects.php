@@ -284,7 +284,7 @@ $default = 'images/genre-covers/placeholder.webp';
         const curveProgressBar = document.getElementById('project-pb');
         if (pbPercentage >= 100) {
             curveProgressBar.style = 'border-radius: 14px 14px 14px 14px; width: 100%;';
-            console.log("something happened");
+            // console.log("something happened");
         }
     }
     updateProgressBar();
