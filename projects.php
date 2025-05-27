@@ -283,7 +283,7 @@ $default = 'images/genre-covers/placeholder.webp';
         var pbPercentage = <?=$percentage?>;
         const curveProgressBar = document.getElementById('project-pb');
         if (pbPercentage >= 100) {
-            curveProgressBar.style = 'border-radius: 14px 14px 14px 14px; width: <?=$progress?>%;';
+            curveProgressBar.style = 'border-radius: 14px 14px 14px 14px; width: 100%;';
         }
     }
     updateProgressBar();
