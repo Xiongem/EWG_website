@@ -1,6 +1,5 @@
 <?php
 ob_start();
-
 session_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
