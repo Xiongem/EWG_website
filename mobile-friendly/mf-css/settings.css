@@ -91,7 +91,13 @@
         justify-content: space-evenly;
         width: 100%;
     }
+    .tab-link {
+        cursor: pointer;
+    }
     .tabcontent {
         
+    }
+    #change-pfp-image {
+        width: 8em;
     }
 }
