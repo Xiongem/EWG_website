@@ -26,3 +26,12 @@ function findDailyGoal(){
         return false;
     }
 }
+// //sets the user color scheme
+// function setTheme(theme) {
+//   document.documentElement.className = theme;
+//   localStorage.setItem('theme', theme);
+// }
+// window.onload = function getTheme() {
+//   const theme = localStorage.getItem('theme');
+//   theme && setTheme(theme);
+// }

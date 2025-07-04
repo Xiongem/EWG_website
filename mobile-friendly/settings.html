@@ -69,7 +69,7 @@
     <div class="settings-wrapper">
         <div class="settings-container">
             <div class="tab">
-                <div class="tab-link" onclick="clickHandle(event, 'appearance')">
+                <div class="tab-link active" onclick="clickHandle(event, 'appearance')">
                     <p>Appearance</p>
                 </div>
                 <div class="tab-link" onclick="clickHandle(event, 'account')">
@@ -102,7 +102,22 @@
             </div>
 
             <div id="account" class="tabcontent">
-                
+                <form action="" method="post">
+                    <div class="account-content">
+                        <div class="form-content">
+                            <label>Change Your Username:</label>
+                            <input type="text" name="username" id="username">
+                        </div>
+                        <div class="form-content">
+                            <label>Change Your Email Address:</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <a href="">Reset Your Password</a>
+                    </div>
+                    <div class="button-wrapper">
+                        <button type="submit">Save</button>
+                    </div>
+                </form>                
             </div>
 
             <div id="dangerZone" class="tabcontent">
@@ -110,5 +125,31 @@
             </div>
         </div>
     </div>
+<script>
+    function clickHandle(evt, settingTab) {
+        let i, tabcontent, tablinks;
+
+  // This is to clear the previous clicked content.
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+  // Set the tab-link to be "active-tab".
+    tablinks = document.getElementsByClassName("tab-link");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+  // Display the clicked tab and set it to active.
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+    }
+    document.getElementById(settingTab).style.display = "flex";
+    evt.currentTarget.className += " active";
+    console.log(settingTab);
+}
+</script>
 </body>
 </html>

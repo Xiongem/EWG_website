@@ -83,24 +83,42 @@
         flex-direction: column;
         justify-content: space-evenly;
         width: 90%;
-        min-height: 15em;
+        height: 18em;
         background-color: var(--accent-1);
         /* padding: 0.5em 0.5em 1em 0.5em; */
     }
     .tab {
-        grid-column: span 2;
-        display: flex;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
         justify-content: space-evenly;
         width: 100%;
+        height: 2em;
+        margin: 0.5em 0 1em 0;
     }
     .tab-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.5em;
         cursor: pointer;
+        border-right:2px solid var(--background-color);
+        border-bottom:2px solid var(--background-color);
     }
+    .tab-link:last-child {
+        border-right: none;
+        border-bottom:2px solid var(--background-color);
+    }
+    /* .tab-link:hover p{
+        color: var(--accent-2);
+        text-shadow: var(--box-shadow);
+    } */
     .tab-link p {
         font-size: 18px;
     }
     .tabcontent {
+        display: none;
         width: 100%;
+        height: 18em;
     }
     .appearance-contents {
         display: flex;
@@ -121,11 +139,114 @@
     }
     .pfp-change-wrapper button {
         width: 8em;
+        height: 3.5em;
+        background-color: var(--accent-2);
+        border: 2px solid var(--background-color);
+        border-radius: 16px;
     }
     .theme-change-wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        min-height: 8em;
         align-items: center;
     }
+    .theme-change-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6em;
+        height: 2.5em;
+        background-color: var(--accent-2);
+        border: 2px solid var(--background-color);
+        border-radius: 16px;
+        cursor: pointer;
+    }
+    .theme-change-button a {
+        color: var(--reverse-text-color);
+    }
+    .theme-change-dropdown {
+        display: none;
+        position: absolute;
+        translate: 0 7.8em;
+        z-index: 1;
+        width: 7em;
+        background-color: var(--accent-1);
+        border: 2px solid var(--accent-3);
+        border-radius: 16px;
+        margin-top: 0.3em;
+    }
+    .theme-change-button:hover .theme-change-dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .setTheme {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 1.8em;
+    }
+    .setTheme:hover {
+        background-color: var(--accent-2);
+        color: var(--reverse-text-color);
+        border-radius: 12px 12px 0 0;
+    }
+    .setTheme:hover:nth-child(2) {
+        border-radius: 0;
+    }
+    .setTheme:hover:nth-child(3) {
+        border-radius: 0;
+    }
+    .setTheme:hover:nth-child(4) {
+        border-radius: 0;
+    }
+    .setTheme:hover:last-child {
+        border-radius: 0 0 12px 12px;
+    }
+
+   
+    form {
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        width: 100%;
+     }
+    .account-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        /* align-items: center; */
+        width: 70%;
+        height: 70%;
+        padding-left: 2em;
+    }
+    .account-content input {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        border: var(--accent-2) solid 2px;
+        border-radius: 4px;
+        accent-color: var(--background-color);
+        padding: 8px;
+    }
+    .form-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+    }
+    .button-wrapper button {
+        width: 5em;
+        height: 2.5em;
+        background-color: var(--text-color);
+        border: 2px solid var(--accent-2);
+        border-radius: 16px;
+    }
+}
+.active {
+    display: flex;
+    color: var(--accent-2);
 }
