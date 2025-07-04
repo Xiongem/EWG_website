@@ -174,7 +174,7 @@
     .theme-change-dropdown {
         display: none;
         position: absolute;
-        translate: 0 7.8em;
+        translate: 0 9.2em;
         z-index: 1;
         width: 7em;
         background-color: var(--accent-1);
