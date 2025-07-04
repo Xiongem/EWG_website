@@ -271,10 +271,10 @@
         align-items: center;
         text-align: center;
         width: 7em;
-        height: 3.5em;
+        height: 3em;
         background-color: var(--warning);
         border: 2px solid var(--background-color);
-        border-radius: 24px;
+        border-radius: 30px;
     }
     #delete {
         color: var(--reverse-text-color);
@@ -318,7 +318,7 @@
         align-items: center;
         width: 7em;
         background-color: var(--accent-2);
-        border-radius: 24px;
+        border-radius: 30px;
         color: var(--text-color);
     }
 }
