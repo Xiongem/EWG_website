@@ -208,6 +208,9 @@
     .setTheme:hover:nth-child(4) {
         border-radius: 0;
     }
+    .setTheme:hover:nth-child(5) {
+        border-radius: 0;
+    }
     .setTheme:hover:last-child {
         border-radius: 0 0 12px 12px;
     }
