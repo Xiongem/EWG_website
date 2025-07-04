@@ -129,7 +129,7 @@
     .pfp-change-wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         height: 100%;
     }
@@ -137,12 +137,19 @@
         width: 6em;
         margin-bottom: 1.5em;
     }
-    .pfp-change-wrapper button {
-        width: 8em;
+    .update-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 7em;
         height: 3.5em;
         background-color: var(--accent-2);
-        border: 2px solid var(--background-color);
-        border-radius: 16px;
+        /* border: 2px solid var(--background-color); */
+        border-radius: 24px;
+        color: var(--reverse-text-color);
+        cursor: pointer;
+        /* box-shadow: 10px 10px (var(--background-color)); */
     }
     .theme-change-wrapper {
         display: flex;
@@ -157,8 +164,8 @@
         width: 6em;
         height: 2.5em;
         background-color: var(--accent-2);
-        border: 2px solid var(--background-color);
-        border-radius: 16px;
+        /* border: 2px solid var(--background-color); */
+        border-radius: 20px;
         cursor: pointer;
     }
     .theme-change-button a {
@@ -207,9 +214,6 @@
 
    
     form {
-        /* display: flex;
-        flex-direction: column;
-        align-items: center; */
         width: 100%;
      }
     .account-content {
@@ -235,15 +239,38 @@
     }
     .button-wrapper {
         display: flex;
-        justify-content: center;
-        padding: 1em;
+        justify-content: end;
+        width: 100%;
+        padding: 1em 2em;
     }
-    .button-wrapper button {
+    #save {
         width: 5em;
         height: 2.5em;
         background-color: var(--text-color);
         border: 2px solid var(--accent-2);
         border-radius: 16px;
+    }
+
+
+    .dangerZone-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .dangerZone-wrapper {
+        width: 90%;
+    }
+    .dangerZone-wrapper h1 {
+        font-size: 35px;
+        margin-bottom: 1rem;
+    }
+    #delete {
+        width: 8em;
+        height: 4em;
+        background-color: var(--warning);
+        border: 2px solid var(--background-color);
+        border-radius: 24px;
     }
 }
 .active {

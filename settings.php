@@ -122,7 +122,7 @@ if (empty($pfp)) {
                     <div class="danger-contents">
                         <h1>Delete your account?</h1>
                         <h3>Warning: Deleting your account is permanent 
-                            and cannot be undone! Proceed with caution!</h3>
+                            and cannot be reversed! Proceed with caution!</h3>
                     </div>
                     <div class="anchor">
                         <div class="danger-buttons">

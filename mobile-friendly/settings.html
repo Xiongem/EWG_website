@@ -84,7 +84,7 @@
                 <div class="appearance-contents">
                     <div class="pfp-change-wrapper">
                         <img id="change-pfp-image" src="../images/pfp-icon.webp">
-                        <button>Update Profile Picture</button>
+                        <a class="update-button">Update Profile Picture</a>
                     </div>
                     <div class="theme-change-wrapper">
                         <div class="theme-change-button">
@@ -115,13 +115,23 @@
                         <a href="">Reset Your Password</a>
                     </div>
                     <div class="button-wrapper">
-                        <button type="submit">Save</button>
+                        <button type="submit" id="save">Save</button>
                     </div>
                 </form>                
             </div>
 
             <div id="dangerZone" class="tabcontent">
+                <div class="dangerZone-content">
+                    <div class="dangerZone-wrapper">
+                        <h1>Delete your account?</h1>
+                        <h3>Warning: Deleting your account is permanent 
+                            and cannot be reversed! Proceed with caution!</h3>
+                    </div>
                 
+                    <div class="button-wrapper">
+                        <button onclick="showWarning()" id="delete">Delete My Account</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
