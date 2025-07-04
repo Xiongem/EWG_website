@@ -42,7 +42,7 @@ if (empty($pfp)) {
     <div class="fuck-you2">
         <div class="popup-content2">
             <h1><strong>Delete Your Account?</strong></h1>
-            <p>This is <strong><em>permanent</em></strong> and cannot be undone.
+            <p>This is <strong><em>permanent</em></strong> and cannot be reversed.
             <br><br>
             Are you <strong>certain</strong> you want to delete your account?</p>
                 <div class="danger-buttons">

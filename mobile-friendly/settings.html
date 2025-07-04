@@ -15,6 +15,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div id="warning" class="warning">
+        <div class="warning-wrapper">
+            <div class="warning-content">
+                <h1 class="warning-text"><strong>Delete Your Account?</strong></h1>
+                <p class="warning-text">This is <strong><em>permanent</em></strong> and cannot be reversed.
+                <br><br>
+                Are you <strong>certain</strong> you want to delete your account?</p>
+            </div>
+            <div class="button-wrapper-warning">
+                <div id="hide-warning" onclick="hideWarning()">Back to Safety</div>
+                <div class="delete">
+                    <a id="delete">Delete My Account</a></div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="logo">
                 <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
@@ -129,7 +144,7 @@
                     </div>
                 
                     <div class="button-wrapper">
-                        <button onclick="showWarning()" id="delete">Delete My Account</button>
+                        <button onclick="showWarning()" class="delete">Delete My Account</button>
                     </div>
                 </div>
             </div>

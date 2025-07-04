@@ -26,12 +26,18 @@ function findDailyGoal(){
         return false;
     }
 }
-// //sets the user color scheme
-// function setTheme(theme) {
-//   document.documentElement.className = theme;
-//   localStorage.setItem('theme', theme);
-// }
-// window.onload = function getTheme() {
-//   const theme = localStorage.getItem('theme');
-//   theme && setTheme(theme);
-// }
+//sets the user color scheme
+function setTheme(theme) {
+  document.documentElement.className = theme;
+  localStorage.setItem('theme', theme);
+}
+window.onload = function getTheme() {
+  const theme = localStorage.getItem('theme');
+  theme && setTheme(theme);
+}
+function showWarning() {
+  document.getElementById("warning").style.display = "flex";
+}
+function hideWarning() {
+  document.getElementById("warning").style.display = "none";
+}
