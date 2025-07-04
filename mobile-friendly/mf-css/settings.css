@@ -142,7 +142,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 7em;
+        width: 7.5em;
         height: 3.5em;
         background-color: var(--accent-2);
         /* border: 2px solid var(--background-color); */
@@ -325,9 +325,16 @@
         color: var(--text-color);
     }
 }
-/* .show {
-    display: flex;
-} */
+@media only screen and (min-width: 768px) {
+    .settings-container {
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .settings-container {
+        height: 24em;
+    }
+}
 .active {
     display: flex;
     color: var(--accent-2);
