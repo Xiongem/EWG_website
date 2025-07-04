@@ -85,6 +85,7 @@
         width: 90%;
         height: 18em;
         background-color: var(--accent-1);
+        border-radius: 4px;
         /* padding: 0.5em 0.5em 1em 0.5em; */
     }
     .tab {
@@ -120,6 +121,9 @@
         width: 100%;
         height: 18em;
     }
+
+
+/* APPEARANCE TAB */
     .appearance-contents {
         display: flex;
         justify-content: space-evenly;
@@ -216,6 +220,8 @@
     }
 
    
+
+/* ACCOUNT TAB */
     form {
         width: 100%;
      }
@@ -252,9 +258,10 @@
         background-color: var(--text-color);
         border: 2px solid var(--accent-2);
         border-radius: 16px;
+        cursor: pointer;
     }
 
-
+/* DANGER ZONE TAB */
     .dangerZone-content {
         display: flex;
         flex-direction: column;
@@ -278,10 +285,13 @@
         background-color: var(--warning);
         border: 2px solid var(--background-color);
         border-radius: 30px;
+        cursor: pointer;
     }
     #delete {
         color: var(--reverse-text-color);
     }
+
+/* DELETION WARNING POPUP */
     #warning {
         position: absolute;
         z-index: 10;
@@ -323,6 +333,7 @@
         background-color: var(--accent-2);
         border-radius: 30px;
         color: var(--text-color);
+        cursor: pointer;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -332,7 +343,52 @@
 }
 @media only screen and (min-width: 1024px) {
     .settings-container {
+        width: 45%;
         height: 24em;
+    }
+    .tab {
+        height: 3em;
+        margin: 0 0 1em 0;
+    }
+    .tab-link {
+        height: 3em;
+    }
+    .tab-link p {
+        font-size: 24px;
+    }
+    .account-content {
+        width: 50%;
+    }
+    .button-wrapper {
+        padding: 1em 3em;
+    }
+    #save {
+        /* width: 6em;
+        height: 3.5em; */
+        border-radius: 24px;
+        font-size: 18px;
+    }
+    .dangerZone-content {
+        justify-content: space-between;
+    }
+    .delete {
+        font-size: 14px;
+        height: 3.5em;
+    }
+    .warning-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 40%;
+        height: 18em;
+    }
+    .button-wrapper-warning {
+        justify-content: space-around;
+        width: 100%;
+    }
+    .warning-text h1 {
+        margin-bottom: 1em;
     }
 }
 .active {
