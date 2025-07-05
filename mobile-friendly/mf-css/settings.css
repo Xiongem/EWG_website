@@ -1,29 +1,40 @@
 :root,
-    :root.dark0 {
+    :root.dark0 { /*Royal Midnight*/
         --background-color: #1e202c;
         --text-color: #bfc0d1;
         --reverse-text-color: #1e202c;
         --accent-1: #31323c;
-        --accent-2: #60519b;
+        --accent-2: #bfc0d1;
         --accent-3: #60519b;
         --filter-color: #dda7ff7e;
-        --box-shadow: 0px 0px 15px #dda7ff7e;
+        --box-shadow: 0px 0px 40px #bfc0d1;
+        --warning: #b80303;
+    }
+    :root.dark0 { /*Royal Dusk*/
+        --background-color: #31323c;
+        --text-color: #bfc0d1;
+        --reverse-text-color: #31323c;
+        --accent-1: #1e202c;
+        --accent-2: #bfc0d1;
+        --accent-3: #60519b;
+        --filter-color: #dda7ff7e;
+        --box-shadow: 0px 0px 40px #bfc0d1;
         --warning: #b80303;
     }
     /* dark theme number 1 */
-    :root.dark1 {
+    /* :root.dark1 {
         --background-color: #24184b;
         --text-color: #dda7ff;
         --reverse-text-color: #24184b;
         --accent-1: #563d76;
-        --accent-2: #c99c23;
+        --accent-2: #fbd160;
         --accent-3: #1b85a6;
         --filter-color: #dda7ff7e;
         --box-shadow: 0px 0px 15px #dda7ff7e;
         --warning: #b80303;
-    }
+    } */
     /*dark theme number 2 */
-    :root.dark2 {
+    /* :root.dark2 {
         --background-color: #2f1f45;
         --text-color: #f9e7e7;
         --reverse-text-color: #2f1f45;
@@ -33,9 +44,9 @@
         --filter-color: #f9e7e77e;
         --box-shadow: 0px 0px 15px #f9e7e77e;
         --warning: #b80303;
-    }
+    } */
     /*dark theme number 3*/
-    :root.dark3 {
+    /* :root.dark3 {
         --background-color: #312257;
         --text-color: #f9dbbd;
         --reverse-text-color: #312257;
@@ -44,6 +55,17 @@
         --accent-3: #3c7e85;
         --filter-color: #f9dbbd7e;
         --box-shadow: 0px 0px 15px #f9dbbd7e;
+        --warning: #b80303;
+    } */
+    :root.light0 {
+        --background-color: #bfc0d1;
+        --text-color: #1e202c;
+        --reverse-text-color: #bfc0d1;
+        --accent-1: #60519b;
+        --accent-2: #31323c;
+        --accent-3: #60519b;
+        --filter-color: #dda7ff7e;
+        --box-shadow: 0px 0px 15px #dda7ff7e;
         --warning: #b80303;
     }
     /* light theme number 1 */
@@ -71,7 +93,7 @@
         --box-shadow: 5px 5px 12px #2e1f607e;
         --text-shadow: 0px 0px 10px var(--accent-2);
         --warning: #b80303;
-    }
+    }  
 @media only screen and (min-width: 200px) {
     .settings-wrapper {
         display: flex;
@@ -199,8 +221,8 @@
         min-height: 1.8em;
     }
     .setTheme:hover {
-        background-color: var(--accent-2);
-        color: var(--reverse-text-color);
+        background-color: var(--accent-3);
+        /* color: var(--reverse-text-color); */
         border-radius: 12px 12px 0 0;
     }
     .setTheme:hover:nth-child(2) {
@@ -283,7 +305,8 @@
         width: 7em;
         height: 3em;
         background-color: var(--warning);
-        border: 2px solid var(--background-color);
+        /* border: 2px solid var(--accent-1); */
+        border: transparent;
         border-radius: 30px;
         cursor: pointer;
     }
@@ -330,7 +353,7 @@
         justify-content: center;
         align-items: center;
         width: 7em;
-        background-color: var(--accent-2);
+        background-color: var(--accent-1);
         border-radius: 30px;
         color: var(--text-color);
         cursor: pointer;
@@ -393,5 +416,5 @@
 }
 .active {
     display: flex;
-    color: var(--accent-2);
+    color: var(--accent-3);
 }
