@@ -24,23 +24,36 @@
             <div class="nav-bar">
                 <div class="desktop-navContent">
                     <a href="index.html">Home</a>
+                    <div class="projects-container">
+                        <a>Projects</a>
+                        <div class="projects-dropdown">
+                            <a href="newProject.html">Create New Project</a>
+                            <a href="projects.html">Current/Past Projects</a>
+                        </div>
+                    </div>
                     <a href="announcements.html">Announcements</a>
                     <a href="about.html">About</a>
-                    <a href="login.html" class="active">Login</a>
+                    <div class="desktop-user hide" id="user-not-logged-in">
+                        <a href="login.html" id="login">Login</a>
+                    </div>
+                    <div class="desktop-user" id="user-logged-in">
+                        <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
+                        <div class="user-content">
+                            <a href="#">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                            <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
+                            <a href="#">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="mobileNav" id="mobileNav" onclick="navMenuClick()">
-                    <!-- <img src="../images/menu.webp" alt="mobile navigation icon"> -->
                     <div class="menu-icon-wrapper">
                         <div id="menu-bar-1" class="menu-bar"></div>
                         <div id="menu-bar-2" class="menu-bar"></div>
                         <div id="menu-bar-3" class="menu-bar"></div>
                     </div>
                 </div>
-                <div class="user" id="user" onclick="userClick()">
+                <div class="user" id="user">
                     <!-- <img src="../images/dragon/dragon-0.webp" alt="user profile picture"> -->
-                        <!-- <span class="fa fa-sign-in" id="sign-in"
-                            style="font-size: 50px; color: var(--accent-3); z-index: 2; cursor: pointer;">
-                        </span> -->
                     <a href="login.html"><h2>Login</h2></a>
                 </div>
             </div>
@@ -48,7 +61,7 @@
                 <div class="navContent">
                     <a href="index.html">Home</a>
                     <div class="projects">
-                        <a href="new-project.html">New Project</a>
+                        <a href="newProject.html">New Project</a>
                         <a href="projects.html">Projects</a>
                     </div>
                     <a href="announcements.html">Announcements</a>
@@ -58,7 +71,7 @@
             <div class="userDropdown slide-left" id="userDropdown">
                 <div class="userContent">
                     <a href="#">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
-                    <a href="#">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
+                    <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
                     <a href="#">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
                 </div>
             </div>
