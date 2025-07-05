@@ -220,7 +220,7 @@ a {
         border-radius: 0px 0px 12px 0px;
         border-right: 2px solid var(--accent-3);
         border-bottom: 2px solid var(--accent-3);
-        padding: 4em 1em 1em 1em;
+        padding: 5em 1em 1em 1em;
     }
     .navContent {
         height: fit-content;
@@ -508,4 +508,7 @@ a {
 }
 .hide {
     display: none;
+}
+#about-icon {
+    color: var(--text-color);
 }
