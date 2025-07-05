@@ -108,7 +108,6 @@
         height: 18em;
         background-color: var(--accent-1);
         border-radius: 4px;
-        /* padding: 0.5em 0.5em 1em 0.5em; */
     }
     .tab {
         display: grid;
@@ -131,10 +130,6 @@
         border-right: none;
         border-bottom:2px solid var(--background-color);
     }
-    /* .tab-link:hover p{
-        color: var(--accent-2);
-        text-shadow: var(--box-shadow);
-    } */
     .tab-link p {
         font-size: 18px;
     }
@@ -171,11 +166,9 @@
         width: 7.5em;
         height: 3.5em;
         background-color: var(--accent-2);
-        /* border: 2px solid var(--background-color); */
         border-radius: 24px;
         color: var(--reverse-text-color);
         cursor: pointer;
-        /* box-shadow: 10px 10px (var(--background-color)); */
     }
     .theme-change-wrapper {
         display: flex;
@@ -190,7 +183,6 @@
         width: 6em;
         height: 2.5em;
         background-color: var(--accent-2);
-        /* border: 2px solid var(--background-color); */
         border-radius: 20px;
         cursor: pointer;
     }
@@ -222,20 +214,11 @@
     }
     .setTheme:hover {
         background-color: var(--accent-3);
-        /* color: var(--reverse-text-color); */
+        color: var(--text-color);
+        border-radius: 0;
+    }
+     .setTheme:hover:first-child {
         border-radius: 12px 12px 0 0;
-    }
-    .setTheme:hover:nth-child(2) {
-        border-radius: 0;
-    }
-    .setTheme:hover:nth-child(3) {
-        border-radius: 0;
-    }
-    .setTheme:hover:nth-child(4) {
-        border-radius: 0;
-    }
-    .setTheme:hover:nth-child(5) {
-        border-radius: 0;
     }
     .setTheme:hover:last-child {
         border-radius: 0 0 12px 12px;
@@ -251,7 +234,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        /* align-items: center; */
         width: 70%;
         height: 70%;
         padding-left: 2em;
@@ -305,7 +287,6 @@
         width: 7em;
         height: 3em;
         background-color: var(--warning);
-        /* border: 2px solid var(--accent-1); */
         border: transparent;
         border-radius: 30px;
         cursor: pointer;
@@ -386,8 +367,6 @@
         padding: 1em 3em;
     }
     #save {
-        /* width: 6em;
-        height: 3.5em; */
         border-radius: 24px;
         font-size: 18px;
     }
