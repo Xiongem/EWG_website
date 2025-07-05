@@ -147,5 +147,10 @@
     .project-select-content:hover:last-child {
         border-radius: 0 0 14px 14px;
     }
+    .project-select-link {
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 22px;
+    }
 }
     
