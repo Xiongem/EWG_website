@@ -273,6 +273,7 @@ a {
     .userContent {
         z-index: 1;
         display: flex;
+        position: absolute;
         flex-direction: column;
     }
     .userContent a {
@@ -333,6 +334,7 @@ a {
     }
     .desktop-user {
         display: flex;
+        /* position: relative; */
         justify-content: center;
         align-items: center;
     }

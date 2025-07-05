@@ -16,17 +16,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
+    <header><!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
         <div class="logo">
                 <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
         </div>
         <nav>
-            <div class="nav-bar">
+            <div class="nav-bar"> <!--* DESKTOP NAVIGATION--> 
                 <div class="desktop-navContent">
                     <a href="index.html">Home</a>
                     <div class="projects-container">
                         <a>Projects</a>
-                        <div class="projects-dropdown">
+                        <div class="projects-dropdown"> <!--*Projects dropdown-->
+                            <!--TODO: maybe put dropdown css in two separate files from everything else so they can both be relative to their parents-->
                             <a href="newProject.html">Create New Project</a>
                             <a href="projects.html">Current/Past Projects</a>
                         </div>
@@ -38,13 +39,14 @@
                     </div>
                     <div class="desktop-user" id="user-logged-in">
                         <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
-                        <div class="user-content">
+                        <div class="user-content"> <!--* User Dropdown-->
                             <a href="#">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
                             <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
                             <a href="#">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
                         </div>
                     </div>
                 </div>
+                <!--* MOBILE NAVIGATION-->
                 <div class="mobileNav" id="mobileNav" onclick="navMenuClick()">
                     <div class="menu-icon-wrapper">
                         <div id="menu-bar-1" class="menu-bar"></div>
@@ -57,7 +59,7 @@
                     <!-- <a href="login.html"><h2>Login</h2></a> -->
                 </div>
             </div>
-            <div class="navMenu slide-right close" id="navMenu">
+            <div class="navMenu slide-right close" id="navMenu"> <!--* Dropdown-->
                 <div class="navContent">
                     <a href="index.html">Home 
                         <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
@@ -80,5 +82,27 @@
             </div>
         </nav>
     </header>
+    <!--* DROPDOWN FOR SELECTING ACTIVE PROJECT TO SEE -->
+    <div class="project-select-wrapper">
+        <div class="project-select">Project <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i>
+            <div class="project-select-dropdown">
+                <div class="project-select-content">
+                    <p>PH-Project 1</p>
+                </div>
+                <div class="project-select-content">
+                    <p>PH-Project 2</p>
+                </div>
+                <div class="project-select-content">
+                    <p>PH-Project 3</p>
+                </div>
+                <div class="project-select-content">
+                    <p>PH-Project 4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        
+    </div>
 </body>
 </html>
