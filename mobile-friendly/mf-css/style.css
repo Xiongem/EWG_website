@@ -99,6 +99,9 @@
     font-family: Luminari;
     src: url("https://www.elsewherewriters.com/fonts/luminari/Luminari-Regular.ttf");
 } */
+
+
+/** UNIVERSAL*/
 html {
     scroll-behavior: smooth;
 }
@@ -133,6 +136,9 @@ a {
     width: 100%;
     /* border: 0.5px solid var(--accent-2); */
 }
+
+
+/** ANIMATION*/
 .slide-right {
     animation: slide-right 0.3s linear 0s 1 normal forwards;
 }
@@ -162,6 +168,9 @@ a {
     }
 }
 
+
+
+/** SMALL PHONES*/
 @media only screen and (min-width: 200px) {
     body {
         background-color: var(--background-color);
@@ -310,6 +319,10 @@ a {
         justify-self: center;
     }
 }
+
+
+
+/** LARGE PHONES*/
 @media only screen and (min-width: 326px) {
     h1 {
         font-size: 38px;
@@ -328,6 +341,10 @@ a {
         font-size: 16px;
     }
 }
+
+
+
+/** TABLET*/
 @media only screen and (min-width: 720px) {
     .navMenu {
         width: 25%;
@@ -364,6 +381,10 @@ a {
         width: 12%;
     }
 }
+
+
+
+/** DESKTOP*/
 @media only screen and (min-width: 1200px) {
     header {
         display:flex;
@@ -510,6 +531,8 @@ a {
 }
 .hide {
     display: none;
+    color:transparent;
+    width: 0;
 }
 #about-icon {
     color: var(--text-color);
