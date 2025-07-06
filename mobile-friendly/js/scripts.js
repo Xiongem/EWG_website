@@ -45,7 +45,7 @@ function hideWarning() {
 function showProjectPopup() {
   var body = document.getElementById("body");
   document.getElementById("project-popup").style.display = "flex";
-  body.style.height = "100vh";
+  body.style.height = "100%";
   body.style.overflow = "hidden";
 }
 function hideProjectPopup() {
