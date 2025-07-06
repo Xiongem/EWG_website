@@ -54,3 +54,10 @@ function hideProjectPopup() {
   body.style.height = "unset";
   body.style.overflow = "unset";
 }
+
+function showProjectSettings() {
+  document.getElementById("settings-popup").style.display = "flex";
+}
+function hideProjectSettings() {
+  document.getElementById("settings-popup").style.display = "none";
+}
