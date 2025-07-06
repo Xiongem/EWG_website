@@ -41,3 +41,10 @@ function showWarning() {
 function hideWarning() {
   document.getElementById("warning").style.display = "none";
 }
+
+function showProjectPopup() {
+  document.getElementById("project-popup").style.display = "flex";
+}
+function hideProjectPopup() {
+  document.getElementById("project-popup").style.display = "none";
+}

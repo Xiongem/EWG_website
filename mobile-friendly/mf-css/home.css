@@ -94,7 +94,81 @@
         --text-shadow: 0px 0px 10px var(--accent-2);
         --warning: #b80303;
     }
+/**MOBILE*/
 @media only screen and (min-width: 200px) {
+    .project-select-wrapper {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 100%;
+        height: 4em;
+        padding-right: 0.8em;
+    }
+    .project-select {
+        display: flex;
+        /* position: relative; */
+        justify-content: center;
+        align-items: center;
+        /* min-width: fit-content; */
+        max-width: 12em;
+        height: 3em;
+        background-color: var(--accent-1);
+        border-radius: 14px;
+        padding: 0 1em;
+        cursor: pointer;
+        white-space:pre-wrap;
+    }
+    .fa-caret-down {
+        margin-left: 0.5em;
+    }
+    .project-select-popup-wrapper {
+        display: none;
+        z-index: 10;
+        position: absolute;
+        justify-content: center;
+        /* align-items: center; */
+        width: 100%;
+        height: 100%;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+    .project-select-popup {
+        display: flex;
+        z-index: 1;
+        /* position: absolute; */
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+        /* translate: 0 3em;
+        top: 0;
+        height: auto;
+        width: 10em;
+        background-color: var(--accent-1);
+        border: 2px solid var(--accent-3);
+        border-radius: 16px; */
+    }
+    .project-select-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3em;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .project-select-content:hover {
+        background-color: var(--accent-3);
+        border-radius: 0;
+    }
+    .project-select-content:hover:first-child {
+        border-radius: 14px 14px 0 0;
+    }
+    .project-select-content:hover:last-child {
+        border-radius: 0 0 14px 14px;
+    }
+    .project-select-link {
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 22px;
+    }
     .current-project-wrapper {
         display: flex;
         justify-content: center;
@@ -148,7 +222,12 @@
         justify-self: center;
     }
 }
+
+/**TABLET*/
 @media only screen and (min-width: 720px) {
+    .project-select-wrapper {
+        padding-right: 2em;
+    }
     .current-project-container {
         column-gap: 2em;
     }
@@ -165,6 +244,8 @@
         gap: 2em 1.5em  ;
     }
 }
+
+/**DESKTOP*/
 @media only screen and (min-width: 1000px) {
     .main-wrapper {
         display: flex;

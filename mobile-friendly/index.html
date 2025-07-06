@@ -17,6 +17,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <!--* POPUP FOR CHOOSING ACTIVE PROJECTS-->
+    <div class="project-select-popup-wrapper" id="project-popup">
+        <div class="project-select-popup">
+            <div class="project-select-content">
+                <a class="project-select-link">PH-Project 1</a>
+            </div>
+            <div class="project-select-content">
+                <a class="project-select-link">PH-Project 2</a>
+            </div>
+            <div class="project-select-content">
+                <a class="project-select-link">PH-Project 3</a>
+            </div>
+            <div class="project-select-content">
+                <a class="project-select-link">PH-Project 4</a>
+            </div>
+        </div>
+    </div>
     <header><!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
         <div class="logo">
                 <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
@@ -83,6 +100,7 @@
             </div>
         </nav>
     </header>
+    <!--* Banner for if user is not logged in-->
     <div class="container">
         <div class="not-logged-in hide" id="not-logged-in">
             <p>Psst, hey you. 
@@ -93,6 +111,12 @@
                 start earning badges!</p>
         </div>
     </div>
+    <!--* DROPDOWN FOR SELECTING ACTIVE PROJECT TO SEE -->
+    <div class="project-select-wrapper">
+        <div class="project-select" onclick="showProjectPopup()">Switch Project <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i>
+        </div>
+    </div>
+    <!--* PROGRESS BAR-->
     <div class="pb-wrapper">
         <div class="pb-background">
             <h1>Project Progress</h1>
