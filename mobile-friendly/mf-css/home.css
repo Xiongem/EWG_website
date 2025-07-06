@@ -139,22 +139,68 @@
         flex-direction: column;
         /* justify-content: space-evenly; */
         /* translate: 0 3em;
-        top: 0;
-        height: auto;
-        width: 10em;
+        top: 0; */
+        height: fit-content;
+        width: 90%;
         background-color: var(--accent-1);
         border: 2px solid var(--accent-3);
-        border-radius: 16px; */
+        border-radius: 16px;
+        /* padding: 2em 1em; */
+        padding-top: 1em;
+        margin-top: 6em;
     }
     .project-select-content {
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
-        height: 3em;
+        height: 6em;
+        padding: 0.5em;
         cursor: pointer;
+    }
+    .project-select-content:hover #popup-project-title {
+        color: var(--accent-3);
+    }
+    .popup-image {
+        width: 3em;
+        height: fit-content;
+        margin-right: 0.5em;
+    }
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .project-stats {
+        display: flex;
+        /* justify-content: space-evenly; */
+    }
+    #popup-project-title {
+        width: 16em;
+        /* height: 3em; */
+        margin-bottom: 0.5em;
+        text-overflow:ellipsis;
+        white-space:nowrap;
         overflow: hidden;
     }
-    .project-select-content:hover {
+    #popup-goal, #popup-days-left {
+        font-size: 16px;
+        width: 50%;
+    }
+    .button-wrapper {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        padding: 1em 2em;
+    }
+    #save {
+        width: 5em;
+        height: 2.5em;
+        background-color: var(--text-color);
+        border: 2px solid var(--accent-2);
+        border-radius: 16px;
+        cursor: pointer;
+    }
+    /* .project-select-content:hover {
         background-color: var(--accent-3);
         border-radius: 0;
     }
@@ -163,12 +209,12 @@
     }
     .project-select-content:hover:last-child {
         border-radius: 0 0 14px 14px;
-    }
-    .project-select-link {
+    } */
+    /* .project-select-link {
         text-decoration: none;
         color: var(--text-color);
         font-size: 22px;
-    }
+    } */
     .current-project-wrapper {
         display: flex;
         justify-content: center;
