@@ -241,6 +241,12 @@
         padding: 1em 0.5em;
         background-color: var(--accent-1);
     }
+    #instruction {
+         grid-column: span 5;
+         font-size: 12px;
+        justify-self: center;
+        text-align: center;
+    }
     #badge-title {
         grid-column: span 5;
         justify-self: center;
