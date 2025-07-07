@@ -324,15 +324,45 @@
                 </div>
             </div>
             <!--* Full Streak-->
-            <img src="../images/badges/every-streak-mono.webp" id="every-streak" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/every-streak-mono.webp" id="every-streak" class="badge pulse">
+                <div class="badgeToPopup" id="every-streak-popup">
+                    <h4>Every Day Streak</h4>
+                    <p>Congrats, you've worked on your project every day!</p>
+                </div>
+            </div>
             <!--* Stayed on Track-->
-            <img src="../images/badges/on-track-mono.webp" id="on-track" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/on-track-mono.webp" id="on-track" class="badge pulse">
+                <div class="badgeToPopup" id="on-track-popup">
+                    <h4>Stayed on Track</h4>
+                    <p>Reached your daily goal every day over the course of the project</p>
+                </div>
+            </div>
             <!--* Outlined-->
-            <img src="../images/badges/outline-mono.webp" id="outline" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/outline-mono-v2.webp" id="outline" class="badge pulse">
+                <div class="badgeToPopup" id="outline-popup">
+                    <h4>Know Where Ya Goin'</h4>
+                    <p>Started your project with an outline.</p>
+                </div>
+            </div>
             <!--* Pantser/Journey-->
-            <img src="../images/badges/journey-mono.webp" id="journey" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/journey-mono.webp" id="journey" class="badge pulse">
+                <div class="badgeToPopup" id="journey-popup">
+                    <h4>It's All About the Journey</h4>
+                    <p>The only plan you have is to explore and discover the project along the way</p>
+                </div>
+            </div>
             <!--* Dual Wielding-->
-            <img src="../images/badges/dual-wielder-mono.webp" id="dual-wielder" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/dual-wielder-mono.webp" id="dual-wielder" class="badge pulse">
+                <div class="badgeToPopup" id="dual-wielder-popup">
+                    <h4>Dual Wielder</h4>
+                    <p>Your special sauce is ??% planning and ??% exploration, you'll never tell how much of each</p>
+                </div>
+            </div>
             <!--* Fresh Project-->
             <img src="../images/badges/starting-fresh-mono.webp" id="starting-fresh" class="badge pulse">
             <!--* Returning to WIP-->
@@ -489,6 +519,66 @@
     elementToHover10.addEventListener('mouseleave',
         () => {
         elementToPopup10.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover11 = document.getElementById('every-streak');
+    const elementToPopup11 = document.getElementById('every-streak-popup');
+    elementToHover11.addEventListener('mouseenter',
+        () => {
+        elementToPopup11.style.display = 'flex';
+        });
+        
+    elementToHover11.addEventListener('mouseleave',
+        () => {
+        elementToPopup11.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover12 = document.getElementById('on-track');
+    const elementToPopup12 = document.getElementById('on-track-popup');
+    elementToHover12.addEventListener('mouseenter',
+        () => {
+        elementToPopup12.style.display = 'flex';
+        });
+        
+    elementToHover12.addEventListener('mouseleave',
+        () => {
+        elementToPopup12.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover13 = document.getElementById('outline');
+    const elementToPopup13 = document.getElementById('outline-popup');
+    elementToHover13.addEventListener('mouseenter',
+        () => {
+        elementToPopup13.style.display = 'flex';
+        });
+        
+    elementToHover13.addEventListener('mouseleave',
+        () => {
+        elementToPopup13.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover14 = document.getElementById('journey');
+    const elementToPopup14 = document.getElementById('journey-popup');
+    elementToHover14.addEventListener('mouseenter',
+        () => {
+        elementToPopup14.style.display = 'flex';
+        });
+        
+    elementToHover14.addEventListener('mouseleave',
+        () => {
+        elementToPopup14.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover15 = document.getElementById('dual-wielder');
+    const elementToPopup15 = document.getElementById('dual-wielder-popup');
+    elementToHover15.addEventListener('mouseenter',
+        () => {
+        elementToPopup15.style.display = 'flex';
+        });
+        
+    elementToHover15.addEventListener('mouseleave',
+        () => {
+        elementToPopup15.style.display = 'none';
         });
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     </script>

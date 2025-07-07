@@ -323,6 +323,59 @@
     .slider.round:before {
         border-radius: 50%;
     } 
+
+    /** Individual badge movement*/
+    #first-daily-popup {
+        translate: 3em -4em;
+    }
+    #quarter-quomplete-popup {
+        translate: 3em -5em;
+    }
+    #half-way-popup {
+        translate: 3em -5em;
+    }
+    #all-downhill-popup {
+        translate: -9em -4em;
+        border-radius: 16px 16px 0 16px;
+    }
+    #cross-finish-popup {
+        translate: -9em -5em;
+        border-radius: 16px 16px 0 16px;
+    }
+    #streak-two-popup {
+        translate: 3em -3em;
+    }
+    #streak-three-popup {
+        translate: 3em -3em;
+    }
+    #streak-seven-popup {
+        translate: 3em -3em;
+    }
+    #streak-fourteen-popup {
+        translate: -9em -3em;
+        border-radius: 16px 16px 0 16px;
+    }
+    #streak-twentyOne-popup {
+        translate: -9em -3em;
+        border-radius: 16px 16px 0 16px;
+    }
+    #every-streak-popup {
+        translate: 3em -4em;
+    }
+    #on-track-popup {
+        translate: 3em -4em;
+    }
+    #outline-popup {
+        translate: 3em -4.5em;
+    }
+    #journey-popup {
+        translate: -9em -5.5em;
+        border-radius: 16px 16px 0 16px;
+    }
+    #dual-wielder-popup {
+        translate: -9em -5em;
+        border-radius: 16px 16px 0 16px;
+    }
 }
 
 
@@ -358,7 +411,7 @@
 
 
 
-/**TABLE LANDSCAPE or SMALL DESKTOP*/
+/**TABLET LANDSCAPE or SMALL DESKTOP*/
 @media only screen and (min-width: 1000px) {
     .project-select-popup {
         width: 50%;
@@ -382,6 +435,7 @@
     }
     .current-project-container {
         margin: 0em 0.5em;
+        border-right: 2px solid var(--accent-3);
     }
     #area-title {
         padding-bottom: 1em;
@@ -397,7 +451,13 @@
         width: 50%;
         background-color: var(--background-color);
         border-top: none;
-        border-left: 2px solid var(--accent-3);
+        /* border-left: 2px solid var(--accent-3); */
+    }
+    .slider-container {
+        padding-right: 1.5em;
+    }
+    .slider {
+        background-color: var(--accent-1);
     }
 }
 
