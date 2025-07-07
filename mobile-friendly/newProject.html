@@ -88,13 +88,13 @@
     <div class="new-project-wrapper">
         <h1>Create a New Project</h1>
         <div class="new-project-container">
-            <form method="post" action="">
+            <form method="post" action="" name="createNewProject">
                 <div class="input-section">
                     <label for="title">Title</label>
                     <input class="input" type="text" name="title" id="title"
                         placeholder="Awesome Title">
                     <label for="genre">Genre</label>
-                    <select class="input" name="genre" id="genre">
+                    <select class="input" name="genre" id="genre" onchange="switchImage();">
                         <option name="placeholder" id="placeholder" value="0">Choose your genre</option>
                         <option name="adventure" id="adventure" value="1">Adventure</option>
                         <option name="erotica" id="erotica" value="2">Erotica</option>
@@ -135,7 +135,7 @@
                 </div>
                 <div class="preview-section">
                     <h1>Preview</h1>
-                    <img class="preview-image" id="preview-image" src="../images/genre-covers/placeholder(v3).webp">
+                    <img class="preview-image" id="preview-image" src="../images/genre-covers/placeholder(v3).webp" name="genrePreview">
                     <h2 id="preview-title">Title</h2>
                     <div class="grid-item">
                         <h3>Total:</h3>

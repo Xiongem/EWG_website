@@ -190,6 +190,7 @@
     .preview-section img {
         justify-self: center;
         width: 8em;
+        border-radius: 4px;
     }
     .preview-section h2 {
         grid-column: span 2;

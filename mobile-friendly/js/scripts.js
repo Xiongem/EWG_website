@@ -1,3 +1,14 @@
+//Switching Genre Covers on Dropdown Selection
+var imageList = Array();
+for (var i = 1; i <= 19; i++) {
+    imageList[i] = new Image(70, 70);
+    imageList[i].src = "../images/genre-covers/genre-covers" + i + ".webp";
+}
+function switchImage() {
+var selectedImage = document.createNewProject.genre.options[document.createNewProject.genre.selectedIndex].value;
+document.genrePreview.src = imageList[selectedImage].src;
+}
+
 // Navigation menu dropdown
 function navMenuClick() {
     document.getElementById('navMenu').classList.toggle('show');     
