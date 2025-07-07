@@ -364,25 +364,86 @@
                 </div>
             </div>
             <!--* Fresh Project-->
-            <img src="../images/badges/starting-fresh-mono.webp" id="starting-fresh" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/starting-fresh-mono.webp" id="starting-fresh" class="badge pulse">
+                <div class="badgeToPopup" id="starting-fresh-popup">
+                    <h4>Starting Fresh</h4>
+                    <p>Created a brand new project!</p>
+                </div>
+            </div>
             <!--* Returning to WIP-->
-            <img src="../images/badges/ever-persist-mono.webp" id="ever-persist" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/ever-persist-mono.webp" id="ever-persist" class="badge pulse">
+                <div class="badgeToPopup" id="ever-persist-popup">
+                    <h4>Ever Persistent</h4>
+                    <p>You Returned to a WIP!</p>
+                </div>
+            </div>
             <!--* Backed up Project-->
-            <img src="../images/badges/back-it-up-mono.webp" id="back-it-up" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/back-it-up-mono.webp" id="back-it-up" class="badge pulse">
+                <div class="badgeToPopup" id="back-it-up-popup">
+                    <h4>Back It Up!</h4>
+                    <p>You never know when The Horrors will hit your computer, but you're 
+                        ready!<br>Project backed up!</p>
+                </div>
+            </div>
             <!--* Guild Hall Gathering-->
-            <img src="../images/badges/gathering-mono.webp" id="gathering" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/gathering-mono.webp" id="gathering" class="badge pulse">
+                <div class="badgeToPopup" id="gathering-popup">
+                    <h4>Guildhall Gathering</h4>
+                    <p>You participated in a Write In or Sprint!</p>
+                </div>
+            </div>
             <!--* Hear Ye-->
-            <img src="../images/badges/hear-ye-mono.webp" id="hear-ye" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/hear-ye-mono.webp" id="hear-ye" class="badge pulse">
+                <div class="badgeToPopup" id="hear-ye-popup">
+                    <h4>Hear Ye! Hear Ye!</h4>
+                    <p>You've told someone about your goal, whether it be a close friend or the whole world!</p>
+                </div>
+            </div>
             <!--* Breakthrough-->
-            <img src="../images/badges/breakthrough-mono.webp" id="breakthrough" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/breakthrough-mono.webp" id="breakthrough" class="badge pulse">
+                <div class="badgeToPopup" id="breakthrough-popup">
+                    <h4>Breakthrough Moment</h4>
+                    <p>Whatever was giving you trouble on this project, you've just figured it out!</p>
+                </div>
+            </div>
             <!--* Touch Grass-->
-            <img src="../images/badges/touch-grass-mono.webp" id="touch-grass" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/touch-grass-mono.webp" id="touch-grass" class="badge pulse">
+                <div class="badgeToPopup" id="touch-grass-popup">
+                    <h4>Touched Grass</h4>
+                    <p>You made sure to go outside and get some of that sweet, sweeet vitamin D.</p>
+                </div>
+            </div>
             <!--* Took Care of Business-->
-            <img src="../images/badges/business-mono.webp" id="business" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/business-mono.webp" id="business" class="badge pulse">
+                <div class="badgeToPopup" id="business-popup">
+                    <h4>Took Care of Business</h4>
+                    <p>You took care of your other responsibilities, like dishes or homework. All those boring things no one wants to do.</p>
+                </div>
+            </div>
             <!--* Tears Were Wept-->
-            <img src="../images/badges/tears-wept-mono.webp" id="tears-wept" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/tears-wept-mono.webp" id="tears-wept" class="badge pulse">
+                <div class="badgeToPopup" id="tears-wept-popup">
+                    <h4>Tears Were Wept</h4>
+                    <p>Either the creation or the process itself made you cry.</p>
+                </div>
+            </div>
             <!--* Finished Project-->
-            <img src="../images/badges/finish-him-mono.webp" id="finish-him" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/finish-him-mono.webp" id="finish-him" class="badge pulse">
+                <div class="badgeToPopup" id="finish-him-popup">
+                    <h4><em>Finish Him</em></h4>
+                    <p>You fully completed this project during this challenge.<br>WIP no more!</p>
+                </div>
+            </div>
         <p id="instruction">To give yourself a badge, simply activate the toggle and click on a badge. 
                         Click on it again to remove it.</p>
         </div>
@@ -581,18 +642,138 @@
         elementToPopup15.style.display = 'none';
         });
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    function disableBadgePopups() {
-  var popup = document.getElementsByClassName("badgeToPopup");
-  var slider = document.getElementById("badgeEdit").checked;
-    console.log(slider.checked);
-  if (slider == true) {
-      // console.log(popup.length);
-      var i;
-      for (i = 0; i < popup.length; i++) {
-          popup[i].style.display = 0;
-      }
-  }
-}
+    const elementToHover16 = document.getElementById('starting-fresh');
+    const elementToPopup16 = document.getElementById('starting-fresh-popup');
+    elementToHover16.addEventListener('mouseenter',
+        () => {
+        elementToPopup16.style.display = 'flex';
+        });
+        
+    elementToHover16.addEventListener('mouseleave',
+        () => {
+        elementToPopup16.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover17 = document.getElementById('ever-persist');
+    const elementToPopup17 = document.getElementById('ever-persist-popup');
+    elementToHover17.addEventListener('mouseenter',
+        () => {
+        elementToPopup17.style.display = 'flex';
+        });
+        
+    elementToHover17.addEventListener('mouseleave',
+        () => {
+        elementToPopup17.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover18 = document.getElementById('back-it-up');
+    const elementToPopup18 = document.getElementById('back-it-up-popup');
+    elementToHover18.addEventListener('mouseenter',
+        () => {
+        elementToPopup18.style.display = 'flex';
+        });
+        
+    elementToHover18.addEventListener('mouseleave',
+        () => {
+        elementToPopup18.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover19 = document.getElementById('gathering');
+    const elementToPopup19 = document.getElementById('gathering-popup');
+    elementToHover19.addEventListener('mouseenter',
+        () => {
+        elementToPopup19.style.display = 'flex';
+        });
+        
+    elementToHover19.addEventListener('mouseleave',
+        () => {
+        elementToPopup19.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover20 = document.getElementById('hear-ye');
+    const elementToPopup20 = document.getElementById('hear-ye-popup');
+    elementToHover20.addEventListener('mouseenter',
+        () => {
+        elementToPopup20.style.display = 'flex';
+        });
+        
+    elementToHover20.addEventListener('mouseleave',
+        () => {
+        elementToPopup20.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover21 = document.getElementById('breakthrough');
+    const elementToPopup21 = document.getElementById('breakthrough-popup');
+    elementToHover21.addEventListener('mouseenter',
+        () => {
+        elementToPopup21.style.display = 'flex';
+        });
+        
+    elementToHover21.addEventListener('mouseleave',
+        () => {
+        elementToPopup21.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover22 = document.getElementById('touch-grass');
+    const elementToPopup22 = document.getElementById('touch-grass-popup');
+    elementToHover22.addEventListener('mouseenter',
+        () => {
+        elementToPopup22.style.display = 'flex';
+        });
+        
+    elementToHover22.addEventListener('mouseleave',
+        () => {
+        elementToPopup22.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover23 = document.getElementById('business');
+    const elementToPopup23 = document.getElementById('business-popup');
+    elementToHover23.addEventListener('mouseenter',
+        () => {
+        elementToPopup23.style.display = 'flex';
+        });
+        
+    elementToHover23.addEventListener('mouseleave',
+        () => {
+        elementToPopup23.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover24 = document.getElementById('tears-wept');
+    const elementToPopup24 = document.getElementById('tears-wept-popup');
+    elementToHover24.addEventListener('mouseenter',
+        () => {
+        elementToPopup24.style.display = 'flex';
+        });
+        
+    elementToHover24.addEventListener('mouseleave',
+        () => {
+        elementToPopup24.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover25 = document.getElementById('finish-him');
+    const elementToPopup25 = document.getElementById('finish-him-popup');
+    elementToHover25.addEventListener('mouseenter',
+        () => {
+        elementToPopup25.style.display = 'flex';
+        });
+        
+    elementToHover25.addEventListener('mouseleave',
+        () => {
+        elementToPopup25.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // function disableBadgePopups() {
+    // var popup = document.getElementsByClassName("badgeToPopup");
+    // var slider = document.getElementById("badgeEdit").checked;
+    //     console.log(slider.checked);
+    // if (slider == true) {
+    //     // console.log(popup.length);
+    //     var i;
+    //     for (i = 0; i < popup.length; i++) {
+    //         popup[i].style.display = 0;
+    //     }
+    // }
+    // }
     </script>
 </body>
 </html>
