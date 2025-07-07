@@ -383,14 +383,14 @@
         translate: 3em -3em;
     }
     #back-it-up-popup {
-        translate: 3em -5em;
+        translate: 3em -5.5em;
     }
     #gathering-popup {
         translate: -9em -4em;
         border-radius: 16px 16px 0 16px;
     }
     #hear-ye-popup {
-        translate: -9em -4em;
+        translate: -9em -4.5em;
         border-radius: 16px 16px 0 16px;
     }
     #breakthrough-popup {
