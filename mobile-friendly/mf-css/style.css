@@ -331,13 +331,13 @@ a {
         z-index: 2;
         flex-direction: column;
         align-items: center;
-        width: 8em;
+        width: 10em;
         background-color: var(--background-color);
         border: 2px solid var(--accent-3);
         border-radius: 16px 16px 16px 0;
         padding: 0.3em;
     }
-    .badgeToPopup > h3 {
+    .badgeToPopup > h4 {
         text-align: center;
     }
     .badgeToPopup > p {
@@ -352,6 +352,17 @@ a {
     }
     #quarter-quomplete-popup {
         translate: 3em -5.5em;
+    }
+    #half-way-popup {
+        translate: 3em -5.5em;
+    }
+    #all-downhill-popup {
+        translate: -8.5em -4.5em;
+        border-radius: 16px 16px 0 16px;
+    }
+    #cross-finish-popup {
+        translate: -8.5em -5.5em;
+        border-radius: 16px 16px 0 16px;
     }
 }
 
