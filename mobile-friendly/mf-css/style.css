@@ -336,7 +336,7 @@ a {
         width: 10em;
         min-height: 4em;
         background-color: var(--background-color);
-        border: 2px solid var(--accent-3);
+        border: 3px solid var(--accent-3);
         border-radius: 16px 16px 16px 0;
         padding: 0.3em;
     }
