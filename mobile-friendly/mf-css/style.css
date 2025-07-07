@@ -348,7 +348,7 @@ a {
 
     /** Individual badge movement*/
     #first-daily-popup {
-        translate: 3em -4em;
+        translate: 3em -4.5em;
     }
     #quarter-quomplete-popup {
         translate: 3em -5.5em;
