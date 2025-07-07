@@ -394,20 +394,20 @@
         border-radius: 16px 16px 0 16px;
     }
     #breakthrough-popup {
-        translate: 3em -6em;
+        translate: 3em -5.5em;
     }
     #touch-grass-popup {
-        translate: 3em -3.5em;
+        translate: 3em -4.5em;
     }
     #business-popup {
-        translate: 3em -6em;
+        translate: 3em -6.5em;
     }
     #tears-wept-popup {
-        translate: -9em -5.5em;
+        translate: -9em -3.5em;
         border-radius: 16px 16px 0 16px;
     }
     #finish-him-popup {
-        translate: -9em -5.5em;
+        translate: -9em -4em;
         border-radius: 16px 16px 0 16px;
     }
 }
