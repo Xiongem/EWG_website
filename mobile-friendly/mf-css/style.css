@@ -302,6 +302,7 @@ a {
     .badge {
         width: 3.5em;
         height: fit-content;
+        cursor: pointer;
     }
     footer {
         display: grid;
