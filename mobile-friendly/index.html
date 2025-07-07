@@ -276,15 +276,45 @@
                 </div>
             </div>
             <!--* 2 Day Streak-->
-            <img src="../images/badges/streak-two-mono.webp" id="streak-two" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/streak-two-mono.webp" id="streak-two" class="badge pulse">
+                <div class="badgeToPopup" id="streak-two-popup">
+                    <h4>2-Day Streak</h4>
+                    <p>The start of a beautiful streak</p>
+                </div>
+            </div>
             <!--* 3 Day Streak-->
-            <img src="../images/badges/streak-three-mono.webp" id="streak-three" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/streak-three-mono.webp" id="streak-three" class="badge pulse">
+                <div class="badgeToPopup" id="streak-three-popup">
+                    <h3>3-Day Streak</h3>
+                    <p>Third time's the charm</p>
+                </div>
+            </div>
             <!--* 7 Day Streak-->
-            <img src="../images/badges/streak-seven-mono.webp" id="streak-seven" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/streak-seven-mono.webp" id="streak-seven" class="badge pulse">
+                <div class="badgeToPopup" id="streak-seven-popup">
+                    <h4>7-Day Streak</h4>
+                    <p>One whole week!</p>
+                </div>
+            </div>
             <!--* 14 Day Streak-->
-            <img src="../images/badges/streak-fourteen-mono.webp" id="streak-fourteen" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/streak-fourteen-mono.webp" id="streak-fourteen" class="badge pulse">
+                <div class="badgeToPopup" id="streak-fourteen-popup">
+                    <h4>14-Day Streak</h4>
+                    <p>TWO whole weeks!!</p>
+                </div>
+            </div>
             <!--* 21 Day Streak-->
-            <img src="../images/badges/streak-twentyOne-mono.webp" id="streak-twentyOne" class="badge pulse">
+            <div class="badge-wrapper">
+                <img src="../images/badges/streak-twentyOne-mono.webp" id="streak-twentyOne" class="badge pulse">
+                <div class="badgeToPopup" id="streak-twentyOne-popup">
+                    <h4>21-Day Streak</h4>
+                    <p>THREE WHOLE WEEKS!!!</p>
+                </div>
+            </div>
             <!--* Full Streak-->
             <img src="../images/badges/every-streak-mono.webp" id="every-streak" class="badge pulse">
             <!--* Stayed on Track-->
@@ -390,6 +420,66 @@
     elementToHover5.addEventListener('mouseleave',
         () => {
         elementToPopup5.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover6 = document.getElementById('streak-two');
+    const elementToPopup6 = document.getElementById('streak-two-popup');
+    elementToHover6.addEventListener('mouseenter',
+        () => {
+        elementToPopup6.style.display = 'flex';
+        });
+        
+    elementToHover6.addEventListener('mouseleave',
+        () => {
+        elementToPopup6.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover7 = document.getElementById('streak-three');
+    const elementToPopup7 = document.getElementById('streak-three-popup');
+    elementToHover7.addEventListener('mouseenter',
+        () => {
+        elementToPopup7.style.display = 'flex';
+        });
+        
+    elementToHover7.addEventListener('mouseleave',
+        () => {
+        elementToPopup7.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover8 = document.getElementById('streak-seven');
+    const elementToPopup8 = document.getElementById('streak-seven-popup');
+    elementToHover8.addEventListener('mouseenter',
+        () => {
+        elementToPopup8.style.display = 'flex';
+        });
+        
+    elementToHover8.addEventListener('mouseleave',
+        () => {
+        elementToPopup8.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover9 = document.getElementById('streak-fourteen');
+    const elementToPopup9 = document.getElementById('streak-fourteen-popup');
+    elementToHover9.addEventListener('mouseenter',
+        () => {
+        elementToPopup9.style.display = 'flex';
+        });
+        
+    elementToHover9.addEventListener('mouseleave',
+        () => {
+        elementToPopup9.style.display = 'none';
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const elementToHover10 = document.getElementById('streak-twentyOne');
+    const elementToPopup10 = document.getElementById('streak-twentyOne-popup');
+    elementToHover10.addEventListener('mouseenter',
+        () => {
+        elementToPopup10.style.display = 'flex';
+        });
+        
+    elementToHover10.addEventListener('mouseleave',
+        () => {
+        elementToPopup10.style.display = 'none';
         });
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     </script>
