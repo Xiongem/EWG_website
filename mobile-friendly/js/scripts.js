@@ -61,3 +61,17 @@ function showProjectSettings() {
 function hideProjectSettings() {
   document.getElementById("settings-popup").style.display = "none";
 }
+
+//* BADGE POPUPS
+const elementToHover1 = document.getElementById('first-daily');
+const elementToPopup1 = document.getElementById('first-daily-popup');
+    console.log(elementToHover1, elementToPopup1);
+  elementToHover1.addEventListener('mouseenter',
+    () => {
+    elementToPopup1.style.display = 'block';
+    });
+      
+  elementToHover1.addEventListener('mouseleave',
+    () => {
+    elementToPopup1.style.display = 'none';
+    });

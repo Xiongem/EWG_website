@@ -318,6 +318,10 @@ a {
         grid-column: span 2;
         justify-self: center;
     }
+    /** BADGE POPUPS*/
+    .badgeToPopup {
+        display: none;
+    }
 }
 
 
