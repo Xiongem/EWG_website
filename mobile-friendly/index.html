@@ -237,7 +237,7 @@
             <div class="slider-container">
                 <i class="fa fa-lock" alt="lock icon"></i>
                 <label class="switch">
-                    <input type="checkbox" id="badgeEdit">
+                    <input type="checkbox" id="badgeEdit" onclick="disableBadgePopups()">
                     <span class="slider round"></span>
                 </label>
                 <i class="fa fa-unlock" alt="unlocked icon"></i>
@@ -581,6 +581,18 @@
         elementToPopup15.style.display = 'none';
         });
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    function disableBadgePopups() {
+  var popup = document.getElementsByClassName("badgeToPopup");
+  var slider = document.getElementById("badgeEdit").checked;
+    console.log(slider.checked);
+  if (slider == true) {
+      // console.log(popup.length);
+      var i;
+      for (i = 0; i < popup.length; i++) {
+          popup[i].style.display = 0;
+      }
+  }
+}
     </script>
 </body>
 </html>
