@@ -245,11 +245,14 @@
         grid-column: span 5;
         justify-self: center;
     }
+
     .slider-container {
+        display: flex;
+        align-items: center;
         position: absolute;
         top: 0;
         right: 0;
-        padding: 1em 1em 0 0;
+        padding: 1em 0.5em 0 0;
     }
      /* The switch - the box around the slider */
     .switch {
@@ -257,6 +260,7 @@
         display: inline-block;
         width: 60px;
         height: 34px;
+        margin: 0 0.3em;
     }
 
     /* Hide default HTML checkbox */
