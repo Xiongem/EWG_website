@@ -370,17 +370,17 @@ a {
         translate: 3em -3em;
     }
     #streak-three-popup {
-        translate: 3em -2.5em;
+        translate: 3em -3em;
     }
     #streak-seven-popup {
-        translate: 3em -2.5em;
+        translate: 3em -3em;
     }
     #streak-fourteen-popup {
-        translate: -9em -2.5em;
+        translate: -9em -3em;
         border-radius: 16px 16px 0 16px;
     }
     #streak-twentyOne-popup {
-        translate: -9em -2.5em;
+        translate: -9em -3em;
         border-radius: 16px 16px 0 16px;
     }
 }
