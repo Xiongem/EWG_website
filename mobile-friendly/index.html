@@ -466,13 +466,11 @@
     elementToHover1.addEventListener('mouseenter',
         () => {
         elementToPopup1.classList.add('showFlex');
-        console.log("hello");
         });
         
     elementToHover1.addEventListener('mouseleave',
         () => {
         elementToPopup1.classList.remove('showFlex');
-        console.log("goodbye");
         });
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover2 = document.getElementById('quarter-quomplete');
@@ -766,7 +764,6 @@
     function disableBadgePopups() {
     var popup = document.getElementsByClassName("badgeToPopup");
     var slider = document.getElementById("badgeEdit").checked;
-        console.log(slider.checked);
         if (slider == true) {
             var i;
             for (i = 0; i < popup.length; i++) {
