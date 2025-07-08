@@ -563,8 +563,6 @@ a {
 }
 .hide {
     display: none;
-    color:transparent;
-    width: 0;
 }
 #about-icon {
     color: var(--text-color);
