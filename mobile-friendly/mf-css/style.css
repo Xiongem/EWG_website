@@ -558,6 +558,9 @@ a {
 .show {
     display: block;
 }
+.showFlex {
+    display: flex;
+}
 .hide {
     display: none;
     color:transparent;
