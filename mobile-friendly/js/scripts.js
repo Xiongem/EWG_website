@@ -73,4 +73,10 @@ function hideProjectSettings() {
   document.getElementById("settings-popup").style.display = "none";
 }
 
+function showUpdateWords() {
+  document.getElementById("count-update-popup").style.display = "flex";
+}
+function hideUpdateWords() {
+  document.getElementById("count-update-popup").style.display = "none";
+}
 

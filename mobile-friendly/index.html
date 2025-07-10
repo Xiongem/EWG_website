@@ -81,12 +81,19 @@
         </div>
     </div>
     <!--* SETTINGS POPUP-->
-    <div class="settings-popup-wrapper">
+    <div class="settings-popup-wrapper" id="settings-popup">
         <div class="settings-popup">
 
         </div>
     </div>
-    <header><!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
+    <!--* WORD COUNT UPDATE POPUP-->
+    <div class="count-update-wrapper" id="count-update-popup">
+        <div class="count-update-popup">
+            
+        </div>
+    </div>
+    <!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
+    <header>
         <div class="logo">
                 <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
         </div>
@@ -197,7 +204,7 @@
             </div>
             <div class="added">
                 <span class="fa fa-gear" id="edit-pb" onclick="showProjectSettings()"></span>
-                <span class="fa fa-plus" id="updateCount" onclick="show()"></span>
+                <span class="fa fa-plus" id="updateCount" onclick="showUpdateWords()"></span>
             </div>
         </div>
     </div>
