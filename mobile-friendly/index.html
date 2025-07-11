@@ -89,16 +89,24 @@
     <!--* WORD COUNT UPDATE POPUP-->
     <div class="count-update-wrapper" id="count-update-popup">
         <div class="count-update-popup">
-            <h2>Update Your Word Count</h2>
+            <div class="close-wrapper">
+                <i class="fa fa-close" onclick="hideUpdateWords()"></i>
+            </div>
+            <h2>Update Word Count</h2>
             <form action="" method="post">
-                <div class="count-type-select">
-                    <p>Add/Replace Total <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i></p>
-                    <div class="count-type-dropdown">
-                        <p class="count-type-list" id="add">Add to total</p>
-                        <p class="count-type-list" id="replace">replace total</p>
-                    </div>
+                <div class="count-type-select-wrapper">
+                    <select class="count-type-select">
+                        <p>Add/Replace Total <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i></p>
+                        <div class="count-type-dropdown">
+                            <option class="count-type-list" id="add">Add to total</option>
+                            <option class="count-type-list" id="replace">replace total</option>
+                        </div>
+                    </select>
+                    <input type="text" pattern="^\d+(,\d+)?$" id="updateWordCount" name="updateWordCount">
                 </div>
-                <input type="text" pattern="^\d+(,\d+)?$" id="updateCount" name="updateCount">
+                <div class="button-wrapper">
+                    <button class="save" onclick="hideUpdateWords()">Save</button>
+                </div>
             </form>
         </div>
     </div>
