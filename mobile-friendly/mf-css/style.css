@@ -484,7 +484,8 @@ a {
     .projects-dropdown {
         display: none;
         position: absolute;
-        translate: 0 7em;
+        top: 0;
+        translate: 0 3em;
         z-index: 1;
         background-color: var(--accent-1);
         border: 2px solid var(--accent-3);
@@ -495,6 +496,10 @@ a {
         display: none;
         position: absolute;
         z-index: 1;
+        top: 0;
+        right: 0;
+        translate: 0 3.2em;
+        width: 10em;
         background-color: var(--accent-1);
         border: 2px solid var(--accent-3);
         border-radius: 16px;
@@ -518,10 +523,10 @@ a {
     .projects-dropdown a:hover:last-child {
         border-radius: 0 0 10px 10px;
     }
-    .user-content {
+    /* .user-content {
         translate: -3em 7.2em;
         width: 10em;
-    }
+    } */
     .user-content a {
         padding: 0.5em 0;
         font-size: 1.7em;
