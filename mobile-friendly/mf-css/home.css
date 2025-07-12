@@ -216,7 +216,7 @@
         border: 2px solid var(--accent-3);
         border-radius: 16px;
         padding: 1em 1em 0 1em;
-        margin-top: 6em;
+        margin-top: 16em;
     }
     .close-wrapper {
         /* display: flex;
