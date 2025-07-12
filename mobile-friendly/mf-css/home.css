@@ -550,6 +550,9 @@
     #popup-project-title {
         width: 20em;
     }
+    .count-update-popup {
+        width: 50%;
+    }
     #project-img img{
         width: 10em;
     }
@@ -557,7 +560,8 @@
         font-size: 20px;
     }
     .badge-container {
-        gap: 2em 1.5em  ;
+        gap: 2em 1.5em;
+        justify-content: space-evenly;
     }
 }
 
@@ -575,6 +579,9 @@
     }
     .button-wrapper {
         padding: 1em 1.5em 1.5em 0;
+    }
+    .count-update-popup {
+        width: 35%;
     }
     .main-wrapper {
         display: flex;
@@ -628,5 +635,8 @@
     }
     #popup-project-title {
         width: 22em;
+    }
+    .count-update-popup {
+        width: 30%;
     }
 }
