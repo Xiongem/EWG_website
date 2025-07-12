@@ -324,6 +324,9 @@ a {
     /** BADGE POPUPS*/
     .badge-wrapper {
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .badgeToPopup {
         display: none;

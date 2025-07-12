@@ -314,7 +314,7 @@
     .current-project-wrapper {
         display: flex;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
     }
     .current-project-container {
         display: flex;
@@ -328,13 +328,15 @@
         text-align: center;
     }
     .progress-info-container {
+        display: flex;
+        align-items: center;
         width: 100%;
     }
     #area-title h1{ 
         font-size: 36px;
     }
     #project-img {
-        flex-grow: 2;
+        /* flex-grow: 2; */
         float: left;
         margin: 0 1em 0 0;
     }
@@ -361,8 +363,8 @@
         background-color: var(--accent-1);
     }
     #instruction {
-         grid-column: span 5;
-         font-size: 12px;
+        grid-column: span 5;
+        font-size: 12px;
         justify-self: center;
         text-align: center;
     }
@@ -553,6 +555,12 @@
     .count-update-popup {
         width: 50%;
     }
+    .current-project-container {
+        height: 25em;
+    }
+    #project-img {
+        margin: 0 2em 0 0;
+    }
     #project-img img{
         width: 10em;
     }
@@ -563,6 +571,9 @@
         gap: 2em 1.5em;
         justify-content: space-evenly;
     }
+    #instruction {
+        font-size: 18px;
+    }
 }
 
 
@@ -570,6 +581,9 @@
 
 /**TABLET LANDSCAPE or SMALL DESKTOP*/
 @media only screen and (min-width: 1000px) {
+    .project-select-wrapper {
+        padding-right: 3.5em;
+    }
     .project-select-popup {
         width: 50%;
         padding-left: 1em;
@@ -587,15 +601,15 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
         margin-top: 1em;
     }
     .current-project-wrapper {
         width: 50%;
+        border-right: 2px solid var(--accent-3);
     }
     .current-project-container {
         margin: 0em 0.5em;
-        border-right: 2px solid var(--accent-3);
     }
     #area-title {
         padding-bottom: 1em;
