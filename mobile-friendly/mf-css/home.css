@@ -447,20 +447,20 @@
 
     /** Individual badge movement*/
     #first-daily-popup {
-        translate: 3em -4em;
+        translate: 6em -4em;
     }
     #quarter-quomplete-popup {
-        translate: 3em -5em;
+        translate: 6em -5em;
     }
     #half-way-popup {
-        translate: 3em -6em;
+        translate: 6em -6em;
     }
     #all-downhill-popup {
-        translate: -9em -4em;
+        translate: -6em -4em;
         border-radius: 16px 16px 0 16px;
     }
     #cross-finish-popup {
-        translate: -9em -5em;
+        translate: -6em -5em;
         border-radius: 16px 16px 0 16px;
     }
     #streak-two-popup {
