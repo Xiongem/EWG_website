@@ -19,7 +19,9 @@
 <body id="body">
     <!--* POPUP FOR CHOOSING ACTIVE PROJECTS-->
     <div class="project-select-popup-wrapper" id="project-popup">
-        <div class="project-select-popup">
+        <div class="project-select-popup"><div class="close-wrapper">
+                <i class="fa fa-close" onclick="hideProjectPopup()"></i>
+            </div>
             <div class="project-select-content" onclick="hideProjectPopup()">
                 <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
                 <div class="project-info">
@@ -93,13 +95,13 @@
                 <i class="fa fa-close" onclick="hideUpdateWords()"></i>
             </div>
             <h2>Update Word Count</h2>
-            <form action="" method="post">
+            <form action="" method="">
                 <div class="count-type-select-wrapper">
                     <select class="count-type-select">
                         <p>Add/Replace Total <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i></p>
                         <div class="count-type-dropdown">
-                            <option class="count-type-list" id="add">Add to total</option>
                             <option class="count-type-list" id="replace">replace total</option>
+                            <option class="count-type-list" id="add">Add to total</option>
                         </div>
                     </select>
                     <input type="text" pattern="^\d+(,\d+)?$" id="updateWordCount" name="updateWordCount">
