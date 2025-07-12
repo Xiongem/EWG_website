@@ -66,17 +66,21 @@ function hideProjectPopup() {
   body.style.overflow = "unset";
 }
 
-function showProjectSettings() {
-  document.getElementById("settings-popup").style.display = "flex";
-}
-function hideProjectSettings() {
-  document.getElementById("settings-popup").style.display = "none";
-}
+// function showProjectSettings() {
+//   document.getElementById("settings-popup").style.display = "flex";
+// }
+// function hideProjectSettings() {
+//   document.getElementById("settings-popup").style.display = "none";
+// }
 
 function showUpdateWords() {
   document.getElementById("count-update-popup").style.display = "flex";
+  body.style.height = "100%";
+  body.style.overflow = "hidden";
 }
 function hideUpdateWords() {
   document.getElementById("count-update-popup").style.display = "none";
+  body.style.height = "unset";
+  body.style.overflow = "unset";
 }
 
