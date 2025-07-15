@@ -328,8 +328,8 @@
         text-align: center;
     }
     .progress-info-container {
-        display: flex;
-        align-items: center;
+        /* display: flex;
+        align-items: center; */
         width: 100%;
     }
     #area-title h1{ 

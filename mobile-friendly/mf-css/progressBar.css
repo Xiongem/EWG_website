@@ -136,8 +136,8 @@
     .progress-info-wrapper {
         display: grid;
         width: 100%;
-        grid-template-columns: auto auto    ;
-        gap: 0.5em;
+        grid-template-columns: 50% 50%;
+        /* gap: 0.5em; */
         justify-content: center;
     }
     .progress-info h2 {
