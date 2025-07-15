@@ -141,7 +141,6 @@
     }
     .overview-wordCount, .overview-badges {
         display: flex;
-        /* align-items: center; */
         width: 50%;
     }
     .overview-wordCount > p, .overview-badges > p {
@@ -192,8 +191,6 @@
     .main-wrapper {
         display: grid;
         grid-template-columns: 50% 50%;
-        /* justify-content: center;
-        align-items: center; */
     }
     .overview-container {
         justify-self: center;
