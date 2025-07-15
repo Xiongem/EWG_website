@@ -98,6 +98,54 @@
 
 /** PHONE*/
 @media only screen and (min-width: 200px) {
-   
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0em 1em;
+    }
+    .overview-container{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        color: var(--text-color);
+        background-color: var(--accent-1);
+        border: 2px solid var(--accent-3);
+        border-radius: 8px;
+        margin: 1em 0;
+        cursor: pointer;
+    }
+    .overview-container img {
+        width: 4em;
+        margin: 0.5em 0;
+    }
+    .overview-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 70%;
+    }
+   .overview-title {
+    font-size: 24px;
+    }
+    .overview-summary {
+        width: 24em;
+        font-size: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .overview-data {
+        display: flex;
+    }
+    .overview-wordCount, .overview-badges {
+        display: flex;
+        /* align-items: center; */
+        width: 50%;
+    }
+    .overview-wordCount > p, .overview-badges > p {
+        font-size: 16px;
+        margin-right: 0.5em;
+    }
 }
     

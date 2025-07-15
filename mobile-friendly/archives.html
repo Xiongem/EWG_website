@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header><!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
+    <header>
         <div class="logo">
                 <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
         </div>
@@ -29,7 +29,7 @@
                         <div class="projects-dropdown"> <!--*Projects dropdown-->
                             <!--TODO: maybe put dropdown css in two separate files from everything else so they can both be relative to their parents-->
                             <a href="newProject.html">Create New Project</a>
-                            <a href="projects.html">Current/Past Projects</a>
+                            <a href="archives.html">Current/Past Projects</a>
                         </div>
                     </div>
                     <a href="announcements.html">News</a>
@@ -47,12 +47,13 @@
                     </div>
                 </div>
                 <!--* MOBILE NAVIGATION-->
+                <!--TODO: change onclick visible to hover for better response time and less glitches-->
                 <div class="mobileNav" id="mobileNav" onclick="navMenuClick()">
                     <div class="menu-icon-wrapper">
                         <div id="menu-bar-1" class="menu-bar"></div>
-                        <div id="menu-bar-2" class="menu-bar"></div>
                         <div id="menu-bar-3" class="menu-bar"></div>
-                    </div>
+                        <div id="menu-bar-3" class="menu-bar"></div>
+                </div>
                 </div>
                 <div class="user" id="user">
                     <a href="profile.html"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
@@ -67,8 +68,8 @@
                     <div class="projects">
                         <a href="newProject.html">New Project 
                             <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
-                        <a href="projects.html">Projects 
-                            <i class="fa fa-gear" id="setting-icon" alt="gear icon"></i></a>
+                        <a href="archives.html">Archive 
+                            <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
                     </div>
                     <a href="announcements.html">News
                         <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
@@ -82,8 +83,29 @@
             </div>
         </nav>
     </header>
-    <div class="">
-        
+    <div class="main-wrapper">
+        <h1>All Your Projects</h1>
+        <a class="overview-container">
+            <img src="../images/genre-covers/placeholder(v3).webp">
+            <div class="overview-info">
+                    <h2 class="overview-title">Title <i class="fa fa-star" id="star-icon" alt="star icon"></i></h2>
+                    <p class="overview-summary">Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex 
+                            sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis 
+                            convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus 
+                            fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada 
+                            lacinia integer nunc posuere ut hendrerit semper vel class</p>
+                    <div class="overview-data">
+                        <div class="overview-wordCount">
+                            <p><strong>Words:</strong></p>
+                            <p>50,000</p>
+                        </div>
+                        <div class="overview-badges">
+                            <p><strong>Badges:</strong></p>
+                            <p>5/25</p>
+                        </div>
+                    </div>
+            </div>
+        </a>      
     </div>
 </body>
 </html>
