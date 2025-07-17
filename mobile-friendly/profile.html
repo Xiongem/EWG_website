@@ -9,7 +9,7 @@
     <meta property="og:url" content="http://www.elsewherewriters.com/index">
     <title>Profile</title>
     <link rel="stylesheet" href="mf-css/style.css">
-    <link rel="stylesheet" href="mf-css/projects.css">
+    <link rel="stylesheet" href="mf-css/profile.css">
     <link rel="stylesheet" href="mf-css/progressBar.css">
     <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
@@ -83,5 +83,249 @@
             </div>
         </nav>
     </header>
+    <div>
+        <!--* BADGES-->
+        <div class="badge-container">
+            <div class="slider-container">
+                <i class="fa fa-lock" alt="lock icon"></i>
+                <label class="switch">
+                    <input type="checkbox" id="badgeEdit" onclick="disableBadgePopups()">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fa fa-unlock" alt="unlocked icon"></i>
+            </div>
+            <h1 id="badge-title">Badges</h1>
+            <!--* Completed one project-->
+            <div class="badge-wrapper">
+                <img src="../images/badges/complete-one-project-mono.webp" id="complete-one-project" class="badge pulse">
+                <div class="badgeToPopup" id="complete-one-project-popup">
+                    <h4>Completed 1 Project</h4>
+                    <p>Congrats on creating your first project!</p>
+                </div>
+            </div>
+            <!--* Completed 5 projects-->
+            <div class="badge-wrapper">
+                <img src="../images/badges/complete-five-project-mono.webp" id="complete-five-project" class="badge pulse">
+                <div class="badgeToPopup" id="complete-five-project-popup">
+                    <h4>Completed 5 Projects</h4>
+                    <p>Give yourself a firm pat on the back!</p>
+                </div>
+            </div>
+            <!--* Completed 10 projects-->
+            <div class="badge-wrapper">
+                <img src="../images/badges/complete-ten-project-mono.webp" id="complete-ten-project" class="badge pulse">
+                <div class="badgeToPopup" id="complete-ten-project-popup">
+                    <h4>Completed 10 Projects</h4>
+                    <p>I don't know about you, but this seems super impressive!</p>
+                </div>
+            </div>
+            <!--* Streak fiend-->
+            <div class="badge-wrapper">
+                <img src="../images/badges/streak-fiend-mono.webp" id="streak-fiend" class="badge pulse">
+                <div class="badgeToPopup" id="streak-fiend-popup">
+                    <h4>Streak Fiend</h4>
+                    <p>Completed a project witha perfect streak!</p>
+                </div>
+            </div>
+            <!--* Veteran Streaker-->
+            <div class="badge-wrapper">
+                <img src="../images/badges/vet-streaker-mono.webp" id="vet-streaker" class="badge pulse">
+                <div class="badgeToPopup" id="vet-streaker-popup">
+                    <h4>Veteran Streaker</h4>
+                    <p>Completed multiple projects with perfect streaks!</p>
+                </div>
+            </div>
+            <!--* Hydra Slayer-->
+            <div class="badge-wrapper">
+                <img src="../images/badges/hydra-slayer-mono.webp" id="hydra-slayer" class="badge pulse">
+                <div class="badgeToPopup" id="hydra-slayer-popup">
+                    <h4>Hydra Slayer</h4>
+                    <p>Slaying the hydra is no easy feat. 
+                        To earn this badge, you must write at least 
+                        500 works within a 5 minute writing sprint.</p>
+                </div>
+            </div>
+            <!--* veteran guildmember-->
+            <div class="badge-wrapper">
+                <img src="../images/badges/vet-guild-mono.webp" id="vet-guild" class="badge pulse">
+                <div class="badgeToPopup" id="vet-guild-popup">
+                    <h3>Veteran Guildmember</h3>
+                    <p>You've participated in the yearly challenge multiple years in a row!</p>
+                </div>
+            </div>
+            <!--* First project start date-->
+            <div class="badge-wrapper">
+                <img src="../images/badges/start-first-project-mono.webp" id="start-first-project" class="badge pulse">
+                <div class="badgeToPopup" id="start-first-project-popup">
+                    <h4>Started Your First Project</h4>
+                    <p>PHP data goes here</p>
+                </div>
+            </div>
+            <!--* Spicy-->
+            <div class="badge-wrapper">
+                <img src="../images/badges/spicy-spicy-mono.webp" id="spicy-spicy" class="badge pulse">
+                <div class="badgeToPopup" id="spicy-spicy-popup">
+                    <h4>Spicy, Spicy</h4>
+                    <p>Started a project that you can never show your parents. Ya nasty!</p>
+                </div>
+            </div>
+            <!--* Tears-->
+            <div class="badge-wrapper">
+                <img src="../images/badges/tears-alltime-mono.webp" id="tears-alltime" class="badge pulse">
+                <div class="badgeToPopup" id="tears-alltime-popup">
+                    <h4>Tears Were Wept</h4>
+                    <p>One or more of your projects has made you cry.</p>
+                </div>
+            </div>
+        <p id="instruction">To give yourself a badge, simply activate the toggle and click on a badge. 
+                        Click on it again to remove it.</p>
+        </div>
+    </div>
+    <!--* FOOTER-->
+    <!--! Keep link to logo artist for permission to use-->
+    <footer id="footer">
+        <p id="copyright">&copy;2025. All rights reserved.</p>
+        <p id="logo-link">Logo by <a href="https://kohacu.com/20181205post-22321/">Kohaku!</a></p>
+        <p id="contact"><a href="contact.php">Contact Us</a></p>
+    </footer>
+    <script>
+        // BADGE POPUPS
+    const badge1 = document.getElementById('complete-one-project');
+    const Popup1 = document.getElementById('complete-one-project-popup');
+    badge1.addEventListener('mouseenter',
+        () => {
+            console.log("hello");
+        Popup1.classList.add('showFlex');
+        });
+        
+    badge1.addEventListener('mouseleave',
+        () => {
+        Popup1.classList.remove('showFlex');
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const badge2 = document.getElementById('complete-five-project');
+    const Popup2 = document.getElementById('complete-five-project-popup');
+    badge2.addEventListener('mouseenter',
+        () => {
+        Popup2.classList.add('showFlex');
+        });
+        
+    badge2.addEventListener('mouseleave',
+        () => {
+        Popup2.classList.remove('showFlex');
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const badge3 = document.getElementById('complete-ten-project');
+    const Popup3 = document.getElementById('complete-ten-project-popup');
+    badge3.addEventListener('mouseenter',
+        () => {
+        Popup3.classList.add('showFlex');
+        });
+        
+    badge3.addEventListener('mouseleave',
+        () => {
+        Popup3.classList.remove('showFlex');
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const badge4 = document.getElementById('streak-fiend');
+    const Popup4 = document.getElementById('streak-fiend-popup');
+    badge4.addEventListener('mouseenter',
+        () => {
+        Popup4.classList.add('showFlex');
+        });
+        
+    badge4.addEventListener('mouseleave',
+        () => {
+        Popup4.classList.remove('showFlex');
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const badge5 = document.getElementById('vet-streaker');
+    const Popup5 = document.getElementById('vet-streaker-popup');
+    badge5.addEventListener('mouseenter',
+        () => {
+        Popup5.classList.add('showFlex');
+        });
+        
+    badge5.addEventListener('mouseleave',
+        () => {
+        Popup5.classList.remove('showFlex');
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const badge6 = document.getElementById('hydra-slayer');
+    const Popup6 = document.getElementById('hydra-slayer-popup');
+    badge6.addEventListener('mouseenter',
+        () => {
+        Popup6.classList.add('showFlex');
+        });
+        
+    badge6.addEventListener('mouseleave',
+        () => {
+        Popup6.classList.remove('showFlex');
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const badge7 = document.getElementById('vet-guild');
+    const Popup7 = document.getElementById('vet-guild-popup');
+    badge7.addEventListener('mouseenter',
+        () => {
+        Popup7.classList.add('showFlex');
+        });
+        
+    badge7.addEventListener('mouseleave',
+        () => {
+        Popup7.classList.remove('showFlex');
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const badge8 = document.getElementById('start-first-project');
+    const Popup8 = document.getElementById('start-first-project-popup');
+    badge8.addEventListener('mouseenter',
+        () => {
+        Popup8.classList.add('showFlex');
+        });
+        
+    badge8.addEventListener('mouseleave',
+        () => {
+        Popup8.classList.remove('showFlex');
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const badge9 = document.getElementById('spicy-spicy');
+    const Popup9 = document.getElementById('spicy-spicy-popup');
+    badge9.addEventListener('mouseenter',
+        () => {
+        Popup9.classList.add('showFlex');
+        });
+        
+    badge9.addEventListener('mouseleave',
+        () => {
+        Popup9.classList.remove('showFlex');
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const badge10 = document.getElementById('tears-alltime');
+    const Popup10 = document.getElementById('tears-alltime-popup');
+    badge10.addEventListener('mouseenter',
+        () => {
+        Popup10.classList.add('showFlex');
+        });
+        
+    badge10.addEventListener('mouseleave',
+        () => {
+        elementToPopup10.classList.remove('showFlex');
+        });
+    //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    function disableBadgePopups() {
+    var popup = document.getElementsByClassName("badgeToPopup");
+    var slider = document.getElementById("badgeEdit").checked;
+        if (slider == true) {
+            var i;
+            for (i = 0; i < popup.length; i++) {
+                popup[i].classList.add('hide');
+            }
+        } else {
+            var i;
+            for (i = 0; i < popup.length; i++) {
+                popup[i].classList.remove('hide');
+            }
+        }
+    }
+    </script>
 </body>
 </html>
