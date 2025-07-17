@@ -198,10 +198,10 @@
         translate: 6em -4.5em;
     }
     #complete-ten-project-popup {
-        translate: 6em -6em;
+        translate: 6em -5em;
     }
     #streak-fiend-popup {
-        translate: -6em -2em;
+        translate: -6em -4em;
         border-radius: 16px 16px 0 16px;
     }
     #vet-streaker-popup {
@@ -209,13 +209,13 @@
         border-radius: 16px 16px 0 16px;
     }
     #hydra-slayer-popup {
-        translate: 6em -8em;
+        translate: 6em -7em;
     }
     #vet-guild-popup {
-        translate: 6em -6em;
+        translate: 6em -5.5em;
     }
     #start-first-project-popup {
-        translate: 6em -2em;
+        translate: 6em -3em;
     }
     #spicy-spicy-popup {
         translate: -6em -4em;
