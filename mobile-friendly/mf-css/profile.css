@@ -189,4 +189,40 @@
     .slider.round:before {
         border-radius: 50%;
     } 
+
+
+    #complete-one-project-popup {
+        translate: 6em -4em;
+    }
+    #complete-five-project-popup {
+        translate: 6em -4em;
+    }
+    #complete-ten-project-popup {
+        translate: 6em -4em;
+    }
+    #streak-fiend-popup {
+        translate: -6em -4em;
+        border-radius: 16px 16px 0 16px;
+    }
+    #vet-streaker-popup {
+        translate: -6em -4em;
+        border-radius: 16px 16px 0 16px;
+    }
+    #hydra-slayer-popup {
+        translate: 6em -4em;
+    }
+    #vet-guild-popup {
+        translate: 6em -4em;
+    }
+    #start-first-project-popup {
+        translate: 6em -4em;
+    }
+    #spicy-spicy-popup {
+        translate: -6em -4em;
+        border-radius: 16px 16px 0 16px;
+    }
+    #tears-alltime-popup {
+        translate: -6em -4em;
+        border-radius: 16px 16px 0 16px;
+    }
 }
