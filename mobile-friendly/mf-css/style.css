@@ -350,6 +350,33 @@ a {
         font-size: 12px;
         text-align: center;
     }
+
+
+
+
+    .not-found-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 16em;
+        margin-top: 1em;
+    }
+    .go-back-button {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--accent-2);
+        border: 2px solid var(--accent-3);
+        border-radius: 24px;
+        width: 13em;
+        height: 3.5em;
+    }
+    .button-container > p {
+        font-size: 18px;
+    }
 }
 
 
@@ -411,6 +438,9 @@ a {
     }
     .userDropdown {
         width: 12%;
+    }
+    .not-found-container {
+        margin-top: 3em;
     }
 }
 
@@ -556,6 +586,9 @@ a {
         justify-content: center;
         text-align: center;
         margin: 0.5em 0 1em 0;
+    }
+    .not-found-container {
+        margin-top: 6em;
     }
 }
 
