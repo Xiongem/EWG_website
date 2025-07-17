@@ -209,7 +209,7 @@
         border-radius: 16px 16px 0 16px;
     }
     #hydra-slayer-popup {
-        translate: 6em 6.5em;
+        translate: 6em -6.5em;
     }
     #vet-guild-popup {
         translate: 6em -5.5em;
