@@ -201,7 +201,7 @@
         translate: 6em -5em;
     }
     #streak-fiend-popup {
-        translate: -6em -4em;
+        translate: -6em -3em;
         border-radius: 16px 16px 0 16px;
     }
     #vet-streaker-popup {
@@ -209,13 +209,13 @@
         border-radius: 16px 16px 0 16px;
     }
     #hydra-slayer-popup {
-        translate: 6em -7em;
+        translate: 6em 6.5em;
     }
     #vet-guild-popup {
         translate: 6em -5.5em;
     }
     #start-first-project-popup {
-        translate: 6em -3em;
+        translate: 6em -3.5em;
     }
     #spicy-spicy-popup {
         translate: -6em -4em;
