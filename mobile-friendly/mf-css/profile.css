@@ -96,6 +96,16 @@
     }  
 
 @media only screen and (min-width: 200px) {
+    .user-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    }
+    #profilePicture {
+        width: 5em;
+    }
     .badge-container {
         display: grid;
         position: relative;
