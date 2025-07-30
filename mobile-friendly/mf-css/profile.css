@@ -106,6 +106,47 @@
     #profilePicture {
         width: 5em;
     }
+    /** Current Project overview*/
+    .current-project-wrapper {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+    .current-project-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 1em;
+    }
+    #area-title { 
+        margin-bottom: 0.5em;
+        text-align: center;
+    }
+    .progress-info-container {
+        /* display: flex;
+        align-items: center; */
+        width: 100%;
+    }
+    #area-title h1{ 
+        font-size: 36px;
+    }
+    #project-img {
+        /* flex-grow: 2; */
+        float: left;
+        margin: 0 1em 0 0;
+    }
+    #project-img img{
+        width: 8em;
+        height: fit-content;
+        border-radius: 4px;
+    }
+    #project-title {
+        text-align: center;
+    }
+    #summary-text {
+        font-size: 18px;
+    }
     .badge-container {
         display: grid;
         position: relative;
