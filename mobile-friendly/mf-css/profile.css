@@ -106,6 +106,18 @@
     #profilePicture {
         width: 5em;
     }
+    .profile-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .fav-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .fav-container > p {
+        font-size: 16px;
+    }
     /** Current Project overview*/
     .current-project-wrapper {
         display: flex;
