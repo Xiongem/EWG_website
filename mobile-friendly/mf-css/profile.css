@@ -200,6 +200,7 @@
     #badge-title {
         grid-column: span 5;
         justify-self: center;
+        padding-top: 1em;
     }
 
     .slider-container {
@@ -310,6 +311,11 @@
         border-radius: 16px 16px 0 16px;
     }
 }
+
+
+
+
+
 /**TABLET PORTRAIT*/
 @media only screen and (min-width: 720px) {
     #profilePicture {
@@ -327,5 +333,72 @@
     }
     .profile-wrapper {
         padding: 1.5em 2em;
+    }
+    #badge-title {
+        padding-top: 0;
+    }
+    .slider {
+        background-color: var(--accent-1);
+    }
+}
+
+
+
+
+
+
+@media only screen and (min-width: 1400px) {
+    .profile-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border: none;
+        background-color: var(--background-color);
+        /* margin: 2em 0; */
+    }
+    #profilePicture {
+        width: 12em;
+    }
+    #username {
+        font-size: 54px;
+    }
+    .user-container {
+        flex-direction: column;
+        width: 40%;
+        background-color: var(--accent-1);
+        border: 2px solid var(--accent-3);
+        border-radius: 16px;
+    }
+    .profile-container {
+        width: 50%;
+    }
+    /* .fav-container {
+        width: 25%;
+    }
+    .bio-container {
+        width: 25%;
+    } */
+     .main-wrapper {
+        display: flex;
+        margin: 2em 0;
+     }
+    .current-project-wrapper{
+        width: 50%;
+    }
+    .current-project-container {
+        padding: 0 2em 1em 2em;
+    }
+    #area-title {
+        padding-top: 0.4em;
+    }
+    #area-title h1 {
+        font-size: 38px;
+    }
+    .badge-container {
+        width: 50%;
+        background-color: var(--background-color);
+        border-top: none;
+        border-left: 2px solid var(--accent-1);
+        padding: 0 0.5em 1em 0.5em;
     }
 }
