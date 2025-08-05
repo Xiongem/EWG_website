@@ -152,7 +152,7 @@
         padding: 1em;
     }
     #area-title { 
-        margin-bottom: 0.5em;
+        margin-bottom: 1em;
         text-align: center;
     }
     .progress-info-container {
@@ -175,6 +175,7 @@
     }
     #project-title {
         text-align: center;
+        margin-bottom: 0.5em;
     }
     #summary-text {
         font-size: 18px;
