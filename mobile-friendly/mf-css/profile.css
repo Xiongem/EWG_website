@@ -310,3 +310,22 @@
         border-radius: 16px 16px 0 16px;
     }
 }
+/**TABLET PORTRAIT*/
+@media only screen and (min-width: 720px) {
+    #profilePicture {
+        width: 9em;
+    }
+    #username {
+        font-size: 44px;
+    }
+    .fav-container > p, .bio-container > p {
+        font-size: 20px;
+        padding-left: 1.5em;
+    }
+    .fav-container, .bio-container {
+        margin-top: 1.5em;
+    }
+    .profile-wrapper {
+        padding: 1.5em 2em;
+    }
+}
