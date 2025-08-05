@@ -10,9 +10,9 @@ document.genrePreview.src = imageList[selectedImage].src;
 }
 
 // Navigation menu dropdown
-function navMenuClick() {
-    document.getElementById('navMenu').classList.toggle('show');     
-}
+// function navMenuClick() {
+//     document.getElementById('navMenu').classList.toggle('show');     
+// }
 
 function findDailyGoal(){
     var goal=document.getElementById( "goal" ).value;

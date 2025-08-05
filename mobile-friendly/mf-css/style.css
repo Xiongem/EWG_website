@@ -201,7 +201,7 @@ a {
     }
     .mobileNav {
         display: block;
-        z-index: 2;
+        z-index: 1;
         margin: 0em 1em;
         cursor: pointer;
         width: 3em;
@@ -210,6 +210,7 @@ a {
     .menu-icon-wrapper {
         width: 3em;
         height: 3em;
+        z-index: 3;
     }
     .menu-bar {
         width: 90%;
@@ -222,7 +223,8 @@ a {
     .navMenu {
         position: absolute;
         top: 0;
-        z-index: 1;
+        left: 0;
+        z-index: -1;
         display: none;
         width: 45%;
         background-color: var(--accent-1);
@@ -318,6 +320,9 @@ a {
     #contact {
         grid-column: span 2;
         justify-self: center;
+    }
+    .mobileNav:hover .navMenu {
+        display: block;
     }
 
 
