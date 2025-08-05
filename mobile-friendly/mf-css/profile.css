@@ -337,9 +337,6 @@
     #badge-title {
         padding-top: 0;
     }
-    .slider {
-        background-color: var(--accent-1);
-    }
 }
 
 
@@ -400,5 +397,8 @@
         border-top: none;
         border-left: 2px solid var(--accent-1);
         padding: 0 0.5em 1em 0.5em;
+    }
+    .slider {
+        background-color: var(--accent-1);
     }
 }
