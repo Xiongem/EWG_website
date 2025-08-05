@@ -122,6 +122,7 @@
     }
     #username {
         font-size: 44px;
+        padding-bottom: 0.2em;
     }
     .profile-container {
         display: flex;
