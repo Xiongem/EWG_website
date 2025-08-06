@@ -330,6 +330,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: 90vh;
         padding: 0 1em;
     }
     label {
@@ -403,6 +404,15 @@
     }
     .slider-container {
         padding: 1em 1.5em 0 0;
+    }
+
+
+
+    form {
+        width: 60%;
+    }
+    #user-bio {
+        height: 13em;
     }
 }
 
