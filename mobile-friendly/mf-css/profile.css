@@ -324,7 +324,7 @@
         align-items: center;
     }
     .update-wrapper h1 {
-        margin: 0.5em 0;
+        margin: 0.8em 0 0.5em 0;
     }
     form {
         display: flex;
@@ -346,7 +346,7 @@
     #user-bio {
         height: 10em;
         resize: vertical;
-        margin: 0.5em 1em 3em 1em;
+        margin: 0.5em 1em 3.5em 1em;
     }
     .fav-wrapper {
         display: flex;
@@ -357,7 +357,7 @@
     .favs {
         height: 3.3em;
         width: 88%;
-        margin: 0.5em 1em 0.5em 0.5em;
+        margin: 0.8em 1em 0.5em 0.5em;
     }
     .button-wrapper {
         display: flex;
@@ -371,7 +371,7 @@
         background-color: var(--accent-3);
         border-color: transparent;
         border-radius: 16px;
-        margin: 2em 1em;
+        margin: 4em 1em;
         cursor: pointer;
     }
 }
