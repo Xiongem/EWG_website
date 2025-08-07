@@ -480,4 +480,10 @@
     .slider {
         background-color: var(--accent-1);
     }
+
+
+
+    form {
+        width: 40%;
+    }
 }
