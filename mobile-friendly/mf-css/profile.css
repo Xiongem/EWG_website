@@ -323,7 +323,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 80vh;
+        min-height: 70vh;
     }
     .update-wrapper h1 {
         margin: 0.8em 0 0.8em 0;
@@ -422,6 +422,9 @@
     }
     #user-bio {
         height: 13em;
+    }
+    .update-wrapper {
+        min-height: 75vh;
     }
 }
 
