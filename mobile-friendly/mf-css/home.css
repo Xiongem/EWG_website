@@ -371,6 +371,7 @@
         font-size: 12px;
         justify-self: center;
         text-align: center;
+        padding: 0 1em;
     }
     #badge-title {
         grid-column: span 5;
