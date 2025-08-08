@@ -441,6 +441,9 @@
     #profileUpdate {
         margin-right: 2em;
     }
+    #profileUpdate:hover > i {
+        color: var(--accent-3);
+    }
     #profilePicture {
         width: 12em;
     }
