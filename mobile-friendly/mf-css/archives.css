@@ -109,7 +109,7 @@
         flex-direction: column;
         align-items: center;
         padding: 0em 1em;
-        min-height: 100vh;
+        min-height: 70vh;
     }
     .overview-container {
         display: flex;
@@ -187,6 +187,9 @@
     .instruction-wrapper > p {
         font-size: 18px;
     }
+    .main-wrapper {
+        min-height: 75vh;
+    }
 }
 
 
@@ -219,7 +222,7 @@
         row-gap: 2em;
     }
     .instruction-wrapper {
-        grid-column: span 2;
+        height: 3em;
     }
     .overview-container {
         justify-self: center;
