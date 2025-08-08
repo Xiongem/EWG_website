@@ -597,11 +597,11 @@ a {
     }
 }
 
-@media only screen and (min-width: 1500px) {
+/* @media only screen and (min-width: 1500px) {
     .user-content {
         translate: 0em 7.2em;
     }
-}
+} */
 .show {
     display: block;
 }
