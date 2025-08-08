@@ -99,7 +99,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 1.5em;
+        /* margin-top: 1.5em; */
+        min-height: 70vh;
     }
     .settings-container {
         display: flex;
@@ -344,11 +345,17 @@
     }
 }
 @media only screen and (min-width: 768px) {
+    .settings-wrapper {
+        min-height: 75vh;
+    }
     .settings-container {
         width: 60%;
     }
 }
 @media only screen and (min-width: 1024px) {
+    .settings-wrapper {
+        min-height: 80vh;
+    }
     .settings-container {
         width: 45%;
         height: 24em;
