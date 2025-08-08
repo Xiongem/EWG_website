@@ -151,6 +151,9 @@
     .overview-container:hover .overview-title {
         color: var(--accent-3);
     }
+    footer {
+        margin-top: 1em;
+    }
 }
 
 
