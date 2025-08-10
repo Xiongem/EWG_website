@@ -48,12 +48,18 @@ function showWarning() {
 function hideWarning() {
   document.getElementById("warning").style.display = "none";
 }
-
-function showProjectPopup() {
+function hideBackground() {
   var body = document.getElementById("body");
-  document.getElementById("project-popup").style.display = "flex";
   body.style.height = "100%";
   body.style.overflow = "hidden";
+  console.log("hidden");
+}
+
+function showProjectPopup() {
+  var projectPopup = document.getElementById("project-popup");
+  projectPopup.style.display = "flex";
+  projectPopup.scrollIntoView();
+  setTimeout(hideBackground, 500);
 }
 function hideProjectPopup() {
   var body = document.getElementById("body");
@@ -66,15 +72,12 @@ function showUpdateWords() {
   var elmntToView = document.getElementById("count-update-popup");
   elmntToView.style.display = "flex";
   elmntToView.scrollIntoView();
-  setTimeout(hideBackground, 3000);
+  setTimeout(hideBackground, 500);
 }
-function hideBackground() {
-  body.style.height = "100%";
-  body.style.overflow = "hidden";
-}
+
 function hideUpdateWords() {
   var elmntToView = document.getElementById("count-update-popup");
-  elmntToView .style.display = "none";
+  elmntToView.style.display = "none";
   body.style.height = "unset";
   body.style.overflow = "unset";
 }
