@@ -4,15 +4,11 @@ for (var i = 1; i <= 19; i++) {
     imageList[i] = new Image(70, 70);
     imageList[i].src = "../images/genre-covers/genre-covers" + i + ".webp";
 }
+
 function switchImage() {
 var selectedImage = document.createNewProject.genre.options[document.createNewProject.genre.selectedIndex].value;
 document.genrePreview.src = imageList[selectedImage].src;
 }
-
-// Navigation menu dropdown
-// function navMenuClick() {
-//     document.getElementById('navMenu').classList.toggle('show');     
-// }
 
 function findDailyGoal(){
     var goal=document.getElementById( "goal" ).value;
@@ -65,13 +61,6 @@ function hideProjectPopup() {
   body.style.height = "unset";
   body.style.overflow = "unset";
 }
-
-// function showProjectSettings() {
-//   document.getElementById("settings-popup").style.display = "flex";
-// }
-// function hideProjectSettings() {
-//   document.getElementById("settings-popup").style.display = "none";
-// }
 
 function showUpdateWords() {
   var elmntToView = document.getElementById("count-update-popup");
