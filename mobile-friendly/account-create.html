@@ -24,15 +24,17 @@
                 id="username" 
                 minlength="3" 
                 maxlength="30" 
-                onkeyup="checkName();"
+                
                 required>
+                <!-- onkeyup="checkName();" -->
 
             <label for="email">Email:</label>
             <input type="email" 
                 name="email" 
                 id="email" 
-                onkeyup="checkEmail();"
+                
                 required>
+                <!-- onkeyup="checkEmail();" -->
 
             <span id="email-availability-status"></span>
 
@@ -51,11 +53,13 @@
                 autocomplete="new-password" 
                 name="confirm_pwd" 
                 id="confirm_pwd"  
-                onkeyup="check();"
+                
                 required>
-
-            <input type="checkbox" class="checkbox" onclick="showPassword()"><p>Show Password</p>
-            <span id="passwordError" class="error"></span>
+                <!-- onkeyup="check();" -->
+            <div class="show-password-wrapper">
+                <input type="checkbox" class="checkbox" onclick="showPassword()"><p>Show Password</p>
+                <span id="passwordError" class="error"></span>
+            </div>
 
             <div class="terms">
                 <p>By clicking the Submit button,<br>you agree to our <a href="legal-docs/terms-use.html">Terms of Use</a>.</p>

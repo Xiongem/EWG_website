@@ -75,6 +75,8 @@ function hideProjectPopup() {
 
 function showUpdateWords() {
   document.getElementById("count-update-popup").style.display = "flex";
+  var elmntToView = document.getElementById("count-update-popup");
+  elmntToView.scrollIntoView(); 
   body.style.height = "100%";
   body.style.overflow = "hidden";
 }
