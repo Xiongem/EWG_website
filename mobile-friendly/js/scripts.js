@@ -74,14 +74,18 @@ function hideProjectPopup() {
 // }
 
 function showUpdateWords() {
-  document.getElementById("count-update-popup").style.display = "flex";
   var elmntToView = document.getElementById("count-update-popup");
-  elmntToView.scrollIntoView(); 
+  elmntToView.style.display = "flex";
+  elmntToView.scrollIntoView();
+  setTimeout(hideBackground, 3000);
+}
+function hideBackground() {
   body.style.height = "100%";
   body.style.overflow = "hidden";
 }
 function hideUpdateWords() {
-  document.getElementById("count-update-popup").style.display = "none";
+  var elmntToView = document.getElementById("count-update-popup");
+  elmntToView .style.display = "none";
   body.style.height = "unset";
   body.style.overflow = "unset";
 }
