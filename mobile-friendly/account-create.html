@@ -17,50 +17,51 @@
 <body>
     <div class="account-wrapper">
         <form id="signup">
-            <label for="username">Username:</label>
-            <input type="text" 
-                autocomplete="new-username" 
-                name="username" 
-                id="username" 
-                minlength="3" 
-                maxlength="30" 
-                
-                required>
-                <!-- onkeyup="checkName();" -->
+            <div class="input-warpper">
+                <label for="username">Username:</label>
+                <input type="text" 
+                    autocomplete="new-username" 
+                    name="username" 
+                    id="username" 
+                    minlength="3" 
+                    maxlength="30" 
+                    
+                    required>
+                    <!-- onkeyup="checkName();" -->
 
-            <label for="email">Email:</label>
-            <input type="email" 
-                name="email" 
-                id="email" 
-                
-                required>
-                <!-- onkeyup="checkEmail();" -->
+                <label for="email">Email:</label>
+                <input type="email" 
+                    name="email" 
+                    id="email" 
+                    
+                    required>
+                    <!-- onkeyup="checkEmail();" -->
 
-            <span id="email-availability-status"></span>
+                <span id="email-availability-status"></span>
 
-            <label for="pwd">Password</label>
-            <input type="password"
-                autocomplete="new-password" 
-                name="pwd" 
-                id="pwd" 
-                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                title="Must contain at least one number and one uppercase and lowercase letter, 
-                    and at least 8 or more characters"
-                required>
+                <label for="pwd">Password</label>
+                <input type="password"
+                    autocomplete="new-password" 
+                    name="pwd" 
+                    id="pwd" 
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, 
+                        and at least 8 or more characters"
+                    required>
 
-            <label for="confirm_pwd">Confirm Password</label>
-            <input type="password"
-                autocomplete="new-password" 
-                name="confirm_pwd" 
-                id="confirm_pwd"  
-                
-                required>
-                <!-- onkeyup="check();" -->
-            <div class="show-password-wrapper">
-                <input type="checkbox" class="checkbox" onclick="showPassword()"><p>Show Password</p>
-                <span id="passwordError" class="error"></span>
+                <label for="confirm_pwd">Confirm Password</label>
+                <input type="password"
+                    autocomplete="new-password" 
+                    name="confirm_pwd" 
+                    id="confirm_pwd"  
+                    
+                    required>
+                    <!-- onkeyup="check();" -->
+                <div class="show-password-wrapper">
+                    <input type="checkbox" class="checkbox" onclick="showPassword()"><p>Show Password</p>
+                    <span id="passwordError" class="error"></span>
+                </div>
             </div>
-
             <div class="terms">
                 <p>By clicking the Submit button,<br>you agree to our <a href="legal-docs/terms-use.html">Terms of Use</a>.</p>
             </div>

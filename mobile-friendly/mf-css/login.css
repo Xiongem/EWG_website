@@ -72,6 +72,28 @@
     .forgot-password > a {
         padding: 0.5em 0;
     }
+
+
+    .account-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .input-warpper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3em;
+    }
+    .show-password-wrapper {
+        display: flex;
+    }
+    .show-password-wrapper > p {
+        font-size: 16px;
+    }
+    .terms > p {
+        font-size: 16px;
+    }
 }
 @media only screen and (min-width: 720px) {
     .login-container {
