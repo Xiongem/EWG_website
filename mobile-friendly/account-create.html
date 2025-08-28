@@ -22,48 +22,54 @@
                 <input type="text" 
                     autocomplete="new-username" 
                     name="username" 
-                    id="username" 
+                    id="username"
+                    class="input" 
                     minlength="3" 
                     maxlength="30" 
-                    
                     required>
                     <!-- onkeyup="checkName();" -->
+
+                <span id="user-availability-status"></span>
 
                 <label for="email">Email:</label>
                 <input type="email" 
                     name="email" 
                     id="email" 
-                    
+                    class="input"
                     required>
                     <!-- onkeyup="checkEmail();" -->
 
                 <span id="email-availability-status"></span>
 
-                <label for="pwd">Password</label>
+                <label for="pwd">Password:</label>
                 <input type="password"
                     autocomplete="new-password" 
                     name="pwd" 
                     id="pwd" 
+                    class="input"
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     title="Must contain at least one number and one uppercase and lowercase letter, 
                         and at least 8 or more characters"
                     required>
 
-                <label for="confirm_pwd">Confirm Password</label>
+                <label for="confirm_pwd">Confirm Password:</label>
                 <input type="password"
                     autocomplete="new-password" 
                     name="confirm_pwd" 
                     id="confirm_pwd"  
-                    
+                    class="input"
                     required>
                     <!-- onkeyup="check();" -->
                 <div class="show-password-wrapper">
-                    <input type="checkbox" class="checkbox" onclick="showPassword()"><p>Show Password</p>
+                    <div class="show-password">
+                        <input type="checkbox" class="checkbox" onclick="showPassword()">
+                        <p>Show Password</p>
+                    </div>
                     <span id="passwordError" class="error"></span>
                 </div>
             </div>
             <div class="terms">
-                <p>By clicking the Submit button,<br>you agree to our <a href="legal-docs/terms-use.html">Terms of Use</a>.</p>
+                <p>By clicking the Submit button, you agree to our <a href="legal-docs/terms-use.html">Terms of Use</a>.</p>
             </div>
 
             <div id="submit-button">

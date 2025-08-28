@@ -1,3 +1,16 @@
+//adds a show password option
+function showPassword() {
+  var showPass = document.getElementById("pwd");
+  var confirmPass = document.getElementById("confirm_pwd");
+  if (showPass.type === "password") {
+    showPass.type = "text";
+    confirmPass.type = "text";
+  } else {
+    showPass.type = "password";
+    confirmPass.type = "password";
+  }
+} 
+
 //Switching Genre Covers on Dropdown Selection
 var imageList = Array();
 for (var i = 1; i <= 19; i++) {
