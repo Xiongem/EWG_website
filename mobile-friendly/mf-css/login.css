@@ -110,6 +110,11 @@
 
 
 
+    .content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .profile-wrapper {
         display: flex;
         flex-direction: column;
@@ -159,6 +164,9 @@
     .login-container {
         width: 70%;
     }
+    .profile-wrapper {
+        width: 70%;
+    }
     .input {
         height: 3.5em;
     }
@@ -179,16 +187,22 @@
     .login-container {
         width: 30%;
     }
+    .profile-wrapper {
+        width: 40%;
+    }
+    .profile-wrapper > h1 {
+        margin-top: 1em;
+    }
 
 
-    .account-wrapper {
+    .account-wrapper, .content-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100vw;
         height: 90vh;
     }
-    #signup {
+    #signup, .profile-wrapper {
         background-color: var(--accent-1);
         border-radius: 12px;
         border: 2px solid var(--accent-3);
