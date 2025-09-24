@@ -150,7 +150,7 @@
         display: flex;
         justify-content: flex-end;
     }
-    #profile-create-button {
+    #profile-create-button, #choose-pfp {
         width: 7em;
         height: 3em;
         font-weight: 600;
@@ -164,7 +164,8 @@
 
 
     .badge-pfp {
-        width: 5em;
+        width: 4.5em;
+        margin: 0.1em;
     }
     .chooses-pfp-container, .chooses-pfp-contents {
         display: flex;
@@ -172,9 +173,17 @@
         justify-content: center;
         align-items: center;
     }
+    .chooses-pfp-contents > h1 {
+        margin: 1em 0 0.3em 0;
+    }
     .badge-rows-pfp {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 95%;
+    }
+    .hidden-form {
+        display: none;
     }
 }
 @media only screen and (min-width: 720px) {
@@ -198,6 +207,11 @@
 
     #signup {
         width: 50%;
+    }
+
+
+    .badge-rows-pfp {
+        width: 75%;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -227,6 +241,12 @@
     }
     .input-warpper {
         width: 70%;
+    }
+
+
+
+    .badge-rows-pfp {
+        width: 45%;
     }
 }
 .success {
