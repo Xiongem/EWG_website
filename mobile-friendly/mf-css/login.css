@@ -87,6 +87,9 @@
         flex-direction: column;
         margin: 2.5em 0;
     }
+    #email {
+        margin-bottom: 2em;
+    }
     .show-password-wrapper {
         display: flex;
         flex-direction: column;
