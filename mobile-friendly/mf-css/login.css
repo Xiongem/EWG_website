@@ -159,6 +159,23 @@
         border-radius: 16px;
         margin: 1em 1em;
     }
+
+
+
+
+    .badge-pfp {
+        width: 5em;
+    }
+    .chooses-pfp-container, .chooses-pfp-contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .badge-rows-pfp {
+        display: flex;
+        justify-content: center;
+    }
 }
 @media only screen and (min-width: 720px) {
     .login-container {
