@@ -15,6 +15,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    
+    <div class="profile-wrapper">
+        <h1>Create Your Profile</h1>
+        <form action="" id="profileCreation" method="post">
+            <div class="input-wrapper">
+                <label for="bio">Bio: Tell everyone a little about yourself</label>
+                <textarea name="bio" id="bio" minlength="1" maxlength="300" placeholder="Max Length: 300 characters"></textarea>
+            </div>
+            <h3>Favorites: What are your favorite books or authors?</h3>
+            <div class="input-wrapper">
+                <div class="fav-content">
+                        <label for="fav-1">1</label>
+                        <textarea class="favs" name="fav-1" id="fav-1" minlength="1" maxlength="100"></textarea>
+                    </div>
+                    <div class="fav-content">
+                        <label for="fav-2">2</label>
+                        <textarea class="favs" name="fav-2" id="fav-2" minlength="1" maxlength="100"></textarea>
+                    </div>
+                    <div class="fav-content">
+                        <label for="fav-3">3</label>
+                        <textarea class="favs" name="fav-3" id="fav-3" minlength="1" maxlength="100"></textarea>
+                    </div>
+            </div>
+            <button value="Submit" id="profile-create-button">Choose Your Profile Picture</button>
+        </form>
+    </div>
 </body>
 </html>
