@@ -197,6 +197,7 @@
     }
     .reset-content > h3 {
         text-align: center;
+        padding: 0 1em;
     }
     .forget-container {
         display: flex;
