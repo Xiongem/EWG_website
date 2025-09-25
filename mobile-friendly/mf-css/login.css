@@ -136,7 +136,7 @@
         resize: vertical;
         margin-bottom: 2em;
     }
-    .favs {
+    .favs, .reset-input {
         background-color: var(--background-color);
         border: 2px solid var(--accent-3);
         color: var(--accent-2);
@@ -150,7 +150,7 @@
         display: flex;
         justify-content: flex-end;
     }
-    #profile-create-button, #choose-pfp {
+    #profile-create-button, #choose-pfp, #submit-btn {
         width: 7em;
         height: 3em;
         font-weight: 600;
@@ -185,14 +185,35 @@
     .hidden-form {
         display: none;
     }
+
+
+
+    .reset-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2em;
+    }
+    .reset-content > h3 {
+        text-align: center;
+    }
+    .forget-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .forget-button-wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 @media only screen and (min-width: 720px) {
-    .login-container {
+    .login-container, .profile-wrapper, .reset-content {
         width: 70%;
     }
-    .profile-wrapper {
+    /* .profile-wrapper {
         width: 70%;
-    }
+    } */
     .input {
         height: 3.5em;
     }
@@ -213,6 +234,13 @@
     .badge-rows-pfp {
         width: 75%;
     }
+
+
+    .reset-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .login-container {
@@ -229,14 +257,14 @@
     }
 
 
-    .account-wrapper, .content-wrapper {
+    .account-wrapper, .content-wrapper, .reset-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100vw;
         height: 90vh;
     }
-    #signup, .profile-wrapper {
+    #signup, .profile-wrapper, .reset-content {
         background-color: var(--accent-1);
         border-radius: 12px;
         border: 2px solid var(--accent-3);
@@ -251,6 +279,25 @@
     .badge-rows-pfp {
         width: 45%;
     }
+
+
+    #reset-password {
+        display: flex;
+        flex-direction: row;
+    }
+    .reset-content {
+        width: 60%;
+        padding: 2.5em;
+    }
+    .forget-container {
+        width: 70%;
+    }
+    .forget-button-wrapper {
+        width: 30%;
+        justify-content: center;
+        align-items: end;
+    }
+    
 }
 .success {
     color: green;
