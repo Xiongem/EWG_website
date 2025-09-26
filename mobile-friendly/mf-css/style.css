@@ -1,5 +1,5 @@
 :root,
-    /*Royal Midnight*/
+    /*Dark Purple*/
     :root.dark1 { 
         --background-color: #1e202c;
         --text-color: #bfc0d1;
@@ -13,7 +13,20 @@
         --progress-bar: #60519b;
         --percentage: #bfc0d1;
     }
-    
+    :root.dark2 {
+        --background-color: #222831;
+        --text-color: #d8d7ce;
+        --reverse-text-color: #222831;
+        --accent-1: #283b48;
+        --accent-2: #d8d7ce;
+        --accent-3: #00a6c0;
+        --filter-color: #7ae8f878;
+        --box-shadow: 0px 0px 15px #7ae8f878;
+        --warning: #b80303;
+        --progress-bar: #00a6c0;
+        --percentage: #d8d7ce;
+    }
+    /* Light Purple */
     :root.light1 {
         --background-color: #bfc0d1;
         --text-color: #1e202c;
@@ -26,6 +39,19 @@
         --warning: #b80303;
         --progress-bar: #31323c;
         --percentage: #60519b;
+    }
+    :root.light2 {
+        --background-color: #d8d7ce;
+        --text-color: #222831;
+        --reverse-text-color: #d8d7ce;
+        --accent-1: #538089;
+        --accent-2: #283b48;
+        --accent-3: #00a6c0;
+        --filter-color: #7ae8f878;
+        --box-shadow: 0px 0px 15px #7ae8f878;
+        --warning: #b80303;
+        --progress-bar: #283b48;
+        --percentage: #00a6c0;
     }
      
 

@@ -151,7 +151,7 @@
         width: 35%;
         height: 2.7em;
         cursor: pointer;
-        background-color: var(--accent-1);
+        background-color: var(--background-color);
         color: var(--text-color);
         border: 2px solid var(--accent-3);
         border-radius: 8px;
@@ -193,7 +193,7 @@
         border-radius: 0 0 10px 10px;
     }
     #updateWordCount {
-        background-color: var(--accent-1);
+        background-color: var(--background-color);
         color: var(--text-color);
         border: var(--accent-2) solid 2px;
         border-radius: 4px;
