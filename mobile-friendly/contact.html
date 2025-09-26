@@ -87,10 +87,27 @@
             <h3>Let us know what's going on</h3>
             <form>
                 <div class="user-wrapper">
-                    <label></label>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="required" require>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="required" require>
+                </div>
+                <div class="message-wrapper">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" require></textarea>
+                </div>
+                <div class="contact-button">
+                    <input type="submit" id="submit" value="Submit">
                 </div>
             </form>
         </div>
     </div>
+    <!--* FOOTER-->
+    <!--! Keep link to logo artist for permission to use-->
+    <footer id="footer">
+        <p id="copyright">&copy;2025. All rights reserved.</p>
+        <p id="logo-link">Logo by <a href="https://kohacu.com/20181205post-22321/">Kohaku!</a></p>
+        <p id="contact"><a href="contact.html">Contact Us</a></p>
+    </footer>
 </body>
 </html>
