@@ -16,7 +16,7 @@
     .overview-container {
         display: flex;
         justify-content: space-evenly;
-        width: 100%;
+        width: 25em;
         color: var(--text-color);
         background-color: var(--accent-1);
         border: 2px solid var(--accent-3);
@@ -78,7 +78,7 @@
 
 @media only screen and (min-width: 720px) {
     .overview-container{
-        width: 80%;
+        width: 38em;
     }
     .overview-container img {
         width: 5em;
@@ -99,6 +99,9 @@
 
 
 @media only screen and (min-width: 1000px) {
+    .overview-container{
+        width: 48em;
+    }
     .overview-container img {
         width: 7em;
     }
@@ -106,7 +109,7 @@
         font-size: 28px;
     }
     .overview-summary {
-        width: 40em;
+        width: 35em;
         font-size: 16px;
     }
     .overview-wordCount > p, .overview-badges > p {
@@ -128,7 +131,7 @@
     }
     .overview-container {
         justify-self: center;
-        width: 90%;
+        width: 38em;
     }
     .overview-container img {
         width: 8em;
