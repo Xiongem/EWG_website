@@ -71,7 +71,17 @@
     }
     /* Light Red */
     :root.light3 {
-        
+        --background-color: #e2e2e2;
+        --text-color: #28242a;
+        --reverse-text-color: #e2e2e2;
+        --accent-1: #a64b4b;
+        --accent-2: #1e1e27;
+        --accent-3: #df0139;
+        --filter-color: #f76a8d89;
+        --box-shadow: 0px 0px 15px #f76a8d89;
+        --warning: #d9b328;
+        --progress-bar: #1e1e27;
+        --percentage: #df0139;
     }
      
 
