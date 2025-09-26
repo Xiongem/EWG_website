@@ -71,9 +71,9 @@
     }
     /* Light Red */
     :root.light3 {
-        --background-color: #e2e2e2;
+        --background-color: #e5dfd6;
         --text-color: #28242a;
-        --reverse-text-color: #e2e2e2;
+        --reverse-text-color: #e5dfd6;
         --accent-1: #a64b4b;
         --accent-2: #1e1e27;
         --accent-3: #df0139;
