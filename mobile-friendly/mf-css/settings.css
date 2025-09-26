@@ -251,7 +251,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 7em;
+        width: 8em;
         background-color: var(--accent-1);
         border-radius: 30px;
         color: var(--text-color);

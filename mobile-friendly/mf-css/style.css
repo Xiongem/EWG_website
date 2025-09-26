@@ -13,6 +13,7 @@
         --progress-bar: #60519b;
         --percentage: #bfc0d1;
     }
+    /*Dark Blue*/
     :root.dark2 {
         --background-color: #222831;
         --text-color: #d8d7ce;
@@ -25,6 +26,20 @@
         --warning: #b80303;
         --progress-bar: #00a6c0;
         --percentage: #d8d7ce;
+    }
+    /*Dark Red*/
+    :root.dark3 {
+        --background-color: #323034;
+        --text-color: #e2e2e2;
+        --reverse-text-color: #28242a;
+        --accent-1: #1e1e27;
+        --accent-2: #e2e2e2;
+        --accent-3: #df0139;
+        --filter-color: #f76a8d89;
+        --box-shadow: 0px 0px 15px #f76a8d89;
+        --warning: #d9b328;
+        --progress-bar: #df0139;
+        --percentage: #e2e2e2;
     }
     /* Light Purple */
     :root.light1 {
@@ -40,6 +55,7 @@
         --progress-bar: #31323c;
         --percentage: #60519b;
     }
+    /* Light Blue */
     :root.light2 {
         --background-color: #d8d7ce;
         --text-color: #222831;
@@ -52,6 +68,10 @@
         --warning: #b80303;
         --progress-bar: #283b48;
         --percentage: #00a6c0;
+    }
+    /* Light Red */
+    :root.light3 {
+        
     }
      
 
