@@ -94,7 +94,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <input type="submit" value="Login" id="submit">
                 </div>
             </form>
-                
+                <?php if ($is_invalid): ?>
+                    <em>Invalid login<em>
+                <?php endif; ?>
             <div class="forgot-password">
                 <a href="forgot-password.html">Forgot your password?</a>
                 <a href="account-create.html">Create a new account</a>
