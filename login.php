@@ -13,11 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = "u792691800_Xiongem97";
     $password = "Hi5gem97*";
 
-    Create connection
+    // Create connection
     
     $conn = mysqli_connect($servername, $username, $password, $database);
     
-    Check connection
+    // Check connection
     
     if (!$conn) {
     
