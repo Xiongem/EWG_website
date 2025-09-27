@@ -8,33 +8,33 @@ $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
-    $servername = "localhost";
-    $database = "u792691800_ewg_data";
-    $username = "u792691800_Xiongem97";
-    $password = "Hi5gem97*";
+    // $servername = "localhost";
+    // $database = "u792691800_ewg_data";
+    // $username = "u792691800_Xiongem97";
+    // $password = "Hi5gem97*";
 
-    // Create connection
+    // // Create connection
     
-    $conn = mysqli_connect($servername, $username, $password, $database);
+    // $conn = mysqli_connect($servername, $username, $password, $database);
     
-    // Check connection
+    // // Check connection
     
-    if (!$conn) {
+    // if (!$conn) {
     
-        die("Connection failed: " . mysqli_connect_error());
+    //     die("Connection failed: " . mysqli_connect_error());
     
-    }
+    // }
 
-    // ob_start();
-    // require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
-    // dbConnect();
+    ob_start();
+    require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
+    dbConnect();
 
     //query
     $sql = sprintf("SELECT * FROM users
                     WHERE username = '%s'",
-                    $conn->real_escape_string($_POST["username"]));
+                    $_SESSION["conn"]->real_escape_string($_POST["username"]));
 
-    $result = $conn->query($sql);
+    $result = $_SESSION["conn"]->query($sql);
 
     $user = $result->fetch_assoc();
 
