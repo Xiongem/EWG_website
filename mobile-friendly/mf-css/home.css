@@ -254,10 +254,57 @@
         font-size: 18px;
     }
 
-
+    .badge-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 2px solid var(--accent-3);
+        padding: 1em 0.5em;
+        background-color: var(--accent-1);
+    }
+    #badge-title {
+        margin-bottom: 0.3em;
+    }
+    .rows {
+        margin: 0.5em 0;
+    }
+    .auto-badges {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        border-bottom: 2px solid var(--accent-2);
+        padding: 0.5em 0 1em 0;
+    }
+    .auto-row {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .toggle-badges {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        padding: 1em 0;
+    }
+    .toggle-row {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .instruction-wrapper {
+        display: flex;
+    }
+    .instruction {
+        font-size: 14px;
+        text-align: center;
+        padding: 0 1em;
+    }
 
     
-    .badge-container {
+    /* .badge-container {
         display: grid;
         position: relative;
         grid-template-columns: auto auto auto auto auto;
@@ -267,23 +314,23 @@
         border-top: 2px solid var(--accent-3);
         padding: 1em 0.5em;
         background-color: var(--accent-1);
-    }
-    #instruction {
+    } */
+    /* #instruction {
         grid-column: span 5;
         font-size: 12px;
         justify-self: center;
         text-align: center;
         padding: 0 1em;
-    }
-    #badge-title {
+    } */
+    /* #badge-title {
         grid-column: span 5;
         justify-self: center;
-    }
+    } */
 
     .slider-container {
         display: flex;
         align-items: center;
-        position: absolute;
+        /* position: absolute; */
         top: 0;
         right: 0;
         padding: 1em 0.5em 0 0;
@@ -474,11 +521,14 @@
     #summary-text {
         font-size: 20px;
     }
-    .badge-container {
+    /* .badge-container {
         gap: 2em 1.5em;
         justify-content: space-evenly;
+    } */
+     .auto-badges {
+        border-bottom: 2px solid var(--accent-1);
     }
-    #instruction {
+    .instruction {
         font-size: 18px;
     }
 }
