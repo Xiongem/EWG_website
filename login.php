@@ -1,3 +1,58 @@
+<?php
+$is_invalid = false;
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    
+    // $servername = "localhost";
+    // $database = "u792691800_ewg_data";
+    // $username = "u792691800_Xiongem97";
+    // $password = "Hi5gem97*";
+
+    // Create connection
+    
+    // $conn = mysqli_connect($servername, $username, $password, $database);
+    
+    // Check connection
+    
+    // if (!$conn) {
+    
+    //     die("Connection failed: " . mysqli_connect_error());
+    
+    // }
+
+    ob_start();
+    require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
+    dbConnect();
+
+    //query
+    $sql = sprintf("SELECT * FROM users
+                    WHERE username = '%s'",
+                    $conn->real_escape_string($_POST["username"]));
+
+    $result = $conn->query($sql);
+
+    $user = $result->fetch_assoc();
+
+    if ($user) {
+
+        if (password_verify($_POST["pwd"], $user["password_hash"])){
+
+          session_start();
+
+          $_SESSION['loggedin'] = true;
+          $_SESSION["user_id"] = $user["id"];
+
+            header("Location: index.php");
+          exit;
+        }
+    }
+
+    $is_invalid = true;
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +65,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="mf-css/style.css">
     <link rel="stylesheet" href="mf-css/login.css">
-    <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
+    <link rel="website icon" type="webp" href="images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
