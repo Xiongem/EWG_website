@@ -73,10 +73,11 @@
 @media only screen and (min-width: 1024px) {
     .content-wrapper {
         display: flex;
-        margin: 3em 0;
+        margin: 3em 0 1em 0;
     }
     .user-wrapper {
         width: 40%;
+        margin: 0;
     }
     .message-wrapper {
         width: 60%;
