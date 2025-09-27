@@ -78,9 +78,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
             <form method="post">
                 <label for="username">Username:</label>
-                <input class="input-login" type="text" id="username" name="username" required>
+                <input class="input-login" type="text" id="username" name="username" required value="<?= htmlspecialchars($_POST["username"] ?? "") ?>">
                 <label for="password">Password:</label>
-                <input class="input-login" type="password" id="password" name="password" required>
+                <input class="input-login" type="password" id="pwd" name="pwd" required autocomplete="new-password">
                 <div class="checkbox-wrapper">
                     <input type="checkbox" class="checkbox" onclick="showPassword()">
                     <label for="checkbox">Show Password</label>
@@ -89,6 +89,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <input type="submit" value="Login" id="submit">
                 </div>
             </form>
+                <?php if ($is_invalid): ?>
+                    <em>Invalid login<em>
+                <?php endif; ?>
             <div class="forgot-password">
                 <a href="forgot-password.html">Forgot your password?</a>
                 <a href="account-create.html">Create a new account</a>
