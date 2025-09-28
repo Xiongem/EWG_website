@@ -1,8 +1,8 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('log_errors', 'On');
-ini_set('error_log', '/path/to/php_errors.log');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('log_errors', 'On');
+// ini_set('error_log', '/path/to/php_errors.log');
 
 
 ob_start();
@@ -21,6 +21,8 @@ $user = $result->fetch_assoc();
     $fav2 = $user["fav-2"];
     $fav3 = $user["fav-3"];
     $pfp = $user["pfp"];
+
+echo $name;
 ?>
 
 <!DOCTYPE html>
