@@ -22,7 +22,7 @@ $user = $result->fetch_assoc();
     $fav3 = $user["fav-3"];
     $pfp = $user["pfp"];
 
-echo $name;
+echo $username;
 ?>
 
 <!DOCTYPE html>
