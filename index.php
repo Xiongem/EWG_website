@@ -194,7 +194,7 @@ $_SESSION["username"] = $username;
                     <div id="project-summary">
                         <p>Looks like you don't have any active projects.
                             <br><br>
-                            Click <a href="newProject.html">here</a> to get started!
+                            Click <a href="newProject.php">here</a> to get started!
                         </p>
                         <!-- <p id="summary-text">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex 
@@ -459,9 +459,6 @@ $_SESSION["username"] = $username;
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
     <script>
-        function userClick() {
-            document.getElementById('userDropdown').classList.toggle('show');
-        }
 // BADGE POPUPS
     const elementToHover1 = document.getElementById('first-daily');
     const elementToPopup1 = document.getElementById('first-daily-popup');
