@@ -13,6 +13,50 @@
     <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function checkName(){
+            var username=document.getElementById( "username" ).value;
+            
+            if(username){
+                $.ajax({
+                type: 'post',
+                url: 'php-processes/checkdata',
+                data: {
+                    username: username,
+                },
+                success: function (data) {
+                    $( '#user-availability-status' ).html(data);
+                }
+                });
+            }
+            else{
+                $( '#user-availability-status' ).html("");
+                console.log("Something went wrong")
+                return false;
+            }
+        }
+        function checkEmail(){
+            var email=document.getElementById( "email" ).value;
+            
+            if(email){
+                $.ajax({
+                type: 'post',
+                url: 'php-processes/checkdata',
+                data: {
+                    email: email,
+                },
+                success: function (data) {
+                    $( '#email-availability-status' ).html(data);
+                }
+                });
+            }
+            else{
+                $( '#email-availability-status' ).html("");
+                console.log("Something went wrong")
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="account-wrapper">
@@ -25,9 +69,10 @@
                     id="username"
                     class="input" 
                     minlength="3" 
-                    maxlength="30" 
+                    maxlength="30"
+                    onkeyup="checkName();"
                     required>
-                    <!-- onkeyup="checkName();" -->
+                    
 
                 <span id="user-availability-status"></span>
 
@@ -36,8 +81,9 @@
                     name="email" 
                     id="email" 
                     class="input"
+                    onkeyup="checkEmail();"
                     required>
-                    <!-- onkeyup="checkEmail();" -->
+                    
 
                 <span id="email-availability-status"></span>
 
@@ -58,8 +104,9 @@
                     name="confirm_pwd" 
                     id="confirm_pwd"  
                     class="input"
+                    onkeyup="check();"
                     required>
-                    <!-- onkeyup="check();" -->
+                    
                 <div class="show-password-wrapper">
                     <div class="show-password">
                         <input type="checkbox" class="checkbox" onclick="showPassword()">

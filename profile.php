@@ -1,3 +1,15 @@
+<?php
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('log_errors', 'On');
+// ini_set('error_log', '/path/to/php_errors.log');
+
+
+ob_start();
+require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
+dbConnect();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,69 +30,7 @@
 <body>
     <!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
-        <div class="logo">
-                <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
-        </div>
-        <nav>
-            <div class="nav-bar"> <!--* DESKTOP NAVIGATION--> 
-                <div class="desktop-navContent">
-                    <a href="index.html">Home</a>
-                    <div class="projects-container">
-                        <a>Projects</a>
-                        <div class="projects-dropdown"> <!--*Projects dropdown-->
-                            <a href="newProject.html">Create New Project</a>
-                            <a href="archives.html">Current/Past Projects</a>
-                        </div>
-                    </div>
-                    <a href="announcements.html">News</a>
-                    <a href="about.html">About</a>
-                    <div class="desktop-user hide" id="user-not-logged-in">
-                        <a href="login.html" id="login">Login</a>
-                    </div>
-                    <div class="desktop-user" id="user-logged-in">
-                        <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
-                        <div class="user-content"> <!--* User Dropdown-->
-                            <a href="profile.html">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
-                            <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
-                            <a href="login.html">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!--* MOBILE NAVIGATION-->
-                <div class="mobileNav" id="mobileNav">
-                    <div class="menu-icon-wrapper">
-                        <div id="menu-bar-1" class="menu-bar"></div>
-                        <div id="menu-bar-3" class="menu-bar"></div>
-                        <div id="menu-bar-3" class="menu-bar"></div>
-                    </div>
-                    <div class="navMenu slide-right close" id="navMenu"> <!--* Dropdown-->
-                        <div class="navContent">
-                            <a href="index.html">Home 
-                                <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
-                            <!-- <a href="#" id="profile-link">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a> -->
-                            <div class="projects">
-                                <a href="newProject.html">New Project 
-                                    <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
-                                <a href="archives.html">Archive 
-                                    <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
-                            </div>
-                            <a href="announcements.html">News
-                                <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
-                            <a href="about.html">About 
-                                <i class="fa fa-question" id="about-icon" alt="question mark icon"></i></a>
-                            <a href="settings.html">Settings 
-                                <i class="fa fa-gear" id="setting-icon" alt="gear icon"></i></a>
-                            <a href="login.html" id="login-link">Logout 
-                                <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="user" id="user">
-                    <a href="profile.html"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
-                    <!-- <a href="login.html"><h2>Login</h2></a> -->
-                </div>
-            </div>
-        </nav>
+        <?php makeNav() ?>
     </header>
     <div class="profile-wrapper">
         <a id="profileUpdate" href="updateProfile.html"><i class="fa fa-gear"></i></a>
@@ -231,13 +181,9 @@
                         Click on it again to remove it.</p>
         </div>
     </div>
-    <!--* FOOTER-->
-    <!--! Keep link to logo artist for permission to use-->
-    <footer id="footer">
-        <p id="copyright">&copy;2025. All rights reserved.</p>
-        <p id="logo-link">Logo by <a href="https://kohacu.com/20181205post-22321/">Kohaku!</a></p>
-        <p id="contact"><a href="contact.php">Contact Us</a></p>
-    </footer>
+    <!-- //* FOOTER-->
+    <!-- //! Keep link to logo artist for permission to use-->
+    <?php makeFooter() ?>
     <script>
         // BADGE POPUPS
     const badge1 = document.getElementById('complete-one-project');
