@@ -8,6 +8,8 @@
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+
+$username = $_SESSION["username"];
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +38,7 @@ dbConnect();
         <a id="profileUpdate" href="updateProfile.html"><i class="fa fa-gear"></i></a>
             <div class="user-container">
                 <img src="../images/dragon/dragon-0.webp" alt="profile image" id="profilePicture">
-                <h1 id="username">Username</h1>
+                <h1 id="username"><?php$username?></h1>
             </div>
             <div class="profile-container">
                 <div class="fav-container">

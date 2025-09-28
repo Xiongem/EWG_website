@@ -51,7 +51,7 @@ function makeNav() {
                         <img id="pfp" src="$pfp_set" alt="user profile picture">
                         <!-- //* User Dropdown-->
                         <div class="user-content"> 
-                            <a href="profile.php">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                            <a href="profile.php?userNAME=$username">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
                             <a href="settings.php">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
                             <a href="php-processes/logout.php">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
                         </div>
@@ -87,7 +87,7 @@ function makeNav() {
                     </div>
                 </div>
                 <div class="user" id="user">
-                    <a href="profile.html">
+                    <a href="profile.php?userNAME=$username">
                         <img id="pfp-overlay" class="pfp-overlay" src="images/hydra-slayer-overlay.webp">
                         <img id="pfp" src="$pfp_set" alt="user profile picture"></a>
                 </div>
@@ -122,7 +122,7 @@ function makeNav() {
                         <img src="$pfp_set" alt="user profile picture">
                         <!-- //* User Dropdown-->
                         <div class="user-content"> 
-                            <a href="profile.php">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                            <a href="profile.php?name=$username">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
                             <a href="settings.php">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
                             <a href="php-processes/logout.php">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
                         </div>
@@ -158,7 +158,7 @@ function makeNav() {
                     </div>
                 </div>
                 <div class="user" id="user">
-                    <a href="profile.php"><img src="$pfp_set" alt="user profile picture"></a>
+                    <a href="profile.php?name=$username"><img src="$pfp_set" alt="user profile picture"></a>
                 </div>
             </div>
         </nav>
@@ -191,7 +191,7 @@ function makeNav() {
                         <img src="$pfp_set" alt="user profile picture">
                         <!-- //* User Dropdown-->
                         <div class="user-content"> 
-                            <a href="profile.php">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                            <a href="profile.php?name=$username">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
                             <a href="settings.php">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
                             <a href="php-processes/logout.php">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
                         </div>
@@ -227,7 +227,7 @@ function makeNav() {
                     </div>
                 </div>
                 <div class="user" id="user">
-                    <a href="profile.php"><img src="$pfp_set" alt="user profile picture"></a>
+                    <a href="profile.php?name=$username"><img src="$pfp_set" alt="user profile picture"></a>
                 </div>
             </div>
         </nav>
