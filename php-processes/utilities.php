@@ -29,7 +29,7 @@ function makeNav() {
         $username = $_SESSION["username"];
             $htmlContent = <<<HTML
             <div class="logo">
-                <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
+                <img src="images/comp-cat-beta.webp" alt="cat using computer logo">
         </div>
         <nav>
         <!-- //* DESKTOP NAVIGATION--> 
@@ -48,7 +48,7 @@ function makeNav() {
                     <a href="about.php">About</a>
                     <div class="desktop-user" id="user-logged-in">
                         <img id="pfp-overlay" class="pfp-overlay"src="images/hydra-slayer-overlay.webp">
-                        <img id="pfp" src="../images/dragon/dragon-0.webp" alt="user profile picture">
+                        <img id="pfp" src="$pfp_set" alt="user profile picture">
                         <!-- //* User Dropdown-->
                         <div class="user-content"> 
                             <a href="profile.php">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
@@ -89,7 +89,7 @@ function makeNav() {
                 <div class="user" id="user">
                     <a href="profile.html">
                         <img id="pfp-overlay" class="pfp-overlay" src="images/hydra-slayer-overlay.webp">
-                        <img id="pfp" src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
+                        <img id="pfp" src="$pfp_set" alt="user profile picture"></a>
                 </div>
             </div>
         </nav>
@@ -101,7 +101,7 @@ function makeNav() {
     $username = $_SESSION["username"];
         $htmlContent = <<<HTML
         <div class="logo">
-                <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
+                <img src="images/comp-cat-beta.webp" alt="cat using computer logo">
         </div>
         <nav>
         <!-- //* DESKTOP NAVIGATION--> 
@@ -119,7 +119,7 @@ function makeNav() {
                     <a href="announcements.php">News</a>
                     <a href="about.php">About</a>
                     <div class="desktop-user" id="user-logged-in">
-                        <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
+                        <img src="$pfp_set" alt="user profile picture">
                         <!-- //* User Dropdown-->
                         <div class="user-content"> 
                             <a href="profile.php">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
@@ -158,7 +158,7 @@ function makeNav() {
                     </div>
                 </div>
                 <div class="user" id="user">
-                    <a href="profile.php"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
+                    <a href="profile.php"><img src="$pfp_set" alt="user profile picture"></a>
                 </div>
             </div>
         </nav>
@@ -170,7 +170,7 @@ function makeNav() {
     $username = $_SESSION["username"];
         $htmlContent = <<<HTML
         <div class="logo">
-                <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
+                <img src="images/comp-cat-beta.webp" alt="cat using computer logo">
         </div>
         <nav>
         <!-- //* DESKTOP NAVIGATION--> 
@@ -188,7 +188,7 @@ function makeNav() {
                     <a href="announcements.php">News</a>
                     <a href="about.php">About</a>
                     <div class="desktop-user" id="user-logged-in">
-                        <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
+                        <img src="$pfp_set" alt="user profile picture">
                         <!-- //* User Dropdown-->
                         <div class="user-content"> 
                             <a href="profile.php">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
@@ -227,7 +227,7 @@ function makeNav() {
                     </div>
                 </div>
                 <div class="user" id="user">
-                    <a href="profile.php"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
+                    <a href="profile.php"><img src="$pfp_set" alt="user profile picture"></a>
                 </div>
             </div>
         </nav>
