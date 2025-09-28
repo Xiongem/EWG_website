@@ -30,7 +30,7 @@ if ($_SESSION["user_id"]) {
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
 
-echo $_SESSION["pfp"];
+echo $_SESSION["username"];
 ?>
 
 <!DOCTYPE html>
