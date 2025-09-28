@@ -9,7 +9,18 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
-$username = $_SESSION["username"];
+$name = $_GET["name"];
+
+$sql = "SELECT * FROM users WHERE username='$name'";
+$result = $_SESSION["conn"]->query($sql);
+$user = $result->fetch_assoc();
+    $username = $user["username"];
+    $userID = $user["id"];
+    $bio = $user["bio"];
+    $fav1 = $user["fav-1"];
+    $fav2 = $user["fav-2"];
+    $fav3 = $user["fav-3"];
+    $pfp = $user["pfp"];
 ?>
 
 <!DOCTYPE html>
@@ -35,23 +46,21 @@ $username = $_SESSION["username"];
         <?php makeNav() ?>
     </header>
     <div class="profile-wrapper">
-        <a id="profileUpdate" href="updateProfile.html"><i class="fa fa-gear"></i></a>
+        <a id="profileUpdate" href="updateProfile.php"><i class="fa fa-gear"></i></a>
             <div class="user-container">
                 <img src="../images/dragon/dragon-0.webp" alt="profile image" id="profilePicture">
-                <h1 id="username"><?php$username?></h1>
+                <h1 id="username"><?php $name ?></h1>
             </div>
             <div class="profile-container">
                 <div class="fav-container">
                     <h2>Favs:</h2>
-                    <p>Favorite thing number 1</p>
-                    <p>Favorite thing number 2</p>
-                    <p>Favorite thing number 2</p>
+                    <p><?php $fav1 ?></p>
+                    <p><?php $fav2 ?></p>
+                    <p><?php $fav3 ?></p>
                 </div>
                 <div class="bio-container">
                     <h2>Bio:</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex 
-                        sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis 
-                    </p>
+                    <p> <?php $bio ?> </p>
                 </div>
             </div>
     </div>
