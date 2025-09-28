@@ -35,24 +35,24 @@ function makeNav() {
         <!-- //* DESKTOP NAVIGATION--> 
             <div class="nav-bar">
                 <div class="desktop-navContent">
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                     <div class="projects-container">
                         <a>Projects</a>
                         <!-- //* Projects dropdown-->
                         <div class="projects-dropdown"> 
-                            <a href="newProject.html">Create New Project</a>
-                            <a href="archives.html">Current/Past Projects</a>
+                            <a href="newProject.php">Create New Project</a>
+                            <a href="archives.php">Current/Past Projects</a>
                         </div>
                     </div>
-                    <a href="announcements.html">News</a>
-                    <a href="about.html">About</a>
+                    <a href="announcements.php">News</a>
+                    <a href="about.php">About</a>
                     <div class="desktop-user" id="user-logged-in">
                         <img id="pfp-overlay" class="pfp-overlay"src="images/hydra-slayer-overlay.webp">
                         <img id="pfp" src="../images/dragon/dragon-0.webp" alt="user profile picture">
                         <!-- //* User Dropdown-->
                         <div class="user-content"> 
-                            <a href="profile.html">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
-                            <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
+                            <a href="profile.php">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                            <a href="settings.php">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
                             <a href="php-processes/logout.php">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
                         </div>
                     </div>
@@ -67,19 +67,19 @@ function makeNav() {
                     <!-- //* Dropdown-->
                     <div class="navMenu slide-right close" id="navMenu"> 
                         <div class="navContent">
-                            <a href="index.html">Home 
+                            <a href="index.php">Home 
                                 <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
                             <div class="projects">
-                                <a href="newProject.html">New Project 
+                                <a href="newProject.php">New Project 
                                     <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
-                                <a href="archives.html">Archive 
+                                <a href="archives.php">Archive 
                                     <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
                             </div>
-                            <a href="announcements.html">News
+                            <a href="announcements.php">News
                                 <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
-                            <a href="about.html">About 
+                            <a href="about.php">About 
                                 <i class="fa fa-question" id="about-icon" alt="question mark icon"></i></a>
-                            <a href="settings.html">Settings 
+                            <a href="settings.php">Settings 
                                 <i class="fa fa-gear" id="setting-icon" alt="gear icon"></i></a>
                             <a href="php-processes/logout.php" id="login-link">Logout 
                                 <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
@@ -107,23 +107,23 @@ function makeNav() {
         <!-- //* DESKTOP NAVIGATION--> 
             <div class="nav-bar">
                 <div class="desktop-navContent">
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                     <div class="projects-container">
                         <a>Projects</a>
                         <!-- //* Projects dropdown-->
                         <div class="projects-dropdown"> 
-                            <a href="newProject.html">Create New Project</a>
-                            <a href="archives.html">Current/Past Projects</a>
+                            <a href="newProject.php">Create New Project</a>
+                            <a href="archives.php">Current/Past Projects</a>
                         </div>
                     </div>
-                    <a href="announcements.html">News</a>
-                    <a href="about.html">About</a>
+                    <a href="announcements.php">News</a>
+                    <a href="about.php">About</a>
                     <div class="desktop-user" id="user-logged-in">
                         <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
                         <!-- //* User Dropdown-->
                         <div class="user-content"> 
-                            <a href="profile.html">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
-                            <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
+                            <a href="profile.php">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                            <a href="settings.php">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
                             <a href="php-processes/logout.php">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
                         </div>
                     </div>
@@ -138,19 +138,19 @@ function makeNav() {
                     <!-- //* Dropdown-->
                     <div class="navMenu slide-right close" id="navMenu"> 
                         <div class="navContent">
-                            <a href="index.html">Home 
+                            <a href="index.php">Home 
                                 <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
                             <div class="projects">
-                                <a href="newProject.html">New Project 
+                                <a href="newProject.php">New Project 
                                     <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
-                                <a href="archives.html">Archive 
+                                <a href="archives.php">Archive 
                                     <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
                             </div>
-                            <a href="announcements.html">News
+                            <a href="announcements.php">News
                                 <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
-                            <a href="about.html">About 
+                            <a href="about.php">About 
                                 <i class="fa fa-question" id="about-icon" alt="question mark icon"></i></a>
-                            <a href="settings.html">Settings 
+                            <a href="settings.php">Settings 
                                 <i class="fa fa-gear" id="setting-icon" alt="gear icon"></i></a>
                             <a href="php-processes/logout.php" id="login-link">Logout 
                                 <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
@@ -158,7 +158,7 @@ function makeNav() {
                     </div>
                 </div>
                 <div class="user" id="user">
-                    <a href="profile.html"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
+                    <a href="profile.php"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
                 </div>
             </div>
         </nav>
@@ -176,23 +176,23 @@ function makeNav() {
         <!-- //* DESKTOP NAVIGATION--> 
             <div class="nav-bar">
                 <div class="desktop-navContent">
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                     <div class="projects-container">
                         <a>Projects</a>
                         <!-- //* Projects dropdown-->
                         <div class="projects-dropdown"> 
-                            <a href="newProject.html">Create New Project</a>
-                            <a href="archives.html">Current/Past Projects</a>
+                            <a href="newProject.php">Create New Project</a>
+                            <a href="archives.php">Current/Past Projects</a>
                         </div>
                     </div>
-                    <a href="announcements.html">News</a>
-                    <a href="about.html">About</a>
+                    <a href="announcements.php">News</a>
+                    <a href="about.php">About</a>
                     <div class="desktop-user" id="user-logged-in">
                         <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
                         <!-- //* User Dropdown-->
                         <div class="user-content"> 
-                            <a href="profile.html">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
-                            <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
+                            <a href="profile.php">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                            <a href="settings.php">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
                             <a href="php-processes/logout.php">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
                         </div>
                     </div>
@@ -207,19 +207,19 @@ function makeNav() {
                     <!-- //* Dropdown-->
                     <div class="navMenu slide-right close" id="navMenu"> 
                         <div class="navContent">
-                            <a href="index.html">Home 
+                            <a href="index.php">Home 
                                 <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
                             <div class="projects">
-                                <a href="newProject.html">New Project 
+                                <a href="newProject.php">New Project 
                                     <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
-                                <a href="archives.html">Archive 
+                                <a href="archives.php">Archive 
                                     <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
                             </div>
-                            <a href="announcements.html">News
+                            <a href="announcements.php">News
                                 <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
-                            <a href="about.html">About 
+                            <a href="about.php">About 
                                 <i class="fa fa-question" id="about-icon" alt="question mark icon"></i></a>
-                            <a href="settings.html">Settings 
+                            <a href="settings.php">Settings 
                                 <i class="fa fa-gear" id="setting-icon" alt="gear icon"></i></a>
                             <a href="php-processes/logout.php" id="login-link">Logout 
                                 <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
@@ -227,7 +227,7 @@ function makeNav() {
                     </div>
                 </div>
                 <div class="user" id="user">
-                    <a href="profile.html"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
+                    <a href="profile.php"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
                 </div>
             </div>
         </nav>
@@ -243,11 +243,11 @@ function makeNav() {
         <!-- //* DESKTOP NAVIGATION--> 
             <div class="nav-bar"> 
                 <div class="desktop-navContent">
-                    <a href="index.html">Home</a>
-                    <a href="announcements.html">News</a>
-                    <a href="about.html">About</a>
+                    <a href="index.php">Home</a>
+                    <a href="announcements.php">News</a>
+                    <a href="about.php">About</a>
                     <div class="desktop-user" id="user-not-logged-in">
-                        <a href="login.html" id="login">Login</a>
+                        <a href="login.php" id="login">Login</a>
                     </div>
                 </div>
             <!-- //* MOBILE NAVIGATION-->
@@ -260,17 +260,17 @@ function makeNav() {
                     <!-- //* Dropdown-->
                     <div class="navMenu slide-right close" id="navMenu"> 
                         <div class="navContent">
-                            <a href="index.html">Home 
+                            <a href="index.php">Home 
                                 <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
-                            <a href="announcements.html">News
+                            <a href="announcements.php">News
                                 <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
-                            <a href="about.html">About 
+                            <a href="about.php">About 
                                 <i class="fa fa-question" id="about-icon" alt="question mark icon"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="user" id="user">
-                    <a href="login.html"><h2>Login</h2></a>
+                    <a href="login.php"><h2>Login</h2></a>
                 </div>
             </div>
         </nav>
@@ -288,7 +288,7 @@ function makeFooter() {
             <footer id="footer">
                 <p id="copyright">&copy;$todayDate. All rights reserved.</p>
                 <p id="logo-link">Logo by <a href="https://kohacu.com/20181205post-22321/">Kohaku!</a></p>
-                <p id="contact"><a href="contact.html">Contact Us</a></p>
+                <p id="contact"><a href="contact.php">Contact Us</a></p>
             </footer>
         HTML;
             echo $htmlContent;
