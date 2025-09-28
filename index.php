@@ -22,7 +22,7 @@ if ($_SESSION["user_id"]) {
 
         //* Setting pfp
         if ($pfp) {
-            $pfp_set = $php;
+            $pfp_set = $pfp;
         } else {
             $pfp_set = "images/pfp-icon.webp";
         }
@@ -30,7 +30,7 @@ if ($_SESSION["user_id"]) {
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
 
-echo $_SESSION["username"];
+echo $_SESSION["pfp"];
 ?>
 
 <!DOCTYPE html>
