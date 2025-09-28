@@ -105,11 +105,11 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     <div class="account-content">
                         <div class="form-content">
                             <label>Change Your Username:</label>
-                            <input type="text" name="username" id="username" value="<?php$username?>">
+                            <input type="text" name="username" id="username" value="<?=$username?>">
                         </div>
                         <div class="form-content">
                             <label>Change Your Email Address:</label>
-                            <input type="email" name="email" id="email" value="<?php$email?>">
+                            <input type="email" name="email" id="email" value="<?=$email?>">
                         </div>
                         <a href="">Reset Your Password</a>
                     </div>
