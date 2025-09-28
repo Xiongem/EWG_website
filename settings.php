@@ -8,6 +8,7 @@
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+forceLogin();
 ?>
 
 <!DOCTYPE html>
