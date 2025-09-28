@@ -9,6 +9,22 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 forceLogin();
+
+$userID = htmlspecialchars($_SESSION["user_id"]);
+
+    $sql = "SELECT * FROM users WHERE id=$userID";
+    $result = $_SESSION["conn"]->query($sql);
+    $user = $result->fetch_assoc();
+        $pfp = $user["pfp"];
+        $username = $user["username"];
+        $email = $user["email"];
+
+        //* Setting pfp
+        if ($pfp) {
+            $pfp_set = $pfp;
+        } else {
+            $pfp_set = "images/pfp-icon.webp";
+        }
 ?>
 
 <!DOCTYPE html>
@@ -65,7 +81,7 @@ forceLogin();
             <div id="appearance" class="tabcontent active">
                 <div class="appearance-contents">
                     <div class="pfp-change-wrapper">
-                        <img id="change-pfp-image" src="../images/pfp-icon.webp">
+                        <img id="change-pfp-image" src="<?=$pfp_set?>">
                         <a class="update-button">Update Profile Picture</a>
                     </div>
                     <div class="theme-change-wrapper">
@@ -89,11 +105,11 @@ forceLogin();
                     <div class="account-content">
                         <div class="form-content">
                             <label>Change Your Username:</label>
-                            <input type="text" name="username" id="username">
+                            <input type="text" name="username" id="username" value="<?php$username?>">
                         </div>
                         <div class="form-content">
                             <label>Change Your Email Address:</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" value="<?php$email?>">
                         </div>
                         <a href="">Reset Your Password</a>
                     </div>
