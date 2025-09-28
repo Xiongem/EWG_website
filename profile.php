@@ -28,8 +28,6 @@ $user = $result->fetch_assoc();
         } else {
             $pfp_set = "images/pfp-icon.webp";
         }
-
-echo $bio;
 ?>
 
 <!DOCTYPE html>
