@@ -56,9 +56,9 @@ echo $bio;
             <div class="profile-container">
                 <div class="fav-container">
                     <h2>Favs:</h2>
-                    <p><?php $fav1 ?></p>
-                    <p><?php $fav2 ?></p>
-                    <p><?php $fav3 ?></p>
+                    <p><?php echo $fav1 ?></p>
+                    <p><?php echo $fav2 ?></p>
+                    <p><?php echo $fav3 ?></p>
                 </div>
                 <div class="bio-container">
                     <h2>Bio:</h2>
