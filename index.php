@@ -26,6 +26,16 @@ if ($_SESSION["user_id"]) {
         } else {
             $pfp_set = "images/pfp-icon.webp";
         }
+
+    //* Pull active project data
+    $sql = "SELECT * FROM current_project WHERE id=$userID AND current_state='current'";
+    $result = $_SESSION["conn"]->query($sql);
+    $project = $result->fetch_assoc();
+        echo $project
+} 
+//* User is not logged in
+else {
+    $pfp_set = "images/pfp-icon.webp";
 }
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
