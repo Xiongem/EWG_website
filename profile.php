@@ -51,7 +51,7 @@ echo $bio;
         <a id="profileUpdate" href="updateProfile.php"><i class="fa fa-gear"></i></a>
             <div class="user-container">
                 <img src="../images/dragon/dragon-0.webp" alt="profile image" id="profilePicture">
-                <h1 id="username"><?php $username ?></h1>
+                <h1 id="username"><?php echo $username ?></h1>
             </div>
             <div class="profile-container">
                 <div class="fav-container">
