@@ -8,6 +8,27 @@
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+
+//* If user is logged in
+if ($_SESSION["user_id"]) {
+    $userID = htmlspecialchars($_SESSION["user_id"]);
+
+    //* Pull User Info
+    $sql = "SELECT * FROM users WHERE id=$userID";
+    $result = $_SESSION["conn"]->query($sql);
+    $user = $result->fetch_assoc();
+        $pfp = $user["pfp"];
+        $username = $user["username"];
+
+        //* Setting pfp
+        if ($pfp) {
+            $pfp_set = $php;
+        } else {
+            $pfp_set = "images/pfp-icon.webp";
+        }
+}
+$_SESSION["pfp"] = $pfp_set;
+$_SESSION["username"] = $username;
 ?>
 
 <!DOCTYPE html>
