@@ -57,19 +57,19 @@ echo $bio;
     <div class="profile-wrapper">
         <a id="profileUpdate" href="updateProfile.php"><i class="fa fa-gear"></i></a>
             <div class="user-container">
-                <img src="<?php $pfp_set ?>" alt="profile image" id="profilePicture">
-                <h1 id="username"><?php echo $username ?></h1>
+                <img src="<?=$pfp_set?>" alt="profile image" id="profilePicture">
+                <h1 id="username"><?=$username?></h1>
             </div>
             <div class="profile-container">
                 <div class="fav-container">
                     <h2>Favs:</h2>
-                    <p><?php echo $fav1 ?></p>
-                    <p><?php echo $fav2 ?></p>
-                    <p><?php echo $fav3 ?></p>
+                    <p><?=$fav1?></p>
+                    <p><?=$fav2?></p>
+                    <p><?=$fav3?></p>
                 </div>
                 <div class="bio-container">
                     <h2>Bio:</h2>
-                    <p> <?php echo $bio ?> </p>
+                    <p> <?=$bio?> </p>
                 </div>
             </div>
     </div>
