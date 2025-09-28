@@ -413,6 +413,14 @@ a {
         width: 3.5em;
         height: fit-content;
     }
+    #pfp {
+        position: relative;
+    }
+    #pfp-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
     .userDropdown {
         width: 20%;
     }

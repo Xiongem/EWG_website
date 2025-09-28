@@ -19,3 +19,277 @@ function forceLogin() {
         exit();
     }
 }
+
+
+//* NAV MENU-BAR
+function makeNav() {
+//* User is logged in and has the hydra slayer badge
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "obtained") {
+        $pfp_set = $_SESSION["pfp"];
+        $username = $_SESSION["username"];
+            $htmlContent = <<<HTML
+            <div class="logo">
+                <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
+        </div>
+        <nav>
+        <!-- //* DESKTOP NAVIGATION--> 
+            <div class="nav-bar">
+                <div class="desktop-navContent">
+                    <a href="index.html">Home</a>
+                    <div class="projects-container">
+                        <a>Projects</a>
+                        <!-- //* Projects dropdown-->
+                        <div class="projects-dropdown"> 
+                            <a href="newProject.html">Create New Project</a>
+                            <a href="archives.html">Current/Past Projects</a>
+                        </div>
+                    </div>
+                    <a href="announcements.html">News</a>
+                    <a href="about.html">About</a>
+                    <div class="desktop-user" id="user-logged-in">
+                        <img id="pfp-overlay" class="pfp-overlay"src="images/hydra-slayer-overlay.webp">
+                        <img id="pfp" src="../images/dragon/dragon-0.webp" alt="user profile picture">
+                        <!-- //* User Dropdown-->
+                        <div class="user-content"> 
+                            <a href="profile.html">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                            <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
+                            <a href="php-processes/logout.php">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            <!-- //* MOBILE NAVIGATION-->
+                <div class="mobileNav" id="mobileNav">
+                    <div class="menu-icon-wrapper">
+                        <div id="menu-bar-1" class="menu-bar"></div>
+                        <div id="menu-bar-3" class="menu-bar"></div>
+                        <div id="menu-bar-3" class="menu-bar"></div>
+                    </div>
+                    <!-- //* Dropdown-->
+                    <div class="navMenu slide-right close" id="navMenu"> 
+                        <div class="navContent">
+                            <a href="index.html">Home 
+                                <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
+                            <div class="projects">
+                                <a href="newProject.html">New Project 
+                                    <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
+                                <a href="archives.html">Archive 
+                                    <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
+                            </div>
+                            <a href="announcements.html">News
+                                <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
+                            <a href="about.html">About 
+                                <i class="fa fa-question" id="about-icon" alt="question mark icon"></i></a>
+                            <a href="settings.html">Settings 
+                                <i class="fa fa-gear" id="setting-icon" alt="gear icon"></i></a>
+                            <a href="php-processes/logout.php" id="login-link">Logout 
+                                <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="user" id="user">
+                    <a href="profile.html">
+                        <img id="pfp-overlay" class="pfp-overlay" src="images/hydra-slayer-overlay.webp">
+                        <img id="pfp" src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
+                </div>
+            </div>
+        </nav>
+        HTML;
+            echo $htmlContent;
+//* User is logged in but hydra slayer badge is locked
+} elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "locked"){
+    $pfp_set = $_SESSION["pfp"];
+    $username = $_SESSION["username"];
+        $htmlContent = <<<HTML
+        <div class="logo">
+                <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
+        </div>
+        <nav>
+        <!-- //* DESKTOP NAVIGATION--> 
+            <div class="nav-bar">
+                <div class="desktop-navContent">
+                    <a href="index.html">Home</a>
+                    <div class="projects-container">
+                        <a>Projects</a>
+                        <!-- //* Projects dropdown-->
+                        <div class="projects-dropdown"> 
+                            <a href="newProject.html">Create New Project</a>
+                            <a href="archives.html">Current/Past Projects</a>
+                        </div>
+                    </div>
+                    <a href="announcements.html">News</a>
+                    <a href="about.html">About</a>
+                    <div class="desktop-user" id="user-logged-in">
+                        <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
+                        <!-- //* User Dropdown-->
+                        <div class="user-content"> 
+                            <a href="profile.html">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                            <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
+                            <a href="php-processes/logout.php">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            <!-- //* MOBILE NAVIGATION-->
+                <div class="mobileNav" id="mobileNav">
+                    <div class="menu-icon-wrapper">
+                        <div id="menu-bar-1" class="menu-bar"></div>
+                        <div id="menu-bar-3" class="menu-bar"></div>
+                        <div id="menu-bar-3" class="menu-bar"></div>
+                    </div>
+                    <!-- //* Dropdown-->
+                    <div class="navMenu slide-right close" id="navMenu"> 
+                        <div class="navContent">
+                            <a href="index.html">Home 
+                                <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
+                            <div class="projects">
+                                <a href="newProject.html">New Project 
+                                    <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
+                                <a href="archives.html">Archive 
+                                    <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
+                            </div>
+                            <a href="announcements.html">News
+                                <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
+                            <a href="about.html">About 
+                                <i class="fa fa-question" id="about-icon" alt="question mark icon"></i></a>
+                            <a href="settings.html">Settings 
+                                <i class="fa fa-gear" id="setting-icon" alt="gear icon"></i></a>
+                            <a href="php-processes/logout.php" id="login-link">Logout 
+                                <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="user" id="user">
+                    <a href="profile.html"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
+                </div>
+            </div>
+        </nav>
+    HTML;
+        echo $htmlContent;
+//* User is logged in but nothing is in the database about the hydra slayer badge
+} elseif(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+    $pfp_set = $_SESSION["pfp"];
+    $username = $_SESSION["username"];
+        $htmlContent = <<<HTML
+        <div class="logo">
+                <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
+        </div>
+        <nav>
+        <!-- //* DESKTOP NAVIGATION--> 
+            <div class="nav-bar">
+                <div class="desktop-navContent">
+                    <a href="index.html">Home</a>
+                    <div class="projects-container">
+                        <a>Projects</a>
+                        <!-- //* Projects dropdown-->
+                        <div class="projects-dropdown"> 
+                            <a href="newProject.html">Create New Project</a>
+                            <a href="archives.html">Current/Past Projects</a>
+                        </div>
+                    </div>
+                    <a href="announcements.html">News</a>
+                    <a href="about.html">About</a>
+                    <div class="desktop-user" id="user-logged-in">
+                        <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
+                        <!-- //* User Dropdown-->
+                        <div class="user-content"> 
+                            <a href="profile.html">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                            <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
+                            <a href="php-processes/logout.php">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            <!-- //* MOBILE NAVIGATION-->
+                <div class="mobileNav" id="mobileNav">
+                    <div class="menu-icon-wrapper">
+                        <div id="menu-bar-1" class="menu-bar"></div>
+                        <div id="menu-bar-3" class="menu-bar"></div>
+                        <div id="menu-bar-3" class="menu-bar"></div>
+                    </div>
+                    <!-- //* Dropdown-->
+                    <div class="navMenu slide-right close" id="navMenu"> 
+                        <div class="navContent">
+                            <a href="index.html">Home 
+                                <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
+                            <div class="projects">
+                                <a href="newProject.html">New Project 
+                                    <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
+                                <a href="archives.html">Archive 
+                                    <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
+                            </div>
+                            <a href="announcements.html">News
+                                <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
+                            <a href="about.html">About 
+                                <i class="fa fa-question" id="about-icon" alt="question mark icon"></i></a>
+                            <a href="settings.html">Settings 
+                                <i class="fa fa-gear" id="setting-icon" alt="gear icon"></i></a>
+                            <a href="php-processes/logout.php" id="login-link">Logout 
+                                <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="user" id="user">
+                    <a href="profile.html"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
+                </div>
+            </div>
+        </nav>
+    HTML;
+        echo $htmlContent;
+//* User is not logged in
+} else {
+    $htmlContent = <<<HTML
+        <div class="logo">
+                <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
+        </div>
+        <nav>
+        <!-- //* DESKTOP NAVIGATION--> 
+            <div class="nav-bar"> 
+                <div class="desktop-navContent">
+                    <a href="index.html">Home</a>
+                    <a href="announcements.html">News</a>
+                    <a href="about.html">About</a>
+                    <div class="desktop-user" id="user-not-logged-in">
+                        <a href="login.html" id="login">Login</a>
+                    </div>
+                </div>
+            <!-- //* MOBILE NAVIGATION-->
+                <div class="mobileNav" id="mobileNav">
+                    <div class="menu-icon-wrapper">
+                        <div id="menu-bar-1" class="menu-bar"></div>
+                        <div id="menu-bar-3" class="menu-bar"></div>
+                        <div id="menu-bar-3" class="menu-bar"></div>
+                    </div>
+                    <!-- //* Dropdown-->
+                    <div class="navMenu slide-right close" id="navMenu"> 
+                        <div class="navContent">
+                            <a href="index.html">Home 
+                                <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
+                            <a href="announcements.html">News
+                                <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
+                            <a href="about.html">About 
+                                <i class="fa fa-question" id="about-icon" alt="question mark icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="user" id="user">
+                    <a href="login.html"><h2>Login</h2></a>
+                </div>
+            </div>
+        </nav>
+    HTML;
+        echo $htmlContent;
+    }
+}
+
+
+//* FOOTER
+//Make sure to keep the credit to Kohaku for the use of the cat computer logo
+function makeFooter() {
+    $todayDate = date("Y");
+        $htmlContent = <<<HTML
+            <footer id="footer">
+                <p id="copyright">&copy;$todayDate. All rights reserved.</p>
+                <p id="logo-link">Logo by <a href="https://kohacu.com/20181205post-22321/">Kohaku!</a></p>
+                <p id="contact"><a href="contact.html">Contact Us</a></p>
+            </footer>
+        HTML;
+            echo $htmlContent;
+}

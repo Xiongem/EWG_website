@@ -13,11 +13,10 @@
     <link rel="stylesheet" href="mf-css/progressBar.css">
     <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="body">
-    <!--* POPUP FOR CHOOSING ACTIVE PROJECTS-->
+    <!-- //* POPUP FOR CHOOSING ACTIVE PROJECTS-->
     <div class="project-select-popup-wrapper" id="project-popup">
         <div class="project-select-popup"><div class="close-wrapper">
                 <i class="fa fa-close" onclick="hideProjectPopup()"></i>
@@ -82,13 +81,6 @@
             </div>
         </div>
     </div>
-    <!--* SETTINGS POPUP-->
-    <!-- <div class="settings-popup-wrapper" id="settings-popup">
-        <div class="settings-popup">
-
-        </div>
-    </div> -->
-    <!--* WORD COUNT UPDATE POPUP-->
     <div class="count-update-wrapper" id="count-update-popup">
         <div class="count-update-popup">
             <div class="close-wrapper">
@@ -112,90 +104,16 @@
             </form>
         </div>
     </div>
-    <!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
+    <!-- //* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
-        <div class="logo">
-                <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
-        </div>
-        <nav>
-            <div class="nav-bar"> <!--* DESKTOP NAVIGATION--> 
-                <div class="desktop-navContent">
-                    <a href="index.html">Home</a>
-                    <div class="projects-container">
-                        <a>Projects</a>
-                        <div class="projects-dropdown"> <!--*Projects dropdown-->
-                            <a href="newProject.html">Create New Project</a>
-                            <a href="archives.html">Current/Past Projects</a>
-                        </div>
-                    </div>
-                    <a href="announcements.html">News</a>
-                    <a href="about.html">About</a>
-                    <div class="desktop-user hide" id="user-not-logged-in">
-                        <a href="login.html" id="login">Login</a>
-                    </div>
-                    <div class="desktop-user" id="user-logged-in">
-                        <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
-                        <div class="user-content"> <!--* User Dropdown-->
-                            <a href="profile.html">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
-                            <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
-                            <a href="php-processes/logout.php">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!--* MOBILE NAVIGATION-->
-                <div class="mobileNav" id="mobileNav">
-                    <div class="menu-icon-wrapper">
-                        <div id="menu-bar-1" class="menu-bar"></div>
-                        <div id="menu-bar-3" class="menu-bar"></div>
-                        <div id="menu-bar-3" class="menu-bar"></div>
-                    </div>
-                    <div class="navMenu slide-right close" id="navMenu"> <!--* Dropdown-->
-                        <div class="navContent">
-                            <a href="index.html">Home 
-                                <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
-                            <!-- <a href="#" id="profile-link">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a> -->
-                            <div class="projects">
-                                <a href="newProject.html">New Project 
-                                    <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
-                                <a href="archives.html">Archive 
-                                    <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
-                            </div>
-                            <a href="announcements.html">News
-                                <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
-                            <a href="about.html">About 
-                                <i class="fa fa-question" id="about-icon" alt="question mark icon"></i></a>
-                            <a href="settings.html">Settings 
-                                <i class="fa fa-gear" id="setting-icon" alt="gear icon"></i></a>
-                            <a href="php-processes/logout.php" id="login-link">Logout 
-                                <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="user" id="user">
-                    <a href="profile.html"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
-                    <!-- <a href="login.html"><h2>Login</h2></a> -->
-                </div>
-            </div>
-        </nav>
+        <?php makeNav() ?>
     </header>
-    <!--* Banner for if user is not logged in-->
-    <!--! Removed bc unneeded-->
-    <!-- <div class="container">
-        <div class="not-logged-in hide" id="not-logged-in">
-            <p>Psst, hey you. 
-            <br>
-            If you already have an account just click the Login link above. 
-            <br>    
-            If you're new, click <a href="account-create.html">here</a> to sign up and 
-                start earning badges!</p>
-        </div>
-    </div> -->
-    <!--* BUTTON FOR SELECTING ACTIVE PROJECT TO SEE -->
+    <!-- //* BUTTON FOR SELECTING ACTIVE PROJECT TO SEE -->
     <div class="project-select-wrapper">
         <div class="project-select" onclick="showProjectPopup()">Switch Project <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i>
         </div>
     </div>
-    <!--* PROGRESS BAR-->
+    <!-- //* PROGRESS BAR-->
     <div class="pb-wrapper">
         <div class="pb-background">
             <h1>Project Progress</h1>
@@ -222,12 +140,11 @@
                 </div>
             </div>
             <div class="added">
-                <!-- <span class="fa fa-gear" id="edit-pb" onclick="showProjectSettings()"></span> -->
                 <span class="fa fa-plus" id="updateCount" onclick="showUpdateWords()"></span>
             </div>
         </div>
     </div>
-    <!--* CURRENT PROJECT OVERVIEW AND INFO-->
+    <!-- //* CURRENT PROJECT OVERVIEW AND INFO-->
     <div class="main-wrapper">
         <div class="current-project-wrapper">
             <div class="current-project-container">
@@ -259,14 +176,15 @@
                 </div>
             </div>
         </div>
-        <!--* BADGES-->
+        <!-- //* BADGES-->
         <div class="badge-container">
             <h1 id="badge-title">Badges</h1>
             <h4 class="instruction">These badges are earned automatically</h4>
+        <!-- //* Automatic Badges -->
             <div class="auto-badges">
-                <!--* Row One -->
+            <!-- //* Row One -->
                 <div class="auto-row rows">
-                    <!--* Quarter Quomplete-->
+                    <!-- //* Quarter Quomplete-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/quarter-quomplete-mono.webp" id="quarter-quomplete" class="badge pulse">
                         <div class="badgeToPopup" id="quarter-quomplete-popup">
@@ -274,7 +192,7 @@
                             <p>Reached the 25% mark! That's a quarter of the way there!</p>
                         </div>
                     </div>
-                    <!--* Half Way-->
+                    <!-- //* Half Way-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/half-way-mono.webp" id="half-way" class="badge pulse">
                         <div class="badgeToPopup" id="half-way-popup">
@@ -282,7 +200,7 @@
                             <p>Reached the 50% mark<br>on your current project.<br>Good job!</p>
                         </div>
                     </div>
-                    <!--* All Downhill-->
+                    <!-- //* All Downhill-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/all-downhill-mono.webp" id="all-downhill" class="badge pulse">
                         <div class="badgeToPopup" id="all-downhill-popup">
@@ -290,7 +208,7 @@
                             <p>Reached 75%!<br>You're so close!</p>
                         </div>
                     </div>
-                    <!--* Cross Finish-->
+                    <!-- //* Cross Finish-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/cross-finish-mono.webp" id="cross-finish" class="badge pulse">
                         <div class="badgeToPopup" id="cross-finish-popup">
@@ -299,9 +217,9 @@
                         </div>
                     </div>
                 </div>
-                <!--* Row Two -->
+            <!-- //* Row Two -->
                 <div class="auto-row rows">
-                    <!--* 2 Day Streak-->
+                    <!-- //* 2 Day Streak-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/streak-two-mono.webp" id="streak-two" class="badge pulse">
                         <div class="badgeToPopup" id="streak-two-popup">
@@ -309,7 +227,7 @@
                             <p>The start of a beautiful streak</p>
                         </div>
                     </div>
-                    <!--* 3 Day Streak-->
+                    <!-- //* 3 Day Streak-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/streak-three-mono.webp" id="streak-three" class="badge pulse">
                         <div class="badgeToPopup" id="streak-three-popup">
@@ -317,7 +235,7 @@
                             <p>Third time's the charm</p>
                         </div>
                     </div>
-                    <!--* 7 Day Streak-->
+                    <!-- //* 7 Day Streak-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/streak-seven-mono.webp" id="streak-seven" class="badge pulse">
                         <div class="badgeToPopup" id="streak-seven-popup">
@@ -325,7 +243,7 @@
                             <p>One whole week!</p>
                         </div>
                     </div>
-                    <!--* 14 Day Streak-->
+                    <!-- //* 14 Day Streak-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/streak-fourteen-mono.webp" id="streak-fourteen" class="badge pulse">
                         <div class="badgeToPopup" id="streak-fourteen-popup">
@@ -333,7 +251,7 @@
                             <p>TWO whole weeks!!</p>
                         </div>
                     </div>
-                    <!--* 21 Day Streak-->
+                    <!-- //* 21 Day Streak-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/streak-twentyOne-mono.webp" id="streak-twentyOne" class="badge pulse">
                         <div class="badgeToPopup" id="streak-twentyOne-popup">
@@ -342,9 +260,9 @@
                         </div>
                     </div>
                 </div>
-                <!--* Row Three -->
+            <!-- //* Row Three -->
                 <div class="auto-row rows">
-                    <!--* First Daily-->
+                    <!-- //* First Daily-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/first-daily-mono.webp" id="first-daily" class="badge pulse">
                         <div class="badgeToPopup" id="first-daily-popup">
@@ -352,7 +270,7 @@
                             <p>Reached your daily goal for the first time on this project</p>
                         </div>
                     </div>
-                    <!--* Full Streak-->
+                    <!-- //* Full Streak-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/every-streak-mono.webp" id="every-streak" class="badge pulse">
                         <div class="badgeToPopup" id="every-streak-popup">
@@ -360,7 +278,7 @@
                             <p>Congrats, you've worked on your project every day!</p>
                         </div>
                     </div>
-                    <!--* Stayed on Track-->
+                    <!-- //* Stayed on Track-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/on-track-mono.webp" id="on-track" class="badge pulse">
                         <div class="badgeToPopup" id="on-track-popup">
@@ -370,11 +288,12 @@
                     </div>
                 </div>
             </div>
+        <!-- //* Toggleable Badges -->
             <div class="toggle-badges">
                 <h4 class="instruction">You can award yourself these badges</h4>
-                <!--* Row One -->
+            <!-- //* Row One -->
                 <div class="toggle-row rows">
-                    <!--* Outlined-->
+                    <!-- //* Outlined-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/outline-mono-v2.webp" id="outline" class="badge pulse">
                         <div class="badgeToPopup" id="outline-popup">
@@ -382,7 +301,7 @@
                             <p>Started your project with an outline.</p>
                         </div>
                     </div>
-                    <!--* Pantser/Journey-->
+                    <!-- //* Pantser/Journey-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/journey-mono.webp" id="journey" class="badge pulse">
                         <div class="badgeToPopup" id="journey-popup">
@@ -390,7 +309,7 @@
                             <p>The only plan you have is to explore and discover the project along the way</p>
                         </div>
                     </div>
-                    <!--* Dual Wielding-->
+                    <!-- //* Dual Wielding-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/dual-wielder-mono.webp" id="dual-wielder" class="badge pulse">
                         <div class="badgeToPopup" id="dual-wielder-popup">
@@ -398,7 +317,7 @@
                             <p>Your special sauce is ??% planning and ??% exploration, you'll never tell how much of each</p>
                         </div>
                     </div>
-                    <!--* Fresh Project-->
+                    <!-- //* Fresh Project-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/starting-fresh-mono.webp" id="starting-fresh" class="badge pulse">
                         <div class="badgeToPopup" id="starting-fresh-popup">
@@ -407,9 +326,9 @@
                         </div>
                     </div>
                 </div>
-                <!--* Row Two -->
+            <!-- //* Row Two -->
                 <div class="toggle-row rows">
-                    <!--* Returning to WIP-->
+                    <!-- //* Returning to WIP-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/ever-persist-mono.webp" id="ever-persist" class="badge pulse">
                         <div class="badgeToPopup" id="ever-persist-popup">
@@ -417,7 +336,7 @@
                             <p>You Returned to a WIP!</p>
                         </div>
                     </div>
-                    <!--* Backed up Project-->
+                    <!-- //* Backed up Project-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/back-it-up-mono.webp" id="back-it-up" class="badge pulse">
                         <div class="badgeToPopup" id="back-it-up-popup">
@@ -426,7 +345,7 @@
                                 ready!<br>Project backed up!</p>
                         </div>
                     </div>
-                    <!--* Guild Hall Gathering-->
+                    <!-- //* Guild Hall Gathering-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/gathering-mono.webp" id="gathering" class="badge pulse">
                         <div class="badgeToPopup" id="gathering-popup">
@@ -434,7 +353,7 @@
                             <p>You participated in a Write In or Sprint!</p>
                         </div>
                     </div>
-                    <!--* Hear Ye-->
+                    <!-- //* Hear Ye-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/hear-ye-mono.webp" id="hear-ye" class="badge pulse">
                         <div class="badgeToPopup" id="hear-ye-popup">
@@ -442,7 +361,7 @@
                             <p>You've told someone about your goal, whether a close friend or the whole world!</p>
                         </div>
                     </div>
-                    <!--* Breakthrough-->
+                    <!-- //* Breakthrough-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/breakthrough-mono.webp" id="breakthrough" class="badge pulse">
                         <div class="badgeToPopup" id="breakthrough-popup">
@@ -451,9 +370,9 @@
                         </div>
                     </div>
                 </div>
-                <!--* Row Three -->
+            <!-- //* Row Three -->
                 <div class="toggle-row rows">
-                    <!--* Touch Grass-->
+                    <!-- //* Touch Grass-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/touch-grass-mono.webp" id="touch-grass" class="badge pulse">
                         <div class="badgeToPopup" id="touch-grass-popup">
@@ -461,7 +380,7 @@
                             <p>You made sure to go outside and get some of that sweet, sweeet vitamin D.</p>
                         </div>
                     </div>
-                    <!--* Took Care of Business-->
+                    <!-- //* Took Care of Business-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/business-mono.webp" id="business" class="badge pulse">
                         <div class="badgeToPopup" id="business-popup">
@@ -469,7 +388,7 @@
                             <p>You took care of your other responsibilities, like dishes or homework. All those boring things no one wants to do.</p>
                         </div>
                     </div>
-                    <!--* Tears Were Wept-->
+                    <!-- //* Tears Were Wept-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/tears-wept-mono.webp" id="tears-wept" class="badge pulse">
                         <div class="badgeToPopup" id="tears-wept-popup">
@@ -477,7 +396,7 @@
                             <p>Either the creation or the process itself made you cry.</p>
                         </div>
                     </div>
-                    <!--* Finished Project-->
+                    <!-- //* Finished Project-->
                     <div class="badge-wrapper">
                         <img src="../images/badges/finish-him-mono.webp" id="finish-him" class="badge pulse">
                         <div class="badgeToPopup" id="finish-him-popup">
@@ -503,13 +422,9 @@
             </div>
         </div>
     </div>
-    <!--* FOOTER-->
-    <!--! Keep link to logo artist for permission to use-->
-    <footer id="footer">
-        <p id="copyright">&copy;2025. All rights reserved.</p>
-        <p id="logo-link">Logo by <a href="https://kohacu.com/20181205post-22321/">Kohaku!</a></p>
-        <p id="contact"><a href="contact.html">Contact Us</a></p>
-    </footer>
+    <!-- //* FOOTER-->
+    <!-- //! Keep link to logo artist for permission to use-->
+    <?php makeFooter() ?>
     <script>
         function userClick() {
             document.getElementById('userDropdown').classList.toggle('show');
