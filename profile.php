@@ -22,6 +22,13 @@ $user = $result->fetch_assoc();
     $fav3 = $user["fav-3"];
     $pfp = $user["pfp"];
 
+    //* Setting pfp
+        if ($pfp) {
+            $pfp_set = $pfp;
+        } else {
+            $pfp_set = "images/pfp-icon.webp";
+        }
+
 echo $bio;
 ?>
 
@@ -50,7 +57,7 @@ echo $bio;
     <div class="profile-wrapper">
         <a id="profileUpdate" href="updateProfile.php"><i class="fa fa-gear"></i></a>
             <div class="user-container">
-                <img src="../images/dragon/dragon-0.webp" alt="profile image" id="profilePicture">
+                <img src="<?php $pfp_set ?>" alt="profile image" id="profilePicture">
                 <h1 id="username"><?php echo $username ?></h1>
             </div>
             <div class="profile-container">
@@ -62,7 +69,7 @@ echo $bio;
                 </div>
                 <div class="bio-container">
                     <h2>Bio:</h2>
-                    <p> <?php $bio ?> </p>
+                    <p> <?php echo $bio ?> </p>
                 </div>
             </div>
     </div>
