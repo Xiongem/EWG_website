@@ -39,7 +39,7 @@ forceLogin();
         </div>
     </div>
     <div class="main-wrapper">
-        <a href="project.html" class="overview-container">
+        <a href="project.php" class="overview-container">
             <img src="../images/genre-covers/placeholder(v3).webp">
             <div class="overview-info">
                     <h2 class="overview-title">Title <i class="fa fa-star" id="star-icon" alt="star icon"></i></h2>
@@ -60,7 +60,7 @@ forceLogin();
                     </div>
             </div>
         </a>
-        <a href="project.html" class="overview-container">
+        <a href="project.php" class="overview-container">
             <img src="../images/genre-covers/placeholder(v3).webp">
             <div class="overview-info">
                     <h2 class="overview-title">Title <i class="fa fa-star" id="star-icon" alt="star icon"></i></h2>
@@ -81,7 +81,7 @@ forceLogin();
                     </div>
             </div>
         </a>
-        <a href="project.html" class="overview-container">
+        <a href="project.php" class="overview-container">
             <img src="../images/genre-covers/placeholder(v3).webp">
             <div class="overview-info">
                     <h2 class="overview-title">Title <i class="fa fa-star" id="star-icon" alt="star icon"></i></h2>
