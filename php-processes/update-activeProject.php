@@ -6,18 +6,22 @@ dbConnect();
 
 $userID = $_SESSION["user_id"];
 $notActive = 'not active';
+$active = 'active';
 
 $stmt = $_SESSION["conn"] -> prepare(
-    "UPDATE current_project SET `display`= ? WHERE username='$username' AND current_state='current' AND display='active';
-    UPDATE current_project SET `display`= ? WHERE username='$username' AND current_state='current' AND display='active';
+    "UPDATE current_project SET `display`= ? WHERE `users_id`= $userID AND current_state='current' AND display='active';
+    
+    UPDATE current_project SET `display`= ? WHERE `users_id`= $userID AND current_state='current' AND id= ?;
     ");
-        $stmt->bind_param("ss",
+        $stmt->bind_param("sss",
                                 $notActive,
-                                $_POST["title"]);
+                                $active,
+                                $_POST["id"]);
         if ($stmt -> execute()) {
             exit;
         } else {
             die("an unexpected error occured");
         }
-
-$sql = "UPDATE current_project SET `display`= 'not active' WHERE username='$username' AND current_state='current' AND display='active'";
+$stmt -> close();
+mysqli_close($conn);
+?>

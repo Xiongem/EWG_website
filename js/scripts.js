@@ -97,10 +97,10 @@ function projectSelect(id) {
   //assign values
   // var project = title;
   //begin post method
-  // $.post("php-processes/update-activeProject", {
-  //     //DATA
-  //     id: id
-  // });
+  $.post("php-processes/update-activeProject", {
+      //DATA
+      id: id
+  });
   
   console.log(id);
   var body = document.getElementById("body");
