@@ -27,15 +27,7 @@ if ($_SESSION["user_id"]) {
                 $pfp_set = "images/pfp-icon.webp";
         }
 
-    //* Pull active project data
-    $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
-        $result = $_SESSION["conn"]->query($sql);
-            if ($result->num_rows > 0) {
-                while ($rows = $result->fetch_assoc()) {
-                    $title = $rows["title"];
-                    echo $title;
-                }
-            }
+    
 } 
 //* User is not logged in
 else {
@@ -68,17 +60,34 @@ $_SESSION["username"] = $username;
         <div class="project-select-popup"><div class="close-wrapper">
                 <i class="fa fa-close" onclick="hideProjectPopup()"></i>
             </div>
+            <?php
+            //* Pull active project data
+            $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
+                $result = $_SESSION["conn"]->query($sql);
+                    if ($result->num_rows > 0) {
+                        while ($rows = $result->fetch_assoc()) {
+                            $title = $rows["title"];
+                            $current_count = $rows["current_count"];
+                            $goal = $rows["goal"];
+                            $progress = floor($current_count / $goal * 100);
+                            $now = time(); // or your date as well
+                            $your_date = strtotime($goalDate);
+                            $datediff = $your_date - $now;
+                            $interval = round($datediff / (60 * 60 * 24));
+                            $days = $interval; 
+                        ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
                 <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
-                        PH-Project 1</h3>
+                        <?= $title ?></h3>
                     <div class="project-stats">
-                        <p id="popup-goal">Goal: 10,000/50,00</p>
-                        <p id="popup-days-left">Days Left: Some</p>
+                        <p id="popup-goal">Goal:<?= $current_count ?>/<?= $goal ?>, <?= $progress ?>%</p>
+                        <p id="popup-days-left"><?= $days ?></p>
                     </div>
                 </div>
             </div>
+            <?php }}else { ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
                 <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
                 <div class="project-info">
@@ -90,7 +99,8 @@ $_SESSION["username"] = $username;
                     </div>
                 </div>
             </div>
-            <div class="project-select-content" onclick="hideProjectPopup()">
+            <?php } ?>
+            <!-- <div class="project-select-content" onclick="hideProjectPopup()">
                 <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
@@ -122,7 +132,7 @@ $_SESSION["username"] = $username;
                         <p id="popup-days-left">Days Left: Some</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="button-wrapper">
                 <button id="save" onclick="hideProjectPopup()">Save</button>
             </div>
