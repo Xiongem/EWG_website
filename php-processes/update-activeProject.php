@@ -16,7 +16,6 @@ $stmt2 = $_SESSION["conn"] -> prepare("UPDATE current_project SET `display`= ? W
         $stmt1->bind_param("s",$notActive);
         $stmt2->bind_param("si",$active, $_POST["project"]);
         if ($stmt1 -> execute() && $stmt2 -> execute()) {
-            // header("Location: /index.php");
             exit;
         } else {
             die("an unexpected error occured");
