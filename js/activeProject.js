@@ -12,5 +12,5 @@ function projectSelect(id) {
 //   document.getElementById("project-popup").style.display = "none";
 //   body.style.height = "unset";
 //   body.style.overflow = "unset";
-    location.href = "index.php"
+    // location.href = "index.php"
 }
