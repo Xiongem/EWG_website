@@ -28,11 +28,11 @@ if ($_SESSION["user_id"]) {
         }
 
     //* Pull active project data
-    $sql = "SELECT * FROM current_project WHERE id=$userID AND current_state='current'";
+    $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
     $project = $result->fetch_assoc();
         $title = $project["title"];
-        echo $title;
+        echo $project;
 } 
 //* User is not logged in
 else {
