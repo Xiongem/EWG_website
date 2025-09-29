@@ -33,6 +33,7 @@ if ($_SESSION["user_id"]) {
         $project = $result->fetch_assoc();
             $defaultTitle = $project["title"];
             $defaultGenre = $project["genre"];
+            $defaultGenrePicture = 'images/genre-covers/genre-covers'.$defaultGenre.'.webp';
             $defaultInfo = $project["info"];
             $defaultCount = $project["current_count"];
             $defaultGoal = $project["goal"];
@@ -235,25 +236,17 @@ $_SESSION["username"] = $username;
                 </div>
                 <div class="progress-info-container">
                     <div id="project-img">
-                        <img src="../images/genre-covers/placeholder(v3).webp" id="theme-img">
+                        <img src=<?=$archived_genre_picture ?> id="theme-img">
                     </div>
-                    <!-- <div id="project-title">
-                        <h2>Title</h2>
-                    </div> -->
+                    <div id="project-title">
+                        <h2><?= $defaultTitle ?></h2>
+                    </div>
                     <div id="project-summary">
-                        <p>Looks like you don't have any active projects.
+                        <!-- <p>Looks like you don't have any active projects.
                             <br><br>
                             Click <a href="newProject.php">here</a> to get started!
-                        </p>
-                        <!-- <p id="summary-text">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex 
-                            sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis 
-                            convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus 
-                            fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada 
-                            lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti 
-                            sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci 
-                            varius natoque penatibus et magnis dis parturient montes nascetur
                         </p> -->
+                        <p id="summary-text"><?= $defaultInfo ?></p>
                     </div>
                 </div>
             </div>
