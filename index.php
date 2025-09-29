@@ -94,6 +94,7 @@ if ($_SESSION["user_id"]) {
 //* User is not logged in
 else {
     $pfp_set = "images/pfp-icon.webp";
+    $displayGenrePicture = "images/genre-covers/placeholder.webp";
 }
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
