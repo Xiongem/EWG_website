@@ -157,7 +157,10 @@ $_SESSION["username"] = $username;
                                     }
                                 }
                         ?>
-            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>')">
+            <a href="php-processes/update-activeProject.php" class="project-select-content">
+                <form class="hide" action="php-processes/update-activeProject" method="post">
+                    <button value="<?= $projectID ?>" type="submit"></button>
+                </form>
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
@@ -168,7 +171,7 @@ $_SESSION["username"] = $username;
                         <p id="popup-days-left"><?= $days ?></p>
                     </div>
                 </div>
-            </div>
+            </a>
             <?php }}else { ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
                 <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
@@ -182,9 +185,9 @@ $_SESSION["username"] = $username;
                 </div>
             </div>
             <?php } ?>
-            <div class="button-wrapper">
+            <!-- <div class="button-wrapper">
                 <button id="save" onclick="refresh()">Save</button>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="count-update-wrapper" id="count-update-popup">

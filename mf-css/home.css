@@ -52,6 +52,7 @@
         align-items: center;
         height: 6em;
         cursor: pointer;
+        text-decoration: none;
     }
     .project-select-content:hover #popup-project-title {
         color: var(--accent-3);
