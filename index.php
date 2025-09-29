@@ -19,7 +19,7 @@ if ($_SESSION["user_id"]) {
         $user = $result->fetch_assoc();
             $pfp = $user["pfp"];
             $username = $user["username"];
-
+                print_r($user);
             //* Setting pfp
             if ($pfp) {
                 $pfp_set = $pfp;
@@ -32,7 +32,7 @@ if ($_SESSION["user_id"]) {
         $result = $_SESSION["conn"]->query($sql);
         $displayResult = $result->fetch_assoc();
             $display = $displayResult["display"];
-            print_r($display);
+            // print_r($display);
 
     //* if user has selected a project to be active from project selection
     if (in_array("active", $displayResult)) { 
