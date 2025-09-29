@@ -33,8 +33,9 @@ if ($_SESSION["user_id"]) {
             if ($result->num_rows > 0) {
                 while ($rows = $result->fetch_assoc()) {
                     $title = $rows["title"];
-                    print_r($title);
+                    echo $title;
                 }
+            }
 } 
 //* User is not logged in
 else {
