@@ -20,10 +20,10 @@ dbConnect();
     <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.webp"> 
     <meta property="og:url" content="http://www.elsewherewriters.com/project">
     <title>Project</title>
-    <link rel="stylesheet" href="mf-css/style.css">
-    <link rel="stylesheet" href="mf-css/project.css">
-    <link rel="stylesheet" href="mf-css/progressBar.css">
-    <link rel="stylesheet" href="mf-css/home.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/progressBar.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
