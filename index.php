@@ -157,8 +157,10 @@ $_SESSION["username"] = $username;
                                     }
                                 }
                         ?>
-            <a href="" class="project-select-content">
-                
+            <a href="php-processes/update-activeProject.php" class="project-select-content">
+                <form class="hide" action="php-processes/update-activeProject" method="post">
+                    <button value="<?= $projectID ?>" type="submit"></button>
+                </form>
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
