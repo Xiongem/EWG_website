@@ -234,7 +234,7 @@ $_SESSION["username"] = $username;
                 </div>
                 <div id="goal" class="progress-info">
                     <h2>Percentage:</h2>
-                    <p><?= $defaultPercentage ?></p>
+                    <p><?= $defaultPercentage ?>%</p>
                 </div>
             </div>
             <div class="added">
