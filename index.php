@@ -151,7 +151,7 @@ $_SESSION["username"] = $username;
                         ?>
             <div class="project-select-content" onclick="toggleProjectSelect(title)">
                 <script>var title = "<?= $title ?>";
-                console.log(<?= $title ?>);
+                console.log("<?= $title ?>");
                 
                 </script>
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
