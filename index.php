@@ -106,10 +106,9 @@ $_SESSION["username"] = $username;
 else {
     $pfp_set = "images/pfp-icon.webp";
     $displayGenrePicture = "images/genre-covers/placeholder.webp";
-
-    //* Default Badges
-        $default1 = "images/badges/quarter-quomplete-mono.webp";
 }
+//* Default Badges
+$default1 = "images/badges/quarter-quomplete-mono.webp";
 ?>
 
 <!DOCTYPE html>
