@@ -32,7 +32,7 @@ if ($_SESSION["user_id"]) {
     $result = $_SESSION["conn"]->query($sql);
     $project = $result->fetch_assoc();
         $title = $project["title"];
-        print_r($project);
+        print_r($title);
 } 
 //* User is not logged in
 else {
