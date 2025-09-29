@@ -30,72 +30,70 @@ if ($_SESSION["user_id"]) {
     //* Pull Project Info
     $sql = "SELECT display FROM current_project WHERE username='$username' AND current_state='current'";
         $result = $_SESSION["conn"]->query($sql);
-        // $displayResult = $result->fetch_assoc();
-            // $display = $displayResult["display"];
-            if ($result->num_rows > 0) {
-                while ($displayResult = $result->fetch_assoc()) {
-                    print_r($displayResult);
-                }
-            }
+        if ($result->num_rows > 0) {
+            while ($display = $result->fetch_assoc()) {
+                print_r($display);
 
-    //* if user has selected a project to be active from project selection
-    if (in_array("active", $displayResult)) { 
-        $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current' AND display='active'";
-        $result = $_SESSION["conn"]->query($sql);
-        $project = $result->fetch_assoc();
-            $displayTitle = $project["title"];
-            $displayGenre = $project["genre"];
-            $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
-            $displayInfo = $project["info"];
-            $displayCount = $project["current_count"];
-            $displayGoal = $project["goal"];
-            $displayGoalDate = $project["goal_date"];
-            $displayDailyGoal = $project["daily_goal"];
-            $displayPercentage = floor($displayCount / $displayGoal * 100);
-                //* Days left math
-                $now = time();
-                $your_date = strtotime($displayGoalDate);
-                $divideDate = $your_date - $now;
-                $math = round($divideDate / (60 * 60 * 24));
-                    if ($displayGoalDate == "0000-00-00" || !$displayGoalDate) {
-                        $displayDays = "No Goal Date Set";
-                    } elseif (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {
-                        $displayDays = $math;
-                        if ($displayDays == 0) {
-                            $displayDays = "Final Day!";
-                        } elseif ($displayDays < 0) {
-                            $displayDays = "Project Past Due!";
-                        }
-                    }
-    } else {
-        $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
-        $result = $_SESSION["conn"]->query($sql);
-        $project = $result->fetch_assoc();
-            $displayTitle = $project["title"];
-            $displayGenre = $project["genre"];
-            $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
-            $displayInfo = $project["info"];
-            $displayCount = $project["current_count"];
-            $displayGoal = $project["goal"];
-            $displayGoalDate = $project["goal_date"];
-            $displayDailyGoal = $project["daily_goal"];
-            $displayPercentage = floor($displayCount / $displayGoal * 100);
-                //* Days left math
-                $now = time();
-                $your_date = strtotime($displayGoalDate);
-                $divideDate = $your_date - $now;
-                $math = round($divideDate / (60 * 60 * 24));
-                    if ($displayGoalDate == "0000-00-00" || !$displayGoalDate) {
-                        $displayDays = "No Goal Date Set";
-                    } elseif (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {
-                        $displayDays = $math;
-                        if ($displayDays == 0) {
-                            $displayDays = "Final Day!";
-                        } elseif ($displayDays < 0) {
-                            $displayDays = "Project Past Due!";
-                        }
-                    }
-    }
+            //* if user has selected a project to be active from project selection
+            if (in_array("active", $displayResult)) { 
+                $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current' AND display='active'";
+                $result = $_SESSION["conn"]->query($sql);
+                $project = $result->fetch_assoc();
+                    $displayTitle = $project["title"];
+                    $displayGenre = $project["genre"];
+                    $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
+                    $displayInfo = $project["info"];
+                    $displayCount = $project["current_count"];
+                    $displayGoal = $project["goal"];
+                    $displayGoalDate = $project["goal_date"];
+                    $displayDailyGoal = $project["daily_goal"];
+                    $displayPercentage = floor($displayCount / $displayGoal * 100);
+                        //* Days left math
+                        $now = time();
+                        $your_date = strtotime($displayGoalDate);
+                        $divideDate = $your_date - $now;
+                        $math = round($divideDate / (60 * 60 * 24));
+                            if ($displayGoalDate == "0000-00-00" || !$displayGoalDate) {
+                                $displayDays = "No Goal Date Set";
+                            } elseif (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {
+                                $displayDays = $math;
+                                if ($displayDays == 0) {
+                                    $displayDays = "Final Day!";
+                                } elseif ($displayDays < 0) {
+                                    $displayDays = "Project Past Due!";
+                                }
+                            }
+            } else {
+                $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
+                $result = $_SESSION["conn"]->query($sql);
+                $project = $result->fetch_assoc();
+                    $displayTitle = $project["title"];
+                    $displayGenre = $project["genre"];
+                    $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
+                    $displayInfo = $project["info"];
+                    $displayCount = $project["current_count"];
+                    $displayGoal = $project["goal"];
+                    $displayGoalDate = $project["goal_date"];
+                    $displayDailyGoal = $project["daily_goal"];
+                    $displayPercentage = floor($displayCount / $displayGoal * 100);
+                        //* Days left math
+                        $now = time();
+                        $your_date = strtotime($displayGoalDate);
+                        $divideDate = $your_date - $now;
+                        $math = round($divideDate / (60 * 60 * 24));
+                            if ($displayGoalDate == "0000-00-00" || !$displayGoalDate) {
+                                $displayDays = "No Goal Date Set";
+                            } elseif (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {
+                                $displayDays = $math;
+                                if ($displayDays == 0) {
+                                    $displayDays = "Final Day!";
+                                } elseif ($displayDays < 0) {
+                                    $displayDays = "Project Past Due!";
+                                }
+                            }
+            }
+        }
+        }
 } 
 //* User is not logged in
 else {
