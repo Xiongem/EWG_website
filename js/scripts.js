@@ -95,14 +95,15 @@ function hideUpdateWords() {
 
 function projectSelect(id) {
   //assign values
-  // var project = title;
+  var project = id;
+  console.log(project);
   //begin post method
   $.post("php-processes/update-activeProject", {
       //DATA
-      id: id
+      project: project
   });
   
-  console.log(id);
+  console.log(project);
   var body = document.getElementById("body");
   document.getElementById("project-popup").style.display = "none";
   body.style.height = "unset";

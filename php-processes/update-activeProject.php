@@ -16,7 +16,7 @@ $stmt = $_SESSION["conn"] -> prepare(
         $stmt->bind_param("sss",
                                 $notActive,
                                 $active,
-                                $_POST["id"]);
+                                $_POST["project"]);
         if ($stmt -> execute()) {
             exit;
         } else {
