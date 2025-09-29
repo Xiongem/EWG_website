@@ -103,8 +103,8 @@ function projectSelect(title) {
   //     id: id,
   //     badge: badge
   // });
-  var hatred = `Hello, ${title}!`;
-  console.log(hatred);
+  
+  console.log(title);
   var body = document.getElementById("body");
   document.getElementById("project-popup").style.display = "none";
   body.style.height = "unset";
