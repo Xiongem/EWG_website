@@ -39,7 +39,8 @@ if ($_SESSION["user_id"]) {
             $defaultGoal = $project["goal"];
             $defaultGoalDate = $project["goal_date"];
             $defaultDailyGoal = $project["daily_goal"];
-                $progress = floor($defaultCount / $defaultGoal * 100);
+            $defaultPercentage = floor($defaultCount / $defaultGoal * 100);
+                //* Days left math
                 $now = time(); // or your date as well
                 $your_date = strtotime($defaultGoalDate);
                 $divideDate = $your_date - $now;
