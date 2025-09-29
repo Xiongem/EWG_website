@@ -149,11 +149,8 @@ $_SESSION["username"] = $username;
                                     }
                                 }
                         ?>
+                <script>var title = "<?= $title ?>";</script>
             <div class="project-select-content" onclick="toggleProjectSelect(title)">
-                <script>var title = "<?= $title ?>";
-                console.log('<?= $title ?>');
-                
-                </script>
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
