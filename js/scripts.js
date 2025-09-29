@@ -93,16 +93,16 @@ function hideUpdateWords() {
   body.style.overflow = "unset";
 }
 
-function projectSelect(title) {
+function projectSelect(id) {
   //assign values
   // var project = title;
   //begin post method
   // $.post("php-processes/update-activeProject", {
   //     //DATA
-  //     title: title
+  //     id: id
   // });
   
-  console.log(title);
+  console.log(id);
   var body = document.getElementById("body");
   document.getElementById("project-popup").style.display = "none";
   body.style.height = "unset";
