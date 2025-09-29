@@ -92,7 +92,8 @@ $_SESSION["username"] = $username;
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
                         <?= $title ?></h3>
                     <div class="project-stats">
-                        <p id="popup-goal">Goal:<?= $current_count ?>/<?= $goal ?>, <?= $progress ?>%</p>
+                        <p id="popup-goal">Goal: <?= $current_count ?>/<?= $goal ?></p>
+                        <p><?= $progress ?>%</p>
                         <p id="popup-days-left"><?= $days ?></p>
                     </div>
                 </div>
