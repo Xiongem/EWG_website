@@ -182,6 +182,9 @@ $_SESSION["username"] = $username;
                 </div>
             </div>
             <?php } ?>
+            <div class="button-wrapper">
+                <button id="save" onclick="refresh()">Save</button>
+            </div>
         </div>
     </div>
     <div class="count-update-wrapper" id="count-update-popup">

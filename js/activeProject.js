@@ -8,7 +8,6 @@ function projectSelect(id) {
   });
   
   console.log(project);
-  location.reload();
 //   var body = document.getElementById("body");
 //   document.getElementById("project-popup").style.display = "none";
 //   body.style.height = "unset";
