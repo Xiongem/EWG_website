@@ -8,6 +8,95 @@
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+
+//* If user is logged in
+if ($_SESSION["user_id"]) {
+    $userID = htmlspecialchars($_SESSION["user_id"]);
+
+    //* Pull User Info
+    $sql = "SELECT * FROM users WHERE id=$userID";
+        $result = $_SESSION["conn"]->query($sql);
+        $user = $result->fetch_assoc();
+            $pfp = $user["pfp"];
+            $username = $user["username"];
+
+            //* Setting pfp
+            if ($pfp) {
+                $pfp_set = $pfp;
+            } else {
+                $pfp_set = "images/pfp-icon.webp";
+        }
+
+    //* Pull Project Info
+    $sql = "SELECT display FROM current_project WHERE username='$username' AND current_state='current'";
+        $result = $_SESSION["conn"]->query($sql);
+        $display = $result->fetch_assoc();
+
+    //* if user has selected a project to be active from project selection
+    if ($display == "active") { 
+        $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current' AND display='active'";
+        $result = $_SESSION["conn"]->query($sql);
+        $project = $result->fetch_assoc();
+            $displayTitle = $project["title"];
+            $displayGenre = $project["genre"];
+            $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
+            $displayInfo = $project["info"];
+            $displayCount = $project["current_count"];
+            $displayGoal = $project["goal"];
+            $displayGoalDate = $project["goal_date"];
+            $displayDailyGoal = $project["daily_goal"];
+            $displayPercentage = floor($displayCount / $displayGoal * 100);
+                //* Days left math
+                $now = time();
+                $your_date = strtotime($displayGoalDate);
+                $divideDate = $your_date - $now;
+                $math = round($divideDate / (60 * 60 * 24));
+                    if ($displayGoalDate == "0000-00-00" || !$displayGoalDate) {
+                        $displayDays = "No Goal Date Set";
+                    } elseif (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {
+                        $displayDays = $math;
+                        if ($displayDays == 0) {
+                            $displayDays = "Final Day!";
+                        } elseif ($displayDays < 0) {
+                            $displayDays = "Project Past Due!";
+                        }
+                    }
+    } else {
+        $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
+        $result = $_SESSION["conn"]->query($sql);
+        $project = $result->fetch_assoc();
+            $displayTitle = $project["title"];
+            $displayGenre = $project["genre"];
+            $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
+            $displayInfo = $project["info"];
+            $displayCount = $project["current_count"];
+            $displayGoal = $project["goal"];
+            $displayGoalDate = $project["goal_date"];
+            $displayDailyGoal = $project["daily_goal"];
+            $displayPercentage = floor($displayCount / $displayGoal * 100);
+                //* Days left math
+                $now = time();
+                $your_date = strtotime($displayGoalDate);
+                $divideDate = $your_date - $now;
+                $math = round($divideDate / (60 * 60 * 24));
+                    if ($displayGoalDate == "0000-00-00" || !$displayGoalDate) {
+                        $displayDays = "No Goal Date Set";
+                    } elseif (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {
+                        $displayDays = $math;
+                        if ($displayDays == 0) {
+                            $displayDays = "Final Day!";
+                        } elseif ($displayDays < 0) {
+                            $displayDays = "Project Past Due!";
+                        }
+                    }
+    }
+} 
+//* User is not logged in
+else {
+    $pfp_set = "images/pfp-icon.webp";
+}
+$_SESSION["pfp"] = $pfp_set;
+$_SESSION["username"] = $username;
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +114,9 @@ dbConnect();
     <link rel="stylesheet" href="mf-css/progressBar.css">
     <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
+    <script src="js/badges.js"></script>
+    <script src="js/activeProject.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="body">
@@ -33,17 +125,47 @@ dbConnect();
         <div class="project-select-popup"><div class="close-wrapper">
                 <i class="fa fa-close" onclick="hideProjectPopup()"></i>
             </div>
-            <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
+            <?php
+            //* Pull active project data
+            $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
+                $result = $_SESSION["conn"]->query($sql);
+                    if ($result->num_rows > 0) {
+                        while ($rows = $result->fetch_assoc()) {
+                            $projectID = $rows["id"];
+                            $title = $rows["title"];
+                            $genre = $rows["genre"];
+                            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
+                            $current_count = $rows["current_count"];
+                            $goal = $rows["goal"];
+                            $progress = floor($current_count / $goal * 100);
+                            $now = time();
+                            $your_date = strtotime($goalDate);
+                            $datediff = $your_date - $now;
+                            $interval = round($datediff / (60 * 60 * 24)); 
+                                if ($goalDate == "0000-00-00" || !$goalDate) {
+                                    $days = "No Goal Date Set";
+                                } elseif (isset($goalDate)&& $goalDate !== "0000-00-00") {
+                                    $days = $interval;
+                                    if ($days == 0) {
+                                        $days = "Final Day!";
+                                    } elseif ($days < 0) {
+                                        $days = "Project Past Due!";
+                                    }
+                                }
+                        ?>
+            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>')">
+                <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
-                        PH-Project 1</h3>
+                        <?= $title ?> <?= $projectID ?></h3>
                     <div class="project-stats">
-                        <p id="popup-goal">Goal: 10,000/50,00</p>
-                        <p id="popup-days-left">Days Left: Some</p>
+                        <p id="popup-goal">Goal: <?= $current_count ?>/<?= $goal ?></p>
+                        <p><?= $progress ?>%</p>
+                        <p id="popup-days-left"><?= $days ?></p>
                     </div>
                 </div>
             </div>
+            <?php }}else { ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
                 <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
                 <div class="project-info">
@@ -55,42 +177,7 @@ dbConnect();
                     </div>
                 </div>
             </div>
-            <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
-                <div class="project-info">
-                    <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
-                        PH-Project 3</h3>
-                    <div class="project-stats">
-                        <p id="popup-goal">Goal: 10,000/50,00</p>
-                        <p id="popup-days-left">Days Left: Some</p>
-                    </div>
-                </div>
-            </div>
-            <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
-                <div class="project-info">
-                    <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
-                        PH-Project 4</h3>
-                    <div class="project-stats">
-                        <p id="popup-goal">Goal: 10,000/50,00</p>
-                        <p id="popup-days-left">Days Left: Some</p>
-                    </div>
-                </div>
-            </div>
-            <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
-                <div class="project-info">
-                    <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
-                        PH-Project 5</h3>
-                    <div class="project-stats">
-                        <p id="popup-goal">Goal: 10,000/50,00</p>
-                        <p id="popup-days-left">Days Left: Some</p>
-                    </div>
-                </div>
-            </div>
-            <div class="button-wrapper">
-                <button id="save" onclick="hideProjectPopup()">Save</button>
-            </div>
+            <?php } ?>
         </div>
     </div>
     <div class="count-update-wrapper" id="count-update-popup">
@@ -136,19 +223,19 @@ dbConnect();
             <div class="progress-info-wrapper">
                 <div id="current" class="progress-info">
                     <h2>Current:</h2>
-                    <p>10,000</p>
+                    <p><?= $displayCount ?>/<?= $displayGoal ?></p>
                 </div>
                 <div id="daysLeft" class="progress-info">
                     <h2>Days Left:</h2>
-                    <p>Some</p>
+                    <p><?= $displayDays ?></p>
                 </div>
                 <div id="dailyGoal" class="progress-info">
                     <h2>Daily Goal:</h2>
-                    <p>100</p>
+                    <p><?= $displayDailyGoal ?></p>
                 </div>
                 <div id="goal" class="progress-info">
-                    <h2>Goal:</h2>
-                    <p>50,000</p>
+                    <h2>Percentage:</h2>
+                    <p><?= $displayPercentage ?>%</p>
                 </div>
             </div>
             <div class="added">
@@ -165,25 +252,17 @@ dbConnect();
                 </div>
                 <div class="progress-info-container">
                     <div id="project-img">
-                        <img src="../images/genre-covers/placeholder(v3).webp" id="theme-img">
+                        <img src=<?= $displayGenrePicture ?> id="theme-img">
                     </div>
-                    <!-- <div id="project-title">
-                        <h2>Title</h2>
-                    </div> -->
+                    <div id="project-title">
+                        <h2><?= $displayTitle ?></h2>
+                    </div>
                     <div id="project-summary">
-                        <p>Looks like you don't have any active projects.
+                        <!-- <p>Looks like you don't have any active projects.
                             <br><br>
-                            Click <a href="newProject.html">here</a> to get started!
-                        </p>
-                        <!-- <p id="summary-text">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex 
-                            sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis 
-                            convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus 
-                            fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada 
-                            lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti 
-                            sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci 
-                            varius natoque penatibus et magnis dis parturient montes nascetur
+                            Click <a href="newProject.php">here</a> to get started!
                         </p> -->
+                        <p id="summary-text"><?= $displayInfo ?></p>
                     </div>
                 </div>
             </div>
@@ -438,9 +517,6 @@ dbConnect();
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
     <script>
-        function userClick() {
-            document.getElementById('userDropdown').classList.toggle('show');
-        }
 // BADGE POPUPS
     const elementToHover1 = document.getElementById('first-daily');
     const elementToPopup1 = document.getElementById('first-daily-popup');
