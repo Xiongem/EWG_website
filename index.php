@@ -102,7 +102,7 @@ $_SESSION["username"] = $username;
                                 }
                         ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src=<?=$archived_genre_picture ?> alt="genre cover image">
+                <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
                         <?= $title ?></h3>
@@ -236,7 +236,7 @@ $_SESSION["username"] = $username;
                 </div>
                 <div class="progress-info-container">
                     <div id="project-img">
-                        <img src=<?=$archived_genre_picture ?> id="theme-img">
+                        <img src=<?= $defaultGenrePicture ?> id="theme-img">
                     </div>
                     <div id="project-title">
                         <h2><?= $defaultTitle ?></h2>
