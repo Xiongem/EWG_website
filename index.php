@@ -170,6 +170,14 @@ else {
                     </div>
                 </div>
             </div>
+            <div class="button-wrapper">
+                <script>
+                    function refresh(){
+                        location.reload();
+                    }
+                </script>
+                <button id="save" onclick="refresh()">Save</button>
+            </div>
             <?php }}else { ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
                 <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">

@@ -93,6 +93,3 @@ function hideUpdateWords() {
   body.style.overflow = "unset";
 }
 
-function refresh(){
-  location.reload();
-}
