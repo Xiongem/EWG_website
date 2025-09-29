@@ -7,16 +7,16 @@ dbConnect();
 $userID = $_SESSION["user_id"];
 $notActive = 'not active';
 $active = 'active';
+$projectID = $_POST["project"];
 
 $stmt = $_SESSION["conn"] -> prepare(
     "UPDATE current_project SET `display`= ? WHERE `users_id`= $userID AND current_state='current' AND display='active';
     
-    UPDATE current_project SET `display`= ? WHERE `users_id`= $userID AND current_state='current' AND id= ?;
+    UPDATE current_project SET `display`= ? WHERE `users_id`= $userID AND current_state='current' AND id= $projectID;
     ");
         $stmt->bind_param("sss",
                                 $notActive,
-                                $active,
-                                $_POST["project"]);
+                                $active);
         if ($stmt -> execute()) {
             exit;
         } else {

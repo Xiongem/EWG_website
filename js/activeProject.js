@@ -1,7 +1,6 @@
 function projectSelect(id) {
   //assign values
   var project = id;
-  console.log(project);
   //begin post method
   $.post("php-processes/update-activeProject", {
       //DATA
