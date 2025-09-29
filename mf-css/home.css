@@ -68,6 +68,7 @@
     }
     .project-stats {
         display: flex;
+        justify-content: space-evenly;
     }
     #popup-project-title {
         width: 16em;
@@ -76,9 +77,9 @@
         white-space:nowrap;
         overflow: hidden;
     }
-    #popup-goal, #popup-days-left {
+    .project-stats > p {
         font-size: 16px;
-        width: 50%;
+        /* width: 50%; */
     }
     .button-wrapper {
         display: flex;
