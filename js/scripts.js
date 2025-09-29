@@ -94,3 +94,15 @@ function hideUpdateWords() {
   body.style.overflow = "unset";
 }
 
+function toggleProjectSelect(title) {
+  //assign values
+  // var id = "start-1st-project";
+  // var badge = "images/badges/start-1st-project-color.webp";
+  //begin post method
+  // $.post("php-processes/update-badges", {
+  //     //DATA
+  //     id: id,
+  //     badge: badge
+  // });
+  console.log(title);
+}

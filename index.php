@@ -31,7 +31,7 @@ if ($_SESSION["user_id"]) {
     $sql = "SELECT display FROM current_project WHERE username='$username' AND current_state='current'";
         $result = $_SESSION["conn"]->query($sql);
         $display = $result->fetch_assoc();
-        
+
     //* if user has selected a project to be active from project selection
     if ($display == "active") { 
         $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current' AND display='active'";
@@ -149,7 +149,8 @@ $_SESSION["username"] = $username;
                                     }
                                 }
                         ?>
-            <div class="project-select-content" onclick="hideProjectPopup()">
+            <div class="project-select-content" onclick="toggleProjectSelect(title)">
+                <script>var title = "<?= $title ?>";</script>
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
@@ -174,42 +175,6 @@ $_SESSION["username"] = $username;
                 </div>
             </div>
             <?php } ?>
-            <!-- <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
-                <div class="project-info">
-                    <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
-                        PH-Project 3</h3>
-                    <div class="project-stats">
-                        <p id="popup-goal">Goal: 10,000/50,00</p>
-                        <p id="popup-days-left">Days Left: Some</p>
-                    </div>
-                </div>
-            </div>
-            <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
-                <div class="project-info">
-                    <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
-                        PH-Project 4</h3>
-                    <div class="project-stats">
-                        <p id="popup-goal">Goal: 10,000/50,00</p>
-                        <p id="popup-days-left">Days Left: Some</p>
-                    </div>
-                </div>
-            </div>
-            <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
-                <div class="project-info">
-                    <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
-                        PH-Project 5</h3>
-                    <div class="project-stats">
-                        <p id="popup-goal">Goal: 10,000/50,00</p>
-                        <p id="popup-days-left">Days Left: Some</p>
-                    </div>
-                </div>
-            </div> 
-            <div class="button-wrapper">
-                <button id="save" onclick="hideProjectPopup()">Save</button>
-            </div>-->
         </div>
     </div>
     <div class="count-update-wrapper" id="count-update-popup">
