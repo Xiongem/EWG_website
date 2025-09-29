@@ -95,14 +95,12 @@ function hideUpdateWords() {
 
 function projectSelect(title) {
   //assign values
-  // var id = "start-1st-project";
-  // var badge = "images/badges/start-1st-project-color.webp";
+  // var project = title;
   //begin post method
-  // $.post("php-processes/update-badges", {
-  //     //DATA
-  //     id: id,
-  //     badge: badge
-  // });
+  $.post("php-processes/update-activeProject", {
+      //DATA
+      title: title
+  });
   
   console.log(title);
   var body = document.getElementById("body");

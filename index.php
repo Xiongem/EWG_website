@@ -129,6 +129,7 @@ $_SESSION["username"] = $username;
                 $result = $_SESSION["conn"]->query($sql);
                     if ($result->num_rows > 0) {
                         while ($rows = $result->fetch_assoc()) {
+                            $projectID = $rows["id"];
                             $title = $rows["title"];
                             $genre = $rows["genre"];
                             $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
@@ -151,11 +152,10 @@ $_SESSION["username"] = $username;
                                 }
                         ?>
             <div class="project-select-content" onclick="projectSelect('<?= $title ?>')">
-                
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
-                        <?= $title ?></h3>
+                        <?= $title ?> <?= $projectID ?></h3>
                     <div class="project-stats">
                         <p id="popup-goal">Goal: <?= $current_count ?>/<?= $goal ?></p>
                         <p><?= $progress ?>%</p>
