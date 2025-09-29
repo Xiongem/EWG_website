@@ -206,7 +206,7 @@ $_SESSION["username"] = $username;
             <div class="progress-info-wrapper">
                 <div id="current" class="progress-info">
                     <h2>Current:</h2>
-                    <p><?= $defaultCount ?>/$defaultGoal</p>
+                    <p><?= $defaultCount ?>/<?= $defaultGoal ?></p>
                 </div>
                 <div id="daysLeft" class="progress-info">
                     <h2>Days Left:</h2>
