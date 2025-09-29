@@ -68,7 +68,7 @@
     }
     .project-stats {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     #popup-project-title {
         width: 16em;
