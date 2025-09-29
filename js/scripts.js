@@ -15,7 +15,7 @@ function showPassword() {
 var imageList = Array();
 for (var i = 1; i <= 19; i++) {
     imageList[i] = new Image(70, 70);
-    imageList[i].src = "../images/genre-covers/genre-covers" + i + ".webp";
+    imageList[i].src = "images/genre-covers/genre-covers" + i + ".webp";
 }
 function switchImage() {
 var selectedImage = document.createNewProject.genre.options[document.createNewProject.genre.selectedIndex].value;
@@ -64,7 +64,6 @@ function hideBackground() {
   var body = document.getElementById("body");
   body.style.height = "100%";
   body.style.overflow = "hidden";
-  console.log("hidden");
 }
 
 function showProjectPopup() {
@@ -94,7 +93,7 @@ function hideUpdateWords() {
   body.style.overflow = "unset";
 }
 
-function toggleProjectSelect(title) {
+function projectSelect(title) {
   //assign values
   // var id = "start-1st-project";
   // var badge = "images/badges/start-1st-project-color.webp";
@@ -105,4 +104,8 @@ function toggleProjectSelect(title) {
   //     badge: badge
   // });
   console.log(title);
+  var body = document.getElementById("body");
+  document.getElementById("project-popup").style.display = "none";
+  body.style.height = "unset";
+  body.style.overflow = "unset";
 }
