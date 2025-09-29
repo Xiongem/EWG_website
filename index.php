@@ -15,24 +15,26 @@ if ($_SESSION["user_id"]) {
 
     //* Pull User Info
     $sql = "SELECT * FROM users WHERE id=$userID";
-    $result = $_SESSION["conn"]->query($sql);
-    $user = $result->fetch_assoc();
-        $pfp = $user["pfp"];
-        $username = $user["username"];
+        $result = $_SESSION["conn"]->query($sql);
+        $user = $result->fetch_assoc();
+            $pfp = $user["pfp"];
+            $username = $user["username"];
 
-        //* Setting pfp
-        if ($pfp) {
-            $pfp_set = $pfp;
-        } else {
-            $pfp_set = "images/pfp-icon.webp";
+            //* Setting pfp
+            if ($pfp) {
+                $pfp_set = $pfp;
+            } else {
+                $pfp_set = "images/pfp-icon.webp";
         }
 
     //* Pull active project data
     $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
-    $result = $_SESSION["conn"]->query($sql);
-    $project = $result->fetch_assoc();
-        $title = $project["title"];
-        print_r($title);
+        $result = $_SESSION["conn"]->query($sql);
+            if ($result->num_rows > 0) {
+                while ($rows = $result->fetch_assoc()) {
+                    $title = $rows["title"];
+                    echo $title;
+                }
 } 
 //* User is not logged in
 else {
