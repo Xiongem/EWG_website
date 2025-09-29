@@ -36,6 +36,7 @@ if ($_SESSION["user_id"]) {
                 while ($displayResult = $result->fetch_assoc()) {
                     print_r($displayResult);
                 }
+            }
 
     //* if user has selected a project to be active from project selection
     if (in_array("active", $displayResult)) { 
