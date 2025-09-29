@@ -150,7 +150,7 @@ $_SESSION["username"] = $username;
                                     }
                                 }
                         ?>
-                <script>var title = "<?= $title ?>";</script>
+                <script>var title = "<?= $title ?>"; console.log(title);</script>
             <div class="project-select-content" onclick="projectSelect(title)">
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
