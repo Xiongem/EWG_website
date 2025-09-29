@@ -143,10 +143,10 @@ $_SESSION["username"] = $username;
                         <p id="popup-days-left">Days Left: Some</p>
                     </div>
                 </div>
-            </div> -->
+            </div> 
             <div class="button-wrapper">
                 <button id="save" onclick="hideProjectPopup()">Save</button>
-            </div>
+            </div>-->
         </div>
     </div>
     <div class="count-update-wrapper" id="count-update-popup">
