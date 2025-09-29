@@ -27,6 +27,18 @@ if ($_SESSION["user_id"]) {
                 $pfp_set = "images/pfp-icon.webp";
         }
 
+    //* Pull Project Info
+    $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
+        $result = $_SESSION["conn"]->query($sql);
+        $project = $result->fetch_assoc();
+            $defaultTitle = $project["title"];
+            $defaultGenre = $project["genre"];
+            $defaultInfo = $project["info"];
+            $defaultCount = $project["current_count"];
+            $defaultGoal = $project["goal"];
+            $defaultGoalDate = $project["goal_date"];
+            $defaultDailyGoal = $project["daily_goal"];
+                //! BADGES
     
 } 
 //* User is not logged in
@@ -67,6 +79,8 @@ $_SESSION["username"] = $username;
                     if ($result->num_rows > 0) {
                         while ($rows = $result->fetch_assoc()) {
                             $title = $rows["title"];
+                            $genre = $rows["genre"];
+                            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
                             $current_count = $rows["current_count"];
                             $goal = $rows["goal"];
                             $progress = floor($current_count / $goal * 100);
@@ -87,7 +101,7 @@ $_SESSION["username"] = $username;
                                 }
                         ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
+                <img class="popup-image" src=<?=$archived_genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
                         <?= $title ?></h3>
@@ -192,19 +206,19 @@ $_SESSION["username"] = $username;
             <div class="progress-info-wrapper">
                 <div id="current" class="progress-info">
                     <h2>Current:</h2>
-                    <p>10,000</p>
+                    <p><?= $defaultCount ?>/$defaultGoal</p>
                 </div>
                 <div id="daysLeft" class="progress-info">
                     <h2>Days Left:</h2>
-                    <p>Some</p>
+                    <p><?= $defaultDays ?></p>
                 </div>
                 <div id="dailyGoal" class="progress-info">
                     <h2>Daily Goal:</h2>
-                    <p>100</p>
+                    <p><?= $defaultDailyGoal ?></p>
                 </div>
                 <div id="goal" class="progress-info">
-                    <h2>Goal:</h2>
-                    <p>50,000</p>
+                    <h2>Percentage:</h2>
+                    <p><?= $defaultPercentage ?></p>
                 </div>
             </div>
             <div class="added">
