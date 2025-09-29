@@ -156,7 +156,7 @@ $_SESSION["username"] = $username;
                                     }
                                 }
                         ?>
-            <a href="index.php" class="project-select-content" onclick="projectSelect('<?= $projectID ?>')">
+            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>')">
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
@@ -167,7 +167,7 @@ $_SESSION["username"] = $username;
                         <p id="popup-days-left"><?= $days ?></p>
                     </div>
                 </div>
-            </a>
+            </div>
             <?php }}else { ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
                 <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
