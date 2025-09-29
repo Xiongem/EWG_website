@@ -108,7 +108,7 @@ else {
     $displayGenrePicture = "images/genre-covers/placeholder.webp";
 
     //* Default Badges
-        $default1 = "images/badges/quarter-quomplete-mono.webp"
+        $default1 = "images/badges/quarter-quomplete-mono.webp";
 }
 ?>
 
