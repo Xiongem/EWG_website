@@ -117,7 +117,7 @@ else {
     <link rel="stylesheet" href="mf-css/style.css">
     <link rel="stylesheet" href="mf-css/home.css">
     <link rel="stylesheet" href="mf-css/progressBar.css">
-    <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
+    <link rel="website icon" type="webp" href="images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
     <script src="js/badges.js"></script>
     <script src="js/activeProject.js"></script>
@@ -172,7 +172,7 @@ else {
             </div>
             <?php }}else { ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
+                <img class="popup-image" src="images/genre-covers/placeholder(v3).webp" alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
                         Let's Give this One an Obnoxiously Long Title to Test What the Overflow Will do</h3>
@@ -290,7 +290,7 @@ else {
                 <div class="auto-row rows">
                     <!-- //* Quarter Quomplete-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/quarter-quomplete-mono.webp" id="quarter-quomplete" class="badge pulse">
+                        <img src="images/badges/quarter-quomplete-mono.webp" id="quarter-quomplete" class="badge pulse">
                         <div class="badgeToPopup" id="quarter-quomplete-popup">
                             <h4>Quarter Quomplete</h4>
                             <p>Reached the 25% mark! That's a quarter of the way there!</p>
@@ -298,7 +298,7 @@ else {
                     </div>
                     <!-- //* Half Way-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/half-way-mono.webp" id="half-way" class="badge pulse">
+                        <img src="images/badges/half-way-mono.webp" id="half-way" class="badge pulse">
                         <div class="badgeToPopup" id="half-way-popup">
                             <h4>Half-Way There, Woah!<br>Livin' on a-</h4>
                             <p>Reached the 50% mark<br>on your current project.<br>Good job!</p>
@@ -306,7 +306,7 @@ else {
                     </div>
                     <!-- //* All Downhill-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/all-downhill-mono.webp" id="all-downhill" class="badge pulse">
+                        <img src="images/badges/all-downhill-mono.webp" id="all-downhill" class="badge pulse">
                         <div class="badgeToPopup" id="all-downhill-popup">
                             <h4>All Downhill From Here</h4>
                             <p>Reached 75%!<br>You're so close!</p>
@@ -314,7 +314,7 @@ else {
                     </div>
                     <!-- //* Cross Finish-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/cross-finish-mono.webp" id="cross-finish" class="badge pulse">
+                        <img src="images/badges/cross-finish-mono.webp" id="cross-finish" class="badge pulse">
                         <div class="badgeToPopup" id="cross-finish-popup">
                             <h4>Crossed the Finish Line!</h4>
                             <p>Reached 100% on your current project!<br>YOU DID IT, YAY!!!</p>
@@ -325,7 +325,7 @@ else {
                 <div class="auto-row rows">
                     <!-- //* 2 Day Streak-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/streak-two-mono.webp" id="streak-two" class="badge pulse">
+                        <img src="images/badges/streak-two-mono.webp" id="streak-two" class="badge pulse">
                         <div class="badgeToPopup" id="streak-two-popup">
                             <h4>2-Day Streak</h4>
                             <p>The start of a beautiful streak</p>
@@ -333,7 +333,7 @@ else {
                     </div>
                     <!-- //* 3 Day Streak-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/streak-three-mono.webp" id="streak-three" class="badge pulse">
+                        <img src="images/badges/streak-three-mono.webp" id="streak-three" class="badge pulse">
                         <div class="badgeToPopup" id="streak-three-popup">
                             <h3>3-Day Streak</h3>
                             <p>Third time's the charm</p>
@@ -341,7 +341,7 @@ else {
                     </div>
                     <!-- //* 7 Day Streak-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/streak-seven-mono.webp" id="streak-seven" class="badge pulse">
+                        <img src="images/badges/streak-seven-mono.webp" id="streak-seven" class="badge pulse">
                         <div class="badgeToPopup" id="streak-seven-popup">
                             <h4>7-Day Streak</h4>
                             <p>One whole week!</p>
@@ -349,7 +349,7 @@ else {
                     </div>
                     <!-- //* 14 Day Streak-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/streak-fourteen-mono.webp" id="streak-fourteen" class="badge pulse">
+                        <img src="images/badges/streak-fourteen-mono.webp" id="streak-fourteen" class="badge pulse">
                         <div class="badgeToPopup" id="streak-fourteen-popup">
                             <h4>14-Day Streak</h4>
                             <p>TWO whole weeks!!</p>
@@ -357,7 +357,7 @@ else {
                     </div>
                     <!-- //* 21 Day Streak-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/streak-twentyOne-mono.webp" id="streak-twentyOne" class="badge pulse">
+                        <img src="images/badges/streak-twentyOne-mono.webp" id="streak-twentyOne" class="badge pulse">
                         <div class="badgeToPopup" id="streak-twentyOne-popup">
                             <h4>21-Day Streak</h4>
                             <p>THREE WHOLE WEEKS!!!</p>
@@ -368,7 +368,7 @@ else {
                 <div class="auto-row rows">
                     <!-- //* First Daily-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/first-daily-mono.webp" id="first-daily" class="badge pulse">
+                        <img src="images/badges/first-daily-mono.webp" id="first-daily" class="badge pulse">
                         <div class="badgeToPopup" id="first-daily-popup">
                             <h4>First Daily</h4>
                             <p>Reached your daily goal for the first time on this project</p>
@@ -376,7 +376,7 @@ else {
                     </div>
                     <!-- //* Full Streak-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/every-streak-mono.webp" id="every-streak" class="badge pulse">
+                        <img src="images/badges/every-streak-mono.webp" id="every-streak" class="badge pulse">
                         <div class="badgeToPopup" id="every-streak-popup">
                             <h4>Every Day Streak</h4>
                             <p>Congrats, you've worked on your project every day!</p>
@@ -384,7 +384,7 @@ else {
                     </div>
                     <!-- //* Stayed on Track-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/on-track-mono.webp" id="on-track" class="badge pulse">
+                        <img src="images/badges/on-track-mono.webp" id="on-track" class="badge pulse">
                         <div class="badgeToPopup" id="on-track-popup">
                             <h4>Stayed on Track</h4>
                             <p>Reached your daily goal every day over the course of the project</p>
@@ -399,7 +399,7 @@ else {
                 <div class="toggle-row rows">
                     <!-- //* Outlined-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/outline-mono-v2.webp" id="outline" class="badge pulse">
+                        <img src="images/badges/outline-mono-v2.webp" id="outline" class="badge pulse">
                         <div class="badgeToPopup" id="outline-popup">
                             <h4>Know Where Ya Goin'</h4>
                             <p>Started your project with an outline.</p>
@@ -407,7 +407,7 @@ else {
                     </div>
                     <!-- //* Pantser/Journey-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/journey-mono.webp" id="journey" class="badge pulse">
+                        <img src="images/badges/journey-mono.webp" id="journey" class="badge pulse">
                         <div class="badgeToPopup" id="journey-popup">
                             <h4>It's All About The Journey</h4>
                             <p>The only plan you have is to explore and discover the project along the way</p>
@@ -415,7 +415,7 @@ else {
                     </div>
                     <!-- //* Dual Wielding-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/dual-wielder-mono.webp" id="dual-wielder" class="badge pulse">
+                        <img src="images/badges/dual-wielder-mono.webp" id="dual-wielder" class="badge pulse">
                         <div class="badgeToPopup" id="dual-wielder-popup">
                             <h4>Dual Wielder</h4>
                             <p>Your special sauce is ??% planning and ??% exploration, you'll never tell how much of each</p>
@@ -423,7 +423,7 @@ else {
                     </div>
                     <!-- //* Fresh Project-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/starting-fresh-mono.webp" id="starting-fresh" class="badge pulse">
+                        <img src="images/badges/starting-fresh-mono.webp" id="starting-fresh" class="badge pulse">
                         <div class="badgeToPopup" id="starting-fresh-popup">
                             <h4>Starting Fresh</h4>
                             <p>Created a brand new project!</p>
@@ -434,7 +434,7 @@ else {
                 <div class="toggle-row rows">
                     <!-- //* Returning to WIP-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/ever-persist-mono.webp" id="ever-persist" class="badge pulse">
+                        <img src="images/badges/ever-persist-mono.webp" id="ever-persist" class="badge pulse">
                         <div class="badgeToPopup" id="ever-persist-popup">
                             <h4>Ever Persistent</h4>
                             <p>You Returned to a WIP!</p>
@@ -442,7 +442,7 @@ else {
                     </div>
                     <!-- //* Backed up Project-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/back-it-up-mono.webp" id="back-it-up" class="badge pulse">
+                        <img src="images/badges/back-it-up-mono.webp" id="back-it-up" class="badge pulse">
                         <div class="badgeToPopup" id="back-it-up-popup">
                             <h4>Back It Up!</h4>
                             <p>You never know when The Horrors will hit your computer, but you're 
@@ -451,7 +451,7 @@ else {
                     </div>
                     <!-- //* Guild Hall Gathering-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/gathering-mono.webp" id="gathering" class="badge pulse">
+                        <img src="images/badges/gathering-mono.webp" id="gathering" class="badge pulse">
                         <div class="badgeToPopup" id="gathering-popup">
                             <h4>Guildhall Gathering</h4>
                             <p>You participated in a Write In or Sprint!</p>
@@ -459,7 +459,7 @@ else {
                     </div>
                     <!-- //* Hear Ye-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/hear-ye-mono.webp" id="hear-ye" class="badge pulse">
+                        <img src="images/badges/hear-ye-mono.webp" id="hear-ye" class="badge pulse">
                         <div class="badgeToPopup" id="hear-ye-popup">
                             <h4>Hear Ye! Hear Ye!</h4>
                             <p>You've told someone about your goal, whether a close friend or the whole world!</p>
@@ -467,7 +467,7 @@ else {
                     </div>
                     <!-- //* Breakthrough-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/breakthrough-mono.webp" id="breakthrough" class="badge pulse">
+                        <img src="images/badges/breakthrough-mono.webp" id="breakthrough" class="badge pulse">
                         <div class="badgeToPopup" id="breakthrough-popup">
                             <h4>Breakthrough Moment</h4>
                             <p>Whatever was giving you trouble on this project, you've just figured it out!</p>
@@ -478,7 +478,7 @@ else {
                 <div class="toggle-row rows">
                     <!-- //* Touch Grass-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/touch-grass-mono.webp" id="touch-grass" class="badge pulse">
+                        <img src="images/badges/touch-grass-mono.webp" id="touch-grass" class="badge pulse">
                         <div class="badgeToPopup" id="touch-grass-popup">
                             <h4>Touched Grass</h4>
                             <p>You made sure to go outside and get some of that sweet, sweeet vitamin D.</p>
@@ -486,7 +486,7 @@ else {
                     </div>
                     <!-- //* Took Care of Business-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/business-mono.webp" id="business" class="badge pulse">
+                        <img src="images/badges/business-mono.webp" id="business" class="badge pulse">
                         <div class="badgeToPopup" id="business-popup">
                             <h4>Took Care of Business</h4>
                             <p>You took care of your other responsibilities, like dishes or homework. All those boring things no one wants to do.</p>
@@ -494,7 +494,7 @@ else {
                     </div>
                     <!-- //* Tears Were Wept-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/tears-wept-mono.webp" id="tears-wept" class="badge pulse">
+                        <img src="images/badges/tears-wept-mono.webp" id="tears-wept" class="badge pulse">
                         <div class="badgeToPopup" id="tears-wept-popup">
                             <h4>Tears Were Wept</h4>
                             <p>Either the creation or the process itself made you cry.</p>
@@ -502,7 +502,7 @@ else {
                     </div>
                     <!-- //* Finished Project-->
                     <div class="badge-wrapper">
-                        <img src="../images/badges/finish-him-mono.webp" id="finish-him" class="badge pulse">
+                        <img src="images/badges/finish-him-mono.webp" id="finish-him" class="badge pulse">
                         <div class="badgeToPopup" id="finish-him-popup">
                             <h4><em>Finish Him</em></h4>
                             <p>You fully completed this project during this challenge.<br>WIP no more!</p>
