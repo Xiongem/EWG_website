@@ -75,6 +75,16 @@ $_SESSION["username"] = $username;
                             $datediff = $your_date - $now;
                             $interval = round($datediff / (60 * 60 * 24));
                             $days = $interval; 
+                                if ($goalDate == "0000-00-00") {
+                                    $days = "No Goal Date Set";
+                                } elseif (isset($goalDate)&& $goalDate !== "0000-00-00") {
+                                    $days = $interval;
+                                    if ($days == 0) {
+                                        $days = "Final Day!";
+                                    } elseif ($days < 0) {
+                                        $days = "Project Past Due!";
+                                    }
+                                }
                         ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
                 <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
