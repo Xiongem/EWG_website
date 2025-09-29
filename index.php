@@ -151,7 +151,7 @@ $_SESSION["username"] = $username;
                                 }
                         ?>
             <div class="project-select-content" onclick="projectSelect(title)">
-                <script>let title = 5; console.log(title);</script>
+                <script>var title = 5; console.log(title);</script>
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
