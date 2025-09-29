@@ -6,11 +6,4 @@ function projectSelect(id) {
       //DATA
       project: project
   });
-  
-  console.log(project);
-//   var body = document.getElementById("body");
-//   document.getElementById("project-popup").style.display = "none";
-//   body.style.height = "unset";
-//   body.style.overflow = "unset";
-    // location.href = "index.php"
 }
