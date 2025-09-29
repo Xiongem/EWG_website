@@ -89,7 +89,7 @@ if ($_SESSION["user_id"]) {
                     $badge23 = $project["business"];
                     $badge24 = $project["tears-wept"];
                     $badge25 = $project["finish-him"];
-            } else {
+            } else { //* User has no active projects yet
                 $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
                 $result = $_SESSION["conn"]->query($sql);
                 $project = $result->fetch_assoc();
@@ -205,6 +205,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
 </head>
 <body id="body">
     <!-- //* POPUP FOR CHOOSING ACTIVE PROJECTS-->
+     <!-- //! ADD IF CONDITION TO REMOVE SELECTOR WHEN NO PROJECTS HAVE BEEN MADE -->
     <div class="project-select-popup-wrapper" id="project-popup">
         <div class="project-select-popup"><div class="close-wrapper">
                 <i class="fa fa-close" onclick="hideProjectPopup()"></i>
@@ -264,6 +265,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
             <?php } ?>
             <div class="button-wrapper">
                 <script>
+                    //* reloads the page after selecting a project through ajax
                     function refresh(){
                         location.reload();
                     }
