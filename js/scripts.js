@@ -103,6 +103,7 @@ function projectSelect(title) {
   //     id: id,
   //     badge: badge
   // });
+  var title = title;
   console.log(title);
   var body = document.getElementById("body");
   document.getElementById("project-popup").style.display = "none";
