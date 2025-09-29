@@ -74,7 +74,7 @@ $_SESSION["username"] = $username;
                             $your_date = strtotime($goalDate);
                             $datediff = $your_date - $now;
                             $interval = round($datediff / (60 * 60 * 24));
-                            $days = $interval; 
+                            // $days = $interval; 
                                 if ($goalDate == "0000-00-00") {
                                     $days = "No Goal Date Set";
                                 } elseif (isset($goalDate)&& $goalDate !== "0000-00-00") {
