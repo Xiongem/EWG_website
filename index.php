@@ -63,6 +63,8 @@ if ($_SESSION["user_id"]) {
                                     $displayDays = "Project Past Due!";
                                 }
                             }
+                    //* Badges
+                    $badge1 = $project["quarter-quomplete"];
             } else {
                 $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
                 $result = $_SESSION["conn"]->query($sql);
@@ -91,9 +93,12 @@ if ($_SESSION["user_id"]) {
                                     $displayDays = "Project Past Due!";
                                 }
                             }
+                    //* Badges
+                    $badge1 = $project["quarter-quomplete"];
+                }
             }
         }
-        }
+
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
 }  
@@ -101,6 +106,9 @@ $_SESSION["username"] = $username;
 else {
     $pfp_set = "images/pfp-icon.webp";
     $displayGenrePicture = "images/genre-covers/placeholder.webp";
+
+    //* Default Badges
+        $default1 = "images/badges/quarter-quomplete-mono.webp"
 }
 ?>
 
@@ -290,7 +298,11 @@ else {
                 <div class="auto-row rows">
                     <!-- //* Quarter Quomplete-->
                     <div class="badge-wrapper">
-                        <img src="images/badges/quarter-quomplete-mono.webp" id="quarter-quomplete" class="badge pulse">
+                        <img src="<?php if($badge1) {
+                            echo $badge1;
+                        }else{
+                            echo $default1;
+                        } ?>" id="quarter-quomplete" class="badge pulse">
                         <div class="badgeToPopup" id="quarter-quomplete-popup">
                             <h4>Quarter Quomplete</h4>
                             <p>Reached the 25% mark! That's a quarter of the way there!</p>
