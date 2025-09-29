@@ -98,7 +98,6 @@ if ($_SESSION["user_id"]) {
 //* User is not logged in
 else {
     $pfp_set = "images/pfp-icon.webp";
-    $displayGenrePicture = "images/genre-covers/placeholder.webp";
 }
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
@@ -159,9 +158,6 @@ $_SESSION["username"] = $username;
                                 }
                         ?>
             <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>')">
-                <form class="hide" action="php-processes/update-activeProject" method="post">
-                    <button value="<?= $projectID ?>" type="submit"></button>
-                </form>
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
@@ -186,9 +182,6 @@ $_SESSION["username"] = $username;
                 </div>
             </div>
             <?php } ?>
-            <!-- <div class="button-wrapper">
-                <button id="save" onclick="refresh()">Save</button>
-            </div> -->
         </div>
     </div>
     <div class="count-update-wrapper" id="count-update-popup">
