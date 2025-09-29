@@ -39,6 +39,21 @@ if ($_SESSION["user_id"]) {
             $defaultGoal = $project["goal"];
             $defaultGoalDate = $project["goal_date"];
             $defaultDailyGoal = $project["daily_goal"];
+                $progress = floor($defaultCount / $defaultGoal * 100);
+                $now = time(); // or your date as well
+                $your_date = strtotime($defaultGoalDate);
+                $divideDate = $your_date - $now;
+                $math = round($divideDate / (60 * 60 * 24));
+                    if ($defaultGoalDate == "0000-00-00" || !$defaultGoalDate) {
+                        $defaultDays = "No Goal Date Set";
+                    } elseif (isset($defaultGoalDate) && $defaultGoalDate !== "0000-00-00") {
+                        $defaultDays = $math;
+                        if ($defaultDays == 0) {
+                            $defaultDays = "Final Day!";
+                        } elseif ($defaultDays < 0) {
+                            $defaultDays = "Project Past Due!";
+                        }
+                    }
                 //! BADGES
     
 } 
@@ -88,8 +103,7 @@ $_SESSION["username"] = $username;
                             $now = time(); // or your date as well
                             $your_date = strtotime($goalDate);
                             $datediff = $your_date - $now;
-                            $interval = round($datediff / (60 * 60 * 24));
-                            // $days = $interval; 
+                            $interval = round($datediff / (60 * 60 * 24)); 
                                 if ($goalDate == "0000-00-00" || !$goalDate) {
                                     $days = "No Goal Date Set";
                                 } elseif (isset($goalDate)&& $goalDate !== "0000-00-00") {
