@@ -27,6 +27,7 @@ function toggleImage1() {
     }
   }
   
+//* First Daily
   function toggleImage2() {
     imgsrc= document.getElementById("first-daily").src;
     if (imgsrc.indexOf("images/badges/first-daily-mono.webp")!=-1){
@@ -54,7 +55,8 @@ function toggleImage1() {
         });
     }
   }
-  
+
+//* Quarter Quomplete
   function toggleImage3() {
     imgsrc= document.getElementById("quarter-quomplete").src;
     if (imgsrc.indexOf("images/badges/quarter-quomplete-mono.webp")!=-1){
@@ -82,7 +84,8 @@ function toggleImage1() {
         });
     }
   }
-  
+
+//* Half Way
   function toggleImage4() {
     imgsrc= document.getElementById("half-way").src;
     if (imgsrc.indexOf("images/badges/half-way-mono.webp")!=-1){
@@ -111,6 +114,7 @@ function toggleImage1() {
     }
   }
   
+//* All Downhill
   function toggleImage5() {
     imgsrc= document.getElementById("all-downhill").src;
     if (imgsrc.indexOf("images/badges/all-downhill-mono.webp")!=-1){
@@ -138,7 +142,8 @@ function toggleImage1() {
         });
     }
   }
-  
+
+//* Cross Finish
   function toggleImage6() {
     imgsrc= document.getElementById("cross-finish").src;
     if (imgsrc.indexOf("images/badges/cross-finish-mono.webp")!=-1){
@@ -167,6 +172,7 @@ function toggleImage1() {
     }
   }
   
+//* Stayed on Track
   function toggleImage7() {
     imgsrc= document.getElementById("on-track").src;
     if (imgsrc.indexOf("images/badges/on-track-mono.webp")!=-1){
@@ -221,6 +227,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* 2 Day Streak
   function toggleImage9() {
     imgsrc= document.getElementById("streak-two").src;
     if (imgsrc.indexOf("images/badges/streak-two-mono.webp")!=-1){
@@ -248,6 +256,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* 3 Day Streak
   function toggleImage10() {
     imgsrc= document.getElementById("streak-three").src;
     if (imgsrc.indexOf("images/badges/streak-three-mono.webp")!=-1){
@@ -275,6 +285,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* 7 Day Streak
   function toggleImage11() {
     imgsrc= document.getElementById("streak-seven").src;
     if (imgsrc.indexOf("images/badges/streak-seven-mono.webp")!=-1){
@@ -302,6 +314,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* 14 Day Streak
   function toggleImage12() {
     imgsrc= document.getElementById("streak-fourteen").src;
     if (imgsrc.indexOf("images/badges/streak-fourteen-mono.webp")!=-1){
@@ -329,6 +343,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* 21 Day Streak
   function toggleImage13() {
     imgsrc= document.getElementById("streak-twentyOne").src;
     if (imgsrc.indexOf("images/badges/streak-twentyOne-mono.webp")!=-1){
@@ -356,6 +372,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Full Streak
   function toggleImage14() {
     imgsrc= document.getElementById("every-streak").src;
     if (imgsrc.indexOf("images/badges/every-streak-mono.webp")!=-1){
@@ -383,6 +401,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Backed up Project
   function toggleImage15() {
     imgsrc= document.getElementById("back-it-up").src;
     if (imgsrc.indexOf("images/badges/back-it-up-mono.webp")!=-1){
@@ -410,6 +430,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Outlined
   function toggleImage16() {
     imgsrc= document.getElementById("outline").src;
     if (imgsrc.indexOf("images/badges/outline-mono.webp")!=-1){
@@ -437,6 +459,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Pantser/Journey
   function toggleImage17() {
     imgsrc= document.getElementById("journey").src;
     if (imgsrc.indexOf("images/badges/journey-mono.webp")!=-1){
@@ -464,6 +488,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Dual Wielding
   function toggleImage18() {
     imgsrc= document.getElementById("dual-wielder").src;
     if (imgsrc.indexOf("images/badges/dual-wielder-mono.webp")!=-1){
@@ -491,6 +517,8 @@ function toggleImage1() {
          });
     }
   }
+
+//* Guild Hall Gathering
   function toggleImage19() {
     imgsrc= document.getElementById("gathering").src;
     if (imgsrc.indexOf("images/badges/gathering-mono.webp")!=-1){
@@ -518,6 +546,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Hear Ye
   function toggleImage20() {
     imgsrc= document.getElementById("hear-ye").src;
     if (imgsrc.indexOf("images/badges/hear-ye-mono.webp")!=-1){
@@ -545,6 +575,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Breakthrough
   function toggleImage21() {
     imgsrc= document.getElementById("breakthrough").src;
     if (imgsrc.indexOf("images/badges/breakthrough-mono.webp")!=-1){
@@ -572,6 +604,8 @@ function toggleImage1() {
          });
     }
   }
+
+//* Fresh Project
   function toggleImage22() {
     imgsrc= document.getElementById("starting-fresh").src;
     if (imgsrc.indexOf("images/badges/starting-fresh-mono.webp")!=-1){
@@ -599,6 +633,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Returning to WIP
   function toggleImage23() {
     imgsrc= document.getElementById("ever-persist").src;
     if (imgsrc.indexOf("images/badges/ever-persist-mono.webp")!=-1){
@@ -626,6 +662,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Touch Grass
   function toggleImage24() {
     imgsrc= document.getElementById("touch-grass").src;
     if (imgsrc.indexOf("images/badges/touch-grass-mono.webp")!=-1){
@@ -653,6 +691,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Took Care of Business
   function toggleImage25() {
     imgsrc= document.getElementById("business").src;
     if (imgsrc.indexOf("images/badges/business-mono.webp")!=-1){
@@ -680,6 +720,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Tears Were Wept
   function toggleImage26() {
     imgsrc= document.getElementById("tears-wept").src;
     if (imgsrc.indexOf("images/badges/tears-wept-mono.webp")!=-1){
@@ -734,6 +776,8 @@ function toggleImage1() {
         });
     }
   }
+
+//* Finished Project
   function toggleImage28() {
     imgsrc= document.getElementById("finish-him").src;
     if (imgsrc.indexOf("images/badges/finish-him-mono.webp")!=-1){
