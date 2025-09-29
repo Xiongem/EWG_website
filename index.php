@@ -32,7 +32,7 @@ if ($_SESSION["user_id"]) {
         $result = $_SESSION["conn"]->query($sql);
         if ($result->num_rows > 0) {
             while ($display = $result->fetch_assoc()) {
-                print_r($display);
+                // print_r($display);
 
             //* if user has selected a project to be active from project selection
             if (in_array("active", $display)) { 
