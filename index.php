@@ -157,7 +157,7 @@ $_SESSION["username"] = $username;
                                     }
                                 }
                         ?>
-            <a href="php-processes/update-activeProject.php" class="project-select-content">
+            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>')">
                 <form class="hide" action="php-processes/update-activeProject" method="post">
                     <button value="<?= $projectID ?>" type="submit"></button>
                 </form>
@@ -171,7 +171,7 @@ $_SESSION["username"] = $username;
                         <p id="popup-days-left"><?= $days ?></p>
                     </div>
                 </div>
-            </a>
+            </div>
             <?php }}else { ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
                 <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
