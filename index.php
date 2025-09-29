@@ -31,7 +31,7 @@ if ($_SESSION["user_id"]) {
     $sql = "SELECT display FROM current_project WHERE username='$username' AND current_state='current'";
         $result = $_SESSION["conn"]->query($sql);
         $display = $result->fetch_assoc();
-
+        echo $display;
     //* if user has selected a project to be active from project selection
     if ($display == "active") { 
         $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current' AND display='active'";
