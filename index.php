@@ -31,28 +31,28 @@ if ($_SESSION["user_id"]) {
     $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
         $result = $_SESSION["conn"]->query($sql);
         $project = $result->fetch_assoc();
-            $defaultTitle = $project["title"];
-            $defaultGenre = $project["genre"];
-            $defaultGenrePicture = 'images/genre-covers/genre-covers'.$defaultGenre.'.webp';
-            $defaultInfo = $project["info"];
-            $defaultCount = $project["current_count"];
-            $defaultGoal = $project["goal"];
-            $defaultGoalDate = $project["goal_date"];
-            $defaultDailyGoal = $project["daily_goal"];
-            $defaultPercentage = floor($defaultCount / $defaultGoal * 100);
+            $displayTitle = $project["title"];
+            $displayGenre = $project["genre"];
+            $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
+            $displayInfo = $project["info"];
+            $displayCount = $project["current_count"];
+            $displayGoal = $project["goal"];
+            $displayGoalDate = $project["goal_date"];
+            $displayDailyGoal = $project["daily_goal"];
+            $displayPercentage = floor($displayCount / $displayGoal * 100);
                 //* Days left math
                 $now = time(); // or your date as well
-                $your_date = strtotime($defaultGoalDate);
+                $your_date = strtotime($displayGoalDate);
                 $divideDate = $your_date - $now;
                 $math = round($divideDate / (60 * 60 * 24));
-                    if ($defaultGoalDate == "0000-00-00" || !$defaultGoalDate) {
-                        $defaultDays = "No Goal Date Set";
-                    } elseif (isset($defaultGoalDate) && $defaultGoalDate !== "0000-00-00") {
-                        $defaultDays = $math;
-                        if ($defaultDays == 0) {
-                            $defaultDays = "Final Day!";
-                        } elseif ($defaultDays < 0) {
-                            $defaultDays = "Project Past Due!";
+                    if ($displayGoalDate == "0000-00-00" || !$displayGoalDate) {
+                        $displayDays = "No Goal Date Set";
+                    } elseif (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {
+                        $displayDays = $math;
+                        if ($displayDays == 0) {
+                            $displayDays = "Final Day!";
+                        } elseif ($displayDays < 0) {
+                            $displayDays = "Project Past Due!";
                         }
                     }
                 //! BADGES
@@ -222,19 +222,19 @@ $_SESSION["username"] = $username;
             <div class="progress-info-wrapper">
                 <div id="current" class="progress-info">
                     <h2>Current:</h2>
-                    <p><?= $defaultCount ?>/<?= $defaultGoal ?></p>
+                    <p><?= $displayCount ?>/<?= $displayGoal ?></p>
                 </div>
                 <div id="daysLeft" class="progress-info">
                     <h2>Days Left:</h2>
-                    <p><?= $defaultDays ?></p>
+                    <p><?= $displayDays ?></p>
                 </div>
                 <div id="dailyGoal" class="progress-info">
                     <h2>Daily Goal:</h2>
-                    <p><?= $defaultDailyGoal ?></p>
+                    <p><?= $displayDailyGoal ?></p>
                 </div>
                 <div id="goal" class="progress-info">
                     <h2>Percentage:</h2>
-                    <p><?= $defaultPercentage ?>%</p>
+                    <p><?= $displayPercentage ?>%</p>
                 </div>
             </div>
             <div class="added">
@@ -251,17 +251,17 @@ $_SESSION["username"] = $username;
                 </div>
                 <div class="progress-info-container">
                     <div id="project-img">
-                        <img src=<?= $defaultGenrePicture ?> id="theme-img">
+                        <img src=<?= $displayGenrePicture ?> id="theme-img">
                     </div>
                     <div id="project-title">
-                        <h2><?= $defaultTitle ?></h2>
+                        <h2><?= $displayTitle ?></h2>
                     </div>
                     <div id="project-summary">
                         <!-- <p>Looks like you don't have any active projects.
                             <br><br>
                             Click <a href="newProject.php">here</a> to get started!
                         </p> -->
-                        <p id="summary-text"><?= $defaultInfo ?></p>
+                        <p id="summary-text"><?= $displayInfo ?></p>
                     </div>
                 </div>
             </div>
