@@ -117,6 +117,7 @@ if ($_SESSION["user_id"]) {
                                     $displayDays = "Project Past Due!";
                                 }
                             }
+                            //* Percentage bar math
                             if (empty($displayCount) || empty($displayGoal)) {
                                 $displayProgress = 3;
                                 $displayPercentage = 0;
