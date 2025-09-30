@@ -401,7 +401,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge1;
                         }else{
                             echo $default1;
-                        } ?>" id="quarter-quomplete" class="badge pulse">
+                        } ?>" id="quarter-quomplete" class="badge">
                         <div class="badgeToPopup" id="quarter-quomplete-popup">
                             <h4>Quarter Quomplete</h4>
                             <p>Reached the 25% mark! That's a quarter of the way there!</p>
@@ -413,7 +413,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge2;
                         }else{
                             echo $default2;
-                        } ?>" id="half-way" class="badge pulse">
+                        } ?>" id="half-way" class="badge">
                         <div class="badgeToPopup" id="half-way-popup">
                             <h4>Half-Way There, Woah!<br>Livin' on a-</h4>
                             <p>Reached the 50% mark<br>on your current project.<br>Good job!</p>
@@ -425,7 +425,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge3;
                         }else{
                             echo $default3;
-                        } ?>" id="all-downhill" class="badge pulse">
+                        } ?>" id="all-downhill" class="badge">
                         <div class="badgeToPopup" id="all-downhill-popup">
                             <h4>All Downhill From Here</h4>
                             <p>Reached 75%!<br>You're so close!</p>
@@ -437,7 +437,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge4;
                         }else{
                             echo $default4;
-                        } ?>" id="cross-finish" class="badge pulse">
+                        } ?>" id="cross-finish" class="badge">
                         <div class="badgeToPopup" id="cross-finish-popup">
                             <h4>Crossed the Finish Line!</h4>
                             <p>Reached 100% on your current project!<br>YOU DID IT, YAY!!!</p>
@@ -452,7 +452,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge5;
                         }else{
                             echo $default5;
-                        } ?>" id="streak-two" class="badge pulse">
+                        } ?>" id="streak-two" class="badge">
                         <div class="badgeToPopup" id="streak-two-popup">
                             <h4>2-Day Streak</h4>
                             <p>The start of a beautiful streak</p>
@@ -464,7 +464,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge6;
                         }else{
                             echo $default6;
-                        } ?>" id="streak-three" class="badge pulse">
+                        } ?>" id="streak-three" class="badge">
                         <div class="badgeToPopup" id="streak-three-popup">
                             <h3>3-Day Streak</h3>
                             <p>Third time's the charm</p>
@@ -476,7 +476,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge7;
                         }else{
                             echo $default7;
-                        } ?>" id="streak-seven" class="badge pulse">
+                        } ?>" id="streak-seven" class="badge">
                         <div class="badgeToPopup" id="streak-seven-popup">
                             <h4>7-Day Streak</h4>
                             <p>One whole week!</p>
@@ -488,7 +488,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge8;
                         }else{
                             echo $default8;
-                        } ?>" id="streak-fourteen" class="badge pulse">
+                        } ?>" id="streak-fourteen" class="badge">
                         <div class="badgeToPopup" id="streak-fourteen-popup">
                             <h4>14-Day Streak</h4>
                             <p>TWO whole weeks!!</p>
@@ -500,7 +500,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge9;
                         }else{
                             echo $default9;
-                        } ?>" id="streak-twentyOne" class="badge pulse">
+                        } ?>" id="streak-twentyOne" class="badge">
                         <div class="badgeToPopup" id="streak-twentyOne-popup">
                             <h4>21-Day Streak</h4>
                             <p>THREE WHOLE WEEKS!!!</p>
@@ -515,7 +515,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge10;
                         }else{
                             echo $default10;
-                        } ?>" id="first-daily" class="badge pulse">
+                        } ?>" id="first-daily" class="badge">
                         <div class="badgeToPopup" id="first-daily-popup">
                             <h4>First Daily</h4>
                             <p>Reached your daily goal for the first time on this project</p>
@@ -527,7 +527,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge11;
                         }else{
                             echo $default11;
-                        } ?>" id="every-streak" class="badge pulse">
+                        } ?>" id="every-streak" class="badge">
                         <div class="badgeToPopup" id="every-streak-popup">
                             <h4>Every Day Streak</h4>
                             <p>Congrats, you've worked on your project every day!</p>
@@ -539,7 +539,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge12;
                         }else{
                             echo $default12;
-                        } ?>" id="on-track" class="badge pulse">
+                        } ?>" id="on-track" class="badge">
                         <div class="badgeToPopup" id="on-track-popup">
                             <h4>Stayed on Track</h4>
                             <p>Reached your daily goal every day over the course of the project</p>
