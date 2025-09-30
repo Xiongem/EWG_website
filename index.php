@@ -304,7 +304,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <i class="fa fa-close" onclick="hideUpdateWords()"></i>
             </div>
             <h2>Update Word Count</h2>
-            <form action="update-wordCount" method="post">
+            <form action="php-processes/update-wordCount" method="post">
                 <div class="count-type-select-wrapper">
                     <select class="count-type-select" id="wordCount" name="wordCount">
                         <p>Add/Replace Total <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i></p>
