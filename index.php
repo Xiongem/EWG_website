@@ -559,7 +559,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default13;
                         } ?>" id="outline" class="badge pulse"
-                        onclick="checkToggle(16)">
+                        onclick="checkToggle('outline')">
                         <div class="badgeToPopup" id="outline-popup">
                             <h4>Know Where Ya Goin'</h4>
                             <p>Started your project with an outline.</p>
@@ -572,7 +572,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default14;
                         } ?>" id="journey" class="badge pulse"
-                        onclick="checkToggle(17)">
+                        onclick="checkToggle('journey')">
                         <div class="badgeToPopup" id="journey-popup">
                             <h4>It's All About The Journey</h4>
                             <p>The only plan you have is to explore and discover the project along the way</p>
@@ -585,7 +585,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default15;
                         } ?>" id="dual-wielder" class="badge pulse"
-                        onclick="checkToggle(18)">
+                        onclick="checkToggle('dual-wielder')">
                         <div class="badgeToPopup" id="dual-wielder-popup">
                             <h4>Dual Wielder</h4>
                             <p>Your special sauce is ??% planning and ??% exploration, you'll never tell how much of each</p>
@@ -598,7 +598,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default16;
                         } ?>" id="starting-fresh" class="badge pulse"
-                        onclick="checkToggle(22)">
+                        onclick="checkToggle('starting-fresh')">
                         <div class="badgeToPopup" id="starting-fresh-popup">
                             <h4>Starting Fresh</h4>
                             <p>Created a brand new project!</p>
@@ -614,7 +614,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default17;
                         } ?>" id="ever-persist" class="badge pulse"
-                        onclick="checkToggle(23)">
+                        onclick="checkToggle('ever-persist')">
                         <div class="badgeToPopup" id="ever-persist-popup">
                             <h4>Ever Persistent</h4>
                             <p>You Returned to a WIP!</p>
@@ -627,7 +627,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default18;
                         } ?>" id="back-it-up" class="badge pulse"
-                        onclick="checkToggle(15)">
+                        onclick="checkToggle('back-it-up')">
                         <div class="badgeToPopup" id="back-it-up-popup">
                             <h4>Back It Up!</h4>
                             <p>You never know when The Horrors will hit your computer, but you're 
@@ -642,7 +642,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $default19;
                         } ?>" id="gathering" class="badge pulse">
                         <div class="badgeToPopup" id="gathering-popup"
-                        onclick="checkToggle(19)">
+                        onclick="checkToggle('gathering')">
                             <h4>Guildhall Gathering</h4>
                             <p>You participated in a Write In or Sprint!</p>
                         </div>
@@ -655,7 +655,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $default20;
                         } ?>" id="hear-ye" class="badge pulse">
                         <div class="badgeToPopup" id="hear-ye-popup"
-                        onclick="checkToggle(20)">
+                        onclick="checkToggle('hear-ye')">
                             <h4>Hear Ye! Hear Ye!</h4>
                             <p>You've told someone about your goal, whether a close friend or the whole world!</p>
                         </div>
@@ -667,7 +667,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default21;
                         } ?>" id="breakthrough" class="badge pulse"
-                        onclick="checkToggle(21)">
+                        onclick="checkToggle('breakthrough')">
                         <div class="badgeToPopup" id="breakthrough-popup">
                             <h4>Breakthrough Moment</h4>
                             <p>Whatever was giving you trouble on this project, you've just figured it out!</p>
@@ -683,7 +683,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default22;
                         } ?>" id="touch-grass" class="badge pulse"
-                        onclick="checkToggle(24)">
+                        onclick="checkToggle('touch-grass')">
                         <div class="badgeToPopup" id="touch-grass-popup">
                             <h4>Touched Grass</h4>
                             <p>You made sure to go outside and get some of that sweet, sweeet vitamin D.</p>
@@ -697,7 +697,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $default23;
                         } ?>" id="business" class="badge pulse">
                         <div class="badgeToPopup" id="business-popup"
-                        onclick="checkToggle(25)">
+                        onclick="checkToggle('business')">
                             <h4>Took Care of Business</h4>
                             <p>You took care of your other responsibilities, like dishes or homework. All those boring things no one wants to do.</p>
                         </div>
@@ -710,7 +710,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $default24;
                         } ?>" id="tears-wept" class="badge pulse">
                         <div class="badgeToPopup" id="tears-wept-popup"
-                        onclick="checkToggle(26)">
+                        onclick="checkToggle('tears-wept')">
                             <h4>Tears Were Wept</h4>
                             <p>Either the creation or the process itself made you cry.</p>
                         </div>
@@ -723,7 +723,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $default25;
                         } ?>" id="finish-him" class="badge pulse">
                         <div class="badgeToPopup" id="finish-him-popup"
-                        onclick="checkToggle(28)">
+                        onclick="checkToggle('finish-him')">
                             <h4><em>Finish Him</em></h4>
                             <p>You fully completed this project during this challenge.<br>WIP no more!</p>
                         </div>
@@ -769,43 +769,43 @@ $default25 = "images/badges/cross-finish-mono.webp";
         if (badgeToggle.value == "on") {
             console.log(name);
             switch(name) {
-            case 15:
+            case 'back-it-up':
                 toggleImage15();
                 break;
-            case 16:
+            case 'outline':
                 toggleImage16();
                 break;
-            case 17:
+            case 'journey':
                 toggleImage17();
                 break;
-            case 18:
+            case 'dual-wielder':
                 toggleImage18();
                 break;
-            case 19:
+            case 'gathering':
                 toggleImage19();
                 break;
-            case 20:
+            case 'hear-ye':
                 toggleImage20();
                 break;
-            case 21:
+            case 'breakthrough':
                 toggleImage21();
                 break;
-            case 22:
+            case 'starting-fresh':
                 toggleImage22();
                 break;
-            case 23:
+            case 'ever-persist':
                 toggleImage23();
                 break;
-            case 24:
+            case 'touch-grass':
                 toggleImage24();
                 break;
-            case 25:
+            case 'business':
                 toggleImage25();
                 break;
-            case 26:
+            case 'tears-wept':
                 toggleImage26();
                 break;
-            case 28:
+            case 'finish-him':
                 toggleImage28();
                 break;
             default:
