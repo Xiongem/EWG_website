@@ -219,6 +219,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             $projectID = $rows["id"];
                             $title = $rows["title"];
                             $genre = $rows["genre"];
+                            $currentDisplay = $rows["display"];
                             $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
                             $current_count = $rows["current_count"];
                             $goal = $rows["goal"];
@@ -238,11 +239,11 @@ $default25 = "images/badges/cross-finish-mono.webp";
                                     }
                                 }
                         ?>
-            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>')">
+            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>', '<?= $currentDisplay ?>')">
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
-                    <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
-                        <?= $title ?> <?= $projectID ?></h3>
+                    <h3 id="popup-project-title"><i class="fa fa-star" id="<?= $currentDisplay ?>" alt="star icon"></i> 
+                        <?= $title ?></h3>
                     <div class="project-stats">
                         <p id="popup-goal">Goal: <?= $current_count ?>/<?= $goal ?></p>
                         <p><?= $progress ?>%</p>
