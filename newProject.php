@@ -88,7 +88,7 @@ forceLogin();
                 <div class="preview-section">
                     <h1>Preview</h1>
                     <img class="preview-image" id="preview-image" src="images/genre-covers/placeholder(v3).webp" name="genrePreview">
-                    <h2 id="preview-title">Title</h2>
+                    <h2 id="preview-title"></h2>
                     <div class="grid-item">
                         <h3>Total:</h3>
                         <span id="preview-goal">--</span>
@@ -116,5 +116,16 @@ forceLogin();
     <!-- //* FOOTER-->
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
+<script>
+    $(document).ready(function(){
+        //* Title
+        $("#title").keyup(function(){
+            // Getting the current value of input
+            var currentText = $(this).val();		
+            // Setting the Span content
+            $("#preview-title").text(currentText);
+        });
+    });
+</script>
 </body>
 </html>
