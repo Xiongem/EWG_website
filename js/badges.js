@@ -351,10 +351,10 @@
     }
 
     //* Backed up Project
-    function toggleImage15(check) {
-        var badgeToggle = check;
-        console.log(badgeToggle.value);
-        if (badgeToggle.value == "on") {
+    function toggleImage15() {
+        // var badgeToggle = check;
+        // console.log(badgeToggle.value);
+        // if (badgeToggle.value == "on") {
             imgsrc= document.getElementById("back-it-up").src;
             if (imgsrc.indexOf("images/badges/back-it-up-mono.webp")!=-1){
                 document.getElementById("back-it-up").src = "images/badges/back-it-up-color.webp";
@@ -381,7 +381,7 @@
                 });
             }
         }
-    }
+    // }
 
     //* Outlined
     function toggleImage16() {
