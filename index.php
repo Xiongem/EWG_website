@@ -304,13 +304,13 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <i class="fa fa-close" onclick="hideUpdateWords()"></i>
             </div>
             <h2>Update Word Count</h2>
-            <form action="" method="">
+            <form action="update-wordCount.php" method="post">
                 <div class="count-type-select-wrapper">
-                    <select class="count-type-select">
+                    <select class="count-type-select" id="wordCount" name="wordCount">
                         <p>Add/Replace Total <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i></p>
                         <div class="count-type-dropdown">
-                            <option class="count-type-list" id="replace">replace total</option>
-                            <option class="count-type-list" id="add">Add to total</option>
+                            <option class="count-type-list" id="replace" value="replace">replace total</option>
+                            <option class="count-type-list" id="add" value="add">Add to total</option>
                         </div>
                     </select>
                     <input type="text" pattern="^\d+(,\d+)?$" id="updateWordCount" name="updateWordCount">
