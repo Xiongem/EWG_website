@@ -105,7 +105,7 @@ forceLogin();
                     </div>
                     <div class="grid-item">
                         <h3>Summary:</h3>
-                        <span id="preview-summary">--</span>
+                        <span id="preview-summary"></span>
                     </div>
                 </div>
                 <div class="button">
@@ -142,6 +142,14 @@ forceLogin();
             var currentText = $(this).val();		
             // Setting the Span content
             $("#preview-daily").text(currentText);
+        });
+
+        //* Summary
+        $("#summary").keyup(function(){
+            // Getting the current value of input
+            var currentText = $(this).val();		
+            // Setting the Span content
+            $("#preview-summary").text(currentText);
         });
     });
 </script>
