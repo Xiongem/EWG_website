@@ -809,7 +809,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 toggleImage28();
                 break;
             default:
-                // code block
+                console.log("something went wrong");
             } 
         }
     }
