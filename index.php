@@ -123,10 +123,10 @@ if ($_SESSION["user_id"]) {
                                 $displayPercentage = 0;
                             } elseif (floor($displayCount / $displayGoal * 100)<=3) {
                                 $displayProgress = 3;
-                                // $displayPercentage = $displayPercentage;
+                                $displayPercentage = $displayPercentage;
                             } else {
                                 $displayProgress = floor($displayCount / $displayGoal * 100);
-                                // $displayPercentage = $displayProgress;
+                                $displayPercentage = $displayProgress;
                             }
                     //* Badges
                     $badge1 = $project["quarter-quomplete"];
