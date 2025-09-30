@@ -764,9 +764,9 @@ $default25 = "images/badges/cross-finish-mono.webp";
         }
     
     function checkToggle(number) {
-        console.log(number);
         var badgeToggle = document.getElementById("badgeEdit");
         if (badgeToggle.value == "on") {
+            console.log(number);
             switch(number) {
             case 15:
                 toggleImage15();
