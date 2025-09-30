@@ -101,7 +101,7 @@ forceLogin();
                     </div>
                     <div class="grid-item">
                         <h3>Average:</h3>
-                        <span id="preview-daily">--</span>
+                        <span id="preview-daily"></span>
                     </div>
                     <div class="grid-item">
                         <h3>Summary:</h3>
@@ -134,6 +134,14 @@ forceLogin();
             var currentText = $(this).val();		
             // Setting the Span content
             $("#preview-goal").text(currentText);
+        });
+
+        //* Goal Number
+        $("#dailyGoal").keyup(function(){
+            // Getting the current value of input
+            var currentText = $(this).val();		
+            // Setting the Span content
+            $("#preview-daily").text(currentText);
         });
     });
 </script>
