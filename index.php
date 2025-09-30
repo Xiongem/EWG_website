@@ -63,6 +63,17 @@ if ($_SESSION["user_id"]) {
                                     $displayDays = "Project Past Due!";
                                 }
                             }
+                        //* Percentage bar math
+                            if (empty($displayCount) || empty($displayGoal)) {
+                                $displayProgress = 3;
+                                $displayPercentage = 0;
+                            } elseif (floor($displayCount / $displayGoal * 100)<=3) {
+                                $displayProgress = 3;
+                                $displayPercentage = $displayPercentage;
+                            } else {
+                                $displayProgress = floor($displayCount / $displayGoal * 100);
+                                $displayPercentage = $displayProgress;
+                            }
                     //* Badges
                     $badge1 = $project["quarter-quomplete"];
                     $badge2 = $project["half-way"];
