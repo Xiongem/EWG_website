@@ -1,7 +1,7 @@
 //*BADGES
-// var badgeToggle = document.getElementById("badgeEdit");
-// console.log(badgeToggle);
-// if (badgeToggle.checked == true) {
+var badgeToggle = document.getElementById("badgeEdit");
+console.log(badgeToggle);
+if (badgeToggle.value == "on") {
     //* First Daily
     function toggleImage2() {
         imgsrc= document.getElementById("first-daily").src;
@@ -352,9 +352,9 @@
 
     //* Backed up Project
     function toggleImage15() {
-        var badgeToggle = document.getElementById("badgeEdit");
-        console.log(badgeToggle.value);
-        if (badgeToggle.checked === true) {
+        // var badgeToggle = document.getElementById("badgeEdit");
+        // console.log(badgeToggle.value);
+        // if (badgeToggle.checked === true) {
             imgsrc= document.getElementById("back-it-up").src;
             if (imgsrc.indexOf("images/badges/back-it-up-mono.webp")!=-1){
                 document.getElementById("back-it-up").src = "images/badges/back-it-up-color.webp";
@@ -381,7 +381,7 @@
                 });
             }
         }
-    }
+    // }
 
     //* Outlined
     function toggleImage16() {
@@ -1017,7 +1017,7 @@
             });
         }
     }
-// }
+}
 
 
 
