@@ -353,7 +353,7 @@
     //* Backed up Project
     function toggleImage15() {
         var badgeToggle = document.getElementById("badgeEdit");
-        console.log(badgeToggle);
+        console.log(badgeToggle.value);
         if (badgeToggle.checked === true) {
             imgsrc= document.getElementById("back-it-up").src;
             if (imgsrc.indexOf("images/badges/back-it-up-mono.webp")!=-1){
