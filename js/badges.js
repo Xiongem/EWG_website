@@ -354,7 +354,7 @@
     function toggleImage15() {
         var badgeToggle = document.getElementById("badgeEdit");
         console.log(badgeToggle);
-        if (badgeToggle.checked == true) {
+        if (badgeToggle.checked === true) {
             imgsrc= document.getElementById("back-it-up").src;
             if (imgsrc.indexOf("images/badges/back-it-up-mono.webp")!=-1){
                 document.getElementById("back-it-up").src = "images/badges/back-it-up-color.webp";
