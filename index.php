@@ -316,7 +316,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     <input type="text" pattern="^\d+(,\d+)?$" id="updateWordCount" name="updateWordCount">
                 </div>
                 <div class="button-wrapper">
-                    <button class="save" onclick="hideUpdateWords()">Save</button>
+                    <button class="save" type="submit">Save</button>
                 </div>
             </form>
         </div>
