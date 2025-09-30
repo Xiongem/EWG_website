@@ -372,7 +372,20 @@ a {
     .button-container > p {
         font-size: 18px;
     }
+    .announce-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .announce-wrapper > h1, h3 {
+        text-align: center;
+    }
+    .announce-wrapper > h1 {
+        color: var(--warning);
+    }
 }
+
 
 
 

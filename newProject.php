@@ -23,24 +23,24 @@ forceLogin();
     <title>New Project</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/newProject.css">
-    <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
+    <link rel="website icon" type="webp" href="images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
+    <!-- //* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
         <?php makeNav() ?>
     </header>
     <div class="archive-warning hide">
         <h3>You already have a maximum of 5 projects in progress. Click 
-            <a href="archives.html">here</a> to archive one.</h3>
+            <a href="archives.php">here</a> to archive one.</h3>
     </div>
     <div class="new-project-wrapper">
         <h1>Create a New Project</h1>
         <div class="new-project-container">
-            <form method="post" action="" name="createNewProject">
+            <form method="post" action="create-newProject.php" name="createNewProject">
                 <div class="input-section">
                     <label for="title">Title</label>
                     <input class="input" type="text" name="title" id="title"
@@ -87,7 +87,7 @@ forceLogin();
                 </div>
                 <div class="preview-section">
                     <h1>Preview</h1>
-                    <img class="preview-image" id="preview-image" src="../images/genre-covers/placeholder(v3).webp" name="genrePreview">
+                    <img class="preview-image" id="preview-image" src="images/genre-covers/placeholder(v3).webp" name="genrePreview">
                     <h2 id="preview-title">Title</h2>
                     <div class="grid-item">
                         <h3>Total:</h3>

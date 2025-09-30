@@ -75,6 +75,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div class="announce-wrapper">
+        <h1>Attention!</h1>
+        <h3>The Website is currently down for maintenance. Please check back later.</h3>
+    </div>
     <div class="login-wrapper">
         <div class="login-container">
             <div id="login-title">
