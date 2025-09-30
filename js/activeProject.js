@@ -13,7 +13,7 @@ function projectSelect(id, display) {
   //     notActive[i].classList.add("inactive");
   //   }
   // }
-  console.log(display);
+  // console.log(display);
   var active = display;
   console.log(active);
     if (active.classList.contains("inactive")) {
