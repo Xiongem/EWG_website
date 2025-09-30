@@ -762,7 +762,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
             }
             
         }
-    function checkToggle() {
+    function checkToggle15() {
         var badgeToggle = document.getElementById("badgeEdit");
         if (badgeToggle.value == "on") {
             toggleImage15();
