@@ -606,7 +606,7 @@ a {
 .showFlex {
     display: flex;
 }
-.hide, .inactive{
+.hide, .inactive {
     display: none;
 }
 #about-icon {
