@@ -351,8 +351,8 @@
     }
 
     //* Backed up Project
-    function toggleImage15() {
-        var badgeToggle = document.getElementById("badgeEdit");
+    function toggleImage15(check) {
+        var badgeToggle = check;
         console.log(badgeToggle.value);
         if (badgeToggle.value == "on") {
             imgsrc= document.getElementById("back-it-up").src;

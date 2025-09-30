@@ -627,7 +627,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default18;
                         } ?>" id="back-it-up" class="badge pulse"
-                        onclick="toggleImage15()">
+                        onclick="toggleImage15(badgeToggle.value)">
                         <div class="badgeToPopup" id="back-it-up-popup">
                             <h4>Back It Up!</h4>
                             <p>You never know when The Horrors will hit your computer, but you're 
@@ -750,6 +750,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
     <script>
+        var badgeToggle = document.getElementById("badgeEdit");
         function clickCheckbox() {
             var badgeToggle = document.getElementById("badgeEdit");
             if (badgeToggle.value == "off") {
