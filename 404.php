@@ -33,7 +33,7 @@ dbConnect();
     <div class="not-found-container">
         <h1>OPE!</h1>
         <h3>Looks like the page you're looking for couldn't be found</h3>
-        <a href="index.html" class="go-back-button">
+        <a href="index.php" class="go-back-button">
             <div class="button-container">
                 <p>GO TO HOMEPAGE</p>
             </div>
