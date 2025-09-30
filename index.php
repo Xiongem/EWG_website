@@ -755,7 +755,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
             if (badgeToggle.value == "off") {
                 badgeToggle.value = "on";
                 console.log(badgeToggle.value);
-            }elseif (badgeToggle.value == "on") {
+            }else (badgeToggle.value == "on") {
                 badgeToggle.value = "off";
                 console.log(badgeToggle.value);
             }
