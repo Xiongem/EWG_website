@@ -738,7 +738,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <div class="slider-container">
                     <i class="fa fa-lock" alt="lock icon"></i>
                     <label class="switch">
-                        <input type="checkbox" id="badgeEdit" checked=false>
+                        <input type="checkbox" id="badgeEdit">
                         <span class="slider round"></span>
                     </label>
                     <i class="fa fa-unlock" alt="unlocked icon"></i>
@@ -751,6 +751,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
     <?php makeFooter() ?>
     <script>
     var badgeToggle = document.getElementById("badgeEdit");
+    badgeToggle.checked = false;
     console.log(badgeToggle.value);
 // BADGE POPUPS
     const elementToHover1 = document.getElementById('first-daily');
