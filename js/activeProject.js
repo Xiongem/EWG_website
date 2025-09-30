@@ -6,6 +6,8 @@ function projectSelect(id, display) {
       //DATA
       project: project
   });
+  var i = document.getElementById(project);
+  i.classList.remove("inactive");
   // var notActive = document.querySelectorAll("[id='inactive']");
   // for (let i = 0; i < notActive.length; i++) {
   //   if (!notActive[i].classList.contains("hide")) {
@@ -14,10 +16,10 @@ function projectSelect(id, display) {
   //   }
   // }
   // console.log(display);
-  var active = display;
-  console.log(active);
-    if (active.classList.contains("inactive")) {
-      active.classList.remove("inactive");
-    }
-  console.log("it's done");
+  // var active = display;
+  // console.log(active);
+  //   if (active.classList.contains("inactive")) {
+  //     active.classList.remove("inactive");
+  //   }
+  // console.log("it's done");
 }
