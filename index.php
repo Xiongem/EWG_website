@@ -122,10 +122,10 @@ if ($_SESSION["user_id"]) {
                                 $displayPercentage = 0;
                             } elseif (floor($displayCount / $displayGoal * 100)<=3) {
                                 $displayProgress = 3;
-                                $displayPercentage = 0;
+                                // $displayPercentage = $displayPercentage;
                             } else {
                                 $displayProgress = floor($displayCount / $displayGoal * 100);
-                                $displayPercentage = $displayProgress;
+                                // $displayPercentage = $displayProgress;
                             }
                     //* Badges
                     $badge1 = $project["quarter-quomplete"];
@@ -323,7 +323,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
             <h1>Project Progress</h1>
             <div class="progress-bar">
                 <div class="border"></div>
-                <div id="percentage" class="percentage clickable" style="width: <?= $displayPercentage ?>%;"></div>
+                <div id="percentage" class="percentage clickable" style="width: <?= $displayProgress ?>%;"></div>
             </div>
             <div class="progress-info-wrapper">
                 <div id="current" class="progress-info">
