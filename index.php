@@ -74,6 +74,7 @@ if ($_SESSION["user_id"]) {
                                 $displayProgress = floor($displayCount / $displayGoal * 100);
                                 $displayPercentage = $displayProgress;
                             }
+                            echo $displayProgress;
                     //* Badges
                     $badge1 = $project["quarter-quomplete"];
                     $badge2 = $project["half-way"];
