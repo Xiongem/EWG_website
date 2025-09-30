@@ -763,12 +763,12 @@ $default25 = "images/badges/cross-finish-mono.webp";
             
         }
     
-    function checkToggle(number) {
-        console.log(number);
+    function checkToggle(name) {
+        console.log(name);
         var badgeToggle = document.getElementById("badgeEdit");
         if (badgeToggle.value == "on") {
-            console.log(number);
-            switch(number) {
+            console.log(name);
+            switch(name) {
             case 15:
                 toggleImage15();
                 break;
@@ -781,15 +781,6 @@ $default25 = "images/badges/cross-finish-mono.webp";
             case 18:
                 toggleImage18();
                 break;
-            case 22:
-                toggleImage22();
-                break;
-            case 23:
-                toggleImage23();
-                break;
-            case 15:
-                toggleImage15();
-                break;
             case 19:
                 toggleImage19();
                 break;
@@ -798,6 +789,12 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 break;
             case 21:
                 toggleImage21();
+                break;
+            case 22:
+                toggleImage22();
+                break;
+            case 23:
+                toggleImage23();
                 break;
             case 24:
                 toggleImage24();
