@@ -65,10 +65,10 @@ if ($_SESSION["user_id"]) {
                             }
                         //* Percentage bar math
                             if (empty($displayCount) || empty($displayGoal)) {
-                                $displayProgress = 3;
+                                $displayProgress = 4;
                                 $displayPercentage = 0;
-                            } elseif (floor($displayCount / $displayGoal * 100)<=3) {
-                                $displayProgress = 3;
+                            } elseif (floor($displayCount / $displayGoal * 100)<=4) {
+                                $displayProgress = 4;
                                 $displayPercentage = $displayPercentage;
                             } else {
                                 $displayProgress = floor($displayCount / $displayGoal * 100);
@@ -130,10 +130,10 @@ if ($_SESSION["user_id"]) {
                             }
                             //* Percentage bar math
                             if (empty($displayCount) || empty($displayGoal)) {
-                                $displayProgress = 3;
+                                $displayProgress = 4;
                                 $displayPercentage = 0;
-                            } elseif (floor($displayCount / $displayGoal * 100)<=3) {
-                                $displayProgress = 3;
+                            } elseif (floor($displayCount / $displayGoal * 100)<=4) {
+                                $displayProgress = 4;
                                 $displayPercentage = $displayPercentage;
                             } else {
                                 $displayProgress = floor($displayCount / $displayGoal * 100);
