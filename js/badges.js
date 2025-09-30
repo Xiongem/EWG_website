@@ -386,11 +386,11 @@
     //* Outlined
     function toggleImage16() {
         imgsrc= document.getElementById("outline").src;
-        if (imgsrc.indexOf("images/badges/outline-mono.webp")!=-1){
-            document.getElementById("outline").src = "images/badges/outline-color.webp";
+        if (imgsrc.indexOf("images/badges/outline-mono-v2.webp")!=-1){
+            document.getElementById("outline").src = "images/badges/outline-color-v2.webp";
             //assign values
             var id = "outline";
-            var badge = "images/badges/outline-color.webp";
+            var badge = "images/badges/outline-color-v2.webp";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -399,10 +399,10 @@
             });
         } 
         else {
-            document.getElementById("outline").src = "images/badges/outline-mono.webp";
+            document.getElementById("outline").src = "images/badges/outline-mono-v2.webp";
             //assign values
             var id = "outline";
-            var badge = "images/badges/outline-mono.webp";
+            var badge = "images/badges/outline-mono-v2.webp";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
