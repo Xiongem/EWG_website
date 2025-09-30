@@ -335,7 +335,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
             <h1>Project Progress</h1>
             <div class="progress-bar">
                 <div class="border"></div>
-                <div id="percentage" class="percentage clickable" style="width: <?= $displayPercentage ?>%;"></div>
+                <div id="percentage" class="percentage clickable" style="width: <?= $displayProgress ?>%;"></div>
             </div>
             <div class="progress-info-wrapper">
                 <div id="current" class="progress-info">
