@@ -721,9 +721,9 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge25;
                         }else{
                             echo $default25;
-                        } ?>" id="finish-him" class="badge pulse">
-                        <div class="badgeToPopup" id="finish-him-popup"
-                        onclick="checkToggle('touch-grass')">
+                        } ?>" id="finish-him" class="badge pulse"
+                        onclick="checkToggle('finish-him')">
+                        <div class="badgeToPopup" id="finish-him-popup">
                             <h4><em>Finish Him</em></h4>
                             <p>You fully completed this project during this challenge.<br>WIP no more!</p>
                         </div>
