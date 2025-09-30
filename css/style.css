@@ -377,6 +377,7 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 2em;
     }
     .announce-wrapper > h1, h3 {
         text-align: center;
