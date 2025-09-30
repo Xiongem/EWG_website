@@ -750,6 +750,8 @@ $default25 = "images/badges/cross-finish-mono.webp";
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
     <script>
+    var badgeToggle = document.getElementById("badgeEdit");
+    console.log(badgeToggle.value);
 // BADGE POPUPS
     const elementToHover1 = document.getElementById('first-daily');
     const elementToPopup1 = document.getElementById('first-daily-popup');
