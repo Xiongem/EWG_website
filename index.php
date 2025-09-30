@@ -342,10 +342,13 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     <h2>Current:</h2>
                     <p><?= $displayCount ?>/<?= $displayGoal ?></p>
                 </div>
+                <?php if (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {?>
+                <!-- //* displays days left only if user has a goal date set -->
                 <div id="daysLeft" class="progress-info">
                     <h2>Days Left:</h2>
                     <p><?= $displayDays ?></p>
                 </div>
+                <?php } ?>
                 <div id="dailyGoal" class="progress-info">
                     <h2>Daily Goal:</h2>
                     <p><?= $displayDailyGoal ?></p>
