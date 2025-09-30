@@ -238,9 +238,6 @@ $default25 = "images/badges/cross-finish-mono.webp";
                                         $days = "Project Past Due!";
                                     }
                                 }
-                        // if ($currentDisplay == "inactive") {
-                        //     $currentDisplay = "hide";
-                        // }
                         ?>
             <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>', '<?= $currentDisplay ?>')">
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
