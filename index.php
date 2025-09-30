@@ -627,7 +627,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default18;
                         } ?>" id="back-it-up" class="badge pulse"
-                        onclick="toggleImage15(badgeToggle.value)">
+                        onclick="checkToggle15()">
                         <div class="badgeToPopup" id="back-it-up-popup">
                             <h4>Back It Up!</h4>
                             <p>You never know when The Horrors will hit your computer, but you're 
@@ -762,6 +762,13 @@ $default25 = "images/badges/cross-finish-mono.webp";
             }
             
         }
+    function checkToggle() {
+        var badgeToggle = document.getElementById("badgeEdit");
+        if (badgeToggle.value == "on") {
+            toggleImage15();
+        }
+    }
+        
     
 // BADGE POPUPS
     const elementToHover1 = document.getElementById('first-daily');
