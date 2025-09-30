@@ -33,7 +33,8 @@ if ($choice == "replace") {
         echo "stmt prepared and bound!".'<br>';
 
     if ($stmt -> execute()) {
-        header("Location: /index.php");
+        // header("Location: /index.php");
+        echo "successfully updated word count";
         exit;
     } else {
         die("an unexpected error occured");
