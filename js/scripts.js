@@ -53,7 +53,6 @@ function setTheme(theme) {
 window.onload = function getTheme() {
   const theme = localStorage.getItem('theme');
   theme && setTheme(theme);
-  console.log("hello");
 }
 function showWarning() {
   document.getElementById("warning").style.display = "flex";
