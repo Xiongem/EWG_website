@@ -6,8 +6,10 @@ function projectSelect(id, display) {
       //DATA
       project: project
   });
+  console.log("sent post");
   var i = document.getElementById(project);
   i.classList.remove("inactive");
+  console.log("removed class");
   // var notActive = document.querySelectorAll("[id='inactive']");
   // for (let i = 0; i < notActive.length; i++) {
   //   if (!notActive[i].classList.contains("hide")) {
