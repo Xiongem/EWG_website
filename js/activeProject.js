@@ -9,14 +9,15 @@ function projectSelect(id, display) {
   var notActive = document.querySelectorAll("[id='inactive']");
   for (let i = 0; i < notActive.length; i++) {
     if (!notActive[i].classList.contains("hide")) {
-      notActive.classList.add("hide");
+      notActive[i].setAttribute("id", "inactive");
+      notActive[i].classList.add("inactive");
     }
   }
   console.log(display);
   var active = display;
   console.log(active);
-    if (active.classList.contains("hide")) {
-      active.classList.remove("hide");
+    if (active.classList.contains("inactive")) {
+      active.classList.remove("inactive");
     }
   console.log("it's done");
 }
