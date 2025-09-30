@@ -91,7 +91,7 @@ forceLogin();
                     <h2 id="preview-title"></h2>
                     <div class="grid-item">
                         <h3>Total:</h3>
-                        <span id="preview-goal">--</span>
+                        <span>0/</span><span id="preview-goal"></span>
                     </div>
                     <div class="grid-item">
                         <h3>Due on:</h3>
@@ -124,6 +124,14 @@ forceLogin();
             var currentText = $(this).val();		
             // Setting the Span content
             $("#preview-title").text(currentText);
+        });
+
+        //* Goal Number
+        $("#goalNumber").keyup(function(){
+            // Getting the current value of input
+            var currentText = $(this).val();		
+            // Setting the Span content
+            $("#preview-goal").text(currentText);
         });
     });
 </script>
