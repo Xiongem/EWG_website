@@ -1,7 +1,7 @@
 //*BADGES
-var badgeToggle = document.getElementById("badgeEdit");
-console.log(badgeToggle);
-if (badgeToggle.checked == true) {
+// var badgeToggle = document.getElementById("badgeEdit");
+// console.log(badgeToggle);
+// if (badgeToggle.checked == true) {
     //* First Daily
     function toggleImage2() {
         imgsrc= document.getElementById("first-daily").src;
@@ -352,30 +352,34 @@ if (badgeToggle.checked == true) {
 
     //* Backed up Project
     function toggleImage15() {
-        imgsrc= document.getElementById("back-it-up").src;
-        if (imgsrc.indexOf("images/badges/back-it-up-mono.webp")!=-1){
-            document.getElementById("back-it-up").src = "images/badges/back-it-up-color.webp";
-            //assign values
-            var id = "back-it-up";
-            var badge = "images/badges/back-it-up-color.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("back-it-up").src = "images/badges/back-it-up-mono.webp";
-            //assign values
-            var id = "back-it-up";
-            var badge = "images/badges/back-it-up-mono.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
+        var badgeToggle = document.getElementById("badgeEdit");
+        console.log(badgeToggle);
+        if (badgeToggle.checked == true) {
+            imgsrc= document.getElementById("back-it-up").src;
+            if (imgsrc.indexOf("images/badges/back-it-up-mono.webp")!=-1){
+                document.getElementById("back-it-up").src = "images/badges/back-it-up-color.webp";
+                //assign values
+                var id = "back-it-up";
+                var badge = "images/badges/back-it-up-color.webp";
+                //begin post method
+                $.post("php-processes/update-badges", {
+                    //DATA
+                    id: id,
+                    badge: badge
+                });
+            } 
+            else {
+                document.getElementById("back-it-up").src = "images/badges/back-it-up-mono.webp";
+                //assign values
+                var id = "back-it-up";
+                var badge = "images/badges/back-it-up-mono.webp";
+                //begin post method
+                $.post("php-processes/update-badges", {
+                    //DATA
+                    id: id,
+                    badge: badge
+                });
+            }
         }
     }
 
@@ -1013,7 +1017,7 @@ if (badgeToggle.checked == true) {
             });
         }
     }
-}
+// }
 
 
 
