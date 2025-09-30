@@ -606,9 +606,12 @@ a {
 .showFlex {
     display: flex;
 }
-.hide, .inactive {
+.hide {
     display: none;
 }
 #about-icon {
     color: var(--text-color);
+}
+.inactive {
+    opacity: 0;
 }
