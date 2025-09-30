@@ -324,6 +324,10 @@ $default25 = "images/badges/cross-finish-mono.webp";
     <header>
         <?php makeNav() ?>
     </header>
+    <div class="announce-wrapper">
+        <h1>Attention!</h1>
+        <h3>The Website is currently down for maintenance. Please check back later.</h3>
+    </div>
     <!-- //* BUTTON FOR SELECTING ACTIVE PROJECT TO SEE -->
     <div class="project-select-wrapper">
         <div class="project-select" onclick="showProjectPopup()">Switch Project <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i>
