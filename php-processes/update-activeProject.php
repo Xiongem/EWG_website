@@ -5,7 +5,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
 $userID = $_SESSION["user_id"];
-$notActive = 'not active';
+$notActive = 'inactive';
 $active = 'active';
 // $projectID = $_POST["project"];
 

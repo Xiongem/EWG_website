@@ -1,7 +1,7 @@
 function projectSelect(id, display) {
   //assign values
   var project = id;
-  var notActive = document.querySelectorAll("[id='not active']");
+  var notActive = document.querySelectorAll("[id='inactive']");
   //begin post method
   $.post("php-processes/update-activeProject", {
       //DATA
