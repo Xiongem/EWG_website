@@ -52,7 +52,7 @@ echo "badge id set".'<br>';
 
 switch ($id) {
     case $id1:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `start-1st-project`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `start-1st-project`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -62,7 +62,7 @@ switch ($id) {
         }
         break;
     case $id2:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `first-daily`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `first-daily`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -72,7 +72,7 @@ switch ($id) {
         }
         break;
     case $id3:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `quarter-quomplete`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `quarter-quomplete`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -82,7 +82,7 @@ switch ($id) {
         }
         break;
     case $id4:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `half-way`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `half-way`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -92,7 +92,7 @@ switch ($id) {
         }
         break;
     case $id5:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `all-downhill`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `all-downhill`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -102,7 +102,7 @@ switch ($id) {
         }
         break;
     case $id6:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `cross-finish`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `cross-finish`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -112,7 +112,7 @@ switch ($id) {
         }
         break;
     case $id7:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `on-track`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `on-track`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -122,7 +122,7 @@ switch ($id) {
         }
         break;
     case $id8:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `out-gate`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `out-gate`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -132,7 +132,7 @@ switch ($id) {
         }
         break;
     case $id9:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `streak-two`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `streak-two`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -142,7 +142,7 @@ switch ($id) {
         }
         break;
     case $id10:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `streak-three`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `streak-three`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -152,7 +152,7 @@ switch ($id) {
         }
         break;
     case $id11:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `streak-seven`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `streak-seven`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -162,7 +162,7 @@ switch ($id) {
         }
         break;
     case $id12:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `streak-fourteen`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `streak-fourteen`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -172,7 +172,7 @@ switch ($id) {
         }
         break;
     case $id13:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `streak-twentyOne`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `streak-twentyOne`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -182,7 +182,7 @@ switch ($id) {
         }
         break;
     case $id14:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `every-streak`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `every-streak`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -192,7 +192,7 @@ switch ($id) {
         }
         break;
     case $id15:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `back-it-up`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `back-it-up`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -202,7 +202,7 @@ switch ($id) {
         }
         break;
     case $id16:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `outline`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `outline`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -212,7 +212,7 @@ switch ($id) {
         }
         break;
     case $id17:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `journey`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `journey`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -222,7 +222,7 @@ switch ($id) {
         }
         break;
     case $id18:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `dual-wielder`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `dual-wielder`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -232,7 +232,7 @@ switch ($id) {
         }
         break;
     case $id19:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `gathering`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `gathering`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -242,7 +242,7 @@ switch ($id) {
         }
         break;
     case $id20:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `hear-ye`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `hear-ye`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -252,7 +252,7 @@ switch ($id) {
         }
         break;
     case $id21:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `breakthrough`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `breakthrough`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -262,7 +262,7 @@ switch ($id) {
         }
         break;
     case $id22:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `starting-fresh`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `starting-fresh`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -272,7 +272,7 @@ switch ($id) {
         }
         break;
     case $id23:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `ever-persist`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `ever-persist`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -282,7 +282,7 @@ switch ($id) {
         }
         break;
     case $id24:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `touch-grass`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `touch-grass`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -292,7 +292,7 @@ switch ($id) {
         }
         break;
     case $id25:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `business`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `business`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -302,7 +302,7 @@ switch ($id) {
         }
         break;
     case $id26:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `tears-wept`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `tears-wept`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -312,7 +312,7 @@ switch ($id) {
         }
         break;
     case $id27:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `overachiever`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `overachiever`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
@@ -322,7 +322,7 @@ switch ($id) {
         }
         break;
     case $id28:
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `finish-him`=? WHERE users_id=$userID AND current_state='current'");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET `finish-him`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
         $stmt->bind_param("s",
                                 $_POST["badge"]);
         if ($stmt -> execute()) {
