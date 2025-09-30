@@ -640,9 +640,9 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge19;
                         }else{
                             echo $default19;
-                        } ?>" id="gathering" class="badge pulse">
-                        <div class="badgeToPopup" id="gathering-popup"
+                        } ?>" id="gathering" class="badge pulse"
                         onclick="checkToggle('gathering')">
+                        <div class="badgeToPopup" id="gathering-popup">
                             <h4>Guildhall Gathering</h4>
                             <p>You participated in a Write In or Sprint!</p>
                         </div>
@@ -653,9 +653,9 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge20;
                         }else{
                             echo $default20;
-                        } ?>" id="hear-ye" class="badge pulse">
-                        <div class="badgeToPopup" id="hear-ye-popup"
+                        } ?>" id="hear-ye" class="badge pulse"
                         onclick="checkToggle('hear-ye')">
+                        <div class="badgeToPopup" id="hear-ye-popup">
                             <h4>Hear Ye! Hear Ye!</h4>
                             <p>You've told someone about your goal, whether a close friend or the whole world!</p>
                         </div>
@@ -695,9 +695,9 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge23;
                         }else{
                             echo $default23;
-                        } ?>" id="business" class="badge pulse">
-                        <div class="badgeToPopup" id="business-popup"
+                        } ?>" id="business" class="badge pulse"
                         onclick="checkToggle('business')">
+                        <div class="badgeToPopup" id="business-popup">
                             <h4>Took Care of Business</h4>
                             <p>You took care of your other responsibilities, like dishes or homework. All those boring things no one wants to do.</p>
                         </div>
@@ -708,9 +708,9 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge24;
                         }else{
                             echo $default24;
-                        } ?>" id="tears-wept" class="badge pulse">
-                        <div class="badgeToPopup" id="tears-wept-popup"
+                        } ?>" id="tears-wept" class="badge pulse"
                         onclick="checkToggle('tears-wept')">
+                        <div class="badgeToPopup" id="tears-wept-popup">
                             <h4>Tears Were Wept</h4>
                             <p>Either the creation or the process itself made you cry.</p>
                         </div>
