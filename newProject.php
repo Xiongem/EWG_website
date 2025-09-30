@@ -91,7 +91,9 @@ forceLogin();
                     <h2 id="preview-title"></h2>
                     <div class="grid-item">
                         <h3>Total:</h3>
-                        <span>0/</span><span id="preview-goal"></span>
+                        <div>
+                            <span>0/</span><span id="preview-goal"></span>
+                        </div>
                     </div>
                     <div class="grid-item">
                         <h3>Due on:</h3>
