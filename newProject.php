@@ -135,6 +135,9 @@ forceLogin();
             previewDateWrapper.classList.add("hide");
         } else if (checkBox.checked == false) {
             document.getElementById("endDate").disabled = false;
+
+            var previewDateWrapper = document.getElementById("preview-date-wrapper");
+            previewDateWrapper.classList.remove("hide");
         }
         var dailyGoal = parseInt(document.getElementById("dailyGoal").value);
         var goal = parseInt(document.getElementById("goalNumber").value);
