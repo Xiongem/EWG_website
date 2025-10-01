@@ -149,9 +149,10 @@ forceLogin();
         });
 
         //* Summary
-        $("#endDate").onchange(function(){
+        $("#endDate").keyup(function(){
             // Getting the current value of input
-            var currentText = $(this).val();		
+            var currentText = $(this).val();
+            console.log(endDate.value);		
             // Setting the Span content
             $("#preview-date").text(currentText);
         });
