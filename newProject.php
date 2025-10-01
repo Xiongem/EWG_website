@@ -41,7 +41,7 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
         <script>
             var input = document.getElementById( "submit" );
             // var disable = input.disable;
-            var grey = input.classList.add("disable");
+            var grey = input.classList.add("hide");
         </script>
     <div class="archive-warning">
         <h3>You already have a maximum of 5 projects in progress. Click 
@@ -121,7 +121,7 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
                 </div>
                 <div class="button">
                     <a id="cancel" onclick="goBack()">Cancel</a>
-                    <input type="submit" value="Looks Good" id="submit">
+                    <input class="" type="submit" value="Looks Good" id="submit">
                 </div>
             </form>
         </div>
