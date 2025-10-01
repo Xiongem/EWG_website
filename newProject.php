@@ -15,7 +15,7 @@ $sql = "SELECT * FROM current_project WHERE users_id=$userID AND current_state='
     $result = $_SESSION["conn"]->query($sql);
     $project = $result->fetch_assoc();
 
-    echo $project;
+    print_r ($project;)
 ?>
 
 <!DOCTYPE html>
