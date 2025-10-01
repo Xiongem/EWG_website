@@ -153,9 +153,10 @@ forceLogin();
             // Getting the current value of input
             console.log("function");	
             var currentText = $(this).val();
-            console.log("variable");		
+            console.log("variable");
+            var date = currentText.toLocaleDateString('es-pa');		
             // Setting the Span content
-            $("#preview-date").text(currentText);
+            $("#preview-date").text(date);
             console.log(endDate.value);
         });
         
