@@ -77,10 +77,10 @@ forceLogin();
                             <label class="noEndDate" for="noEndDate">Check this box if you don't want to set an end date</label>
                             <input class="input" type="checkbox" name="noEndDate" id="noEndDate" onclick="noDate()">
                         </div>
+                    <span id="recommend"></span>
                     <label for="dailyGoal">Daily Goal</label>
                     <input class="input" type="text" name="dailyGoal" id="dailyGoal" pattern="^\d+(,\d+)?$"
                         placeholder="100 (you can leave me blank)">
-                        <span id="recommend"></span>
                     <label class="summary" for="summary">Summary</label>
                     <textarea class="summary input" name="summary" id="summary" maxlength="500"
                         placeholder="Tell the world about your awesome project (max: 500 characters)"></textarea>
