@@ -9,13 +9,13 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 forceLogin();
 
-$userID = $_SESSION["user_id"];
+// $userID = $_SESSION["user_id"];
 
-$sql = "SELECT * FROM current_project WHERE users_id=$userID AND current_state='current'";
-    $result = $_SESSION["conn"]->query($sql);
-    $project = $result->fetch_assoc();
+// $sql = "SELECT * FROM current_project WHERE users_id=$userID AND current_state='current'";
+//     $result = $_SESSION["conn"]->query($sql);
+//     $project = $result->fetch_assoc();
 
-    echo $result;
+//     echo $result;
 ?>
 
 <!DOCTYPE html>
