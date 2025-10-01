@@ -156,6 +156,7 @@ forceLogin();
             console.log("variable");		
             // Setting the Span content
             $("#preview-date").text(currentText);
+            console.log(endDate.value);
         });
         
         //* Summary
