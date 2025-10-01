@@ -135,6 +135,7 @@ forceLogin();
     }
     function findDailyGoal(){
         var goal=document.getElementById( "goalNumber" ).value;
+        goal.replace(/,/g,"");
         var goalDate=document.getElementById( "endDate" ).value;
         
         if(goalDate){
