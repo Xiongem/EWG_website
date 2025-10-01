@@ -97,7 +97,7 @@ forceLogin();
                     </div>
                     <div class="grid-item">
                         <h3>Due on:</h3>
-                        <span id="preview-date">--</span>
+                        <span id="preview-date"></span>
                     </div>
                     <div class="grid-item">
                         <h3>Average:</h3>
@@ -142,6 +142,14 @@ forceLogin();
             var currentText = $(this).val();		
             // Setting the Span content
             $("#preview-daily").text(currentText);
+        });
+
+        //* Summary
+        $("#endDate").keyup(function(){
+            // Getting the current value of input
+            var currentText = $(this).val();		
+            // Setting the Span content
+            $("#preview-datey").text(currentText);
         });
 
         //* Summary
