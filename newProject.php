@@ -148,16 +148,13 @@ forceLogin();
             $("#preview-daily").text(currentText);
         });
 
-        //* Summary
+        //* End Date
         $("#endDate").change(function(){
-            // Getting the current value of input
-            console.log("function");	
+            // Getting the current value of input	
             var currentText = $(this).val();
-            console.log("variable");
             var date = new Date(currentText).toLocaleDateString('en-US');		
             // Setting the Span content
             $("#preview-date").text(date);
-            console.log(endDate.value);
         });
         
         //* Summary
