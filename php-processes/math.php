@@ -15,7 +15,7 @@ if (isset($_POST['newGoal'])&& isset($_POST['goalDate'])) {
     $interval = round($datediff / (60 * 60 * 24));
 
     $recommend = round($goal / $interval);
-    echo "Recommended goal: $recommend";
+    echo "Recommended daily goal: $recommend";
 } else {
     echo "something went wrong";
 }
