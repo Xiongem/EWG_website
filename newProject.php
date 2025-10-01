@@ -149,7 +149,7 @@ forceLogin();
             // Getting the current value of input
             var currentText = $(this).val();		
             // Setting the Span content
-            $("#preview-datey").text(currentText);
+            $("#preview-date").text(currentText);
         });
         var endDate = document.getElementById("endDate");
         console.log(endDate.value);
