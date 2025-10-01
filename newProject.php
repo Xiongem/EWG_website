@@ -72,10 +72,10 @@ forceLogin();
                     <input class="input" type="text" name="goalNumber" id="goalNumber" pattern="^\d+(,\d+)?$"
                         placeholder="50,000">
                     <label for="endDate">End Date</label>
-                    <input class="input" type="date" name="endDate" id="endDate" onchange="thing();">
+                    <input class="input" type="date" name="endDate" id="endDate" onchange="findDailyGoal()">
                         <div class="checkbox-wrapper">
                             <label class="noEndDate" for="noEndDate">Check this box if you don't want to set an end date</label>
-                            <input class="input" type="checkbox" name="noEndDate" id="noEndDate">
+                            <input class="input" type="checkbox" name="noEndDate" id="noEndDate" onclick="noDate()">
                         </div>
                     <label for="dailyGoal">Daily Goal</label>
                     <input class="input" type="text" name="dailyGoal" id="dailyGoal" pattern="^\d+(,\d+)?$"
@@ -119,10 +119,43 @@ forceLogin();
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
 <script>
-    function thing() {
-            var endDate = document.getElementById("endDate");
-            console.log(endDate.value);
-        };
+    function noDate() {
+        var checkBox = document.getElementById("noEndDate");
+
+        if (checkBox.checked == true) {
+            document.getElementById("endDate").disabled = true;
+            document.getElementById("endDate").value = "";
+        } else if (checkBox.checked == false) {
+            document.getElementById("endDate").disabled = false;
+        }
+        var dailyGoal = parseInt(document.getElementById("dailyGoal").value);
+        var goal = parseInt(document.getElementById("goalNumber").value);
+        var recommendation = Math.floor(goal / dailyGoal);
+        document.getElementById("recommend").innerHTML = "Recommended number: " + recommendation;
+    }
+    function findDailyGoal(){
+        var goal=document.getElementById( "goalNumber" ).value;
+        var goalDate=document.getElementById( "endDate" ).value;
+        
+        if(goalDate){
+            $.ajax({
+            type: 'post',
+            url: 'php-processes/math',
+            data: {
+                goal: goal,
+                goalDate: goalDate,
+            },
+            success: function (data) {
+                $( '#recommend' ).html(data);
+            }
+            });
+        }
+        else{
+            $( '#recommend' ).html("");
+            console.log("Something went wrong")
+            return false;
+        }
+    }
     $(document).ready(function(){
         //* Title
         $("#title").keyup(function(){
