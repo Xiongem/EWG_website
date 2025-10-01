@@ -40,7 +40,7 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
     <?php if ($result->num_rows == 5) { ?>
         <script>
             var input = document.getElementById( "submit" );
-            var disable = input.disable;
+            // var disable = input.disable;
             var grey = input.classList.add("disable");
         </script>
     <div class="archive-warning">
