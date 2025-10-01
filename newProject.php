@@ -151,7 +151,7 @@ forceLogin();
         //* Summary
         $("#endDate").on('click', function(){
             // Getting the current value of input
-            onsole.log("function");	
+            console.log("function");	
             var currentText = $(this).val();
             console.log("variable");		
             // Setting the Span content
