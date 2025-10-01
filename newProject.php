@@ -126,8 +126,8 @@ forceLogin();
             document.getElementById("endDate").disabled = true;
             document.getElementById("endDate").value = "";
 
-            var preview-date-wrapper = document.getElementById("preview-date-wrapper");
-            preview-date-wrapper.classList.add("hide");
+            var previewDateWrapper = document.getElementById("preview-date-wrapper");
+            previewDateWrapper.classList.add("hide");
         } else if (checkBox.checked == false) {
             document.getElementById("endDate").disabled = false;
         }
