@@ -39,9 +39,11 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
     </header>
     <?php if ($result->num_rows == 5) { ?>
         <script>
+            function disable() {
             var input = document.getElementById( "submit" );
             // var disable = input.disable;
-            var grey = input.classList.add("hide");
+            input.classList.add("hide");
+            }
         </script>
     <div class="archive-warning">
         <h3>You already have a maximum of 5 projects in progress. Click 
