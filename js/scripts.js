@@ -70,3 +70,6 @@ function hideUpdateWords() {
   body.style.overflow = "unset";
 }
 
+function goBack() {
+  history.go(-1);
+}
