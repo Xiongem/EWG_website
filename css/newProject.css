@@ -192,3 +192,7 @@ input:invalid {
 .hide {
     display: none;
 }
+.disable {
+    background-color: grey;
+    opacity: 0.6;
+}
