@@ -120,6 +120,9 @@ forceLogin();
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
 <script>
+    function goBack() {
+        history.go(-1);
+    }
     //* Disables the date input and hides due date in preview area
     function noDate() {
         var checkBox = document.getElementById("noEndDate");
