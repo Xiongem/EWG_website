@@ -1,10 +1,4 @@
 <?php
-// ob_start();
-
-// session_start();
-// require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
-// dbConnect();
-
 if (isset($_POST['newGoal'])&& isset($_POST['goalDate'])) {
     $goal = $_POST["newGoal"];
     $goalDate = $_POST["goalDate"];
