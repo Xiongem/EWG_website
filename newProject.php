@@ -42,7 +42,7 @@ $userID = $_SESSION["user_id"];
             $result = $_SESSION["conn"]->query($sql);
             print_r($result);
     if ($result->num_rows == 5) { ?>
-    <div class="archive-warning hide">
+    <div class="archive-warning">
         <h3>You already have a maximum of 5 projects in progress. Click 
             <a href="archives.php">here</a> to archive one.</h3>
     </div>
