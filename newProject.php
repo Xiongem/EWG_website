@@ -11,9 +11,8 @@ forceLogin();
 
 $userID = $_SESSION["user_id"];
 
-
-    
-    
+$sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND current_state='current'";
+    $result = $_SESSION["conn"]->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -38,10 +37,7 @@ $userID = $_SESSION["user_id"];
     <header>
         <?php makeNav() ?>
     </header>
-    <?php $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND current_state='current'";
-            $result = $_SESSION["conn"]->query($sql);
-            print_r($result);
-    if ($result->num_rows == 5) { ?>
+    <?php if ($result->num_rows == 5) { ?>
     <div class="archive-warning">
         <h3>You already have a maximum of 5 projects in progress. Click 
             <a href="archives.php">here</a> to archive one.</h3>
