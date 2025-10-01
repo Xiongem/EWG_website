@@ -149,7 +149,7 @@ forceLogin();
         });
 
         //* Summary
-        $("#endDate").on('click', function(){
+        $("#endDate").change(function(){
             // Getting the current value of input
             console.log("function");	
             var currentText = $(this).val();
