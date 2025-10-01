@@ -13,7 +13,7 @@ $userID = $_SESSION["user_id"];
 
 $sql = "SELECT * FROM current_project WHERE users_id=$userID AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
-//     $project = $result->fetch_assoc();
+    $project = $result->fetch_assoc();
 
 //     echo $result;
 ?>
