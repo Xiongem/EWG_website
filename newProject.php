@@ -119,6 +119,7 @@ forceLogin();
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
 <script>
+    //* Disables the date input and hides due date in preview area
     function noDate() {
         var checkBox = document.getElementById("noEndDate");
 
@@ -136,6 +137,8 @@ forceLogin();
         var recommendation = Math.floor(goal / dailyGoal);
         document.getElementById("recommend").innerHTML = "Recommended number: " + recommendation;
     }
+
+    //* sends data to math php file to find average daily word count
     function findDailyGoal(){
         var goal=document.getElementById( "goalNumber" ).value;
         var newGoal = goal.replace(/,/g,"");
@@ -160,6 +163,8 @@ forceLogin();
             return false;
         }
     }
+
+    //* ajax for preview area updating
     $(document).ready(function(){
         //* Title
         $("#title").keyup(function(){
