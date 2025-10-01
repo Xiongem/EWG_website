@@ -1,188 +1,3 @@
-<?php
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
-// ini_set('log_errors', 'On');
-// ini_set('error_log', '/path/to/php_errors.log');
-
-
-ob_start();
-require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
-dbConnect();
-
-//* If user is logged in
-if ($_SESSION["user_id"]) {
-    $userID = htmlspecialchars($_SESSION["user_id"]);
-
-    //* Pull User Info
-    $sql = "SELECT * FROM users WHERE id=$userID";
-        $result = $_SESSION["conn"]->query($sql);
-        $user = $result->fetch_assoc();
-            $pfp = $user["pfp"];
-            $username = $user["username"];
-                
-            //* Setting pfp
-            if ($pfp) {
-                $pfp_set = $pfp;
-            } else {
-                $pfp_set = "images/pfp-icon.webp";
-            }
-
-    //* Pull Project Info
-    $sql = "SELECT display FROM current_project WHERE username='$username' AND current_state='current'";
-        $result = $_SESSION["conn"]->query($sql);
-        if ($result->num_rows > 0) {
-            while ($display = $result->fetch_assoc()) {
-                // print_r($display);
-
-            //* if user has selected a project to be active from project selection
-            if (in_array("active", $display)) { 
-                $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current' AND display='active'";
-                $result = $_SESSION["conn"]->query($sql);
-                $project = $result->fetch_assoc();
-                    $displayTitle = $project["title"];
-                    $displayGenre = $project["genre"];
-                    $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
-                    $displayInfo = $project["info"];
-                    $displayCount = $project["current_count"];
-                    $displayGoal = $project["goal"];
-                    $displayGoalDate = $project["goal_date"];
-                    $displayDailyGoal = $project["daily_goal"];
-                    $displayPercentage = floor($displayCount / $displayGoal * 100);
-                        //* Days left math
-                        $now = time();
-                        $your_date = strtotime($displayGoalDate);
-                        $divideDate = $your_date - $now;
-                        $math = round($divideDate / (60 * 60 * 24));
-                            if ($displayGoalDate == "0000-00-00" || !$displayGoalDate) {
-                                $displayDays = "No Goal Date Set";
-                            } elseif (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {
-                                $displayDays = $math;
-                                if ($displayDays == 0) {
-                                    $displayDays = "Final Day!";
-                                } elseif ($displayDays < 0) {
-                                    $displayDays = "Project Past Due!";
-                                }
-                            }
-                    //* Badges
-                    $badge1 = $project["quarter-quomplete"];
-                    $badge2 = $project["half-way"];
-                    $badge3 = $project["all-downhill"];
-                    $badge4 = $project["cross-finish"];
-                    $badge5 = $project["streak-two"];
-                    $badge6 = $project["streak-three"];
-                    $badge7 = $project["streak-seven"];
-                    $badge8 = $project["streak-fourteen"];
-                    $badge9 = $project["streak-twentyOne"];
-                    $badge10 = $project["first-daily"];
-                    $badge11 = $project["every-streak"];
-                    $badge12 = $project["on-track"];
-                    $badge13 = $project["outline"];
-                    $badge14 = $project["journey"];
-                    $badge15 = $project["dual-wielder"];
-                    $badge16 = $project["starting-fresh"];
-                    $badge17 = $project["ever-persist"];
-                    $badge18 = $project["back-it-up"];
-                    $badge19 = $project["gathering"];
-                    $badge20 = $project["hear-ye"];
-                    $badge21 = $project["breakthrough"];
-                    $badge22 = $project["touch-grass"];
-                    $badge23 = $project["business"];
-                    $badge24 = $project["tears-wept"];
-                    $badge25 = $project["finish-him"];
-            } else { //* User has no active projects yet
-                $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
-                $result = $_SESSION["conn"]->query($sql);
-                $project = $result->fetch_assoc();
-                    $displayTitle = $project["title"];
-                    $displayGenre = $project["genre"];
-                    $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
-                    $displayInfo = $project["info"];
-                    $displayCount = $project["current_count"];
-                    $displayGoal = $project["goal"];
-                    $displayGoalDate = $project["goal_date"];
-                    $displayDailyGoal = $project["daily_goal"];
-                    $displayPercentage = floor($displayCount / $displayGoal * 100);
-                        //* Days left math
-                        $now = time();
-                        $your_date = strtotime($displayGoalDate);
-                        $divideDate = $your_date - $now;
-                        $math = round($divideDate / (60 * 60 * 24));
-                            if ($displayGoalDate == "0000-00-00" || !$displayGoalDate) {
-                                $displayDays = "No Goal Date Set";
-                            } elseif (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {
-                                $displayDays = $math;
-                                if ($displayDays == 0) {
-                                    $displayDays = "Final Day!";
-                                } elseif ($displayDays < 0) {
-                                    $displayDays = "Project Past Due!";
-                                }
-                            }
-                    //* Badges
-                    $badge1 = $project["quarter-quomplete"];
-                    $badge2 = $project["half-way"];
-                    $badge3 = $project["all-downhill"];
-                    $badge4 = $project["cross-finish"];
-                    $badge5 = $project["streak-two"];
-                    $badge6 = $project["streak-three"];
-                    $badge7 = $project["streak-seven"];
-                    $badge8 = $project["streak-fourteen"];
-                    $badge9 = $project["streak-twentyOne"];
-                    $badge10 = $project["first-daily"];
-                    $badge11 = $project["every-streak"];
-                    $badge12 = $project["on-track"];
-                    $badge13 = $project["outline"];
-                    $badge14 = $project["journey"];
-                    $badge15 = $project["dual-wielder"];
-                    $badge16 = $project["starting-fresh"];
-                    $badge17 = $project["ever-persist"];
-                    $badge18 = $project["back-it-up"];
-                    $badge19 = $project["gathering"];
-                    $badge20 = $project["hear-ye"];
-                    $badge21 = $project["breakthrough"];
-                    $badge22 = $project["touch-grass"];
-                    $badge23 = $project["business"];
-                    $badge24 = $project["tears-wept"];
-                    $badge25 = $project["finish-him"];
-                }
-            }
-        }
-
-$_SESSION["pfp"] = $pfp_set;
-$_SESSION["username"] = $username;
-}  
-//* User is not logged in
-else {
-    $pfp_set = "images/pfp-icon.webp";
-    $displayGenrePicture = "images/genre-covers/placeholder.webp";
-}
-//* Default Badges
-$default1 = "images/badges/quarter-quomplete-mono.webp";
-$default2 = "images/badges/half-way-mono.webp";
-$default3 = "images/badges/all-downhill-mono.webp";
-$default4 = "images/badges/cross-finish-mono.webp";
-$default5 = "images/badges/streak-two-mono.webp";
-$default6 = "images/badges/streak-three-mono.webp";
-$default7 = "images/badges/streak-seven-mono.webp";
-$default8 = "images/badges/streak-fourteen-mono.webp";
-$default9 = "images/badges/streak-twentyOne-mono.webp";
-$default10 = "images/badges/first-daily-mono.webp";
-$default11 = "images/badges/every-streak-mono.webp";
-$default12 = "images/badges/on-track-mono.webp";
-$default13 = "images/badges/outline-mono-v2.webp";
-$default14 = "images/badges/journey-mono.webp";
-$default15 = "images/badges/dual-wielder-mono.webp";
-$default16 = "images/badges/starting-fresh-mono.webp";
-$default17 = "images/badges/ever-persist-mono.webp";
-$default18 = "images/badges/back-it-up-mono.webp";
-$default19 = "images/badges/gathering-mono.webp";
-$default20 = "images/badges/hear-ye-mono.webp";
-$default21 = "images/badges/breakthrough-mono.webp";
-$default22 = "images/badges/touch-grass-mono.webp";
-$default23 = "images/badges/business-mono.webp";
-$default24 = "images/badges/tears-wept-mono.webp";
-$default25 = "images/badges/cross-finish-mono.webp";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -193,70 +8,33 @@ $default25 = "images/badges/cross-finish-mono.webp";
     <meta property="og:image" content="http://www.elsewherewriters.com/images/comp-cat-beta.webp"> 
     <meta property="og:url" content="http://www.elsewherewriters.com/index">
     <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/progressBar.css">
-    <link rel="website icon" type="webp" href="images/comp-cat-beta.webp">
+    <link rel="stylesheet" href="mf-css/style.css">
+    <link rel="stylesheet" href="mf-css/home.css">
+    <link rel="stylesheet" href="mf-css/progressBar.css">
+    <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
-    <script src="js/badges.js"></script>
-    <script src="js/activeProject.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="body">
-    <!-- //* POPUP FOR CHOOSING ACTIVE PROJECTS-->
-     <!-- //! ADD IF CONDITION TO REMOVE SELECTOR WHEN NO PROJECTS HAVE BEEN MADE -->
+    <!--* POPUP FOR CHOOSING ACTIVE PROJECTS-->
     <div class="project-select-popup-wrapper" id="project-popup">
         <div class="project-select-popup"><div class="close-wrapper">
                 <i class="fa fa-close" onclick="hideProjectPopup()"></i>
             </div>
-            <?php
-            //* Pull active project data
-            $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
-                $result = $_SESSION["conn"]->query($sql);
-                    if ($result->num_rows > 0) {
-                        while ($rows = $result->fetch_assoc()) {
-                            $projectID = $rows["id"];
-                            $title = $rows["title"];
-                            $genre = $rows["genre"];
-                            $currentDisplay = $rows["display"];
-                            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
-                            $current_count = $rows["current_count"];
-                            $goal = $rows["goal"];
-                            $progress = floor($current_count / $goal * 100);
-                            $now = time();
-                            $your_date = strtotime($goalDate);
-                            $datediff = $your_date - $now;
-                            $interval = round($datediff / (60 * 60 * 24)); 
-                                if ($goalDate == "0000-00-00" || !$goalDate) {
-                                    $days = "No Goal Date Set";
-                                } elseif (isset($goalDate)&& $goalDate !== "0000-00-00") {
-                                    $days = $interval;
-                                    if ($days == 0) {
-                                        $days = "Final Day!";
-                                    } elseif ($days < 0) {
-                                        $days = "Project Past Due!";
-                                    }
-                                }
-                        // if ($currentDisplay == "inactive") {
-                        //     $currentDisplay = "hide";
-                        // }
-                        ?>
-            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>', '<?= $currentDisplay ?>')">
-                <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
+            <div class="project-select-content" onclick="hideProjectPopup()">
+                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
                 <div class="project-info">
-                    <h3 id="popup-project-title"><i class="fa fa-star <?= $currentDisplay ?>" id="<?= $currentDisplay ?>" alt="star icon"></i> 
-                        <?= $title ?></h3>
+                    <h3 id="popup-project-title"><i class="fa fa-star" id="star-icon" alt="star icon"></i> 
+                        PH-Project 1</h3>
                     <div class="project-stats">
-                        <p id="popup-goal">Goal: <?= $current_count ?>/<?= $goal ?></p>
-                        <p><?= $progress ?>%</p>
-                        <p id="popup-days-left"><?= $days ?></p>
+                        <p id="popup-goal">Goal: 10,000/50,00</p>
+                        <p id="popup-days-left">Days Left: Some</p>
                     </div>
                 </div>
             </div>
-            <?php }}else { ?>
             <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src="images/genre-covers/placeholder(v3).webp" alt="genre cover image">
+                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
                         Let's Give this One an Obnoxiously Long Title to Test What the Overflow Will do</h3>
@@ -266,18 +44,51 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                 </div>
             </div>
-            <?php } ?>
+            <div class="project-select-content" onclick="hideProjectPopup()">
+                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
+                <div class="project-info">
+                    <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
+                        PH-Project 3</h3>
+                    <div class="project-stats">
+                        <p id="popup-goal">Goal: 10,000/50,00</p>
+                        <p id="popup-days-left">Days Left: Some</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-select-content" onclick="hideProjectPopup()">
+                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
+                <div class="project-info">
+                    <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
+                        PH-Project 4</h3>
+                    <div class="project-stats">
+                        <p id="popup-goal">Goal: 10,000/50,00</p>
+                        <p id="popup-days-left">Days Left: Some</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-select-content" onclick="hideProjectPopup()">
+                <img class="popup-image" src="../images/genre-covers/placeholder(v3).webp" alt="genre cover image">
+                <div class="project-info">
+                    <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
+                        PH-Project 5</h3>
+                    <div class="project-stats">
+                        <p id="popup-goal">Goal: 10,000/50,00</p>
+                        <p id="popup-days-left">Days Left: Some</p>
+                    </div>
+                </div>
+            </div>
             <div class="button-wrapper">
-                <script>
-                    //* reloads the page after selecting a project through ajax
-                    function refresh(){
-                        location.reload();
-                    }
-                </script>
-                <button id="save" onclick="refresh()">Save</button>
+                <button id="save" onclick="hideProjectPopup()">Save</button>
             </div>
         </div>
     </div>
+    <!--* SETTINGS POPUP-->
+    <!-- <div class="settings-popup-wrapper" id="settings-popup">
+        <div class="settings-popup">
+
+        </div>
+    </div> -->
+    <!--* WORD COUNT UPDATE POPUP-->
     <div class="count-update-wrapper" id="count-update-popup">
         <div class="count-update-popup">
             <div class="close-wrapper">
@@ -301,16 +112,90 @@ $default25 = "images/badges/cross-finish-mono.webp";
             </form>
         </div>
     </div>
-    <!-- //* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
+    <!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
-        <?php makeNav() ?>
+        <div class="logo">
+                <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
+        </div>
+        <nav>
+            <div class="nav-bar"> <!--* DESKTOP NAVIGATION--> 
+                <div class="desktop-navContent">
+                    <a href="index.html">Home</a>
+                    <div class="projects-container">
+                        <a>Projects</a>
+                        <div class="projects-dropdown"> <!--*Projects dropdown-->
+                            <a href="newProject.html">Create New Project</a>
+                            <a href="archives.html">Current/Past Projects</a>
+                        </div>
+                    </div>
+                    <a href="announcements.html">News</a>
+                    <a href="about.html">About</a>
+                    <div class="desktop-user hide" id="user-not-logged-in">
+                        <a href="login.html" id="login">Login</a>
+                    </div>
+                    <div class="desktop-user" id="user-logged-in">
+                        <img src="../images/dragon/dragon-0.webp" alt="user profile picture">
+                        <div class="user-content"> <!--* User Dropdown-->
+                            <a href="profile.html">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
+                            <a href="settings.html">Settings <i class="fa fa-gear" id="setting-icon" alt="setting icon"></i></a>
+                            <a href="login.html">Logout <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--* MOBILE NAVIGATION-->
+                <div class="mobileNav" id="mobileNav">
+                    <div class="menu-icon-wrapper">
+                        <div id="menu-bar-1" class="menu-bar"></div>
+                        <div id="menu-bar-3" class="menu-bar"></div>
+                        <div id="menu-bar-3" class="menu-bar"></div>
+                    </div>
+                    <div class="navMenu slide-right close" id="navMenu"> <!--* Dropdown-->
+                        <div class="navContent">
+                            <a href="index.html">Home 
+                                <i class="fa fa-home" id="home-icon" alt="home icon"></i></a>
+                            <!-- <a href="#" id="profile-link">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a> -->
+                            <div class="projects">
+                                <a href="newProject.html">New Project 
+                                    <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
+                                <a href="archives.html">Archive 
+                                    <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
+                            </div>
+                            <a href="announcements.html">News
+                                <i class="fa fa-bullhorn" id="announcements-icon" alt="megaphone icon"></i></a>
+                            <a href="about.html">About 
+                                <i class="fa fa-question" id="about-icon" alt="question mark icon"></i></a>
+                            <a href="settings.html">Settings 
+                                <i class="fa fa-gear" id="setting-icon" alt="gear icon"></i></a>
+                            <a href="login.html" id="login-link">Logout 
+                                <i class="fa fa-sign-out" id="logout-icon" alt="logout icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="user" id="user">
+                    <a href="profile.html"><img src="../images/dragon/dragon-0.webp" alt="user profile picture"></a>
+                    <!-- <a href="login.html"><h2>Login</h2></a> -->
+                </div>
+            </div>
+        </nav>
     </header>
-    <!-- //* BUTTON FOR SELECTING ACTIVE PROJECT TO SEE -->
+    <!--* Banner for if user is not logged in-->
+    <!--! Removed bc unneeded-->
+    <!-- <div class="container">
+        <div class="not-logged-in hide" id="not-logged-in">
+            <p>Psst, hey you. 
+            <br>
+            If you already have an account just click the Login link above. 
+            <br>    
+            If you're new, click <a href="account-create.html">here</a> to sign up and 
+                start earning badges!</p>
+        </div>
+    </div> -->
+    <!--* BUTTON FOR SELECTING ACTIVE PROJECT TO SEE -->
     <div class="project-select-wrapper">
         <div class="project-select" onclick="showProjectPopup()">Switch Project <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i>
         </div>
     </div>
-    <!-- //* PROGRESS BAR-->
+    <!--* PROGRESS BAR-->
     <div class="pb-wrapper">
         <div class="pb-background">
             <h1>Project Progress</h1>
@@ -321,27 +206,28 @@ $default25 = "images/badges/cross-finish-mono.webp";
             <div class="progress-info-wrapper">
                 <div id="current" class="progress-info">
                     <h2>Current:</h2>
-                    <p><?= $displayCount ?>/<?= $displayGoal ?></p>
+                    <p>10,000</p>
                 </div>
                 <div id="daysLeft" class="progress-info">
                     <h2>Days Left:</h2>
-                    <p><?= $displayDays ?></p>
+                    <p>Some</p>
                 </div>
                 <div id="dailyGoal" class="progress-info">
                     <h2>Daily Goal:</h2>
-                    <p><?= $displayDailyGoal ?></p>
+                    <p>100</p>
                 </div>
                 <div id="goal" class="progress-info">
-                    <h2>Percentage:</h2>
-                    <p><?= $displayPercentage ?>%</p>
+                    <h2>Goal:</h2>
+                    <p>50,000</p>
                 </div>
             </div>
             <div class="added">
+                <!-- <span class="fa fa-gear" id="edit-pb" onclick="showProjectSettings()"></span> -->
                 <span class="fa fa-plus" id="updateCount" onclick="showUpdateWords()"></span>
             </div>
         </div>
     </div>
-    <!-- //* CURRENT PROJECT OVERVIEW AND INFO-->
+    <!--* CURRENT PROJECT OVERVIEW AND INFO-->
     <div class="main-wrapper">
         <div class="current-project-wrapper">
             <div class="current-project-container">
@@ -350,174 +236,133 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 </div>
                 <div class="progress-info-container">
                     <div id="project-img">
-                        <img src=<?= $displayGenrePicture ?> id="theme-img">
+                        <img src="../images/genre-covers/placeholder(v3).webp" id="theme-img">
                     </div>
-                    <div id="project-title">
-                        <h2><?= $displayTitle ?></h2>
-                    </div>
+                    <!-- <div id="project-title">
+                        <h2>Title</h2>
+                    </div> -->
                     <div id="project-summary">
-                        <!-- <p>Looks like you don't have any active projects.
+                        <p>Looks like you don't have any active projects.
                             <br><br>
-                            Click <a href="newProject.php">here</a> to get started!
+                            Click <a href="newProject.html">here</a> to get started!
+                        </p>
+                        <!-- <p id="summary-text">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex 
+                            sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis 
+                            convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus 
+                            fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada 
+                            lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti 
+                            sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci 
+                            varius natoque penatibus et magnis dis parturient montes nascetur
                         </p> -->
-                        <p id="summary-text"><?= $displayInfo ?></p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- //* BADGES-->
+        <!--* BADGES-->
         <div class="badge-container">
             <h1 id="badge-title">Badges</h1>
             <h4 class="instruction">These badges are earned automatically</h4>
-        <!-- //* Automatic Badges -->
             <div class="auto-badges">
-            <!-- //* Row One -->
+                <!--* Row One -->
                 <div class="auto-row rows">
-                    <!-- //* Quarter Quomplete-->
+                    <!--* Quarter Quomplete-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge1) {
-                            echo $badge1;
-                        }else{
-                            echo $default1;
-                        } ?>" id="quarter-quomplete" class="badge pulse">
+                        <img src="../images/badges/quarter-quomplete-mono.webp" id="quarter-quomplete" class="badge pulse">
                         <div class="badgeToPopup" id="quarter-quomplete-popup">
                             <h4>Quarter Quomplete</h4>
                             <p>Reached the 25% mark! That's a quarter of the way there!</p>
                         </div>
                     </div>
-                    <!-- //* Half Way-->
+                    <!--* Half Way-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge2) {
-                            echo $badge2;
-                        }else{
-                            echo $default2;
-                        } ?>" id="half-way" class="badge pulse">
+                        <img src="../images/badges/half-way-mono.webp" id="half-way" class="badge pulse">
                         <div class="badgeToPopup" id="half-way-popup">
                             <h4>Half-Way There, Woah!<br>Livin' on a-</h4>
                             <p>Reached the 50% mark<br>on your current project.<br>Good job!</p>
                         </div>
                     </div>
-                    <!-- //* All Downhill-->
+                    <!--* All Downhill-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge3) {
-                            echo $badge3;
-                        }else{
-                            echo $default3;
-                        } ?>" id="all-downhill" class="badge pulse">
+                        <img src="../images/badges/all-downhill-mono.webp" id="all-downhill" class="badge pulse">
                         <div class="badgeToPopup" id="all-downhill-popup">
                             <h4>All Downhill From Here</h4>
                             <p>Reached 75%!<br>You're so close!</p>
                         </div>
                     </div>
-                    <!-- //* Cross Finish-->
+                    <!--* Cross Finish-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge4) {
-                            echo $badge4;
-                        }else{
-                            echo $default4;
-                        } ?>" id="cross-finish" class="badge pulse">
+                        <img src="../images/badges/cross-finish-mono.webp" id="cross-finish" class="badge pulse">
                         <div class="badgeToPopup" id="cross-finish-popup">
                             <h4>Crossed the Finish Line!</h4>
                             <p>Reached 100% on your current project!<br>YOU DID IT, YAY!!!</p>
                         </div>
                     </div>
                 </div>
-            <!-- //* Row Two -->
+                <!--* Row Two -->
                 <div class="auto-row rows">
-                    <!-- //* 2 Day Streak-->
+                    <!--* 2 Day Streak-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge5) {
-                            echo $badge5;
-                        }else{
-                            echo $default5;
-                        } ?>" id="streak-two" class="badge pulse">
+                        <img src="../images/badges/streak-two-mono.webp" id="streak-two" class="badge pulse">
                         <div class="badgeToPopup" id="streak-two-popup">
                             <h4>2-Day Streak</h4>
                             <p>The start of a beautiful streak</p>
                         </div>
                     </div>
-                    <!-- //* 3 Day Streak-->
+                    <!--* 3 Day Streak-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge6) {
-                            echo $badge6;
-                        }else{
-                            echo $default6;
-                        } ?>" id="streak-three" class="badge pulse">
+                        <img src="../images/badges/streak-three-mono.webp" id="streak-three" class="badge pulse">
                         <div class="badgeToPopup" id="streak-three-popup">
                             <h3>3-Day Streak</h3>
                             <p>Third time's the charm</p>
                         </div>
                     </div>
-                    <!-- //* 7 Day Streak-->
+                    <!--* 7 Day Streak-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge7) {
-                            echo $badge7;
-                        }else{
-                            echo $default7;
-                        } ?>" id="streak-seven" class="badge pulse">
+                        <img src="../images/badges/streak-seven-mono.webp" id="streak-seven" class="badge pulse">
                         <div class="badgeToPopup" id="streak-seven-popup">
                             <h4>7-Day Streak</h4>
                             <p>One whole week!</p>
                         </div>
                     </div>
-                    <!-- //* 14 Day Streak-->
+                    <!--* 14 Day Streak-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge8) {
-                            echo $badge8;
-                        }else{
-                            echo $default8;
-                        } ?>" id="streak-fourteen" class="badge pulse">
+                        <img src="../images/badges/streak-fourteen-mono.webp" id="streak-fourteen" class="badge pulse">
                         <div class="badgeToPopup" id="streak-fourteen-popup">
                             <h4>14-Day Streak</h4>
                             <p>TWO whole weeks!!</p>
                         </div>
                     </div>
-                    <!-- //* 21 Day Streak-->
+                    <!--* 21 Day Streak-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge9) {
-                            echo $badge9;
-                        }else{
-                            echo $default9;
-                        } ?>" id="streak-twentyOne" class="badge pulse">
+                        <img src="../images/badges/streak-twentyOne-mono.webp" id="streak-twentyOne" class="badge pulse">
                         <div class="badgeToPopup" id="streak-twentyOne-popup">
                             <h4>21-Day Streak</h4>
                             <p>THREE WHOLE WEEKS!!!</p>
                         </div>
                     </div>
                 </div>
-            <!-- //* Row Three -->
+                <!--* Row Three -->
                 <div class="auto-row rows">
-                    <!-- //* First Daily-->
+                    <!--* First Daily-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge10) {
-                            echo $badge10;
-                        }else{
-                            echo $default10;
-                        } ?>" id="first-daily" class="badge pulse">
+                        <img src="../images/badges/first-daily-mono.webp" id="first-daily" class="badge pulse">
                         <div class="badgeToPopup" id="first-daily-popup">
                             <h4>First Daily</h4>
                             <p>Reached your daily goal for the first time on this project</p>
                         </div>
                     </div>
-                    <!-- //* Full Streak-->
+                    <!--* Full Streak-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge11) {
-                            echo $badge11;
-                        }else{
-                            echo $default11;
-                        } ?>" id="every-streak" class="badge pulse">
+                        <img src="../images/badges/every-streak-mono.webp" id="every-streak" class="badge pulse">
                         <div class="badgeToPopup" id="every-streak-popup">
                             <h4>Every Day Streak</h4>
                             <p>Congrats, you've worked on your project every day!</p>
                         </div>
                     </div>
-                    <!-- //* Stayed on Track-->
+                    <!--* Stayed on Track-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge12) {
-                            echo $badge12;
-                        }else{
-                            echo $default12;
-                        } ?>" id="on-track" class="badge pulse">
+                        <img src="../images/badges/on-track-mono.webp" id="on-track" class="badge pulse">
                         <div class="badgeToPopup" id="on-track-popup">
                             <h4>Stayed on Track</h4>
                             <p>Reached your daily goal every day over the course of the project</p>
@@ -525,169 +370,116 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                 </div>
             </div>
-        <!-- //* Toggleable Badges -->
             <div class="toggle-badges">
                 <h4 class="instruction">You can award yourself these badges</h4>
-            <!-- //* Row One -->
+                <!--* Row One -->
                 <div class="toggle-row rows">
-                    <!-- //* Outlined-->
+                    <!--* Outlined-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge13) {
-                            echo $badge13;
-                        }else{
-                            echo $default13;
-                        } ?>" id="outline" class="badge pulse">
+                        <img src="../images/badges/outline-mono-v2.webp" id="outline" class="badge pulse">
                         <div class="badgeToPopup" id="outline-popup">
                             <h4>Know Where Ya Goin'</h4>
                             <p>Started your project with an outline.</p>
                         </div>
                     </div>
-                    <!-- //* Pantser/Journey-->
+                    <!--* Pantser/Journey-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge14) {
-                            echo $badge14;
-                        }else{
-                            echo $default14;
-                        } ?>" id="journey" class="badge pulse">
+                        <img src="../images/badges/journey-mono.webp" id="journey" class="badge pulse">
                         <div class="badgeToPopup" id="journey-popup">
                             <h4>It's All About The Journey</h4>
                             <p>The only plan you have is to explore and discover the project along the way</p>
                         </div>
                     </div>
-                    <!-- //* Dual Wielding-->
+                    <!--* Dual Wielding-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge15) {
-                            echo $badge15;
-                        }else{
-                            echo $default15;
-                        } ?>" id="dual-wielder" class="badge pulse">
+                        <img src="../images/badges/dual-wielder-mono.webp" id="dual-wielder" class="badge pulse">
                         <div class="badgeToPopup" id="dual-wielder-popup">
                             <h4>Dual Wielder</h4>
                             <p>Your special sauce is ??% planning and ??% exploration, you'll never tell how much of each</p>
                         </div>
                     </div>
-                    <!-- //* Fresh Project-->
+                    <!--* Fresh Project-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge16) {
-                            echo $badge16;
-                        }else{
-                            echo $default16;
-                        } ?>" id="starting-fresh" class="badge pulse">
+                        <img src="../images/badges/starting-fresh-mono.webp" id="starting-fresh" class="badge pulse">
                         <div class="badgeToPopup" id="starting-fresh-popup">
                             <h4>Starting Fresh</h4>
                             <p>Created a brand new project!</p>
                         </div>
                     </div>
                 </div>
-            <!-- //* Row Two -->
+                <!--* Row Two -->
                 <div class="toggle-row rows">
-                    <!-- //* Returning to WIP-->
+                    <!--* Returning to WIP-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge17) {
-                            echo $badge17;
-                        }else{
-                            echo $default17;
-                        } ?>" id="ever-persist" class="badge pulse">
+                        <img src="../images/badges/ever-persist-mono.webp" id="ever-persist" class="badge pulse">
                         <div class="badgeToPopup" id="ever-persist-popup">
                             <h4>Ever Persistent</h4>
                             <p>You Returned to a WIP!</p>
                         </div>
                     </div>
-                    <!-- //* Backed up Project-->
+                    <!--* Backed up Project-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge18) {
-                            echo $badge18;
-                        }else{
-                            echo $default18;
-                        } ?>" id="back-it-up" class="badge pulse">
+                        <img src="../images/badges/back-it-up-mono.webp" id="back-it-up" class="badge pulse">
                         <div class="badgeToPopup" id="back-it-up-popup">
                             <h4>Back It Up!</h4>
                             <p>You never know when The Horrors will hit your computer, but you're 
                                 ready!<br>Project backed up!</p>
                         </div>
                     </div>
-                    <!-- //* Guild Hall Gathering-->
+                    <!--* Guild Hall Gathering-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge19) {
-                            echo $badge19;
-                        }else{
-                            echo $default19;
-                        } ?>" id="gathering" class="badge pulse">
+                        <img src="../images/badges/gathering-mono.webp" id="gathering" class="badge pulse">
                         <div class="badgeToPopup" id="gathering-popup">
                             <h4>Guildhall Gathering</h4>
                             <p>You participated in a Write In or Sprint!</p>
                         </div>
                     </div>
-                    <!-- //* Hear Ye-->
+                    <!--* Hear Ye-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge20) {
-                            echo $badge20;
-                        }else{
-                            echo $default20;
-                        } ?>" id="hear-ye" class="badge pulse">
+                        <img src="../images/badges/hear-ye-mono.webp" id="hear-ye" class="badge pulse">
                         <div class="badgeToPopup" id="hear-ye-popup">
                             <h4>Hear Ye! Hear Ye!</h4>
                             <p>You've told someone about your goal, whether a close friend or the whole world!</p>
                         </div>
                     </div>
-                    <!-- //* Breakthrough-->
+                    <!--* Breakthrough-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge21) {
-                            echo $badge21;
-                        }else{
-                            echo $default21;
-                        } ?>" id="breakthrough" class="badge pulse">
+                        <img src="../images/badges/breakthrough-mono.webp" id="breakthrough" class="badge pulse">
                         <div class="badgeToPopup" id="breakthrough-popup">
                             <h4>Breakthrough Moment</h4>
                             <p>Whatever was giving you trouble on this project, you've just figured it out!</p>
                         </div>
                     </div>
                 </div>
-            <!-- //* Row Three -->
+                <!--* Row Three -->
                 <div class="toggle-row rows">
-                    <!-- //* Touch Grass-->
+                    <!--* Touch Grass-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge22) {
-                            echo $badge22;
-                        }else{
-                            echo $default22;
-                        } ?>" id="touch-grass" class="badge pulse">
+                        <img src="../images/badges/touch-grass-mono.webp" id="touch-grass" class="badge pulse">
                         <div class="badgeToPopup" id="touch-grass-popup">
                             <h4>Touched Grass</h4>
                             <p>You made sure to go outside and get some of that sweet, sweeet vitamin D.</p>
                         </div>
                     </div>
-                    <!-- //* Took Care of Business-->
+                    <!--* Took Care of Business-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge23) {
-                            echo $badge23;
-                        }else{
-                            echo $default23;
-                        } ?>" id="business" class="badge pulse">
+                        <img src="../images/badges/business-mono.webp" id="business" class="badge pulse">
                         <div class="badgeToPopup" id="business-popup">
                             <h4>Took Care of Business</h4>
                             <p>You took care of your other responsibilities, like dishes or homework. All those boring things no one wants to do.</p>
                         </div>
                     </div>
-                    <!-- //* Tears Were Wept-->
+                    <!--* Tears Were Wept-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge24) {
-                            echo $badge24;
-                        }else{
-                            echo $default24;
-                        } ?>" id="tears-wept" class="badge pulse">
+                        <img src="../images/badges/tears-wept-mono.webp" id="tears-wept" class="badge pulse">
                         <div class="badgeToPopup" id="tears-wept-popup">
                             <h4>Tears Were Wept</h4>
                             <p>Either the creation or the process itself made you cry.</p>
                         </div>
                     </div>
-                    <!-- //* Finished Project-->
+                    <!--* Finished Project-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge25) {
-                            echo $badge25;
-                        }else{
-                            echo $default25;
-                        } ?>" id="finish-him" class="badge pulse">
+                        <img src="../images/badges/finish-him-mono.webp" id="finish-him" class="badge pulse">
                         <div class="badgeToPopup" id="finish-him-popup">
                             <h4><em>Finish Him</em></h4>
                             <p>You fully completed this project during this challenge.<br>WIP no more!</p>
@@ -711,10 +503,17 @@ $default25 = "images/badges/cross-finish-mono.webp";
             </div>
         </div>
     </div>
-    <!-- //* FOOTER-->
-    <!-- //! Keep link to logo artist for permission to use-->
-    <?php makeFooter() ?>
+    <!--* FOOTER-->
+    <!--! Keep link to logo artist for permission to use-->
+    <footer id="footer">
+        <p id="copyright">&copy;2025. All rights reserved.</p>
+        <p id="logo-link">Logo by <a href="https://kohacu.com/20181205post-22321/">Kohaku!</a></p>
+        <p id="contact"><a href="contact.html">Contact Us</a></p>
+    </footer>
     <script>
+        function userClick() {
+            document.getElementById('userDropdown').classList.toggle('show');
+        }
 // BADGE POPUPS
     const elementToHover1 = document.getElementById('first-daily');
     const elementToPopup1 = document.getElementById('first-daily-popup');
