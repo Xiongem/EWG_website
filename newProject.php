@@ -154,7 +154,7 @@ forceLogin();
             console.log("function");	
             var currentText = $(this).val();
             console.log("variable");
-            var date = currentText.toLocaleDateString('es-pa');		
+            var date = new Date(currentText).toLocaleDateString('es-pa');		
             // Setting the Span content
             $("#preview-date").text(date);
             console.log(endDate.value);
