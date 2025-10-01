@@ -14,9 +14,7 @@ $userID = $_SESSION["user_id"];
 $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
     
-    
-
-    
+    print_r($result);
 ?>
 
 <!DOCTYPE html>
