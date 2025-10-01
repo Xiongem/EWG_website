@@ -119,6 +119,10 @@ forceLogin();
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
 <script>
+    function thing() {
+            var endDate = document.getElementById("endDate");
+            console.log(endDate.value);
+        };
     $(document).ready(function(){
         //* Title
         $("#title").keyup(function(){
@@ -151,14 +155,7 @@ forceLogin();
             // Setting the Span content
             $("#preview-date").text(currentText);
         });
-
-        function thing() {
-            var endDate = document.getElementById("endDate");
-            console.log(endDate.value);
-        };
         
-        
-
         //* Summary
         $("#summary").keyup(function(){
             // Getting the current value of input
