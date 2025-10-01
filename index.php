@@ -10,7 +10,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
 //* If user is logged in
-if ($_SESSION["user_id"]) {
+if (isset($_SESSION["user_id"])) {
     $userID = htmlspecialchars($_SESSION["user_id"]);
 
     //* Pull User Info
