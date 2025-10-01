@@ -182,6 +182,7 @@
     }
     #cancel {
         display: block;
+        cursor: pointer;
     }
 }
 input:invalid {
