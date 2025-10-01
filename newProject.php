@@ -150,8 +150,10 @@ forceLogin();
 
         //* Summary
         $("#endDate").on('click', function(){
-            // Getting the current value of input	
-            var currentText = $(this).val();	
+            // Getting the current value of input
+            onsole.log("function");	
+            var currentText = $(this).val();
+            onsole.log("variable");		
             // Setting the Span content
             $("#preview-date").text(currentText);
         });
