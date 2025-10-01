@@ -135,7 +135,9 @@ forceLogin();
     }
     function findDailyGoal(){
         var goal=document.getElementById( "goalNumber" ).value;
-        goal.replace(/,/g,"");
+        var newGoal = goal.replace(/,/g,"");
+        console.log(newGoal);
+        
         var goalDate=document.getElementById( "endDate" ).value;
         
         if(goalDate){
@@ -143,7 +145,7 @@ forceLogin();
             type: 'post',
             url: 'php-processes/math',
             data: {
-                goal: goal,
+                newGoal: newGoal,
                 goalDate: goalDate,
             },
             success: function (data) {

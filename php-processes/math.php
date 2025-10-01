@@ -5,8 +5,8 @@
 // require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 // dbConnect();
 
-if (isset($_POST['goal'])&& isset($_POST['goalDate'])) {
-    $goal = $_POST["goal"];
+if (isset($_POST['newGoal'])&& isset($_POST['goalDate'])) {
+    $goal = $_POST["newGoal"];
     $goalDate = $_POST["goalDate"];
 
     $now = time();
