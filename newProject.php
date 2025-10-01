@@ -125,6 +125,8 @@ forceLogin();
         if (checkBox.checked == true) {
             document.getElementById("endDate").disabled = true;
             document.getElementById("endDate").value = "";
+
+            $("#preview-date-wrapper").classList.add("hide");
         } else if (checkBox.checked == false) {
             document.getElementById("endDate").disabled = false;
         }
@@ -132,8 +134,6 @@ forceLogin();
         var goal = parseInt(document.getElementById("goalNumber").value);
         var recommendation = Math.floor(goal / dailyGoal);
         document.getElementById("recommend").innerHTML = "Recommended number: " + recommendation;
-
-        $("#preview-date-wrapper").classList.add("hide");
     }
     function findDailyGoal(){
         var goal=document.getElementById( "goalNumber" ).value;
