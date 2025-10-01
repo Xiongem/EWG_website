@@ -151,6 +151,9 @@ forceLogin();
             // Setting the Span content
             $("#preview-datey").text(currentText);
         });
+        var endDate = document.getElementById("endDate");
+        console.log(endDate.value);
+        
 
         //* Summary
         $("#summary").keyup(function(){
