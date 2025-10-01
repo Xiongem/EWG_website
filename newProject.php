@@ -149,7 +149,7 @@ forceLogin();
         });
 
         //* Summary
-        $("#endDate").keyup(function(){
+        $("#endDate").onchange(function(){
             // Getting the current value of input
             var currentText = $(this).val();		
             // Setting the Span content
