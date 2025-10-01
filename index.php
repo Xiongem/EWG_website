@@ -65,10 +65,10 @@ if ($_SESSION["user_id"]) {
                             }
                         //* Percentage bar math
                             if (empty($displayCount) || empty($displayGoal)) {
-                                $displayProgress = 4;
+                                $displayProgress = 3;
                                 $displayPercentage = 0;
-                            } elseif (floor($displayCount / $displayGoal * 100)<=4) {
-                                $displayProgress = 4;
+                            } elseif (floor($displayCount / $displayGoal * 100)<=3) {
+                                $displayProgress = 3;
                                 $displayPercentage = $displayPercentage;
                             } else {
                                 $displayProgress = floor($displayCount / $displayGoal * 100);
@@ -130,10 +130,10 @@ if ($_SESSION["user_id"]) {
                             }
                             //* Percentage bar math
                             if (empty($displayCount) || empty($displayGoal)) {
-                                $displayProgress = 4;
+                                $displayProgress = 3;
                                 $displayPercentage = 0;
-                            } elseif (floor($displayCount / $displayGoal * 100)<=4) {
-                                $displayProgress = 4;
+                            } elseif (floor($displayCount / $displayGoal * 100)<=3) {
+                                $displayProgress = 3;
                                 $displayPercentage = $displayPercentage;
                             } else {
                                 $displayProgress = floor($displayCount / $displayGoal * 100);
@@ -225,7 +225,6 @@ $default25 = "images/badges/cross-finish-mono.webp";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<?php if ($_SESSION["user_id"]== 7) { ?>
 <body id="body">
     <!-- //* POPUP FOR CHOOSING ACTIVE PROJECTS-->
      <!-- //! ADD IF CONDITION TO REMOVE SELECTOR WHEN NO PROJECTS HAVE BEEN MADE -->
@@ -304,19 +303,19 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <i class="fa fa-close" onclick="hideUpdateWords()"></i>
             </div>
             <h2>Update Word Count</h2>
-            <form action="update-wordCount.php" method="post">
+            <form action="" method="">
                 <div class="count-type-select-wrapper">
-                    <select class="count-type-select" id="wordCount" name="wordCount">
+                    <select class="count-type-select">
                         <p>Add/Replace Total <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i></p>
                         <div class="count-type-dropdown">
-                            <option class="count-type-list" id="replace" value="replace">replace total</option>
-                            <option class="count-type-list" id="add" value="add">Add to total</option>
+                            <option class="count-type-list" id="replace">replace total</option>
+                            <option class="count-type-list" id="add">Add to total</option>
                         </div>
                     </select>
                     <input type="text" pattern="^\d+(,\d+)?$" id="updateWordCount" name="updateWordCount">
                 </div>
                 <div class="button-wrapper">
-                    <button class="save" type="submit">Save</button>
+                    <button class="save" onclick="hideUpdateWords()">Save</button>
                 </div>
             </form>
         </div>
@@ -402,7 +401,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge1;
                         }else{
                             echo $default1;
-                        } ?>" id="quarter-quomplete" class="badge">
+                        } ?>" id="quarter-quomplete" class="badge pulse">
                         <div class="badgeToPopup" id="quarter-quomplete-popup">
                             <h4>Quarter Quomplete</h4>
                             <p>Reached the 25% mark! That's a quarter of the way there!</p>
@@ -414,7 +413,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge2;
                         }else{
                             echo $default2;
-                        } ?>" id="half-way" class="badge">
+                        } ?>" id="half-way" class="badge pulse">
                         <div class="badgeToPopup" id="half-way-popup">
                             <h4>Half-Way There, Woah!<br>Livin' on a-</h4>
                             <p>Reached the 50% mark<br>on your current project.<br>Good job!</p>
@@ -426,7 +425,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge3;
                         }else{
                             echo $default3;
-                        } ?>" id="all-downhill" class="badge">
+                        } ?>" id="all-downhill" class="badge pulse">
                         <div class="badgeToPopup" id="all-downhill-popup">
                             <h4>All Downhill From Here</h4>
                             <p>Reached 75%!<br>You're so close!</p>
@@ -438,7 +437,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge4;
                         }else{
                             echo $default4;
-                        } ?>" id="cross-finish" class="badge">
+                        } ?>" id="cross-finish" class="badge pulse">
                         <div class="badgeToPopup" id="cross-finish-popup">
                             <h4>Crossed the Finish Line!</h4>
                             <p>Reached 100% on your current project!<br>YOU DID IT, YAY!!!</p>
@@ -453,7 +452,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge5;
                         }else{
                             echo $default5;
-                        } ?>" id="streak-two" class="badge">
+                        } ?>" id="streak-two" class="badge pulse">
                         <div class="badgeToPopup" id="streak-two-popup">
                             <h4>2-Day Streak</h4>
                             <p>The start of a beautiful streak</p>
@@ -465,7 +464,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge6;
                         }else{
                             echo $default6;
-                        } ?>" id="streak-three" class="badge">
+                        } ?>" id="streak-three" class="badge pulse">
                         <div class="badgeToPopup" id="streak-three-popup">
                             <h3>3-Day Streak</h3>
                             <p>Third time's the charm</p>
@@ -477,7 +476,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge7;
                         }else{
                             echo $default7;
-                        } ?>" id="streak-seven" class="badge">
+                        } ?>" id="streak-seven" class="badge pulse">
                         <div class="badgeToPopup" id="streak-seven-popup">
                             <h4>7-Day Streak</h4>
                             <p>One whole week!</p>
@@ -489,7 +488,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge8;
                         }else{
                             echo $default8;
-                        } ?>" id="streak-fourteen" class="badge">
+                        } ?>" id="streak-fourteen" class="badge pulse">
                         <div class="badgeToPopup" id="streak-fourteen-popup">
                             <h4>14-Day Streak</h4>
                             <p>TWO whole weeks!!</p>
@@ -501,7 +500,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge9;
                         }else{
                             echo $default9;
-                        } ?>" id="streak-twentyOne" class="badge">
+                        } ?>" id="streak-twentyOne" class="badge pulse">
                         <div class="badgeToPopup" id="streak-twentyOne-popup">
                             <h4>21-Day Streak</h4>
                             <p>THREE WHOLE WEEKS!!!</p>
@@ -516,7 +515,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge10;
                         }else{
                             echo $default10;
-                        } ?>" id="first-daily" class="badge">
+                        } ?>" id="first-daily" class="badge pulse">
                         <div class="badgeToPopup" id="first-daily-popup">
                             <h4>First Daily</h4>
                             <p>Reached your daily goal for the first time on this project</p>
@@ -528,7 +527,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge11;
                         }else{
                             echo $default11;
-                        } ?>" id="every-streak" class="badge">
+                        } ?>" id="every-streak" class="badge pulse">
                         <div class="badgeToPopup" id="every-streak-popup">
                             <h4>Every Day Streak</h4>
                             <p>Congrats, you've worked on your project every day!</p>
@@ -540,7 +539,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge12;
                         }else{
                             echo $default12;
-                        } ?>" id="on-track" class="badge">
+                        } ?>" id="on-track" class="badge pulse">
                         <div class="badgeToPopup" id="on-track-popup">
                             <h4>Stayed on Track</h4>
                             <p>Reached your daily goal every day over the course of the project</p>
@@ -560,7 +559,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default13;
                         } ?>" id="outline" class="badge pulse"
-                        onclick="checkToggle('outline')">
+                        onclick="toggleImage16()">
                         <div class="badgeToPopup" id="outline-popup">
                             <h4>Know Where Ya Goin'</h4>
                             <p>Started your project with an outline.</p>
@@ -573,7 +572,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default14;
                         } ?>" id="journey" class="badge pulse"
-                        onclick="checkToggle('journey')">
+                        onclick="toggleImage17()">
                         <div class="badgeToPopup" id="journey-popup">
                             <h4>It's All About The Journey</h4>
                             <p>The only plan you have is to explore and discover the project along the way</p>
@@ -586,7 +585,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default15;
                         } ?>" id="dual-wielder" class="badge pulse"
-                        onclick="checkToggle('dual-wielder')">
+                        onclick="toggleImage18()">
                         <div class="badgeToPopup" id="dual-wielder-popup">
                             <h4>Dual Wielder</h4>
                             <p>Your special sauce is ??% planning and ??% exploration, you'll never tell how much of each</p>
@@ -599,7 +598,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default16;
                         } ?>" id="starting-fresh" class="badge pulse"
-                        onclick="checkToggle('starting-fresh')">
+                        onclick="toggleImage22()">
                         <div class="badgeToPopup" id="starting-fresh-popup">
                             <h4>Starting Fresh</h4>
                             <p>Created a brand new project!</p>
@@ -615,7 +614,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default17;
                         } ?>" id="ever-persist" class="badge pulse"
-                        onclick="checkToggle('ever-persist')">
+                        onclick="toggleImage23()">
                         <div class="badgeToPopup" id="ever-persist-popup">
                             <h4>Ever Persistent</h4>
                             <p>You Returned to a WIP!</p>
@@ -628,7 +627,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default18;
                         } ?>" id="back-it-up" class="badge pulse"
-                        onclick="checkToggle('back-it-up')">
+                        onclick="toggleImage15(badgeToggle.value)">
                         <div class="badgeToPopup" id="back-it-up-popup">
                             <h4>Back It Up!</h4>
                             <p>You never know when The Horrors will hit your computer, but you're 
@@ -641,9 +640,9 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge19;
                         }else{
                             echo $default19;
-                        } ?>" id="gathering" class="badge pulse"
-                        onclick="checkToggle('gathering')">
-                        <div class="badgeToPopup" id="gathering-popup">
+                        } ?>" id="gathering" class="badge pulse">
+                        <div class="badgeToPopup" id="gathering-popup"
+                        onclick="toggleImage19()">
                             <h4>Guildhall Gathering</h4>
                             <p>You participated in a Write In or Sprint!</p>
                         </div>
@@ -654,9 +653,9 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge20;
                         }else{
                             echo $default20;
-                        } ?>" id="hear-ye" class="badge pulse"
-                        onclick="checkToggle('hear-ye')">
-                        <div class="badgeToPopup" id="hear-ye-popup">
+                        } ?>" id="hear-ye" class="badge pulse">
+                        <div class="badgeToPopup" id="hear-ye-popup"
+                        onclick="toggleImage20()">
                             <h4>Hear Ye! Hear Ye!</h4>
                             <p>You've told someone about your goal, whether a close friend or the whole world!</p>
                         </div>
@@ -668,7 +667,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default21;
                         } ?>" id="breakthrough" class="badge pulse"
-                        onclick="checkToggle('breakthrough')">
+                        onclick="toggleImage21()">
                         <div class="badgeToPopup" id="breakthrough-popup">
                             <h4>Breakthrough Moment</h4>
                             <p>Whatever was giving you trouble on this project, you've just figured it out!</p>
@@ -684,7 +683,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                         }else{
                             echo $default22;
                         } ?>" id="touch-grass" class="badge pulse"
-                        onclick="checkToggle('touch-grass')">
+                        onclick="toggleImage24()">
                         <div class="badgeToPopup" id="touch-grass-popup">
                             <h4>Touched Grass</h4>
                             <p>You made sure to go outside and get some of that sweet, sweeet vitamin D.</p>
@@ -696,9 +695,9 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge23;
                         }else{
                             echo $default23;
-                        } ?>" id="business" class="badge pulse"
-                        onclick="checkToggle('business')">
-                        <div class="badgeToPopup" id="business-popup">
+                        } ?>" id="business" class="badge pulse">
+                        <div class="badgeToPopup" id="business-popup"
+                        onclick="toggleImage25()">
                             <h4>Took Care of Business</h4>
                             <p>You took care of your other responsibilities, like dishes or homework. All those boring things no one wants to do.</p>
                         </div>
@@ -709,9 +708,9 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge24;
                         }else{
                             echo $default24;
-                        } ?>" id="tears-wept" class="badge pulse"
-                        onclick="checkToggle('tears-wept')">
-                        <div class="badgeToPopup" id="tears-wept-popup">
+                        } ?>" id="tears-wept" class="badge pulse">
+                        <div class="badgeToPopup" id="tears-wept-popup"
+                        onclick="toggleImage26()">
                             <h4>Tears Were Wept</h4>
                             <p>Either the creation or the process itself made you cry.</p>
                         </div>
@@ -722,9 +721,9 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             echo $badge25;
                         }else{
                             echo $default25;
-                        } ?>" id="finish-him" class="badge pulse"
-                        onclick="checkToggle('finish-him')">
-                        <div class="badgeToPopup" id="finish-him-popup">
+                        } ?>" id="finish-him" class="badge pulse">
+                        <div class="badgeToPopup" id="finish-him-popup"
+                        onclick="toggleImage28()">
                             <h4><em>Finish Him</em></h4>
                             <p>You fully completed this project during this challenge.<br>WIP no more!</p>
                         </div>
@@ -763,57 +762,6 @@ $default25 = "images/badges/cross-finish-mono.webp";
             }
             
         }
-    
-    function checkToggle(name) {
-        console.log(name);
-        var badgeToggle = document.getElementById("badgeEdit");
-        if (badgeToggle.value == "on") {
-            console.log(name);
-            switch(name) {
-            case 'back-it-up':
-                toggleImage15();
-                break;
-            case 'outline':
-                toggleImage16();
-                break;
-            case 'journey':
-                toggleImage17();
-                break;
-            case 'dual-wielder':
-                toggleImage18();
-                break;
-            case 'gathering':
-                toggleImage19();
-                break;
-            case 'hear-ye':
-                toggleImage20();
-                break;
-            case 'breakthrough':
-                toggleImage21();
-                break;
-            case 'starting-fresh':
-                toggleImage22();
-                break;
-            case 'ever-persist':
-                toggleImage23();
-                break;
-            case 'touch-grass':
-                toggleImage24();
-                break;
-            case 'business':
-                toggleImage25();
-                break;
-            case 'tears-wept':
-                toggleImage26();
-                break;
-            case 'finish-him':
-                toggleImage28();
-                break;
-            default:
-                console.log("something went wrong");
-            } 
-        }
-    }
     
 // BADGE POPUPS
     const elementToHover1 = document.getElementById('first-daily');
@@ -1133,11 +1081,5 @@ $default25 = "images/badges/cross-finish-mono.webp";
     }
     
     </script>
-<?php } else { ?>
-    <div class="announce-wrapper">
-        <h1>Attention!</h1>
-        <h3>The Website is currently down for maintenance. Please check back later.</h3>
-    </div>
-<?php } ?>
 </body>
 </html>
