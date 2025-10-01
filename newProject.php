@@ -95,7 +95,7 @@ forceLogin();
                             <span>0 / </span><span id="preview-goal"></span>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="preview-date-wrapper">
                         <h3>Due on:</h3>
                         <span id="preview-date"></span>
                     </div>
@@ -132,6 +132,8 @@ forceLogin();
         var goal = parseInt(document.getElementById("goalNumber").value);
         var recommendation = Math.floor(goal / dailyGoal);
         document.getElementById("recommend").innerHTML = "Recommended number: " + recommendation;
+
+        $("#preview-date-wrapper").classList.add("hide");
     }
     function findDailyGoal(){
         var goal=document.getElementById( "goalNumber" ).value;
