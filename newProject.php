@@ -75,7 +75,7 @@ forceLogin();
                     <input class="input" type="date" name="endDate" id="endDate">
                         <div class="checkbox-wrapper">
                             <label class="noEndDate" for="noEndDate">Check this box if you don't want to set an end date</label>
-                            <input class="input" type="checkbox" name="noEndDate" id="noEndDate">
+                            <input class="input" type="checkbox" name="noEndDate" id="noEndDate" onclick="thing()">
                         </div>
                     <label for="dailyGoal">Daily Goal</label>
                     <input class="input" type="text" name="dailyGoal" id="dailyGoal" pattern="^\d+(,\d+)?$"
@@ -151,8 +151,11 @@ forceLogin();
             // Setting the Span content
             $("#preview-date").text(currentText);
         });
-        var endDate = document.getElementById("endDate");
-        console.log(endDate.value);
+        function thing() {
+            var endDate = document.getElementById("endDate");
+            console.log(endDate.value);
+        }
+        
         
 
         //* Summary
