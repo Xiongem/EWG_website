@@ -153,7 +153,7 @@ forceLogin();
             // Getting the current value of input
             onsole.log("function");	
             var currentText = $(this).val();
-            onsole.log("variable");		
+            console.log("variable");		
             // Setting the Span content
             $("#preview-date").text(currentText);
         });
