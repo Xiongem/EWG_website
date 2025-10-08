@@ -14,6 +14,11 @@ $your_date = strtotime($update_date);
 $datediff = $your_date - $now;
 $interval = round($datediff / (60 * 60 * 24));
 
+if ($interval == 1) {
+    $streak + 1;
+    $update_date
+}
+
 if ($choice == "replace") {
     $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=? WHERE users_id=$userID AND current_state='current' AND display='active'");
     $stmt->bind_param("i",

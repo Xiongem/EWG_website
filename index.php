@@ -218,6 +218,7 @@ if (isset($_SESSION["user_id"])) {
             }                
             }
         }
+        echo $now;
 
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
