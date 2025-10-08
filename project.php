@@ -8,6 +8,31 @@
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+
+$title = $_GET["displayTitle"];
+
+$sql = "SELECT * FROM current_project WHERE title='$title'";
+$result = $_SESSION["conn"]->query($sql);
+$project = $result->fetch_assoc();
+    $genre = $project["genre"];
+    $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
+    $current_count = $project["current_count"];
+    $goal = $project["goal"];
+    $progress = floor($current_count / $goal * 100);
+        $now = time();
+        $your_date = strtotime($goalDate);
+        $datediff = $your_date - $now;
+        $interval = round($datediff / (60 * 60 * 24)); 
+            if ($goalDate == "0000-00-00" || !$goalDate) {
+                $days = "No Goal Date Set";
+            } elseif (isset($goalDate)&& $goalDate !== "0000-00-00") {
+                $days = $interval;
+                if ($days == 0) {
+                    $days = "Final Day!";
+                } elseif ($days < 0) {
+                    $days = "Project Past Due!";
+                }
+            }
 ?>
 
 <!DOCTYPE html>

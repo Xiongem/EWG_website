@@ -228,7 +228,7 @@ else {
 <?php if ($_SESSION["user_id"]== 7) { ?>
 <body id="body">
     <!-- //* POPUP FOR CHOOSING ACTIVE PROJECTS-->
-     <!-- //! ADD IF CONDITION TO REMOVE SELECTOR WHEN NO PROJECTS HAVE BEEN MADE -->
+    <?php if (isset($_SESSION["user_id"])) { ?>
     <div class="project-select-popup-wrapper" id="project-popup">
         <div class="project-select-popup"><div class="close-wrapper">
                 <i class="fa fa-close" onclick="hideProjectPopup()"></i>
@@ -298,6 +298,7 @@ else {
             </div>
         </div>
     </div>
+    <?php } ?>
     <div class="count-update-wrapper" id="count-update-popup">
         <div class="count-update-popup">
             <div class="close-wrapper">
@@ -373,10 +374,14 @@ else {
                 </div>
                 <div class="progress-info-container">
                     <div id="project-img">
-                        <img src=<?= $displayGenrePicture ?> id="theme-img">
+                        <a href="project.php?project=<?=$displayTitle?>">
+                            <img src=<?= $displayGenrePicture ?> id="theme-img">
+                        </a>
                     </div>
                     <div id="project-title">
-                        <h2><?= $displayTitle ?></h2>
+                        <a href="project.php?project=<?=$displayTitle?>">
+                            <h2><?= $displayTitle ?></h2>
+                        </a>
                     </div>
                     <div id="project-summary">
                         <!-- <p>Looks like you don't have any active projects.
