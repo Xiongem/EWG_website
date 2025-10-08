@@ -9,7 +9,7 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
-$title = $_GET["displayTitle"];
+$title = $_GET["project"];
 
 $sql = "SELECT * FROM current_project WHERE title='$title'";
 $result = $_SESSION["conn"]->query($sql);
