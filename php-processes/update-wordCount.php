@@ -6,19 +6,7 @@ dbConnect();
 
 $userID = $_SESSION["user_id"];
 $choice = $_POST["wordCount"];
-$update_date = $_SESSION["update_date"];
 $streak = $_SESSION["streak"];
-
-$now = time();
-$your_date = strtotime($update_date);
-$datediff = $now - $your_date;
-$interval = round($datediff / (60 * 60 * 24));
-
-if ($interval == 1) {
-    $streak + 1;
-} else {
-    $streak = 1;
-}
 $update_date = date("Y-m-d");
 
 if ($choice == "replace") {

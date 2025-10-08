@@ -224,10 +224,14 @@ $your_dates = strtotime($update_date);
 $datediffer = $nows - $your_dates;
 $intervals = round($datediffer / (60 * 60 * 24));
 echo $intervals;
+if ($interval == 1) {
+    $streak + 1;
+} else {
+    $streak = 1;
+}
 
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
-$_SESSION["update_date"] = $update_date;
 $_SESSION["streak"] = $streak;
 }  
 //* User is not logged in
