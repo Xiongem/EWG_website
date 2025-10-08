@@ -218,7 +218,7 @@ if (isset($_SESSION["user_id"])) {
             }                
             }
         }
-        echo (round($now / (60 * 60 * 24)));
+        echo (date("Y-m-d"));
 
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
