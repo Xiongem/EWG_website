@@ -6,6 +6,13 @@ dbConnect();
 
 $userID = $_SESSION["user_id"];
 $choice = $_POST["wordCount"];
+$update_date = $_SESSION["update_date"];
+$streak = $_SESSION["streak"];
+
+$now = time();
+$your_date = strtotime($update_date);
+$datediff = $your_date - $now;
+$interval = round($datediff / (60 * 60 * 24));
 
 if ($choice == "replace") {
     $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=? WHERE users_id=$userID AND current_state='current' AND display='active'");

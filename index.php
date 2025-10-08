@@ -38,6 +38,8 @@ if (isset($_SESSION["user_id"])) {
         $displayCount = $project["current_count"];
         $displayGoal = $project["goal"];
         $displayGoalDate = $project["goal_date"];
+        $update_date = $project["update_date"];
+        $streak = $project["streak"];
         $displayDailyGoal = $project["daily_goal"];
         $displayPercentage = floor($displayCount / $displayGoal * 100);
         //* Badges
@@ -134,6 +136,8 @@ if (isset($_SESSION["user_id"])) {
                     $displayCount = $project["current_count"];
                     $displayGoal = $project["goal"];
                     $displayGoalDate = $project["goal_date"];
+                    $update_date = $project["update_date"];
+                    $streak = $project["streak"];
                     $displayDailyGoal = $project["daily_goal"];
                     $displayPercentage = floor($displayCount / $displayGoal * 100);
                     //* Badges
@@ -215,8 +219,16 @@ if (isset($_SESSION["user_id"])) {
             }
         }
 
+$nows = time();
+$your_dates = strtotime($update_date);
+$datediffer = $your_dates - $nows;
+$intervals = round($datediffer / (60 * 60 * 24));
+echo $intervals;
+
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
+$_SESSION["update_date"] = $update_date;
+$_SESSION["streak"] = $streak;
 }  
 //* User is not logged in
 else {
