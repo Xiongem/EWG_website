@@ -176,33 +176,33 @@ $_SESSION["username"] = $username;
 else {
     $pfp_set = "images/pfp-icon.webp";
     $displayGenrePicture = "images/genre-covers/placeholder.webp";
+    //* Default Badges
+    $default1 = "images/badges/quarter-quomplete-mono.webp";
+    $default2 = "images/badges/half-way-mono.webp";
+    $default3 = "images/badges/all-downhill-mono.webp";
+    $default4 = "images/badges/cross-finish-mono.webp";
+    $default5 = "images/badges/streak-two-mono.webp";
+    $default6 = "images/badges/streak-three-mono.webp";
+    $default7 = "images/badges/streak-seven-mono.webp";
+    $default8 = "images/badges/streak-fourteen-mono.webp";
+    $default9 = "images/badges/streak-twentyOne-mono.webp";
+    $default10 = "images/badges/first-daily-mono.webp";
+    $default11 = "images/badges/every-streak-mono.webp";
+    $default12 = "images/badges/on-track-mono.webp";
+    $default13 = "images/badges/outline-mono-v2.webp";
+    $default14 = "images/badges/journey-mono.webp";
+    $default15 = "images/badges/dual-wielder-mono.webp";
+    $default16 = "images/badges/starting-fresh-mono.webp";
+    $default17 = "images/badges/ever-persist-mono.webp";
+    $default18 = "images/badges/back-it-up-mono.webp";
+    $default19 = "images/badges/gathering-mono.webp";
+    $default20 = "images/badges/hear-ye-mono.webp";
+    $default21 = "images/badges/breakthrough-mono.webp";
+    $default22 = "images/badges/touch-grass-mono.webp";
+    $default23 = "images/badges/business-mono.webp";
+    $default24 = "images/badges/tears-wept-mono.webp";
+    $default25 = "images/badges/cross-finish-mono.webp";
 }
-//* Default Badges
-$default1 = "images/badges/quarter-quomplete-mono.webp";
-$default2 = "images/badges/half-way-mono.webp";
-$default3 = "images/badges/all-downhill-mono.webp";
-$default4 = "images/badges/cross-finish-mono.webp";
-$default5 = "images/badges/streak-two-mono.webp";
-$default6 = "images/badges/streak-three-mono.webp";
-$default7 = "images/badges/streak-seven-mono.webp";
-$default8 = "images/badges/streak-fourteen-mono.webp";
-$default9 = "images/badges/streak-twentyOne-mono.webp";
-$default10 = "images/badges/first-daily-mono.webp";
-$default11 = "images/badges/every-streak-mono.webp";
-$default12 = "images/badges/on-track-mono.webp";
-$default13 = "images/badges/outline-mono-v2.webp";
-$default14 = "images/badges/journey-mono.webp";
-$default15 = "images/badges/dual-wielder-mono.webp";
-$default16 = "images/badges/starting-fresh-mono.webp";
-$default17 = "images/badges/ever-persist-mono.webp";
-$default18 = "images/badges/back-it-up-mono.webp";
-$default19 = "images/badges/gathering-mono.webp";
-$default20 = "images/badges/hear-ye-mono.webp";
-$default21 = "images/badges/breakthrough-mono.webp";
-$default22 = "images/badges/touch-grass-mono.webp";
-$default23 = "images/badges/business-mono.webp";
-$default24 = "images/badges/tears-wept-mono.webp";
-$default25 = "images/badges/cross-finish-mono.webp";
 ?>
 
 <!DOCTYPE html>
