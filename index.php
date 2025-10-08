@@ -814,19 +814,24 @@ else {
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
     <script>
+    var percentage = document.getElementById("percentage");
+    if (percentage.style.width == 100) {
+        percentage.style['border-radius'] = '14px';
+    }
+    //* Check if badge toggle is checked
+    var badgeToggle = document.getElementById("badgeEdit");
+    function clickCheckbox() {
         var badgeToggle = document.getElementById("badgeEdit");
-        function clickCheckbox() {
-            var badgeToggle = document.getElementById("badgeEdit");
-            if (badgeToggle.value == "off") {
-                badgeToggle.value = "on";
-                console.log(badgeToggle.value);
-            }else if (badgeToggle.value == "on") {
-                badgeToggle.value = "off";
-                console.log(badgeToggle.value);
-            }
-            
+        if (badgeToggle.value == "off") {
+            badgeToggle.value = "on";
+            console.log(badgeToggle.value);
+        }else if (badgeToggle.value == "on") {
+            badgeToggle.value = "off";
+            console.log(badgeToggle.value);
         }
-    
+        
+    }
+    //* calls correct image toggle function for ajax
     function checkToggle(name) {
         console.log(name);
         var badgeToggle = document.getElementById("badgeEdit");
