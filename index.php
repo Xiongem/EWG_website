@@ -1136,7 +1136,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
 <?php } else { ?>
     <div class="announce-wrapper">
         <h1>Attention!</h1>
-        <h3>The Website is currently down for maintenance. Please check back later.</h3>
+        <h3>The Guild is currently closed for maintenance. Please check back later.</h3>
     </div>
 <?php } ?>
 </body>
