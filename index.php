@@ -42,8 +42,7 @@ if (isset($_SESSION["user_id"])) {
         $displayPercentage = floor($displayCount / $displayGoal * 100);
         //* Badges
         if ($displayPercentage >= 25) {
-            // $badge1 = "images/badges/quarter-quomplete-color.webp";
-            echo ("hello");
+            $badge1 = "images/badges/quarter-quomplete-color.webp";
         } else {
             $badge1 = "images/badges/quarter-quomplete-mono.webp";
         }
