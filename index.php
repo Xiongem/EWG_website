@@ -230,6 +230,8 @@ if ($interval == 1) {
     $streak = 1;
 }
 echo $streak;
+$update_date = date("Y-m-d");
+echo $update_date;
 
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
