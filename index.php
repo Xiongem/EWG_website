@@ -223,7 +223,7 @@ $nows = time();
 $your_dates = strtotime($update_date);
 $datediffer = $nows - $your_dates;
 $intervals = round($datediffer / (60 * 60 * 24));
-echo $intervals, $streak;
+echo $intervals;
 
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
