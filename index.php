@@ -403,7 +403,7 @@ else {
                 <div class="auto-row rows">
                     <!-- //* Quarter Quomplete-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($percentage >= 25) {
+                        <img src="<?php if($badge1) {
                             echo $badge1;
                         }else{
                             echo $default1;
@@ -415,7 +415,7 @@ else {
                     </div>
                     <!-- //* Half Way-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($percentage >= 50) {
+                        <img src="<?php if($badge2) {
                             echo $badge2;
                         }else{
                             echo $default2;
@@ -427,7 +427,7 @@ else {
                     </div>
                     <!-- //* All Downhill-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($percentage >= 75) {
+                        <img src="<?php if($badge3) {
                             echo $badge3;
                         }else{
                             echo $default3;
@@ -439,7 +439,7 @@ else {
                     </div>
                     <!-- //* Cross Finish-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($percentage >= 100) {
+                        <img src="<?php if($badge4) {
                             echo $badge4;
                         }else{
                             echo $default4;

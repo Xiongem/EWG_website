@@ -193,7 +193,7 @@ $project = $result->fetch_assoc();
                 <div class="auto-row rows">
                     <!-- //* Quarter Quomplete-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($percentage >= 25) {
+                        <img src="<?php if($badge1) {
                             echo $badge1;
                         }else{
                             echo $default1;
@@ -205,7 +205,7 @@ $project = $result->fetch_assoc();
                     </div>
                     <!-- //* Half Way-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($percentage >= 50) {
+                        <img src="<?php if($badge2) {
                             echo $badge2;
                         }else{
                             echo $default2;
@@ -217,7 +217,7 @@ $project = $result->fetch_assoc();
                     </div>
                     <!-- //* All Downhill-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($percentage >= 75) {
+                        <img src="<?php if($badge3) {
                             echo $badge3;
                         }else{
                             echo $default3;
@@ -229,7 +229,7 @@ $project = $result->fetch_assoc();
                     </div>
                     <!-- //* Cross Finish-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($percentage >= 100) {
+                        <img src="<?php if($badge4) {
                             echo $badge4;
                         }else{
                             echo $default4;
