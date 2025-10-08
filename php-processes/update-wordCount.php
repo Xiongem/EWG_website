@@ -22,9 +22,11 @@ if ($interval == 1) {
 $update_date = date("Y-m-d");
 
 if ($choice == "replace") {
-    $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=? WHERE users_id=$userID AND current_state='current' AND display='active'");
-    $stmt->bind_param("i",
-                            $_POST["updateWordCount"]);
+    $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND display='active'");
+    $stmt->bind_param("iii",
+                            $_POST["updateWordCount"],
+                            $update_date,
+                            $streak);
         echo "stmt prepared and bound!".'<br>';
 
     if ($stmt -> execute()) {
@@ -41,9 +43,11 @@ if ($choice == "replace") {
 
     $newCount = $currentCount + $_POST["updateWordCount"];
 
-    $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=? WHERE users_id=$userID AND current_state='current' AND display='active'");
-    $stmt->bind_param("i",
-                            $newCount);
+    $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?WHERE users_id=$userID AND current_state='current' AND display='active'");
+    $stmt->bind_param("iii",
+                            $newCount,
+                            $update_date,
+                            $streak);
         echo "stmt prepared and bound!".'<br>';
 
     if ($stmt -> execute()) {
