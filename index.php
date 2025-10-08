@@ -219,12 +219,6 @@ if (isset($_SESSION["user_id"])) {
             }
         }
 
-$nows = time();
-$your_dates = strtotime($update_date);
-$datediffer = $your_dates - $nows;
-$intervals = round($datediffer / (60 * 60 * 24));
-echo $intervals;
-
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
 $_SESSION["update_date"] = $update_date;
