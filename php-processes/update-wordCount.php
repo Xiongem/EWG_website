@@ -11,7 +11,7 @@ $streak = $_SESSION["streak"];
 
 $now = time();
 $your_date = strtotime($update_date);
-$datediff = $your_date - $now;
+$datediff = $now - $your_date;
 $interval = round($datediff / (60 * 60 * 24));
 
 if ($interval == 1) {
