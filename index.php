@@ -176,7 +176,8 @@ $_SESSION["username"] = $username;
 else {
     $pfp_set = "images/pfp-icon.webp";
     $displayGenrePicture = "images/genre-covers/placeholder.webp";
-    //* Default Badges
+}
+//* Default Badges
     $default1 = "images/badges/quarter-quomplete-mono.webp";
     $default2 = "images/badges/half-way-mono.webp";
     $default3 = "images/badges/all-downhill-mono.webp";
@@ -202,7 +203,6 @@ else {
     $default23 = "images/badges/business-mono.webp";
     $default24 = "images/badges/tears-wept-mono.webp";
     $default25 = "images/badges/cross-finish-mono.webp";
-}
 ?>
 
 <!DOCTYPE html>
