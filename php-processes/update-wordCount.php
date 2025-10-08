@@ -16,8 +16,8 @@ $interval = round($datediff / (60 * 60 * 24));
 
 if ($interval == 1) {
     $streak + 1;
-    $update_date = date("Y-m-d");
 }
+$update_date = date("Y-m-d");
 
 if ($choice == "replace") {
     $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=? WHERE users_id=$userID AND current_state='current' AND display='active'");
