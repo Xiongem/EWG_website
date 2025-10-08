@@ -398,7 +398,7 @@ else {
                 <div class="auto-row rows">
                     <!-- //* Quarter Quomplete-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge1) {
+                        <img src="<?php if(!empty($badge1)) {
                             echo $badge1;
                         }else{
                             echo $default1;
@@ -410,7 +410,7 @@ else {
                     </div>
                     <!-- //* Half Way-->
                     <div class="badge-wrapper">
-                        <img src="<?php if($badge2) {
+                        <img src="<?php if(!empty($badge2)) {
                             echo $badge2;
                         }else{
                             echo $default2;
