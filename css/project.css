@@ -13,7 +13,7 @@
         align-items: center;
         max-width: 12em;
         height: 3em;
-        background-color: var(--accent-1);
+        background-color: var(--warning);
         border-radius: 14px;
         padding: 0 1em;
         cursor: pointer;
