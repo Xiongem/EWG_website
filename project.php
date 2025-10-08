@@ -557,7 +557,12 @@ $project = $result->fetch_assoc();
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
     <script>
-// BADGE POPUPS
+    //* round end of percentage bar when it hits 100%
+    var percentage = document.getElementById("percentage");
+    if (percentage.style['width'] == '100%') {
+        percentage.style['border-radius'] = '14px';
+    }
+//* BADGE POPUPS
     const elementToHover1 = document.getElementById('first-daily');
     const elementToPopup1 = document.getElementById('first-daily-popup');
     elementToHover1.addEventListener('mouseenter',

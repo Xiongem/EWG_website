@@ -814,6 +814,7 @@ else {
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
     <script>
+    //* round end of percentage bar when it hits 100%
     var percentage = document.getElementById("percentage");
     if (percentage.style['width'] == '100%') {
         percentage.style['border-radius'] = '14px';
