@@ -221,7 +221,7 @@ if (isset($_SESSION["user_id"])) {
 
 $nows = time();
 $your_dates = strtotime($update_date);
-$datediffer = $your_dates - $nows;
+$datediffer = $nows - $your_dates;
 $intervals = round($datediffer / (60 * 60 * 24));
 echo $intervals;
 
