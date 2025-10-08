@@ -16,7 +16,7 @@ $interval = round($datediff / (60 * 60 * 24));
 
 if ($interval == 1) {
     $streak + 1;
-    $update_date
+    $update_date = date("Y-m-d");
 }
 
 if ($choice == "replace") {
