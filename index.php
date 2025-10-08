@@ -48,6 +48,32 @@ if (isset($_SESSION["user_id"])) {
                     $displayGoalDate = $project["goal_date"];
                     $displayDailyGoal = $project["daily_goal"];
                     $displayPercentage = floor($displayCount / $displayGoal * 100);
+                    //* Badges
+                    $badge1 = $project["quarter-quomplete"];
+                    $badge2 = $project["half-way"];
+                    $badge3 = $project["all-downhill"];
+                    $badge4 = $project["cross-finish"];
+                    $badge5 = $project["streak-two"];
+                    $badge6 = $project["streak-three"];
+                    $badge7 = $project["streak-seven"];
+                    $badge8 = $project["streak-fourteen"];
+                    $badge9 = $project["streak-twentyOne"];
+                    $badge10 = $project["first-daily"];
+                    $badge11 = $project["every-streak"];
+                    $badge12 = $project["on-track"];
+                    $badge13 = $project["outline"];
+                    $badge14 = $project["journey"];
+                    $badge15 = $project["dual-wielder"];
+                    $badge16 = $project["starting-fresh"];
+                    $badge17 = $project["ever-persist"];
+                    $badge18 = $project["back-it-up"];
+                    $badge19 = $project["gathering"];
+                    $badge20 = $project["hear-ye"];
+                    $badge21 = $project["breakthrough"];
+                    $badge22 = $project["touch-grass"];
+                    $badge23 = $project["business"];
+                    $badge24 = $project["tears-wept"];
+                    $badge25 = $project["finish-him"];
                         //* Days left math
                         $now = time();
                         $your_date = strtotime($displayGoalDate);
@@ -74,6 +100,20 @@ if (isset($_SESSION["user_id"])) {
                                 $displayProgress = floor($displayCount / $displayGoal * 100);
                                 $displayPercentage = $displayProgress;
                             }
+                    
+            } else { //* User has no active projects yet
+                $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
+                $result = $_SESSION["conn"]->query($sql);
+                $project = $result->fetch_assoc();
+                    $displayTitle = $project["title"];
+                    $displayGenre = $project["genre"];
+                    $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
+                    $displayInfo = $project["info"];
+                    $displayCount = $project["current_count"];
+                    $displayGoal = $project["goal"];
+                    $displayGoalDate = $project["goal_date"];
+                    $displayDailyGoal = $project["daily_goal"];
+                    $displayPercentage = floor($displayCount / $displayGoal * 100);
                     //* Badges
                     $badge1 = $project["quarter-quomplete"];
                     $badge2 = $project["half-way"];
@@ -100,19 +140,6 @@ if (isset($_SESSION["user_id"])) {
                     $badge23 = $project["business"];
                     $badge24 = $project["tears-wept"];
                     $badge25 = $project["finish-him"];
-            } else { //* User has no active projects yet
-                $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
-                $result = $_SESSION["conn"]->query($sql);
-                $project = $result->fetch_assoc();
-                    $displayTitle = $project["title"];
-                    $displayGenre = $project["genre"];
-                    $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
-                    $displayInfo = $project["info"];
-                    $displayCount = $project["current_count"];
-                    $displayGoal = $project["goal"];
-                    $displayGoalDate = $project["goal_date"];
-                    $displayDailyGoal = $project["daily_goal"];
-                    $displayPercentage = floor($displayCount / $displayGoal * 100);
                         //* Days left math
                         $now = time();
                         $your_date = strtotime($displayGoalDate);
@@ -139,32 +166,7 @@ if (isset($_SESSION["user_id"])) {
                                 $displayProgress = floor($displayCount / $displayGoal * 100);
                                 $displayPercentage = $displayProgress;
                             }
-                    //* Badges
-                    $badge1 = $project["quarter-quomplete"];
-                    $badge2 = $project["half-way"];
-                    $badge3 = $project["all-downhill"];
-                    $badge4 = $project["cross-finish"];
-                    $badge5 = $project["streak-two"];
-                    $badge6 = $project["streak-three"];
-                    $badge7 = $project["streak-seven"];
-                    $badge8 = $project["streak-fourteen"];
-                    $badge9 = $project["streak-twentyOne"];
-                    $badge10 = $project["first-daily"];
-                    $badge11 = $project["every-streak"];
-                    $badge12 = $project["on-track"];
-                    $badge13 = $project["outline"];
-                    $badge14 = $project["journey"];
-                    $badge15 = $project["dual-wielder"];
-                    $badge16 = $project["starting-fresh"];
-                    $badge17 = $project["ever-persist"];
-                    $badge18 = $project["back-it-up"];
-                    $badge19 = $project["gathering"];
-                    $badge20 = $project["hear-ye"];
-                    $badge21 = $project["breakthrough"];
-                    $badge22 = $project["touch-grass"];
-                    $badge23 = $project["business"];
-                    $badge24 = $project["tears-wept"];
-                    $badge25 = $project["finish-him"];
+                    
                 }
             }
         }
