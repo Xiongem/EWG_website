@@ -229,6 +229,7 @@ if ($interval == 1) {
 } else {
     $streak = 1;
 }
+echo $streak;
 
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
