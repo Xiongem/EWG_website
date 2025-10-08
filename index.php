@@ -41,26 +41,26 @@ if (isset($_SESSION["user_id"])) {
         $displayDailyGoal = $project["daily_goal"];
         $displayPercentage = floor($displayCount / $displayGoal * 100);
         //* Badges
-        if ($percentage >= 25) {
+        if ($displayPercentage >= 25) {
             // $badge1 = "images/badges/quarter-quomplete-color.webp";
             echo ("hello");
         } else {
             $badge1 = "images/badges/quarter-quomplete-mono.webp";
         }
 
-        if ($percentage >= 50) {
+        if ($displayPercentage >= 50) {
             $badge2 = "images/badges/half-way-color.webp";
         } else {
             $badge2 = "images/badges/half-way-mono.webp";
         }
 
-        if ($percentage >= 75) {
+        if ($displayPercentage >= 75) {
             $badge3 = "images/badges/all-downhill-color.webp";
         } else {
             $badge3 = "images/badges/all-downhill-mono.webp";
         }
 
-        if ($percentage >= 100) {
+        if ($displayPercentage >= 100) {
             $badge4 = "images/badges/cross-finish-color.webp";
         } else {
             $badge4 = "images/badges/cross-finish-mono.webp";
@@ -138,25 +138,25 @@ if (isset($_SESSION["user_id"])) {
                     $displayDailyGoal = $project["daily_goal"];
                     $displayPercentage = floor($displayCount / $displayGoal * 100);
                     //* Badges
-                    if ($percentage >= 25) {
+                    if ($displayPercentage >= 25) {
                         $badge1 = "images/badges/quarter-quomplete-color.webp";
                     } else {
                         $badge1 = "images/badges/quarter-quomplete-mono.webp";
                     }
 
-                    if ($percentage >= 50) {
+                    if ($displayPercentage >= 50) {
                         $badge2 = "images/badges/half-way-color.webp";
                     } else {
                         $badge2 = "images/badges/half-way-mono.webp";
                     }
 
-                    if ($percentage >= 75) {
+                    if ($displayPercentage >= 75) {
                         $badge3 = "images/badges/all-downhill-color.webp";
                     } else {
                         $badge3 = "images/badges/all-downhill-mono.webp";
                     }
 
-                    if ($percentage >= 100) {
+                    if ($displayPercentage >= 100) {
                         $badge4 = "images/badges/cross-finish-color.webp";
                     } else {
                         $badge4 = "images/badges/cross-finish-mono.webp";
