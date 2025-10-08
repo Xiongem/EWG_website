@@ -159,7 +159,7 @@ $project = $result->fetch_assoc();
             <h1>Project Progress</h1>
             <div class="progress-bar">
                 <div class="border"></div>
-                <div id="percentage" class="percentage clickable"></div>
+                <div id="percentage" class="percentage clickable" style="width: <?= $progress ?>%;"></div>
             </div>
             <div class="progress-info-wrapper">
                 <div id="current" class="progress-info">
