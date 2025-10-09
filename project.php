@@ -47,7 +47,7 @@ $project = $result->fetch_assoc();
         $percentage = 0;
     } elseif (floor($current_count / $goal * 100)<=4) {
         $progress = 4;
-        $percentage = $percentage;
+        $percentage = $progress;
     } else {
         $progress = floor($current_count / $goal * 100);
         $percentage = $progress;
