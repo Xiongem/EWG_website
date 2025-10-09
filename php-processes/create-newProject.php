@@ -24,6 +24,8 @@ $date = $_POST["endDate"];
 $dailyGoal = $_POST["dailyGoal"];
 $current_state = "current";
 
+echo"$username, $genre, $title, $info, $current_count, $goal, $date, $dailyGoal"."<br>";
+
 // if (!isset($_POST["endDate"])) {
 //     $_POST["endDate"] = "00000-00-00";
 // }
