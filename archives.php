@@ -10,7 +10,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 forceLogin();
 
-$userID = htmlspecialchars($_SESSION["user_id"]);
+// $userID = htmlspecialchars($_SESSION["user_id"]);
 ?>
 
 <!DOCTYPE html>
