@@ -225,17 +225,17 @@ $datediffer = $nows - $your_dates;
 $intervals = round($datediffer / (60 * 60 * 24));
 echo "$intervals"."<br>";
 if ($interval == 1) {
-    $newStreak = $streak + 1;
+    $streak = $streak + 1;
 } else {
     $streak = 1;
 }
-echo "$newStreak"."<br>";
+echo "$streak"."<br>";
 $update_date = date("Y-m-d");
 echo $update_date;
 
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
-$_SESSION["streak"] = $newStreak;
+$_SESSION["streak"] = $streak;
 $_SESSION["update_date"] = $update_date;
 }  
 //* User is not logged in
