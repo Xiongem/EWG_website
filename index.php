@@ -308,8 +308,10 @@ if (isset($_SESSION["user_id"])) {
 
 if ($intervals == 1) {
     $streak = $streak + 1;
-} else {
+} elseif ($intervals >= 2) {
     $streak = 1;
+} else {
+    $streak = $streak;
 }
 $update_date = date("Y-m-d");
 
