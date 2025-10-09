@@ -206,7 +206,7 @@ $project = $result->fetch_assoc();
                 <a href="php-processes/archiveProject?project=<?=$projectID?>">Archive Project</a>
             </div>
         </div>
-        <?php } elseif ($state == "archived"  && $result->num_rows < 5) {?>
+        <?php } elseif ($state == "archived"  and $result->num_rows < 5) {?>
         <div class="archived-wrapper">
             <h2>Archived</h2>
             <div class="reverse-archive-button">
