@@ -23,7 +23,7 @@
         font-size: 16px;
     }
     .archive-button:hover > p {
-        color: var(--accent-3);
+        color: var(--background-color);
     }
     .archived-wrapper {
         display: grid;
@@ -33,6 +33,7 @@
     }
     .archived-wrapper > h2 {
         grid-column-start: 2;
+        color: var(--warning);
     }
     .reverse-archive-button {
         display: flex;
