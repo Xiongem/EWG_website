@@ -26,12 +26,12 @@ $current_state = "current";
 
 // echo"$username, $genre, $title, $info, $current_count, $goal, $date, $dailyGoal"."<br>";
 
-// if (!isset($_POST["endDate"])) {
-//     $_POST["endDate"] = "00000-00-00";
-// }
-// if (!isset($_POST["dailyGoal"])) {
-//     $_POST["dailyGoal"] = 0;
-// }
+if (!isset($_POST["endDate"])) {
+    $_POST["endDate"] = "00000-00-00";
+}
+if (!isset($_POST["dailyGoal"])) {
+    $_POST["dailyGoal"] = 0;
+}
 
 $stmt = $_SESSION["conn"] -> prepare("INSERT INTO current_project 
                         (username, genre, title, info, current_count, goal, goal_date, daily_goal, current_state, users_id) 
