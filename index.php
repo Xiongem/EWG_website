@@ -189,7 +189,7 @@ if (isset($_SESSION["user_id"])) {
                         $badge8 = "images/badges/streak-fourteen-mono.webp";
                     }
 
-                    if ($streak >= 21) {
+                    if ($streak >= '21') {
                         $badge8 = "images/badges/streak-twentyOne-color.webp";
                     } else {
                         $badge8 = "images/badges/streak-twentyOne-mono.webp";
