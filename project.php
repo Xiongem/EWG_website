@@ -602,9 +602,12 @@ $project = $result->fetch_assoc();
     <?php makeFooter() ?>
     <script>
     //* round end of percentage bar when it hits 100%
-    var percentage = document.getElementById("percentage");
-    if (percentage.style['width'] == '100%') {
-        percentage.style['border-radius'] = '14px';
+    var percentageBar = document.getElementById("percentage");
+    var percentage = <?=$percentage?>;
+    if (percentage >= 100) {
+        percentageBar.style['border-radius'] = '14px';
+    } else {
+        percentageBar.style['border-radius'] = '14px 0px 0px 14px';
     }
 //* BADGE POPUPS
     const elementToHover1 = document.getElementById('first-daily');
