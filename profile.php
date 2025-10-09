@@ -65,9 +65,9 @@ $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='
         <?php makeNav() ?>
     </header>
     <div class="profile-wrapper">
-        <?php if ($userID == $_SESSION["user_id"]) {?>
+        
         <a id="profileUpdate" href="updateProfile.php"><i class="fa fa-gear"></i></a>
-        <?php}?>
+        
             <div class="user-container">
                 <img src="<?=$pfp_set?>" alt="profile image" id="profilePicture">
                 <h1 id="username"><?=$username?></h1>
