@@ -36,9 +36,9 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
     </header>
     <div class="title-wrapper">
         <h1>All Your Projects</h1>
-        <div class="instruction-wrapper">
+        <!-- <div class="instruction-wrapper">
             <p><i class="fa fa-star" id="star-icon" alt="star icon"></i> = Active Project</p>
-        </div>
+        </div> -->
     </div>
     <div class="main-wrapper">
     <?php
@@ -51,7 +51,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     $title = $rows["title"];
                     $genre = $rows["genre"];
                     $info = $rows["info"];
-                    $state = $rows["current_state"];
                     $currentDisplay = $rows["display"];
                     $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
                     $current_count = $rows["current_count"];
@@ -77,7 +76,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             <img src="<?= $genre_picture ?>">
             <div class="overview-info">
                     <h2 class="overview-title"><?= $title ?></h2>
-                    <?php if ($state == "current") {?><i class="fa fa-star" id="star-icon" alt="star icon"></i><?php}?>
+                    <i class="fa fa-star" id="star-icon" alt="star icon"></i>
                     <p class="overview-summary"><?= $info ?></p>
                     <div class="overview-data">
                         <div class="overview-wordCount">
