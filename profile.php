@@ -65,25 +65,25 @@ $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='
         <?php makeNav() ?>
     </header>
     <div class="profile-wrapper">
-        
+        <?php if ($userID == $_SESSION["user_id"]) {?>
         <a id="profileUpdate" href="updateProfile.php"><i class="fa fa-gear"></i></a>
-        
-            <div class="user-container">
-                <img src="<?=$pfp_set?>" alt="profile image" id="profilePicture">
-                <h1 id="username"><?=$username?></h1>
+        <?php}?>
+        <div class="user-container">
+            <img src="<?=$pfp_set?>" alt="profile image" id="profilePicture">
+            <h1 id="username"><?=$username?></h1>
+        </div>
+        <div class="profile-container">
+            <div class="fav-container">
+                <h2>Favs:</h2>
+                <p><?=$fav1?></p>
+                <p><?=$fav2?></p>
+                <p><?=$fav3?></p>
             </div>
-            <div class="profile-container">
-                <div class="fav-container">
-                    <h2>Favs:</h2>
-                    <p><?=$fav1?></p>
-                    <p><?=$fav2?></p>
-                    <p><?=$fav3?></p>
-                </div>
-                <div class="bio-container">
-                    <h2>Bio:</h2>
-                    <p> <?=$bio?> </p>
-                </div>
+            <div class="bio-container">
+                <h2>Bio:</h2>
+                <p> <?=$bio?> </p>
             </div>
+        </div>
     </div>
     <div class="main-wrapper">
         <div class="current-project-wrapper">
