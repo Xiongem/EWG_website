@@ -200,8 +200,8 @@ $project = $result->fetch_assoc();
     if ($projectCreatorID == $userID) {
             $sql = "SELECT id FROM current_project WHERE users_id=$userID AND current_state='current'";
                 $result = $_SESSION["conn"]->query($sql);
-                $project = $result->fetch_assoc();
-                echo $result;
+                // $project = $result->fetch_assoc();
+                print_r ($result);
         if ($state == "current") {?>
         <div class="archive-wrapper">
             <div class="archive-button" id="notArchived">
