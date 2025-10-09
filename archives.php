@@ -75,7 +75,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             <img src="<?= $genre_picture ?>">
             <div class="overview-info">
                     <h2 class="overview-title"><?= $title ?> 
-                        <i class="fa fa-star" id="star-icon" alt="star icon"></i>
+                        <?php if ($currentDisplay == "active") {?><i class="fa fa-star" id="star-icon" alt="star icon"></i><?php}?>
                     </h2>
                     <p class="overview-summary"><?= $info ?></p>
                     <div class="overview-data">
