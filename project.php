@@ -19,6 +19,7 @@ $project = $result->fetch_assoc();
     $current_count = $project["current_count"];
     $goal = $project["goal"];
     $info = $project["info"];
+    $state = $project["current_state"];
     $goalDate = $project["goal_date"];
     $update_date = $project["update_date"];
     $streak = $project["streak"];
@@ -191,17 +192,20 @@ $project = $result->fetch_assoc();
     <header>
         <?php makeNav() ?>
     </header>
-    <!-- <div class="archive-wrapper">
+    <?php if ($state == "current") {?>
+    <div class="archive-wrapper">
         <div class="archive-button" id="notArchived">
             <p>Archive Project</p>
         </div>
-    </div> -->
+    </div>
+    <?php } elseif ($state == "archived") {?>
     <div class="archived-wrapper">
         <h2>Archived</h2>
         <div class="reverse-archive-button">
             <p>Unarchive Project</p>
         </div>
     </div>
+    <?php } ?>
     <!--* PROGRESS BAR-->
     <div class="pb-wrapper">
         <div class="pb-background">
