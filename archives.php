@@ -10,7 +10,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 forceLogin();
 
-// $userID = htmlspecialchars($_SESSION["user_id"]);
+$userID = htmlspecialchars($_SESSION["user_id"]);
 ?>
 
 <!DOCTYPE html>
@@ -43,41 +43,38 @@ forceLogin();
     <div class="main-wrapper">
     <?php
     //* Pull active project data
-    // $sql = "SELECT * FROM current_project WHERE users_id='$userID'";
-    //     $result = $_SESSION["conn"]->query($sql);
-    //         if ($result->num_rows > 0) {
-    //             while ($rows = $result->fetch_assoc()) {
-    //                 $projectID = $rows["id"];
-    //                 $title = $rows["title"];
-    //                 $genre = $rows["genre"];
-    //                 $currentDisplay = $rows["display"];
-    //                 $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
-    //                 $current_count = $rows["current_count"];
-    //                 $goal = $rows["goal"];
-    //                 $goalDate = $rows["goal_date"];
-    //                 $progress = floor($current_count / $goal * 100);
-    //                 $now = time();
-    //                 $your_date = strtotime($goalDate);
-    //                 $datediff = $your_date - $now;
-    //                 $interval = round($datediff / (60 * 60 * 24)); 
-    //                     if ($goalDate == "0000-00-00" || !$goalDate) {
-    //                         $days = "No Goal Date Set";
-    //                     } elseif (isset($goalDate)&& $goalDate !== "0000-00-00") {
-    //                         $days = $interval;
-    //                         if ($days == 0) {
-    //                             $days = "Final Day!";
-    //                         } elseif ($days < 0) {
-    //                             $days = "Project Past Due!";
-    //                         }
-    //                     }
+    $sql = "SELECT * FROM current_project WHERE users_id='$userID'";
+        $result = $_SESSION["conn"]->query($sql);
+            if ($result->num_rows > 0) {
+                while ($rows = $result->fetch_assoc()) {
+                    $projectID = $rows["id"];
+                    $title = $rows["title"];
+                    $genre = $rows["genre"];
+                    $currentDisplay = $rows["display"];
+                    $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
+                    $current_count = $rows["current_count"];
+                    $goal = $rows["goal"];
+                    $goalDate = $rows["goal_date"];
+                    $progress = floor($current_count / $goal * 100);
+                    $now = time();
+                    $your_date = strtotime($goalDate);
+                    $datediff = $your_date - $now;
+                    $interval = round($datediff / (60 * 60 * 24)); 
+                        if ($goalDate == "0000-00-00" || !$goalDate) {
+                            $days = "No Goal Date Set";
+                        } elseif (isset($goalDate)&& $goalDate !== "0000-00-00") {
+                            $days = $interval;
+                            if ($days == 0) {
+                                $days = "Final Day!";
+                            } elseif ($days < 0) {
+                                $days = "Project Past Due!";
+                            }
+                        }
                 ?>
         <a href="project.php" class="overview-container">
             <img src="<?= $genre_picture ?>">
             <div class="overview-info">
-                    <h2 class="overview-title"><?= $title ?> 
-                    <?php if ($currentDisplay == "active") { ?>
-                        <i class="fa fa-star" id="star-icon" alt="star icon"></i>
-                        <?php}?></h2>
+                    <h2 class="overview-title"><?= $title ?></h2>
                     <p class="overview-summary"><?= $info ?></p>
                     <div class="overview-data">
                         <div class="overview-wordCount">
@@ -91,7 +88,7 @@ forceLogin();
                     </div>
             </div>
         </a>
-        
+        <?php }} ?>
         <!-- <a href="project.php" class="overview-container">
             <img src="../images/genre-covers/placeholder(v3).webp">
             <div class="overview-info">
