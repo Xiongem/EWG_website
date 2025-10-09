@@ -418,7 +418,7 @@ else {
                     <div class="project-stats">
                         <p id="popup-goal">Goal: <?= $current_count ?>/<?= $goal ?></p>
                         <p><?= $progress ?>%</p>
-                        <p id="popup-days-left"><?= $days ?></p>
+                        <p id="popup-days-left">Days Left: <?= $days ?></p>
                     </div>
                 </div>
             </div>
