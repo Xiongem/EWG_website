@@ -61,7 +61,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 4em;
+        margin-bottom: 0.5em;
     }
     .warning-wrapper > h2 {
         color: var(--warning);
