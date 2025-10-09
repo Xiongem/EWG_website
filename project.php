@@ -20,6 +20,7 @@ $project = $result->fetch_assoc();
     $goal = $project["goal"];
     $info = $project["info"];
     $goalDate = $project["goal_date"];
+    $streak = $project["streak"];
     $dailyGoal = $project["daily_goal"];
     $progress = floor($current_count / $goal * 100);
         $now = time();
