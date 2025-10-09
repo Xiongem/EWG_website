@@ -20,6 +20,7 @@ $project = $result->fetch_assoc();
     $goal = $project["goal"];
     $info = $project["info"];
     $goalDate = $project["goal_date"];
+    $update_date = $project["update_date"];
     $streak = $project["streak"];
     $dailyGoal = $project["daily_goal"];
     $progress = floor($current_count / $goal * 100);
@@ -72,34 +73,47 @@ $project = $result->fetch_assoc();
     } else {
         $badge4 = "images/badges/cross-finish-mono.webp";
     }
+    $nows = time();
+    $your_dates = strtotime($update_date);
+    $datediffer = $nows - $your_dates;
+    $intervals = round($datediffer / (60 * 60 * 24));
+    echo $intervals;
+    if ($intervals <= 1) {
+        # code...
+        if ($streak >= 2) {
+            $badge5 = "images/badges/streak-two-color.webp";
+        } else {
+            $badge5 = "images/badges/streak-two-mono.webp";
+        }
 
-    if ($streak >= 2) {
-        $badge5 = "images/badges/streak-two-color.webp";
-    } else {
+        if ($streak >= 3) {
+            $badge6 = "images/badges/streak-three-color.webp";
+        } else {
+            $badge6 = "images/badges/streak-three-mono.webp";
+        }
+
+        if ($streak >= 7) {
+            $badge7 = "images/badges/streak-seven-color.webp";
+        } else {
+            $badge7 = "images/badges/streak-seven-mono.webp";
+        }
+
+        if ($streak >= 14) {
+            $badge8 = "images/badges/streak-fourteen-color.webp";
+        } else {
+            $badge8 = "images/badges/streak-fourteen-mono.webp";
+        }
+
+        if ($streak >= "21") {
+            $badge9 = "images/badges/streak-twentyOne-color.webp";
+        } else {
+            $badge9 = "images/badges/streak-twentyOne-mono.webp";
+        }
+    }else {
         $badge5 = "images/badges/streak-two-mono.webp";
-    }
-
-    if ($streak >= 3) {
-        $badge6 = "images/badges/streak-three-color.webp";
-    } else {
         $badge6 = "images/badges/streak-three-mono.webp";
-    }
-
-    if ($streak >= 7) {
-        $badge7 = "images/badges/streak-seven-color.webp";
-    } else {
         $badge7 = "images/badges/streak-seven-mono.webp";
-    }
-
-    if ($streak >= 14) {
-        $badge8 = "images/badges/streak-fourteen-color.webp";
-    } else {
         $badge8 = "images/badges/streak-fourteen-mono.webp";
-    }
-
-    if ($streak >= "21") {
-        $badge9 = "images/badges/streak-twentyOne-color.webp";
-    } else {
         $badge9 = "images/badges/streak-twentyOne-mono.webp";
     }
     // $badge1 = $project["quarter-quomplete"];
