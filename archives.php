@@ -51,6 +51,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     $title = $rows["title"];
                     $genre = $rows["genre"];
                     $info = $rows["info"];
+                    $state = $rows["current_state"];
                     $currentDisplay = $rows["display"];
                     $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
                     $current_count = $rows["current_count"];
@@ -75,7 +76,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
         <a href="project.php?project=<?=$title?>" class="overview-container">
             <img src="<?= $genre_picture ?>">
             <div class="overview-info">
-                    <h2 class="overview-title"><?= $title ?> <i class="fa fa-star" id="star-icon" alt="star icon"></i></h2>
+                    <h2 class="overview-title"><?= $title ?> <i class="fa fa-star" id="<?=$projectID?>" alt="star icon"></i></h2>
                     <p class="overview-summary"><?= $info ?></p>
                     <div class="overview-data">
                         <div class="overview-wordCount">
@@ -89,6 +90,14 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     </div>
             </div>
         </a>
+        <script>
+            var state = <?= $state ?>;
+            var project = <?=$projectID?>;
+            var icon = document.getElementById(project);
+            if (state = "archived") {
+                icon.class.add("inactive");
+            }
+        </script>
         <?php }} ?>
         <!-- <a href="project.php" class="overview-container">
             <img src="../images/genre-covers/placeholder(v3).webp">
