@@ -25,4 +25,24 @@
     .archive-button:hover > p {
         color: var(--accent-3);
     }
+    .archived-wrapper {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        place-items: center;
+    }
+    .archived-wrapper > h2 {
+        grid-column-start: 2;
+    }
+    .reverse-archive-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 12em;
+        height: 3em;
+        background-color: var(--accent-3);
+        border-radius: 14px;
+        padding: 0 1em;
+        cursor: pointer;
+        white-space:pre-wrap;
+    }
 }
