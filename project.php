@@ -52,7 +52,7 @@ $project = $result->fetch_assoc();
         $progress = floor($current_count / $goal * 100);
         $percentage = $progress;
     }
-    echo $percentage;
+    
     //* Badges
     if ($percentage >= 25) {
         $badge1 = "images/badges/quarter-quomplete-color.webp";
