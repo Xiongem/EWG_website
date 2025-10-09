@@ -72,9 +72,12 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                         }
                 ?>
         <a href="project.php" class="overview-container">
-            <img src="../images/genre-covers/placeholder(v3).webp">
+            <img src="<?= $genre_picture ?>">
             <div class="overview-info">
-                    <h2 class="overview-title"><?= $title ?> <?php if ($currentDisplay == "active") {?><i class="fa fa-star" id="star-icon" alt="star icon"></i><?php}?></h2>
+                    <h2 class="overview-title"><?= $title ?> 
+                    <?php if ($currentDisplay == "active") { ?>
+                        <i class="fa fa-star" id="star-icon" alt="star icon"></i>
+                        <?php}?></h2>
                     <p class="overview-summary"><?= $info ?></p>
                     <div class="overview-data">
                         <div class="overview-wordCount">
