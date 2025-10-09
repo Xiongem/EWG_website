@@ -49,9 +49,13 @@
     .overview-data {
         display: flex;
     }
-    .overview-wordCount, .overview-badges {
+    .overview-wordCount {
         display: flex;
-        width: 50%;
+        width: 60%;
+    }
+    .overview-badges {
+        display: flex;
+        width: 40%
     }
     .overview-wordCount > p, .overview-badges > p {
         font-size: 16px;
