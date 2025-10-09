@@ -16,46 +16,46 @@ $update_date = $_SESSION["update_date"];
 
 echo $update_date;
 
-// $sql = "SELECT current_count FROM current_project WHERE users_id='$userID' AND current_state='current' AND display='active'";
-//         $result = $_SESSION["conn"]->query($sql);
-//         $count = $result->fetch_assoc();
-//             $currentCount = $count["current_count"];
+$sql = "SELECT current_count FROM current_project WHERE users_id='$userID' AND current_state='current' AND display='active'";
+        $result = $_SESSION["conn"]->query($sql);
+        $count = $result->fetch_assoc();
+            $currentCount = $count["current_count"];
 
-//     $newCount = $currentCount + $_POST["updateWordCount"];
+    $newCount = $currentCount + $_POST["updateWordCount"];
 
 
-// if ($choice == "replace") {
-//     $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND display='active'");
-//     $stmt->bind_param("iii",
-//                             $_POST["updateWordCount"],
-//                             $update_date,
-//                             $streak);
-//         echo "stmt prepared and bound!".'<br>';
+if ($choice == "replace") {
+    $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND display='active'");
+    $stmt->bind_param("isi",
+                            $_POST["updateWordCount"],
+                            $update_date,
+                            $streak);
+        echo "stmt prepared and bound!".'<br>';
 
-//     if ($stmt -> execute()) {
-//         header("Location: /index.php");
-//         exit;
-//     } else {
-//         die("an unexpected error occured");
-//     }
-// } elseif ($choice == "add") {
-//     $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND display='active'");
-//     $stmt->bind_param("iii",
-//                             $newCount,
-//                             $update_date,
-//                             $streak);
-//         echo "stmt prepared and bound!".'<br>';
+    if ($stmt -> execute()) {
+        header("Location: /index.php");
+        exit;
+    } else {
+        die("an unexpected error occured");
+    }
+} elseif ($choice == "add") {
+    $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND display='active'");
+    $stmt->bind_param("isi",
+                            $newCount,
+                            $update_date,
+                            $streak);
+        echo "stmt prepared and bound!".'<br>';
 
-//     if ($stmt -> execute()) {
-//         header("Location: /index.php");
-//         exit;
-//     } else {
-//         die("an unexpected error occured");
-//     }
-// } else {
-//     die("an unexpected error occured");
-// }
+    if ($stmt -> execute()) {
+        header("Location: /index.php");
+        exit;
+    } else {
+        die("an unexpected error occured");
+    }
+} else {
+    die("an unexpected error occured");
+}
 
-// $stmt -> close();
-// mysqli_close($conn);
+$stmt -> close();
+mysqli_close($conn);
 ?>
