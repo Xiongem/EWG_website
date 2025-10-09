@@ -123,9 +123,7 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
                 </div>
                 <div class="button">
                     <a id="cancel" onclick="goBack()">Cancel</a>
-                    <?php if ($result->num_rows < 5) {?>
-                        <input class="" type="submit" value="Looks Good" id="submit">
-                    <?php } ?>
+                    <input class="" type="submit" value="Looks Good" id="submit">
                 </div>
             </form>
         </div>
