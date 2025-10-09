@@ -218,6 +218,7 @@ if (isset($_SESSION["user_id"])) {
             }                
             }
         }
+echo "$streak"."<br>";
 
 $nows = time();
 $your_dates = strtotime($update_date);
