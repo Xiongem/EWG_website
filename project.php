@@ -199,7 +199,6 @@ $project = $result->fetch_assoc();
             $sql = "SELECT id FROM current_project WHERE users_id=$userID AND current_state='current'";
                 $result = $_SESSION["conn"]->query($sql);
                 
-                echo ($result->num_rows);
         if ($state == "current") {?>
         <div class="archive-wrapper">
             <div class="archive-button" id="notArchived">
