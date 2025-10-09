@@ -164,15 +164,46 @@ if (isset($_SESSION["user_id"])) {
                     } else {
                         $badge4 = "images/badges/cross-finish-mono.webp";
                     }
+
+                    if ($streak >= 2) {
+                        $badge5 = "images/badges/streak-two-color.webp";
+                    } else {
+                        $badge5 = "images/badges/streak-two-mono.webp";
+                    }
+
+                    if ($streak >= 3) {
+                        $badge6 = "images/badges/streak-three-color.webp";
+                    } else {
+                        $badge6 = "images/badges/streak-three-mono.webp";
+                    }
+
+                    if ($streak >= 7) {
+                        $badge7 = "images/badges/streak-seven-color.webp";
+                    } else {
+                        $badge7 = "images/badges/streak-seven-mono.webp";
+                    }
+
+                    if ($streak >= 14) {
+                        $badge8 = "images/badges/streak-fourteen-color.webp";
+                    } else {
+                        $badge8 = "images/badges/streak-fourteen-mono.webp";
+                    }
+
+                    if ($streak >= 21) {
+                        $badge8 = "images/badges/streak-twentyOne-color.webp";
+                    } else {
+                        $badge8 = "images/badges/streak-twentyOne-mono.webp";
+                    }
+                    
                     // $badge1 = $project["quarter-quomplete"];
                     // $badge2 = $project["half-way"];
                     // $badge3 = $project["all-downhill"];
                     // $badge4 = $project["cross-finish"];
-                    $badge5 = $project["streak-two"];
-                    $badge6 = $project["streak-three"];
-                    $badge7 = $project["streak-seven"];
-                    $badge8 = $project["streak-fourteen"];
-                    $badge9 = $project["streak-twentyOne"];
+                    // $badge5 = $project["streak-two"];
+                    // $badge6 = $project["streak-three"];
+                    // $badge7 = $project["streak-seven"];
+                    // $badge8 = $project["streak-fourteen"];
+                    // $badge9 = $project["streak-twentyOne"];
                     $badge10 = $project["first-daily"];
                     $badge11 = $project["every-streak"];
                     $badge12 = $project["on-track"];
