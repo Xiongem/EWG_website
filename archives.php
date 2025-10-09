@@ -71,7 +71,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                             }
                         }
                 ?>
-        <a href="project.php" class="overview-container">
+        <a href="project.php?project=<?=$title?>" class="overview-container">
             <img src="<?= $genre_picture ?>">
             <div class="overview-info">
                     <h2 class="overview-title"><?= $title ?> <i class="fa fa-star" id="star-icon" alt="star icon"></i></h2>
