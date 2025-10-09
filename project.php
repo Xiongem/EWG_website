@@ -14,6 +14,7 @@ $title = $_GET["project"];
 $sql = "SELECT * FROM current_project WHERE title='$title'";
 $result = $_SESSION["conn"]->query($sql);
 $project = $result->fetch_assoc();
+    $projectID = $project["id"];
     $genre = $project["genre"];
     $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
     $current_count = $project["current_count"];
@@ -195,7 +196,7 @@ $project = $result->fetch_assoc();
     <?php if ($state == "current") {?>
     <div class="archive-wrapper">
         <div class="archive-button" id="notArchived">
-            <a href="php-processes/archiveProject">Archive Project</a>
+            <a href="php-processes/archiveProject?project=<?=$projectID?>">Archive Project</a>
         </div>
     </div>
     <?php } elseif ($state == "archived") {?>
