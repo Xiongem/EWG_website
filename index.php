@@ -231,7 +231,7 @@ if ($intervals == 1) {
 }
 echo "$streak"."<br>";
 $update_date = date("Y-m-d");
-echo $update_date;
+echo "$update_date"."<br>";
 
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
