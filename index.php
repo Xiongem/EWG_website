@@ -909,7 +909,7 @@ else {
     //* round end of percentage bar when it hits 100%
     var percentageBar = document.getElementById("percentage");
     var percentage = <?=$displayPercentage?>
-    if (percentage. >= 100) {
+    if (percentage >= 100) {
         percentageBar.style['border-radius'] = '14px';
     } else {
         percentageBar.style['border-radius'] = '14px 0px 0px 14px';
