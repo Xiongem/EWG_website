@@ -79,6 +79,9 @@
     }
 }
 @media only screen and (min-width: 720px) {
+    .pb-background {
+        min-height: 8em;
+    }
     .progress-info-wrapper {
         display: flex;
         justify-content: space-evenly;
