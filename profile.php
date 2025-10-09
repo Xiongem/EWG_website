@@ -65,7 +65,8 @@ $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='
     <header>
         <?php makeNav() ?>
     </header>
-    <?php if ($userID == $profileID) {?>
+    <?php 
+    if ($userID == $profileID) {?>
     <div class="profile-wrapper">
         
         <a id="profileUpdate" href="updateProfile.php"><i class="fa fa-gear"></i></a>
