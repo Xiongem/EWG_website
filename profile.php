@@ -65,10 +65,11 @@ $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='
     <header>
         <?php makeNav() ?>
     </header>
+    <?php if ($userID == $profileID) {?>
     <div class="profile-wrapper">
-        <?php if ($userID == $profileID) {?>
+        
         <a id="profileUpdate" href="updateProfile.php"><i class="fa fa-gear"></i></a>
-        <?php}?>
+        
         <div class="user-container">
             <img src="<?=$pfp_set?>" alt="profile image" id="profilePicture">
             <h1 id="username"><?=$username?></h1>
@@ -86,6 +87,7 @@ $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='
             </div>
         </div>
     </div>
+    <?php}?>
     <div class="main-wrapper">
         <div class="current-project-wrapper">
             <div class="current-project-container">
