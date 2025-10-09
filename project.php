@@ -195,6 +195,7 @@ $project = $result->fetch_assoc();
         <?php makeNav() ?>
     </header>
     <?php 
+    echo $projectCreatorID;
     if ($projectCreatorID == $userID) {
             $sql = "SELECT id FROM current_project WHERE users_id=$userID AND current_state='current'";
                 $result = $_SESSION["conn"]->query($sql);
