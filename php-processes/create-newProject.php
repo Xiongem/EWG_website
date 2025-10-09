@@ -52,7 +52,7 @@ $stmt = $_SESSION["conn"] -> prepare("INSERT INTO current_project
         //echo "params bound"."<br>";
 //execute statement
 if ($stmt -> execute()) {
-    header("Location: /projects.php?project=<?=$title?>");
+    header("Location: /index.php");
         exit;
     } else {
         die("unexpected error");
