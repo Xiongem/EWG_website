@@ -907,11 +907,12 @@ else {
     <?php makeFooter() ?>
     <script>
     //* round end of percentage bar when it hits 100%
-    var percentage = document.getElementById("percentage");
-    if (percentage.style.width >= '100%') {
-        percentage.style['border-radius'] = '14px';
+    var percentageBar = document.getElementById("percentage");
+    var percentage = <?=$displayPercentage?>
+    if (percentage. >= 100) {
+        percentageBar.style['border-radius'] = '14px';
     } else {
-        percentage.style['border-radius'] = '14px 0px 0px 14px';
+        percentageBar.style['border-radius'] = '14px 0px 0px 14px';
     }
     //* Check if badge toggle is checked
     var badgeToggle = document.getElementById("badgeEdit");
