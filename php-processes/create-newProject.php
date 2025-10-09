@@ -15,7 +15,13 @@ $sql = "SELECT username FROM users WHERE id=$userID";
     $user = $result->fetch_assoc();
 
 $username = $user["username"];
+$genre = $_POST["genre"];
+$title = $_POST["title"];
+$info = $_POST["summary"];
 $current_count = 0;
+$goal = $_POST["goalNumber"];
+$date = $_POST["endDate"];
+$dailyGoal = $_POST["dailyGoal"];
 $current_state = "current";
 
 // if (!isset($_POST["endDate"])) {
