@@ -50,6 +50,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     $projectID = $rows["id"];
                     $title = $rows["title"];
                     $genre = $rows["genre"];
+                    $info = $rows["info"];
                     $currentDisplay = $rows["display"];
                     $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
                     $current_count = $rows["current_count"];
