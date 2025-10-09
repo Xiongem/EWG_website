@@ -93,7 +93,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
         <script>
             var state = "<?= $state ?>";
             var project = <?=$projectID?>;
-            var icon = document.getElementById(project);
+            var icon = document.getElementById(<?=$projectID?>);
             if (state = "archived") {
                 icon.class.add("inactive");
             }
