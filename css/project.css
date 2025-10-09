@@ -21,9 +21,10 @@
     }
     .archive-button > a {
         font-size: 16px;
+        color: var(--background-color);
     }
     .archive-button:hover > a {
-        color: var(--background-color);
+        color: var(--accent-3);
     }
     .archived-wrapper {
         display: grid;
