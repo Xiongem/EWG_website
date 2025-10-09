@@ -26,7 +26,7 @@ $project = $result->fetch_assoc();
     $update_date = $project["update_date"];
     $streak = $project["streak"];
     $dailyGoal = $project["daily_goal"];
-    $progress = floor($current_count / $goal * 100);
+    $percentage = floor($current_count / $goal * 100);
         $now = time();
         $your_date = strtotime($goalDate);
         $datediff = $your_date - $now;
@@ -47,7 +47,7 @@ $project = $result->fetch_assoc();
         $percentage = 0;
     } elseif (floor($current_count / $goal * 100)<=4) {
         $progress = 4;
-        $percentage = $progress;
+        $percentage = $percentage;
     } else {
         $progress = floor($current_count / $goal * 100);
         $percentage = $progress;
