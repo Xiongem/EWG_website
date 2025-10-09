@@ -236,7 +236,9 @@ echo $update_date;
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
 $_SESSION["streak"] = $streak;
+echo $_SESSION["streak"];
 $_SESSION["update_date"] = $update_date;
+echo $_SESSION["update_date"];
 }  
 //* User is not logged in
 else {
