@@ -225,7 +225,7 @@ $your_dates = strtotime($update_date);
 $datediffer = $nows - $your_dates;
 $intervals = round($datediffer / (60 * 60 * 24));
 echo "$intervals"."<br>";
-if ($interval == 1) {
+if ($intervals == 1) {
     $streak = $streak + 1;
 } else {
     $streak = 1;
