@@ -42,7 +42,7 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
             function disable() {
             var input = document.getElementById( "submit" );
             // var disable = input.disable;
-            input.classList.add("hide");
+                input.classList.add("hide");
             }
         </script>
     <div class="archive-warning">
@@ -121,10 +121,12 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
                         <span id="preview-summary"></span>
                     </div>
                 </div>
+            <?php if (result->num_rows < 5) {?>
                 <div class="button">
                     <a id="cancel" onclick="goBack()">Cancel</a>
                     <input class="" type="submit" value="Looks Good" id="submit">
                 </div>
+            <?php } ?>
             </form>
         </div>
     </div>
