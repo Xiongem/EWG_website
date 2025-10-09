@@ -660,6 +660,7 @@ else {
                         </div>
                     </div>
                 </div>
+            <?php if ($displayGoalDate !== "0000-00-00") { ?>
             <!-- //* Row Three -->
                 <div class="auto-row rows">
                     <!-- //* Full Streak-->
@@ -699,6 +700,7 @@ else {
                         </div>
                     </div>
                 </div>
+                <?php } ?>
             </div>
         <!-- //* Toggleable Badges -->
             <div class="toggle-badges">
