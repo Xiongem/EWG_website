@@ -203,7 +203,7 @@ $project = $result->fetch_assoc();
     <div class="archived-wrapper">
         <h2>Archived</h2>
         <div class="reverse-archive-button">
-            <a>Unarchive Project</a>
+            <a href="php-processes/unarchiveProject?project=<?=$projectID?>">Unarchive Project</a>
         </div>
     </div>
     <?php } ?>
