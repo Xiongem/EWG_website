@@ -1,8 +1,8 @@
 <?php
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
-// ini_set('log_errors', 'On');
-// ini_set('error_log', '/path/to/php_errors.log');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 'On');
+ini_set('error_log', '/path/to/php_errors.log');
 
 
 ob_start();
@@ -64,10 +64,9 @@ $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='
     <header>
         <?php makeNav() ?>
     </header>
-    <?php if ($userID == $_SESSION["user_id"]) {?>
-        <p id="profileUpdate" href="updateProfile.php"><i class="fa fa-gear"></i></p>
-    <?php}?>
     <div class="profile-wrapper">
+        
+        <a id="profileUpdate" href="updateProfile.php"><i class="fa fa-gear"></i></a>
         
         <div class="user-container">
             <img src="<?=$pfp_set?>" alt="profile image" id="profilePicture">
