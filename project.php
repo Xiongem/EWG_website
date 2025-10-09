@@ -202,7 +202,7 @@ $project = $result->fetch_assoc();
                     $row = $result->fetch_assoc();
                     $numProjects = $row["id"];
                 }
-                echo $numProjects;
+                echo $row;
         if ($state == "current") {?>
         <div class="archive-wrapper">
             <div class="archive-button" id="notArchived">
