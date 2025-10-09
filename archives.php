@@ -36,9 +36,9 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
     </header>
     <div class="title-wrapper">
         <h1>All Your Projects</h1>
-        <div class="instruction-wrapper">
+        <!-- <div class="instruction-wrapper">
             <p><i class="fa fa-star" id="star-icon" alt="star icon"></i> = Active Project</p>
-        </div>
+        </div> -->
     </div>
     <div class="main-wrapper">
     <?php
