@@ -9,17 +9,18 @@ session_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
-$sql = "SELECT current_count FROM current_project WHERE users_id=$userID AND current_state='current' AND display='active'";
+$userID = $_SESSION["user_id"];
+$choice = $_POST["wordCount"];
+$streak = $_SESSION["streak"];
+$update_date = $_SESSION["update_date"];
+
+$sql = "SELECT current_count FROM current_project WHERE users_id='$userID' AND current_state='current' AND display='active'";
         $result = $_SESSION["conn"]->query($sql);
         $count = $result->fetch_assoc();
             $currentCount = $count["current_count"];
 
     $newCount = $currentCount + $_POST["updateWordCount"];
 
-$userID = $_SESSION["user_id"];
-$choice = $_POST["wordCount"];
-$streak = $_SESSION["streak"];
-$update_date = $_SESSION["update_date"];
 
 if ($choice == "replace") {
     $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND display='active'");
