@@ -393,6 +393,7 @@ else {
                             $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
                             $current_count = $rows["current_count"];
                             $goal = $rows["goal"];
+                            $goalDate = $rows["goal_date"];
                             $progress = floor($current_count / $goal * 100);
                             $now = time();
                             $your_date = strtotime($goalDate);
