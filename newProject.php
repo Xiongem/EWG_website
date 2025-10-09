@@ -53,7 +53,7 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
     <div class="new-project-wrapper">
         <h1>Create a New Project</h1>
         <div class="new-project-container">
-            <form method="post" action="create-newProject" name="createNewProject">
+            <form method="post" action="php-processes/create-newProject.php" name="createNewProject">
                 <div class="input-section">
                     <label for="title">Title</label>
                     <input class="input" type="text" name="title" id="title"
