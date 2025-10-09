@@ -53,5 +53,5 @@ echo"$username, $genre, $title, $info, $current_count, $goal, $date, $dailyGoal"
 //execute statement
 
 
-$stmt -> close();
-mysqli_close($conn);
+// $stmt -> close();
+// mysqli_close($conn);
