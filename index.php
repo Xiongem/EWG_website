@@ -190,9 +190,9 @@ if (isset($_SESSION["user_id"])) {
                     }
 
                     if ($streak >= "21") {
-                        $badge8 = "images/badges/streak-twentyOne-color.webp";
+                        $badge9 = "images/badges/streak-twentyOne-color.webp";
                     } else {
-                        $badge8 = "images/badges/streak-twentyOne-mono.webp";
+                        $badge9 = "images/badges/streak-twentyOne-mono.webp";
                     }
                     
                     // $badge1 = $project["quarter-quomplete"];
