@@ -418,7 +418,11 @@ else {
                     <div class="project-stats">
                         <p id="popup-goal">Goal: <?= $current_count ?>/<?= $goal ?></p>
                         <p><?= $progress ?>%</p>
-                        <p id="popup-days-left">Days Left: <?= $days ?></p>
+                        <?php if ($days !== "No Goal Date Set") { ?>
+                            <p id="popup-days-left">Days Left: <?= $days ?></p>
+                        <?php }else { ?>
+                            <p id="popup-days-left"><?= $days ?></p>
+                            <?php } ?>
                     </div>
                 </div>
             </div>
