@@ -209,13 +209,13 @@ $project = $result->fetch_assoc();
         <div class="archived-wrapper">
             <h2>Archived</h2>
             <div class="reverse-archive-button">
-                <a href="php-processes/unarchiveProject?project=<?=$projectID?>">Unarchive Project</a>
+                <a href="php-processes/unarchiveProject?project=<?=$projectID?>">Revive Project</a>
             </div>
         </div>
         <?php }else { ?>
             <div class="warning-wrapper">
                 <h2>Archived</h2>
-                <h3>Archive an active project if you wish to unarchive this one</h3>
+                <h3>Archive an active project if you wish to revive this one</h3>
             </div>
         <?php }} ?>
     <!--* PROGRESS BAR-->
