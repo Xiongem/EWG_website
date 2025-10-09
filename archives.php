@@ -91,7 +91,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             </div>
         </a>
         <script>
-            var state = <?= $state ?>;
+            var state = "<?= $state ?>";
             var project = <?=$projectID?>;
             var icon = document.getElementById(project);
             if (state = "archived") {
