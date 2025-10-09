@@ -218,27 +218,23 @@ if (isset($_SESSION["user_id"])) {
             }                
             }
         }
-
+//* increase or reset streak count
 $nows = time();
 $your_dates = strtotime($update_date);
 $datediffer = $nows - $your_dates;
 $intervals = round($datediffer / (60 * 60 * 24));
-echo "$intervals"."<br>";
+
 if ($intervals == 1) {
     $streak = $streak + 1;
 } else {
     $streak = 1;
 }
-echo "$streak"."<br>";
 $update_date = date("Y-m-d");
-echo "$update_date"."<br>";
 
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
 $_SESSION["streak"] = $streak;
-echo $_SESSION["streak"];
 $_SESSION["update_date"] = $update_date;
-echo $_SESSION["update_date"];
 }  
 //* User is not logged in
 else {

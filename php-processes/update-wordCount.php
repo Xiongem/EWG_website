@@ -14,7 +14,6 @@ $choice = $_POST["wordCount"];
 $streak = $_SESSION["streak"];
 $update_date = $_SESSION["update_date"];
 
-echo $update_date;
 
 $sql = "SELECT current_count FROM current_project WHERE users_id='$userID' AND current_state='current' AND display='active'";
         $result = $_SESSION["conn"]->query($sql);
