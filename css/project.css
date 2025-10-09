@@ -19,10 +19,10 @@
         cursor: pointer;
         white-space:pre-wrap;
     }
-    .archive-button > p {
+    .archive-button > a {
         font-size: 16px;
     }
-    .archive-button:hover > p {
+    .archive-button:hover > a {
         color: var(--background-color);
     }
     .archived-wrapper {
@@ -48,10 +48,10 @@
         cursor: pointer;
         white-space:pre-wrap;
     }
-    .reverse-archive-button > p {
-        font-size: 16px;
+    .reverse-archive-button > a {
+        font-size: 16ax;
     }
-    .reverse-archive-button:hover > p {
+    .reverse-archive-button:hover > a {
         color: var(--background-color);
     }
 }

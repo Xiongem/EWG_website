@@ -195,7 +195,7 @@ $project = $result->fetch_assoc();
     <?php if ($state == "current") {?>
     <div class="archive-wrapper">
         <div class="archive-button" id="notArchived">
-            <a><p>Archive Project</p></a>
+            <a>Archive Project</a>
         </div>
     </div>
     <?php } elseif ($state == "archived") {?>
