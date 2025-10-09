@@ -28,6 +28,17 @@ $user = $result->fetch_assoc();
         } else {
             $pfp_set = "images/pfp-icon.webp";
         }
+
+//* Pull active project info
+$sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='current' AND display='active'";
+    $result = $_SESSION["conn"]->query($sql);
+    $project = $result->fetch_assoc();
+        $projectID = $project["id"];
+        $genre = $project["genre"];
+        $projectCreatorID = $project["users_id"];
+        $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
+        $title = $project["title"];
+        $info = $project["info"];
 ?>
 
 <!DOCTYPE html>
@@ -79,10 +90,10 @@ $user = $result->fetch_assoc();
                 </div>
                 <div class="progress-info-container">
                     <div id="project-img">
-                        <img src="../images/genre-covers/placeholder(v3).webp" id="theme-img">
+                        <img src="<?=$genre_picture?>" id="theme-img">
                     </div>
                     <div id="project-title">
-                        <h2>Title</h2>
+                        <h2><?=$title?></h2>
                     </div>
                     <div id="project-summary">
                         <!-- <p>Looks like you don't have any active projects.
@@ -90,13 +101,7 @@ $user = $result->fetch_assoc();
                             Click <a href="newProject.html">here</a> to get started!
                         </p> -->
                         <p id="summary-text">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex 
-                            sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis 
-                            convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus 
-                            fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada 
-                            lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti 
-                            sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci 
-                            varius natoque penatibus et magnis dis parturient montes nascetur
+                           <?=$info?>
                         </p>
                     </div>
                 </div>
