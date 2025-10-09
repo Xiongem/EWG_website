@@ -7,7 +7,7 @@ dbConnect();
 $userID = $_SESSION["user_id"];
 $choice = $_POST["wordCount"];
 $streak = $_SESSION["streak"];
-$update_date = date("Y-m-d");
+$update_date = $_SESSION["update_date"];
 
 if ($choice == "replace") {
     $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND display='active'");
