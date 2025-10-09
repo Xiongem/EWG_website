@@ -24,7 +24,7 @@
         color: var(--background-color);
     }
     .archive-button:hover > a {
-        color: var(--accent-3);
+        color: var(--accent-2);
     }
     .archived-wrapper {
         display: grid;
@@ -51,8 +51,9 @@
     }
     .reverse-archive-button > a {
         font-size: 16ax;
+        color: var(--background-color);
     }
     .reverse-archive-button:hover > a {
-        color: var(--background-color);
+        color: var(--accent-2);
     }
 }
