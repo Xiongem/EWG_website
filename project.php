@@ -8,7 +8,7 @@
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
-
+$userID = htmlspecialchars($_SESSION["user_id"]);
 $title = $_GET["project"];
 
 $sql = "SELECT * FROM current_project WHERE title='$title'";
@@ -16,6 +16,7 @@ $result = $_SESSION["conn"]->query($sql);
 $project = $result->fetch_assoc();
     $projectID = $project["id"];
     $genre = $project["genre"];
+    $projectCreatorID = $project["users_id"];
     $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
     $current_count = $project["current_count"];
     $goal = $project["goal"];
@@ -193,20 +194,26 @@ $project = $result->fetch_assoc();
     <header>
         <?php makeNav() ?>
     </header>
-    <?php if ($state == "current") {?>
-    <div class="archive-wrapper">
-        <div class="archive-button" id="notArchived">
-            <a href="php-processes/archiveProject?project=<?=$projectID?>">Archive Project</a>
+    <?php 
+    if ($projectCreatorID == $userID) {
+            $sql = "SELECT id FROM current_project WHERE users_id=$userID AND current_state='current'";
+                $result = $_SESSION["conn"]->query($sql);
+                $project = $result->fetch_assoc();
+                echo $result;
+        if ($state == "current") {?>
+        <div class="archive-wrapper">
+            <div class="archive-button" id="notArchived">
+                <a href="php-processes/archiveProject?project=<?=$projectID?>">Archive Project</a>
+            </div>
         </div>
-    </div>
-    <?php } elseif ($state == "archived") {?>
-    <div class="archived-wrapper">
-        <h2>Archived</h2>
-        <div class="reverse-archive-button">
-            <a href="php-processes/unarchiveProject?project=<?=$projectID?>">Unarchive Project</a>
+        <?php } elseif ($state == "archived") {?>
+        <div class="archived-wrapper">
+            <h2>Archived</h2>
+            <div class="reverse-archive-button">
+                <a href="php-processes/unarchiveProject?project=<?=$projectID?>">Unarchive Project</a>
+            </div>
         </div>
-    </div>
-    <?php } ?>
+        <?php }} ?>
     <!--* PROGRESS BAR-->
     <div class="pb-wrapper">
         <div class="pb-background">
