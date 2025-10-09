@@ -192,10 +192,10 @@ $project = $result->fetch_assoc();
         <?php makeNav() ?>
     </header>
     <div class="archive-wrapper">
-        <div class="archive-button" id="notArchived">
+        <!-- <div class="archive-button" id="notArchived">
             <p>Archive Project</p>
-        </div>
-        <h3 class="hide" id="archived">Archived</h3>
+        </div> -->
+        <h3 class="" id="archived">Archived</h3>
     </div>
     <!--* PROGRESS BAR-->
     <div class="pb-wrapper">
