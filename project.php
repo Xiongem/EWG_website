@@ -77,7 +77,6 @@ $project = $result->fetch_assoc();
     $your_dates = strtotime($update_date);
     $datediffer = $nows - $your_dates;
     $intervals = round($datediffer / (60 * 60 * 24));
-    echo $intervals;
     if ($intervals <= 1) {
         # code...
         if ($streak >= 2) {
