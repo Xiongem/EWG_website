@@ -29,6 +29,7 @@
         display: grid;
         grid-template-columns: 30% 40% 30%;
         place-items: center;
+        height: 4em;
     }
     .archived-wrapper > h2 {
         grid-column-start: 2;
