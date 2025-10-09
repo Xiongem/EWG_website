@@ -113,6 +113,7 @@ $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='
         </div>
         <!--* BADGES-->
         <div class="badge-container">
+            <?php if ($userID == $profileID) {?>
             <div class="slider-container">
                 <i class="fa fa-lock" alt="lock icon"></i>
                 <label class="switch">
@@ -121,6 +122,7 @@ $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='
                 </label>
                 <i class="fa fa-unlock" alt="unlocked icon"></i>
             </div>
+            <?php } ?>
             <h1 id="badge-title">All Time Badges</h1>
             <!--* Completed one project-->
             <div class="badge-wrapper">
@@ -204,8 +206,10 @@ $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='
                     <p>One or more of your projects has made you cry.</p>
                 </div>
             </div>
+        <?php if ($userID == $profileID) {?>
         <p id="instruction">To give yourself a badge, simply activate the toggle and click on a badge. 
                         Click on it again to remove it.</p>
+        <?php } ?>
         </div>
     </div>
     <!-- //* FOOTER-->
