@@ -910,6 +910,8 @@ else {
     var percentage = document.getElementById("percentage");
     if (percentage.style.width >= '100%') {
         percentage.style['border-radius'] = '14px';
+    } else {
+        percentage.style['border-radius'] = '14px 0px 0px 14px';
     }
     //* Check if badge toggle is checked
     var badgeToggle = document.getElementById("badgeEdit");
