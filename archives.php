@@ -99,48 +99,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             }
         </script>
         <?php }} ?>
-        <!-- <a href="project.php" class="overview-container">
-            <img src="../images/genre-covers/placeholder(v3).webp">
-            <div class="overview-info">
-                    <h2 class="overview-title">Title <i class="fa fa-star" id="star-icon" alt="star icon"></i></h2>
-                    <p class="overview-summary">Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex 
-                            sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis 
-                            convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus 
-                            fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada 
-                            lacinia integer nunc posuere ut hendrerit semper vel class</p>
-                    <div class="overview-data">
-                        <div class="overview-wordCount">
-                            <p><strong>Words:</strong></p>
-                            <p>50,000</p>
-                        </div>
-                        <div class="overview-badges">
-                            <p><strong>Badges:</strong></p>
-                            <p>5/25</p>
-                        </div>
-                    </div>
-            </div>
-        </a>
-        <a href="project.php" class="overview-container">
-            <img src="../images/genre-covers/placeholder(v3).webp">
-            <div class="overview-info">
-                    <h2 class="overview-title">Title <i class="fa fa-star" id="star-icon" alt="star icon"></i></h2>
-                    <p class="overview-summary">Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex 
-                            sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis 
-                            convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus 
-                            fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada 
-                            lacinia integer nunc posuere ut hendrerit semper vel class</p>
-                    <div class="overview-data">
-                        <div class="overview-wordCount">
-                            <p><strong>Words:</strong></p>
-                            <p>50,000</p>
-                        </div>
-                        <div class="overview-badges">
-                            <p><strong>Badges:</strong></p>
-                            <p>5/25</p>
-                        </div>
-                    </div>
-            </div>
-        </a>       -->
     </div>
     <!-- //* FOOTER-->
     <!-- //! Keep link to logo artist for permission to use-->
