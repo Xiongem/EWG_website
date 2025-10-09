@@ -80,7 +80,7 @@
 }
 @media only screen and (min-width: 720px) {
     .pb-background {
-        min-height: 15em;
+        min-height: 18em;
     }
     .progress-info-wrapper {
         display: flex;
