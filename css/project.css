@@ -56,4 +56,13 @@
     .reverse-archive-button:hover > a {
         color: var(--accent-2);
     }
+    .warning-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .warning-wrapper > h2 {
+        color: var(--warning);
+    }
 }

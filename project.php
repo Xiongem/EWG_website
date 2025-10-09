@@ -195,28 +195,31 @@ $project = $result->fetch_assoc();
         <?php makeNav() ?>
     </header>
     <?php 
-    echo "$projectCreatorID"."<br>";
-    echo $userID;
     if ($projectCreatorID == $userID) {
             $sql = "SELECT id FROM current_project WHERE users_id=$userID AND current_state='current'";
                 $result = $_SESSION["conn"]->query($sql);
                 if ($result->num_rows > 0) {
                     $row = $result->fetch_assoc();
+                    $numProjects = $row["id"];
                 }
-                echo ($row["id"]);
         if ($state == "current") {?>
         <div class="archive-wrapper">
             <div class="archive-button" id="notArchived">
                 <a href="php-processes/archiveProject?project=<?=$projectID?>">Archive Project</a>
             </div>
         </div>
-        <?php } elseif ($state == "archived") {?>
+        <?php } elseif ($state == "archived"  && $numProjects < 5) {?>
         <div class="archived-wrapper">
             <h2>Archived</h2>
             <div class="reverse-archive-button">
                 <a href="php-processes/unarchiveProject?project=<?=$projectID?>">Unarchive Project</a>
             </div>
         </div>
+        <?php }else { ?>
+            <div class="warning-wrapper">
+                <h2>Archived</h2>
+                <h3>Archive an active project if you wish to unarchive this one</h3>
+            </div>
         <?php }} ?>
     <!--* PROGRESS BAR-->
     <div class="pb-wrapper">
