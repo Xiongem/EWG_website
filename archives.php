@@ -75,7 +75,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
         <a href="project.php?project=<?=$title?>" class="overview-container">
             <img src="<?= $genre_picture ?>">
             <div class="overview-info">
-                    <h2 class="overview-title"><?= $title ?></h2>
+                    <h2 class="overview-title"><?= $title ?></h2><i class="fa fa-star" id="star-icon" alt="star icon"></i>
                     <p class="overview-summary"><?= $info ?></p>
                     <div class="overview-data">
                         <div class="overview-wordCount">
