@@ -662,18 +662,6 @@ else {
                 </div>
             <!-- //* Row Three -->
                 <div class="auto-row rows">
-                    <!-- //* First Daily-->
-                    <div class="badge-wrapper">
-                        <img src="<?php if($badge10) {
-                            echo $badge10;
-                        }else{
-                            echo $default10;
-                        } ?>" id="first-daily" class="badge">
-                        <div class="badgeToPopup" id="first-daily-popup">
-                            <h4>First Daily</h4>
-                            <p>Reached your daily goal for the first time on this project</p>
-                        </div>
-                    </div>
                     <!-- //* Full Streak-->
                     <div class="badge-wrapper">
                         <img src="<?php if($badge11) {
@@ -684,6 +672,18 @@ else {
                         <div class="badgeToPopup" id="every-streak-popup">
                             <h4>Every Day Streak</h4>
                             <p>Congrats, you've worked on your project every day!</p>
+                        </div>
+                    </div>
+                    <!-- //* First Daily-->
+                    <div class="badge-wrapper">
+                        <img src="<?php if($badge10) {
+                            echo $badge10;
+                        }else{
+                            echo $default10;
+                        } ?>" id="first-daily" class="badge">
+                        <div class="badgeToPopup" id="first-daily-popup">
+                            <h4>First Daily</h4>
+                            <p>Reached your daily goal for the first time on this project</p>
                         </div>
                     </div>
                     <!-- //* Stayed on Track-->
