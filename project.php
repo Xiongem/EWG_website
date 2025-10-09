@@ -198,14 +198,15 @@ $project = $result->fetch_assoc();
     if ($projectCreatorID == $userID) {
             $sql = "SELECT id FROM current_project WHERE users_id=$userID AND current_state='current'";
                 $result = $_SESSION["conn"]->query($sql);
-                
+                $rows = $result->num_rows;
+                echo $rows:
         if ($state == "current") {?>
         <div class="archive-wrapper">
             <div class="archive-button" id="notArchived">
                 <a href="php-processes/archiveProject?project=<?=$projectID?>">Archive Project</a>
             </div>
         </div>
-        <?php } elseif ($state == "archived"  && $result->num_rows < 5) {?>
+        <?php } elseif ($state == "archived"  && $rows < 5) {?>
         <div class="archived-wrapper">
             <h2>Archived</h2>
             <div class="reverse-archive-button">
