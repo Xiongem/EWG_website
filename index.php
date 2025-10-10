@@ -32,6 +32,7 @@ if (isset($_SESSION["user_id"])) {
     $result = $_SESSION["conn"]->query($sql);
     $project = $result->fetch_assoc();
         $displayTitle = $project["title"];
+        $displayProjectID = $project["id"];
         $displayGenre = $project["genre"];
         $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
         $displayInfo = $project["info"];
@@ -172,6 +173,7 @@ if (isset($_SESSION["user_id"])) {
                 $result = $_SESSION["conn"]->query($sql);
                 $project = $result->fetch_assoc();
                     $displayTitle = $project["title"];
+                    $displayProjectID = $project["id"];
                     $displayGenre = $project["genre"];
                     $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
                     $displayInfo = $project["info"];
@@ -545,12 +547,12 @@ else {
                 </div>
                 <div class="progress-info-container">
                     <div id="project-img">
-                        <a href="project.php?project=<?=$displayTitle?>">
+                        <a href="project.php?projectID=<?=$displayProjectID?>">
                             <img src=<?= $displayGenrePicture ?> id="theme-img">
                         </a>
                     </div>
                     <div id="project-title">
-                        <a href="project.php?project=<?=$displayTitle?>">
+                        <a href="project.php?project=<?=$displayProjectID?>">
                             <h2><?= $displayTitle ?></h2>
                         </a>
                     </div>

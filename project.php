@@ -9,12 +9,12 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 $userID = htmlspecialchars($_SESSION["user_id"]);
-$title = $_GET["project"];
+$projectID = $_GET["projectID"];
 
-$sql = "SELECT * FROM current_project WHERE title='$title'";
+$sql = "SELECT * FROM current_project WHERE id='$projectID'";
 $result = $_SESSION["conn"]->query($sql);
 $project = $result->fetch_assoc();
-    $projectID = $project["id"];
+    // $projectID = $project["id"];
     $genre = $project["genre"];
     $projectCreatorID = $project["users_id"];
     $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
@@ -254,7 +254,7 @@ $project = $result->fetch_assoc();
     <div class="main-wrapper">
         <div class="current-project-wrapper">
             <div class="current-project-container">
-                <a id="projectUpdate" href="updateProject?project=<?= $title ?>"><i class="fa fa-pencil"></i></a>
+                <a id="projectUpdate" href="updateProject?project=<?=$projectID?>"><i class="fa fa-pencil"></i></a>
                 <div id="area-title">
                     <h1>Your Project</h1>
                 </div>

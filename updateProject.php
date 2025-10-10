@@ -11,7 +11,23 @@ dbConnect();
 forceLogin();
 
 $userID = htmlspecialchars($_SESSION["user_id"]);
-$title = $_GET["project"];
+$projectID = $_GET["projectID"];
+
+$sql = "SELECT * FROM current_project WHERE id='$projectID' AND users_id='$userID'";
+$result = $_SESSION["conn"]->query($sql);
+$project = $result->fetch_assoc();
+    // $projectID = $project["id"];
+    $genre = $project["genre"];
+    // $projectCreatorID = $project["users_id"];
+    $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
+    $current_count = $project["current_count"];
+    $goal = $project["goal"];
+    $info = $project["info"];
+    $state = $project["current_state"];
+    $goalDate = $project["goal_date"];
+    $update_date = $project["update_date"];
+    $streak = $project["streak"];
+    $dailyGoal = $project["daily_goal"];
 ?>
 
 <!DOCTYPE html>
@@ -119,6 +135,12 @@ $title = $_GET["project"];
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
 <script>
+    //* Loads correct genre selection on page load
+    var genre = <?=$genre?>;
+    var selected = document.getElementById('genre');
+    selected.selectedIndex = genre - 1;
+    switchImage();
+    //* Sends user back one page when they click cancel
     function goBack() {
         history.go(-1);
     }
