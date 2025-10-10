@@ -119,7 +119,7 @@ $project = $result->fetch_assoc();
                     </div>
                     <div class="grid-item">
                         <h3>Summary:</h3>
-                        <span id="preview-summary"><?=$info?></span>
+                        <span id="preview-summary"></span>
                     </div>
                 </div>
                 <div class="button">
