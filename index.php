@@ -414,6 +414,12 @@ else {
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title">
+                        <script>
+                            const boxes = document.querySelectorAll('.fa-star');
+                            for (const box of boxes) {
+                                box.classList.remove('active');
+                            }
+                        </script>
                         <i class="fa fa-star <?= $currentDisplay ?>" id="<?= $projectID ?>" alt="star icon"></i> 
                         <?= $title ?></h3>
                     <div class="project-stats">
