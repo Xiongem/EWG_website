@@ -209,7 +209,7 @@ $project = $result->fetch_assoc();
 
         //* Goal Number
         // Getting the current value of input
-        var currentText = $(this).val();		
+        var currentText = $("#goalNumber").val();		
         // Setting the Span content
         $("#preview-goal").text(currentText);
         $("#goalNumber").keyup(function(){
@@ -221,7 +221,7 @@ $project = $result->fetch_assoc();
 
         //* Goal Number
         // Getting the current value of input
-        var currentText = $(this).val();		
+        var currentText = $("#dailyGoal").val();		
         // Setting the Span content
         $("#preview-daily").text(currentText);
         $("#dailyGoal").keyup(function(){
@@ -232,7 +232,7 @@ $project = $result->fetch_assoc();
         });
 
         //* End Date
-        var currentText = $(this).val();
+        var currentText = $("#endDate").val();
         var date = new Date(currentText).toLocaleDateString('en-US');		
         // Setting the Span content
         $("#preview-date").text(date);
@@ -246,7 +246,7 @@ $project = $result->fetch_assoc();
         
         //* Summary
         // Getting the current value of input
-        var currentText = $(this).val();		
+        var currentText = $("#summary").val();		
         // Setting the Span content
         $("#preview-summary").text(currentText);
         $("#summary").keyup(function(){
