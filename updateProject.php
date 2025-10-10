@@ -34,7 +34,7 @@ forceLogin();
         <?php makeNav() ?>
     </header>
     <div class="new-project-wrapper">
-        <h1>Create a New Project</h1>
+        <h1>Update Your Project</h1>
         <div class="new-project-container">
             <form method="post" action="php-processes/create-newProject" name="createNewProject">
                 <div class="input-section">
