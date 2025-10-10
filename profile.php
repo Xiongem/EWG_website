@@ -94,10 +94,14 @@ $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='
                 </div>
                 <div class="progress-info-container">
                     <div id="project-img">
-                        <img src="<?=$genre_picture?>" id="theme-img">
+                        <a href="project.php?project=<?=$title?>">
+                            <img src="<?=$genre_picture?>" id="theme-img">
+                        </a>
                     </div>
                     <div id="project-title">
-                        <h2><?=$title?></h2>
+                        <a href="project.php?project=<?=$title?>">
+                            <h2><?=$title?></h2>
+                        </a>
                     </div>
                     <div id="project-summary">
                         <!-- <p>Looks like you don't have any active projects.
