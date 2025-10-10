@@ -197,10 +197,10 @@ $project = $result->fetch_assoc();
     $(document).ready(function(){
         //* Title
         // Getting the current value of input
-        // var currentText = $("#title").val();		
-        // // Setting the Span content
-        // $("#preview-title").text(currentText);
-        $("#title").change(function(){
+        var currentText = $("#title").val();		
+        // Setting the Span content
+        $("#preview-title").text(currentText);
+        $("#title").keyup(function(){
             // Getting the current value of input
             var currentText = $(this).val();		
             // Setting the Span content
