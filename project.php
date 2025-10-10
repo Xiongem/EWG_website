@@ -10,7 +10,6 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 $userID = htmlspecialchars($_SESSION["user_id"]);
 $projectID = $_GET["project"];
-echo $projectID;
 
 $sql = "SELECT * FROM current_project WHERE id='$projectID'";
 $result = $_SESSION["conn"]->query($sql);
