@@ -1,8 +1,8 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('log_errors', 'On');
-ini_set('error_log', '/path/to/php_errors.log');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('log_errors', 'On');
+// ini_set('error_log', '/path/to/php_errors.log');
 
 
 ob_start();
@@ -26,7 +26,7 @@ $project = $result->fetch_assoc();
     $update_date = $project["update_date"];
     $streak = $project["streak"];
     $dailyGoal = $project["daily_goal"];
-    $percentage = floor($current_count / $goal * 100);
+    // $percentage = floor($current_count / $goal * 100);
         $now = time();
         $your_date = strtotime($goalDate);
         $datediff = $your_date - $now;
