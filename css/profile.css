@@ -356,6 +356,7 @@
     }
     #username {
         font-size: 54px;
+        padding: 0;
     }
     .user-container {
         flex-direction: column;
@@ -364,6 +365,7 @@
         background-color: var(--accent-1);
         border: 2px solid var(--accent-3);
         border-radius: 16px;
+        padding: 1em 0;
     }
     .profile-container {
         width: 50%;
