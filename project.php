@@ -254,7 +254,7 @@ $project = $result->fetch_assoc();
     <div class="main-wrapper">
         <div class="current-project-wrapper">
             <div class="current-project-container">
-                <a id="projectUpdate" href="updateProject?project=<?=$projectID?>"><i class="fa fa-pencil"></i></a>
+                <a id="projectUpdate" href="updateProject?projectID=<?=$projectID?>"><i class="fa fa-pencil"></i></a>
                 <div id="area-title">
                     <h1>Your Project</h1>
                 </div>
