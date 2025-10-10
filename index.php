@@ -410,7 +410,7 @@ else {
                                     }
                                 }
                         ?>
-            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>', '<?= $currentDisplay ?>'); addInactive();">
+            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>', '<?= $currentDisplay ?>')">
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title">
@@ -440,14 +440,11 @@ else {
                 </div>
             </div>
             <?php } ?>
-            <script>
+            <!-- <script>
                 function addInactive() {
-                    const boxes = document.querySelectorAll('.fa-star');
-                    for (const box of boxes) {
-                        box.classList.add('inactive');
-                    }
+                    
                 }
-            </script>
+            </script> -->
             <div class="button-wrapper">
                 <script>
                     //* reloads the page after selecting a project through ajax

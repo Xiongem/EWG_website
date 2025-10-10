@@ -2,6 +2,10 @@ function projectSelect(id, display) {
   //assign values
   var project = id;
   console.log("sent post");
+  const boxes = document.querySelectorAll('.fa-star');
+  for (const box of boxes) {
+      box.classList.add('inactive');
+  }
 
   var i = document.getElementById(project);
   i.classList.remove("inactive");
