@@ -11,7 +11,7 @@ dbConnect();
 forceLogin();
 
 $userID = htmlspecialchars($_SESSION["user_id"]);
-$projectID = $_GET["projectID"];
+$projectID = $_GET["project"];
 
 $sql = "SELECT * FROM current_project WHERE id='$projectID' AND users_id='$userID'";
 $result = $_SESSION["conn"]->query($sql);
