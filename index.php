@@ -410,7 +410,7 @@ else {
                                     }
                                 }
                         ?>
-            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>', '<?= $currentDisplay ?>')">
+            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>', '<?= $currentDisplay ?>'); removeActive();">
                 <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                 <div class="project-info">
                     <h3 id="popup-project-title">
@@ -441,9 +441,11 @@ else {
             </div>
             <?php } ?>
             <script>
-                const boxes = document.querySelectorAll('.fa-star');
-                for (const box of boxes) {
-                    box.classList.remove('active');
+                function removeActive() {
+                    const boxes = document.querySelectorAll('.fa-star');
+                    for (const box of boxes) {
+                        box.classList.remove('active');
+                    }
                 }
             </script>
             <div class="button-wrapper">
