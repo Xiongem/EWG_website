@@ -16,7 +16,7 @@ $projectID = $_GET["project"];
 $sql = "SELECT * FROM current_project WHERE id='$projectID' AND users_id='$userID'";
 $result = $_SESSION["conn"]->query($sql);
 $project = $result->fetch_assoc();
-    // $projectID = $project["id"];
+    $title = $project["title"];
     $genre = $project["genre"];
     // $projectCreatorID = $project["users_id"];
     $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
@@ -57,8 +57,8 @@ $project = $result->fetch_assoc();
             <form method="post" action="php-processes/create-newProject" name="createNewProject">
                 <div class="input-section">
                     <label for="title">Title</label>
-                    <input class="input" type="text" name="title" id="title"
-                        placeholder="Awesome Title">
+                    <input class="input" type="text" name="title" id="title" 
+                        value="<?=$title?>">
                     <label for="genre">Genre</label>
                     <select class="input" name="genre" id="genre" onchange="switchImage();">
                         <option name="placeholder" id="placeholder" value="0">Choose your genre</option>
@@ -84,7 +84,7 @@ $project = $result->fetch_assoc();
                     </select>
                     <label for="goalNumber">Goal Number</label>
                     <input class="input" type="text" name="goalNumber" id="goalNumber" pattern="^\d+(,\d+)?$"
-                        placeholder="50,000">
+                        value="<?=$goal?>">
                     <label for="endDate">End Date</label>
                     <input class="input" type="date" name="endDate" id="endDate" onchange="findDailyGoal()">
                         <div class="checkbox-wrapper">
@@ -94,10 +94,10 @@ $project = $result->fetch_assoc();
                     <span id="recommend"></span>
                     <label for="dailyGoal">Daily Goal</label>
                     <input class="input" type="text" name="dailyGoal" id="dailyGoal" pattern="^\d+(,\d+)?$"
-                        placeholder="100 (you can leave me blank)">
+                        value="<?=$dailyGoal?>">
                     <label class="summary" for="summary">Summary</label>
                     <textarea class="summary input" name="summary" id="summary" maxlength="500"
-                        placeholder="Tell the world about your awesome project (max: 500 characters)"></textarea>
+                        value="<?=$info?>"></textarea>
                 </div>
                 <div class="preview-section">
                     <h1>Preview</h1>
