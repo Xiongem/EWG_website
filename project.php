@@ -203,14 +203,14 @@ $project = $result->fetch_assoc();
         if ($state == "current") {?>
         <div class="archive-wrapper">
             <div class="archive-button" id="notArchived">
-                <a href="php-processes/archiveProject?project=<?=$projectID?>">Archive Project</a>
+                <a href="php-processes/archiveProject?projectID=<?=$projectID?>">Archive Project</a>
             </div>
         </div>
         <?php } elseif ($state == "archived"  && $result->num_rows < 5) {?>
         <div class="archived-wrapper">
             <h2>Archived</h2>
             <div class="reverse-archive-button">
-                <a href="php-processes/unarchiveProject?project=<?=$projectID?>">Revive Project</a>
+                <a href="php-processes/unarchiveProject?projectID=<?=$projectID?>">Revive Project</a>
             </div>
         </div>
         <?php }else { ?>
