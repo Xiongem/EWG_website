@@ -619,7 +619,6 @@ $project = $result->fetch_assoc();
             </div> -->
         </div>
     </div>
-    </div>
     <!-- //* FOOTER-->
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
