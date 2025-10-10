@@ -45,7 +45,7 @@ $user = $result->fetch_assoc();
     </header>
     <div class="update-wrapper">
         <h1>Update Your Profile</h1>
-        <form>
+        <form method="post" action="php-processes/update-profile">
             <label for="user-bio">Bio: tell everyone about yourself</label>
             <textarea id="user-bio" name="user-bio" minlength="1" maxlength="300" placeholder="Max length: 300 characters"><?=$bio?></textarea>
             
