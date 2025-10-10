@@ -9,6 +9,17 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 forceLogin();
+
+$userID = $_SESSION["user_id"];
+
+//* pull user info for get token
+$sql = "SELECT * FROM users WHERE id='$userID'";
+$result = $_SESSION["conn"]->query($sql);
+$user = $result->fetch_assoc();
+    $bio = $user["bio"];
+    $fav1 = $user["fav-1"];
+    $fav2 = $user["fav-2"];
+    $fav3 = $user["fav-3"];
 ?>
 
 <!DOCTYPE html>
@@ -36,20 +47,20 @@ forceLogin();
         <h1>Update Your Profile</h1>
         <form>
             <label for="user-bio">Bio: tell everyone about yourself</label>
-            <textarea id="user-bio" name="user-bio" minlength="1" maxlength="300" placeholder="Max length: 300 characters"></textarea>
+            <textarea id="user-bio" name="user-bio" minlength="1" maxlength="300" placeholder="Max length: 300 characters"><?=$bio?></textarea>
             
             <label>Favorites: what are you interested in?</label>
             <div class="fav-wrapper">
                 <label for="fav-1">1:</label>
-                <input type="text" id="fav-1" name="fav-1" class="favs" minlength="1" maxlength="100">
+                <input type="text" id="fav-1" name="fav-1" class="favs" minlength="1" maxlength="100" value="<?=$fav1?>">
             </div>
             <div class="fav-wrapper">
                 <label for="fav-2">2:</label>
-                <input type="text" id="fav-2" name="fav-2" class="favs" minlength="1" maxlength="100">
+                <input type="text" id="fav-2" name="fav-2" class="favs" minlength="1" maxlength="100" value="<?=$fav2?>">
             </div>
             <div class="fav-wrapper">
                 <label for="fav-3">3:</label>
-                <input type="text" id="fav-3" name="fav-3" class="favs" minlength="1" maxlength="100">
+                <input type="text" id="fav-3" name="fav-3" class="favs" minlength="1" maxlength="100" value="<?=$fav3?>">
             </div>
 
             <div class="button-wrapper">
