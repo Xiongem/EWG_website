@@ -28,9 +28,9 @@
     }
     .archived-wrapper {
         display: grid;
-        grid-template-columns: 30% 40% 30%;
+        grid-template-columns: 20% 40% 20%;
         place-items: center;
-        height: 4em;
+        height: 5em;
     }
     .archived-wrapper > h2 {
         grid-column-start: 2;
