@@ -580,6 +580,7 @@
     }
     #summary-text {
         font-size: 22px;
+        margin-top: 0.5em;
     }
     .badge-container {
         width: 50%;
