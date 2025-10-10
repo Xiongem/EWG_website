@@ -2,7 +2,7 @@ function projectSelect(id, display) {
   //assign values
   var project = id;
   console.log("sent post");
-  var boxes = document.querySelectorAll('.fa-star');
+  const boxes = document.querySelectorAll('.fa-star');
     for (const box of boxes) {
     box.classList.remove('active');
   }
