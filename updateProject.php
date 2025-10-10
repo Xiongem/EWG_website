@@ -97,7 +97,7 @@ $project = $result->fetch_assoc();
                         value="<?=$dailyGoal?>">
                     <label class="summary" for="summary">Summary</label>
                     <textarea class="summary input" name="summary" id="summary" maxlength="500"
-                        value="<?=$info?>"></textarea>
+                        ><?=$info?></textarea>
                 </div>
                 <div class="preview-section">
                     <h1>Preview</h1>
