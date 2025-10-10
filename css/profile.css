@@ -386,6 +386,10 @@
     #area-title h1 {
         font-size: 38px;
     }
+    #summary-text {
+        font-size: 22px;
+        margin-top: 0.5em;
+    }
     .badge-container {
         width: 50%;
         background-color: var(--background-color);
