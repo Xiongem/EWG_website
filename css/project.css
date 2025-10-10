@@ -69,5 +69,6 @@
     #projectUpdate {
         position: absolute;
         right: 0;
+        padding: 1em 2em 0 0;
     }
 }
