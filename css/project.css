@@ -66,6 +66,9 @@
     .warning-wrapper > h2 {
         color: var(--warning);
     }
+    .current-project-wrapper {
+        position: relative;
+    }
     #projectUpdate {
         position: absolute;
         right: 0;
