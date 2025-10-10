@@ -2,8 +2,8 @@ function projectSelect(id, display) {
   //assign values
   var project = id;
   console.log("sent post");
-  var active = document.querySelectorAll('.active');
-    for (const active of active) {
+  var actives = document.querySelectorAll('.active');
+    for (const active of actives) {
     active.classList.remove('active');
   }
 
