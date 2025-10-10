@@ -440,11 +440,26 @@ else {
                 </div>
             </div>
             <?php } ?>
-            <!-- <script>
-                function addInactive() {
-                    
+            <script>
+                function projectSelect(id, display) {
+                    //assign values
+                    var project = id;
+                    console.log("sent post");
+                    const boxes = document.querySelectorAll('.fa-star');
+                    for (const box of boxes) {
+                        box.classList.add('inactive');
+                    }
+
+                    var i = document.getElementById(project);
+                    i.classList.remove("inactive");
+                    console.log("removed class");
+                    //begin post method
+                    $.post("php-processes/update-activeProject", {
+                        //DATA
+                        project: project
+                    });
                 }
-            </script> -->
+            </script>
             <div class="button-wrapper">
                 <script>
                     //* reloads the page after selecting a project through ajax
