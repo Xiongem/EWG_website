@@ -107,7 +107,7 @@ $project = $result->fetch_assoc();
                     <div class="grid-item">
                         <h3>Total:</h3>
                         <div>
-                            <span><?=$current_count?>/ </span><span id="preview-goal"></span>
+                            <span><?=$current_count?>/</span><span id="preview-goal"></span>
                         </div>
                     </div>
                     <div class="grid-item" id="preview-date-wrapper">
