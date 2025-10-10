@@ -44,6 +44,7 @@ $project = $result->fetch_assoc();
     <link rel="stylesheet" href="css/newProject.css">
     <link rel="website icon" type="webp" href="images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
