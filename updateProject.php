@@ -195,7 +195,7 @@ $project = $result->fetch_assoc();
     //* ajax for preview area updating
     $(document).ready(function(){
         //* Title
-        $("#title").keyup(function(){
+        $("#title").change(function(){
             // Getting the current value of input
             var currentText = $(this).val();		
             // Setting the Span content
