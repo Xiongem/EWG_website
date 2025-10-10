@@ -11,7 +11,7 @@ dbConnect();
 
 $username = $_SESSION["username"];
 
-$stmt = $conn -> prepare("UPDATE users SET bio=?, `fav-1`=?, `fav-2`=?, `fav-3`=? WHERE id=?");
+$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET bio=?, `fav-1`=?, `fav-2`=?, `fav-3`=? WHERE id=?");
 $stmt->bind_param("ssssi",
                     $_POST["user-bio"],
                     $_POST["fav-1"],
