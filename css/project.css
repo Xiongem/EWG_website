@@ -9,7 +9,7 @@
         display: grid;
         grid-template-columns: 20% 60% 20%;
         place-items: center;
-        height: 5em;
+        height: 4em;
     }
     .archive-button {
         display: flex;
