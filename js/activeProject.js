@@ -2,6 +2,11 @@ function projectSelect(id, display) {
   //assign values
   var project = id;
   console.log("sent post");
+  var active = document.querySelectorAll('.active');
+    for (const active of active) {
+    active.classList.remove('active');
+  }
+
   var i = document.getElementById(project);
   i.classList.remove("inactive");
   console.log("removed class");
