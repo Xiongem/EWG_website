@@ -46,7 +46,7 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
             }
         </script>
     <div class="archive-warning">
-        <h3>You already have a maximum of 5 projects in progress. Click 
+        <h3>You currently have a maximum of 5 projects in progress. Click 
             <a href="archives.php">here</a> to archive one.</h3>
     </div>
     <?php } ?>
