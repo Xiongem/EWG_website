@@ -151,6 +151,13 @@ $project = $result->fetch_assoc();
     function goBack() {
         history.go(-1);
     }
+    //* selects no goal date if user has no date set
+    var dateGoal = <?=$dateGoal?>;
+    if (dateGoal == 0) {
+        document.getElementById("noEndDate").checked = true;
+        document.getElementById("endDate").disabled = true;
+        document.getElementById("endDate").value = 0000-00-00;
+    }
     //* Disables the date input and hides due date in preview area
     function noDate() {
         var checkBox = document.getElementById("noEndDate");
