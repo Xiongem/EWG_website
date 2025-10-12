@@ -13,7 +13,7 @@ $projectID = $_GET["projectID"];
 
 // prepare and bind
 $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET genre=?, title=?, info=?, goal=?, goal_date=?, daily_goal=? 
-                                        WHERE users_id=$userID AND current_state='current'");
+                                        WHERE users_id=$userID AND current_state='current' AND id=$projectID");
 $stmt->bind_param("sssisi",
                         $_POST["genre"],
                         $_POST["title"],
