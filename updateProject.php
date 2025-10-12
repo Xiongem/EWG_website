@@ -87,7 +87,7 @@ $project = $result->fetch_assoc();
                     <input class="input" type="text" name="goalNumber" id="goalNumber" pattern="^\d+(,\d+)?$"
                         value="<?=$goal?>">
                     <label for="endDate">End Date</label>
-                    <input class="input" type="date" name="endDate" id="endDate" onchange="findDailyGoal()">
+                    <input class="input" type="date" name="endDate" id="endDate" onchange="findDailyGoal()" value="<?=$goalDate?>">
                         <div class="checkbox-wrapper">
                             <label class="noEndDate" for="noEndDate">Check this box if you don't want to set an end date</label>
                             <input class="input" type="checkbox" name="noEndDate" id="noEndDate" onclick="noDate()">
