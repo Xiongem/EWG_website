@@ -28,6 +28,12 @@ $project = $result->fetch_assoc();
     $update_date = $project["update_date"];
     $streak = $project["streak"];
     $dailyGoal = $project["daily_goal"];
+
+    if ($goalDate == "0000-00-00"){
+        $dateGoal = 0;
+    } else {
+        $dateGoal = $project["goal_date"];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +93,7 @@ $project = $result->fetch_assoc();
                     <input class="input" type="text" name="goalNumber" id="goalNumber" pattern="^\d+(,\d+)?$"
                         value="<?=$goal?>">
                     <label for="endDate">End Date</label>
-                    <input class="input" type="date" name="endDate" id="endDate" onchange="findDailyGoal()" value="<?=$goalDate?>">
+                    <input class="input" type="date" name="endDate" id="endDate" onchange="findDailyGoal()" value="<?=$dateGoal?>">
                         <div class="checkbox-wrapper">
                             <label class="noEndDate" for="noEndDate">Check this box if you don't want to set an end date</label>
                             <input class="input" type="checkbox" name="noEndDate" id="noEndDate" onclick="noDate()">
