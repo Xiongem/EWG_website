@@ -552,7 +552,7 @@ else {
                         </a>
                     </div>
                     <div id="project-title">
-                        <a href="project.php?project=<?=$displayProjectID?>">
+                        <a href="project.php?projectID=<?=$displayProjectID?>">
                             <h2><?= $displayTitle ?></h2>
                         </a>
                     </div>
