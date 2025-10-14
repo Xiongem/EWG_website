@@ -106,7 +106,7 @@ $project = $result->fetch_assoc();
                     <label class="summary" for="summary">Summary</label>
                     <textarea class="summary input" name="summary" id="summary" maxlength="500"
                         ><?=$info?></textarea>
-                    <input type="number" name="projectID" id="projectID" 
+                    <input type="hidden" name="projectID" id="projectID" 
                         value="<?=$id?>">
                 </div>
                 <div class="preview-section">
@@ -134,9 +134,7 @@ $project = $result->fetch_assoc();
                 </div>
                 <div class="button">
                     <a id="cancel" onclick="goBack()">Cancel</a>
-                    
                         <input class="" type="submit" value="Looks Good" id="submit">
-                    
                 </div>
             </form>
         </div>
