@@ -49,7 +49,7 @@ if ($result->num_rows > 0) {
             $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
             $title = $project["title"];
             $info = $project["info"];
-    }else {
+    }}else {
     $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current'";
         $result = $_SESSION["conn"]->query($sql);
         $project = $result->fetch_assoc();
@@ -59,7 +59,7 @@ if ($result->num_rows > 0) {
             $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
             $title = $project["title"];
             $info = $project["info"];
-    }}
+    }
 }
 echo $projectID;
 ?>
