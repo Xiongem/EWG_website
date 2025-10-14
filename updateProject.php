@@ -18,7 +18,7 @@ $result = $_SESSION["conn"]->query($sql);
 $project = $result->fetch_assoc();
     $title = $project["title"];
     $genre = $project["genre"];
-    // $projectCreatorID = $project["users_id"];
+    $id = $project["id"];
     $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
     $current_count = $project["current_count"];
     $goal = $project["goal"];
@@ -105,6 +105,8 @@ $project = $result->fetch_assoc();
                     <label class="summary" for="summary">Summary</label>
                     <textarea class="summary input" name="summary" id="summary" maxlength="500"
                         ><?=$info?></textarea>
+                    <input type="hidden" name="projectID" id="projectID" 
+                        value="<?=$id?>">
                 </div>
                 <div class="preview-section">
                     <h1>Preview</h1>

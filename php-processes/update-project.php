@@ -9,7 +9,7 @@ dbConnect();
 //echo'connected successfully'.'<br>';
 
 $userID = htmlspecialchars($_SESSION["user_id"]);
-$projectID = $_GET["projectID"];
+$projectID = $_POST["projectID"];
 
 // prepare and bind
 $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET genre=?, title=?, info=?, goal=?, goal_date=?, daily_goal=? 
