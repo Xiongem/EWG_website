@@ -62,7 +62,7 @@ $project = $result->fetch_assoc();
     <div class="new-project-wrapper">
         <h1>Update Your Project</h1>
         <div class="new-project-container">
-            <form method="post" action="php-processes/update-project.php" name="createNewProject">
+            <form method="post" action="php-processes/update-project" name="createNewProject">
                 <div class="input-section">
                     <label for="title">Title</label>
                     <input class="input" type="text" name="title" id="title" 
