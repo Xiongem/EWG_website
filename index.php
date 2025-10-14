@@ -384,7 +384,7 @@ else {
             </div>
             <?php
             //* Pull active project data
-            $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
+            $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current'";
                 $result = $_SESSION["conn"]->query($sql);
                     if ($result->num_rows > 0) {
                         while ($rows = $result->fetch_assoc()) {
@@ -429,19 +429,7 @@ else {
                     </div>
                 </div>
             </div>
-            <?php }}else { ?>
-            <div class="project-select-content" onclick="hideProjectPopup()">
-                <img class="popup-image" src="images/genre-covers/placeholder(v3).webp" alt="genre cover image">
-                <div class="project-info">
-                    <h3 id="popup-project-title"><i class="fa fa-star hide" id="star-icon" alt="star icon"></i> 
-                        Let's Give this One an Obnoxiously Long Title to Test What the Overflow Will do</h3>
-                    <div class="project-stats">
-                        <p id="popup-goal">Goal: 10,000/50,00</p>
-                        <p id="popup-days-left">Days Left: Some</p>
-                    </div>
-                </div>
-            </div>
-            <?php } ?>
+            <?php }} ?>
             <script>
                 function projectSelect(id, display) {
                     //assign values
