@@ -60,6 +60,7 @@ if ($result->num_rows > 0) {
             $title = $project["title"];
             $info = $project["info"];
 }
+echo $projectID;
 ?>
 
 <!DOCTYPE html>
