@@ -31,16 +31,35 @@ $user = $result->fetch_assoc();
             $pfp_set = "images/pfp-icon.webp";
         }
 
-//* Pull active project info
-$sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='current' AND display='active'";
-    $result = $_SESSION["conn"]->query($sql);
-    $project = $result->fetch_assoc();
-        $projectID = $project["id"];
-        $genre = $project["genre"];
-        $projectCreatorID = $project["users_id"];
-        $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
-        $title = $project["title"];
-        $info = $project["info"];
+$sql = "SELECT display FROM current_project WHERE username='$name' AND current_state='current'";
+$result = $_SESSION["conn"]->query($sql);
+if ($result->num_rows > 0) {
+    while ($display = $result->fetch_assoc()) {
+
+    //* if user has selected a project to be active from project selection
+    if (in_array("active", $display)) { 
+    //* Pull active project info
+    $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='current' AND display='active'";
+        $result = $_SESSION["conn"]->query($sql);
+        $project = $result->fetch_assoc();
+            $projectID = $project["id"];
+            $genre = $project["genre"];
+            $projectCreatorID = $project["users_id"];
+            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
+            $title = $project["title"];
+            $info = $project["info"];
+    }}
+}else {
+    $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='current'";
+        $result = $_SESSION["conn"]->query($sql);
+        $project = $result->fetch_assoc();
+            $projectID = $project["id"];
+            $genre = $project["genre"];
+            $projectCreatorID = $project["users_id"];
+            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
+            $title = $project["title"];
+            $info = $project["info"];
+}
 ?>
 
 <!DOCTYPE html>
