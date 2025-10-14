@@ -14,6 +14,7 @@ dbConnect();
 
 $userID = htmlspecialchars($_SESSION["user_id"]);
 $projectID = $_POST["projectID"];
+echo $projectID;
 
 // prepare and bind
 $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET genre=?, title=?, info=?, goal=?, goal_date=?, daily_goal=? 
