@@ -11,6 +11,7 @@ dbConnect();
 
 $name = $_GET["name"];
 $userID = $_SESSION["user_id"];
+echo $name;
 
 //* pull user info for get token
 $sql = "SELECT * FROM users WHERE username='$name'";
