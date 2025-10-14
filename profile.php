@@ -11,7 +11,6 @@ dbConnect();
 
 $name = $_GET["name"];
 $userID = $_SESSION["user_id"];
-echo $name;
 
 //* pull user info for get token
 $sql = "SELECT * FROM users WHERE username='$name'";
@@ -61,7 +60,6 @@ if ($result->num_rows > 0) {
             $info = $project["info"];
     }}
 }
-echo $projectID;
 ?>
 
 <!DOCTYPE html>
