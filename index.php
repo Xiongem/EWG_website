@@ -109,15 +109,6 @@ if (isset($_SESSION["user_id"])) {
             $badge8 = "images/badges/streak-fourteen-mono.webp";
             $badge9 = "images/badges/streak-twentyOne-mono.webp";
         }
-        // $badge1 = $project["quarter-quomplete"];
-        // $badge2 = $project["half-way"];
-        // $badge3 = $project["all-downhill"];
-        // $badge4 = $project["cross-finish"];
-        // $badge5 = $project["streak-two"];
-        // $badge6 = $project["streak-three"];
-        // $badge7 = $project["streak-seven"];
-        // $badge8 = $project["streak-fourteen"];
-        // $badge9 = $project["streak-twentyOne"];
         $badge10 = $project["first-daily"];
         $badge11 = $project["every-streak"];
         $badge12 = $project["on-track"];
@@ -250,16 +241,6 @@ if (isset($_SESSION["user_id"])) {
                         $badge8 = "images/badges/streak-fourteen-mono.webp";
                         $badge9 = "images/badges/streak-twentyOne-mono.webp";
                     }
-                    
-                    // $badge1 = $project["quarter-quomplete"];
-                    // $badge2 = $project["half-way"];
-                    // $badge3 = $project["all-downhill"];
-                    // $badge4 = $project["cross-finish"];
-                    // $badge5 = $project["streak-two"];
-                    // $badge6 = $project["streak-three"];
-                    // $badge7 = $project["streak-seven"];
-                    // $badge8 = $project["streak-fourteen"];
-                    // $badge9 = $project["streak-twentyOne"];
                     $badge10 = $project["first-daily"];
                     $badge11 = $project["every-streak"];
                     $badge12 = $project["on-track"];
