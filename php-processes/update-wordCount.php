@@ -39,7 +39,7 @@ if ($choice == "replace") {
         die("an unexpected error occured");
     }
 } elseif ($choice == "add") {
-    $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND display='active'");
+    $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
     $stmt->bind_param("isi",
                             $newCount,
                             $update_date,
