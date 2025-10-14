@@ -143,9 +143,9 @@ $project = $result->fetch_assoc();
     <?php makeFooter() ?>
 <script>
     //* Loads correct genre selection on page load
-    var genre = <?=$genre?>;
-    var selected = document.getElementById('genre');
-    selected.selectedIndex = genre - 1;
+    // var genre = <?=$genre?>;
+    // var selected = document.getElementById('genre');
+    // selected.selectedIndex = genre - 1;
     switchImage();
     //* Sends user back one page when they click cancel
     function goBack() {
