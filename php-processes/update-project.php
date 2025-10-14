@@ -12,11 +12,33 @@ dbConnect();
 
 //echo'connected successfully'.'<br>';
 
+echo $_POST["genre"];
 $userID = htmlspecialchars($_SESSION["user_id"]);
 $projectID = $_POST["projectID"];
 echo $projectID;
 
 // prepare and bind
+$stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET genre=?, title=?, info=?, goal=?, goal_date=?, daily_goal=? 
+                                        WHERE users_id=$userID AND current_state='current' AND id=$projectID");
+$stmt->bind_param("sssisi",
+                        $_POST["genre"],
+                        $_POST["title"],
+                        $_POST["summary"],
+                        $_POST["goalNumber"],
+                        $_POST["endDate"],
+                        $_POST["dailyGoal"]);
+//echo'params bound'.'<br>';
+if ($stmt -> execute()) {
+        header("Location: /projects.php?projectID=<?=$projectID?>");
+        //echo'successfully updated project!'.'<br>';
+        exit;
+    } else {
+        die("an unexpected error occured");
+}
 
+
+
+$stmt -> close();
+mysqli_close($conn);
 
 ?>
