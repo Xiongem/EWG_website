@@ -134,9 +134,9 @@ $project = $result->fetch_assoc();
                 </div>
                 <div class="button">
                     <a id="cancel" onclick="goBack()">Cancel</a>
-                    <?php if ($result->num_rows < 5) {?>
+                    
                         <input class="" type="submit" value="Looks Good" id="submit">
-                    <?php } ?>
+                    
                 </div>
             </form>
         </div>
