@@ -38,7 +38,7 @@ $stmt = $_SESSION["conn"] -> prepare("INSERT INTO current_project
                         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     //echo "stmt prepared"."<br>";
     //bind params
-    $stmt->bind_param("ssssiiissi",
+    $stmt->bind_param("ssssiisssi",
                         $username,
                         $_POST["genre"],
                         $_POST["title"],
