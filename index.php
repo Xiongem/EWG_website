@@ -571,6 +571,11 @@ else {
             </div>
             <?php }} ?>
             <script>
+                var project = id;
+                    const boxes = document.querySelectorAll('.fa-star');
+                    for (const box of boxes) {
+                        box.classList.add('inactive');
+                    }
                 function projectSelect(id, display) {
                     //assign values
                     var project = id;
