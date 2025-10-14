@@ -9,7 +9,7 @@
             document.getElementById("first-daily").src = "images/badges/first-daily-color.webp";
             //assign values
             var id = "first-daily";
-            var badge = "images/badges/first-daily-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -21,7 +21,7 @@
             document.getElementById("first-daily").src = "images/badges/first-daily-mono.webp";
             //assign values
             var id = "first-daily";
-            var badge = "images/badges/first-daily-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -154,7 +154,7 @@
             document.getElementById("on-track").src = "images/badges/on-track-color.webp";
             //assign values
             var id = "on-track";
-            var badge = "images/badges/on-track-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -166,7 +166,7 @@
             document.getElementById("on-track").src = "images/badges/on-track-mono.webp";
             //assign values
             var id = "on-track";
-            var badge = "images/badges/on-track-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -328,7 +328,7 @@
             document.getElementById("every-streak").src = "images/badges/every-streak-color.webp";
             //assign values
             var id = "every-streak";
-            var badge = "images/badges/every-streak-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -340,7 +340,7 @@
             document.getElementById("every-streak").src = "images/badges/every-streak-mono.webp";
             //assign values
             var id = "every-streak";
-            var badge = "images/badges/every-streak-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -360,7 +360,7 @@
                 document.getElementById("back-it-up").src = "images/badges/back-it-up-color.webp";
                 //assign values
                 var id = "back-it-up";
-                var badge = "images/badges/back-it-up-color.webp";
+                var badge = "unlocked";
                 //begin post method
                 $.post("php-processes/update-badges", {
                     //DATA
@@ -372,7 +372,7 @@
                 document.getElementById("back-it-up").src = "images/badges/back-it-up-mono.webp";
                 //assign values
                 var id = "back-it-up";
-                var badge = "images/badges/back-it-up-mono.webp";
+                var badge = "locked";
                 //begin post method
                 $.post("php-processes/update-badges", {
                     //DATA
@@ -390,7 +390,7 @@
             document.getElementById("outline").src = "images/badges/outline-color-v2.webp";
             //assign values
             var id = "outline";
-            var badge = "images/badges/outline-color-v2.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -402,7 +402,7 @@
             document.getElementById("outline").src = "images/badges/outline-mono-v2.webp";
             //assign values
             var id = "outline";
-            var badge = "images/badges/outline-mono-v2.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -419,7 +419,7 @@
             document.getElementById("journey").src = "images/badges/journey-color.webp";
             //assign values
             var id = "journey";
-            var badge = "images/badges/journey-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -431,7 +431,7 @@
             document.getElementById("journey").src = "images/badges/journey-mono.webp";
             //assign values
             var id = "journey";
-            var badge = "images/badges/journey-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -448,7 +448,7 @@
             document.getElementById("dual-wielder").src = "images/badges/dual-wielder-color.webp";
             //assign values
             var id = "dual-wielder";
-            var badge = "images/badges/dual-wielder-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -460,7 +460,7 @@
             document.getElementById("dual-wielder").src = "images/badges/dual-wielder-mono.webp";
             //assign values
             var id = "dual-wielder";
-            var badge = "images/badges/dual-wielder-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -477,7 +477,7 @@
             document.getElementById("gathering").src = "images/badges/gathering-color.webp";
             //assign values
             var id = "gathering";
-            var badge = "images/badges/gathering-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -489,7 +489,7 @@
             document.getElementById("gathering").src = "images/badges/gathering-mono.webp";
             //assign values
             var id = "gathering";
-            var badge = "images/badges/gathering-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -506,7 +506,7 @@
             document.getElementById("hear-ye").src = "images/badges/hear-ye-color.webp";
             //assign values
             var id = "hear-ye";
-            var badge = "images/badges/hear-ye-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -518,7 +518,7 @@
             document.getElementById("hear-ye").src = "images/badges/hear-ye-mono.webp";
             //assign values
             var id = "hear-ye";
-            var badge = "images/badges/hear-ye-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -564,7 +564,7 @@
             document.getElementById("starting-fresh").src = "images/badges/starting-fresh-color.webp";
             //assign values
             var id = "starting-fresh";
-            var badge = "images/badges/starting-fresh-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -576,7 +576,7 @@
             document.getElementById("starting-fresh").src = "images/badges/starting-fresh-mono.webp";
             //assign values
             var id = "starting-fresh";
-            var badge = "images/badges/starting-fresh-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -593,7 +593,7 @@
             document.getElementById("ever-persist").src = "images/badges/ever-persist-color.webp";
             //assign values
             var id = "ever-persist";
-            var badge = "images/badges/ever-persist-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -605,7 +605,7 @@
             document.getElementById("ever-persist").src = "images/badges/ever-persist-mono.webp";
             //assign values
             var id = "ever-persist";
-            var badge = "images/badges/ever-persist-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -622,7 +622,7 @@
             document.getElementById("touch-grass").src = "images/badges/touch-grass-color.webp";
             //assign values
             var id = "touch-grass";
-            var badge = "images/badges/touch-grass-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -634,7 +634,7 @@
             document.getElementById("touch-grass").src = "images/badges/touch-grass-mono.webp";
             //assign values
             var id = "touch-grass";
-            var badge = "images/badges/touch-grass-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -651,7 +651,7 @@
             document.getElementById("business").src = "images/badges/business-color.webp";
             //assign values
             var id = "business";
-            var badge = "images/badges/business-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -663,7 +663,7 @@
             document.getElementById("business").src = "images/badges/business-mono.webp";
             //assign values
             var id = "business";
-            var badge = "images/badges/business-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -680,7 +680,7 @@
             document.getElementById("tears-wept").src = "images/badges/tears-wept-color.webp";
             //assign values
             var id = "tears-wept";
-            var badge = "images/badges/tears-wept-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -692,7 +692,7 @@
             document.getElementById("tears-wept").src = "images/badges/tears-wept-mono.webp";
             //assign values
             var id = "tears-wept";
-            var badge = "images/badges/tears-wept-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -709,7 +709,7 @@
             document.getElementById("finish-him").src = "images/badges/finish-him-color.webp";
             //assign values
             var id = "finish-him";
-            var badge = "images/badges/finish-him-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -721,7 +721,7 @@
             document.getElementById("finish-him").src = "images/badges/finish-him-mono.webp";
             //assign values
             var id = "finish-him";
-            var badge = "images/badges/finish-him-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA

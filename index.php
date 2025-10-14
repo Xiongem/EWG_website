@@ -72,7 +72,6 @@ if (isset($_SESSION["user_id"])) {
         $datediffer = $nows - $your_dates;
         $intervals = round($datediffer / (60 * 60 * 24));
         if ($intervals <= 1) {
-            # code...
             if ($streak >= 2) {
                 $badge5 = "images/badges/streak-two-color.webp";
             } else {
@@ -110,21 +109,101 @@ if (isset($_SESSION["user_id"])) {
             $badge9 = "images/badges/streak-twentyOne-mono.webp";
         }
         $badge10 = $project["first-daily"];
+            if ($badge10 == "unlocked") {
+                $badge10 = "images/badges/first-daily-color.webp";
+            } elseif ($badge10 == "locked") {
+                $badge10 = "images/badges/first-daily-mono.webp";
+            }
         $badge11 = $project["every-streak"];
+            if ($badge11 == "unlocked") {
+                $badge11 = "images/badges/every-streak-color.webp";
+            } elseif ($badge11 == "locked") {
+                $badge11 = "images/badges/every-streak-mono.webp";
+            }
         $badge12 = $project["on-track"];
+            if ($badge12 == "unlocked") {
+                $badge12 = "images/badges/on-track-color.webp";
+            } elseif ($badge12 == "locked") {
+                $badge12 = "images/badges/on-track-mono.webp";
+            }
         $badge13 = $project["outline"];
+            if ($badge13 == "unlocked") {
+                $badge13 = "images/badges/outline-color-v2.webp";
+            } elseif ($badge13 == "locked") {
+                $badge13 = "images/badges/outline-mono-v2.webp";
+            }
         $badge14 = $project["journey"];
+            if ($badge14 == "unlocked") {
+                $badge14 = "images/badges/journey-color.webp";
+            } elseif ($badge14 == "locked") {
+                $badge14 = "images/badges/journey-mono.webp";
+            }
         $badge15 = $project["dual-wielder"];
+            if ($badge15 == "unlocked") {
+                $badge15 = "images/badges/dual-wielder-color.webp";
+            } elseif ($badge15 == "locked") {
+                $badge15 = "images/badges/dual-wielder-mono.webp";
+            }
         $badge16 = $project["starting-fresh"];
+            if ($badge16 == "unlocked") {
+                $badge16 = "images/badges/starting-fresh-color.webp";
+            } elseif ($badge16 == "locked") {
+                $badge16 = "images/badges/starting-fresh-mono.webp";
+            }
         $badge17 = $project["ever-persist"];
+            if ($badge17 == "unlocked") {
+                $badge17 = "images/badges/ever-persist-color.webp";
+            } elseif ($badge17 == "locked") {
+                $badge17 = "images/badges/ever-persist-mono.webp";
+            }
         $badge18 = $project["back-it-up"];
+            if ($badge18 == "unlocked") {
+                $badge18 = "images/badges/back-it-up-color.webp";
+            } elseif ($badge18 == "locked") {
+                $badge18 = "images/badges/back-it-up-mono.webp";
+            }
         $badge19 = $project["gathering"];
+            if ($badge19 == "unlocked") {
+                $badge19 = "images/badges/gathering-color.webp";
+            } elseif ($badge19 == "locked") {
+                $badge19 = "images/badges/gathering-mono.webp";
+            }
         $badge20 = $project["hear-ye"];
+            if ($badge20 == "unlocked") {
+                $badge20 = "images/badges/hear-ye-color.webp";
+            } elseif ($badge20 == "locked") {
+                $badge20 = "images/badges/hear-ye-mono.webp";
+            }
         $badge21 = $project["breakthrough"];
+            if ($badge21 == "unlocked") {
+                $badge21 = "images/badges/breakthrough-color.webp";
+            } elseif ($badge21 == "locked") {
+                $badge21 = "images/badges/breakthrough-mono.webp";
+            }
         $badge22 = $project["touch-grass"];
+            if ($badge22 == "unlocked") {
+                $badge22 = "images/badges/touch-grass-color.webp";
+            } elseif ($badge22 == "locked") {
+                $badge22 = "images/badges/touch-grass-mono.webp";
+            }
         $badge23 = $project["business"];
+            if ($badge23 == "unlocked") {
+                $badge23 = "images/badges/business-color.webp";
+            } elseif ($badge23 == "locked") {
+                $badge23 = "images/badges/business-mono.webp";
+            }
         $badge24 = $project["tears-wept"];
+            if ($badge24 == "unlocked") {
+                $badge24 = "images/badges/tears-wept-color.webp";
+            } elseif ($badge24 == "locked") {
+                $badge24 = "images/badges/tears-wept-mono.webp";
+            }
         $badge25 = $project["finish-him"];
+            if ($badge25 == "unlocked") {
+                $badge25 = "images/badges/finish-him-color.webp";
+            } elseif ($badge25 == "locked") {
+                $badge25 = "images/badges/finish-him-mono.webp";
+            }
             //* Days left math
             $now = time();
             $your_date = strtotime($displayGoalDate);
@@ -242,21 +321,101 @@ if (isset($_SESSION["user_id"])) {
                         $badge9 = "images/badges/streak-twentyOne-mono.webp";
                     }
                     $badge10 = $project["first-daily"];
+                        if ($badge10 == "unlocked") {
+                            $badge10 = "images/badges/first-daily-color.webp";
+                        } elseif ($badge10 == "locked") {
+                            $badge10 = "images/badges/first-daily-mono.webp";
+                        }
                     $badge11 = $project["every-streak"];
+                        if ($badge11 == "unlocked") {
+                            $badge11 = "images/badges/every-streak-color.webp";
+                        } elseif ($badge11 == "locked") {
+                            $badge11 = "images/badges/every-streak-mono.webp";
+                        }
                     $badge12 = $project["on-track"];
+                        if ($badge12 == "unlocked") {
+                            $badge12 = "images/badges/on-track-color.webp";
+                        } elseif ($badge12 == "locked") {
+                            $badge12 = "images/badges/on-track-mono.webp";
+                        }
                     $badge13 = $project["outline"];
+                        if ($badge13 == "unlocked") {
+                            $badge13 = "images/badges/outline-color-v2.webp";
+                        } elseif ($badge13 == "locked") {
+                            $badge13 = "images/badges/outline-mono-v2.webp";
+                        }
                     $badge14 = $project["journey"];
+                        if ($badge14 == "unlocked") {
+                            $badge14 = "images/badges/journey-color.webp";
+                        } elseif ($badge14 == "locked") {
+                            $badge14 = "images/badges/journey-mono.webp";
+                        }
                     $badge15 = $project["dual-wielder"];
+                        if ($badge15 == "unlocked") {
+                            $badge15 = "images/badges/dual-wielder-color.webp";
+                        } elseif ($badge15 == "locked") {
+                            $badge15 = "images/badges/dual-wielder-mono.webp";
+                        }
                     $badge16 = $project["starting-fresh"];
+                        if ($badge16 == "unlocked") {
+                            $badge16 = "images/badges/starting-fresh-color.webp";
+                        } elseif ($badge16 == "locked") {
+                            $badge16 = "images/badges/starting-fresh-mono.webp";
+                        }
                     $badge17 = $project["ever-persist"];
+                        if ($badge17 == "unlocked") {
+                            $badge17 = "images/badges/ever-persist-color.webp";
+                        } elseif ($badge17 == "locked") {
+                            $badge17 = "images/badges/ever-persist-mono.webp";
+                        }
                     $badge18 = $project["back-it-up"];
+                        if ($badge18 == "unlocked") {
+                            $badge18 = "images/badges/back-it-up-color.webp";
+                        } elseif ($badge18 == "locked") {
+                            $badge18 = "images/badges/back-it-up-mono.webp";
+                        }
                     $badge19 = $project["gathering"];
+                        if ($badge19 == "unlocked") {
+                            $badge19 = "images/badges/gathering-color.webp";
+                        } elseif ($badge19 == "locked") {
+                            $badge19 = "images/badges/gathering-mono.webp";
+                        }
                     $badge20 = $project["hear-ye"];
+                        if ($badge20 == "unlocked") {
+                            $badge20 = "images/badges/hear-ye-color.webp";
+                        } elseif ($badge20 == "locked") {
+                            $badge20 = "images/badges/hear-ye-mono.webp";
+                        }
                     $badge21 = $project["breakthrough"];
+                        if ($badge21 == "unlocked") {
+                            $badge21 = "images/badges/breakthrough-color.webp";
+                        } elseif ($badge21 == "locked") {
+                            $badge21 = "images/badges/breakthrough-mono.webp";
+                        }
                     $badge22 = $project["touch-grass"];
+                        if ($badge22 == "unlocked") {
+                            $badge22 = "images/badges/touch-grass-color.webp";
+                        } elseif ($badge22 == "locked") {
+                            $badge22 = "images/badges/touch-grass-mono.webp";
+                        }
                     $badge23 = $project["business"];
+                        if ($badge23 == "unlocked") {
+                            $badge23 = "images/badges/business-color.webp";
+                        } elseif ($badge23 == "locked") {
+                            $badge23 = "images/badges/business-mono.webp";
+                        }
                     $badge24 = $project["tears-wept"];
+                        if ($badge24 == "unlocked") {
+                            $badge24 = "images/badges/tears-wept-color.webp";
+                        } elseif ($badge24 == "locked") {
+                            $badge24 = "images/badges/tears-wept-mono.webp";
+                        }
                     $badge25 = $project["finish-him"];
+                        if ($badge25 == "unlocked") {
+                            $badge25 = "images/badges/finish-him-color.webp";
+                        } elseif ($badge25 == "locked") {
+                            $badge25 = "images/badges/finish-him-mono.webp";
+                        }
                         //* Days left math
                         $now = time();
                         $your_date = strtotime($displayGoalDate);
