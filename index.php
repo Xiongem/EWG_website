@@ -488,6 +488,7 @@ else {
                         </div>
                     </select>
                     <input type="text" pattern="^\d+(,\d+)?$" id="updateWordCount" name="updateWordCount">
+                    <input type="hidden" name="projectID" id="projectID" value="<?=$displayProjectID?>">
                 </div>
                 <div class="button-wrapper">
                     <button class="save" type="submit">Save</button>

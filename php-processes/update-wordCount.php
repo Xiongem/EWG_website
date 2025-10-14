@@ -13,9 +13,10 @@ $userID = $_SESSION["user_id"];
 $choice = $_POST["wordCount"];
 $streak = $_SESSION["streak"];
 $update_date = $_SESSION["update_date"];
+$projectID = $_POST["projectID"];
 
 
-$sql = "SELECT current_count FROM current_project WHERE users_id='$userID' AND current_state='current' AND display='active'";
+$sql = "SELECT current_count FROM current_project WHERE users_id='$userID' AND current_state='current' AND id=$projectID";
         $result = $_SESSION["conn"]->query($sql);
         $count = $result->fetch_assoc();
             $currentCount = $count["current_count"];
@@ -24,7 +25,7 @@ $sql = "SELECT current_count FROM current_project WHERE users_id='$userID' AND c
 
 
 if ($choice == "replace") {
-    $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND display='active'");
+    $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
     $stmt->bind_param("isi",
                             $_POST["updateWordCount"],
                             $update_date,
