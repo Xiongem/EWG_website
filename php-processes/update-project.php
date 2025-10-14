@@ -27,7 +27,7 @@ $stmt->bind_param("sssisi",
                         $_POST["dailyGoal"]);
 //echo'params bound'.'<br>';
 if ($stmt -> execute()) {
-        header("Location: /projects.php?projectID=<?=$projectID?>");
+        header("Location: /projects.php?projectID=$projectID");
         //echo'successfully updated project!'.'<br>';
         exit;
     } else {
