@@ -670,7 +670,7 @@
                 id: id,
                 badge: badge
             });
-        }
+        } 
     }
 
     //* Tears Were Wept
