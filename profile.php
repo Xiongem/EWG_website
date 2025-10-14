@@ -32,7 +32,7 @@ $user = $result->fetch_assoc();
             $pfp_set = "images/pfp-icon.webp";
         }
 
-$sql = "SELECT display FROM current_project WHERE username='$name' AND current_state='current'";
+$sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
 $result = $_SESSION["conn"]->query($sql);
 if ($result->num_rows > 0) {
     while ($display = $result->fetch_assoc()) {
@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
     //* if user has selected a project to be active from project selection
     if (in_array("active", $display)) { 
     //* Pull active project info
-    $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='current' AND display='active'";
+    $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current' AND display='active'";
         $result = $_SESSION["conn"]->query($sql);
         $project = $result->fetch_assoc();
             $projectID = $project["id"];
@@ -51,7 +51,7 @@ if ($result->num_rows > 0) {
             $info = $project["info"];
     }}
 }else {
-    $sql = "SELECT * FROM current_project WHERE username='$name' AND current_state='current'";
+    $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current'";
         $result = $_SESSION["conn"]->query($sql);
         $project = $result->fetch_assoc();
             $projectID = $project["id"];
