@@ -488,11 +488,13 @@ else {
     <header>
         <?php makeNav() ?>
     </header>
+    <?php if ($result->num_rows > 1) { ?>
     <!-- //* BUTTON FOR SELECTING ACTIVE PROJECT TO SEE -->
     <div class="project-select-wrapper">
         <div class="project-select" onclick="showProjectPopup()">Switch Project <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i>
         </div>
     </div>
+    <?php } ?>
     <!-- //* PROGRESS BAR-->
     <div class="pb-wrapper">
         <div class="pb-background">
