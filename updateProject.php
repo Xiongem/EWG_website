@@ -34,7 +34,6 @@ $project = $result->fetch_assoc();
     } else {
         $dateGoal = $project["goal_date"];
     }
-    echo $id;
 ?>
 
 <!DOCTYPE html>
