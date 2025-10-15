@@ -48,10 +48,10 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             if ($result->num_rows > 0) {
                 while ($rows = $result->fetch_assoc()) {
                     $specificValue = "unlocked";
-                    $occurrenceCount = array_reduce($rows, function($carry, $item) use ($specificValue) {
+                    $badges = array_reduce($rows, function($carry, $item) use ($specificValue) {
                         return $carry + ($item === $specificValue ? 1 : 0);
                     }, 0);
-                    echo $occurrenceCount;
+                    // echo $badges;
                     $projectID = $rows["id"];
                     $title = $rows["title"];
                     $genre = $rows["genre"];
@@ -101,7 +101,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                         </div>
                         <div class="overview-badges">
                             <p><strong>Badges:</strong></p>
-                            <p>5/25</p>
+                            <p><?=$badges?>/25</p>
                         </div>
                     </div>
             </div>
