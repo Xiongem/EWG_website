@@ -79,7 +79,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 $result = $_SESSION["conn"]->query($sql);
                     $badges = $result->fetch_assoc();
                     $specificValue = "unlocked";
-                    $occurrenceCount = array_reduce($arrayElements, function($carry, $item) use ($specificValue) {
+                    $occurrenceCount = array_reduce($badges, function($carry, $item) use ($specificValue) {
                         return $carry + ($item === $specificValue ? 1 : 0);
                     }, 0);
                     echo $occurrenceCount;
