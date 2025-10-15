@@ -75,7 +75,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             $sql = "SELECT `first-daily`, `quarter-quomplete`, `half-way`, `all-downhill`, `cross-finish`, 
             `on-track`, `streak-two`, `streak-three`, `streak-seven`, `streak-fourteen`, `streak-twentyOne`, 
             `every-streak`, `back-it-up`, `outline`, `journey`, `dual-wielder`, `gathering`, `hear-ye`, `breakthrough`, 
-            `starting-fresh`, `ever-persist`, `touch-grass`, `business`, `tears-wept`, `finish-him` FROM current_project WHERE users_id='$userID'";
+            `starting-fresh`, `ever-persist`, `touch-grass`, `business`, `tears-wept`, `finish-him` FROM current_project WHERE users_id='$userID' AND id=$projectID";
                 $result = $_SESSION["conn"]->query($sql);
                     $badges = $result->fetch_assoc();
                     $specificValue = "unlocked";
