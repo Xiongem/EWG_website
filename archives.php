@@ -73,7 +73,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                             }
                         }
                     $badges = in_array("unlocked", $rows);
-                    echo $badges;
                 ?>
         <a href="project.php?projectID=<?=$projectID?>" class="overview-container">
             <img src="<?= $genre_picture ?>">
