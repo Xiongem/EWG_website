@@ -9,7 +9,7 @@ session_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
-$locked = $locked;
+$locked = "locked";
 
 //! Locked
 //* First Daily
