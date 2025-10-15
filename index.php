@@ -633,6 +633,8 @@ else {
     <header>
         <?php makeNav() ?>
     </header>
+    <a href="php-processes/massUpdateBadges-locked.php">update locked badges </a>
+    <a href="php-processes/massUpdateBadges-unlocked.php">update unlocked badges</a>
     <?php if ($result->num_rows > 1) { ?>
     <!-- //* BUTTON FOR SELECTING ACTIVE PROJECT TO SEE -->
     <div class="project-select-wrapper">
