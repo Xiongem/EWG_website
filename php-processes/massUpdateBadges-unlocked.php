@@ -6,6 +6,8 @@ dbConnect();
 
 $unlocked = "unlocked";
 
+echo $unlocked;
+
 //! unLocked
 //* First Daily
 $stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET `first-daily`=? WHERE `first-daily`='images/badges/first-daily-color.webp'");
