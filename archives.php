@@ -51,7 +51,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     $badges = array_reduce($rows, function($carry, $item) use ($specificValue) {
                         return $carry + ($item === $specificValue ? 1 : 0);
                     }, 0);
-                    // echo $badges;
                     $projectID = $rows["id"];
                     $title = $rows["title"];
                     $genre = $rows["genre"];
@@ -77,17 +76,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                                 $days = "Project Past Due!";
                             }
                         }
-            // $sql = "SELECT `first-daily`, `quarter-quomplete`, `half-way`, `all-downhill`, `cross-finish`, 
-            // `on-track`, `streak-two`, `streak-three`, `streak-seven`, `streak-fourteen`, `streak-twentyOne`, 
-            // `every-streak`, `back-it-up`, `outline`, `journey`, `dual-wielder`, `gathering`, `hear-ye`, `breakthrough`, 
-            // `starting-fresh`, `ever-persist`, `touch-grass`, `business`, `tears-wept`, `finish-him` FROM current_project WHERE users_id='$userID' AND id=$projectID";
-            //     $result = $_SESSION["conn"]->query($sql);
-            //         $badges = $result->fetch_assoc();
-            //         $specificValue = "unlocked";
-            //         $occurrenceCount = array_reduce($badges, function($carry, $item) use ($specificValue) {
-            //             return $carry + ($item === $specificValue ? 1 : 0);
-            //         }, 0);
-            //         echo $occurrenceCount;
                 ?>
         <a href="project.php?projectID=<?=$projectID?>" class="overview-container">
             <img src="<?= $genre_picture ?>">
