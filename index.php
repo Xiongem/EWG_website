@@ -254,6 +254,18 @@ if (isset($_SESSION["user_id"])) {
                     $streak = $project["streak"];
                     $displayDailyGoal = $project["daily_goal"];
                     $displayPercentage = floor($displayCount / $displayGoal * 100);
+
+                $sql = "SELECT `first-daily`, `quarter-quomplete`, `half-way`, `all-downhill`, `cross-finish`, 
+                `on-track`, `streak-two`, `streak-three`, `streak-seven`, `streak-fourteen`, `streak-twentyOne`, 
+                `every-streak`, `back-it-up`, `outline`, `journey`, `dual-wielder`, `gathering`, `hear-ye`, `breakthrough`, 
+                `starting-fresh`, `ever-persist`, `touch-grass`, `business`, `tears-wept`, `finish-him` FROM current_project WHERE users_id='$userID' AND id=$displayProjectID";
+                    $result = $_SESSION["conn"]->query($sql);
+                        $badges = $result->fetch_assoc();
+                        $specificValue = "unlocked";
+                        $occurrenceCount = array_reduce($badges, function($carry, $item) use ($specificValue) {
+                            return $carry + ($item === $specificValue ? 1 : 0);
+                        }, 0);
+                        echo $occurrenceCount;
                     //* Badges
                     if ($displayPercentage >= 25) {
                         $badge1 = "images/badges/quarter-quomplete-color.webp";
