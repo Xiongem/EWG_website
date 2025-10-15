@@ -78,7 +78,11 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             `starting-fresh`, `ever-persist`, `touch-grass`, `business`, `tears-wept`, `finish-him` FROM current_project WHERE users_id='$userID'";
                 $result = $_SESSION["conn"]->query($sql);
                     $badges = $result->fetch_assoc();
-                    echo $badges;
+                    $specificValue = "unlocked";
+                    $occurrenceCount = array_reduce($arrayElements, function($carry, $item) use ($specificValue) {
+                        return $carry + ($item === $specificValue ? 1 : 0);
+                    }, 0);
+                    echo $occurrenceCount;
                 ?>
         <a href="project.php?projectID=<?=$projectID?>" class="overview-container">
             <img src="<?= $genre_picture ?>">
