@@ -72,7 +72,12 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                                 $days = "Project Past Due!";
                             }
                         }
-                    $badges = count("unlocked", $rows);
+            $sql = "SELECT `first-daily`, `quarter-quomplete`, `half-way`, `all-downhill`, `cross-finish`, 
+            `on-track`, `streak-two`, `streak-three`, `streak-seven`, `streak-fourteen`, `streak-twentyOne`, 
+            `every-streak`, `back-it-up`, `outline`, `journey`, `dual-wielder`, `gathering`, `hear-ye`, `breakthrough`, 
+            `starting-fresh`, `ever-persist`, `touch-grass`, `business`, `tears-wept`, `finish-him` FROM current_project WHERE users_id='$userID'";
+                $result = $_SESSION["conn"]->query($sql);
+                    $badges = $result->fetch_assoc();
                     echo $badges;
                 ?>
         <a href="project.php?projectID=<?=$projectID?>" class="overview-container">
