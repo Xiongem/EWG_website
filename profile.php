@@ -60,6 +60,13 @@ if ($result->num_rows > 0) {
             $info = $project["info"];
     }}
 }
+if (isset($project["genre"])){
+    $sql = "SELECT created_at FROM current_project WHERE users_id='$profileID'";
+    $result = $_SESSION["conn"]->query($sql);
+    $dates = $result->fetch_assoc();
+        
+    $oldestDate = min($dates);
+}
 ?>
 
 <!DOCTYPE html>
@@ -210,7 +217,7 @@ if ($result->num_rows > 0) {
                 <img src="../images/badges/start-first-project-mono.webp" id="start-first-project" class="badge pulse">
                 <div class="badgeToPopup" id="start-first-project-popup">
                     <h4>Started Your First Project</h4>
-                    <p>PHP data goes here</p>
+                    <p><?= $oldestDate ?></p>
                 </div>
             </div>
             <!--* Spicy-->
