@@ -515,8 +515,7 @@ else {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 echo $_SESSION["user_id"];
-<?php echo $_SESSION["user_id"];
-if ($_SESSION["user_id"]== 7 || $_SESSION["user_id"]== 60) { ?>
+<?php if ($_SESSION["user_id"]== 7 || $_SESSION["user_id"]== 60) { ?>
 <body id="body">
     <!-- //* POPUP FOR CHOOSING ACTIVE PROJECTS-->
     <?php if (isset($_SESSION["user_id"])) { ?>
