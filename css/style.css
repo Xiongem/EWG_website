@@ -241,6 +241,7 @@ a {
         color: var(--text-color);
         padding-bottom: 1em;
         font-size: 18px;
+        font-family: luminari;
     }
     .projects {
         display: flex;
