@@ -118,6 +118,11 @@ if (isset($_SESSION["user_id"])) {
                     $intervals = round($datediffer / (60 * 60 * 24));
                     if ($intervals <= 1) {
                         if ($streak >= 2) {
+                            if ($project["streak-two"] !== "unlocked") {
+                                $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$project["id"]";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                            }
                             $badge5 = "images/badges/streak-two-color.webp";
                         } else {
                             $badge5 = "images/badges/streak-two-mono.webp";
