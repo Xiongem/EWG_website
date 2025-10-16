@@ -15,7 +15,7 @@ $message = $_POST["message"];
     $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
     $mail -> setFrom($email);
     $mail -> addAddress("admin@elsewherewriters.com");
-    $mail -> setSubject("Contact Requested");
+    $mail-> Subject = "Contact Requested";
     $mail -> Body = <<<END
 
         $username is reaching out about:
