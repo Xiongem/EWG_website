@@ -12,7 +12,7 @@ $email = $_POST["email"];
 $username = $_POST["username"];
 $message = $_POST["message"];
 
-    $mail = require($_SERVER['DOCUMENT_ROOT'] . 'mailer.php');
+    $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
     $mail -> setFrom($email);
     $mail -> addAddress("admin@elsewherewriters.com");
     $mail -> setSubject("Contact Requested");
