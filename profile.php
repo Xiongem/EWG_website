@@ -49,7 +49,6 @@ $badge1 = $user["complete-one-project"];
     } elseif ($badge1 == "locked") {
         $badge1 = "images/badges/complete-one-project-mono.webp";
     }
-echo $badge1;
 $badge2 = $user["complete-five-project"];
     if ($badge2 == "unlocked") {
         $badge2 = "images/badges/complete-five-project-color.webp";
