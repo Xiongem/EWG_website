@@ -468,7 +468,8 @@
         border-radius: 16px 16px 0 16px;
     }
     #starting-fresh-popup {
-        translate: 6em -3em;
+        translate: -6em -3em;
+        border-radius: 16px 16px 0 16px;
     }
     #ever-persist-popup {
         translate: 6em -3em;
