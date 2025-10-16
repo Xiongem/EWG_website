@@ -253,6 +253,7 @@ if (isset($_SESSION["user_id"])) {
                     $update_date = $project["update_date"];
                     $streak = $project["streak"];
                     $displayDailyGoal = $project["daily_goal"];
+                    $created = $project["created_at"];
                     $displayPercentage = floor($displayCount / $displayGoal * 100);
                     //* Badges
                     if ($displayPercentage >= 25) {
@@ -431,6 +432,11 @@ if (isset($_SESSION["user_id"])) {
                                     $displayDays = "Project Past Due!";
                                 }
                             }
+                        //* Full Streak Math
+                            $created_date = strtotime($created);
+                            $totalDays = $your_date - $created_date;
+                            $streakMath = round($totalDays / (60 * 60 * 24));
+                            echo $streakMath;
                         //* Percentage bar math
                             if (empty($displayCount) || empty($displayGoal)) {
                                 $displayProgress = 4;
