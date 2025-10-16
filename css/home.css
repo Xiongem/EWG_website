@@ -476,15 +476,15 @@
         translate: 6em -5em;
     }
     #gathering-popup {
-        translate: -6em -4em;
-        border-radius: 16px 16px 0 16px;
+        translate: 6em -4em;
     }
     #hear-ye-popup {
         translate: -6em -4.5em;
         border-radius: 16px 16px 0 16px;
     }
     #breakthrough-popup {
-        translate: 6em -5.5em;
+        translate: -6em -5.5em;
+        border-radius: 16px 16px 0 16px;
     }
     #touch-grass-popup {
         translate: 6em -4.5em;
