@@ -318,15 +318,15 @@ a {
 
     /** BADGE POPUPS*/
     .badge-wrapper {
-        /* position: relative; */
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .badgeToPopup {
-        /* display: none;
+        /* display: none; */
         position: absolute;
-        top: 0; */
+        /* top: 0; */
         z-index: 2;
         flex-direction: column;
         align-items: center;

@@ -403,12 +403,12 @@
     } 
 
     /** Individual badge movement*/
-    #quarter-quomplete-wrapper {
+    /* #quarter-quomplete-wrapper {
         position: relative;
     }
     #finish-him-wrapper {
         position: relative;
-    }
+    } */
     #first-daily-popup {
         /* position: absolute;
         top: 0;
@@ -416,9 +416,9 @@
         translate: 6em -4em;
     }
     #quarter-quomplete-popup {
-        /* translate: 6em -5em; */
-        top: 10;
-        position: absolute;
+        translate: 6em -5em;
+        /* top: 10;
+        position: absolute; */
     }
     #half-way-popup {
         translate: 6em -6em;
@@ -497,10 +497,10 @@
         border-radius: 16px 16px 0 16px;
     }
     #finish-him-popup {
-        /* translate: -6em -4.5em; */
-        position: absolute;
+        translate: -6em -4.5em;
+        /* position: absolute;
         top: -6;
-        left: -4;
+        left: -4; */
         border-radius: 16px 16px 0 16px;
     }
 }
