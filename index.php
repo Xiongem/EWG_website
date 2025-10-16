@@ -27,257 +27,15 @@ if (isset($_SESSION["user_id"])) {
                 $pfp_set = "images/pfp-icon.webp";
             }
 
-    //* User has no active projects yet
-    $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current'";
-    $result = $_SESSION["conn"]->query($sql);
-    $project = $result->fetch_assoc();
-        $displayTitle = $project["title"];
-        $displayProjectID = $project["id"];
-        $displayGenre = $project["genre"];
-        $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
-        $displayInfo = $project["info"];
-        $displayCount = $project["current_count"];
-        $displayGoal = $project["goal"];
-        $displayGoalDate = $project["goal_date"];
-        $update_date = $project["update_date"];
-        $streak = $project["streak"];
-        $displayDailyGoal = $project["daily_goal"];
-        $displayPercentage = floor($displayCount / $displayGoal * 100);
-        //* Badges
-        //* Quarter Quomplete
-        if (isset($project["quarter-quomplete"])) {
-        $badge1 = $project["quarter-quomplete"];
-            if ($badge1 == "unlocked") {
-                $badge1 = "images/badges/quarter-quomplete-color.webp";
-            } elseif ($badge1 == "locked") {
-                $badge1 = "images/badges/quarter-quomplete-mono.webp";
-            }
-        }
-        if ($displayPercentage >= 25 && $project["quarter-quomplete"] !== "unlocked") {
-            $sql = "UPDATE current_project SET `quarter-quomplete`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
-            $stmt = $_SESSION["conn"]->prepare($sql);
-            $stmt->execute();
-            $badge1 = "images/badges/quarter-quomplete-color.webp";
-        }
-        //* Half Way
-        if (isset($project["half-way"])) {
-        $badge2 = $project["half-way"];
-            if ($badge2 == "unlocked") {
-                $badge2 = "images/badges/half-way-color.webp";
-            } elseif ($badge2 == "locked") {
-                $badge2 = "images/badges/half-way-mono.webp";
-            }
-        }
-        if ($displayPercentage >= 50 && $project["half-way"] !== "unlocked") {
-            $sql = "UPDATE current_project SET `half-way`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
-            $stmt = $_SESSION["conn"]->prepare($sql);
-            $stmt->execute();
-            $badge2 = "images/badges/half-way-color.webp";
-        }
-        //* All Downhill
-        if (isset($project["all-downhill"])) {
-        $badge3 = $project["all-downhill"];
-            if ($badge3 == "unlocked") {
-                $badge3 = "images/badges/all-downhill-color.webp";
-            } elseif ($badge3 == "locked") {
-                $badge3 = "images/badges/all-downhill-mono.webp";
-            }
-        }
-        if ($displayPercentage >= 75 && $project["all-downhill"] !== "unlocked") {
-            $sql = "UPDATE current_project SET `all-downhill`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
-            $stmt = $_SESSION["conn"]->prepare($sql);
-            $stmt->execute();
-            $badge3 = "images/badges/all-downhill-color.webp";
-        }
-        //* Cross Finish
-        if (isset($project["cross-finish"])) {
-        $badge4 = $project["cross-finish"];
-            if ($badge4 == "unlocked") {
-                $badge4 = "images/badges/cross-finish-color.webp";
-            } elseif ($badge4 == "locked") {
-                $badge4 = "images/badges/cross-finish-mono.webp";
-            }
-        }
-        if ($displayPercentage >= 100 && $project["cross-finish"] !== "unlocked") {
-            $sql = "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
-            $stmt = $_SESSION["conn"]->prepare($sql);
-            $stmt->execute();
-            $badge4 = "images/badges/cross-finish-color.webp";
-        }
-        $nows = time();
-        $your_dates = strtotime($update_date);
-        $datediffer = $nows - $your_dates;
-        $intervals = round($datediffer / (60 * 60 * 24));
-        if ($intervals <= 1) {
-            if ($streak >= 2) {
-                $badge5 = "images/badges/streak-two-color.webp";
-                echo $displayTitle;
-            }else {
-                $badge5 = "images/badges/streak-two-mono.webp";
-            }
-
-            // if ($streak >= 3) {
-            //     $badge6 = "images/badges/streak-three-color.webp";
-            // } else {
-            //     $badge6 = "images/badges/streak-three-mono.webp";
-            // }
-
-            if ($streak >= 7) {
-                $badge7 = "images/badges/streak-seven-color.webp";
-            } else {
-                $badge7 = "images/badges/streak-seven-mono.webp";
-            }
-
-            if ($streak >= 14) {
-                $badge8 = "images/badges/streak-fourteen-color.webp";
-            } else {
-                $badge8 = "images/badges/streak-fourteen-mono.webp";
-            }
-
-            if ($streak >= "21") {
-                $badge9 = "images/badges/streak-twentyOne-color.webp";
-            } else {
-                $badge9 = "images/badges/streak-twentyOne-mono.webp";
-            }
-        }else {
-            $badge5 = "images/badges/streak-two-mono.webp";
-            $badge6 = "images/badges/streak-three-mono.webp";
-            $badge7 = "images/badges/streak-seven-mono.webp";
-            $badge8 = "images/badges/streak-fourteen-mono.webp";
-            $badge9 = "images/badges/streak-twentyOne-mono.webp";
-        }
-        $badge10 = $project["first-daily"];
-            if ($badge10 == "unlocked") {
-                $badge10 = "images/badges/first-daily-color.webp";
-            } elseif ($badge10 == "locked") {
-                $badge10 = "images/badges/first-daily-mono.webp";
-            }
-        $badge11 = $project["every-streak"];
-            if ($badge11 == "unlocked") {
-                $badge11 = "images/badges/every-streak-color.webp";
-            } elseif ($badge11 == "locked") {
-                $badge11 = "images/badges/every-streak-mono.webp";
-            }
-        $badge12 = $project["on-track"];
-            if ($badge12 == "unlocked") {
-                $badge12 = "images/badges/on-track-color.webp";
-            } elseif ($badge12 == "locked") {
-                $badge12 = "images/badges/on-track-mono.webp";
-            }
-        $badge13 = $project["outline"];
-            if ($badge13 == "unlocked") {
-                $badge13 = "images/badges/outline-color-v2.webp";
-            } elseif ($badge13 == "locked") {
-                $badge13 = "images/badges/outline-mono-v2.webp";
-            }
-        $badge14 = $project["journey"];
-            if ($badge14 == "unlocked") {
-                $badge14 = "images/badges/journey-color.webp";
-            } elseif ($badge14 == "locked") {
-                $badge14 = "images/badges/journey-mono.webp";
-            }
-        $badge15 = $project["dual-wielder"];
-            if ($badge15 == "unlocked") {
-                $badge15 = "images/badges/dual-wielder-color.webp";
-            } elseif ($badge15 == "locked") {
-                $badge15 = "images/badges/dual-wielder-mono.webp";
-            }
-        $badge16 = $project["starting-fresh"];
-            if ($badge16 == "unlocked") {
-                $badge16 = "images/badges/starting-fresh-color.webp";
-            } elseif ($badge16 == "locked") {
-                $badge16 = "images/badges/starting-fresh-mono.webp";
-            }
-        $badge17 = $project["ever-persist"];
-            if ($badge17 == "unlocked") {
-                $badge17 = "images/badges/ever-persist-color.webp";
-            } elseif ($badge17 == "locked") {
-                $badge17 = "images/badges/ever-persist-mono.webp";
-            }
-        $badge18 = $project["back-it-up"];
-            if ($badge18 == "unlocked") {
-                $badge18 = "images/badges/back-it-up-color.webp";
-            } elseif ($badge18 == "locked") {
-                $badge18 = "images/badges/back-it-up-mono.webp";
-            }
-        $badge19 = $project["gathering"];
-            if ($badge19 == "unlocked") {
-                $badge19 = "images/badges/gathering-color.webp";
-            } elseif ($badge19 == "locked") {
-                $badge19 = "images/badges/gathering-mono.webp";
-            }
-        $badge20 = $project["hear-ye"];
-            if ($badge20 == "unlocked") {
-                $badge20 = "images/badges/hear-ye-color.webp";
-            } elseif ($badge20 == "locked") {
-                $badge20 = "images/badges/hear-ye-mono.webp";
-            }
-        $badge21 = $project["breakthrough"];
-            if ($badge21 == "unlocked") {
-                $badge21 = "images/badges/breakthrough-color.webp";
-            } elseif ($badge21 == "locked") {
-                $badge21 = "images/badges/breakthrough-mono.webp";
-            }
-        $badge22 = $project["touch-grass"];
-            if ($badge22 == "unlocked") {
-                $badge22 = "images/badges/touch-grass-color.webp";
-            } elseif ($badge22 == "locked") {
-                $badge22 = "images/badges/touch-grass-mono.webp";
-            }
-        $badge23 = $project["business"];
-            if ($badge23 == "unlocked") {
-                $badge23 = "images/badges/business-color.webp";
-            } elseif ($badge23 == "locked") {
-                $badge23 = "images/badges/business-mono.webp";
-            }
-        $badge24 = $project["tears-wept"];
-            if ($badge24 == "unlocked") {
-                $badge24 = "images/badges/tears-wept-color.webp";
-            } elseif ($badge24 == "locked") {
-                $badge24 = "images/badges/tears-wept-mono.webp";
-            }
-        $badge25 = $project["finish-him"];
-            if ($badge25 == "unlocked") {
-                $badge25 = "images/badges/finish-him-color.webp";
-            } elseif ($badge25 == "locked") {
-                $badge25 = "images/badges/finish-him-mono.webp";
-            }
-            //* Days left math
-            $now = time();
-            $your_date = strtotime($displayGoalDate);
-            $divideDate = $your_date - $now;
-            $math = round($divideDate / (60 * 60 * 24));
-                if ($displayGoalDate == "0000-00-00" || !$displayGoalDate) {
-                    $displayDays = "No Goal Date Set";
-                } elseif (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {
-                    $displayDays = $math;
-                    if ($displayDays == 0) {
-                        $displayDays = "Final Day!";
-                    } elseif ($displayDays < 0) {
-                        $displayDays = "Project Past Due!";
-                    }
-                }
-                //* Percentage bar math
-                if (empty($displayCount) || empty($displayGoal)) {
-                    $displayProgress = 4;
-                    $displayPercentage = 0;
-                } elseif (floor($displayCount / $displayGoal * 100)<=4) {
-                    $displayProgress = 4;
-                    $displayPercentage = $displayPercentage;
-                } else {
-                    $displayProgress = floor($displayCount / $displayGoal * 100);
-                    $displayPercentage = $displayProgress;
-                }
-
     //* Pull Project Info
-    $sql = "SELECT display FROM current_project WHERE username='$username' AND current_state='current'";
+    $sql = "SELECT display FROM current_project WHERE users_id='$userID' AND current_state='current'";
         $result = $_SESSION["conn"]->query($sql);
         if ($result->num_rows > 0) {
             while ($display = $result->fetch_assoc()) {
 
             //* if user has selected a project to be active from project selection
             if (in_array("active", $display)) { 
-                $sql = "SELECT * FROM current_project WHERE username='$username' AND current_state='current' AND display='active'";
+                $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current' AND display='active'";
                 $result = $_SESSION["conn"]->query($sql);
                 $project = $result->fetch_assoc();
                     $displayTitle = $project["title"];
@@ -526,7 +284,250 @@ if (isset($_SESSION["user_id"])) {
                             }
             }                
             }
+        } else {
+            //* User has no active projects yet
+            $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current'";
+            $result = $_SESSION["conn"]->query($sql);
+            $project = $result->fetch_assoc();
+                $displayTitle = $project["title"];
+                $displayProjectID = $project["id"];
+                $displayGenre = $project["genre"];
+                $displayGenrePicture = 'images/genre-covers/genre-covers'.$displayGenre.'.webp';
+                $displayInfo = $project["info"];
+                $displayCount = $project["current_count"];
+                $displayGoal = $project["goal"];
+                $displayGoalDate = $project["goal_date"];
+                $update_date = $project["update_date"];
+                $streak = $project["streak"];
+                $displayDailyGoal = $project["daily_goal"];
+                $displayPercentage = floor($displayCount / $displayGoal * 100);
+                //* Badges
+                //* Quarter Quomplete
+                if (isset($project["quarter-quomplete"])) {
+                $badge1 = $project["quarter-quomplete"];
+                    if ($badge1 == "unlocked") {
+                        $badge1 = "images/badges/quarter-quomplete-color.webp";
+                    } elseif ($badge1 == "locked") {
+                        $badge1 = "images/badges/quarter-quomplete-mono.webp";
+                    }
+                }
+                if ($displayPercentage >= 25 && $project["quarter-quomplete"] !== "unlocked") {
+                    $sql = "UPDATE current_project SET `quarter-quomplete`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
+                    $badge1 = "images/badges/quarter-quomplete-color.webp";
+                }
+                //* Half Way
+                if (isset($project["half-way"])) {
+                $badge2 = $project["half-way"];
+                    if ($badge2 == "unlocked") {
+                        $badge2 = "images/badges/half-way-color.webp";
+                    } elseif ($badge2 == "locked") {
+                        $badge2 = "images/badges/half-way-mono.webp";
+                    }
+                }
+                if ($displayPercentage >= 50 && $project["half-way"] !== "unlocked") {
+                    $sql = "UPDATE current_project SET `half-way`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
+                    $badge2 = "images/badges/half-way-color.webp";
+                }
+                //* All Downhill
+                if (isset($project["all-downhill"])) {
+                $badge3 = $project["all-downhill"];
+                    if ($badge3 == "unlocked") {
+                        $badge3 = "images/badges/all-downhill-color.webp";
+                    } elseif ($badge3 == "locked") {
+                        $badge3 = "images/badges/all-downhill-mono.webp";
+                    }
+                }
+                if ($displayPercentage >= 75 && $project["all-downhill"] !== "unlocked") {
+                    $sql = "UPDATE current_project SET `all-downhill`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
+                    $badge3 = "images/badges/all-downhill-color.webp";
+                }
+                //* Cross Finish
+                if (isset($project["cross-finish"])) {
+                $badge4 = $project["cross-finish"];
+                    if ($badge4 == "unlocked") {
+                        $badge4 = "images/badges/cross-finish-color.webp";
+                    } elseif ($badge4 == "locked") {
+                        $badge4 = "images/badges/cross-finish-mono.webp";
+                    }
+                }
+                if ($displayPercentage >= 100 && $project["cross-finish"] !== "unlocked") {
+                    $sql = "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
+                    $badge4 = "images/badges/cross-finish-color.webp";
+                }
+                $nows = time();
+                $your_dates = strtotime($update_date);
+                $datediffer = $nows - $your_dates;
+                $intervals = round($datediffer / (60 * 60 * 24));
+                if ($intervals <= 1) {
+                    if ($streak >= 2) {
+                        $badge5 = "images/badges/streak-two-color.webp";
+                        echo $displayTitle;
+                    }else {
+                        $badge5 = "images/badges/streak-two-mono.webp";
+                    }
+
+                    // if ($streak >= 3) {
+                    //     $badge6 = "images/badges/streak-three-color.webp";
+                    // } else {
+                    //     $badge6 = "images/badges/streak-three-mono.webp";
+                    // }
+
+                    if ($streak >= 7) {
+                        $badge7 = "images/badges/streak-seven-color.webp";
+                    } else {
+                        $badge7 = "images/badges/streak-seven-mono.webp";
+                    }
+
+                    if ($streak >= 14) {
+                        $badge8 = "images/badges/streak-fourteen-color.webp";
+                    } else {
+                        $badge8 = "images/badges/streak-fourteen-mono.webp";
+                    }
+
+                    if ($streak >= "21") {
+                        $badge9 = "images/badges/streak-twentyOne-color.webp";
+                    } else {
+                        $badge9 = "images/badges/streak-twentyOne-mono.webp";
+                    }
+                }else {
+                    $badge5 = "images/badges/streak-two-mono.webp";
+                    $badge6 = "images/badges/streak-three-mono.webp";
+                    $badge7 = "images/badges/streak-seven-mono.webp";
+                    $badge8 = "images/badges/streak-fourteen-mono.webp";
+                    $badge9 = "images/badges/streak-twentyOne-mono.webp";
+                }
+                $badge10 = $project["first-daily"];
+                    if ($badge10 == "unlocked") {
+                        $badge10 = "images/badges/first-daily-color.webp";
+                    } elseif ($badge10 == "locked") {
+                        $badge10 = "images/badges/first-daily-mono.webp";
+                    }
+                $badge11 = $project["every-streak"];
+                    if ($badge11 == "unlocked") {
+                        $badge11 = "images/badges/every-streak-color.webp";
+                    } elseif ($badge11 == "locked") {
+                        $badge11 = "images/badges/every-streak-mono.webp";
+                    }
+                $badge12 = $project["on-track"];
+                    if ($badge12 == "unlocked") {
+                        $badge12 = "images/badges/on-track-color.webp";
+                    } elseif ($badge12 == "locked") {
+                        $badge12 = "images/badges/on-track-mono.webp";
+                    }
+                $badge13 = $project["outline"];
+                    if ($badge13 == "unlocked") {
+                        $badge13 = "images/badges/outline-color-v2.webp";
+                    } elseif ($badge13 == "locked") {
+                        $badge13 = "images/badges/outline-mono-v2.webp";
+                    }
+                $badge14 = $project["journey"];
+                    if ($badge14 == "unlocked") {
+                        $badge14 = "images/badges/journey-color.webp";
+                    } elseif ($badge14 == "locked") {
+                        $badge14 = "images/badges/journey-mono.webp";
+                    }
+                $badge15 = $project["dual-wielder"];
+                    if ($badge15 == "unlocked") {
+                        $badge15 = "images/badges/dual-wielder-color.webp";
+                    } elseif ($badge15 == "locked") {
+                        $badge15 = "images/badges/dual-wielder-mono.webp";
+                    }
+                $badge16 = $project["starting-fresh"];
+                    if ($badge16 == "unlocked") {
+                        $badge16 = "images/badges/starting-fresh-color.webp";
+                    } elseif ($badge16 == "locked") {
+                        $badge16 = "images/badges/starting-fresh-mono.webp";
+                    }
+                $badge17 = $project["ever-persist"];
+                    if ($badge17 == "unlocked") {
+                        $badge17 = "images/badges/ever-persist-color.webp";
+                    } elseif ($badge17 == "locked") {
+                        $badge17 = "images/badges/ever-persist-mono.webp";
+                    }
+                $badge18 = $project["back-it-up"];
+                    if ($badge18 == "unlocked") {
+                        $badge18 = "images/badges/back-it-up-color.webp";
+                    } elseif ($badge18 == "locked") {
+                        $badge18 = "images/badges/back-it-up-mono.webp";
+                    }
+                $badge19 = $project["gathering"];
+                    if ($badge19 == "unlocked") {
+                        $badge19 = "images/badges/gathering-color.webp";
+                    } elseif ($badge19 == "locked") {
+                        $badge19 = "images/badges/gathering-mono.webp";
+                    }
+                $badge20 = $project["hear-ye"];
+                    if ($badge20 == "unlocked") {
+                        $badge20 = "images/badges/hear-ye-color.webp";
+                    } elseif ($badge20 == "locked") {
+                        $badge20 = "images/badges/hear-ye-mono.webp";
+                    }
+                $badge21 = $project["breakthrough"];
+                    if ($badge21 == "unlocked") {
+                        $badge21 = "images/badges/breakthrough-color.webp";
+                    } elseif ($badge21 == "locked") {
+                        $badge21 = "images/badges/breakthrough-mono.webp";
+                    }
+                $badge22 = $project["touch-grass"];
+                    if ($badge22 == "unlocked") {
+                        $badge22 = "images/badges/touch-grass-color.webp";
+                    } elseif ($badge22 == "locked") {
+                        $badge22 = "images/badges/touch-grass-mono.webp";
+                    }
+                $badge23 = $project["business"];
+                    if ($badge23 == "unlocked") {
+                        $badge23 = "images/badges/business-color.webp";
+                    } elseif ($badge23 == "locked") {
+                        $badge23 = "images/badges/business-mono.webp";
+                    }
+                $badge24 = $project["tears-wept"];
+                    if ($badge24 == "unlocked") {
+                        $badge24 = "images/badges/tears-wept-color.webp";
+                    } elseif ($badge24 == "locked") {
+                        $badge24 = "images/badges/tears-wept-mono.webp";
+                    }
+                $badge25 = $project["finish-him"];
+                    if ($badge25 == "unlocked") {
+                        $badge25 = "images/badges/finish-him-color.webp";
+                    } elseif ($badge25 == "locked") {
+                        $badge25 = "images/badges/finish-him-mono.webp";
+                    }
+                    //* Days left math
+                    $now = time();
+                    $your_date = strtotime($displayGoalDate);
+                    $divideDate = $your_date - $now;
+                    $math = round($divideDate / (60 * 60 * 24));
+                        if ($displayGoalDate == "0000-00-00" || !$displayGoalDate) {
+                            $displayDays = "No Goal Date Set";
+                        } elseif (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {
+                            $displayDays = $math;
+                            if ($displayDays == 0) {
+                                $displayDays = "Final Day!";
+                            } elseif ($displayDays < 0) {
+                                $displayDays = "Project Past Due!";
+                            }
+                        }
+                        //* Percentage bar math
+                        if (empty($displayCount) || empty($displayGoal)) {
+                            $displayProgress = 4;
+                            $displayPercentage = 0;
+                        } elseif (floor($displayCount / $displayGoal * 100)<=4) {
+                            $displayProgress = 4;
+                            $displayPercentage = $displayPercentage;
+                        } else {
+                            $displayProgress = floor($displayCount / $displayGoal * 100);
+                            $displayPercentage = $displayProgress;
+                        }
         }
+    
 //* increase or reset streak count
 
 if ($intervals == 1) {
