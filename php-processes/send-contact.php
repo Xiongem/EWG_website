@@ -31,3 +31,5 @@ $message = $_POST["message"];
     } catch(Exception $e) {
         echo "Message could not be sent. Mailer error: {$mail->ErrorInfo}";
     }
+
+header("Location: /index.php");
