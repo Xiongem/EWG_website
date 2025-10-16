@@ -18,12 +18,12 @@ $message = $_POST["message"];
     $mail-> Subject = "Contact Requested";
     $mail -> Body = <<<END
 
-        $username is reaching out about:
-        $message
+        $username is reaching out about:<br>
+        $message <br>
 
 
         Email: $email
-        
+
     END;
 
     Try {
