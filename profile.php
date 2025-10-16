@@ -40,68 +40,70 @@ $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_st
         $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
         $title = $project["title"];
         $info = $project["info"];
-        //* Badges
-        $badge1 = $project["complete-one-project"];
-            if ($badge1 == "unlocked") {
-                $badge1 = "images/badges/complete-one-project-color.webp";
-            } elseif ($badge1 == "locked") {
-                $badge1 = "images/badges/complete-one-project-mono.webp";
-            }
-        echo $badge1;
-        $badge2 = $project["complete-five-project"];
-            if ($badge2 == "unlocked") {
-                $badge2 = "images/badges/complete-five-project-color.webp";
-            } elseif ($badge2 == "locked") {
-                $badge2 = "images/badges/complete-five-project-mono.webp";
-            }
-        $badge3 = $project["complete-ten-project"];
-            if ($badge3 == "unlocked") {
-                $badge3 = "images/badges/complete-ten-project-color.webp";
-            } elseif ($badge3 == "locked") {
-                $badge3 = "images/badges/complete-ten-project-mono.webp";
-            }
-        $badge4 = $project["streak-fiend"];
-            if ($badge4 == "unlocked") {
-                $badge4 = "images/badges/streak-fiend-color.webp";
-            } elseif ($badge4 == "locked") {
-                $badge4 = "images/badges/streak-fiend-mono.webp";
-            }
-        $badge5 = $project["vet-streaker"];
-            if ($badge5 == "unlocked") {
-                $badge5 = "images/badges/vet-streaker-color.webp";
-            } elseif ($badge5 == "locked") {
-                $badge5 = "images/badges/vet-streaker-mono.webp";
-            }
-        $badge6 = $project["hydra-slayer"];
-            if ($badge6 == "unlocked") {
-                $badge6 = "images/badges/hydra-slayer-color.webp";
-            } elseif ($badge6 == "locked") {
-                $badge6 = "images/badges/hydra-slayer-mono.webp";
-            }
-        $badge7 = $project["vet-guild"];
-            if ($badge7 == "unlocked") {
-                $badge7 = "images/badges/vet-guild-color.webp";
-            } elseif ($badge7 == "locked") {
-                $badge7 = "images/badges/vet-guild-mono.webp";
-            }
-        $badge8 = $project["start-first-project"];
-            if ($badge8 == "unlocked") {
-                $badge8 = "images/badges/start-first-project-color.webp";
-            } elseif ($badge8 == "locked") {
-                $badge8 = "images/badges/start-first-project-mono.webp";
-            }
-        $badge9 = $project["spicy-spicy"];
-            if ($badge9 == "unlocked") {
-                $badge9 = "images/badges/spicy-spicy-color.webp";
-            } elseif ($badge9 == "locked") {
-                $badge9 = "images/badges/spicy-spicy-mono.webp";
-            }
-        $badge10 = $project["tears-alltime"];
-            if ($badge10 == "unlocked") {
-                $badge10 = "images/badges/tears-alltime-color.webp";
-            } elseif ($badge10 == "locked") {
-                $badge10 = "images/badges/tears-alltime-mono.webp";
-            }
+
+
+//* Badges
+$badge1 = $user["complete-one-project"];
+    if ($badge1 == "unlocked") {
+        $badge1 = "images/badges/complete-one-project-color.webp";
+    } elseif ($badge1 == "locked") {
+        $badge1 = "images/badges/complete-one-project-mono.webp";
+    }
+echo $badge1;
+$badge2 = $user["complete-five-project"];
+    if ($badge2 == "unlocked") {
+        $badge2 = "images/badges/complete-five-project-color.webp";
+    } elseif ($badge2 == "locked") {
+        $badge2 = "images/badges/complete-five-project-mono.webp";
+    }
+$badge3 = $user["complete-ten-project"];
+    if ($badge3 == "unlocked") {
+        $badge3 = "images/badges/complete-ten-project-color.webp";
+    } elseif ($badge3 == "locked") {
+        $badge3 = "images/badges/complete-ten-project-mono.webp";
+    }
+$badge4 = $user["streak-fiend"];
+    if ($badge4 == "unlocked") {
+        $badge4 = "images/badges/streak-fiend-color.webp";
+    } elseif ($badge4 == "locked") {
+        $badge4 = "images/badges/streak-fiend-mono.webp";
+    }
+$badge5 = $user["vet-streaker"];
+    if ($badge5 == "unlocked") {
+        $badge5 = "images/badges/vet-streaker-color.webp";
+    } elseif ($badge5 == "locked") {
+        $badge5 = "images/badges/vet-streaker-mono.webp";
+    }
+$badge6 = $user["hydra-slayer"];
+    if ($badge6 == "unlocked") {
+        $badge6 = "images/badges/hydra-slayer-color.webp";
+    } elseif ($badge6 == "locked") {
+        $badge6 = "images/badges/hydra-slayer-mono.webp";
+    }
+$badge7 = $user["vet-guild"];
+    if ($badge7 == "unlocked") {
+        $badge7 = "images/badges/vet-guild-color.webp";
+    } elseif ($badge7 == "locked") {
+        $badge7 = "images/badges/vet-guild-mono.webp";
+    }
+$badge8 = $user["start-first-project"];
+    if ($badge8 == "unlocked") {
+        $badge8 = "images/badges/start-first-project-color.webp";
+    } elseif ($badge8 == "locked") {
+        $badge8 = "images/badges/start-first-project-mono.webp";
+    }
+$badge9 = $user["spicy-spicy"];
+    if ($badge9 == "unlocked") {
+        $badge9 = "images/badges/spicy-spicy-color.webp";
+    } elseif ($badge9 == "locked") {
+        $badge9 = "images/badges/spicy-spicy-mono.webp";
+    }
+$badge10 = $user["tears-alltime"];
+    if ($badge10 == "unlocked") {
+        $badge10 = "images/badges/tears-alltime-color.webp";
+    } elseif ($badge10 == "locked") {
+        $badge10 = "images/badges/tears-alltime-mono.webp";
+    }
 
 $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
 $result = $_SESSION["conn"]->query($sql);
