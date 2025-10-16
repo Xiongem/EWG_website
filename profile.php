@@ -156,7 +156,12 @@ if (isset($project["genre"])){
             <h1 id="badge-title">All Time Badges</h1>
             <!--* Completed one project-->
             <div class="badge-wrapper">
-                <img src="../images/badges/complete-one-project-mono.webp" id="complete-one-project" class="badge pulse">
+                <img src="<?php if($badge1) {
+                    echo $badge1;
+                }else{
+                    echo $default1;
+                } ?>" id="complete-one-project" class="badge pulse"
+                onclick="checkToggle('complete-one-project')">
                 <div class="badgeToPopup" id="complete-one-project-popup">
                     <h4>Completed 1 Project</h4>
                     <p>Congrats on finishing your first project!</p>
@@ -164,7 +169,12 @@ if (isset($project["genre"])){
             </div>
             <!--* Completed 5 projects-->
             <div class="badge-wrapper">
-                <img src="../images/badges/complete-five-project-mono.webp" id="complete-five-project" class="badge pulse">
+                <img src="<?php if($badge2) {
+                    echo $badge2;
+                }else{
+                    echo $default2;
+                } ?>" id="complete-five-project" class="badge pulse"
+                onclick="checkToggle('complete-five-project')">
                 <div class="badgeToPopup" id="complete-five-project-popup">
                     <h4>Completed 5 Projects!</h4>
                     <p>Give yourself a firm pat on the back!</p>

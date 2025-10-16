@@ -4,7 +4,6 @@
 // ini_set('log_errors', 'On');
 // ini_set('error_log', '/path/to/php_errors.log');
 
-
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
@@ -35,7 +34,7 @@ dbConnect();
         <div class="contact-content">
             <h1>Contact Us</h1>
             <h3>Let us know what's going on</h3>
-            <form>
+            <form method="post" action="php-processes/send-contact.php">
                 <div class="content-wrapper">
                     <div class="user-wrapper">
                         <label for="username">Username:</label>
