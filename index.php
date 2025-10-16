@@ -1262,6 +1262,7 @@ else {
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover11 = document.getElementById('every-streak');
     const elementToPopup11 = document.getElementById('every-streak-popup');
+    if (elementToHover11) {
     elementToHover11.addEventListener('mouseenter',
         () => {
         elementToPopup11.classList.add('showFlex');
@@ -1271,6 +1272,7 @@ else {
         () => {
         elementToPopup11.classList.remove('showFlex');
         });
+    }
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover12 = document.getElementById('on-track');
     const elementToPopup12 = document.getElementById('on-track-popup');
