@@ -13,7 +13,7 @@ $username = $_POST["username"];
 $message = $_POST["message"];
 
     $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
-    $mail -> setFrom($email);
+    $mail -> setFrom("noreply@elsewherewriters.com");
     $mail -> addAddress("admin@elsewherewriters.com");
     $mail-> Subject = "Contact Requested";
     $mail -> Body = <<<END
@@ -21,6 +21,9 @@ $message = $_POST["message"];
         $username is reaching out about:
         $message
 
+
+        Email: $email
+        
     END;
 
     Try {
