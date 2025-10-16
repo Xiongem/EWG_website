@@ -1142,6 +1142,7 @@ else {
 // BADGE POPUPS
     const elementToHover1 = document.getElementById('first-daily');
     const elementToPopup1 = document.getElementById('first-daily-popup');
+    if (elementToHover1) {
     elementToHover1.addEventListener('mouseenter',
         () => {
         elementToPopup1.classList.add('showFlex');
@@ -1151,6 +1152,7 @@ else {
         () => {
         elementToPopup1.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover2 = document.getElementById('quarter-quomplete');
     const elementToPopup2 = document.getElementById('quarter-quomplete-popup');
