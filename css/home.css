@@ -449,10 +449,11 @@
         border-radius: 16px 16px 0 16px;
     }
     #every-streak-popup {
-        translate: 6em -3.5em;
+        translate: 6em -4em;
     }
     #on-track-popup {
-        translate: 6em -3.5em;
+        translate: -6em -4em;
+        border-radius: 16px 16px 0 16px;
     }
     #outline-popup {
         translate: -6em -4.5em;
