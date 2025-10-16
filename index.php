@@ -256,7 +256,7 @@ if (isset($_SESSION["user_id"])) {
                     $created = $project["created_at"];
                     $displayPercentage = floor($displayCount / $displayGoal * 100);
                     //* Badges
-                    if ($project["quarter-quompletey"]) {
+                    if (isset($project["quarter-quompletey"])) {
                     $badge1 = $project["quarter-quompletey"];
                         if ($badge1 == "unlocked") {
                             $badge1 = "images/badges/quarter-quompletey-color.webp";
