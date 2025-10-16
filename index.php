@@ -72,11 +72,11 @@ if (isset($_SESSION["user_id"])) {
         $datediffer = $nows - $your_dates;
         $intervals = round($datediffer / (60 * 60 * 24));
         if ($intervals <= 1) {
-            if ($streak >= 2) {
-                $badge5 = "images/badges/streak-two-color.webp";
-            } else {
-                $badge5 = "images/badges/streak-two-mono.webp";
-            }
+            // if ($streak >= 2) {
+            //     $badge5 = "images/badges/streak-two-color.webp";
+            // } else {
+            //     $badge5 = "images/badges/streak-two-mono.webp";
+            // }
 
             if ($streak >= 3) {
                 $badge6 = "images/badges/streak-three-color.webp";
