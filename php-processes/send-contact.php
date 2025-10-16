@@ -8,7 +8,7 @@ $username = $_POST["username"];
 $message = $_POST["message"];
 
     $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
-    $mail -> setFrom("noreply@elsewherewriters.com");
+    $mail -> setFrom($email);
     $mail -> addAddress("admin@elsewherewriters.com");
     $mail -> setSubject("Contact Requested");
     $mail -> Body = <<<END
