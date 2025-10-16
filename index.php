@@ -265,10 +265,8 @@ if (isset($_SESSION["user_id"])) {
                         }
                     }
                     if ($displayPercentage >= 25 && $project["quarter-quomplete"] !== "unlocked") {
-                        $stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET `quarter-quomplete`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
-                        $stmt1->bind_param("s",
-                                                "unlocked");
-                        if ($stmt1 -> execute()) {
+                        $sql = "UPDATE current_project SET `quarter-quomplete`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                        if ($sql -> execute()) {
                             exit;
                         } else {
                             die("an unexpected error occured");
