@@ -416,7 +416,7 @@
         translate: 6em -4em;
     }
     #quarter-quomplete-popup {
-        translate: 6em -5em;
+        /* translate: 6em -5em; */
         position: absolute;
     }
     #half-way-popup {
