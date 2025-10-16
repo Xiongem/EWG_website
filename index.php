@@ -459,7 +459,7 @@ if (isset($_SESSION["user_id"])) {
                 $created_date = strtotime($created);
                 $totalDays = $your_date - $created_date;
                 $streakMath = round($totalDays / (60 * 60 * 24));
-                
+                echo $streakMath;
                 if ($streak == $streakMath) {
                     if ($project["every-streak"] !== "unlocked") {
                         $sql = "UPDATE current_project SET `every-streak`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
