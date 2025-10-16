@@ -256,10 +256,22 @@ if (isset($_SESSION["user_id"])) {
                     $created = $project["created_at"];
                     $displayPercentage = floor($displayCount / $displayGoal * 100);
                     //* Badges
-                    if ($displayPercentage >= 25) {
-                        $badge1 = "images/badges/quarter-quomplete-color.webp";
-                    } else {
-                        $badge1 = "images/badges/quarter-quomplete-mono.webp";
+                    $badge1 = $project["quarter-quompletey"];
+                        if ($badge1 == "unlocked") {
+                            $badge1 = "images/badges/quarter-quompletey-color.webp";
+                        } elseif ($badge1 == "locked") {
+                            $badge1 = "images/badges/quarter-quompletey-mono.webp";
+                        }
+                    if ($displayPercentage >= 25 && $project["quarter-quomplete"] !== "unlocked") {
+                        $stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET `quarter-quomplete`=? WHERE users_id=$userID AND current_state='current' AND display='active'");
+                        $stmt1->bind_param("s",
+                                                "unlocked");
+                        if ($stmt1 -> execute()) {
+                            exit;
+                        } else {
+                            die("an unexpected error occured");
+                        }
+                        $badge1 = "images/badges/quarter-quompletey-color.webp";
                     }
 
                     if ($displayPercentage >= 50) {
