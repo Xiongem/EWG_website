@@ -18,9 +18,9 @@ $message = $_POST["message"];
     $mail-> Subject = "Contact Requested";
     $mail -> Body = <<<END
 
-        $username is reaching out about:<br>
-        $message <br>
-
+        <strong>$username</strong> is reaching out about:<br>
+        $message 
+        <br><br>
 
         Email: $email
 
