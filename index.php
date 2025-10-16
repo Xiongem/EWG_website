@@ -109,7 +109,7 @@ if (isset($_SESSION["user_id"])) {
         $datediffer = $nows - $your_dates;
         $intervals = round($datediffer / (60 * 60 * 24));
         if ($intervals <= 1) {
-            if ($streak >= 2) {
+            if ($streak >= "2") {
                 $badge5 = "images/badges/streak-two-color.webp";
                 echo "WHY?!";
             }else {
