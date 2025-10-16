@@ -417,7 +417,7 @@
     }
     #quarter-quomplete-popup {
         /* translate: 6em -5em; */
-        top: 0;
+        top: 10;
         position: absolute;
     }
     #half-way-popup {
