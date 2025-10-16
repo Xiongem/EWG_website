@@ -403,6 +403,9 @@
     } 
 
     /** Individual badge movement*/
+    #quarter-quomplete-wrapper {
+        position: relative;
+    }
     #finish-him-wrapper {
         position: relative;
     }
@@ -414,6 +417,7 @@
     }
     #quarter-quomplete-popup {
         translate: 6em -5em;
+        position: absolute;
     }
     #half-way-popup {
         translate: 6em -6em;
