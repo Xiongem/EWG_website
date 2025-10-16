@@ -494,8 +494,8 @@
     #finish-him-popup {
         /* translate: -6em -4.5em; */
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -6;
+        left: -4;
         border-radius: 16px 16px 0 16px;
     }
 }
