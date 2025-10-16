@@ -38,6 +38,7 @@
     }
     .tab-link p {
         font-size: 18px;
+        font-family: luminari;
     }
     .tabcontent {
         display: none;
