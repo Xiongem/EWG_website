@@ -309,17 +309,11 @@ if (isset($_SESSION["user_id"])) {
                             $badge8 = "images/badges/streak-fourteen-mono.webp";
                         }
 
-                        if ($streak >= "21") {
+                        if ($streak >= 21) {
                             $badge9 = "images/badges/streak-twentyOne-color.webp";
                         } else {
                             $badge9 = "images/badges/streak-twentyOne-mono.webp";
                         }
-                    }else {
-                        $badge5 = "images/badges/streak-two-mono.webp";
-                        $badge6 = "images/badges/streak-three-mono.webp";
-                        $badge7 = "images/badges/streak-seven-mono.webp";
-                        $badge8 = "images/badges/streak-fourteen-mono.webp";
-                        $badge9 = "images/badges/streak-twentyOne-mono.webp";
                     }
                     echo $streak;
                     //* Full Streak Math
