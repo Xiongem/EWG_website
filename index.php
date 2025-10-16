@@ -111,7 +111,7 @@ if (isset($_SESSION["user_id"])) {
         if ($intervals <= 1) {
             if ($streak >= 2) {
                 $badge5 = "images/badges/streak-two-color.webp";
-                echo $streak;
+                echo $displayTitle;
             }else {
                 $badge5 = "images/badges/streak-two-mono.webp";
             }
