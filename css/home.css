@@ -492,10 +492,10 @@
         border-radius: 16px 16px 0 16px;
     }
     #finish-him-popup {
-        /* translate: -6em -4.5em; */
-        position: absolute;
+        translate: -6em -4.5em;
+        /* position: absolute;
         top: 0;
-        right: 0;
+        right: 0; */
         border-radius: 16px 16px 0 16px;
     }
 }
