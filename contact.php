@@ -37,7 +37,7 @@ dbConnect();
             <form method="post" action="php-processes/send-contact.php">
                 <div class="content-wrapper">
                     <div class="user-wrapper">
-                        <label for="username">Username:</label>
+                        <label for="username">Username/Name:</label>
                         <input class="input" type="text" id="username" name="username" placeholder="required" require>
                         <label for="email">Email:</label>
                         <input class="input" type="email" id="email" name="email" placeholder="required" require>
