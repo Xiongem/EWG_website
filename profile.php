@@ -40,6 +40,67 @@ $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_st
         $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
         $title = $project["title"];
         $info = $project["info"];
+        //* Badges
+        $badge1 = $project["complete-one-project"];
+            if ($badge1 == "unlocked") {
+                $badge1 = "images/badges/complete-one-project-color.webp";
+            } elseif ($badge1 == "locked") {
+                $badge1 = "images/badges/complete-one-project-mono.webp";
+            }
+        $badge2 = $project["complete-five-project"];
+            if ($badge2 == "unlocked") {
+                $badge2 = "images/badges/complete-five-project-color.webp";
+            } elseif ($badge2 == "locked") {
+                $badge2 = "images/badges/complete-five-project-mono.webp";
+            }
+        $badge3 = $project["complete-ten-project"];
+            if ($badge3 == "unlocked") {
+                $badge3 = "images/badges/complete-ten-project-color.webp";
+            } elseif ($badge3 == "locked") {
+                $badge3 = "images/badges/complete-ten-project-mono.webp";
+            }
+        $badge4 = $project["streak-fiend"];
+            if ($badge4 == "unlocked") {
+                $badge4 = "images/badges/streak-fiend-color.webp";
+            } elseif ($badge4 == "locked") {
+                $badge4 = "images/badges/streak-fiend-mono.webp";
+            }
+        $badge5 = $project["vet-streaker"];
+            if ($badge5 == "unlocked") {
+                $badge5 = "images/badges/vet-streaker-color.webp";
+            } elseif ($badge5 == "locked") {
+                $badge5 = "images/badges/vet-streaker-mono.webp";
+            }
+        $badge6 = $project["hydra-slayer"];
+            if ($badge6 == "unlocked") {
+                $badge6 = "images/badges/hydra-slayer-color.webp";
+            } elseif ($badge6 == "locked") {
+                $badge6 = "images/badges/hydra-slayer-mono.webp";
+            }
+        $badge7 = $project["vet-guild"];
+            if ($badge7 == "unlocked") {
+                $badge7 = "images/badges/vet-guild-color.webp";
+            } elseif ($badge7 == "locked") {
+                $badge7 = "images/badges/vet-guild-mono.webp";
+            }
+        $badge8 = $project["start-first-project"];
+            if ($badge8 == "unlocked") {
+                $badge8 = "images/badges/start-first-project-color.webp";
+            } elseif ($badge8 == "locked") {
+                $badge8 = "images/badges/start-first-project-mono.webp";
+            }
+        $badge9 = $project["spicy-spicy"];
+            if ($badge9 == "unlocked") {
+                $badge9 = "images/badges/spicy-spicy-color.webp";
+            } elseif ($badge9 == "locked") {
+                $badge9 = "images/badges/spicy-spicy-mono.webp";
+            }
+        $badge10 = $project["tears-alltime"];
+            if ($badge10 == "unlocked") {
+                $badge10 = "images/badges/tears-alltime-color.webp";
+            } elseif ($badge10 == "locked") {
+                $badge10 = "images/badges/tears-alltime-mono.webp";
+            }
 
 $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
 $result = $_SESSION["conn"]->query($sql);
@@ -67,6 +128,16 @@ if (isset($project["genre"])){
         
     $oldestDate = min($dates);
 }
+$default1 = "images/badges/complete-one-project-mono.webp";
+$default2 = "images/badges/complete-five-project-mono.webp";
+$default3 = "images/badges/complete-ten-project-mono.webp";
+$default4 = "images/badges/streak-fiend-mono.webp";
+$default5 = "images/badges/vet-streaker-mono.webp";
+$default6 = "images/badges/hydra-slayer-mono.webp";
+$default7 = "images/badges/vet-guild-mono.webp";
+$default8 = "images/badges/start-first-project-mono.webp";
+$default9 = "images/badges/spicy-spicy-mono.webp";
+$default10 = "images/badges/tears-alltime-mono.webp";
 ?>
 
 <!DOCTYPE html>
@@ -182,7 +253,12 @@ if (isset($project["genre"])){
             </div>
             <!--* Completed 10 projects-->
             <div class="badge-wrapper">
-                <img src="../images/badges/complete-ten-project-mono.webp" id="complete-ten-project" class="badge pulse">
+                <img src="<?php if($badge3) {
+                    echo $badge3;
+                }else{
+                    echo $default3;
+                } ?>" id="complete-ten-project" class="badge pulse"
+                onclick="checkToggle('complete-ten-project')">
                 <div class="badgeToPopup" id="complete-ten-project-popup">
                     <h4>Completed 10 Projects?!</h4>
                     <p>I don't know about you, but this seems super impressive!</p>
@@ -190,7 +266,12 @@ if (isset($project["genre"])){
             </div>
             <!--* Streak fiend-->
             <div class="badge-wrapper">
-                <img src="../images/badges/streak-fiend-mono.webp" id="streak-fiend" class="badge pulse">
+                <img src="<?php if($badge4) {
+                    echo $badge4;
+                }else{
+                    echo $default4;
+                } ?>" id="streak-fiend" class="badge pulse"
+                onclick="checkToggle('streak-fiend')">
                 <div class="badgeToPopup" id="streak-fiend-popup">
                     <h4>Streak Fiend</h4>
                     <p>Completed a project with a perfect streak!</p>
@@ -198,7 +279,12 @@ if (isset($project["genre"])){
             </div>
             <!--* Veteran Streaker-->
             <div class="badge-wrapper">
-                <img src="../images/badges/vet-streaker-mono.webp" id="vet-streaker" class="badge pulse">
+                <img src="<?php if($badge5) {
+                    echo $badge5;
+                }else{
+                    echo $default5;
+                } ?>" id="vet-streaker" class="badge pulse"
+                onclick="checkToggle('vet-streaker')">
                 <div class="badgeToPopup" id="vet-streaker-popup">
                     <h4>Veteran Streaker</h4>
                     <p>Completed multiple projects with perfect streaks!</p>
@@ -206,7 +292,12 @@ if (isset($project["genre"])){
             </div>
             <!--* Hydra Slayer-->
             <div class="badge-wrapper">
-                <img src="../images/badges/hydra-slayer-mono.webp" id="hydra-slayer" class="badge pulse">
+                <img src="<?php if($badge6) {
+                    echo $badge6;
+                }else{
+                    echo $default6;
+                } ?>" id="hydra-slayer" class="badge pulse"
+                onclick="checkToggle('hydra-slayer')">
                 <div class="badgeToPopup" id="hydra-slayer-popup">
                     <h4>Hydra Slayer</h4>
                     <p>Slaying the hydra is no easy feat.<br>
@@ -216,7 +307,12 @@ if (isset($project["genre"])){
             </div>
             <!--* veteran guildmember-->
             <div class="badge-wrapper">
-                <img src="../images/badges/vet-guild-mono.webp" id="vet-guild" class="badge pulse">
+                <img src="<?php if($badge7) {
+                    echo $badge7;
+                }else{
+                    echo $default7;
+                } ?>" id="vet-guild" class="badge pulse"
+                onclick="checkToggle('vet-guild')">
                 <div class="badgeToPopup" id="vet-guild-popup">
                     <h4>Veteran Guildmember</h4>
                     <p>You've participated in the yearly challenge multiple years in a row!</p>
@@ -224,7 +320,12 @@ if (isset($project["genre"])){
             </div>
             <!--* First project start date-->
             <div class="badge-wrapper">
-                <img src="../images/badges/start-first-project-mono.webp" id="start-first-project" class="badge pulse">
+                <img src="<?php if($badge8) {
+                    echo $badge8;
+                }else{
+                    echo $default8;
+                } ?>" id="start-first-project" class="badge pulse"
+                onclick="checkToggle('start-first-project')">
                 <div class="badgeToPopup" id="start-first-project-popup">
                     <h4>Started Your First Project</h4>
                     <p><?= $oldestDate ?></p>
@@ -232,7 +333,12 @@ if (isset($project["genre"])){
             </div>
             <!--* Spicy-->
             <div class="badge-wrapper">
-                <img src="../images/badges/spicy-spicy-mono.webp" id="spicy-spicy" class="badge pulse">
+                <img src="<?php if($badge9) {
+                    echo $badge9;
+                }else{
+                    echo $default9;
+                } ?>" id="spicy-spicy" class="badge pulse"
+                onclick="checkToggle('spicy-spicy')">
                 <div class="badgeToPopup" id="spicy-spicy-popup">
                     <h4>Spicy, Spicy</h4>
                     <p>Started a project that you can never show your parents. Ya nasty!</p>
@@ -240,7 +346,12 @@ if (isset($project["genre"])){
             </div>
             <!--* Tears-->
             <div class="badge-wrapper">
-                <img src="../images/badges/tears-alltime-mono.webp" id="tears-alltime" class="badge pulse">
+                <img src="<?php if($badge10) {
+                    echo $badge10;
+                }else{
+                    echo $default10;
+                } ?>" id="tears-alltime" class="badge pulse"
+                onclick="checkToggle('tears-alltime')">
                 <div class="badgeToPopup" id="tears-alltime-popup">
                     <h4>Tears Were Wept</h4>
                     <p>One or more of your projects has made you cry.</p>
