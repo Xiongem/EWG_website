@@ -34,7 +34,7 @@ dbConnect();
         <div class="contact-content">
             <h1>Contact Us</h1>
             <h3>Let us know what's going on</h3>
-            <form method="post" action="php-processes/send-contact.php">
+            <form method="post" action="php-processes/send-contact">
                 <div class="content-wrapper">
                     <div class="user-wrapper">
                         <label for="username">Username/Name:</label>
