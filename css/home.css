@@ -421,7 +421,7 @@
         position: absolute; */
     }
     #half-way-popup {
-        translate: 6em -6em;
+        translate: 6em -5.5em;
     }
     #all-downhill-popup {
         translate: -6em -4em;
