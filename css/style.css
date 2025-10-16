@@ -324,7 +324,7 @@ a {
         align-items: center;
     }
     .badgeToPopup {
-        /* display: none; */
+        display: none;
         position: absolute;
         /* top: 0; */
         z-index: 2;
