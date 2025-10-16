@@ -268,7 +268,7 @@ if (isset($_SESSION["user_id"])) {
                         $sql = "UPDATE current_project SET `quarter-quomplete`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
-                        $badge1 = "images/badges/quarter-quompletey-color.webp";
+                        $badge1 = "images/badges/quarter-quomplete-color.webp";
                     }
 
                     if ($displayPercentage >= 50) {
