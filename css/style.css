@@ -110,6 +110,7 @@ a {
 }
 .pulse {
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 /* .website-title {
     color: var(--accent-2);
@@ -301,7 +302,7 @@ a {
     .badge {
         width: 3.5em;
         height: fit-content;
-        cursor: pointer;
+        /* cursor: pointer; */
     }
     footer {
         display: grid;
