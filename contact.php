@@ -26,7 +26,7 @@ dbConnect();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
+    <!-- //* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
         <?php makeNav() ?>
     </header>
