@@ -78,11 +78,11 @@ if (isset($_SESSION["user_id"])) {
             //     $badge5 = "images/badges/streak-two-mono.webp";
             // }
 
-            if ($streak >= 3) {
-                $badge6 = "images/badges/streak-three-color.webp";
-            } else {
-                $badge6 = "images/badges/streak-three-mono.webp";
-            }
+            // if ($streak >= 3) {
+            //     $badge6 = "images/badges/streak-three-color.webp";
+            // } else {
+            //     $badge6 = "images/badges/streak-three-mono.webp";
+            // }
 
             if ($streak >= 7) {
                 $badge7 = "images/badges/streak-seven-color.webp";
