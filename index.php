@@ -536,7 +536,7 @@ else {
     $default24 = "images/badges/tears-wept-mono.webp";
     $default25 = "images/badges/cross-finish-mono.webp";
 
-    echo $badge5;
+    echo $streak;
 ?>
 
 <!DOCTYPE html>
