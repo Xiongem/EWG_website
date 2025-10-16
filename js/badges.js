@@ -735,13 +735,14 @@
 
 
     //? Profile Badges
+    //* One Project Completed
     function toggleImage29() {
         imgsrc= document.getElementById("complete-one-project").src;
         if (imgsrc.indexOf("images/badges/complete-one-project-mono.webp")!=-1){
             document.getElementById("complete-one-project").src = "images/badges/complete-one-project-color.webp";
             //assign values
             var id = "complete-one-project";
-            var badge = "images/badges/complete-one-project-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -753,7 +754,7 @@
             document.getElementById("complete-one-project").src = "images/badges/complete-one-project-mono.webp";
             //assign values
             var id = "complete-one-project";
-            var badge = "images/badges/complete-one-project-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -762,13 +763,14 @@
             });
         }
     }
+    //* Five Projects Completed
     function toggleImage30() {
         imgsrc= document.getElementById("complete-five-project").src;
         if (imgsrc.indexOf("images/badges/complete-five-project-mono.webp")!=-1){
             document.getElementById("complete-five-project").src = "images/badges/complete-five-project-color.webp";
             //assign values
             var id = "complete-five-project";
-            var badge = "images/badges/complete-five-project-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -780,7 +782,7 @@
             document.getElementById("complete-five-project").src = "images/badges/complete-five-project-mono.webp";
             //assign values
             var id = "complete-five-project";
-            var badge = "images/badges/complete-five-project-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -789,13 +791,14 @@
             });
         }
     }
+    //* Ten Projects Completed
     function toggleImage31() {
         imgsrc= document.getElementById("complete-ten-project").src;
         if (imgsrc.indexOf("images/badges/complete-ten-project-mono.webp")!=-1){
             document.getElementById("complete-ten-project").src = "images/badges/complete-ten-project-color.webp";
             //assign values
             var id = "complete-ten-project";
-            var badge = "images/badges/complete-ten-project-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -807,7 +810,7 @@
             document.getElementById("complete-ten-project").src = "images/badges/complete-ten-project-mono.webp";
             //assign values
             var id = "complete-ten-project";
-            var badge = "images/badges/complete-ten-project-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -816,13 +819,14 @@
             });
         }
     }
+    //* Streak Fiend
     function toggleImage32() {
         imgsrc= document.getElementById("streak-fiend").src;
         if (imgsrc.indexOf("images/badges/streak-fiend-mono.webp")!=-1){
             document.getElementById("streak-fiend").src = "images/badges/streak-fiend-color.webp";
             //assign values
             var id = "streak-fiend";
-            var badge = "images/badges/streak-fiend-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -834,7 +838,7 @@
             document.getElementById("streak-fiend").src = "images/badges/streak-fiend-mono.webp";
             //assign values
             var id = "streak-fiend";
-            var badge = "images/badges/streak-fiend-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -843,13 +847,14 @@
             });
         }
     }
+    //* Hydra Slayer
     function toggleImage33() {
         imgsrc= document.getElementById("hydra-slayer").src;
         if (imgsrc.indexOf("images/badges/hydra-slayer-mono.webp")!=-1){
             document.getElementById("hydra-slayer").src = "images/badges/hydra-slayer-color.webp";
             //assign values
             var id = "hydra-slayer";
-            var badge = "images/badges/hydra-slayer-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -867,7 +872,7 @@
             document.getElementById("hydra-slayer").src = "images/badges/hydra-slayer-mono.webp";
             //assign values
             var id = "hydra-slayer";
-            var badge = "images/badges/hydra-slayer-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -882,13 +887,14 @@
             });
         }
     }
+    //* Vet Streaker
     function toggleImage34() {
         imgsrc= document.getElementById("vet-streaker").src;
         if (imgsrc.indexOf("images/badges/vet-streaker-mono.webp")!=-1){
             document.getElementById("vet-streaker").src = "images/badges/vet-streaker-color.webp";
             //assign values
             var id = "vet-streaker";
-            var badge = "images/badges/vet-streaker-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -900,7 +906,7 @@
             document.getElementById("vet-streaker").src = "images/badges/vet-streaker-mono.webp";
             //assign values
             var id = "vet-streaker";
-            var badge = "images/badges/vet-streaker-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -909,13 +915,14 @@
             });
         }
     }
+    //* Vert Guild
     function toggleImage35() {
         imgsrc= document.getElementById("vet-guild").src;
         if (imgsrc.indexOf("images/badges/vet-guild-mono.webp")!=-1){
             document.getElementById("vet-guild").src = "images/badges/vet-guild-color.webp";
             //assign values
             var id = "vet-guild";
-            var badge = "images/badges/vet-guild-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -927,7 +934,7 @@
             document.getElementById("vet-guild").src = "images/badges/vet-guild-mono.webp";
             //assign values
             var id = "vet-guild";
-            var badge = "images/badges/vet-guild-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -936,13 +943,14 @@
             });
         }
     }
+    //* Start First Project
     function toggleImage36() {
         imgsrc= document.getElementById("start-first-project").src;
         if (imgsrc.indexOf("images/badges/start-first-project-mono.webp")!=-1){
             document.getElementById("start-first-project").src = "images/badges/start-first-project-color.webp";
             //assign values
             var id = "start-first-project";
-            var badge = "images/badges/start-first-project-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -954,7 +962,7 @@
             document.getElementById("start-first-project").src = "images/badges/start-first-project-mono.webp";
             //assign values
             var id = "start-first-project";
-            var badge = "images/badges/start-first-project-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -963,13 +971,14 @@
             });
         }
     }
+    //* Spicy Spicy
     function toggleImage37() {
         imgsrc= document.getElementById("spicy-spicy").src;
         if (imgsrc.indexOf("images/badges/spicy-spicy-mono.webp")!=-1){
             document.getElementById("spicy-spicy").src = "images/badges/spicy-spicy-color.webp";
             //assign values
             var id = "spicy-spicy";
-            var badge = "images/badges/spicy-spicy-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -981,7 +990,7 @@
             document.getElementById("spicy-spicy").src = "images/badges/spicy-spicy-mono.webp";
             //assign values
             var id = "spicy-spicy";
-            var badge = "images/badges/spicy-spicy-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -990,13 +999,14 @@
             });
         }
     }
+    //* Tears Alltime
     function toggleImage38() {
         imgsrc= document.getElementById("tears-alltime").src;
         if (imgsrc.indexOf("images/badges/tears-alltime-mono.webp")!=-1){
             document.getElementById("tears-alltime").src = "images/badges/tears-alltime-color.webp";
             //assign values
             var id = "tears-alltime";
-            var badge = "images/badges/tears-alltime-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -1008,7 +1018,7 @@
             document.getElementById("tears-alltime").src = "images/badges/tears-alltime-mono.webp";
             //assign values
             var id = "tears-alltime";
-            var badge = "images/badges/tears-alltime-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
