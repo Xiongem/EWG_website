@@ -429,6 +429,9 @@ a {
         justify-content: center;
         align-items: center;
     }
+    .desktop-navContent > a {
+        font-family: Luminari;
+    }
     .desktop-user img{
         width: 3.5em;
         height: fit-content;
