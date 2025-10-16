@@ -710,7 +710,7 @@ else {
             <!-- //* Row One -->
                 <div class="auto-row rows">
                     <!-- //* Quarter Quomplete-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="quarter-quomplete-wrapper">
                         <img src="<?php if($badge1) {
                             echo $badge1;
                         }else{
@@ -722,7 +722,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Half Way-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="half-way-wrapper">
                         <img src="<?php if($badge2) {
                             echo $badge2;
                         }else{
@@ -734,7 +734,7 @@ else {
                         </div>
                     </div>
                     <!-- //* All Downhill-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="all-downhill-wrapper">
                         <img src="<?php if($badge3) {
                             echo $badge3;
                         }else{
@@ -746,7 +746,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Cross Finish-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="cross-finish-wrapper">
                         <img src="<?php if($badge4) {
                             echo $badge4;
                         }else{
@@ -761,7 +761,7 @@ else {
             <!-- //* Row Two -->
                 <div class="auto-row rows">
                     <!-- //* 2 Day Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="streak-two-wrapper">
                         <img src="<?php if($badge5) {
                             echo $badge5;
                         }else{
@@ -773,7 +773,7 @@ else {
                         </div>
                     </div>
                     <!-- //* 3 Day Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="streak-three-wrapper">
                         <img src="<?php if($badge6) {
                             echo $badge6;
                         }else{
@@ -785,7 +785,7 @@ else {
                         </div>
                     </div>
                     <!-- //* 7 Day Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="streak-seven-wrapper">
                         <img src="<?php if($badge7) {
                             echo $badge7;
                         }else{
@@ -797,7 +797,7 @@ else {
                         </div>
                     </div>
                     <!-- //* 14 Day Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="streak-fourteen-wrapper">
                         <img src="<?php if($badge8) {
                             echo $badge8;
                         }else{
@@ -809,7 +809,7 @@ else {
                         </div>
                     </div>
                     <!-- //* 21 Day Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="streak-twentyOne-wrapper">
                         <img src="<?php if($badge9) {
                             echo $badge9;
                         }else{
@@ -825,7 +825,7 @@ else {
             <!-- //* Row Three -->
                 <div class="auto-row rows">
                     <!-- //* Full Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="every-streak-wrapper">
                         <img src="<?php if($badge11) {
                             echo $badge11;
                         }else{
@@ -837,7 +837,7 @@ else {
                         </div>
                     </div>
                     <!-- //* First Daily-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="first-daily-wrapper">
                         <img src="<?php if($badge10) {
                             echo $badge10;
                         }else{
@@ -849,7 +849,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Stayed on Track-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="on-track-wrapper">
                         <img src="<?php if($badge12) {
                             echo $badge12;
                         }else{
@@ -869,7 +869,7 @@ else {
             <!-- //* Row One -->
                 <div class="toggle-row rows">
                     <!-- //* Outlined-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="outline-wrapper">
                         <img src="<?php if($badge13) {
                             echo $badge13;
                         }else{
@@ -882,7 +882,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Pantser/Journey-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="journey-wrapper">
                         <img src="<?php if($badge14) {
                             echo $badge14;
                         }else{
@@ -895,7 +895,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Dual Wielding-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="dual-wielder-wrapper">
                         <img src="<?php if($badge15) {
                             echo $badge15;
                         }else{
@@ -908,7 +908,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Fresh Project-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="starting-freshl-wrapper">
                         <img src="<?php if($badge16) {
                             echo $badge16;
                         }else{
@@ -924,7 +924,7 @@ else {
             <!-- //* Row Two -->
                 <div class="toggle-row rows">
                     <!-- //* Returning to WIP-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="ever-persist-wrapper">
                         <img src="<?php if($badge17) {
                             echo $badge17;
                         }else{
@@ -937,7 +937,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Backed up Project-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id=back-it-up-wrapper">
                         <img src="<?php if($badge18) {
                             echo $badge18;
                         }else{
@@ -951,7 +951,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Guild Hall Gathering-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="gathering-wrapper">
                         <img src="<?php if($badge19) {
                             echo $badge19;
                         }else{
@@ -964,7 +964,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Hear Ye-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="hear-ye-wrapper">
                         <img src="<?php if($badge20) {
                             echo $badge20;
                         }else{
@@ -977,7 +977,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Breakthrough-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="breakthrough-wrapper">
                         <img src="<?php if($badge21) {
                             echo $badge21;
                         }else{
@@ -993,7 +993,7 @@ else {
             <!-- //* Row Three -->
                 <div class="toggle-row rows">
                     <!-- //* Touch Grass-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="touch-grass-wrapper">
                         <img src="<?php if($badge22) {
                             echo $badge22;
                         }else{
@@ -1006,7 +1006,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Took Care of Business-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="business-wrapper">
                         <img src="<?php if($badge23) {
                             echo $badge23;
                         }else{
@@ -1019,7 +1019,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Tears Were Wept-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="tears-wept-wrapper">
                         <img src="<?php if($badge24) {
                             echo $badge24;
                         }else{
@@ -1032,7 +1032,7 @@ else {
                         </div>
                     </div>
                     <!-- //* Finished Project-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="finish-him-wrapper">
                         <img src="<?php if($badge25) {
                             echo $badge25;
                         }else{

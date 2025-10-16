@@ -403,8 +403,14 @@
     } 
 
     /** Individual badge movement*/
+    #finish-him-wrapper {
+        position: relative;
+    }
     #first-daily-popup {
-        translate: 6em -4em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* translate: 6em -4em; */
     }
     #quarter-quomplete-popup {
         translate: 6em -5em;
