@@ -182,7 +182,8 @@ if (isset($_SESSION["user_id"])) {
                         }
                     //* Full Streak Math
                         $created_date = strtotime($created);
-                        $totalDays = $your_date - $created_date;
+                        $endDate = strtotime($displayGoalDate);
+                        $totalDays = $endDate - $created_date;
                         $streakMath = round($totalDays / (60 * 60 * 24));
                         echo $streakMath;
                         if ($streak == $streakMath) {
@@ -322,6 +323,7 @@ if (isset($_SESSION["user_id"])) {
                 $displayGoalDate = $project["goal_date"];
                 $update_date = $project["update_date"];
                 $streak = $project["streak"];
+                $created = $project["created_at"];
                 $displayDailyGoal = $project["daily_goal"];
                 $displayPercentage = floor($displayCount / $displayGoal * 100);
                 //* Badges
