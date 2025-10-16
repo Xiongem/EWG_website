@@ -1156,6 +1156,7 @@ else {
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover2 = document.getElementById('quarter-quomplete');
     const elementToPopup2 = document.getElementById('quarter-quomplete-popup');
+    if (elementToHover2) {
     elementToHover2.addEventListener('mouseenter',
         () => {
         elementToPopup2.classList.add('showFlex');
@@ -1165,9 +1166,11 @@ else {
         () => {
         elementToPopup2.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover3 = document.getElementById('half-way');
     const elementToPopup3 = document.getElementById('half-way-popup');
+    if (elementToHover3) {
     elementToHover3.addEventListener('mouseenter',
         () => {
         elementToPopup3.classList.add('showFlex');
@@ -1177,9 +1180,11 @@ else {
         () => {
         elementToPopup3.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover4 = document.getElementById('all-downhill');
     const elementToPopup4 = document.getElementById('all-downhill-popup');
+    if (elementToHover4) {
     elementToHover4.addEventListener('mouseenter',
         () => {
         elementToPopup4.classList.add('showFlex');
@@ -1189,9 +1194,11 @@ else {
         () => {
         elementToPopup4.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover5 = document.getElementById('cross-finish');
     const elementToPopup5 = document.getElementById('cross-finish-popup');
+    if (elementToHover5) {
     elementToHover5.addEventListener('mouseenter',
         () => {
         elementToPopup5.classList.add('showFlex');
@@ -1201,9 +1208,11 @@ else {
         () => {
         elementToPopup5.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover6 = document.getElementById('streak-two');
     const elementToPopup6 = document.getElementById('streak-two-popup');
+    if (elementToHover6) {
     elementToHover6.addEventListener('mouseenter',
         () => {
         elementToPopup6.classList.add('showFlex');
@@ -1213,9 +1222,11 @@ else {
         () => {
         elementToPopup6.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover7 = document.getElementById('streak-three');
     const elementToPopup7 = document.getElementById('streak-three-popup');
+    if (elementToHover7) {
     elementToHover7.addEventListener('mouseenter',
         () => {
         elementToPopup7.classList.add('showFlex');
@@ -1225,9 +1236,11 @@ else {
         () => {
         elementToPopup7.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover8 = document.getElementById('streak-seven');
     const elementToPopup8 = document.getElementById('streak-seven-popup');
+    if (elementToHover8) {
     elementToHover8.addEventListener('mouseenter',
         () => {
         elementToPopup8.classList.add('showFlex');
@@ -1237,9 +1250,11 @@ else {
         () => {
         elementToPopup8.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover9 = document.getElementById('streak-fourteen');
     const elementToPopup9 = document.getElementById('streak-fourteen-popup');
+    if (elementToHover9) {
     elementToHover9.addEventListener('mouseenter',
         () => {
         elementToPopup9.classList.add('showFlex');
@@ -1249,9 +1264,11 @@ else {
         () => {
         elementToPopup9.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover10 = document.getElementById('streak-twentyOne');
     const elementToPopup10 = document.getElementById('streak-twentyOne-popup');
+    if (elementToHover10) {
     elementToHover10.addEventListener('mouseenter',
         () => {
         elementToPopup10.classList.add('showFlex');
@@ -1261,6 +1278,7 @@ else {
         () => {
         elementToPopup10.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover11 = document.getElementById('every-streak');
     const elementToPopup11 = document.getElementById('every-streak-popup');
@@ -1274,10 +1292,11 @@ else {
         () => {
         elementToPopup11.classList.remove('showFlex');
         });
-    }
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover12 = document.getElementById('on-track');
     const elementToPopup12 = document.getElementById('on-track-popup');
+    if (elementToHover12) {
     elementToHover12.addEventListener('mouseenter',
         () => {
         elementToPopup12.classList.add('showFlex');
@@ -1287,9 +1306,11 @@ else {
         () => {
         elementToPopup12.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover13 = document.getElementById('outline');
     const elementToPopup13 = document.getElementById('outline-popup');
+    if (elementToHover13) {
     elementToHover13.addEventListener('mouseenter',
         () => {
         elementToPopup13.classList.add('showFlex');
@@ -1299,9 +1320,11 @@ else {
         () => {
         elementToPopup13.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover14 = document.getElementById('journey');
     const elementToPopup14 = document.getElementById('journey-popup');
+    if (elementToHover14) {
     elementToHover14.addEventListener('mouseenter',
         () => {
         elementToPopup14.classList.add('showFlex');
@@ -1311,9 +1334,11 @@ else {
         () => {
         elementToPopup14.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover15 = document.getElementById('dual-wielder');
     const elementToPopup15 = document.getElementById('dual-wielder-popup');
+    if (elementToHover15) {
     elementToHover15.addEventListener('mouseenter',
         () => {
         elementToPopup15.classList.add('showFlex');
@@ -1323,9 +1348,11 @@ else {
         () => {
         elementToPopup15.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover16 = document.getElementById('starting-fresh');
     const elementToPopup16 = document.getElementById('starting-fresh-popup');
+    if (elementToHover16) {
     elementToHover16.addEventListener('mouseenter',
         () => {
         elementToPopup16.classList.add('showFlex');
@@ -1335,9 +1362,11 @@ else {
         () => {
         elementToPopup16.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover17 = document.getElementById('ever-persist');
     const elementToPopup17 = document.getElementById('ever-persist-popup');
+    if (elementToHover17) {
     elementToHover17.addEventListener('mouseenter',
         () => {
         elementToPopup17.classList.add('showFlex');
@@ -1347,9 +1376,11 @@ else {
         () => {
         elementToPopup17.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover18 = document.getElementById('back-it-up');
     const elementToPopup18 = document.getElementById('back-it-up-popup');
+    if (elementToHover18) {
     elementToHover18.addEventListener('mouseenter',
         () => {
         elementToPopup18.classList.add('showFlex');
@@ -1359,9 +1390,11 @@ else {
         () => {
         elementToPopup18.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover19 = document.getElementById('gathering');
     const elementToPopup19 = document.getElementById('gathering-popup');
+    if (elementToHover19) {
     elementToHover19.addEventListener('mouseenter',
         () => {
         elementToPopup19.classList.add('showFlex');
@@ -1371,9 +1404,11 @@ else {
         () => {
         elementToPopup19.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover20 = document.getElementById('hear-ye');
     const elementToPopup20 = document.getElementById('hear-ye-popup');
+    if (elementToHover20) {
     elementToHover20.addEventListener('mouseenter',
         () => {
         elementToPopup20.classList.add('showFlex');
@@ -1383,9 +1418,11 @@ else {
         () => {
         elementToPopup20.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover21 = document.getElementById('breakthrough');
     const elementToPopup21 = document.getElementById('breakthrough-popup');
+    if (elementToHover21) {
     elementToHover21.addEventListener('mouseenter',
         () => {
         elementToPopup21.classList.add('showFlex');
@@ -1395,9 +1432,11 @@ else {
         () => {
         elementToPopup21.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover22 = document.getElementById('touch-grass');
     const elementToPopup22 = document.getElementById('touch-grass-popup');
+    if (elementToHover22) {
     elementToHover22.addEventListener('mouseenter',
         () => {
         elementToPopup22.classList.add('showFlex');
@@ -1407,9 +1446,11 @@ else {
         () => {
         elementToPopup22.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover23 = document.getElementById('business');
     const elementToPopup23 = document.getElementById('business-popup');
+    if (elementToHover23) {
     elementToHover23.addEventListener('mouseenter',
         () => {
         elementToPopup23.classList.add('showFlex');
@@ -1419,9 +1460,11 @@ else {
         () => {
         elementToPopup23.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover24 = document.getElementById('tears-wept');
     const elementToPopup24 = document.getElementById('tears-wept-popup');
+    if (elementToHover24) {
     elementToHover24.addEventListener('mouseenter',
         () => {
         elementToPopup24.classList.add('showFlex');
@@ -1431,9 +1474,11 @@ else {
         () => {
         elementToPopup24.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const elementToHover25 = document.getElementById('finish-him');
     const elementToPopup25 = document.getElementById('finish-him-popup');
+    if (elementToHover25) {
     elementToHover25.addEventListener('mouseenter',
         () => {
         elementToPopup25.classList.add('showFlex');
@@ -1443,6 +1488,7 @@ else {
         () => {
         elementToPopup25.classList.remove('showFlex');
         });
+    };
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     function disableBadgePopups() {
     var popup = document.getElementsByClassName("badgeToPopup");
