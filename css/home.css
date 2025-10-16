@@ -432,20 +432,20 @@
         border-radius: 16px 16px 0 16px;
     }
     #streak-two-popup {
-        translate: 6em -3em;
+        translate: 6em -3.5em;
     }
     #streak-three-popup {
-        translate: 6em -3em;
+        translate: 6em -3.5em;
     }
     #streak-seven-popup {
-        translate: 6em -3em;
+        translate: 6em -3.5em;
     }
     #streak-fourteen-popup {
-        translate: -6em -3em;
+        translate: -6em -3.5em;
         border-radius: 16px 16px 0 16px;
     }
     #streak-twentyOne-popup {
-        translate: -6em -3em;
+        translate: -6em -3.5em;
         border-radius: 16px 16px 0 16px;
     }
     #every-streak-popup {
