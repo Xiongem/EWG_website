@@ -256,12 +256,13 @@ if (isset($_SESSION["user_id"])) {
                     $created = $project["created_at"];
                     $displayPercentage = floor($displayCount / $displayGoal * 100);
                     //* Badges
-                    if (isset($project["quarter-quompletey"])) {
-                    $badge1 = $project["quarter-quompletey"];
+                    //* Quarter Quomplete
+                    if (isset($project["quarter-quomplete"])) {
+                    $badge1 = $project["quarter-quomplete"];
                         if ($badge1 == "unlocked") {
-                            $badge1 = "images/badges/quarter-quompletey-color.webp";
+                            $badge1 = "images/badges/quarter-quomplete-color.webp";
                         } elseif ($badge1 == "locked") {
-                            $badge1 = "images/badges/quarter-quompletey-mono.webp";
+                            $badge1 = "images/badges/quarter-quomplete-mono.webp";
                         }
                     }
                     if ($displayPercentage >= 25 && $project["quarter-quomplete"] !== "unlocked") {
@@ -270,23 +271,50 @@ if (isset($_SESSION["user_id"])) {
                         $stmt->execute();
                         $badge1 = "images/badges/quarter-quomplete-color.webp";
                     }
-
-                    if ($displayPercentage >= 50) {
+                    //* Half Way
+                    if (isset($project["half-way"])) {
+                    $badge2 = $project["half-way"];
+                        if ($badge2 == "unlocked") {
+                            $badge2 = "images/badges/half-way-color.webp";
+                        } elseif ($badge2 == "locked") {
+                            $badge2 = "images/badges/half-way-mono.webp";
+                        }
+                    }
+                    if ($displayPercentage >= 50 && $project["half-way"] !== "unlocked") {
+                        $sql = "UPDATE current_project SET `half-way`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                        $stmt = $_SESSION["conn"]->prepare($sql);
+                        $stmt->execute();
                         $badge2 = "images/badges/half-way-color.webp";
-                    } else {
-                        $badge2 = "images/badges/half-way-mono.webp";
                     }
-
-                    if ($displayPercentage >= 75) {
+                    //* All Downhill
+                    if (isset($project["all-downhill"])) {
+                    $badge3 = $project["all-downhill"];
+                        if ($badge3 == "unlocked") {
+                            $badge3 = "images/badges/all-downhill-color.webp";
+                        } elseif ($badge3 == "locked") {
+                            $badge3 = "images/badges/all-downhill-mono.webp";
+                        }
+                    }
+                    if ($displayPercentage >= 75 && $project["all-downhill"] !== "unlocked") {
+                        $sql = "UPDATE current_project SET `all-downhill`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                        $stmt = $_SESSION["conn"]->prepare($sql);
+                        $stmt->execute();
                         $badge3 = "images/badges/all-downhill-color.webp";
-                    } else {
-                        $badge3 = "images/badges/all-downhill-mono.webp";
                     }
-
-                    if ($displayPercentage >= 100) {
+                    //* Cross Finish
+                    if (isset($project["cross-finish"])) {
+                    $badge4 = $project["cross-finish"];
+                        if ($badge4 == "unlocked") {
+                            $badge4 = "images/badges/cross-finish-color.webp";
+                        } elseif ($badge4 == "locked") {
+                            $badge4 = "images/badges/cross-finish-mono.webp";
+                        }
+                    }
+                    if ($displayPercentage >= 100 && $project["cross-finish"] !== "unlocked") {
+                        $sql = "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                        $stmt = $_SESSION["conn"]->prepare($sql);
+                        $stmt->execute();
                         $badge4 = "images/badges/cross-finish-color.webp";
-                    } else {
-                        $badge4 = "images/badges/cross-finish-mono.webp";
                     }
                     $nows = time();
                     $your_dates = strtotime($update_date);
