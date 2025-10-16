@@ -266,11 +266,7 @@ if (isset($_SESSION["user_id"])) {
                     }
                     if ($displayPercentage >= 25 && $project["quarter-quomplete"] !== "unlocked") {
                         $sql = "UPDATE current_project SET `quarter-quomplete`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
-                        if ($sql -> execute()) {
-                            exit;
-                        } else {
-                            die("an unexpected error occured");
-                        }
+                        
                         $badge1 = "images/badges/quarter-quompletey-color.webp";
                     }
 
