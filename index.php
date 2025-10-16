@@ -119,7 +119,7 @@ if (isset($_SESSION["user_id"])) {
                     if ($intervals <= 1) {
                         if ($streak >= 2) {
                             if ($project["streak-two"] !== "unlocked") {
-                                $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$project["id"]";
+                                $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
