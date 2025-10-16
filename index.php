@@ -352,6 +352,7 @@ if (isset($_SESSION["user_id"])) {
                             $badge9 = "images/badges/streak-twentyOne-mono.webp";
                         }
                     }
+                    echo $intervals;
                     //* Full Streak Math
                         $created_date = strtotime($created);
                         $totalDays = $your_date - $created_date;
