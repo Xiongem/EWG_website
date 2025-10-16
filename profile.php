@@ -47,6 +47,7 @@ $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_st
             } elseif ($badge1 == "locked") {
                 $badge1 = "images/badges/complete-one-project-mono.webp";
             }
+        echo $badge1;
         $badge2 = $project["complete-five-project"];
             if ($badge2 == "unlocked") {
                 $badge2 = "images/badges/complete-five-project-color.webp";
