@@ -44,39 +44,76 @@ if (isset($_SESSION["user_id"])) {
         $displayDailyGoal = $project["daily_goal"];
         $displayPercentage = floor($displayCount / $displayGoal * 100);
         //* Badges
-        if ($displayPercentage >= 25) {
+        //* Quarter Quomplete
+        if (isset($project["quarter-quomplete"])) {
+        $badge1 = $project["quarter-quomplete"];
+            if ($badge1 == "unlocked") {
+                $badge1 = "images/badges/quarter-quomplete-color.webp";
+            } elseif ($badge1 == "locked") {
+                $badge1 = "images/badges/quarter-quomplete-mono.webp";
+            }
+        }
+        if ($displayPercentage >= 25 && $project["quarter-quomplete"] !== "unlocked") {
+            $sql = "UPDATE current_project SET `quarter-quomplete`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
             $badge1 = "images/badges/quarter-quomplete-color.webp";
-        } else {
-            $badge1 = "images/badges/quarter-quomplete-mono.webp";
         }
-
-        if ($displayPercentage >= 50) {
+        //* Half Way
+        if (isset($project["half-way"])) {
+        $badge2 = $project["half-way"];
+            if ($badge2 == "unlocked") {
+                $badge2 = "images/badges/half-way-color.webp";
+            } elseif ($badge2 == "locked") {
+                $badge2 = "images/badges/half-way-mono.webp";
+            }
+        }
+        if ($displayPercentage >= 50 && $project["half-way"] !== "unlocked") {
+            $sql = "UPDATE current_project SET `half-way`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
             $badge2 = "images/badges/half-way-color.webp";
-        } else {
-            $badge2 = "images/badges/half-way-mono.webp";
         }
-
-        if ($displayPercentage >= 75) {
+        //* All Downhill
+        if (isset($project["all-downhill"])) {
+        $badge3 = $project["all-downhill"];
+            if ($badge3 == "unlocked") {
+                $badge3 = "images/badges/all-downhill-color.webp";
+            } elseif ($badge3 == "locked") {
+                $badge3 = "images/badges/all-downhill-mono.webp";
+            }
+        }
+        if ($displayPercentage >= 75 && $project["all-downhill"] !== "unlocked") {
+            $sql = "UPDATE current_project SET `all-downhill`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
             $badge3 = "images/badges/all-downhill-color.webp";
-        } else {
-            $badge3 = "images/badges/all-downhill-mono.webp";
         }
-
-        if ($displayPercentage >= 100) {
+        //* Cross Finish
+        if (isset($project["cross-finish"])) {
+        $badge4 = $project["cross-finish"];
+            if ($badge4 == "unlocked") {
+                $badge4 = "images/badges/cross-finish-color.webp";
+            } elseif ($badge4 == "locked") {
+                $badge4 = "images/badges/cross-finish-mono.webp";
+            }
+        }
+        if ($displayPercentage >= 100 && $project["cross-finish"] !== "unlocked") {
+            $sql = "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
             $badge4 = "images/badges/cross-finish-color.webp";
-        } else {
-            $badge4 = "images/badges/cross-finish-mono.webp";
         }
         $nows = time();
         $your_dates = strtotime($update_date);
         $datediffer = $nows - $your_dates;
         $intervals = round($datediffer / (60 * 60 * 24));
         if ($intervals <= 1) {
-            // if ($streak >= 2) {
-            //     $badge5 = "images/badges/streak-two-color.webp";
-            // } else {
-            //     $badge5 = "images/badges/streak-two-mono.webp";
-            // }
+            if ($streak >= 2) {
+                $badge5 = "images/badges/streak-two-color.webp";
+            }else {
+                $badge5 = "images/badges/streak-two-mono.webp";
+            }
 
             // if ($streak >= 3) {
             //     $badge6 = "images/badges/streak-three-color.webp";
@@ -353,6 +390,13 @@ if (isset($_SESSION["user_id"])) {
                         }
                     }
                     // echo $intervals;
+                    
+                    $badge10 = $project["first-daily"];
+                        if ($badge10 == "unlocked") {
+                            $badge10 = "images/badges/first-daily-color.webp";
+                        } elseif ($badge10 == "locked") {
+                            $badge10 = "images/badges/first-daily-mono.webp";
+                        }
                     //* Full Streak Math
                         $created_date = strtotime($created);
                         $totalDays = $your_date - $created_date;
@@ -362,12 +406,6 @@ if (isset($_SESSION["user_id"])) {
                             $badge11 = "images/badges/every-streak-color.webp";
                         } else {
                             $badge11 = "images/badges/every-streak-mono.webp";
-                        }
-                    $badge10 = $project["first-daily"];
-                        if ($badge10 == "unlocked") {
-                            $badge10 = "images/badges/first-daily-color.webp";
-                        } elseif ($badge10 == "locked") {
-                            $badge10 = "images/badges/first-daily-mono.webp";
                         }
                     // $badge11 = $project["every-streak"];
                     //     if ($badge11 == "unlocked") {
