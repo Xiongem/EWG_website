@@ -321,18 +321,28 @@ if (isset($_SESSION["user_id"])) {
                         $badge8 = "images/badges/streak-fourteen-mono.webp";
                         $badge9 = "images/badges/streak-twentyOne-mono.webp";
                     }
+                    //* Full Streak Math
+                        $created_date = strtotime($created);
+                        $totalDays = $your_date - $created_date;
+                        $streakMath = round($totalDays / (60 * 60 * 24));
+                        
+                        if ($streak == $streakMath) {
+                            $badge11 = "images/badges/every-streak-color.webp";
+                        } else {
+                            $badge11 = "images/badges/every-streak-mono.webp";
+                        }
                     $badge10 = $project["first-daily"];
                         if ($badge10 == "unlocked") {
                             $badge10 = "images/badges/first-daily-color.webp";
                         } elseif ($badge10 == "locked") {
                             $badge10 = "images/badges/first-daily-mono.webp";
                         }
-                    $badge11 = $project["every-streak"];
-                        if ($badge11 == "unlocked") {
-                            $badge11 = "images/badges/every-streak-color.webp";
-                        } elseif ($badge11 == "locked") {
-                            $badge11 = "images/badges/every-streak-mono.webp";
-                        }
+                    // $badge11 = $project["every-streak"];
+                    //     if ($badge11 == "unlocked") {
+                    //         $badge11 = "images/badges/every-streak-color.webp";
+                    //     } elseif ($badge11 == "locked") {
+                    //         $badge11 = "images/badges/every-streak-mono.webp";
+                    //     }
                     $badge12 = $project["on-track"];
                         if ($badge12 == "unlocked") {
                             $badge12 = "images/badges/on-track-color.webp";
@@ -432,11 +442,6 @@ if (isset($_SESSION["user_id"])) {
                                     $displayDays = "Project Past Due!";
                                 }
                             }
-                        //* Full Streak Math
-                            $created_date = strtotime($created);
-                            $totalDays = $your_date - $created_date;
-                            $streakMath = round($totalDays / (60 * 60 * 24));
-                            echo $streakMath;
                         //* Percentage bar math
                             if (empty($displayCount) || empty($displayGoal)) {
                                 $displayProgress = 4;
