@@ -456,12 +456,10 @@
         border-radius: 16px 16px 0 16px;
     }
     #outline-popup {
-        translate: -6em -4.5em;
-        border-radius: 16px 16px 0 16px;
+        translate: 6em -4.5em;
     }
     #journey-popup {
-        translate: -6em -5.5em;
-        border-radius: 16px 16px 0 16px;
+        translate: 6em -5.5em;
     }
     #dual-wielder-popup {
         translate: -6em -4.7em;
@@ -472,12 +470,10 @@
         border-radius: 16px 16px 0 16px;
     }
     #ever-persist-popup {
-        translate: -6em -3em;
-        border-radius: 16px 16px 0 16px;
+        translate: 6em -3em;
     }
     #back-it-up-popup {
-        translate: -6em -5em;
-        border-radius: 16px 16px 0 16px;
+        translate: 6em -5em;
     }
     #gathering-popup {
         translate: -6em -4em;
