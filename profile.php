@@ -120,12 +120,12 @@ if (isset($project["genre"])){
                 </div>
                 <div class="progress-info-container">
                     <div id="project-img">
-                        <a href="project.php?project=<?=$title?>">
+                        <a href="project.php?projectID=<?=$projectID?>">
                             <img src="<?=$genre_picture?>" id="theme-img">
                         </a>
                     </div>
                     <div id="project-title">
-                        <a href="project.php?project=<?=$title?>">
+                        <a href="project.php?projectID=<?=$projectID?>">
                             <h2><?=$title?></h2>
                         </a>
                     </div>
