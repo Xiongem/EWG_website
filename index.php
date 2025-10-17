@@ -212,6 +212,8 @@ if (isset($_SESSION["user_id"])) {
                         } else {
                             $badge12 = "images/badges/on-track-mono.webp";
                         }
+                        echo "$dailyStreak"."<br>";
+                        echo $streakMath;
                         if (isset($project["on-track"])) {
                             $badge12 = $project["on-track"];
                                 if ($badge12 == "unlocked") {
