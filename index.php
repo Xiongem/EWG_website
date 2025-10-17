@@ -228,17 +228,18 @@ if (isset($_SESSION["user_id"])) {
                         }
                         //* On track
                         if ($dailyStreak == $streakMath) {
-                            echo $hello;
                             if ($project["on-track"] !== "unlocked") {
                                 $sql = "UPDATE current_project SET `on-track`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
                             $badge12 = "images/badges/on-track-color.webp";
-                        } else {
+                        } elseif ($dailyStreak !== $streakMath && $project["on-track"] == "unlocked") {
+                            $sql = "UPDATE current_project SET `on-track`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
                             $badge12 = "images/badges/on-track-mono.webp";
-                        }
-                        if (isset($project["on-track"])) {
+                        } elseif (isset($project["on-track"])) {
                             $badge12 = $project["on-track"];
                                 if ($badge12 == "unlocked") {
                                     $badge12 = "images/badges/on-track-color.webp";
@@ -246,6 +247,7 @@ if (isset($_SESSION["user_id"])) {
                                     $badge12 = "images/badges/on-track-mono.webp";
                                 }
                         }
+                        
 
                     //? TOGGLEABLE BADGES
                     //* Outline
