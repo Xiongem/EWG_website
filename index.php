@@ -58,8 +58,13 @@ if (isset($_SESSION["user_id"])) {
                     //* Quarter Quomplete
                     if (isset($project["quarter-quomplete"])) {
                     $badge1 = $project["quarter-quomplete"];
-                        if ($badge1 == "unlocked") {
+                        if ($badge1 == "unlocked" && $displayCount >= 25) {
                             $badge1 = "images/badges/quarter-quomplete-color.webp";
+                        } elseif ($badge1 == "unlocked" && $displayCount < 25) {
+                            $sql = "UPDATE current_project SET `quarter-quomplete`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                        $stmt = $_SESSION["conn"]->prepare($sql);
+                        $stmt->execute();
+                            $badge1 = "images/badges/quarter-quomplete-mono.webp";
                         } elseif ($badge1 == "locked") {
                             $badge1 = "images/badges/quarter-quomplete-mono.webp";
                         }
@@ -73,7 +78,7 @@ if (isset($_SESSION["user_id"])) {
                     //* Half Way
                     if (isset($project["half-way"])) {
                     $badge2 = $project["half-way"];
-                        if ($badge2 == "unlocked") {
+                        if ($badge2 == "unlocked" && $displayCount >= 50) {
                             $badge2 = "images/badges/half-way-color.webp";
                         } elseif ($badge2 == "locked") {
                             $badge2 = "images/badges/half-way-mono.webp";
@@ -88,7 +93,7 @@ if (isset($_SESSION["user_id"])) {
                     //* All Downhill
                     if (isset($project["all-downhill"])) {
                     $badge3 = $project["all-downhill"];
-                        if ($badge3 == "unlocked") {
+                        if ($badge3 == "unlocked" && $displayCount >= 75) {
                             $badge3 = "images/badges/all-downhill-color.webp";
                         } elseif ($badge3 == "locked") {
                             $badge3 = "images/badges/all-downhill-mono.webp";
@@ -103,7 +108,7 @@ if (isset($_SESSION["user_id"])) {
                     //* Cross Finish
                     if (isset($project["cross-finish"])) {
                     $badge4 = $project["cross-finish"];
-                        if ($badge4 == "unlocked") {
+                        if ($badge4 == "unlocked" && $displayCount >= 100) {
                             $badge4 = "images/badges/cross-finish-color.webp";
                         } elseif ($badge4 == "locked") {
                             $badge4 = "images/badges/cross-finish-mono.webp";
