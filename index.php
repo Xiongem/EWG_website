@@ -98,8 +98,13 @@ if (isset($_SESSION["user_id"])) {
                     //* All Downhill
                     if (isset($project["all-downhill"])) {
                     $badge3 = $project["all-downhill"];
-                        if ($badge3 == "unlocked" && $displayCount >= 75) {
+                        if ($badge3 == "unlocked" && $displayPercentage >= 75) {
                             $badge3 = "images/badges/all-downhill-color.webp";
+                        } elseif ($badge3 == "unlocked" && $displayPercentage < 75) {
+                            $sql = "UPDATE current_project SET `all-downhill`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                            $stmt = $_SESSION["conn"]->prepare($sql);
+                            $stmt->execute();
+                            $badge3 = "images/badges/all-downhill-mono.webp";
                         } elseif ($badge3 == "locked") {
                             $badge3 = "images/badges/all-downhill-mono.webp";
                         }
@@ -113,8 +118,13 @@ if (isset($_SESSION["user_id"])) {
                     //* Cross Finish
                     if (isset($project["cross-finish"])) {
                     $badge4 = $project["cross-finish"];
-                        if ($badge4 == "unlocked" && $displayCount >= 100) {
+                        if ($badge4 == "unlocked" && $displayPercentage >= 100) {
                             $badge4 = "images/badges/cross-finish-color.webp";
+                        } elseif ($badge4 == "unlocked" && $displayPercentage < 100) {
+                            $sql = "UPDATE current_project SET `cross-finish`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                            $stmt = $_SESSION["conn"]->prepare($sql);
+                            $stmt->execute();
+                            $badge4 = "images/badges/cross-finish-mono.webp";
                         } elseif ($badge4 == "locked") {
                             $badge4 = "images/badges/cross-finish-mono.webp";
                         }
