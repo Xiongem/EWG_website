@@ -68,7 +68,11 @@ if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
     }
 } elseif ($updateCount >= $dailyGoal && $firstDaily == "unlocked") {
     //* User has reached their daily goal for the first time
+    if ($update_date == date("Y-m-d")) {
     $newDailyStreak = $dailyStreak + 1;
+    } else {
+        $newDailyStreak = $dailyStreak;
+    }
 
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?, daily_goal_streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
