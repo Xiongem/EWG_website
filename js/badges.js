@@ -2,353 +2,353 @@
 // var badgeToggle = document.getElementById("badgeEdit");
 // console.log(badgeToggle);
 // if (badgeToggle.value == "on") {
-    //* First Daily
-    function toggleImage2() {
-        imgsrc= document.getElementById("first-daily").src;
-        if (imgsrc.indexOf("images/badges/first-daily-mono.webp")!=-1){
-            document.getElementById("first-daily").src = "images/badges/first-daily-color.webp";
-            //assign values
-            var id = "first-daily";
-            var badge = "unlocked";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("first-daily").src = "images/badges/first-daily-mono.webp";
-            //assign values
-            var id = "first-daily";
-            var badge = "locked";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* First Daily
+    // function toggleImage2() {
+    //     imgsrc= document.getElementById("first-daily").src;
+    //     if (imgsrc.indexOf("images/badges/first-daily-mono.webp")!=-1){
+    //         document.getElementById("first-daily").src = "images/badges/first-daily-color.webp";
+    //         //assign values
+    //         var id = "first-daily";
+    //         var badge = "unlocked";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("first-daily").src = "images/badges/first-daily-mono.webp";
+    //         //assign values
+    //         var id = "first-daily";
+    //         var badge = "locked";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
 
-    //* Quarter Quomplete
-    function toggleImage3() {
-        imgsrc= document.getElementById("quarter-quomplete").src;
-        if (imgsrc.indexOf("images/badges/quarter-quomplete-mono.webp")!=-1){
-            document.getElementById("quarter-quomplete").src = "images/badges/quarter-quomplete-color.webp";
-            //assign values
-            var id = "quarter-quomplete";
-            var badge = "images/badges/quarter-quomplete-color.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("quarter-quomplete").src = "images/badges/quarter-quomplete-mono.webp";
-            //assign values
-            var id = "quarter-quomplete";
-            var badge = "images/badges/quarter-quomplete-mono.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* Quarter Quomplete
+    // function toggleImage3() {
+    //     imgsrc= document.getElementById("quarter-quomplete").src;
+    //     if (imgsrc.indexOf("images/badges/quarter-quomplete-mono.webp")!=-1){
+    //         document.getElementById("quarter-quomplete").src = "images/badges/quarter-quomplete-color.webp";
+    //         //assign values
+    //         var id = "quarter-quomplete";
+    //         var badge = "images/badges/quarter-quomplete-color.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("quarter-quomplete").src = "images/badges/quarter-quomplete-mono.webp";
+    //         //assign values
+    //         var id = "quarter-quomplete";
+    //         var badge = "images/badges/quarter-quomplete-mono.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
 
-    //* Half Way
-    function toggleImage4() {
-        imgsrc= document.getElementById("half-way").src;
-        if (imgsrc.indexOf("images/badges/half-way-mono.webp")!=-1){
-            document.getElementById("half-way").src = "images/badges/half-way-color.webp";
-            //assign values
-            var id = "half-way";
-            var badge = "images/badges/half-way-color.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("half-way").src = "images/badges/half-way-mono.webp";
-            //assign values
-            var id = "half-way";
-            var badge = "images/badges/half-way-mono.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* Half Way
+    // function toggleImage4() {
+    //     imgsrc= document.getElementById("half-way").src;
+    //     if (imgsrc.indexOf("images/badges/half-way-mono.webp")!=-1){
+    //         document.getElementById("half-way").src = "images/badges/half-way-color.webp";
+    //         //assign values
+    //         var id = "half-way";
+    //         var badge = "images/badges/half-way-color.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("half-way").src = "images/badges/half-way-mono.webp";
+    //         //assign values
+    //         var id = "half-way";
+    //         var badge = "images/badges/half-way-mono.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
     
-    //* All Downhill
-    function toggleImage5() {
-        imgsrc= document.getElementById("all-downhill").src;
-        if (imgsrc.indexOf("images/badges/all-downhill-mono.webp")!=-1){
-            document.getElementById("all-downhill").src = "images/badges/all-downhill-color.webp";
-            //assign values
-            var id = "all-downhill";
-            var badge = "images/badges/all-downhill-color.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("all-downhill").src = "images/badges/all-downhill-mono.webp";
-            //assign values
-            var id = "all-downhill";
-            var badge = "images/badges/all-downhill-mono.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* All Downhill
+    // function toggleImage5() {
+    //     imgsrc= document.getElementById("all-downhill").src;
+    //     if (imgsrc.indexOf("images/badges/all-downhill-mono.webp")!=-1){
+    //         document.getElementById("all-downhill").src = "images/badges/all-downhill-color.webp";
+    //         //assign values
+    //         var id = "all-downhill";
+    //         var badge = "images/badges/all-downhill-color.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("all-downhill").src = "images/badges/all-downhill-mono.webp";
+    //         //assign values
+    //         var id = "all-downhill";
+    //         var badge = "images/badges/all-downhill-mono.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
 
-    //* Cross Finish
-    function toggleImage6() {
-        imgsrc= document.getElementById("cross-finish").src;
-        if (imgsrc.indexOf("images/badges/cross-finish-mono.webp")!=-1){
-            document.getElementById("cross-finish").src = "images/badges/cross-finish-color.webp";
-            //assign values
-            var id = "cross-finish";
-            var badge = "images/badges/cross-finish-color.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("cross-finish").src = "images/badges/cross-finish-mono.webp";
-            //assign values
-            var id = "cross-finish";
-            var badge = "images/badges/cross-finish-mono.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* Cross Finish
+    // function toggleImage6() {
+    //     imgsrc= document.getElementById("cross-finish").src;
+    //     if (imgsrc.indexOf("images/badges/cross-finish-mono.webp")!=-1){
+    //         document.getElementById("cross-finish").src = "images/badges/cross-finish-color.webp";
+    //         //assign values
+    //         var id = "cross-finish";
+    //         var badge = "images/badges/cross-finish-color.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("cross-finish").src = "images/badges/cross-finish-mono.webp";
+    //         //assign values
+    //         var id = "cross-finish";
+    //         var badge = "images/badges/cross-finish-mono.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
     
-    //* Stayed on Track
-    function toggleImage7() {
-        imgsrc= document.getElementById("on-track").src;
-        if (imgsrc.indexOf("images/badges/on-track-mono.webp")!=-1){
-            document.getElementById("on-track").src = "images/badges/on-track-color.webp";
-            //assign values
-            var id = "on-track";
-            var badge = "unlocked";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("on-track").src = "images/badges/on-track-mono.webp";
-            //assign values
-            var id = "on-track";
-            var badge = "locked";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* Stayed on Track
+    // function toggleImage7() {
+    //     imgsrc= document.getElementById("on-track").src;
+    //     if (imgsrc.indexOf("images/badges/on-track-mono.webp")!=-1){
+    //         document.getElementById("on-track").src = "images/badges/on-track-color.webp";
+    //         //assign values
+    //         var id = "on-track";
+    //         var badge = "unlocked";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("on-track").src = "images/badges/on-track-mono.webp";
+    //         //assign values
+    //         var id = "on-track";
+    //         var badge = "locked";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
 
-    //* 2 Day Streak
-    function toggleImage9() {
-        imgsrc= document.getElementById("streak-two").src;
-        if (imgsrc.indexOf("images/badges/streak-two-mono.webp")!=-1){
-            document.getElementById("streak-two").src = "images/badges/streak-two-color.webp";
-            //assign values
-            var id = "streak-two";
-            var badge = "images/badges/streak-two-color.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("streak-two").src = "images/badges/streak-two-mono.webp";
-            //assign values
-            var id = "streak-two";
-            var badge = "images/badges/streak-two-mono.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* 2 Day Streak
+    // function toggleImage9() {
+    //     imgsrc= document.getElementById("streak-two").src;
+    //     if (imgsrc.indexOf("images/badges/streak-two-mono.webp")!=-1){
+    //         document.getElementById("streak-two").src = "images/badges/streak-two-color.webp";
+    //         //assign values
+    //         var id = "streak-two";
+    //         var badge = "images/badges/streak-two-color.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("streak-two").src = "images/badges/streak-two-mono.webp";
+    //         //assign values
+    //         var id = "streak-two";
+    //         var badge = "images/badges/streak-two-mono.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
 
-    //* 3 Day Streak
-    function toggleImage10() {
-        imgsrc= document.getElementById("streak-three").src;
-        if (imgsrc.indexOf("images/badges/streak-three-mono.webp")!=-1){
-            document.getElementById("streak-three").src = "images/badges/streak-three-color.webp";
-            //assign values
-            var id = "streak-three";
-            var badge = "images/badges/streak-three-color.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("streak-three").src = "images/badges/streak-three-mono.webp";
-            //assign values
-            var id = "streak-three";
-            var badge = "images/badges/streak-three-mono.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* 3 Day Streak
+    // function toggleImage10() {
+    //     imgsrc= document.getElementById("streak-three").src;
+    //     if (imgsrc.indexOf("images/badges/streak-three-mono.webp")!=-1){
+    //         document.getElementById("streak-three").src = "images/badges/streak-three-color.webp";
+    //         //assign values
+    //         var id = "streak-three";
+    //         var badge = "images/badges/streak-three-color.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("streak-three").src = "images/badges/streak-three-mono.webp";
+    //         //assign values
+    //         var id = "streak-three";
+    //         var badge = "images/badges/streak-three-mono.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
 
-    //* 7 Day Streak
-    function toggleImage11() {
-        imgsrc= document.getElementById("streak-seven").src;
-        if (imgsrc.indexOf("images/badges/streak-seven-mono.webp")!=-1){
-            document.getElementById("streak-seven").src = "images/badges/streak-seven-color.webp";
-            //assign values
-            var id = "streak-seven";
-            var badge = "images/badges/streak-seven-color.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("streak-seven").src = "images/badges/streak-seven-mono.webp";
-            //assign values
-            var id = "streak-seven";
-            var badge = "images/badges/streak-seven-mono.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* 7 Day Streak
+    // function toggleImage11() {
+    //     imgsrc= document.getElementById("streak-seven").src;
+    //     if (imgsrc.indexOf("images/badges/streak-seven-mono.webp")!=-1){
+    //         document.getElementById("streak-seven").src = "images/badges/streak-seven-color.webp";
+    //         //assign values
+    //         var id = "streak-seven";
+    //         var badge = "images/badges/streak-seven-color.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("streak-seven").src = "images/badges/streak-seven-mono.webp";
+    //         //assign values
+    //         var id = "streak-seven";
+    //         var badge = "images/badges/streak-seven-mono.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
 
-    //* 14 Day Streak
-    function toggleImage12() {
-        imgsrc= document.getElementById("streak-fourteen").src;
-        if (imgsrc.indexOf("images/badges/streak-fourteen-mono.webp")!=-1){
-            document.getElementById("streak-fourteen").src = "images/badges/streak-fourteen-color.webp";
-            //assign values
-            var id = "streak-fourteen";
-            var badge = "images/badges/streak-fourteen-color.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("streak-fourteen").src = "images/badges/streak-fourteen-mono.webp";
-            //assign values
-            var id = "streak-fourteen";
-            var badge = "images/badges/streak-fourteen-mono.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* 14 Day Streak
+    // function toggleImage12() {
+    //     imgsrc= document.getElementById("streak-fourteen").src;
+    //     if (imgsrc.indexOf("images/badges/streak-fourteen-mono.webp")!=-1){
+    //         document.getElementById("streak-fourteen").src = "images/badges/streak-fourteen-color.webp";
+    //         //assign values
+    //         var id = "streak-fourteen";
+    //         var badge = "images/badges/streak-fourteen-color.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("streak-fourteen").src = "images/badges/streak-fourteen-mono.webp";
+    //         //assign values
+    //         var id = "streak-fourteen";
+    //         var badge = "images/badges/streak-fourteen-mono.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
 
-    //* 21 Day Streak
-    function toggleImage13() {
-        imgsrc= document.getElementById("streak-twentyOne").src;
-        if (imgsrc.indexOf("images/badges/streak-twentyOne-mono.webp")!=-1){
-            document.getElementById("streak-twentyOne").src = "images/badges/streak-twentyOne-color.webp";
-            //assign values
-            var id = "streak-twentyOne";
-            var badge = "images/badges/streak-twentyOne-color.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("streak-twentyOne").src = "images/badges/streak-twentyOne-mono.webp";
-            //assign values
-            var id = "streak-twentyOne";
-            var badge = "images/badges/streak-twentyOne-mono.webp";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* 21 Day Streak
+    // function toggleImage13() {
+    //     imgsrc= document.getElementById("streak-twentyOne").src;
+    //     if (imgsrc.indexOf("images/badges/streak-twentyOne-mono.webp")!=-1){
+    //         document.getElementById("streak-twentyOne").src = "images/badges/streak-twentyOne-color.webp";
+    //         //assign values
+    //         var id = "streak-twentyOne";
+    //         var badge = "images/badges/streak-twentyOne-color.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("streak-twentyOne").src = "images/badges/streak-twentyOne-mono.webp";
+    //         //assign values
+    //         var id = "streak-twentyOne";
+    //         var badge = "images/badges/streak-twentyOne-mono.webp";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
 
-    //* Full Streak
-    function toggleImage14() {
-        imgsrc= document.getElementById("every-streak").src;
-        if (imgsrc.indexOf("images/badges/every-streak-mono.webp")!=-1){
-            document.getElementById("every-streak").src = "images/badges/every-streak-color.webp";
-            //assign values
-            var id = "every-streak";
-            var badge = "unlocked";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("every-streak").src = "images/badges/every-streak-mono.webp";
-            //assign values
-            var id = "every-streak";
-            var badge = "locked";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* Full Streak
+    // function toggleImage14() {
+    //     imgsrc= document.getElementById("every-streak").src;
+    //     if (imgsrc.indexOf("images/badges/every-streak-mono.webp")!=-1){
+    //         document.getElementById("every-streak").src = "images/badges/every-streak-color.webp";
+    //         //assign values
+    //         var id = "every-streak";
+    //         var badge = "unlocked";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("every-streak").src = "images/badges/every-streak-mono.webp";
+    //         //assign values
+    //         var id = "every-streak";
+    //         var badge = "locked";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
 
     //* Backed up Project
     function toggleImage15() {
@@ -535,7 +535,7 @@
             document.getElementById("breakthrough").src = "images/badges/breakthrough-color.webp";
             //assign values
             var id = "breakthrough";
-            var badge = "images/badges/breakthrough-color.webp";
+            var badge = "unlocked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -547,7 +547,7 @@
             document.getElementById("breakthrough").src = "images/badges/breakthrough-mono.webp";
             //assign values
             var id = "breakthrough";
-            var badge = "images/badges/breakthrough-mono.webp";
+            var badge = "locked";
             //begin post method
             $.post("php-processes/update-badges", {
                 //DATA
@@ -943,34 +943,34 @@
             });
         }
     }
-    //* Start First Project
-    function toggleImage36() {
-        imgsrc= document.getElementById("start-first-project").src;
-        if (imgsrc.indexOf("images/badges/start-first-project-mono.webp")!=-1){
-            document.getElementById("start-first-project").src = "images/badges/start-first-project-color.webp";
-            //assign values
-            var id = "start-first-project";
-            var badge = "unlocked";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("start-first-project").src = "images/badges/start-first-project-mono.webp";
-            //assign values
-            var id = "start-first-project";
-            var badge = "locked";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* Start First Project
+    // function toggleImage36() {
+    //     imgsrc= document.getElementById("start-first-project").src;
+    //     if (imgsrc.indexOf("images/badges/start-first-project-mono.webp")!=-1){
+    //         document.getElementById("start-first-project").src = "images/badges/start-first-project-color.webp";
+    //         //assign values
+    //         var id = "start-first-project";
+    //         var badge = "unlocked";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("start-first-project").src = "images/badges/start-first-project-mono.webp";
+    //         //assign values
+    //         var id = "start-first-project";
+    //         var badge = "locked";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
     //* Spicy Spicy
     function toggleImage37() {
         imgsrc= document.getElementById("spicy-spicy").src;
@@ -999,34 +999,34 @@
             });
         }
     }
-    //* Tears Alltime
-    function toggleImage38() {
-        imgsrc= document.getElementById("tears-alltime").src;
-        if (imgsrc.indexOf("images/badges/tears-alltime-mono.webp")!=-1){
-            document.getElementById("tears-alltime").src = "images/badges/tears-alltime-color.webp";
-            //assign values
-            var id = "tears-alltime";
-            var badge = "unlocked";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        } 
-        else {
-            document.getElementById("tears-alltime").src = "images/badges/tears-alltime-mono.webp";
-            //assign values
-            var id = "tears-alltime";
-            var badge = "locked";
-            //begin post method
-            $.post("php-processes/update-badges", {
-                //DATA
-                id: id,
-                badge: badge
-            });
-        }
-    }
+    // //* Tears Alltime
+    // function toggleImage38() {
+    //     imgsrc= document.getElementById("tears-alltime").src;
+    //     if (imgsrc.indexOf("images/badges/tears-alltime-mono.webp")!=-1){
+    //         document.getElementById("tears-alltime").src = "images/badges/tears-alltime-color.webp";
+    //         //assign values
+    //         var id = "tears-alltime";
+    //         var badge = "unlocked";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     } 
+    //     else {
+    //         document.getElementById("tears-alltime").src = "images/badges/tears-alltime-mono.webp";
+    //         //assign values
+    //         var id = "tears-alltime";
+    //         var badge = "locked";
+    //         //begin post method
+    //         $.post("php-processes/update-badges", {
+    //             //DATA
+    //             id: id,
+    //             badge: badge
+    //         });
+    //     }
+    // }
 // }
 
 
