@@ -138,6 +138,7 @@ if (isset($_SESSION["user_id"])) {
                     $your_dates = strtotime($update_date);
                     $datediffer = $nows - $your_dates;
                     $intervals = round($datediffer / (60 * 60 * 24));
+                    //* if time since last word count update is one day or less
                     if ($intervals <= 1) {
                         //* 2 Day Streak
                         if ($streak >= 2) {
@@ -185,7 +186,17 @@ if (isset($_SESSION["user_id"])) {
                             $badge9 = "images/badges/streak-twentyOne-color.webp";
                         }
                     } else {
-
+                        //* if it has been more than 1 day since word count was updated
+                        if ($streak > 1 || $streak < 0 && $project["streak-two"] !== "locked") {
+                            $sql = "UPDATE current_project SET `streak-two`= 'locked', `streak-three`= 'locked', `streak-seven`= 'locked', `streak-fourteen`= 'locked', `streak-twentyOne`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                        }
+                        $badge5 = "images/badges/streak-two-mono.webp";
+                        $badge6 = "images/badges/streak-three-mono.webp";
+                        $badge7 = "images/badges/streak-seven-mono.webp";
+                        $badge8 = "images/badges/streak-fourteen-mono.webp";
+                        $badge9 = "images/badges/streak-twentyOne-mono.webp";
                     }
                     //* First Daily
                     $badge10 = $project["first-daily"];
