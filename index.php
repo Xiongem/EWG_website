@@ -118,7 +118,12 @@ if (isset($_SESSION["user_id"])) {
                     //* Cross Finish
                     if (isset($project["cross-finish"])) {
                     $badge4 = $project["cross-finish"];
-                        if ($badge4 == "unlocked" && $displayPercentage >= 100) {
+                        if ($displayPercentage >= 100 && $project["cross-finish"] !== "unlocked") {
+                            $sql = "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                            $stmt = $_SESSION["conn"]->prepare($sql);
+                            $stmt->execute();
+                            $badge4 = "images/badges/cross-finish-color.webp";
+                        } elseif ($badge4 == "unlocked" && $displayPercentage >= 100) {
                             $badge4 = "images/badges/cross-finish-color.webp";
                         } elseif ($badge4 == "unlocked" && $displayPercentage < 100) {
                             $sql = "UPDATE current_project SET `cross-finish`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
@@ -129,12 +134,7 @@ if (isset($_SESSION["user_id"])) {
                             $badge4 = "images/badges/cross-finish-mono.webp";
                         }
                     }
-                    if ($displayPercentage >= 100 && $project["cross-finish"] !== "unlocked") {
-                        $sql = "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
-                        $stmt = $_SESSION["conn"]->prepare($sql);
-                        $stmt->execute();
-                        $badge4 = "images/badges/cross-finish-color.webp";
-                    }
+                    
 
                     //? STREAK BADGES
                     $nows = time();
