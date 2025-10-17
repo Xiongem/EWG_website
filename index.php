@@ -84,7 +84,7 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `half-way`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
-                            $badge1 = "images/badges/half-way-mono.webp";
+                            $badge2 = "images/badges/half-way-mono.webp";
                         } elseif ($badge2 == "locked") {
                             $badge2 = "images/badges/half-way-mono.webp";
                         }
