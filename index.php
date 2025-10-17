@@ -53,7 +53,7 @@ if (isset($_SESSION["user_id"])) {
                     $created = $project["created_at"];
                     $displayPercentage = floor($displayCount / $displayGoal * 100);
                     //* Badges
-                echo $displayCount;
+
                     //? PROGRESS BADGES
                     //* Quarter Quomplete
                     if (isset($project["quarter-quomplete"])) {
