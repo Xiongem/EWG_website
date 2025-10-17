@@ -218,6 +218,11 @@ if (isset($_SESSION["user_id"])) {
                                     $stmt->execute();
                             }
                             $badge11 = "images/badges/every-streak-color.webp";
+                        } elseif ($streak !== $streakMath && $project["every-streak"] == "unlocked") {
+                            $sql = "UPDATE current_project SET `every-streak`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                            $badge11 = "images/badges/every-streak-mono.webp";
                         } else {
                             $badge11 = "images/badges/every-streak-mono.webp";
                         }
