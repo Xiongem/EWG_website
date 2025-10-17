@@ -41,7 +41,10 @@ $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_st
         $title = $project["title"];
         $info = $project["info"];
 
-
+/* 
+TODO: Rearrange badges to have automatic and toggleable
+TODO: Create logic to automate badges
+*/ 
 //* Badges
 $badge1 = $user["complete-one-project"];
     if ($badge1 == "unlocked") {
