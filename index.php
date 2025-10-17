@@ -138,7 +138,6 @@ if (isset($_SESSION["user_id"])) {
                     $your_dates = strtotime($update_date);
                     $datediffer = $nows - $your_dates;
                     $intervals = round($datediffer / (60 * 60 * 24));
-                    echo $intervals;
                     if ($intervals <= 1) {
                         //* 2 Day Streak
                         if ($streak >= 2) {
@@ -148,8 +147,6 @@ if (isset($_SESSION["user_id"])) {
                                     $stmt->execute();
                             }
                             $badge5 = "images/badges/streak-two-color.webp";
-                        } else {
-                            $badge5 = "images/badges/streak-two-mono.webp";
                         }
                         //* 3 Day Streak
                         if ($streak >= 3) {
@@ -159,8 +156,6 @@ if (isset($_SESSION["user_id"])) {
                                     $stmt->execute();
                             }
                             $badge6 = "images/badges/streak-three-color.webp";
-                        } else {
-                            $badge6 = "images/badges/streak-three-mono.webp";
                         }
                         //* Seven Day Streak
                         if ($streak >= 7) {
@@ -170,8 +165,6 @@ if (isset($_SESSION["user_id"])) {
                                     $stmt->execute();
                             }
                             $badge7 = "images/badges/streak-seven-color.webp";
-                        } else {
-                            $badge7 = "images/badges/streak-seven-mono.webp";
                         }
                         //* Fourteen Day Streak
                         if ($streak >= 14) {
@@ -181,8 +174,6 @@ if (isset($_SESSION["user_id"])) {
                                     $stmt->execute();
                             }
                             $badge8 = "images/badges/streak-fourteen-color.webp";
-                        } else {
-                            $badge8 = "images/badges/streak-fourteen-mono.webp";
                         }
                         //* Twenty-One Day Streak
                         if ($streak >= 21) {
@@ -192,8 +183,6 @@ if (isset($_SESSION["user_id"])) {
                                     $stmt->execute();
                             }
                             $badge9 = "images/badges/streak-twentyOne-color.webp";
-                        } else {
-                            $badge9 = "images/badges/streak-twentyOne-mono.webp";
                         }
                     } else {
 
