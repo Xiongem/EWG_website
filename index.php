@@ -203,6 +203,7 @@ if (isset($_SESSION["user_id"])) {
                         }
                         //* On track
                         if ($dailyStreak == $streakMath) {
+                            echo $hello;
                             if ($project["on-track"] !== "unlocked") {
                                 $sql = "UPDATE current_project SET `on-track`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
