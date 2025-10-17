@@ -210,7 +210,7 @@ if (isset($_SESSION["user_id"])) {
                             }
                             $badge12 = "images/badges/on-track-color.webp";
                         } else {
-                            $badge11 = "images/badges/on-track-mono.webp";
+                            $badge12 = "images/badges/on-track-mono.webp";
                         }
                         if (isset($project["on-track"])) {
                             $badge12 = $project["on-track"];
