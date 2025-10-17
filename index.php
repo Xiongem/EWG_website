@@ -138,6 +138,7 @@ if (isset($_SESSION["user_id"])) {
                     $your_dates = strtotime($update_date);
                     $datediffer = $nows - $your_dates;
                     $intervals = round($datediffer / (60 * 60 * 24));
+                    echo $intervals;
                     if ($intervals <= 1) {
                         //* 2 Day Streak
                         if ($streak >= 2) {
@@ -194,6 +195,8 @@ if (isset($_SESSION["user_id"])) {
                         } else {
                             $badge9 = "images/badges/streak-twentyOne-mono.webp";
                         }
+                    } else {
+
                     }
                     //* First Daily
                     $badge10 = $project["first-daily"];
