@@ -367,16 +367,18 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                 </div>
             </div>
         <?php if ($userID == $profileID) {?>
-        <p id="instruction">To give yourself a badge, simply activate the toggle and click on a badge. 
-                        Click on it again to remove it.</p>
-            <div class="slider-container">
-                <i class="fa fa-lock" alt="lock icon"></i>
-                <label class="switch">
-                    <input type="checkbox" id="badgeEdit" onclick="disableBadgePopups()">
-                    <span class="slider round"></span>
-                </label>
-                <i class="fa fa-unlock" alt="unlocked icon"></i>
-            </div>
+        <div class="instruction-wrapper">
+            <p id="instruction">To give yourself a badge, simply activate the toggle and click on a badge. 
+                            Click on it again to remove it.</p>
+                <div class="slider-container">
+                    <i class="fa fa-lock" alt="lock icon"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="badgeEdit" onclick="disableBadgePopups()">
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fa fa-unlock" alt="unlocked icon"></i>
+                </div>
+        </div>
         <?php } ?>
         </div>
     </div>
