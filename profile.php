@@ -399,35 +399,14 @@ $default10 = "images/badges/tears-alltime-mono.webp";
         if (badgeToggle.value == "on") {
             console.log(name);
             switch(name) {
-            case 'complete-one-project':
-                toggleImage29();
-                break;
-            case 'complete-five-project':
-                toggleImage30();
-                break;
-            case 'complete-ten-project':
-                toggleImage31();
-                break;
-            case 'streak-fiend':
-                toggleImage32();
-                break;
-            case 'vet-streaker':
-                toggleImage34();
-                break;
             case 'hydra-slayer':
                 toggleImage33();
                 break;
             case 'vet-guild':
                 toggleImage35();
                 break;
-            case 'start-first-project':
-                toggleImage36();
-                break;
             case 'spicy-spicy':
                 toggleImage37();
-                break;
-            case 'tears-alltime':
-                toggleImage38();
                 break;
             default:
                 console.log("something went wrong");
