@@ -135,7 +135,7 @@
     #badge-title {
         grid-column: span 5;
         justify-self: center;
-        padding-top: 1em;
+        padding-top: 0.5em;
     }
 
     .slider-container {
