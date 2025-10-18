@@ -95,7 +95,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1.5em 1em;
+        /* gap: 1.5em 1em; */
         border-top: 2px solid var(--accent-3);
         padding: 1em 0.5em;
         background-color: var(--accent-1);
