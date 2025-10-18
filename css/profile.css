@@ -121,6 +121,7 @@
     } */
     .instruction-wrapper {
         display: flex;
+        margin: 1em 0;
     }
     .instruction {
         margin: 1em 0 0.5em 0;
@@ -130,7 +131,7 @@
         font-size: 12px;
         justify-self: center;
         text-align: center;
-        padding: 0.5em 1em;
+        padding: 0em 1em;
     }
     #badge-title {
         grid-column: span 5;
