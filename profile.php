@@ -23,6 +23,7 @@ $user = $result->fetch_assoc();
     $fav2 = $user["fav-2"];
     $fav3 = $user["fav-3"];
     $pfp = $user["pfp"];
+    $completed = $user["`projects_completed`"];
 
     //* Setting pfp
         if ($pfp) {
@@ -41,28 +42,100 @@ $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_st
         $title = $project["title"];
         $info = $project["info"];
 
+$sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
+$result = $_SESSION["conn"]->query($sql);
+if ($result->num_rows > 0) {
+    while ($display = $result->fetch_assoc()) {
+
+    //* if user has selected a project to be active from project selection
+    if (in_array("active", $display)) { 
+    //* Pull active project info
+    $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current' AND display='active'";
+        $result = $_SESSION["conn"]->query($sql);
+        $project = $result->fetch_assoc();
+            $projectID = $project["id"];
+            $genre = $project["genre"];
+            $projectCreatorID = $project["users_id"];
+            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
+            $title = $project["title"];
+            $info = $project["info"];
+    }}
+}
 /* 
-TODO: Rearrange badges to have automatic and toggleable
 TODO: Create logic to automate badges
 */ 
 //* Badges
 $badge1 = $user["complete-one-project"];
-    if ($badge1 == "unlocked") {
-        $badge1 = "images/badges/complete-one-project-color.webp";
-    } elseif ($badge1 == "locked") {
-        $badge1 = "images/badges/complete-one-project-mono.webp";
+    if ($userID == $profileID) {
+        if ($completed >= 1) {
+            if ($badge1 !== "unlocked") {
+                $sql = "UPDATE users SET `complete-one-project`= 'unlocked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+            }
+            $badge1 = "images/badges/complete-one-project-color.webp";
+        } elseif ($completed < 1) {
+            if ($badge1 == "unlocked") {
+                $sql = "UPDATE users SET `complete-one-project`= 'locked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+            }
+            $badge1 = "images/badges/complete-one-project-mono.webp";
+        }
+    } else {
+        if ($badge1 == "unlocked") {
+            $badge1 = "images/badges/complete-one-project-color.webp";
+        } elseif ($badge1 == "locked") {
+            $badge1 = "images/badges/complete-one-project-mono.webp";
+        }
     }
 $badge2 = $user["complete-five-project"];
-    if ($badge2 == "unlocked") {
-        $badge2 = "images/badges/complete-five-project-color.webp";
-    } elseif ($badge2 == "locked") {
-        $badge2 = "images/badges/complete-five-project-mono.webp";
+    if ($userID == $profileID) {
+        if ($completed >= 5) {
+            if ($badge2 !== "unlocked") {
+                $sql = "UPDATE users SET `complete-five-project`= 'unlocked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+            }
+            $badge2 = "images/badges/complete-five-project-color.webp";
+        } elseif ($completed < 5) {
+            if ($badge2 == "unlocked") {
+                $sql = "UPDATE users SET `complete-five-project`= 'locked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+            }
+            $badge2 = "images/badges/complete-five-project-mono.webp";
+        }
+    } else {
+        if ($badge2 == "unlocked") {
+            $badge2 = "images/badges/complete-five-project-color.webp";
+        } elseif ($badge2 == "locked") {
+            $badge2 = "images/badges/complete-five-project-mono.webp";
+        }
     }
 $badge3 = $user["complete-ten-project"];
-    if ($badge3 == "unlocked") {
-        $badge3 = "images/badges/complete-ten-project-color.webp";
-    } elseif ($badge3 == "locked") {
-        $badge3 = "images/badges/complete-ten-project-mono.webp";
+    if ($userID == $profileID) {
+        if ($completed >= 10) {
+            if ($badge3 !== "unlocked") {
+                $sql = "UPDATE users SET `complete-ten-project`= 'unlocked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+            }
+            $badge3 = "images/badges/complete-ten-project-color.webp";
+        } elseif ($completed < 10) {
+            if ($badge3 == "unlocked") {
+                $sql = "UPDATE users SET `complete-ten-project`= 'locked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+            }
+            $badge3 = "images/badges/complete-ten-project-mono.webp";
+        }
+    } else {
+        if ($badge3 == "unlocked") {
+            $badge3 = "images/badges/complete-ten-project-color.webp";
+        } elseif ($badge3 == "locked") {
+            $badge3 = "images/badges/complete-ten-project-mono.webp";
+        }
     }
 $badge4 = $user["streak-fiend"];
     if ($badge4 == "unlocked") {
@@ -107,25 +180,6 @@ $badge10 = $user["tears-alltime"];
         $badge10 = "images/badges/tears-alltime-mono.webp";
     }
 
-$sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
-$result = $_SESSION["conn"]->query($sql);
-if ($result->num_rows > 0) {
-    while ($display = $result->fetch_assoc()) {
-
-    //* if user has selected a project to be active from project selection
-    if (in_array("active", $display)) { 
-    //* Pull active project info
-    $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current' AND display='active'";
-        $result = $_SESSION["conn"]->query($sql);
-        $project = $result->fetch_assoc();
-            $projectID = $project["id"];
-            $genre = $project["genre"];
-            $projectCreatorID = $project["users_id"];
-            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
-            $title = $project["title"];
-            $info = $project["info"];
-    }}
-}
 if (isset($project["genre"])){
     $sql = "SELECT created_at FROM current_project WHERE users_id='$profileID'";
     $result = $_SESSION["conn"]->query($sql);
