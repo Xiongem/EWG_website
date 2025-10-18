@@ -220,15 +220,14 @@
         translate: 6em -4.5em;
     }
     #complete-ten-project-popup {
-        translate: 6em -5.3em;
+        translate: -6em -5.3em;
+        border-radius: 16px 16px 0 16px;
     }
     #streak-fiend-popup {
-        translate: -6em -3.4em;
-        border-radius: 16px 16px 0 16px;
+        translate: 6em -3.4em;
     }
     #vet-streaker-popup {
-        translate: -6em -4em;
-        border-radius: 16px 16px 0 16px;
+        translate: 6em -4em;
     }
     #hydra-slayer-popup {
         translate: 6em -6.5em;
