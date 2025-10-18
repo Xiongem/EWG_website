@@ -221,16 +221,6 @@ $default10 = "images/badges/tears-alltime-mono.webp";
         </div>
         <!--* BADGES-->
         <div class="badge-container">
-            <?php if ($userID == $profileID) {?>
-            <div class="slider-container">
-                <i class="fa fa-lock" alt="lock icon"></i>
-                <label class="switch">
-                    <input type="checkbox" id="badgeEdit" onclick="disableBadgePopups()">
-                    <span class="slider round"></span>
-                </label>
-                <i class="fa fa-unlock" alt="unlocked icon"></i>
-            </div>
-            <?php } ?>
             <h1 id="badge-title">All Time Badges</h1>
             <div class="auto-badges">
                 <h4 class="instruction">These badges are earned automatically</h4>
@@ -379,6 +369,14 @@ $default10 = "images/badges/tears-alltime-mono.webp";
         <?php if ($userID == $profileID) {?>
         <p id="instruction">To give yourself a badge, simply activate the toggle and click on a badge. 
                         Click on it again to remove it.</p>
+            <div class="slider-container">
+                <i class="fa fa-lock" alt="lock icon"></i>
+                <label class="switch">
+                    <input type="checkbox" id="badgeEdit" onclick="disableBadgePopups()">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fa fa-unlock" alt="unlocked icon"></i>
+            </div>
         <?php } ?>
         </div>
     </div>
