@@ -232,95 +232,101 @@ $default10 = "images/badges/tears-alltime-mono.webp";
             </div>
             <?php } ?>
             <h1 id="badge-title">All Time Badges</h1>
-            <!--* Completed one project-->
-            <div class="badge-wrapper" id="complete-one-project-wrapper">
-                <img src="<?php if($badge1) {
-                    echo $badge1;
-                }else{
-                    echo $default1;
-                } ?>" id="complete-one-project" class="badge pulse"
-                onclick="checkToggle('complete-one-project')">
-                <div class="badgeToPopup" id="complete-one-project-popup">
-                    <h4>Completed 1 Project</h4>
-                    <p>Congrats on finishing your first project!</p>
+            <div class="auto-badges">
+                <div class="badge-row">
+                    <!--* Completed one project-->
+                    <div class="badge-wrapper" id="complete-one-project-wrapper">
+                        <img src="<?php if($badge1) {
+                            echo $badge1;
+                        }else{
+                            echo $default1;
+                        } ?>" id="complete-one-project" class="badge pulse"
+                        onclick="checkToggle('complete-one-project')">
+                        <div class="badgeToPopup" id="complete-one-project-popup">
+                            <h4>Completed 1 Project</h4>
+                            <p>Congrats on finishing your first project!</p>
+                        </div>
+                    </div>
+                    <!--* Completed 5 projects-->
+                    <div class="badge-wrapper">
+                        <img src="<?php if($badge2) {
+                            echo $badge2;
+                        }else{
+                            echo $default2;
+                        } ?>" id="complete-five-project" class="badge pulse"
+                        onclick="checkToggle('complete-five-project')">
+                        <div class="badgeToPopup" id="complete-five-project-popup">
+                            <h4>Completed 5 Projects!</h4>
+                            <p>Give yourself a firm pat on the back!</p>
+                        </div>
+                    </div>
+                    <!--* Completed 10 projects-->
+                    <div class="badge-wrapper">
+                        <img src="<?php if($badge3) {
+                            echo $badge3;
+                        }else{
+                            echo $default3;
+                        } ?>" id="complete-ten-project" class="badge pulse"
+                        onclick="checkToggle('complete-ten-project')">
+                        <div class="badgeToPopup" id="complete-ten-project-popup">
+                            <h4>Completed 10 Projects?!</h4>
+                            <p>I don't know about you, but this seems super impressive!</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!--* Completed 5 projects-->
-            <div class="badge-wrapper">
-                <img src="<?php if($badge2) {
-                    echo $badge2;
-                }else{
-                    echo $default2;
-                } ?>" id="complete-five-project" class="badge pulse"
-                onclick="checkToggle('complete-five-project')">
-                <div class="badgeToPopup" id="complete-five-project-popup">
-                    <h4>Completed 5 Projects!</h4>
-                    <p>Give yourself a firm pat on the back!</p>
-                </div>
-            </div>
-            <!--* Completed 10 projects-->
-            <div class="badge-wrapper">
-                <img src="<?php if($badge3) {
-                    echo $badge3;
-                }else{
-                    echo $default3;
-                } ?>" id="complete-ten-project" class="badge pulse"
-                onclick="checkToggle('complete-ten-project')">
-                <div class="badgeToPopup" id="complete-ten-project-popup">
-                    <h4>Completed 10 Projects?!</h4>
-                    <p>I don't know about you, but this seems super impressive!</p>
-                </div>
-            </div>
-            <!--* Streak fiend-->
-            <div class="badge-wrapper" id="streak-fiend-wrapper">
-                <img src="<?php if($badge4) {
-                    echo $badge4;
-                }else{
-                    echo $default4;
-                } ?>" id="streak-fiend" class="badge pulse"
-                onclick="checkToggle('streak-fiend')">
-                <div class="badgeToPopup" id="streak-fiend-popup">
-                    <h4>Streak Fiend</h4>
-                    <p>Completed a project with a perfect streak!</p>
-                </div>
-            </div>
-            <!--* Veteran Streaker-->
-            <div class="badge-wrapper">
-                <img src="<?php if($badge5) {
-                    echo $badge5;
-                }else{
-                    echo $default5;
-                } ?>" id="vet-streaker" class="badge pulse"
-                onclick="checkToggle('vet-streaker')">
-                <div class="badgeToPopup" id="vet-streaker-popup">
-                    <h4>Veteran Streaker</h4>
-                    <p>Completed multiple projects with perfect streaks!</p>
-                </div>
-            </div>
-            <!--* Tears-->
-            <div class="badge-wrapper">
-                <img src="<?php if($badge10) {
-                    echo $badge10;
-                }else{
-                    echo $default10;
-                } ?>" id="tears-alltime" class="badge pulse"
-                onclick="checkToggle('tears-alltime')">
-                <div class="badgeToPopup" id="tears-alltime-popup">
-                    <h4>Tears Were Wept</h4>
-                    <p>One or more of your projects has made you cry.</p>
-                </div>
-            </div>
-            <!--* First project start date-->
-            <div class="badge-wrapper">
-                <img src="<?php if($badge8) {
-                    echo $badge8;
-                }else{
-                    echo $default8;
-                } ?>" id="start-first-project" class="badge pulse"
-                onclick="checkToggle('start-first-project')">
-                <div class="badgeToPopup" id="start-first-project-popup">
-                    <h4>Started Your First Project</h4>
-                    <p><?= $oldestDate ?></p>
+                <div class="badge-row">
+                    <!--* Streak fiend-->
+                    <div class="badge-wrapper" id="streak-fiend-wrapper">
+                        <img src="<?php if($badge4) {
+                            echo $badge4;
+                        }else{
+                            echo $default4;
+                        } ?>" id="streak-fiend" class="badge pulse"
+                        onclick="checkToggle('streak-fiend')">
+                        <div class="badgeToPopup" id="streak-fiend-popup">
+                            <h4>Streak Fiend</h4>
+                            <p>Completed a project with a perfect streak!</p>
+                        </div>
+                    </div>
+                    <!--* Veteran Streaker-->
+                    <div class="badge-wrapper">
+                        <img src="<?php if($badge5) {
+                            echo $badge5;
+                        }else{
+                            echo $default5;
+                        } ?>" id="vet-streaker" class="badge pulse"
+                        onclick="checkToggle('vet-streaker')">
+                        <div class="badgeToPopup" id="vet-streaker-popup">
+                            <h4>Veteran Streaker</h4>
+                            <p>Completed multiple projects with perfect streaks!</p>
+                        </div>
+                    </div>
+                    <!--* Tears-->
+                    <div class="badge-wrapper">
+                        <img src="<?php if($badge10) {
+                            echo $badge10;
+                        }else{
+                            echo $default10;
+                        } ?>" id="tears-alltime" class="badge pulse"
+                        onclick="checkToggle('tears-alltime')">
+                        <div class="badgeToPopup" id="tears-alltime-popup">
+                            <h4>Tears Were Wept</h4>
+                            <p>One or more of your projects has made you cry.</p>
+                        </div>
+                    </div>
+                    <!--* First project start date-->
+                    <div class="badge-wrapper">
+                        <img src="<?php if($badge8) {
+                            echo $badge8;
+                        }else{
+                            echo $default8;
+                        } ?>" id="start-first-project" class="badge pulse"
+                        onclick="checkToggle('start-first-project')">
+                        <div class="badgeToPopup" id="start-first-project-popup">
+                            <h4>Started Your First Project</h4>
+                            <p><?= $oldestDate ?></p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--* Hydra Slayer-->
