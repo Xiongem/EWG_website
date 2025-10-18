@@ -330,45 +330,50 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                     </div>
                 </div>
             </div>
-            <!--* Hydra Slayer-->
-            <div class="badge-wrapper">
-                <img src="<?php if($badge6) {
-                    echo $badge6;
-                }else{
-                    echo $default6;
-                } ?>" id="hydra-slayer" class="badge pulse"
-                onclick="checkToggle('hydra-slayer')">
-                <div class="badgeToPopup" id="hydra-slayer-popup">
-                    <h4>Hydra Slayer</h4>
-                    <p>Slaying the hydra is no easy feat.<br>
-                        To earn this badge, you must write at least 
-                        500 words within a 5 minute writing sprint.</p>
-                </div>
-            </div>
-            <!--* veteran guildmember-->
-            <div class="badge-wrapper">
-                <img src="<?php if($badge7) {
-                    echo $badge7;
-                }else{
-                    echo $default7;
-                } ?>" id="vet-guild" class="badge pulse"
-                onclick="checkToggle('vet-guild')">
-                <div class="badgeToPopup" id="vet-guild-popup">
-                    <h4>Veteran Guildmember</h4>
-                    <p>You've participated in the yearly challenge multiple years in a row!</p>
-                </div>
-            </div>
-            <!--* Spicy-->
-            <div class="badge-wrapper">
-                <img src="<?php if($badge9) {
-                    echo $badge9;
-                }else{
-                    echo $default9;
-                } ?>" id="spicy-spicy" class="badge pulse"
-                onclick="checkToggle('spicy-spicy')">
-                <div class="badgeToPopup" id="spicy-spicy-popup">
-                    <h4>Spicy, Spicy</h4>
-                    <p>Started a project that you can never show your parents. Ya nasty!</p>
+            <div class="toggle-badges">
+                <h4 class="instruction">You can award yourself these badges</h4>
+                <div class="badge-row">
+                    <!--* Hydra Slayer-->
+                    <div class="badge-wrapper">
+                        <img src="<?php if($badge6) {
+                            echo $badge6;
+                        }else{
+                            echo $default6;
+                        } ?>" id="hydra-slayer" class="badge pulse"
+                        onclick="checkToggle('hydra-slayer')">
+                        <div class="badgeToPopup" id="hydra-slayer-popup">
+                            <h4>Hydra Slayer</h4>
+                            <p>Slaying the hydra is no easy feat.<br>
+                                To earn this badge, you must write at least 
+                                500 words within a 5 minute writing sprint.</p>
+                        </div>
+                    </div>
+                    <!--* veteran guildmember-->
+                    <div class="badge-wrapper">
+                        <img src="<?php if($badge7) {
+                            echo $badge7;
+                        }else{
+                            echo $default7;
+                        } ?>" id="vet-guild" class="badge pulse"
+                        onclick="checkToggle('vet-guild')">
+                        <div class="badgeToPopup" id="vet-guild-popup">
+                            <h4>Veteran Guildmember</h4>
+                            <p>You've participated in the yearly challenge multiple years in a row!</p>
+                        </div>
+                    </div>
+                    <!--* Spicy-->
+                    <div class="badge-wrapper">
+                        <img src="<?php if($badge9) {
+                            echo $badge9;
+                        }else{
+                            echo $default9;
+                        } ?>" id="spicy-spicy" class="badge pulse"
+                        onclick="checkToggle('spicy-spicy')">
+                        <div class="badgeToPopup" id="spicy-spicy-popup">
+                            <h4>Spicy, Spicy</h4>
+                            <p>Started a project that you can never show your parents. Ya nasty!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         <?php if ($userID == $profileID) {?>
