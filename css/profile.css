@@ -345,11 +345,11 @@
     } */
     #instruction {
         font-size: 18px;
-        padding: 1em 1.5em;
+        padding: 2em 1.5em 0 1.5em;
     }
     .instruction {
         font-size: 18px;
-        margin: 1.5em 0 0.5em 0;
+        margin: 2em 0 0.5em 0;
     }
 
 
