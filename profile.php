@@ -233,7 +233,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
             <?php } ?>
             <h1 id="badge-title">All Time Badges</h1>
             <!--* Completed one project-->
-            <div class="badge-wrapper">
+            <div class="badge-wrapper" id="complete-one-project-wrapper">
                 <img src="<?php if($badge1) {
                     echo $badge1;
                 }else{

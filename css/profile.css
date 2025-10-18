@@ -98,6 +98,9 @@
         padding: 1em 0.5em;
         background-color: var(--accent-1);
     }
+    #complete-one-project-wrapper {
+        grid-row-start: 1;
+    }
     #streak-fiend-wrapper {
         grid-row-start: 2;
     }
