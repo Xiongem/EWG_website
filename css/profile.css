@@ -236,7 +236,8 @@
         translate: 6em -5.5em;
     }
     #start-first-project-popup {
-        translate: 6em -3.5em;
+        translate: -6em -3.5em;
+        border-radius: 16px 16px 0 16px;
     }
     #spicy-spicy-popup {
         translate: -6em -4em;
