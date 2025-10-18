@@ -272,7 +272,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                 </div>
             </div>
             <!--* Streak fiend-->
-            <div class="badge-wrapper">
+            <div class="badge-wrapper" id="streak-fiend-wrapper">
                 <img src="<?php if($badge4) {
                     echo $badge4;
                 }else{
@@ -295,6 +295,32 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                 <div class="badgeToPopup" id="vet-streaker-popup">
                     <h4>Veteran Streaker</h4>
                     <p>Completed multiple projects with perfect streaks!</p>
+                </div>
+            </div>
+            <!--* Tears-->
+            <div class="badge-wrapper">
+                <img src="<?php if($badge10) {
+                    echo $badge10;
+                }else{
+                    echo $default10;
+                } ?>" id="tears-alltime" class="badge pulse"
+                onclick="checkToggle('tears-alltime')">
+                <div class="badgeToPopup" id="tears-alltime-popup">
+                    <h4>Tears Were Wept</h4>
+                    <p>One or more of your projects has made you cry.</p>
+                </div>
+            </div>
+            <!--* First project start date-->
+            <div class="badge-wrapper">
+                <img src="<?php if($badge8) {
+                    echo $badge8;
+                }else{
+                    echo $default8;
+                } ?>" id="start-first-project" class="badge pulse"
+                onclick="checkToggle('start-first-project')">
+                <div class="badgeToPopup" id="start-first-project-popup">
+                    <h4>Started Your First Project</h4>
+                    <p><?= $oldestDate ?></p>
                 </div>
             </div>
             <!--* Hydra Slayer-->
@@ -325,19 +351,6 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                     <p>You've participated in the yearly challenge multiple years in a row!</p>
                 </div>
             </div>
-            <!--* First project start date-->
-            <div class="badge-wrapper">
-                <img src="<?php if($badge8) {
-                    echo $badge8;
-                }else{
-                    echo $default8;
-                } ?>" id="start-first-project" class="badge pulse"
-                onclick="checkToggle('start-first-project')">
-                <div class="badgeToPopup" id="start-first-project-popup">
-                    <h4>Started Your First Project</h4>
-                    <p><?= $oldestDate ?></p>
-                </div>
-            </div>
             <!--* Spicy-->
             <div class="badge-wrapper">
                 <img src="<?php if($badge9) {
@@ -349,19 +362,6 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                 <div class="badgeToPopup" id="spicy-spicy-popup">
                     <h4>Spicy, Spicy</h4>
                     <p>Started a project that you can never show your parents. Ya nasty!</p>
-                </div>
-            </div>
-            <!--* Tears-->
-            <div class="badge-wrapper">
-                <img src="<?php if($badge10) {
-                    echo $badge10;
-                }else{
-                    echo $default10;
-                } ?>" id="tears-alltime" class="badge pulse"
-                onclick="checkToggle('tears-alltime')">
-                <div class="badgeToPopup" id="tears-alltime-popup">
-                    <h4>Tears Were Wept</h4>
-                    <p>One or more of your projects has made you cry.</p>
                 </div>
             </div>
         <?php if ($userID == $profileID) {?>
