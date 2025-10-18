@@ -121,7 +121,10 @@
     } */
     .instruction-wrapper {
         display: flex;
-     }
+    }
+    .instruction {
+        margin: 1em 0;
+    }
     #instruction {
         grid-column: span 5;
         font-size: 12px;
