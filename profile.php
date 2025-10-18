@@ -233,6 +233,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
             <?php } ?>
             <h1 id="badge-title">All Time Badges</h1>
             <div class="auto-badges">
+                <h4 class="instruction">These badges are earned automatically</h4>
                 <div class="badge-row">
                     <!--* Completed one project-->
                     <div class="badge-wrapper" id="complete-one-project-wrapper">
