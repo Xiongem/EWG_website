@@ -224,13 +224,13 @@
         border-radius: 16px 16px 0 16px;
     }
     #streak-fiend-popup {
-        translate: 6em -3em;
+        translate: 6em -4em;
     }
     #vet-streaker-popup {
-        translate: 6em -3.5em;
+        translate: 6em -4em;
     }
     #start-first-project-popup {
-        translate: -6em -3em;
+        translate: -6em -4em;
         border-radius: 16px 16px 0 16px;
     }
     #hydra-slayer-popup {
