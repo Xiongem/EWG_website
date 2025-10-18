@@ -110,6 +110,7 @@
     .badge-row {
         display: flex;
         justify-content: space-evenly;
+        width: 100%;
     }
     /* #complete-one-project-wrapper {
         grid-row-start: 1;
