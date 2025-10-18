@@ -340,12 +340,16 @@
     #badge-title {
         padding-top: 1em;
     }
-    /* .slider-container {
-        padding: 1em 1.5em 0 0;
-    } */
+    .slider-container {
+        padding: 0 1.5em 0 0;
+    }
+     .instruction-wrapper {
+        display: flex;
+        margin: 2em 0;
+    }
     #instruction {
         font-size: 18px;
-        padding: 2em 1.5em 0 1.5em;
+        padding: 0 1.5em;
     }
     .instruction {
         font-size: 18px;
