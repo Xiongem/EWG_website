@@ -345,6 +345,7 @@
     } */
     #instruction {
         font-size: 18px;
+        padding: 1em 1.5em;
     }
     .instruction {
         font-size: 18px;
