@@ -224,10 +224,14 @@
         border-radius: 16px 16px 0 16px;
     }
     #streak-fiend-popup {
-        translate: 6em -4em;
+        translate: 6em -3.8em;
     }
     #vet-streaker-popup {
         translate: 6em -4em;
+    }
+    #tears-alltime-popup {
+        translate: -6em -3.8em;
+        border-radius: 16px 16px 0 16px;
     }
     #start-first-project-popup {
         translate: -6em -4em;
@@ -243,10 +247,7 @@
         translate: -6em -4em;
         border-radius: 16px 16px 0 16px;
     }
-    #tears-alltime-popup {
-        translate: -6em -4em;
-        border-radius: 16px 16px 0 16px;
-    }
+    
 
 
 
