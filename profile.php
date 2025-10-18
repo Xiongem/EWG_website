@@ -231,7 +231,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                             echo $badge1;
                         }else{
                             echo $default1;
-                        } ?>" id="complete-one-project" class="badge pulse">
+                        } ?>" id="complete-one-project" class="badge">
                         <div class="badgeToPopup" id="complete-one-project-popup">
                             <h4>Completed 1 Project</h4>
                             <p>Congrats on finishing your first project!</p>
@@ -243,7 +243,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                             echo $badge2;
                         }else{
                             echo $default2;
-                        } ?>" id="complete-five-project" class="badge pulse">
+                        } ?>" id="complete-five-project" class="badge">
                         <div class="badgeToPopup" id="complete-five-project-popup">
                             <h4>Completed 5 Projects!</h4>
                             <p>Give yourself a firm pat on the back!</p>
@@ -255,7 +255,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                             echo $badge3;
                         }else{
                             echo $default3;
-                        } ?>" id="complete-ten-project" class="badge pulse">
+                        } ?>" id="complete-ten-project" class="badge">
                         <div class="badgeToPopup" id="complete-ten-project-popup">
                             <h4>Completed 10 Projects?!</h4>
                             <p>I don't know about you, but this seems super impressive!</p>
@@ -269,7 +269,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                             echo $badge4;
                         }else{
                             echo $default4;
-                        } ?>" id="streak-fiend" class="badge pulse">
+                        } ?>" id="streak-fiend" class="badge">
                         <div class="badgeToPopup" id="streak-fiend-popup">
                             <h4>Streak Fiend</h4>
                             <p>Completed a project with a perfect streak!</p>
@@ -281,7 +281,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                             echo $badge5;
                         }else{
                             echo $default5;
-                        } ?>" id="vet-streaker" class="badge pulse">
+                        } ?>" id="vet-streaker" class="badge">
                         <div class="badgeToPopup" id="vet-streaker-popup">
                             <h4>Veteran Streaker</h4>
                             <p>Completed multiple projects with perfect streaks!</p>
@@ -293,7 +293,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                             echo $badge10;
                         }else{
                             echo $default10;
-                        } ?>" id="tears-alltime" class="badge pulse">
+                        } ?>" id="tears-alltime" class="badge">
                         <div class="badgeToPopup" id="tears-alltime-popup">
                             <h4>Tears Were Wept</h4>
                             <p>One or more of your projects has made you cry.</p>
@@ -305,7 +305,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                             echo $badge8;
                         }else{
                             echo $default8;
-                        } ?>" id="start-first-project" class="badge pulse">
+                        } ?>" id="start-first-project" class="badge">
                         <div class="badgeToPopup" id="start-first-project-popup">
                             <h4>Started Your First Project</h4>
                             <p><?= $oldestDate ?></p>
