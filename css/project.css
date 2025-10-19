@@ -111,6 +111,15 @@
     .finish-popup > p {
         font-size: 18px;
     }
+    .finish-button {
+        width: 5em;
+        height: 2.5em;
+        background-color: var(--text-color);
+        color: var(--reverse-text-color);
+        border: 2px solid var(--accent-2);
+        border-radius: 16px;
+        cursor: pointer;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
