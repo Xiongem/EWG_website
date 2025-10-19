@@ -759,7 +759,8 @@ else {
     <!-- //* POPUP FOR CHOOSING ACTIVE PROJECTS-->
     <?php if (isset($_SESSION["user_id"])) { ?>
     <div class="project-select-popup-wrapper" id="project-popup">
-        <div class="project-select-popup"><div class="close-wrapper">
+        <div class="project-select-popup">
+            <div class="close-wrapper">
                 <i class="fa fa-close" onclick="hideProjectPopup()"></i>
             </div>
             <?php

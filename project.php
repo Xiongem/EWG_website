@@ -264,6 +264,9 @@ $project = $result->fetch_assoc();
 <body>
     <div class="finish-popup-wrapper">
         <div class="finish-popup">
+            <div class="close-wrapper">
+                <i class="fa fa-close" onclick="hideFinishPopup()"></i>
+            </div>
             <h1>Completed Your Project?</h1>
             <p>Clicking the "Finish" button below will mark your project as completed.</p> 
             <p>Completing your project is permanent and you will no longer be able to update your word count, 
