@@ -114,7 +114,7 @@
         margin: 0.25em 0;
     }
     .finish-button-wrapper {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         margin: 1em 0 0 0;
