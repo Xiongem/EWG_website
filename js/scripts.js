@@ -70,9 +70,9 @@ function hideUpdateWords() {
   body.style.overflow = "unset";
 }
 function showFinishPopup() {
-  var projectPopup = document.getElementById("finish-popup-wrapper");
-  projectPopup.style.display = "flex";
-  projectPopup.scrollIntoView();
+  var finishPopup = document.getElementById("finish-popup-wrapper");
+  finishPopup.style.display = "flex";
+  finishPopup.scrollIntoView();
   setTimeout(hideBackground, 500);
 }
 function hideFinishPopup() {
