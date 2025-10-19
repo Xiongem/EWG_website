@@ -38,6 +38,10 @@
         text-align: center;
     }
     .complete-button > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         font-size: 16px;
         color: var(--reverse-text-color);
     }
