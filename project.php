@@ -271,8 +271,8 @@ $project = $result->fetch_assoc();
                 archiving is reversable.</p>
             <p>If you are completely finished working on your project, click the button below.</p>
             <div class="finish-button-wrapper">
-                <a href="php-processes/completeProject?projectID=<?=$projectID?>">
-                    <div class="finish-button">Finish</div>
+                <a class="finish-button" href="php-processes/completeProject?projectID=<?=$projectID?>">
+                    <div>Finish</div>
                 </a>
             </div>
         </div>
