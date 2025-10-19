@@ -262,6 +262,19 @@ $project = $result->fetch_assoc();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div class="finish-popup-wrapper">
+        <div class="finish-popup">
+            <h1>Completed Your Project?</h1>
+            <p>Clicking the "Finish" button below will mark your project as completed. 
+                Completing your project is permanent and you will no longer be able to update your word count, 
+                award yourself badges, or edit your project. If you wish to not work on your a while, 
+                archiving is reversable.</p>
+            <p>If you are completely finished working on your project, click the button below.</p>
+            <a href="php-processes/completeProject?projectID=<?=$projectID?>">
+                <div class="finish-button">Finish</div>
+            </a>
+        </div>
+    </div>
     <!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
         <?php makeNav() ?>
@@ -273,8 +286,16 @@ $project = $result->fetch_assoc();
                 
         if ($state == "current") {?>
         <div class="archive-wrapper">
-            <div class="archive-button" id="notArchived">
-                <a href="php-processes/archiveProject?projectID=<?=$projectID?>">Archive Project</a>
+            <a href="php-processes/archiveProject?projectID=<?=$projectID?>">
+                <div class="archive-button" id="notArchived">
+                    Archive Project
+                </div>
+            </a>
+            <div class="complete-wrapper" onclick="showFinishPopup()">
+                <a>Finish Project</a>
+            </div>
+            <div class="delete-wrapper">
+                <a href="php-processes/deleteProject?projectID=<?=$projectID?>">Delete Project</a>
             </div>
         </div>
         <?php } elseif ($state == "archived"  && $result->num_rows < 5) {?>
