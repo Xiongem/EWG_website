@@ -111,6 +111,11 @@
     .finish-popup > p {
         font-size: 18px;
     }
+    .finish-button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .finish-button {
         width: 5em;
         height: 2.5em;

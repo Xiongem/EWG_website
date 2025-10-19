@@ -270,7 +270,7 @@ $project = $result->fetch_assoc();
                 award yourself badges, or edit your project. If you wish to not work on your a while, 
                 archiving is reversable.</p>
             <p>If you are completely finished working on your project, click the button below.</p>
-            <div class="finishi-button-wrapper">
+            <div class="finish-button-wrapper">
                 <a href="php-processes/completeProject?projectID=<?=$projectID?>">
                     <div class="finish-button">Finish</div>
                 </a>
