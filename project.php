@@ -265,10 +265,10 @@ $project = $result->fetch_assoc();
     <div class="finish-popup-wrapper">
         <div class="finish-popup">
             <h1>Completed Your Project?</h1>
-            <p>Clicking the "Finish" button below will mark your project as completed. 
-                Completing your project is permanent and you will no longer be able to update your word count, 
-                award yourself badges, or edit your project. If you wish to not work on your a while, 
-                archiving is reversable.</p>
+            <p>Clicking the "Finish" button below will mark your project as completed.</p> 
+            <p>Completing your project is permanent and you will no longer be able to update your word count, 
+                award yourself badges, or edit your project.</p>
+            <p>If you wish to not work on your a while, archiving is reversable.</p>
             <p>If you are completely finished working on your project, click the button below.</p>
             <div class="finish-button-wrapper">
                 <a class="finish-button" href="php-processes/completeProject?projectID=<?=$projectID?>">
