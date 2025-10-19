@@ -108,6 +108,9 @@
     .finish-popup > h1 {
         text-align: center;
     }
+    .finish-popup > p {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
