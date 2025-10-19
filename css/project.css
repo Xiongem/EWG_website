@@ -127,6 +127,7 @@
         align-items: center;
         width: 5em;
         height: 2.5em;
+        text-decoration: none;
         background-color: var(--accent-3);
         color: var(--reverse-text-color);
         border: 2px solid var(--accent-3);
