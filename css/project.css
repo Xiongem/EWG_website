@@ -19,7 +19,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 8em;
+        max-width: 6em;
         height: 3em;
         text-decoration: none;
         background-color: var(--accent-2);
