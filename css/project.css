@@ -114,6 +114,7 @@
     }
     .finish-popup:nth-child(5) {
         text-align: center;
+        color: red;
     }
     .finish-button-wrapper {
         display: flex;
