@@ -37,6 +37,10 @@
         align-items: center;
         text-align: center;
     }
+    .complete-button > a {
+        font-size: 16px;
+        color: var(--reverse-text-color);
+    }
     .archive-button:hover > a {
         color: var(--accent-2);
     }
