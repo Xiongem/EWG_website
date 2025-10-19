@@ -292,7 +292,7 @@ $project = $result->fetch_assoc();
         if ($state == "current") {?>
         <div class="archive-wrapper">
             <a  class="archive-button" id="notArchived" href="php-processes/archiveProject?projectID=<?=$projectID?>">
-                Archive Project
+                <div>Archive Project</div>
             </a>
             <div class="complete-wrapper" onclick="showFinishPopup()">
                 <a>Finish Project</a>
