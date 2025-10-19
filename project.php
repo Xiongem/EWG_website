@@ -294,7 +294,7 @@ $project = $result->fetch_assoc();
             <a  class="archive-button" id="notArchived" href="php-processes/archiveProject?projectID=<?=$projectID?>">
                 <div>Archive Project</div>
             </a>
-            <div class="complete-wrapper" onclick="showFinishPopup()">
+            <div class="complete-button" onclick="showFinishPopup()">
                 <a>Finish Project</a>
             </div>
             <div class="delete-wrapper">
