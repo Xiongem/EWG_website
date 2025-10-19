@@ -69,6 +69,18 @@ function hideUpdateWords() {
   body.style.height = "unset";
   body.style.overflow = "unset";
 }
+function showFinishPopup() {
+  var projectPopup = document.getElementById("finish-popup-wrapper");
+  projectPopup.style.display = "flex";
+  projectPopup.scrollIntoView();
+  setTimeout(hideBackground, 500);
+}
+function hideFinishPopup() {
+  var body = document.getElementById("body");
+  document.getElementById("finish-popup-wrapper").style.display = "none";
+  body.style.height = "unset";
+  body.style.overflow = "unset";
+}
 
 function goBack() {
   history.go(-1);
