@@ -82,7 +82,7 @@
         cursor: pointer;
     }
     .finish-popup-wrapper {
-        display: flex;
+        display: none;
         z-index: 10;
         position: absolute;
         justify-content: center;
@@ -114,7 +114,7 @@
         margin: 0.25em 0;
     }
     .finish-button-wrapper {
-        display: none;
+        display: flex;
         justify-content: center;
         align-items: center;
         margin: 1em 0 0 0;
