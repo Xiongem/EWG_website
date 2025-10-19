@@ -261,7 +261,7 @@ $project = $result->fetch_assoc();
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body id="body">
     <div class="finish-popup-wrapper" id="finish-popup-wrapper">
         <div class="finish-popup">
             <div class="close-wrapper">
