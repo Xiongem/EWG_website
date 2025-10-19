@@ -116,6 +116,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 1em 0;
     }
     /* .finish-button-wrapper > a {
         display: flex;
