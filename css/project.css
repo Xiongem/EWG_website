@@ -111,6 +111,8 @@
     .finish-popup > p {
         font-size: 18px;
         margin: 0.25em 0;
+    }
+    .finish-popup > p:last-child {
         text-align: center;
     }
     .finish-button-wrapper {
