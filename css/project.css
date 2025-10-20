@@ -24,7 +24,6 @@
         text-decoration: none;
         border-radius: 14px;
         font-size: 16px;
-        color: var(--reverse-text-color);
         padding: 0 1em;
         cursor: pointer;
         white-space:pre-wrap;
@@ -32,12 +31,15 @@
     }
     .archive-button {
         background-color: var(--accent-2);
+        color: var(--reverse-text-color);
     }
     .complete-button {
         background-color: var(--accent-3);
+        color: var(--reverse-text-color);
     }
     .delete-button {
         background-color: var(--warning);
+        color: var(--text-color);
     }
     .archive-button > div {
         display: flex;
