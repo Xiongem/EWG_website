@@ -280,6 +280,20 @@ $project = $result->fetch_assoc();
             </div>
         </div>
     </div>
+    <div class="delete-popup-wrapper" id="delete-popup-wrapper">
+        <div class="delete-popup">
+            <div class="close-wrapper">
+                <i class="fa fa-close" onclick="hideFinishPopup()"></i>
+            </div>
+            <h1>Delete Your Project?</h1>
+            <p>Clicking the delete button below will permanently delete this project.</p>
+            <p>You won't be able to work on this project going forward.</p>
+            <p>If you truly wish to yeet this project into the void, click below.</p>
+            <div class="delete-button-wrapper">
+                <a class="delete-project-button" href="php-processes/deleteProject?projectID=<?=$projectID?>">Delete</a>
+            </div>
+        </div>
+    </div>
     <!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
         <?php makeNav() ?>
@@ -297,8 +311,8 @@ $project = $result->fetch_assoc();
             <div class="complete-button" onclick="showFinishPopup()">
                 <a>Finish Project</a>
             </div>
-            <div class="delete-wrapper">
-                <a href="php-processes/deleteProject?projectID=<?=$projectID?>">Delete Project</a>
+            <div class="delete-button" onclick="showDeletePopup()">
+                <a>Delete Project</a>
             </div>
         </div>
         <?php } elseif ($state == "archived"  && $result->num_rows < 5) {?>
