@@ -82,6 +82,19 @@ function hideFinishPopup() {
   body.style.overflow = "unset";
 }
 
+function showDeletePopup() {
+  var deletePopup = document.getElementById("delete-popup-wrapper");
+  deletePopup.style.display = "flex";
+  deletePopup.scrollIntoView();
+  setTimeout(hideBackground, 500);
+}
+function hideDeletePopup() {
+  var body = document.getElementById("body");
+  document.getElementById("delete-popup-wrapper").style.display = "none";
+  body.style.height = "unset";
+  body.style.overflow = "unset";
+}
+
 function goBack() {
   history.go(-1);
 }
