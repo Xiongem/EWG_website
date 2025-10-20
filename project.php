@@ -391,7 +391,7 @@ $project = $result->fetch_assoc();
             <!-- //* Row One -->
                 <div class="auto-row rows">
                     <!-- //* Quarter Quomplete-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="quarter-quomplete-wrapper">
                         <img src="<?php if($badge1) {
                             echo $badge1;
                         }else{
@@ -403,7 +403,7 @@ $project = $result->fetch_assoc();
                         </div>
                     </div>
                     <!-- //* Half Way-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="half-way-wrapper">
                         <img src="<?php if($badge2) {
                             echo $badge2;
                         }else{
@@ -415,7 +415,7 @@ $project = $result->fetch_assoc();
                         </div>
                     </div>
                     <!-- //* All Downhill-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="all-downhill-wrapper">
                         <img src="<?php if($badge3) {
                             echo $badge3;
                         }else{
@@ -427,7 +427,7 @@ $project = $result->fetch_assoc();
                         </div>
                     </div>
                     <!-- //* Cross Finish-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="cross-finish-wrapper">
                         <img src="<?php if($badge4) {
                             echo $badge4;
                         }else{
@@ -438,11 +438,23 @@ $project = $result->fetch_assoc();
                             <p>Reached 100% on your current project!<br>YOU DID IT, YAY!!!</p>
                         </div>
                     </div>
+                    <!-- //* First Daily-->
+                    <div class="badge-wrapper" id="first-daily-wrapper">
+                        <img src="<?php if($badge10) {
+                            echo $badge10;
+                        }else{
+                            echo $default10;
+                        } ?>" id="first-daily" class="badge">
+                        <div class="badgeToPopup" id="first-daily-popup">
+                            <h4>First Daily</h4>
+                            <p>Reached your daily goal for the first time on this project</p>
+                        </div>
+                    </div>
                 </div>
             <!-- //* Row Two -->
                 <div class="auto-row rows">
                     <!-- //* 2 Day Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="streak-two-wrapper">
                         <img src="<?php if($badge5) {
                             echo $badge5;
                         }else{
@@ -454,7 +466,7 @@ $project = $result->fetch_assoc();
                         </div>
                     </div>
                     <!-- //* 3 Day Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="streak-three-wrapper">
                         <img src="<?php if($badge6) {
                             echo $badge6;
                         }else{
@@ -466,7 +478,7 @@ $project = $result->fetch_assoc();
                         </div>
                     </div>
                     <!-- //* 7 Day Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="streak-seven-wrapper">
                         <img src="<?php if($badge7) {
                             echo $badge7;
                         }else{
@@ -478,7 +490,7 @@ $project = $result->fetch_assoc();
                         </div>
                     </div>
                     <!-- //* 14 Day Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="streak-fourteen-wrapper">
                         <img src="<?php if($badge8) {
                             echo $badge8;
                         }else{
@@ -490,7 +502,7 @@ $project = $result->fetch_assoc();
                         </div>
                     </div>
                     <!-- //* 21 Day Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="streak-twentyOne-wrapper">
                         <img src="<?php if($badge9) {
                             echo $badge9;
                         }else{
@@ -502,22 +514,11 @@ $project = $result->fetch_assoc();
                         </div>
                     </div>
                 </div>
+            <?php if ($displayGoalDate !== "0000-00-00") { ?>
             <!-- //* Row Three -->
                 <div class="auto-row rows">
-                    <!-- //* First Daily-->
-                    <div class="badge-wrapper">
-                        <img src="<?php if($badge10) {
-                            echo $badge10;
-                        }else{
-                            echo $default10;
-                        } ?>" id="first-daily" class="badge">
-                        <div class="badgeToPopup" id="first-daily-popup">
-                            <h4>First Daily</h4>
-                            <p>Reached your daily goal for the first time on this project</p>
-                        </div>
-                    </div>
                     <!-- //* Full Streak-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="every-streak-wrapper">
                         <img src="<?php if($badge11) {
                             echo $badge11;
                         }else{
@@ -529,7 +530,7 @@ $project = $result->fetch_assoc();
                         </div>
                     </div>
                     <!-- //* Stayed on Track-->
-                    <div class="badge-wrapper">
+                    <div class="badge-wrapper" id="on-track-wrapper">
                         <img src="<?php if($badge12) {
                             echo $badge12;
                         }else{
@@ -541,6 +542,7 @@ $project = $result->fetch_assoc();
                         </div>
                     </div>
                 </div>
+                <?php } ?>
             </div>
         <!-- //* Toggleable Badges -->
             <div class="toggle-badges">
