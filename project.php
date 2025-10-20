@@ -283,7 +283,7 @@ $project = $result->fetch_assoc();
     <div class="delete-popup-wrapper" id="delete-popup-wrapper">
         <div class="delete-popup">
             <div class="close-wrapper">
-                <i class="fa fa-close" onclick="hideFinishPopup()"></i>
+                <i class="fa fa-close" onclick="hideDeletePopup()"></i>
             </div>
             <h1>Delete Your Project?</h1>
             <p>Clicking the delete button below will permanently delete this project.</p>
