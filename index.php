@@ -227,6 +227,8 @@ if (isset($_SESSION["user_id"])) {
                             $badge11 = "images/badges/every-streak-mono.webp";
                         }
                         //* On track
+                        echo '$dailyStreak'."<br>";
+                        echo $streakMath;
                         if ($dailyStreak == $streakMath) {
                             if ($project["on-track"] !== "unlocked") {
                                 $sql = "UPDATE current_project SET `on-track`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
