@@ -189,6 +189,14 @@
     }
 }
 
+
+/**TABLET PORTRAIT*/
+@media only screen and (min-width: 720px) {
+.finish-popup, .delete-popup {
+    width: 50%;
+}
+}
+
 @media only screen and (min-width: 1000px) {
     #projectUpdate {
         font-size: 26px;
