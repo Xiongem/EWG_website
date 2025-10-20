@@ -37,7 +37,7 @@ $result = $_GET["result"];
             <h1>Contact Us</h1>
             <h3>Let us know what's going on</h3>
             <?php if ($result == "fail") {?>
-                <h4 class="fail">Message failed to send</h4>
+                <p class="fail">Message failed to send</p>
                 <p class="fail">Please check all sections are filled in.</p>
             <?php } ?>
             <form method="post" action="php-processes/send-contact">
