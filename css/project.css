@@ -176,7 +176,7 @@
     }
     .delete-project-button {
         background-color: var(--warning);
-        color: var(--background-colortext-color);
+        color: var(--reverse-text-color);
         border: 2px solid var(--warning);
     }
     .delete-popup > h1 {
