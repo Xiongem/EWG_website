@@ -951,6 +951,18 @@ else {
             <div class="auto-badges">
             <!-- //* Row One -->
                 <div class="auto-row rows">
+                    <!-- //* First Daily-->
+                    <div class="badge-wrapper" id="first-daily-wrapper">
+                        <img src="<?php if($badge10) {
+                            echo $badge10;
+                        }else{
+                            echo $default10;
+                        } ?>" id="first-daily" class="badge">
+                        <div class="badgeToPopup" id="first-daily-popup">
+                            <h4>First Daily</h4>
+                            <p>Reached your daily goal for the first time on this project</p>
+                        </div>
+                    </div>
                     <!-- //* Quarter Quomplete-->
                     <div class="badge-wrapper" id="quarter-quomplete-wrapper">
                         <img src="<?php if($badge1) {
@@ -997,18 +1009,6 @@ else {
                         <div class="badgeToPopup" id="cross-finish-popup">
                             <h4>Crossed the Finish Line!</h4>
                             <p>Reached 100% on your current project!<br>YOU DID IT, YAY!!!</p>
-                        </div>
-                    </div>
-                    <!-- //* First Daily-->
-                    <div class="badge-wrapper" id="first-daily-wrapper">
-                        <img src="<?php if($badge10) {
-                            echo $badge10;
-                        }else{
-                            echo $default10;
-                        } ?>" id="first-daily" class="badge">
-                        <div class="badgeToPopup" id="first-daily-popup">
-                            <h4>First Daily</h4>
-                            <p>Reached your daily goal for the first time on this project</p>
                         </div>
                     </div>
                 </div>
