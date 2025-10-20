@@ -7,6 +7,8 @@
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+
+$result = $_GET["result"];
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +36,10 @@ dbConnect();
         <div class="contact-content">
             <h1>Contact Us</h1>
             <h3>Let us know what's going on</h3>
+            <?php if ($result == "fail") {?>
+                <h4 class="fail">Message failed to send</h4>
+                <p class="fail">Please check all sections are filled in.</p>
+            <?php } ?>
             <form method="post" action="php-processes/send-contact">
                 <div class="content-wrapper">
                     <div class="user-wrapper">

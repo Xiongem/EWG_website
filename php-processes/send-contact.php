@@ -12,6 +12,7 @@ $email = $_POST["email"];
 $username = $_POST["username"];
 $message = $_POST["message"];
 
+if ($email && $username && $message) {
     $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
     $mail -> setFrom("noreply@elsewherewriters.com");
     $mail -> addAddress("admin@elsewherewriters.com");
@@ -31,5 +32,7 @@ $message = $_POST["message"];
     } catch(Exception $e) {
         echo "Message could not be sent. Mailer error: {$mail->ErrorInfo}";
     }
-
 header("Location: /index.php");
+} else {
+    header("Location: /contact.php?result=fail");
+}
