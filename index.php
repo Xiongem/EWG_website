@@ -206,11 +206,16 @@ if (isset($_SESSION["user_id"])) {
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                         }
+                        //* lock every streak badge
+                        $sql = "UPDATE current_project SET `every-streak`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
                         $badge5 = "images/badges/streak-two-mono.webp";
                         $badge6 = "images/badges/streak-three-mono.webp";
                         $badge7 = "images/badges/streak-seven-mono.webp";
                         $badge8 = "images/badges/streak-fourteen-mono.webp";
                         $badge9 = "images/badges/streak-twentyOne-mono.webp";
+                        $badge11 = "images/badges/every-streak-mono.webp";
                     }
                     //* First Daily
                     $badge10 = $project["first-daily"];
