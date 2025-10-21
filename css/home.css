@@ -528,9 +528,9 @@
     .count-update-popup {
         width: 50%;
     }
-    .current-project-container {
+    /* .current-project-container {
         height: 25em;
-    }
+    } */
     #project-img {
         margin: 0 2em 0 0;
     }
