@@ -883,6 +883,9 @@ else {
                     for (const box of boxes) {
                         box.classList.add('inactive');
                     }
+                function refresh(){
+                    location.reload();
+                }
                 function projectSelect(id, display) {
                     //assign values
                     var project = id;
@@ -898,7 +901,7 @@ else {
                         //DATA
                         project: project
                     });
-                    location.reload();
+                    setTimeout(refresh, 500);
                 }
             </script>
             <!-- <div class="button-wrapper">
