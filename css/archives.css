@@ -15,6 +15,7 @@
     }
     .overview-container {
         display: flex;
+        position: relative;
         justify-content: space-evenly;
         width: 25em;
         color: var(--text-color);
@@ -24,6 +25,12 @@
         margin: 1em 0;
         cursor: pointer;
         text-decoration: none;
+    }
+    .complete-img-wrapper {
+        position: absolute;
+        width: 2em;
+        top: 0;
+        right: 0;
     }
     .overview-container img {
         width: 4em;
