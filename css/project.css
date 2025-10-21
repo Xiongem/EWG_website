@@ -109,6 +109,9 @@
     .completed-wrapper > h2 {
         color: var(--accent-3);
     }
+    #completedImg {
+        width: 3em;
+    }
     .current-project-wrapper {
         position: relative;
     }

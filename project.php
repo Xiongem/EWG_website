@@ -324,7 +324,13 @@ $project = $result->fetch_assoc();
         </div>
         <?php } elseif ($state == "completed") {?>
             <div class="completed-wrapper">
+                <div class="complete-img-wrapper">
+                    <img src="images/completed.webp" id="completedImg" alt="completed trophy image">
+                </div>
                 <h2>Completed</h2>
+                <div class="complete-img-wrapper">
+                    <img src="images/completed.webp" id="completedImg" alt="completed trophy image">
+                </div>
             </div>
         <?php }else { ?>
             <div class="warning-wrapper">
