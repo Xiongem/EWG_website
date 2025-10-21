@@ -901,7 +901,7 @@ else {
                         //DATA
                         project: project
                     });
-                    setTimeout(refresh, 500);
+                    setTimeout(refresh, 100);
                 }
             </script>
             <!-- <div class="button-wrapper">
