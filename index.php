@@ -898,9 +898,10 @@ else {
                         //DATA
                         project: project
                     });
+                    location.reload();
                 }
             </script>
-            <div class="button-wrapper">
+            <!-- <div class="button-wrapper">
                 <script>
                     //* reloads the page after selecting a project through ajax
                     function refresh(){
@@ -908,7 +909,7 @@ else {
                     }
                 </script>
                 <button id="save" onclick="refresh()">Save</button>
-            </div>
+            </div> -->
         </div>
     </div>
     <?php } ?>
