@@ -106,6 +106,9 @@
     .warning-wrapper > h2 {
         color: var(--warning);
     }
+    .completed-wrapper > h2 {
+        color: var(--accent-3);
+    }
     .current-project-wrapper {
         position: relative;
     }
