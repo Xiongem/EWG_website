@@ -32,7 +32,7 @@
         top: 0;
         right: 0;
     }
-    .overview-container img {
+    #genreImage {
         width: 4em;
         border-radius: 4px;
         margin: 0.5em 0;
@@ -91,7 +91,7 @@
     .overview-container{
         width: 38em;
     }
-    .overview-container img {
+    #genreImage {
         width: 5em;
     }
     .overview-summary {
@@ -113,7 +113,7 @@
     .overview-container{
         width: 48em;
     }
-    .overview-container img {
+    #genreImage {
         width: 7em;
     }
     .overview-title {
@@ -144,7 +144,7 @@
         justify-self: center;
         width: 38em;
     }
-    .overview-container img {
+    #genreImage {
         width: 8em;
     }
     .main-wrapper h1 {
