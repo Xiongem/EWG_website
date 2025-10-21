@@ -81,7 +81,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             <div class="complete-img-wrapper">
                 <img src="images/completed.webp" id="completedImg" alt="completed trophy image">
             </div>
-            <img src="<?= $genre_picture ?>" alt="genre image">
+            <img src="<?= $genre_picture ?>" id="genreImage" alt="genre image">
             <div class="overview-info">
                     <h2 class="overview-title"><?= $title ?> <i class="fa fa-star" id="<?=$projectID?>" alt="star icon"></i></h2>
                     <p class="overview-summary"><?= $info ?></p>
