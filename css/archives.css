@@ -28,9 +28,12 @@
     }
     .complete-img-wrapper {
         position: absolute;
-        width: 1em;
+        width: fit-content;
         top: 0;
         right: 0;
+    }
+    #completedImg {
+        width: 2em;
     }
     #genreImage {
         width: 4em;
