@@ -85,7 +85,12 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             <?php } ?>
             <img src="<?= $genre_picture ?>" id="genreImage" alt="genre image">
             <div class="overview-info">
-                    <h2 class="overview-title"><?= $title ?> <i class="fa fa-star" id="<?=$projectID?>" alt="star icon"></i></h2>
+                    <h2 class="overview-title">
+                        <?php if ($state == "current") {?>
+                        <i class="fa fa-star" id="<?=$projectID?>" alt="star icon"></i>
+                        <?php } ?>
+                        <?= $title ?>
+                    </h2>
                     <p class="overview-summary"><?= $info ?></p>
                     <div class="overview-data">
                         <div class="overview-wordCount">
@@ -99,14 +104,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     </div>
             </div>
         </a>
-        <script>
-            var state = "<?= $state ?>";
-            var project = <?=$projectID?>;
-            var icon = document.getElementById(<?=$projectID?>);
-            if (state !== "current") {
-                icon.classList.add("inactive");
-            }
-        </script>
         <?php }} ?>
     </div>
     <!-- //* FOOTER-->
