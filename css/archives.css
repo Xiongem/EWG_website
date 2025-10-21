@@ -28,14 +28,11 @@
     }
     .complete-img-wrapper {
         position: absolute;
-        width: fit-content;
+        width: 1em;
         top: 0;
         right: 0;
     }
-    #completedImg {
-        width: 1em;
-    }
-    #genreImage {
+    .overview-container img {
         width: 4em;
         border-radius: 4px;
         margin: 0.5em 0;
