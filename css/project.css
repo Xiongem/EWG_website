@@ -96,7 +96,7 @@
     .reverse-archive-button:hover > a {
         color: var(--accent-2);
     }
-    .warning-wrapper {
+    .warning-wrapper, .completed-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;

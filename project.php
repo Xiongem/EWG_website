@@ -322,6 +322,10 @@ $project = $result->fetch_assoc();
                 <a href="php-processes/unarchiveProject?projectID=<?=$projectID?>">Revive Project</a>
             </div>
         </div>
+        <?php } elseif ($state == "completed") {?>
+            <div class="completed-wrapper">
+                <h2>Completed</h2>
+            </div>
         <?php }else { ?>
             <div class="warning-wrapper">
                 <h2>Archived</h2>
