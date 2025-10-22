@@ -55,6 +55,7 @@ $project = $result->fetch_assoc();
     
     //? Badges
     //* Quarter Quomplete
+    echo $project["quarter-quomplete"];
     $badge1 == $project["quarter-quomplete"];
     if ($badge1 == "unlocked") {
         $badge1 = "images/badges/quarter-quomplete-color.webp";
