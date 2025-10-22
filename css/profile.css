@@ -24,7 +24,6 @@
     }
     #profileOverlay {
         position: absolute;
-        /* z-index: -2; */
         width: 7em;
     }
     #profilePicture {
