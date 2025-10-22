@@ -286,7 +286,10 @@ $default10 = "images/badges/tears-alltime-mono.webp";
             <a id="profileUpdate" href="updateProfile.php"><i class="fa fa-gear"></i></a>
         <?php } ?>
         <div class="user-container">
-            <img src="<?=$pfp_set?>" alt="profile image" id="profilePicture">
+            <div class="pfp-wrapper">
+                <img id="profileOverlay" class="pfp-overlay profile-pfp" src="images/hydra-slayer-overlay.webp">
+                <img src="<?=$pfp_set?>" alt="profile image" id="profilePicture">
+            </div>
             <h1 id="username"><?=$username?></h1>
         </div>
         <div class="profile-container">

@@ -19,6 +19,13 @@
         align-items: end;
         width: 100%;
     }
+    .pfp-wrapper {
+        position: relative;
+    }
+    #profileOverlay {
+        position: absolute;
+        z-index: 2;
+    }
     #profilePicture {
         width: 7em;
     }
