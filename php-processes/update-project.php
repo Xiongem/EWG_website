@@ -14,6 +14,12 @@ dbConnect();
 
 $userID = htmlspecialchars($_SESSION["user_id"]);
 $projectID = $_POST["projectID"];
+$goal = $_POST["goalNumber"];
+
+$newGoal = str_replace( ',', '', $goal );
+if( is_numeric( $newGoal ) ) {
+    $goal = $newGoal;
+}
 
 // prepare and bind
 $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET genre=?, title=?, info=?, goal=?, goal_date=?, daily_goal=? 
@@ -22,7 +28,7 @@ $stmt->bind_param("sssisi",
                         $_POST["genre"],
                         $_POST["title"],
                         $_POST["summary"],
-                        $_POST["goalNumber"],
+                        $goal,
                         $_POST["endDate"],
                         $_POST["dailyGoal"]);
 //echo'params bound'.'<br>';
