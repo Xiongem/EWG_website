@@ -860,12 +860,6 @@
                 //DATA
                 id: id,
                 badge: badge
-            }).done(function() {
-                $("#overlay").removeClass("hide");
-                $("#overlay").addClass("show");
-                $("#pfp-overlay").removeClass("hide");
-                $("#pfp-overlay").addClass("show");
-                alert("Successfully updated! If the overlay does not change, please refresh the page.");
             });
         } 
         else {
@@ -878,12 +872,6 @@
                 //DATA
                 id: id,
                 badge: badge
-            }).done(function() {
-                $("#overlay").removeClass("show");
-                $("#overlay").addClass("hide");
-                $("#pfp-overlay").removeClass("show");
-                $("#pfp-overlay").addClass("hide");
-                alert("Successfully updated! If the overlay does not change, please refresh the page.");
             });
         }
     }
