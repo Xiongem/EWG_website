@@ -287,7 +287,9 @@ $default10 = "images/badges/tears-alltime-mono.webp";
         <?php } ?>
         <div class="user-container">
             <div class="pfp-wrapper">
+                <?php if ($badge6 == "unlocked") {?>
                 <img id="profileOverlay" class="pfp-overlay profile-pfp" src="images/hydra-slayer-overlay.webp">
+                <?php } ?>
                 <img src="<?=$pfp_set?>" alt="profile image" id="profilePicture">
             </div>
             <h1 id="username"><?=$username?></h1>
@@ -438,7 +440,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                         }else{
                             echo $default6;
                         } ?>" id="hydra-slayer" class="badge pulse"
-                        onclick="checkToggle('hydra-slayer')">
+                        onclick="checkToggle('hydra-slayer') setTimeout(refresh, 200);">
                         <div class="badgeToPopup" id="hydra-slayer-popup">
                             <h4>Hydra Slayer</h4>
                             <p>Slaying the hydra is no easy feat.<br>
@@ -494,6 +496,10 @@ $default10 = "images/badges/tears-alltime-mono.webp";
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
     <script>
+    //* refreshes page
+    function refresh(){
+                location.reload();
+            }
     //* Check if badge toggle is checked
     var badgeToggle = document.getElementById("badgeEdit");
     function clickCheckbox() {
