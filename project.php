@@ -55,13 +55,13 @@ $project = $result->fetch_assoc();
     
     //? Badges
     //* Quarter Quomplete
-    echo $project["quarter-quomplete"];
     $badge1 == $project["quarter-quomplete"];
     if ($badge1 == "unlocked") {
         $badge1 = "images/badges/quarter-quomplete-color.webp";
     } elseif ($badge1 == "locked") {
         $badge1 = "images/badges/quarter-quomplete-mono.webp";
     }
+    echo $badge1;
     //* Half Way
     $badge2 == $project["half-way"];
     if ($badge2 == "unlocked") {
