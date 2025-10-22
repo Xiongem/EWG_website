@@ -142,11 +142,11 @@ $badge3 = $user["complete-ten-project"];
         }
     }
 //* Streak Fiend
-echo $user["streak-fiend"];
 $sql = "SELECT `every-streak` FROM current_project WHERE users_id='$profileID'";
         $result = $_SESSION["conn"]->query($sql);
         $everyStreak = $result->fetch_assoc();
 if (in_array("unlocked", $everyStreak)) {
+    echo "in array";
     $badge4 = $user["streak-fiend"];
     if ($badge4 == "locked") {
         $sql = "UPDATE users SET `streak-fiend`= 'unlocked' WHERE id=$profileID";
