@@ -287,7 +287,8 @@ $default10 = "images/badges/tears-alltime-mono.webp";
         <?php } ?>
         <div class="user-container">
             <div class="pfp-wrapper">
-                <?php if ($badge6 == "unlocked") {?>
+                <?php echo $badge6;
+                if ($badge6 == "unlocked") {?>
                 <img id="profileOverlay" class="pfp-overlay profile-pfp" src="images/hydra-slayer-overlay.webp">
                 <?php } ?>
                 <img src="<?=$pfp_set?>" alt="profile image" id="profilePicture">
