@@ -440,7 +440,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                         }else{
                             echo $default6;
                         } ?>" id="hydra-slayer" class="badge pulse"
-                        onclick="checkToggle('hydra-slayer') setTimeout(refresh, 200);">
+                        onclick="checkToggle('hydra-slayer'); setTimeout(refresh, 200);">
                         <div class="badgeToPopup" id="hydra-slayer-popup">
                             <h4>Hydra Slayer</h4>
                             <p>Slaying the hydra is no easy feat.<br>
