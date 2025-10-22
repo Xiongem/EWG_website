@@ -64,7 +64,9 @@ if ($result->num_rows > 0) {
 /* 
 TODO: Create logic to automate badges
 */ 
-//* Badges
+//? Badges
+//! Auto Badges
+//* Completed One Project
 $badge1 = $user["complete-one-project"];
     if ($userID == $profileID) {
         if ($completed >= 1) {
@@ -89,6 +91,7 @@ $badge1 = $user["complete-one-project"];
             $badge1 = "images/badges/complete-one-project-mono.webp";
         }
     }
+//* Completed 5 Projects
 $badge2 = $user["complete-five-project"];
     if ($userID == $profileID) {
         if ($completed >= 5) {
@@ -113,6 +116,7 @@ $badge2 = $user["complete-five-project"];
             $badge2 = "images/badges/complete-five-project-mono.webp";
         }
     }
+//* Completed 10 Projects
 $badge3 = $user["complete-ten-project"];
     if ($userID == $profileID) {
         if ($completed >= 10) {
@@ -137,31 +141,21 @@ $badge3 = $user["complete-ten-project"];
             $badge3 = "images/badges/complete-ten-project-mono.webp";
         }
     }
+//* Streak Fiend
 $badge4 = $user["streak-fiend"];
     if ($badge4 == "unlocked") {
         $badge4 = "images/badges/streak-fiend-color.webp";
     } elseif ($badge4 == "locked") {
         $badge4 = "images/badges/streak-fiend-mono.webp";
     }
+//* Vet Streaker
 $badge5 = $user["vet-streaker"];
     if ($badge5 == "unlocked") {
         $badge5 = "images/badges/vet-streaker-color.webp";
     } elseif ($badge5 == "locked") {
         $badge5 = "images/badges/vet-streaker-mono.webp";
     }
-$badge6 = $user["hydra-slayer"];
-    if ($badge6 == "unlocked") {
-        $badge6 = "images/badges/hydra-slayer-color.webp";
-    } elseif ($badge6 == "locked") {
-        $badge6 = "images/badges/hydra-slayer-mono.webp";
-    }
-$badge7 = $user["vet-guild"];
-    if ($badge7 == "unlocked") {
-        $badge7 = "images/badges/vet-guild-color.webp";
-    } elseif ($badge7 == "locked") {
-        $badge7 = "images/badges/vet-guild-mono.webp";
-    }
-
+//* Start First Project
 $sql = "SELECT id FROM current_project WHERE users_id='$profileID'";
         $results = $_SESSION["conn"]->query($sql);
 if ($results->num_rows >= 1) {
@@ -175,18 +169,48 @@ if ($results->num_rows >= 1) {
 } else {
     $badge8 = "images/badges/start-first-project-mono.webp";
 }
+//* Alltime Tears
+$sql = "SELECT `tears-wept` FROM current_project WHERE users_id='$profileID'";
+        $result = $_SESSION["conn"]->query($sql);
+        $tears = $result->fetch_assoc()
+if (in_array("unlocked", $tears)) {
+    $badge10 = $user["tears-alltime"];
+    if ($badge10 == "locked") {
+        $sql = "UPDATE users SET `tears-alltime`= 'unlocked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+    }
+    $badge10 = "images/badges/tears-alltime-color.webp";
+} else {
+    if ($badge10 == "unlocked") {
+        $sql = "UPDATE users SET `tears-alltime`= 'locked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+    }
+    $badge10 = "images/badges/tears-alltime-mono.webp";
+}
 
+//! Toggleable badges
+//* Hydra Slayer
+$badge6 = $user["hydra-slayer"];
+    if ($badge6 == "unlocked") {
+        $badge6 = "images/badges/hydra-slayer-color.webp";
+    } elseif ($badge6 == "locked") {
+        $badge6 = "images/badges/hydra-slayer-mono.webp";
+    }
+//* Vet Guild
+$badge7 = $user["vet-guild"];
+    if ($badge7 == "unlocked") {
+        $badge7 = "images/badges/vet-guild-color.webp";
+    } elseif ($badge7 == "locked") {
+        $badge7 = "images/badges/vet-guild-mono.webp";
+    }
+//* Spicy Spicy
 $badge9 = $user["spicy-spicy"];
     if ($badge9 == "unlocked") {
         $badge9 = "images/badges/spicy-spicy-color.webp";
     } elseif ($badge9 == "locked") {
         $badge9 = "images/badges/spicy-spicy-mono.webp";
-    }
-$badge10 = $user["tears-alltime"];
-    if ($badge10 == "unlocked") {
-        $badge10 = "images/badges/tears-alltime-color.webp";
-    } elseif ($badge10 == "locked") {
-        $badge10 = "images/badges/tears-alltime-mono.webp";
     }
 
 if (isset($project["genre"])){
