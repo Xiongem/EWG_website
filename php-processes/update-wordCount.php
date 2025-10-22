@@ -79,11 +79,6 @@ if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
         $newDailyStreak = $dailyStreak;
     }
 
-    echo "new count is "."$newCount"."<br>";
-    echo "update date is ". "$update_date"."<br>";
-    echo "streak is "."$streak"."<br>";
-    echo "new daily streak is ".$newDailyStreak;
-
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?, daily_goal_streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
         $stmt->bind_param("isii",
@@ -99,7 +94,7 @@ if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
             die("an unexpected error occured");
         }
     } elseif ($choice == "add") {
-        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
+        $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?, daily_goal_streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
         $stmt->bind_param("isii",
                                 $newCount,
                                 $update_date,
