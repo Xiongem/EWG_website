@@ -53,162 +53,176 @@ $project = $result->fetch_assoc();
         $percentage = $progress;
     }
     
-    //* Badges
-    if ($percentage >= 25) {
+    //? Badges
+    //* Quarter Quomplete
+    $badge1 == $project["quarter-quomplete"];
+    if ($badge1 == "unlocked") {
         $badge1 = "images/badges/quarter-quomplete-color.webp";
-    } else {
+    } elseif ($badge1 == "locked") {
         $badge1 = "images/badges/quarter-quomplete-mono.webp";
     }
-
-    if ($percentage >= 50) {
+    //* Half Way
+    $badge2 == $project["half-way"];
+    if ($badge2 == "unlocked") {
         $badge2 = "images/badges/half-way-color.webp";
-    } else {
+    } elseif ($badge2 == "locked") {
         $badge2 = "images/badges/half-way-mono.webp";
     }
-
-    if ($percentage >= 75) {
+    //* All Downhill
+    $badge3 == $project["all-downhill"];
+    if ($badge3 == "unlocked") {
         $badge3 = "images/badges/all-downhill-color.webp";
-    } else {
+    } elseif ($badge3 == "locked") {
         $badge3 = "images/badges/all-downhill-mono.webp";
     }
-
-    if ($percentage >= 100) {
+    //* Cross Finish
+    $badge4 == $project["cross-finish"];
+    if ($badge4 == "unlocked") {
         $badge4 = "images/badges/cross-finish-color.webp";
-    } else {
+    } elseif ($badge4 == "locked") {
         $badge4 = "images/badges/cross-finish-mono.webp";
     }
-    $nows = time();
-    $your_dates = strtotime($update_date);
-    $datediffer = $nows - $your_dates;
-    $intervals = round($datediffer / (60 * 60 * 24));
-    if ($intervals <= 1) {
-        # code...
-        if ($streak >= 2) {
-            $badge5 = "images/badges/streak-two-color.webp";
-        } else {
-            $badge5 = "images/badges/streak-two-mono.webp";
-        }
-
-        if ($streak >= 3) {
-            $badge6 = "images/badges/streak-three-color.webp";
-        } else {
-            $badge6 = "images/badges/streak-three-mono.webp";
-        }
-
-        if ($streak >= 7) {
-            $badge7 = "images/badges/streak-seven-color.webp";
-        } else {
-            $badge7 = "images/badges/streak-seven-mono.webp";
-        }
-
-        if ($streak >= 14) {
-            $badge8 = "images/badges/streak-fourteen-color.webp";
-        } else {
-            $badge8 = "images/badges/streak-fourteen-mono.webp";
-        }
-
-        if ($streak >= "21") {
-            $badge9 = "images/badges/streak-twentyOne-color.webp";
-        } else {
-            $badge9 = "images/badges/streak-twentyOne-mono.webp";
-        }
-    }else {
+    //* Streak 2
+    $badge5 == $project["streak-two"];
+    if ($badge5 == "unlocked") {
+        $badge5 = "images/badges/streak-two-color.webp";
+    } elseif ($badge5 == "locked") {
         $badge5 = "images/badges/streak-two-mono.webp";
+    }
+    //* Streak 3
+    $badge6 == $project["streak-three"];
+    if ($badge6 == "unlocked") {
+        $badge6 = "images/badges/streak-three-color.webp";
+    } elseif ($badge6 == "locked") {
         $badge6 = "images/badges/streak-three-mono.webp";
+    }
+    //* Streak 7
+    $badge7 == $project["streak-seven"];
+    if ($badge7 == "unlocked") {
+        $badge7 = "images/badges/streak-seven-color.webp";
+    } elseif ($badge7 == "locked") {
         $badge7 = "images/badges/streak-seven-mono.webp";
+    }
+    //* Streak 14
+    $badge8 == $project["streak-fourteen"];
+    if ($badge8 == "unlocked") {
+        $badge8 = "images/badges/streak-fourteen-color.webp";
+    } elseif ($badge8 == "locked") {
         $badge8 = "images/badges/streak-fourteen-mono.webp";
+    }
+    //* Streak 21
+    $badge9 == $project["streak-twentyOne"];
+    if ($badge9 == "unlocked") {
+        $badge9 = "images/badges/streak-twentyOne-color.webp";
+    } elseif ($badge9 == "locked") {
         $badge9 = "images/badges/streak-twentyOne-mono.webp";
     }
+    //* First Daily
     $badge10 = $project["first-daily"];
         if ($badge10 == "unlocked") {
             $badge10 = "images/badges/first-daily-color.webp";
         } elseif ($badge10 == "locked") {
             $badge10 = "images/badges/first-daily-mono.webp";
         }
+    //* Every Streak
     $badge11 = $project["every-streak"];
         if ($badge11 == "unlocked") {
             $badge11 = "images/badges/every-streak-color.webp";
         } elseif ($badge11 == "locked") {
             $badge11 = "images/badges/every-streak-mono.webp";
         }
+    //* On Track
     $badge12 = $project["on-track"];
         if ($badge12 == "unlocked") {
             $badge12 = "images/badges/on-track-color.webp";
         } elseif ($badge12 == "locked") {
             $badge12 = "images/badges/on-track-mono.webp";
         }
+    //* Outline
     $badge13 = $project["outline"];
         if ($badge13 == "unlocked") {
             $badge13 = "images/badges/outline-color-v2.webp";
         } elseif ($badge13 == "locked") {
             $badge13 = "images/badges/outline-mono-v2.webp";
         }
+    //* Journey
     $badge14 = $project["journey"];
         if ($badge14 == "unlocked") {
             $badge14 = "images/badges/journey-color.webp";
         } elseif ($badge14 == "locked") {
             $badge14 = "images/badges/journey-mono.webp";
         }
+    //* Dual Wielder
     $badge15 = $project["dual-wielder"];
         if ($badge15 == "unlocked") {
             $badge15 = "images/badges/dual-wielder-color.webp";
         } elseif ($badge15 == "locked") {
             $badge15 = "images/badges/dual-wielder-mono.webp";
         }
+    //* Starting Fresh
     $badge16 = $project["starting-fresh"];
         if ($badge16 == "unlocked") {
             $badge16 = "images/badges/starting-fresh-color.webp";
         } elseif ($badge16 == "locked") {
             $badge16 = "images/badges/starting-fresh-mono.webp";
         }
+    //* Ever Persist
     $badge17 = $project["ever-persist"];
         if ($badge17 == "unlocked") {
             $badge17 = "images/badges/ever-persist-color.webp";
         } elseif ($badge17 == "locked") {
             $badge17 = "images/badges/ever-persist-mono.webp";
         }
+    //* Back it up
     $badge18 = $project["back-it-up"];
         if ($badge18 == "unlocked") {
             $badge18 = "images/badges/back-it-up-color.webp";
         } elseif ($badge18 == "locked") {
             $badge18 = "images/badges/back-it-up-mono.webp";
         }
+    //* Gathering
     $badge19 = $project["gathering"];
         if ($badge19 == "unlocked") {
             $badge19 = "images/badges/gathering-color.webp";
         } elseif ($badge19 == "locked") {
             $badge19 = "images/badges/gathering-mono.webp";
         }
+    //* Hear ye
     $badge20 = $project["hear-ye"];
         if ($badge20 == "unlocked") {
             $badge20 = "images/badges/hear-ye-color.webp";
         } elseif ($badge20 == "locked") {
             $badge20 = "images/badges/hear-ye-mono.webp";
         }
+    //* Breakthrough
     $badge21 = $project["breakthrough"];
         if ($badge21 == "unlocked") {
             $badge21 = "images/badges/breakthrough-color.webp";
         } elseif ($badge21 == "locked") {
             $badge21 = "images/badges/breakthrough-mono.webp";
         }
+    //* Touch Grass
     $badge22 = $project["touch-grass"];
         if ($badge22 == "unlocked") {
             $badge22 = "images/badges/touch-grass-color.webp";
         } elseif ($badge22 == "locked") {
             $badge22 = "images/badges/touch-grass-mono.webp";
         }
+    //* Business
     $badge23 = $project["business"];
         if ($badge23 == "unlocked") {
             $badge23 = "images/badges/business-color.webp";
         } elseif ($badge23 == "locked") {
             $badge23 = "images/badges/business-mono.webp";
         }
+    //* Tears Wept
     $badge24 = $project["tears-wept"];
         if ($badge24 == "unlocked") {
             $badge24 = "images/badges/tears-wept-color.webp";
         } elseif ($badge24 == "locked") {
             $badge24 = "images/badges/tears-wept-mono.webp";
         }
+    //* Finish Him
     $badge25 = $project["finish-him"];
         if ($badge25 == "unlocked") {
             $badge25 = "images/badges/finish-him-color.webp";
