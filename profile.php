@@ -142,6 +142,7 @@ $badge3 = $user["complete-ten-project"];
         }
     }
 //* Streak Fiend
+echo $user["streak-fiend"];
 $sql = "SELECT `every-streak` FROM current_project WHERE users_id='$profileID'";
         $result = $_SESSION["conn"]->query($sql);
         $everyStreak = $result->fetch_assoc();
