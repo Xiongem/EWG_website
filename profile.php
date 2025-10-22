@@ -162,7 +162,7 @@ if (in_array("unlocked", $everyStreak)) {
     $badge4 = "images/badges/streak-fiend-mono.webp";
 }
 //* Vet Streaker
-$sql = "SELECT `id` FROM current_project WHERE users_id='$profileID' AND every-streak='unlocked'";
+$sql = "SELECT id FROM current_project WHERE users_id='$profileID' AND `every-streak`='unlocked'";
     $result = $_SESSION["conn"]->query($sql);
     if ($result->num_rows >= 2) {
         $badge5 = $user["vet-streaker"];
