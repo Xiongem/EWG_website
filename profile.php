@@ -142,18 +142,15 @@ $badge3 = $user["complete-ten-project"];
         }
     }
 //* Streak Fiend
-$sql = "SELECT `every-streak` FROM current_project WHERE users_id='$profileID'";
-        $result = $_SESSION["conn"]->query($sql);
-        $everyStreak = $result->fetch_assoc();
-        print_r($result);
-if (in_array("unlocked", $everyStreak)) {
-    // echo "in array";
+$sql = "SELECT id FROM current_project WHERE users_id='$profileID' AND `every-streak`='unlocked'";
+    $result = $_SESSION["conn"]->query($sql);
     $badge4 = $user["streak-fiend"];
-    if ($badge4 == "locked") {
-        $sql = "UPDATE users SET `streak-fiend`= 'unlocked' WHERE id=$profileID";
-            $stmt = $_SESSION["conn"]->prepare($sql);
-            $stmt->execute();
-    }
+    if ($result->num_rows >= 1) {
+        if ($badge4 == "locked") {
+            $sql = "UPDATE users SET `streak-fiend`= 'unlocked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+        }
     $badge4 = "images/badges/streak-fiend-color.webp";
 } else {
     // echo "not in array";
@@ -167,8 +164,8 @@ if (in_array("unlocked", $everyStreak)) {
 //* Vet Streaker
 $sql = "SELECT id FROM current_project WHERE users_id='$profileID' AND `every-streak`='unlocked'";
     $result = $_SESSION["conn"]->query($sql);
+    $badge5 = $user["vet-streaker"];
     if ($result->num_rows >= 2) {
-        $badge5 = $user["vet-streaker"];
         if ($badge5 == "locked") {
             $sql = "UPDATE users SET `vet-streaker`= 'unlocked' WHERE id=$profileID";
             $stmt = $_SESSION["conn"]->prepare($sql);
