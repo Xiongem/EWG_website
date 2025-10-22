@@ -24,11 +24,10 @@
     }
     #profileOverlay {
         position: absolute;
-        z-index: -2;
+        /* z-index: -2; */
         width: 7em;
     }
     #profilePicture {
-        position: absolute;
         width: 7em;
         z-index: -3;
     }
