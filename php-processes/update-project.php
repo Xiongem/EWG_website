@@ -15,10 +15,15 @@ dbConnect();
 $userID = htmlspecialchars($_SESSION["user_id"]);
 $projectID = $_POST["projectID"];
 $goal = $_POST["goalNumber"];
+$dailyGoal = $_POST["dailyGoal"];
 
 $newGoal = str_replace( ',', '', $goal );
 if( is_numeric( $newGoal ) ) {
     $goal = $newGoal;
+}
+$newDailyGoal = str_replace( ',', '', $dailyGoal );
+if( is_numeric( $newDailyGoal ) ) {
+    $dailyGoal = $newDailyGoal;
 }
 
 // prepare and bind
@@ -30,7 +35,7 @@ $stmt->bind_param("sssisi",
                         $_POST["summary"],
                         $goal,
                         $_POST["endDate"],
-                        $_POST["dailyGoal"]);
+                        $dailyGoal);
 //echo'params bound'.'<br>';
 if ($stmt -> execute()) {
         header("Location: /project.php?projectID=$projectID");
