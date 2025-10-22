@@ -14,7 +14,7 @@ $projectID = $_GET["projectID"];
 $sql = "SELECT * FROM current_project WHERE id='$projectID'";
 $result = $_SESSION["conn"]->query($sql);
 $project = $result->fetch_assoc();
-    // $projectID = $project["id"];
+    $title = $project["title"];
     $genre = $project["genre"];
     $projectCreatorID = $project["users_id"];
     $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
