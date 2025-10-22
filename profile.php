@@ -142,12 +142,25 @@ $badge3 = $user["complete-ten-project"];
         }
     }
 //* Streak Fiend
-$badge4 = $user["streak-fiend"];
-    if ($badge4 == "unlocked") {
-        $badge4 = "images/badges/streak-fiend-color.webp";
-    } elseif ($badge4 == "locked") {
-        $badge4 = "images/badges/streak-fiend-mono.webp";
+$sql = "SELECT `every-streak` FROM current_project WHERE users_id='$profileID'";
+        $result = $_SESSION["conn"]->query($sql);
+        $everyStreak = $result->fetch_assoc();
+if (in_array("unlocked", $everyStreak)) {
+    $badge4 = $user["streak-fiend"];
+    if ($badge4 == "locked") {
+        $sql = "UPDATE users SET `streak-fiend`= 'unlocked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
     }
+    $badge4 = "images/badges/streak-fiend-color.webp";
+} else {
+    if ($badge4 == "unlocked") {
+        $sql = "UPDATE users SET `streak-fiend`= 'locked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+    }
+    $badge4 = "images/badges/streak-fiend-mono.webp";
+}
 //* Vet Streaker
 $badge5 = $user["vet-streaker"];
     if ($badge5 == "unlocked") {
