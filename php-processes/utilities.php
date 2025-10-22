@@ -90,8 +90,11 @@ function makeNav() {
                 </div>
                 <div class="user" id="user">
                     <a href="profile.php?name=$username">
-                        <img id="pfp-overlay" class="pfp-overlay" src="images/hydra-slayer-overlay.webp">
-                        <img id="pfp" src="$pfp_set" alt="user profile picture"></a>
+                        <div class="pfp-wrapper">
+                            <img id="pfp-overlay" class="pfp-overlay" src="images/hydra-slayer-overlay.webp">
+                            <img id="pfp" src="$pfp_set" alt="user profile picture">
+                        </div>
+                    </a>
                 </div>
             </div>
         </nav>
