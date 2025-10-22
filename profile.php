@@ -23,7 +23,7 @@ $user = $result->fetch_assoc();
     $fav2 = $user["fav-2"];
     $fav3 = $user["fav-3"];
     $pfp = $user["pfp"];
-    $completed = $user["`projects_completed`"];
+    $completed = $user["projects_completed"];
 
     //* Setting pfp
         if ($pfp) {

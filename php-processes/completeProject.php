@@ -8,12 +8,23 @@ $projectID = $_GET["projectID"];
 $userID = $_SESSION["user_id"];
 $completed = "completed";
 
-$stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_state=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
-$stmt->bind_param("s",
-                        $completed);
-    echo "stmt prepared and bound!".'<br>';
+$sql = "SELECT * FROM users WHERE id=$userID";
+$result = $_SESSION["conn"]->query($sql);
+$user = $result->fetch_assoc();
+    $numberCompleted = $user["projects_completed"];
 
-if ($stmt -> execute()) {
+    //* increase the number of finished projects for the user when they complete a project by one
+    $newNumber = $numberCompleted + 1;
+
+
+$stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_state=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
+$stmt2 = $_SESSION["conn"] -> prepare("UPDATE users SET projects_completed=? WHERE id=$userID");
+$stmt1->bind_param("s",
+                        $completed);
+$stmt2->bind_param("s",
+                        $newNumber);
+
+if ($stmt1 -> execute() && $stmt2 -> execute()) {
     header("Location: /project.php?projectID=$projectID");
     exit;
 } else {
