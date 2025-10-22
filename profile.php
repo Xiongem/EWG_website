@@ -347,7 +347,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                         } ?>" id="vet-streaker" class="badge">
                         <div class="badgeToPopup" id="vet-streaker-popup">
                             <h4>Veteran Streaker</h4>
-                            <p>Completed multiple projects with perfect streaks!</p>
+                            <p>Completed <em>multiple</em> projects with perfect streaks!</p>
                         </div>
                     </div>
                     <!--* Tears-->
