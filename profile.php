@@ -155,6 +155,7 @@ if (in_array("unlocked", $everyStreak)) {
     }
     $badge4 = "images/badges/streak-fiend-color.webp";
 } else {
+    echo "not in array";
     if ($badge4 == "unlocked") {
         $sql = "UPDATE users SET `streak-fiend`= 'locked' WHERE id=$profileID";
             $stmt = $_SESSION["conn"]->prepare($sql);
