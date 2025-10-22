@@ -32,11 +32,6 @@ $sql = "SELECT `current_count`, `daily_goal`, `daily_goal_streak`, `first-daily`
 
     $newCount = $currentCount + $updateCount;
 
-    echo "new count is "."$newCount"."<br>";
-    echo "update date is ". "$update_date"."<br>";
-    echo "streak is "."$streak"."<br>";
-    echo "new daily streak is ".$newDailyStreak;
-
 //* if user has reached their daily goal for the first time
 if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
     $firstDaily = "unlocked";
@@ -83,6 +78,11 @@ if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
     } else {
         $newDailyStreak = $dailyStreak;
     }
+
+    echo "new count is "."$newCount"."<br>";
+    echo "update date is ". "$update_date"."<br>";
+    echo "streak is "."$streak"."<br>";
+    echo "new daily streak is ".$newDailyStreak;
 
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?, daily_goal_streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
