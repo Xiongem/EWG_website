@@ -255,6 +255,8 @@ $project = $result->fetch_assoc();
         $default23 = "images/badges/business-mono.webp";
         $default24 = "images/badges/tears-wept-mono.webp";
         $default25 = "images/badges/cross-finish-mono.webp";
+
+        echo $badge1;
 ?>
 
 <!DOCTYPE html>
