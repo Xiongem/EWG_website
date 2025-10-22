@@ -28,7 +28,6 @@
     }
     #profilePicture {
         width: 7em;
-        z-index: -3;
     }
     #username {
         font-size: 44px;
@@ -332,6 +331,9 @@
 
 /**TABLET PORTRAIT*/
 @media only screen and (min-width: 720px) {
+    #profileOverlay {
+        width: 9em;
+    }
     #profilePicture {
         width: 9em;
     }
@@ -398,6 +400,9 @@
     }
     #profileUpdate:hover > i {
         color: var(--accent-3);
+    }
+    #profileOverlay {
+        width: 12em;
     }
     #profilePicture {
         width: 12em;
