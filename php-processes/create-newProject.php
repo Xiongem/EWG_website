@@ -38,6 +38,10 @@ $newGoal = str_replace( ',', '', $goal );
 if( is_numeric( $newGoal ) ) {
     $goal = $newGoal;
 }
+$newDailyGoal = str_replace( ',', '', $dailyGoal );
+if( is_numeric( $newDailyGoal ) ) {
+    $dailyGoal = $newDailyGoal;
+}
 
 $stmt = $_SESSION["conn"] -> prepare("INSERT INTO current_project 
                         (username, genre, title, info, current_count, display, goal, goal_date, daily_goal, current_state, users_id) 
@@ -53,7 +57,7 @@ $stmt = $_SESSION["conn"] -> prepare("INSERT INTO current_project
                         $display,
                         $goal,
                         $_POST["endDate"],
-                        $_POST["dailyGoal"],
+                        $dailyGoal,
                         $current_state,
                         $_SESSION["user_id"]);
         //echo "params bound"."<br>";
