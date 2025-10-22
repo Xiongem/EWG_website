@@ -269,7 +269,7 @@ a {
     }
     .user img{
         width: 3em;
-        z-index: 2;
+        /* z-index: 2; */
         height: fit-content;
         cursor: pointer;
     }
@@ -451,7 +451,7 @@ a {
     #pfp-overlay {
         position: absolute;
         z-index: 1;
-        width: 3.5em;
+        width: 3em;
     }
     .userDropdown {
         width: 20%;
