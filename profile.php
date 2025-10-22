@@ -24,6 +24,7 @@ $user = $result->fetch_assoc();
     $fav3 = $user["fav-3"];
     $pfp = $user["pfp"];
     $completed = $user["projects_completed"];
+    $hydra = $user["hydra-slayer"];
 
     //* Setting pfp
         if ($pfp) {
@@ -287,8 +288,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
         <?php } ?>
         <div class="user-container">
             <div class="pfp-wrapper">
-                <?php echo $badge6;
-                if ($badge6 == "unlocked") {?>
+                <?php if ($hydra == "unlocked") {?>
                 <img id="profileOverlay" class="pfp-overlay profile-pfp" src="images/hydra-slayer-overlay.webp">
                 <?php } ?>
                 <img src="<?=$pfp_set?>" alt="profile image" id="profilePicture">
@@ -441,7 +441,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                         }else{
                             echo $default6;
                         } ?>" id="hydra-slayer" class="badge pulse"
-                        onclick="checkToggle('hydra-slayer'); setTimeout(refresh, 200);">
+                        onclick="checkToggle('hydra-slayer'); setTimeout(refresh, 400);">
                         <div class="badgeToPopup" id="hydra-slayer-popup">
                             <h4>Hydra Slayer</h4>
                             <p>Slaying the hydra is no easy feat.<br>
