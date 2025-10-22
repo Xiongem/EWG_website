@@ -61,13 +61,6 @@ $project = $result->fetch_assoc();
     } elseif ($badge1 == "locked") {
         $badge1 = "images/badges/quarter-quomplete-mono.webp";
     }
-    $badge25 = $project["finish-him"];
-        if ($badge25 == "unlocked") {
-            $badge25 = "images/badges/finish-him-color.webp";
-        } elseif ($badge25 == "locked") {
-            $badge25 = "images/badges/finish-him-mono.webp";
-        }
-    echo $badge1;
     //* Half Way
     $badge2 = $project["half-way"];
     if ($badge2 == "unlocked") {
@@ -262,8 +255,6 @@ $project = $result->fetch_assoc();
         $default23 = "images/badges/business-mono.webp";
         $default24 = "images/badges/tears-wept-mono.webp";
         $default25 = "images/badges/cross-finish-mono.webp";
-
-        echo $badge1;
 ?>
 
 <!DOCTYPE html>
