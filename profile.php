@@ -161,12 +161,21 @@ $badge7 = $user["vet-guild"];
     } elseif ($badge7 == "locked") {
         $badge7 = "images/badges/vet-guild-mono.webp";
     }
-$badge8 = $user["start-first-project"];
-    if ($badge8 == "unlocked") {
-        $badge8 = "images/badges/start-first-project-color.webp";
-    } elseif ($badge8 == "locked") {
-        $badge8 = "images/badges/start-first-project-mono.webp";
+
+$sql = "SELECT id FROM current_project WHERE users_id='$profileID'";
+        $results = $_SESSION["conn"]->query($sql);
+if ($results->num_rows >= 1) {
+    $badge8 = $user["start-first-project"];
+    if ($badge8 == "locked") {
+        $sql = "UPDATE users SET `start-first-project`= 'unlocked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
     }
+    $badge8 = "images/badges/start-first-project-color.webp";
+} else {
+    $badge8 = "images/badges/start-first-project-mono.webp";
+}
+
 $badge9 = $user["spicy-spicy"];
     if ($badge9 == "unlocked") {
         $badge9 = "images/badges/spicy-spicy-color.webp";
