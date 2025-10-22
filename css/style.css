@@ -625,6 +625,9 @@ a {
     .not-found-container {
         margin-top: 6em;
     }
+    #pfp-overlay {
+        width: 3.5em;
+    }
 }
 
 /* @media only screen and (min-width: 1500px) {
