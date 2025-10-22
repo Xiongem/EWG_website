@@ -34,40 +34,37 @@ if (!isset($_POST["dailyGoal"])) {
     $_POST["dailyGoal"] = 0;
 }
 
-// $a = $goal;
 $newGoal = str_replace( ',', '', $goal );
 
 if( is_numeric( $newGoal ) ) {
     $goal = $newGoal;
 }
 
-echo $goal;
+$stmt = $_SESSION["conn"] -> prepare("INSERT INTO current_project 
+                        (username, genre, title, info, current_count, display, goal, goal_date, daily_goal, current_state, users_id) 
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    //echo "stmt prepared"."<br>";
+    //bind params
+    $stmt->bind_param("ssssisisisi",
+                        $username,
+                        $_POST["genre"],
+                        $_POST["title"],
+                        $_POST["summary"],
+                        $current_count,
+                        $display,
+                        $goal,
+                        $_POST["endDate"],
+                        $_POST["dailyGoal"],
+                        $current_state,
+                        $_SESSION["user_id"]);
+        //echo "params bound"."<br>";
+//execute statement
+if ($stmt -> execute()) {
+    header("Location: /index.php");
+        exit;
+    } else {
+        die("unexpected error");
+}
 
-// $stmt = $_SESSION["conn"] -> prepare("INSERT INTO current_project 
-//                         (username, genre, title, info, current_count, display, goal, goal_date, daily_goal, current_state, users_id) 
-//                         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-//     //echo "stmt prepared"."<br>";
-//     //bind params
-//     $stmt->bind_param("ssssisisisi",
-//                         $username,
-//                         $_POST["genre"],
-//                         $_POST["title"],
-//                         $_POST["summary"],
-//                         $current_count,
-//                         $display,
-//                         $_POST["goalNumber"],
-//                         $_POST["endDate"],
-//                         $_POST["dailyGoal"],
-//                         $current_state,
-//                         $_SESSION["user_id"]);
-//         //echo "params bound"."<br>";
-// //execute statement
-// if ($stmt -> execute()) {
-//     header("Location: /index.php");
-//         exit;
-//     } else {
-//         die("unexpected error");
-// }
-
-// $stmt -> close();
-// mysqli_close($conn);
+$stmt -> close();
+mysqli_close($conn);
