@@ -145,7 +145,7 @@ $badge3 = $user["complete-ten-project"];
 $sql = "SELECT `every-streak` FROM current_project WHERE users_id='$profileID'";
         $result = $_SESSION["conn"]->query($sql);
         $everyStreak = $result->fetch_assoc();
-        echo $everyStreak;
+        echo $result;
 if (in_array("unlocked", $everyStreak)) {
     // echo "in array";
     $badge4 = $user["streak-fiend"];
