@@ -247,7 +247,11 @@ if (isset($project["genre"])){
     $oldestDate = min($dates);
 }
 
-$_SESSION["overlay"] = $user["hydra-slayer"];
+$sql = "SELECT `hydra-slayer` FROM users WHERE id=$userID";
+    $result = $_SESSION["conn"]->query($sql);
+    $overlay = $result->fetch_assoc();
+
+$_SESSION["overlay"] = $overlay["hydra-slayer"];
 
 $default1 = "images/badges/complete-one-project-mono.webp";
 $default2 = "images/badges/complete-five-project-mono.webp";
