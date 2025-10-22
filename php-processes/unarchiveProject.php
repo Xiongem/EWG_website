@@ -14,7 +14,7 @@ $stmt->bind_param("s",
     echo "stmt prepared and bound!".'<br>';
 
 if ($stmt -> execute()) {
-    header("Location: /archives.php");
+    header("Location: /project.php?projectID=$projectID");
     exit;
 } else {
     die("an unexpected error occured");
