@@ -260,6 +260,13 @@ a {
         height: fit-content;
         padding: 0em 1em 0em 0em;
     }
+    .pfp-wrapper {
+        position: relative;
+    }
+    #pfp-overlay {
+        position: absolute;
+        width: 3em;
+    }
     .user img{
         width: 3em;
         z-index: 2;

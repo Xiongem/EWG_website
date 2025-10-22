@@ -24,7 +24,7 @@ function forceLogin() {
 //* NAV MENU-BAR
 function makeNav() {
 //* User is logged in and has the hydra slayer badge
-    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "obtained") {
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION["overlay"] == "unlocked") {
         $pfp_set = $_SESSION["pfp"];
         $username = $_SESSION["username"];
             $htmlContent = <<<HTML
@@ -47,8 +47,10 @@ function makeNav() {
                     <a href="announcements.php">News</a>
                     <a href="about.php">About</a>
                     <div class="desktop-user" id="user-logged-in">
-                        <img id="pfp-overlay" class="pfp-overlay"src="images/hydra-slayer-overlay.webp">
-                        <img id="pfp" src="$pfp_set" alt="user profile picture">
+                        <div class="pfp-wrapper">
+                            <img id="pfp-overlay" src="images/hydra-slayer-overlay.webp">
+                            <img id="pfp" src="$pfp_set" alt="user profile picture">
+                        </div>
                         <!-- //* User Dropdown-->
                         <div class="user-content"> 
                             <a href="profile.php?name=$username">Profile <i class="fa fa-user" id="profile-icon" alt="profile icon"></i></a>
