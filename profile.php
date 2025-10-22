@@ -169,7 +169,26 @@ if ($results->num_rows >= 1) {
 } else {
     $badge8 = "images/badges/start-first-project-mono.webp";
 }
-
+//* Alltime Tears
+$sql = "SELECT `tears-wept` FROM current_project WHERE users_id='$profileID'";
+        $result = $_SESSION["conn"]->query($sql);
+        $tears = $result->fetch_assoc();
+if (in_array("unlocked", $tears)) {
+    $badge10 = $user["tears-alltime"];
+    if ($badge10 == "locked") {
+        $sql = "UPDATE users SET `tears-alltime`= 'unlocked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+    }
+    $badge10 = "images/badges/tears-alltime-color.webp";
+} else {
+    if ($badge10 == "unlocked") {
+        $sql = "UPDATE users SET `tears-alltime`= 'locked' WHERE id=$profileID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+    }
+    $badge10 = "images/badges/tears-alltime-mono.webp";
+}
 
 //! Toggleable badges
 //* Hydra Slayer
