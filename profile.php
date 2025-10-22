@@ -72,15 +72,15 @@ $badge1 = $user["complete-one-project"];
         if ($completed >= 1) {
             if ($badge1 !== "unlocked") {
                 $sql = "UPDATE users SET `complete-one-project`= 'unlocked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
             }
             $badge1 = "images/badges/complete-one-project-color.webp";
         } elseif ($completed < 1) {
             if ($badge1 == "unlocked") {
                 $sql = "UPDATE users SET `complete-one-project`= 'locked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
             }
             $badge1 = "images/badges/complete-one-project-mono.webp";
         }
@@ -97,15 +97,15 @@ $badge2 = $user["complete-five-project"];
         if ($completed >= 5) {
             if ($badge2 !== "unlocked") {
                 $sql = "UPDATE users SET `complete-five-project`= 'unlocked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
             }
             $badge2 = "images/badges/complete-five-project-color.webp";
         } elseif ($completed < 5) {
             if ($badge2 == "unlocked") {
                 $sql = "UPDATE users SET `complete-five-project`= 'locked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
             }
             $badge2 = "images/badges/complete-five-project-mono.webp";
         }
@@ -122,15 +122,15 @@ $badge3 = $user["complete-ten-project"];
         if ($completed >= 10) {
             if ($badge3 !== "unlocked") {
                 $sql = "UPDATE users SET `complete-ten-project`= 'unlocked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
             }
             $badge3 = "images/badges/complete-ten-project-color.webp";
         } elseif ($completed < 10) {
             if ($badge3 == "unlocked") {
                 $sql = "UPDATE users SET `complete-ten-project`= 'locked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
             }
             $badge3 = "images/badges/complete-ten-project-mono.webp";
         }
@@ -149,34 +149,46 @@ if (in_array("unlocked", $everyStreak)) {
     $badge4 = $user["streak-fiend"];
     if ($badge4 == "locked") {
         $sql = "UPDATE users SET `streak-fiend`= 'unlocked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
     }
     $badge4 = "images/badges/streak-fiend-color.webp";
 } else {
     if ($badge4 == "unlocked") {
         $sql = "UPDATE users SET `streak-fiend`= 'locked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
     }
     $badge4 = "images/badges/streak-fiend-mono.webp";
 }
 //* Vet Streaker
-$badge5 = $user["vet-streaker"];
-    if ($badge5 == "unlocked") {
+$sql = "SELECT `id` FROM current_project WHERE users_id='$profileID' AND every-streak='unlocked'";
+    $result = $_SESSION["conn"]->query($sql);
+    if ($result->num_rows >= 2) {
+        $badge5 = $user["vet-streaker"];
+        if ($badge5 == "locked") {
+            $sql = "UPDATE users SET `vet-streaker`= 'unlocked' WHERE id=$profileID";
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
+        }
         $badge5 = "images/badges/vet-streaker-color.webp";
-    } elseif ($badge5 == "locked") {
+    } else {
+        if ($badge5 == "unlocked") {
+            $sql = "UPDATE users SET `vet-streaker`= 'locked' WHERE id=$profileID";
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
+        }
         $badge5 = "images/badges/vet-streaker-mono.webp";
     }
 //* Start First Project
 $sql = "SELECT id FROM current_project WHERE users_id='$profileID'";
-        $results = $_SESSION["conn"]->query($sql);
+    $results = $_SESSION["conn"]->query($sql);
 if ($results->num_rows >= 1) {
     $badge8 = $user["start-first-project"];
     if ($badge8 == "locked") {
         $sql = "UPDATE users SET `start-first-project`= 'unlocked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
     }
     $badge8 = "images/badges/start-first-project-color.webp";
 } else {
@@ -184,21 +196,21 @@ if ($results->num_rows >= 1) {
 }
 //* Alltime Tears
 $sql = "SELECT `tears-wept` FROM current_project WHERE users_id='$profileID'";
-        $result = $_SESSION["conn"]->query($sql);
-        $tears = $result->fetch_assoc();
+    $result = $_SESSION["conn"]->query($sql);
+    $tears = $result->fetch_assoc();
 if (in_array("unlocked", $tears)) {
     $badge10 = $user["tears-alltime"];
     if ($badge10 == "locked") {
         $sql = "UPDATE users SET `tears-alltime`= 'unlocked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
     }
     $badge10 = "images/badges/tears-alltime-color.webp";
 } else {
     if ($badge10 == "unlocked") {
         $sql = "UPDATE users SET `tears-alltime`= 'locked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
     }
     $badge10 = "images/badges/tears-alltime-mono.webp";
 }
