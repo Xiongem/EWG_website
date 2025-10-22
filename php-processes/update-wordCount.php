@@ -15,6 +15,11 @@ $streak = $_SESSION["streak"];
 $update_date = $_SESSION["update_date"];
 $projectID = $_POST["projectID"];
 
+$updateCount = $_POST["updateWordCount"];
+$newGoal = str_replace( ',', '', $updateCount );
+if( is_numeric( $newGoal ) ) {
+    $updateCount = $newGoal;
+}
 
 $sql = "SELECT `current_count`, `daily_goal`, `daily_goal_streak`, `first-daily` FROM current_project WHERE users_id='$userID' AND current_state='current' AND id=$projectID";
         $result = $_SESSION["conn"]->query($sql);
@@ -23,7 +28,7 @@ $sql = "SELECT `current_count`, `daily_goal`, `daily_goal_streak`, `first-daily`
             $dailyGoal = $count["daily_goal"];
             $firstDaily = $count["first-daily"];
             $dailyStreak = $count["daily_goal_streak"];
-            $updateCount = $_POST["updateWordCount"];
+            
 
     $newCount = $currentCount + $updateCount;
 
@@ -35,7 +40,7 @@ if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?, `first-daily`=?, daily_goal_streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
         $stmt->bind_param("isisi",
-                                $_POST["updateWordCount"],
+                                $updateCount,
                                 $update_date,
                                 $streak,
                                 $firstDaily,
@@ -77,7 +82,7 @@ if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?, daily_goal_streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
         $stmt->bind_param("isii",
-                                $_POST["updateWordCount"],
+                                $updateCount,
                                 $update_date,
                                 $streak,
                                 $newDailyStreak);
@@ -111,7 +116,7 @@ if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
         $stmt->bind_param("isi",
-                                $_POST["updateWordCount"],
+                                $updateCount,
                                 $update_date,
                                 $streak);
 

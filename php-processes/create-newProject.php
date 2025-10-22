@@ -35,7 +35,6 @@ if (!isset($_POST["dailyGoal"])) {
 }
 
 $newGoal = str_replace( ',', '', $goal );
-
 if( is_numeric( $newGoal ) ) {
     $goal = $newGoal;
 }
