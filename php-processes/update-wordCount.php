@@ -32,6 +32,11 @@ $sql = "SELECT `current_count`, `daily_goal`, `daily_goal_streak`, `first-daily`
 
     $newCount = $currentCount + $updateCount;
 
+    echo "$newCount"."<br>";
+    echo "$update_date"."<br>";
+    echo "$streak"."<br>";
+    echo $newDailyStreak;
+
 //* if user has reached their daily goal for the first time
 if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
     $firstDaily = "unlocked";
