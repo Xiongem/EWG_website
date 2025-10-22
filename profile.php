@@ -246,6 +246,9 @@ if (isset($project["genre"])){
         
     $oldestDate = min($dates);
 }
+
+$_SESSION["overlay"] = $user["hydra-slayer"];
+
 $default1 = "images/badges/complete-one-project-mono.webp";
 $default2 = "images/badges/complete-five-project-mono.webp";
 $default3 = "images/badges/complete-ten-project-mono.webp";
