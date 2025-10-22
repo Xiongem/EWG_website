@@ -34,14 +34,14 @@ if (!isset($_POST["dailyGoal"])) {
     $_POST["dailyGoal"] = 0;
 }
 
-$a = $goal;
-$b = str_replace( ',', '', $a );
+// $a = $goal;
+$newGoal = str_replace( ',', '', $goal );
 
-if( is_numeric( $b ) ) {
-    $a = $b;
+if( is_numeric( $newGoal ) ) {
+    $goal = $newGoal;
 }
 
-echo $a;
+echo $goal;
 
 // $stmt = $_SESSION["conn"] -> prepare("INSERT INTO current_project 
 //                         (username, genre, title, info, current_count, display, goal, goal_date, daily_goal, current_state, users_id) 
