@@ -451,6 +451,7 @@ a {
     #pfp-overlay {
         position: absolute;
         z-index: 1;
+        width: 3.5em;
     }
     .userDropdown {
         width: 20%;
