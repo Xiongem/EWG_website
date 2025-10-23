@@ -6,7 +6,7 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
-$sql = "SELECT id FROM users WHERE reset_token_hash = ?";
+$sql = "SELECT * FROM users WHERE reset_token_hash = ?";
     $stmt = $_SESSION["conn"] -> prepare($sql);
     $stmt->bind_param("s", $token_hash);
     $stmt -> execute() ;
