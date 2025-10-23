@@ -46,7 +46,18 @@ $stmt->bind_param("sss",
 echo "bound ";
 
 if ($stmt -> execute()) {
-    
+    $sql = sprintf("SELECT * FROM users
+                    WHERE username = '%s'",
+                    $_SESSION["conn"]->real_escape_string($_POST["username"]));
+
+    $result = $_SESSION["conn"]->query($sql);
+
+    $user = $result->fetch_assoc();
+
+        $_SESSION['loggedin'] = true;
+        $_SESSION["user_id"] = $user["id"];
+
+        header("Location: /profile-create.html");
         exit;
     } else {
         die("something went wrong");
