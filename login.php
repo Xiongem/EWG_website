@@ -101,12 +101,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <?php if ($is_invalid): ?>
                     <em>Invalid login<em>
                 <?php endif; ?>
-            <?php if ($_SESSION["user_id"]== 7) { ?>
             <div class="forgot-password">
                 <a href="forgot-password.html">Forgot your password?</a>
                 <a href="account-create.html">Create a new account</a>
             </div>
-            <?php } ?>
         </div>
     </div>
 </body>
