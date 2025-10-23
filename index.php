@@ -973,6 +973,7 @@ else {
                     <h1>Your Current Project</h1>
                 </div>
                 <div class="progress-info-container">
+                    <?php if (isset($_SESSION["user_id"])) {?>
                     <div id="project-img">
                         <a href="project.php?projectID=<?=$displayProjectID?>">
                             <img src=<?= $displayGenrePicture ?> id="theme-img">
@@ -983,11 +984,15 @@ else {
                             <h2><?= $displayTitle ?></h2>
                         </a>
                     </div>
+                    <?php } else { ?>
+                    <div id="project-img">
+                        <a><img src=<?= $displayGenrePicture ?> id="theme-img"></a>
+                    </div>
+                    <div id="project-title">
+                        <a><h2><?= $displayTitle ?></h2></a>
+                    </div>
+                    <?php } ?>
                     <div id="project-summary">
-                        <!-- <p>Looks like you don't have any active projects.
-                            <br><br>
-                            Click <a href="newProject.php">here</a> to get started!
-                        </p> -->
                         <p id="summary-text"><?= $displayInfo ?></p>
                     </div>
                 </div>
