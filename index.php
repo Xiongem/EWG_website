@@ -190,6 +190,7 @@ if (isset($_SESSION["user_id"])) {
                         $endDate = strtotime($displayGoalDate);
                         $totalDays = $endDate - $created_date;
                         $streakMath = round($totalDays / (60 * 60 * 24));
+                        $streakMath = $streakMath + 1;
                         //* Every Streak
                         echo "$streak"."<br>";
                         echo $streakMath;
@@ -536,6 +537,7 @@ if (isset($_SESSION["user_id"])) {
                     $endDate = strtotime($displayGoalDate);
                     $totalDays = $endDate - $created_date;
                     $streakMath = round($totalDays / (60 * 60 * 24));
+                    $streakMath = $streakMath + 1;
                     //* Every Streak
                     if ($streak == $streakMath) {
                         if ($project["every-streak"] !== "unlocked") {
