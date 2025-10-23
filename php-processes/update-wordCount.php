@@ -29,7 +29,7 @@ $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state
             $dailyGoal = $count["daily_goal"];
             $firstDaily = $count["first-daily"];
             $dailyStreak = $count["daily_goal_streak"];
-            echo $dailyStreak;
+            
 if ($intervals == 1 && $updateCount >= $dailyGoal) {
     $dailyStreak = $dailyStreak + 1;
 } elseif ($intervals >= 2) {
@@ -43,7 +43,7 @@ if ($intervals == 1 && $updateCount >= $dailyGoal) {
 //* if user has reached their daily goal for the first time
 if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
     $firstDaily = "unlocked";
-    echo "first option";
+    
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?, `first-daily`=?, daily_goal_streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
         $stmt->bind_param("isisi",
@@ -54,7 +54,7 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
                                 $dailyStreak);
 
         if ($stmt -> execute()) {
-            // header("Location: /index.php");
+            header("Location: /index.php");
             exit;
         } else {
             die("an unexpected error occured");
@@ -69,7 +69,7 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
                                 $dailyStreak);
 
         if ($stmt -> execute()) {
-            // header("Location: /index.php");
+            header("Location: /index.php");
             exit;
         } else {
             die("an unexpected error occured");
@@ -79,8 +79,7 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
     }
 } elseif ($firstDaily == "unlocked" && $updateCount >= $dailyGoal) {
     //* User has reached their daily goal after the first time
-    echo "second option"."<br>";
-    echo $dailyStreak;
+    
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?, daily_goal_streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
         $stmt->bind_param("isii",
@@ -90,7 +89,7 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
                                 $dailyStreak);
 
         if ($stmt -> execute()) {
-            // header("Location: /index.php");
+            header("Location: /index.php");
             exit;
         } else {
             die("an unexpected error occured");
@@ -104,7 +103,7 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
                                 $dailyStreak);
 
         if ($stmt -> execute()) {
-            // header("Location: /index.php");
+            header("Location: /index.php");
             exit;
         } else {
             die("an unexpected error occured");
@@ -114,7 +113,7 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
     }
 } else {
     //* User has not reached their daily goal
-    echo "third option";
+    
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
         $stmt->bind_param("isi",
@@ -123,7 +122,7 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
                                 $streak);
 
         if ($stmt -> execute()) {
-            // header("Location: /index.php");
+            header("Location: /index.php");
             exit;
         } else {
             die("an unexpected error occured");
@@ -136,7 +135,7 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
                                 $streak);
 
         if ($stmt -> execute()) {
-            // header("Location: /index.php");
+            header("Location: /index.php");
             exit;
         } else {
             die("an unexpected error occured");
