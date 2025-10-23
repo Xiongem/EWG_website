@@ -25,7 +25,7 @@ $user = $result->fetch_assoc();
     $pfp = $user["pfp"];
     $completed = $user["projects_completed"];
     $hydra = $user["hydra-slayer"];
-echo $pfp;
+
     //* Setting pfp
         if ($pfp) {
             $pfp_set = $pfp;
