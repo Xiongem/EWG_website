@@ -11,9 +11,7 @@ dbConnect();
 
 //* If user is logged in
 if (isset($_SESSION["user_id"])) {
-    $userID = htmlspecialchars($_SESSION["user_id"]);
-    echo "hello";
-    echo $userID;
+    $userID = htmlspecialchars($_SESSION["user_id"]);    
 
     //* Pull User Info
     $sql = "SELECT * FROM users WHERE id=$userID";
@@ -382,6 +380,7 @@ if (isset($_SESSION["user_id"])) {
             }                
             }
         } else {
+            echo $userID;
             //* User has no active projects yet
             $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current'";
             $result = $_SESSION["conn"]->query($sql);
