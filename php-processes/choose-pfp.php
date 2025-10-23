@@ -13,7 +13,7 @@ $stmt->bind_param("s",
                         $_POST["choose-pfp"]);
 
 if ($stmt -> execute()) {
-    header("Location: ../index.php");
+    header("Location: /index.php");
     exit;
 } else {
     die("an unexpected error occured");
