@@ -396,7 +396,9 @@ if (isset($_SESSION["user_id"])) {
                 $streak = $project["streak"];
                 $created = $project["created_at"];
                 $displayDailyGoal = $project["daily_goal"];
+                if ($project["id"]) {
                 $displayPercentage = floor($displayCount / $displayGoal * 100);
+                }
                 
                 //* Badges
 
