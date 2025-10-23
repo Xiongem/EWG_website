@@ -9,7 +9,7 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
-echo $_SESSION["user_id"];
+echo $userID;
 
 //* If user is logged in
 if (isset($_SESSION["user_id"])) {
