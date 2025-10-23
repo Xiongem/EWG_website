@@ -15,6 +15,7 @@ echo $userID;
 //* If user is logged in
 if (isset($_SESSION["user_id"])) {
     $userID = htmlspecialchars($_SESSION["user_id"]);
+    echo "hello";
 
     //* Pull User Info
     $sql = "SELECT * FROM users WHERE id=$userID";
