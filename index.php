@@ -9,13 +9,11 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
-$userID = htmlspecialchars($_SESSION["user_id"]);
-echo $userID;
-
 //* If user is logged in
 if (isset($_SESSION["user_id"])) {
     $userID = htmlspecialchars($_SESSION["user_id"]);
     echo "hello";
+    echo $userID;
 
     //* Pull User Info
     $sql = "SELECT * FROM users WHERE id=$userID";
