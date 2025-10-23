@@ -731,7 +731,7 @@ if (isset($_SESSION["user_id"])) {
                             $displayPercentage = $displayProgress;
                         }
         } else {
-            $displayTitle = "Really Cool Title";
+            $displayTitle = "";
             $displayGenrePicture = "images/genre-covers/placeholder.webp";
             $displayInfo = "Create your first project to get started!";
             $displayCount = "?";
