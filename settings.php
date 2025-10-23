@@ -54,7 +54,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             </div>
             <div class="button-wrapper-warning">
                 <div class="delete">
-                    <a id="delete">Delete My Account</a>
+                    <a href="php-processes/delete-account.php" id="delete">Delete My Account</a>
                 </div>
                 <div id="hide-warning" onclick="hideWarning()">Back to Safety</div>
             </div>
@@ -101,7 +101,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             </div>
 
             <div id="account" class="tabcontent">
-                <form action="" method="post">
+                <form action="php-processes/update-account" method="post">
                     <div class="account-content">
                         <div class="form-content">
                             <label>Change Your Username:</label>
@@ -111,7 +111,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                             <label>Change Your Email Address:</label>
                             <input type="email" name="email" id="email" value="<?=$email?>">
                         </div>
-                        <a href="">Reset Your Password</a>
+                        <a href="forgot-password.html">Reset Your Password</a>
                     </div>
                     <div class="button-wrapper">
                         <button type="submit" id="save">Save</button>
