@@ -733,14 +733,14 @@ if (isset($_SESSION["user_id"])) {
         } else {
             $displayTitle = "";
             $displayGenrePicture = "images/genre-covers/placeholder.webp";
-            $displayInfo = "Create your first project to get started!";
+            $displayInfo = 'Click <a href="newProject.php">here</a> to create your first project!';
             $displayCount = "?";
             $displayGoal = "?";
             $displayDays = "?";
             $displayDailyGoal = "?";
             $displayProgress = 4;
             $displayPercentage = 0;
-        }
+        }"
 
 
 //* increase or reset streak count
