@@ -82,7 +82,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 <div class="appearance-contents">
                     <div class="pfp-change-wrapper">
                         <img id="change-pfp-image" src="<?=$pfp_set?>">
-                        <a class="update-button">Update Profile Picture</a>
+                        <a href="update-pfp.html" class="update-button">Update Profile Picture</a>
                     </div>
                     <div class="theme-change-wrapper">
                         <div class="theme-change-button">
