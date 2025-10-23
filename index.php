@@ -379,7 +379,7 @@ if (isset($_SESSION["user_id"])) {
                             }
             }                
             }
-        } else {
+        } elseif ($result->num_rows > 0) {
             //* User has no active projects yet
             $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current'";
             $result = $_SESSION["conn"]->query($sql);
@@ -730,6 +730,16 @@ if (isset($_SESSION["user_id"])) {
                             $displayProgress = floor($displayCount / $displayGoal * 100);
                             $displayPercentage = $displayProgress;
                         }
+        } else {
+            $displayTitle = "Really Cool Title";
+            $displayGenrePicture = "images/genre-covers/placeholder.webp";
+            $displayInfo = "An amazing, gripping summary.";
+            $displayCount = 0;
+            $displayGoal = "50,000";
+            $displayDays = "Infinite";
+            $displayDailyGoal = 250;
+            $displayProgress = 4;
+            $displayPercentage = 0;
         }
 
 
