@@ -12,6 +12,7 @@ dbConnect();
 $userID = $_SESSION["user_id"];
 $choice = $_POST["wordCount"];
 $streak = $_SESSION["streak"];
+$intervals = $_SESSION["intervals"];
 $update_date = $_SESSION["update_date"];
 $projectID = $_POST["projectID"];
 
@@ -21,7 +22,7 @@ if( is_numeric( $newGoal ) ) {
     $updateCount = $newGoal;
 }
 
-$sql = "SELECT `current_count`, `daily_goal`, `daily_goal_streak`, `first-daily` FROM current_project WHERE users_id='$userID' AND current_state='current' AND id=$projectID";
+$sql = "SELECT `current_count`, `daily_goal`, `first-daily` FROM current_project WHERE users_id='$userID' AND current_state='current' AND id=$projectID";
         $result = $_SESSION["conn"]->query($sql);
         $count = $result->fetch_assoc();
             $currentCount = $count["current_count"];
@@ -29,13 +30,19 @@ $sql = "SELECT `current_count`, `daily_goal`, `daily_goal_streak`, `first-daily`
             $firstDaily = $count["first-daily"];
             $dailyStreak = $count["daily_goal_streak"];
             
+if ($intervals == 1 && $updateCount >= $dailyGoal) {
+    $dailyStreak = $dailyStreak + 1;
+} elseif ($intervals >= 2) {
+    $dailyStreak = 1;
+} else {
+    $dailyStreak = $dailyStreak;
+}
 
     $newCount = $currentCount + $updateCount;
 
 //* if user has reached their daily goal for the first time
-if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
+if ($firstDaily !== "unlocked") {
     $firstDaily = "unlocked";
-    $dailyStreak = 1;
 
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?, `first-daily`=?, daily_goal_streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
@@ -71,13 +78,8 @@ if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
     } else {
         die("an unexpected error occured");
     }
-} elseif ($updateCount >= $dailyGoal && $firstDaily == "unlocked") {
-    //* User has reached their daily goal for the first time
-    if ($update_date == date("Y-m-d")) {
-    $newDailyStreak = $dailyStreak + 1;
-    } else {
-        $newDailyStreak = $dailyStreak;
-    }
+} elseif ($firstDaily == "unlocked") {
+    //* User has reached their daily goal after the first time
 
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?, daily_goal_streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
@@ -85,7 +87,7 @@ if ($updateCount >= $dailyGoal && $firstDaily !== "unlocked") {
                                 $updateCount,
                                 $update_date,
                                 $streak,
-                                $newDailyStreak);
+                                $dailyStreak);
 
         if ($stmt -> execute()) {
             header("Location: /index.php");

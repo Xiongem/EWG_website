@@ -743,6 +743,7 @@ $update_date = date("Y-m-d");
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
 $_SESSION["streak"] = $streak;
+$_SESSION["intervals"] = $intervals;
 $_SESSION["update_date"] = $update_date;
 $_SESSION["overlay"] = $user["hydra-slayer"];
 }  
