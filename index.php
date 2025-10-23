@@ -801,7 +801,6 @@ else {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<?php if ($_SESSION["user_id"]== 7 || $_SESSION["user_id"]== 60) { ?>
 <body id="body">
     <!-- //* POPUP FOR CHOOSING ACTIVE PROJECTS-->
     <?php if (isset($_SESSION["user_id"])) { ?>
@@ -1800,11 +1799,5 @@ else {
     }
     
     </script>
-<?php } else { ?>
-    <div class="announce-wrapper">
-        <h1>Attention!</h1>
-        <h3>The Guild is currently closed for maintenance. Please check back later.</h3>
-    </div>
-<?php } ?>
 </body>
 </html>
