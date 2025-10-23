@@ -1,3 +1,26 @@
+<?php
+$token = $_GET["token"];
+$token_hash = hash("sha256", $token);
+
+ob_start();
+require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
+dbConnect();
+
+$sql = "SELECT id FROM users WHERE reset_token_hash = ?";
+    $stmt = $_SESSION["conn"] -> prepare($sql);
+    $stmt->bind_param("s", $token_hash);
+    $stmt -> execute() ;
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
+
+if ($user === null) {
+    die("token not found");
+}
+
+if (strtotime($user["reset_token_expires_at"]) <= time()) {
+    die("token has expired");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +36,43 @@
     <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        document.getElementById('signup').addEventListener('input', function () {
+            validateForm();
+        });
+
+
+        //checks if password and confirm password match
+        function validateForm() {
+        const password = document.getElementById('pwd').value;
+        const confirmPassword = document.getElementById('confirm_pwd').value;
+        const submitBtn = document.getElementById('submit');
+        const errorElement = document.getElementById('passwordError');
+
+        let isValid = true;
+
+        if (!password || !confirmPassword) {
+            isValid = false;
+        }
+
+        if (password !== confirmPassword) {
+            errorElement.textContent = 'Passwords do not match';
+            errorElement.classList.remove('success');
+            errorElement.classList.add('error');
+            isValid = false;
+        } else {
+            errorElement.textContent = 'Passwords match';
+            errorElement.classList.remove('error');
+            errorElement.classList.add('success');
+        }
+        }
+    </script>
 </head>
 <body>
     <div class="reset-pass-wrapper">
         <div class="reset-pass-content">
-            <form id="reset" action="" method="post">
+            <form id="reset" action="php-processes/resetPassword" method="post">
+                <input type="hidden" name="token" value="<?=htmlspecialchars($token)?>">
                 <label for="pwd">Password:</label>
                 <input type="password"
                     autocomplete="new-password" 
@@ -50,7 +105,7 @@
             </form>
         </div>
     </div>
-        <script>
+        <!-- <script>
             document.getElementById('signup').addEventListener('input', function () {
                 validateForm();
             });
@@ -79,6 +134,6 @@
                     errorElement.classList.add('success');
                 }
             }
-        </script>
+        </script> -->
 </body>
 </html>
