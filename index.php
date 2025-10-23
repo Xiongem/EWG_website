@@ -380,7 +380,6 @@ if (isset($_SESSION["user_id"])) {
             }                
             }
         } else {
-            echo $userID;
             //* User has no active projects yet
             $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current'";
             $result = $_SESSION["conn"]->query($sql);
@@ -398,7 +397,7 @@ if (isset($_SESSION["user_id"])) {
                 $created = $project["created_at"];
                 $displayDailyGoal = $project["daily_goal"];
                 $displayPercentage = floor($displayCount / $displayGoal * 100);
-                echo $userID;
+                
                 //* Badges
 
                 //? PROGRESS BADGES
