@@ -8,16 +8,16 @@ require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 $mail = new PHPMailer\PHPMailer\PHPMailer;
 dbConnect();
 
-// $username = $_POST["username"];
 $email = $_POST["email"];
 $token = bin2hex(random_bytes(16));
 $token_hash = hash("sha256", $token);
 $expiry = date("Y-m-d H:i:s",time() + 60 * 30);
 
 $sql = "UPDATE users SET reset_token_hash = ?, reset_token_expires_at = ? WHERE email = ?";
-$stmt = $_SESSION["conn"] -> prepare($sql);
-$stmt->bind_param("sss", $token_hash, $expiry, $email);
-$stmt -> execute() ;
+    $stmt = $_SESSION["conn"] -> prepare($sql);
+    $stmt->bind_param("sss", 
+                            $token_hash, $expiry, $email);
+    $stmt -> execute() ;
 
 if($_SESSION["conn"]->affected_rows) {
     $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
@@ -26,7 +26,7 @@ if($_SESSION["conn"]->affected_rows) {
     $mail -> addAddress($email);
     $mail->Subject = "Password Reset";
     $mail -> Body = <<<END
-        Hello $username, 
+        Hello, 
         <br><br>
         A request was made to reset your password. <br>
         Your password reset token will expire in 30 minutes. <br>
@@ -43,5 +43,5 @@ if($_SESSION["conn"]->affected_rows) {
     }
 }
 
-echo "Message sent, please check your inbox.";
+// echo "Message sent, please check your inbox.";
 header("Location: /reset-success.html");
