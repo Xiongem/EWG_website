@@ -80,7 +80,8 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
     }
 } elseif ($firstDaily == "unlocked" && $updateCount >= $dailyGoal) {
     //* User has reached their daily goal after the first time
-    echo "second option";
+    echo "second option"."<br>";
+    echo $dailyStreak;
     if ($choice == "replace") {
         $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_count=?, update_date=?, streak=?, daily_goal_streak=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
         $stmt->bind_param("isii",
