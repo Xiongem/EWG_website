@@ -9,6 +9,7 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
+$userID = htmlspecialchars($_SESSION["user_id"]);
 echo $userID;
 
 //* If user is logged in
