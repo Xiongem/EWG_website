@@ -729,13 +729,10 @@ if (isset($_SESSION["user_id"])) {
 //* increase or reset streak count
 if ($intervals == 1) {
     $streak = $streak + 1;
-    $dailyStreak = $dailyStreak + 1;
 } elseif ($intervals >= 2) {
     $streak = 1;
-    $dailyStreak = 1;
 } else {
     $streak = $streak;
-    $dailyStreak = $dailyStreak;
 }
 $update_date = date("Y-m-d");
 
