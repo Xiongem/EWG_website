@@ -744,6 +744,7 @@ $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
 $_SESSION["streak"] = $streak;
 $_SESSION["intervals"] = $intervals;
+echo $intervals;
 $_SESSION["update_date"] = $update_date;
 $_SESSION["overlay"] = $user["hydra-slayer"];
 }  
