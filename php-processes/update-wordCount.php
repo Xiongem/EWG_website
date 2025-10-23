@@ -101,7 +101,7 @@ if ($firstDaily !== "unlocked") {
                                 $newCount,
                                 $update_date,
                                 $streak,
-                                $newDailyStreak);
+                                $dailyStreak);
             echo "stmt prepared and bound!".'<br>';
 
         if ($stmt -> execute()) {
