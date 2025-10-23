@@ -256,6 +256,10 @@ $sql = "SELECT `hydra-slayer` FROM users WHERE id=$userID";
 
 $_SESSION["overlay"] = $overlay["hydra-slayer"];
 
+$genre_picture = "images/genre-covers/placeholder.webp";
+$title = "";
+$info = 'Click <a href="newProject.php">here</a> to create your first project!';
+
 $default1 = "images/badges/complete-one-project-mono.webp";
 $default2 = "images/badges/complete-five-project-mono.webp";
 $default3 = "images/badges/complete-ten-project-mono.webp";
