@@ -33,7 +33,7 @@ if ($_POST["pwd"] !== $_POST["confirm_pwd"]) {
     die("Passwords must match");
 }
 
-echo "hello";
+echo "hello ";
 
 $password_hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
@@ -43,4 +43,4 @@ $stmt->bind_param("sss",
                     $_POST["email"],
                     $password_hash);
 
-echo "bound";
+echo "bound ";
