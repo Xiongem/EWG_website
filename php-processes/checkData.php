@@ -13,7 +13,7 @@ if (! empty($_POST["username"])) {
         $statement->execute();
     $result = $statement->get_result();
     if ($result->num_rows > 0) {
-        echo "Username Already Exists";
+        echo "Username Already In Use";
     } else {
         echo "Username Available";
     }
