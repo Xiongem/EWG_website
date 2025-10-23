@@ -29,7 +29,7 @@ $sql = "SELECT `current_count`, `daily_goal`, `first-daily` FROM current_project
             $dailyGoal = $count["daily_goal"];
             $firstDaily = $count["first-daily"];
             $dailyStreak = $count["daily_goal_streak"];
-            echo $count["daily_goal_streak"];
+            echo $count["`daily_goal_streak`"];
 if ($intervals == 1 && $updateCount >= $dailyGoal) {
     $dailyStreak = $dailyStreak + 1;
 } elseif ($intervals >= 2) {
