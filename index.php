@@ -192,8 +192,6 @@ if (isset($_SESSION["user_id"])) {
                         $streakMath = round($totalDays / (60 * 60 * 24));
                         $streakMath = $streakMath + 1;
                         //* Every Streak
-                        echo "$streak"."<br>";
-                        echo $streakMath;
                         if ($streak == $streakMath) {
                             if ($project["every-streak"] !== "unlocked") {
                                 $sql = "UPDATE current_project SET `every-streak`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
