@@ -39,9 +39,9 @@ $stmt->bind_param("sss",
 if ($stmt -> execute()) {
     $sql = sprintf("SELECT * FROM users
                     WHERE username = '%s'",
-                    $conn->real_escape_string($_POST["username"]));
+                    $_SESSION["conn"]->real_escape_string($_POST["username"]));
 
-    $result = $conn->query($sql);
+    $result = $_SESSION["conn"]->query($sql);
 
     $user = $result->fetch_assoc();
 
@@ -57,5 +57,5 @@ if ($stmt -> execute()) {
 
 
 $stmt -> close();
-mysqli_close($conn);
+mysqli_close($_SESSION["conn"]);
 ?>
