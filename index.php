@@ -397,7 +397,7 @@ if (isset($_SESSION["user_id"])) {
                 $created = $project["created_at"];
                 $displayDailyGoal = $project["daily_goal"];
                 $displayPercentage = floor($displayCount / $displayGoal * 100);
-                echo $displayTitle;
+                echo $userID;
                 //* Badges
 
                 //? PROGRESS BADGES
