@@ -44,3 +44,16 @@ $stmt->bind_param("sss",
                     $password_hash);
 
 echo "bound ";
+
+if ($stmt -> execute()) {
+    
+        exit;
+    } else {
+        die("something went wrong");
+}
+
+
+
+$stmt -> close();
+mysqli_close($conn);
+?>
