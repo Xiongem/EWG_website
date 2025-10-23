@@ -749,7 +749,7 @@ else {
     $displayInfo = "An amazing, gripping summary.";
     $displayCount = 0;
     $displayGoal = "50,000";
-    $displayGoalDate = "Eventually";
+    $displayDays = "Infinite";
     $displayDailyGoal = 250;
     $displayProgress = 4;
     $displayPercentage = 0;
