@@ -51,7 +51,7 @@ if ($stmt -> execute()) {
         header("Location: /profile-create.html");
         exit;
     } else {
-        die("username already in use");
+        die("something went wrong");
 }
 
 
