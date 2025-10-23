@@ -733,11 +733,11 @@ if (isset($_SESSION["user_id"])) {
         } else {
             $displayTitle = "Really Cool Title";
             $displayGenrePicture = "images/genre-covers/placeholder.webp";
-            $displayInfo = "An amazing, gripping summary.";
-            $displayCount = 0;
-            $displayGoal = "50,000";
-            $displayDays = "Infinite";
-            $displayDailyGoal = 250;
+            $displayInfo = "Create your first project to get started!";
+            $displayCount = "?";
+            $displayGoal = "?";
+            $displayDays = "?";
+            $displayDailyGoal = "?";
             $displayProgress = 4;
             $displayPercentage = 0;
         }
