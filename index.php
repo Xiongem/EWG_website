@@ -582,13 +582,17 @@ if (isset($_SESSION["user_id"])) {
                                 $stmt->execute();
                     }
                     //* lock every streak badge
-                    $sql = "UPDATE current_project SET `every-streak`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
-                                $stmt = $_SESSION["conn"]->prepare($sql);
-                                $stmt->execute();
+                    if ($badge11 == "unlocked") {
+                        $sql = "UPDATE current_project SET `every-streak`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                    }
                     //* lock on track badge
-                    $sql = "UPDATE current_project SET `on-track`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
-                                $stmt = $_SESSION["conn"]->prepare($sql);
-                                $stmt->execute();
+                    if ($badge12 == "unlocked") {
+                        $sql = "UPDATE current_project SET `on-track`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                    }
                     $badge5 = "images/badges/streak-two-mono.webp";
                     $badge6 = "images/badges/streak-three-mono.webp";
                     $badge7 = "images/badges/streak-seven-mono.webp";
