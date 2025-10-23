@@ -43,3 +43,4 @@ $stmt->bind_param("sss",
                     $_POST["email"],
                     $password_hash);
 
+echo "bound";
