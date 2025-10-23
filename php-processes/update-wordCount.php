@@ -29,7 +29,7 @@ $sql = "SELECT `current_count`, `daily_goal`, `first-daily` FROM current_project
             $dailyGoal = $count["daily_goal"];
             $firstDaily = $count["first-daily"];
             $dailyStreak = $count["daily_goal_streak"];
-            
+            echo "$dailyStreak"."<br>";
 if ($intervals == 1 && $updateCount >= $dailyGoal) {
     $dailyStreak = $dailyStreak + 1;
 } elseif ($intervals >= 2) {
@@ -67,7 +67,6 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
                                 $streak,
                                 $firstDaily,
                                 $dailyStreak);
-            echo "stmt prepared and bound!".'<br>';
 
         if ($stmt -> execute()) {
             // header("Location: /index.php");
@@ -103,7 +102,6 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
                                 $update_date,
                                 $streak,
                                 $dailyStreak);
-            echo "stmt prepared and bound!".'<br>';
 
         if ($stmt -> execute()) {
             // header("Location: /index.php");
@@ -136,7 +134,6 @@ if ($firstDaily !== "unlocked" && $updateCount >= $dailyGoal) {
                                 $newCount,
                                 $update_date,
                                 $streak);
-            echo "stmt prepared and bound!".'<br>';
 
         if ($stmt -> execute()) {
             // header("Location: /index.php");
