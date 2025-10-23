@@ -13,6 +13,8 @@ $result = $_SESSION["conn"]->query($sql);
 $user = $result->fetch_assoc();
     $username = $user["username"];
 
+$_SESSION["pfp"] = $_POST["choose-pfp"];
+
 $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET pfp=? WHERE id=$userID");
 $stmt->bind_param("s",
                         $_POST["choose-pfp"]);
