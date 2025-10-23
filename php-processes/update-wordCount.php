@@ -28,7 +28,7 @@ $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state
             $currentCount = $count["current_count"];
             $dailyGoal = $count["daily_goal"];
             $firstDaily = $count["first-daily"];
-            $dailyStreak = $count["`daily_goal_streak`"];
+            $dailyStreak = $count["daily_goal_streak"];
             echo $dailyStreak;
 if ($intervals == 1 && $updateCount >= $dailyGoal) {
     $dailyStreak = $dailyStreak + 1;
