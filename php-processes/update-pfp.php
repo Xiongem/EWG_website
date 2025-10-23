@@ -8,6 +8,11 @@ dbConnect();
 // prepare and bind
 $userID = $_SESSION["user_id"];
 
+$sql = "SELECT * FROM users WHERE id='$userID'";
+$result = $_SESSION["conn"]->query($sql);
+$user = $result->fetch_assoc();
+    $username = $user["username"];
+
 $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET pfp=? WHERE id=$userID");
 $stmt->bind_param("s",
                         $_POST["choose-pfp"]);
