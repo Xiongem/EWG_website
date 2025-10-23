@@ -33,3 +33,4 @@ if ($_POST["pwd"] !== $_POST["confirm_pwd"]) {
     die("Passwords must match");
 }
 
+echo "hello";
