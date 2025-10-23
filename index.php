@@ -30,7 +30,7 @@ if (isset($_SESSION["user_id"])) {
     //* Pull Project Info
     $sql = "SELECT display FROM current_project WHERE users_id='$userID' AND current_state='current'";
         $result = $_SESSION["conn"]->query($sql);
-        if ($result->num_rows > 2) {
+        if ($result->num_rows > 1) {
             while ($display = $result->fetch_assoc()) {
 
             //* if user has selected a project to be active from project selection
