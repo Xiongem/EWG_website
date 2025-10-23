@@ -22,14 +22,14 @@ if( is_numeric( $newGoal ) ) {
     $updateCount = $newGoal;
 }
 
-$sql = "SELECT `current_count`, `daily_goal`, `first-daily` FROM current_project WHERE users_id='$userID' AND current_state='current' AND id=$projectID";
+$sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current' AND id=$projectID";
         $result = $_SESSION["conn"]->query($sql);
         $count = $result->fetch_assoc();
             $currentCount = $count["current_count"];
             $dailyGoal = $count["daily_goal"];
             $firstDaily = $count["first-daily"];
-            $dailyStreak = $count["daily_goal_streak"];
-            echo $count["`daily_goal_streak`"];
+            $dailyStreak = $count["`daily_goal_streak`"];
+            echo $dailyStreak;
 if ($intervals == 1 && $updateCount >= $dailyGoal) {
     $dailyStreak = $dailyStreak + 1;
 } elseif ($intervals >= 2) {
