@@ -1,4 +1,9 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 'On');
+ini_set('error_log', '/path/to/php_errors.log');
+
 ob_start();
 
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
@@ -39,9 +44,9 @@ $stmt->bind_param("sss",
 if ($stmt -> execute()) {
     $sql = sprintf("SELECT * FROM users
                     WHERE username = '%s'",
-                    $_SESSION["conn"]->real_escape_string($_POST["username"]));
+                    $conn->real_escape_string($_POST["username"]));
 
-    $result = $_SESSION["conn"]->query($sql);
+    $result = $conn->query($sql);
 
     $user = $result->fetch_assoc();
 
@@ -57,5 +62,5 @@ if ($stmt -> execute()) {
 
 
 $stmt -> close();
-mysqli_close($_SESSION["conn"]);
+mysqli_close($conn);
 ?>
