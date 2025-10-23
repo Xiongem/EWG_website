@@ -960,9 +960,11 @@ else {
                     <p><?= $displayPercentage ?>%</p>
                 </div>
             </div>
+            <?php if (isset($_SESSION["user_id"])) {?>
             <div class="added">
                 <span class="fa fa-plus" id="updateCount" onclick="showUpdateWords()"></span>
             </div>
+            <?php } ?>
         </div>
     </div>
     <!-- //* CURRENT PROJECT OVERVIEW AND INFO-->
