@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         function checkName(){
@@ -20,7 +21,7 @@
             if(username){
                 $.ajax({
                 type: 'post',
-                url: 'php-processes/checkdata',
+                url: 'php-processes/checkData',
                 data: {
                     username: username,
                 },
@@ -41,7 +42,7 @@
             if(email){
                 $.ajax({
                 type: 'post',
-                url: 'php-processes/checkdata',
+                url: 'php-processes/checkData',
                 data: {
                     email: email,
                 },
@@ -60,7 +61,7 @@
 </head>
 <body>
     <div class="account-wrapper">
-        <form id="signup" action="" method="post">
+        <form id="signup" action="php-processes/signup" method="post">
             <div class="input-warpper">
                 <label for="username">Username:</label>
                 <input type="text" 
