@@ -740,7 +740,7 @@ if (isset($_SESSION["user_id"])) {
             $displayDailyGoal = "?";
             $displayProgress = 4;
             $displayPercentage = 0;
-        }"
+        }
 
 
 //* increase or reset streak count
