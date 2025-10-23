@@ -57,6 +57,9 @@
         display: flex;
         justify-content: center;
     }
+    #email-availability-status {
+        color: var(--warning);
+    }
     #submit {
         width: 8em;
         height: 3em;
