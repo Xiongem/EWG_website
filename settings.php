@@ -150,12 +150,12 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     <div class="account-content">
                         <div class="form-content">
                             <label>Change Your Username:</label>
-                            <input type="text" name="username" id="username" value="<?=$username?>">
+                            <input type="text" name="username" id="username" value="<?=$username?>" onchange="checkName();">
                             <span id="user-availability-status"></span>
                         </div>
                         <div class="form-content">
                             <label>Change Your Email Address:</label>
-                            <input type="email" name="email" id="email" value="<?=$email?>">
+                            <input type="email" name="email" id="email" value="<?=$email?>" onchange="checkEmail();">
                             <span id="email-availability-status"></span>
                         </div>
                         <a href="forgot-password.html">Reset Your Password</a>
