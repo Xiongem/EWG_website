@@ -42,6 +42,50 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
     <link rel="website icon" type="webp" href="images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function checkName(){
+            var username=document.getElementById( "username" ).value;
+            
+            if(username){
+                $.ajax({
+                type: 'post',
+                url: 'php-processes/checkData',
+                data: {
+                    username: username,
+                },
+                success: function (data) {
+                    $( '#user-availability-status' ).html(data);
+                }
+                });
+            }
+            else{
+                $( '#user-availability-status' ).html("");
+                console.log("Something went wrong")
+                return false;
+            }
+        }
+        function checkEmail(){
+            var email=document.getElementById( "email" ).value;
+            
+            if(email){
+                $.ajax({
+                type: 'post',
+                url: 'php-processes/checkData',
+                data: {
+                    email: email,
+                },
+                success: function (data) {
+                    $( '#email-availability-status' ).html(data);
+                }
+                });
+            }
+            else{
+                $( '#email-availability-status' ).html("");
+                console.log("Something went wrong")
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="warning" class="warning">
@@ -106,10 +150,12 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                         <div class="form-content">
                             <label>Change Your Username:</label>
                             <input type="text" name="username" id="username" value="<?=$username?>">
+                            <span id="user-availability-status"></span>
                         </div>
                         <div class="form-content">
                             <label>Change Your Email Address:</label>
                             <input type="email" name="email" id="email" value="<?=$email?>">
+                            <span id="email-availability-status"></span>
                         </div>
                         <a href="forgot-password.html">Reset Your Password</a>
                     </div>
