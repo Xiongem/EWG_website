@@ -42,7 +42,7 @@ dbConnect();
                 <p>May the words flow easily for you while a part of the guild.</p>
                 <p>-- The Elsewhere Writers Guild Creator</p>
             </div>
-            <div class="elmo hide">
+            <div class="elmo">
                 <img src="../images/gifs/burn-elmo.gif">
             </div>
         </div>
