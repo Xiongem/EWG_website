@@ -36,10 +36,13 @@ dbConnect();
             <h1>Welcome to the Elsewhere Writers Guild</h1>
             <div class="about-content">
                 <p>Whether you're new to writing or you've written a thousand stories, you're always welcome in the guild.</p>
-                <p>Here we share our progress, encourage and uplift each other, or just take solace in the fact that we're not suffering the process of writing alone.</p>
-                <p>We weird. We write. We unite to fight the plots in our heads and torment our characters.</p>
+                <p>The guild exists as a way for writers to find external motivation while undergoing the arduous process of writing.</p>
+                <p>Here you can create projects, update your word count, and earn badges for your progress.</p>
+                <p>Right now the guild is small, but there are many ideas brewing for the future.</p>
+                <p>May the words flow easily for you while a part of the guild.</p>
+                <p>-- The Elsewhere Writers Guild Creator</p>
             </div>
-            <div class="elmo">
+            <div class="elmo hide">
                 <img src="../images/gifs/burn-elmo.gif">
             </div>
         </div>
