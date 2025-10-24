@@ -742,7 +742,7 @@ if (isset($_SESSION["user_id"])) {
             $displayPercentage = 0;
         }
 
-
+echo $intervals;
 //* increase or reset streak count
 if ($intervals == 1) {
     $streak = $streak + 1;
