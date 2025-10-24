@@ -733,7 +733,7 @@ if (isset($_SESSION["user_id"])) {
         } else {
             $displayTitle = "";
             $displayGenrePicture = "images/genre-covers/placeholder.webp";
-            $displayInfo = 'Click <a href="newProject.php">here</a> to create your first project!';
+            $displayInfo = 'Click <a href="newProject.php">here</a> to create a project!';
             $displayCount = "?";
             $displayGoal = "?";
             $displayDays = "?";
