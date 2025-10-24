@@ -39,7 +39,7 @@ if($_SESSION["conn"]->affected_rows) {
         Hello, 
         <br><br>
         A request was made to reset your password. <br>
-        Your password reset token will expire in 30 minutes. <br>
+        The reset link will expire in 30 minutes. <br>
         Click <a href="http://elsewherewriters.com/reset-password.php?token=$token">here</a> to reset your password.
         <br><br>
         If you did not make this request, please ignore this email or contact support at support@elsewherewriters.com.
