@@ -40,7 +40,7 @@ dbConnect();
                 <p>Here you can create projects, update your word count, and earn badges for your progress.</p>
                 <p>Right now the guild is small, but there are many ideas brewing for the future.</p>
                 <p>May the words flow easily for you while a part of the guild.</p>
-                <p>-- The Elsewhere Writers Guild Creator</p>
+                <p>-- The Elsewhere Writers Guild Developer</p>
             </div>
             <div class="elmo">
                 <img src="../images/gifs/burn-elmo.gif">
