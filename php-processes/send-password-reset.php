@@ -18,10 +18,10 @@ $token = bin2hex(random_bytes(16));
 $token_hash = hash("sha256", $token);
 $expiry = date("Y-m-d H:i:s",time() + 60 * 30);
 
-$sql = "SELECT username FROM users WHERE email=$email";
-        $result = $_SESSION["conn"]->query($sql);
-        $user = $result->fetch_assoc();
-            $username = $user["username"];
+// $sql = "SELECT username FROM users WHERE email=$email";
+//         $result = $_SESSION["conn"]->query($sql);
+//         $user = $result->fetch_assoc();
+//             $username = $user["username"];
 
 $sql = "UPDATE users SET reset_token_hash = ?, reset_token_expires_at = ? WHERE email = ?";
     $stmt = $_SESSION["conn"] -> prepare($sql);
@@ -36,7 +36,7 @@ if($_SESSION["conn"]->affected_rows) {
     $mail -> addAddress($email);
     $mail->Subject = "Password Reset";
     $mail -> Body = <<<END
-        Hello $username, 
+        Hello, 
         <br><br>
         A request was made to reset your password. <br>
         Your password reset token will expire in 30 minutes. <br>
