@@ -753,7 +753,7 @@ if ($intervals == 1) {
     $streak = $streak;
 }
 $update_date = date("Y-m-d");
-echo "Today's date:" $update_date;
+echo "Today's date:"."$update_date";
 //* Set Session Tokens
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
