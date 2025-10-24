@@ -48,6 +48,16 @@ dbConnect();
                     <p>Happy writing! - The Elsewhere Writers Guild Developer</p>
                 </div>
             </div>
+            <div class="announce-contents">
+                <h2>New Updates and Improvements</h2>
+                <div class="list-wrapper">
+                    <ul>
+                        <li>Users can now work on up to 5 projects at once</li>
+                        <li>Many badges have been automated and can be earned by making certain progress on projects</li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
             <div class="announce-contents hide">
                 <h2>No Announcements Yet</h2>
                 <img src="../images/pngs/hot-dog.png" class="spin">
