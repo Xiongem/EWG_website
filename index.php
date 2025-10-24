@@ -742,8 +742,8 @@ if (isset($_SESSION["user_id"])) {
             $displayPercentage = 0;
         }
 
-echo "Interval of: "."$intervals"."   ";
-echo "You have a streak of: "."$streak"."   ";
+echo "Interval of: "."$intervals"." |  ";
+echo "You have a streak of: "."$streak"." |  ";
 //* increase or reset streak count
 if ($intervals == 1) {
     $streak = $streak + 1;
