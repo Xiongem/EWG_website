@@ -1012,6 +1012,9 @@ if ($intervals == 1) {
     $fire = "on";
     $lost = "not";
 }
+if ($displayGoalDate == "0000-00-00") {
+    $lost = "lost";
+}
 
 $update_date = date("Y-m-d");
 // echo "Today's date: "."$update_date";
@@ -1415,7 +1418,7 @@ else {
                         </div>
                     </div>
                 </div>
-            <?php if ($displayGoalDate !== "0000-00-00" || $lost !== "lost") { ?>
+            <?php if ($lost !== "lost") { ?>
             <!-- //* Row Three -->
                 <div class="auto-row rows">
                     <!-- //* Full Streak-->
