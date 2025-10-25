@@ -455,7 +455,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                         }else{
                             echo $default6;
                         } ?>" id="hydra-slayer" class="badge pulse"
-                        onclick="checkToggle('hydra-slayer'); setTimeout(refresh, 400);">
+                        onclick="checkToggle('hydra-slayer');">
                         <div class="badgeToPopup" id="hydra-slayer-popup">
                             <h4>Hydra Slayer</h4>
                             <p>Slaying the hydra is no easy feat.<br>
@@ -538,6 +538,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
             switch(name) {
             case 'hydra-slayer':
                 toggleImage33();
+                setTimeout(refresh, 400);
                 break;
             case 'vet-guild':
                 toggleImage35();
