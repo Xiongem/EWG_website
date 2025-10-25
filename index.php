@@ -1010,7 +1010,6 @@ if (isset($_SESSION["user_id"])) {
 // echo "You have a streak of: "."$streak"." |  ";
 //* increase or reset streak count
 if ($startDate !== "0000-00-00") {
-    echo $update_date;
     if ($started >= 0) {
         if ($intervals == 1) {
             $streak = $streak + 1;
