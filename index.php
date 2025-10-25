@@ -1000,6 +1000,11 @@ if ($intervals == 1) {
     $fire = "off";
 } elseif ($intervals >= 2) {
     $streak = 1;
+    if ($project["on-track"] !== "lost") {
+        $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
+    }
 } else {
     $streak = $streak;
     $fire = "on";
@@ -1407,7 +1412,7 @@ else {
                         </div>
                     </div>
                 </div>
-            <?php if ($displayGoalDate !== "0000-00-00") { ?>
+            <?php if ($displayGoalDate !== "0000-00-00" || $project["every-streak"] !== "lost" || $project["on-track"] !== "lost") { ?>
             <!-- //* Row Three -->
                 <div class="auto-row rows">
                     <!-- //* Full Streak-->
