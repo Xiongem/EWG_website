@@ -47,7 +47,7 @@ $stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET `display`= ? W
 
 $stmt2 = $_SESSION["conn"] -> prepare("INSERT INTO current_project 
                         (username, genre, title, info, current_count, display, goal, `start_date`,  goal_date, daily_goal, current_state, users_id) 
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     //echo "stmt prepared"."<br>";
     //bind params
     $stmt1->bind_param("s",
