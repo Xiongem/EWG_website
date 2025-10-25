@@ -1010,22 +1010,44 @@ if (isset($_SESSION["user_id"])) {
 echo "Interval of: "."$intervals"." |  ";
 // echo "You have a streak of: "."$streak"." |  ";
 //* increase or reset streak count
-if ($intervals == 1) {
-    $streak = $streak + 1;
-    $fire = "off";
-    $lost = "not";
-} elseif ($intervals >= 2) {
-    $streak = 1;
-    if ($project["on-track"] !== "lost") {
-        $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
-            $stmt = $_SESSION["conn"]->prepare($sql);
-            $stmt->execute();
-    }
-    $lost = "lost";
+if ($startDate !== "0000-00-00") {
+    if ($started >= 0) {
+        if ($intervals == 1) {
+            $streak = $streak + 1;
+            $fire = "off";
+            $lost = "not";
+        } elseif ($intervals >= 2) {
+            $streak = 1;
+            if ($project["on-track"] !== "lost") {
+                $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
+            }
+            $lost = "lost";
+        } else {
+            $streak = $streak;
+            $fire = "on";
+            $lost = "not";
+        }
+    } 
 } else {
-    $streak = $streak;
-    $fire = "on";
-    $lost = "not";
+    if ($intervals == 1) {
+        $streak = $streak + 1;
+        $fire = "off";
+        $lost = "not";
+    } elseif ($intervals >= 2) {
+        $streak = 1;
+        if ($project["on-track"] !== "lost") {
+            $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                $stmt = $_SESSION["conn"]->prepare($sql);
+                $stmt->execute();
+        }
+        $lost = "lost";
+    } else {
+        $streak = $streak;
+        $fire = "on";
+        $lost = "not";
+    }
 }
 if ($displayGoalDate == "0000-00-00") {
     $lost = "lost";
