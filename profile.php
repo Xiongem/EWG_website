@@ -66,12 +66,11 @@ if ($result->num_rows > 0) {
             $title = $project["title"];
             $info = $project["info"];
     }}
-} 
-// else {
-//     $genre_picture = "images/genre-covers/placeholder.webp";
-//     $title = "";
-//     $info = 'Click <a href="newProject.php">here</a> to create your first project!'
-// }
+} else {
+    $genre_picture = "images/genre-covers/placeholder.webp";
+    $title = "";
+    $info = 'Click <a href="newProject.php">here</a> to create your first project!'
+}
     
     //? Badges
     //! Auto Badges
