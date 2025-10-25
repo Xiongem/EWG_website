@@ -616,6 +616,7 @@ if (isset($_SESSION["user_id"])) {
                 
 
                 if ($startDate !== "0000-00-00") {
+                    echo "I should be here";
                 //* Math to decide if project start date has been reached
                 $start_date = strtotime($startDate);
                 $todayDate = time();
