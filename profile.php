@@ -1,8 +1,8 @@
 <?php
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
-// ini_set('log_errors', 'On');
-// ini_set('error_log', '/path/to/php_errors.log');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 'On');
+ini_set('error_log', '/path/to/php_errors.log');
 
 
 ob_start();
@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
         $title = $project["title"];
         $info = $project["info"];
 
-        
+
     $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
     if ($result->num_rows > 1) {
