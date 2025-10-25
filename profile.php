@@ -45,7 +45,7 @@ $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_st
 
 $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
 $result = $_SESSION["conn"]->query($sql);
-if ($result->num_rows > 2) {
+if ($result->num_rows > 1) {
     echo "I shouldn't be here";
     while ($display = $result->fetch_assoc()) {
 
