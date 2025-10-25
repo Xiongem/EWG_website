@@ -1030,7 +1030,7 @@ if ($startDate !== "0000-00-00") {
             $lost = "not";
         }
     } else {
-        $lost = "lost";
+        $fire = "off";
     }
 } else {
     if ($intervals == 1) {
