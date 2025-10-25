@@ -1,11 +1,13 @@
 <?php
-if (isset($_POST['newGoal'])&& isset($_POST['goalDate'])) {
+if (isset($_POST['newGoal']) && isset($_POST['startDate'] && isset($_POST['goalDate'])) {
     $goal = $_POST["newGoal"];
+    $startDate = $_POST["startDate"];
     $goalDate = $_POST["goalDate"];
 
-    $now = time();
-    $your_date = strtotime($goalDate);
-    $datediff = $your_date - $now;
+    // $now = time();
+    $start_date = strtotime($startDate);
+    $end_date = strtotime($goalDate);
+    $datediff = $end_date  - $start_date;
     $interval = round($datediff / (60 * 60 * 24));
 
     $recommend = round($goal / $interval);

@@ -13,6 +13,8 @@ $userID = $_SESSION["user_id"];
 
 $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
+
+$today = date("Y-m-d");
 ?>
 
 <!DOCTYPE html>
@@ -84,6 +86,8 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
                     <label for="goalNumber">Goal Number</label>
                     <input class="input" type="text" name="goalNumber" id="goalNumber" pattern="^\d+(,\d+)?$"
                         placeholder="50,000">
+                    <label for="startDate">Start Date</label>
+                    <input class="input" type="date" name="startDate" id="startDate" value="<?=$today?>">
                     <label for="endDate">End Date</label>
                     <input class="input" type="date" name="endDate" id="endDate" onchange="findDailyGoal()">
                         <div class="checkbox-wrapper">
@@ -170,6 +174,7 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
             type: 'post',
             url: 'php-processes/math',
             data: {
+                startDate: startDate,
                 newGoal: newGoal,
                 goalDate: goalDate,
             },

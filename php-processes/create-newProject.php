@@ -23,7 +23,7 @@ $goal = $_POST["goalNumber"];
 $date = $_POST["endDate"];
 $dailyGoal = $_POST["dailyGoal"];
 $current_state = "current";
-$display = "inactive";
+$display = "active";
 
 // echo"$username, $genre, $title, $info, $current_count, $goal, $date, $dailyGoal"."<br>";
 
@@ -43,12 +43,16 @@ if( is_numeric( $newDailyGoal ) ) {
     $dailyGoal = $newDailyGoal;
 }
 
-$stmt = $_SESSION["conn"] -> prepare("INSERT INTO current_project 
-                        (username, genre, title, info, current_count, display, goal, goal_date, daily_goal, current_state, users_id) 
+$stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET `display`= ? WHERE `users_id`= $userID AND display='active';");
+
+$stmt2 = $_SESSION["conn"] -> prepare("INSERT INTO current_project 
+                        (username, genre, title, info, current_count, display, goal, `start_date`,  goal_date, daily_goal, current_state, users_id) 
                         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     //echo "stmt prepared"."<br>";
     //bind params
-    $stmt->bind_param("ssssisisisi",
+    $stmt1->bind_param("s",
+                        $notActive);
+    $stmt2->bind_param("ssssisissisi",
                         $username,
                         $_POST["genre"],
                         $_POST["title"],
@@ -56,13 +60,14 @@ $stmt = $_SESSION["conn"] -> prepare("INSERT INTO current_project
                         $current_count,
                         $display,
                         $goal,
+                        $_POST["startDate"],
                         $_POST["endDate"],
                         $dailyGoal,
                         $current_state,
                         $_SESSION["user_id"]);
         //echo "params bound"."<br>";
 //execute statement
-if ($stmt -> execute()) {
+if ($stmt1 -> execute() && $stmt2 -> execute()) {
     header("Location: /index.php");
         exit;
     } else {
