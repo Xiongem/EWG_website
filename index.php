@@ -622,6 +622,7 @@ if (isset($_SESSION["user_id"])) {
                 $datedifference = $todayDate - $start_date;
                 $started = round($datedifference / (60 * 60 * 24));
                 if ($started >= 0) {
+                    echo "I should be here";
                     //? STREAK BADGES
                     $nows = time();
                     $your_dates = strtotime($update_date);
