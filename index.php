@@ -1030,6 +1030,7 @@ if ($intervals == 1) {
 if ($displayGoalDate == "0000-00-00") {
     $lost = "lost";
 }
+echo $displayGoalDate;
 echo $fire;
 echo $lost;
 
