@@ -997,11 +997,14 @@ if (isset($_SESSION["user_id"])) {
 //* increase or reset streak count
 if ($intervals == 1) {
     $streak = $streak + 1;
+    $fire = "off";
 } elseif ($intervals >= 2) {
     $streak = 1;
 } else {
     $streak = $streak;
+    $fire = "on";
 }
+
 $update_date = date("Y-m-d");
 // echo "Today's date: "."$update_date";
 //* Set Session Tokens
@@ -1208,6 +1211,7 @@ else {
             <h1>Project Progress</h1>
             <div class="progress-bar">
                 <div class="border"></div>
+                <img class="streak-fire" src="images/streak-<?=$fire?>.webp">
                 <div id="percentage" class="percentage clickable" style="width: <?= $displayProgress ?>%;"></div>
             </div>
             <div class="progress-info-wrapper">
