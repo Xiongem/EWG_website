@@ -519,7 +519,6 @@ $default10 = "images/badges/tears-alltime-mono.webp";
     var badgeToggle = document.getElementById("badgeEdit");
     function clickCheckbox() {
         var badgeToggle = document.getElementById("badgeEdit");
-        console.log(badgeToggle.value);
         if (badgeToggle.value == "off") {
             badgeToggle.value = "on";
             console.log(badgeToggle.value);
