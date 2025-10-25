@@ -193,9 +193,9 @@ if (isset($_SESSION["user_id"])) {
                             $badge9 = "images/badges/streak-twentyOne-color.webp";
                         }
                         //* Full Streak Math
-                        $created_date = strtotime($created);
+                        // $created_date = strtotime($created);
                         $endDate = strtotime($displayGoalDate);
-                        $totalDays = $endDate - $created_date;
+                        $totalDays = $endDate - $start_date;
                         $streakMath = round($totalDays / (60 * 60 * 24));
                         $streakMath = $streakMath + 1;
                         //* Every Streak
