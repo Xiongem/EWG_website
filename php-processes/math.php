@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['newGoal']) && isset($_POST['startDate'] && isset($_POST['goalDate'])) {
+if (isset($_POST['newGoal']) && isset($_POST['goalDate'])) {
     $goal = $_POST["newGoal"];
     $startDate = $_POST["startDate"];
     $goalDate = $_POST["goalDate"];
