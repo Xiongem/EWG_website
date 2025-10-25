@@ -36,7 +36,6 @@ $user = $result->fetch_assoc();
 $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
 if ($result->num_rows > 1) {
-    echo "I shouldn't be here";
     while ($display = $result->fetch_assoc()) {
 
     //* if user has selected a project to be active from project selection
@@ -52,8 +51,6 @@ if ($result->num_rows > 1) {
             $title = $project["title"];
             $info = $project["info"];
     }}
-    // $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
-    // $result = $_SESSION["conn"]->query($sql);
 } elseif ($result->num_rows = 1) {
     $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
