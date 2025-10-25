@@ -1007,10 +1007,11 @@ if (isset($_SESSION["user_id"])) {
             $displayPercentage = 0;
         }
 
-echo "Interval of: "."$intervals"." |  ";
+// echo "Interval of: "."$intervals"." |  ";
 // echo "You have a streak of: "."$streak"." |  ";
 //* increase or reset streak count
 if ($startDate !== "0000-00-00") {
+    echo "I should be here";
     if ($started >= 0) {
         if ($intervals == 1) {
             $streak = $streak + 1;
@@ -1031,6 +1032,7 @@ if ($startDate !== "0000-00-00") {
         }
     } 
 } else {
+    echo "I should not be here";
     if ($intervals == 1) {
         $streak = $streak + 1;
         $fire = "off";
