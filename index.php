@@ -140,7 +140,6 @@ if (isset($_SESSION["user_id"])) {
                 $datedifference = $todayDate - $start_date;
                 $started = round($datedifference / (60 * 60 * 24));
                 if ($started >= 0) {
-                    echo "I should be here";
                     //? STREAK BADGES
                     $nows = time();
                     $your_dates = strtotime($update_date);
@@ -1011,7 +1010,7 @@ if (isset($_SESSION["user_id"])) {
 // echo "You have a streak of: "."$streak"." |  ";
 //* increase or reset streak count
 if ($startDate !== "0000-00-00") {
-    echo $intervals;
+    echo $update_date;
     if ($started >= 0) {
         if ($intervals == 1) {
             $streak = $streak + 1;
