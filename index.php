@@ -135,8 +135,8 @@ if (isset($_SESSION["user_id"])) {
                     
 
                     $start_date = strtotime($startDate);
-                    $end_date = strtotime($update_date);
-                    $datedifference = $start_date - $end_date;
+                    $todayDate = time();
+                    $datedifference = $start_date - $todayDate;
                     $started = round($datedifference / (60 * 60 * 24));
                     echo $started;
 
