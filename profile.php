@@ -498,7 +498,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                 <div class="slider-container">
                     <i class="fa fa-lock" alt="lock icon"></i>
                     <label class="switch">
-                        <input type="checkbox" id="badgeEdit" onclick="disableBadgePopups()">
+                        <input type="checkbox" id="badgeEdit" onclick="clickCheckbox()">
                         <span class="slider round"></span>
                     </label>
                     <i class="fa fa-unlock" alt="unlocked icon"></i>
@@ -519,6 +519,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
     var badgeToggle = document.getElementById("badgeEdit");
     function clickCheckbox() {
         var badgeToggle = document.getElementById("badgeEdit");
+        console.log(badgeToggle.value);
         if (badgeToggle.value == "off") {
             badgeToggle.value = "on";
             console.log(badgeToggle.value);
