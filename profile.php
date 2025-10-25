@@ -519,14 +519,14 @@ $default10 = "images/badges/tears-alltime-mono.webp";
     var badgeToggle = document.getElementById("badgeEdit");
     function clickCheckbox() {
         var badgeToggle = document.getElementById("badgeEdit");
-        console.log(badgeToggle.value);
-        // if (badgeToggle.value == "off") {
-        //     badgeToggle.value = "on";
-        //     console.log(badgeToggle.value);
-        // }else if (badgeToggle.value == "on") {
-        //     badgeToggle.value = "off";
-        //     console.log(badgeToggle.value);
-        // }
+        // console.log(badgeToggle.value);
+        if (badgeToggle.value == "off") {
+            badgeToggle.value = "on";
+            console.log(badgeToggle.value);
+        }else if (badgeToggle.value == "on") {
+            badgeToggle.value = "off";
+            console.log(badgeToggle.value);
+        }
         
     }
     //* calls correct image toggle function for ajax
