@@ -24,6 +24,7 @@ $date = $_POST["endDate"];
 $dailyGoal = $_POST["dailyGoal"];
 $current_state = "current";
 $display = "active";
+$notActive = "inactive";
 
 // echo"$username, $genre, $title, $info, $current_count, $goal, $date, $dailyGoal"."<br>";
 
@@ -43,7 +44,7 @@ if( is_numeric( $newDailyGoal ) ) {
     $dailyGoal = $newDailyGoal;
 }
 
-$stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET `display`= ? WHERE `users_id`= $userID AND display='active';");
+$stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET `display`=? WHERE `users_id`= $userID AND display='active';");
 
 $stmt2 = $_SESSION["conn"] -> prepare("INSERT INTO current_project 
                         (username, genre, title, info, current_count, display, goal, `start_date`,  goal_date, daily_goal, current_state, users_id) 
