@@ -498,7 +498,7 @@ $default10 = "images/badges/tears-alltime-mono.webp";
                 <div class="slider-container">
                     <i class="fa fa-lock" alt="lock icon"></i>
                     <label class="switch">
-                        <input type="checkbox" id="badgeEdit" onclick="clickCheckbox()">
+                        <input type="checkbox" id="badgeEdit" value="off" onclick="clickCheckbox()">
                         <span class="slider round"></span>
                     </label>
                     <i class="fa fa-unlock" alt="unlocked icon"></i>
