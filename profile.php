@@ -49,25 +49,25 @@ if ($result->num_rows > 0) {
 
     // $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
     // $result = $_SESSION["conn"]->query($sql);
-} 
-// elseif ($result->num_rows > 1) {
-//     echo "I shouldn't be here";
-//     while ($display = $result->fetch_assoc()) {
+} elseif ($result->num_rows > 1) {
+    echo "I shouldn't be here";
+    while ($display = $result->fetch_assoc()) {
 
-//     //* if user has selected a project to be active from project selection
-//     if (in_array("active", $display)) { 
-//     //* Pull active project info
-//     $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current' AND display='active'";
-//         $result = $_SESSION["conn"]->query($sql);
-//         $project = $result->fetch_assoc();
-//             $projectID = $project["id"];
-//             $genre = $project["genre"];
-//             $projectCreatorID = $project["users_id"];
-//             $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
-//             $title = $project["title"];
-//             $info = $project["info"];
-//     }}
-// } else {
+    //* if user has selected a project to be active from project selection
+    if (in_array("active", $display)) { 
+    //* Pull active project info
+    $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current' AND display='active'";
+        $result = $_SESSION["conn"]->query($sql);
+        $project = $result->fetch_assoc();
+            $projectID = $project["id"];
+            $genre = $project["genre"];
+            $projectCreatorID = $project["users_id"];
+            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
+            $title = $project["title"];
+            $info = $project["info"];
+    }}
+} 
+// else {
 //     $genre_picture = "images/genre-covers/placeholder.webp";
 //     $title = "";
 //     $info = 'Click <a href="newProject.php">here</a> to create your first project!'
