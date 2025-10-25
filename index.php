@@ -1018,12 +1018,12 @@ if ($startDate !== "0000-00-00") {
             $lost = "not";
         } elseif ($intervals >= 2) {
             $streak = 1;
-            if ($project["on-track"] !== "lost") {
+            if ($project["on-track"] !== "lost" && $update_date !== "0000-00-00") {
                 $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                     $stmt = $_SESSION["conn"]->prepare($sql);
                     $stmt->execute();
+                $lost = "lost";
             }
-            $lost = "lost";
         } else {
             $streak = $streak;
             $fire = "on";
@@ -1038,12 +1038,12 @@ if ($startDate !== "0000-00-00") {
         $lost = "not";
     } elseif ($intervals >= 2) {
         $streak = 1;
-        if ($project["on-track"] !== "lost") {
+        if ($project["on-track"] !== "lost" && $update_date !== "0000-00-00") {
             $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                 $stmt = $_SESSION["conn"]->prepare($sql);
                 $stmt->execute();
+            $lost = "lost";
         }
-        $lost = "lost";
     } else {
         $streak = $streak;
         $fire = "on";
