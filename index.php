@@ -1005,6 +1005,7 @@ if ($intervals == 1) {
             $stmt = $_SESSION["conn"]->prepare($sql);
             $stmt->execute();
     }
+    $lost = "lost";
 } else {
     $streak = $streak;
     $fire = "on";
@@ -1412,7 +1413,7 @@ else {
                         </div>
                     </div>
                 </div>
-            <?php if ($displayGoalDate !== "0000-00-00" || $project["every-streak"] !== "lost" || $project["on-track"] !== "lost") { ?>
+            <?php if ($displayGoalDate !== "0000-00-00" || $lost !== "lost") { ?>
             <!-- //* Row Three -->
                 <div class="auto-row rows">
                     <!-- //* Full Streak-->
