@@ -1023,6 +1023,7 @@ if ($startDate !== "0000-00-00") {
                     $stmt->execute();
                 $lost = "lost";
             }
+            $fire = "off";
         } else {
             $streak = $streak;
             $fire = "on";
