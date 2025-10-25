@@ -33,7 +33,10 @@ $user = $result->fetch_assoc();
             $pfp_set = "images/pfp-icon.webp";
         }
 
-$sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current'";
+$sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
+    $result = $_SESSION["conn"]->query($sql);
+if ($result->num_rows > 0) {
+    $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
     $project = $result->fetch_assoc();
         $projectID = $project["id"];
@@ -42,8 +45,8 @@ $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_st
         $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
         $title = $project["title"];
         $info = $project["info"];
-        echo $projectID;
-if ($result->num_rows > 0) {
+
+        
     $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
     if ($result->num_rows > 1) {
