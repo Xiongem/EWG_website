@@ -622,7 +622,6 @@ if (isset($_SESSION["user_id"])) {
                 $todayDate = time();
                 $datedifference = $todayDate - $start_date;
                 $started = round($datedifference / (60 * 60 * 24));
-                echo $started;
                 if ($started >= 0) {
                     //? STREAK BADGES
                     $nows = time();
@@ -1031,6 +1030,8 @@ if ($intervals == 1) {
 if ($displayGoalDate == "0000-00-00") {
     $lost = "lost";
 }
+echo $fire;
+echo $lost;
 
 $update_date = date("Y-m-d");
 // echo "Today's date: "."$update_date";
