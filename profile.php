@@ -35,244 +35,245 @@ $user = $result->fetch_assoc();
 
 $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
-if ($result->num_rows > 0) {
-    $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current'";
-    $result = $_SESSION["conn"]->query($sql);
-    $project = $result->fetch_assoc();
-        $projectID = $project["id"];
-        $genre = $project["genre"];
-        $projectCreatorID = $project["users_id"];
-        $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
-        $title = $project["title"];
-        $info = $project["info"];
+    print_r($result);
+// if ($result->num_rows > 0) {
+//     $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current'";
+//     $result = $_SESSION["conn"]->query($sql);
+//     $project = $result->fetch_assoc();
+//         $projectID = $project["id"];
+//         $genre = $project["genre"];
+//         $projectCreatorID = $project["users_id"];
+//         $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
+//         $title = $project["title"];
+//         $info = $project["info"];
 
 
-    // $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
-    // $result = $_SESSION["conn"]->query($sql);
-} elseif ($result->num_rows > 1) {
-    echo "I shouldn't be here";
-    while ($display = $result->fetch_assoc()) {
+//     // $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
+//     // $result = $_SESSION["conn"]->query($sql);
+// } elseif ($result->num_rows > 1) {
+//     echo "I shouldn't be here";
+//     while ($display = $result->fetch_assoc()) {
 
-    //* if user has selected a project to be active from project selection
-    if (in_array("active", $display)) { 
-    //* Pull active project info
-    $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current' AND display='active'";
-        $result = $_SESSION["conn"]->query($sql);
-        $project = $result->fetch_assoc();
-            $projectID = $project["id"];
-            $genre = $project["genre"];
-            $projectCreatorID = $project["users_id"];
-            $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
-            $title = $project["title"];
-            $info = $project["info"];
-    }}
-} else {
-    $genre_picture = "images/genre-covers/placeholder.webp";
-    $title = "";
-    $info = 'Click <a href="newProject.php">here</a> to create your first project!'
-}
+//     //* if user has selected a project to be active from project selection
+//     if (in_array("active", $display)) { 
+//     //* Pull active project info
+//     $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current' AND display='active'";
+//         $result = $_SESSION["conn"]->query($sql);
+//         $project = $result->fetch_assoc();
+//             $projectID = $project["id"];
+//             $genre = $project["genre"];
+//             $projectCreatorID = $project["users_id"];
+//             $genre_picture = 'images/genre-covers/genre-covers'.$genre.'.webp';
+//             $title = $project["title"];
+//             $info = $project["info"];
+//     }}
+// } else {
+//     $genre_picture = "images/genre-covers/placeholder.webp";
+//     $title = "";
+//     $info = 'Click <a href="newProject.php">here</a> to create your first project!'
+// }
     
-    //? Badges
-    //! Auto Badges
-    //* Completed One Project
-    $badge1 = $user["complete-one-project"];
-        if ($userID == $profileID) {
-            if ($completed >= 1) {
-                if ($badge1 !== "unlocked") {
-                    $sql = "UPDATE users SET `complete-one-project`= 'unlocked' WHERE id=$profileID";
-                        $stmt = $_SESSION["conn"]->prepare($sql);
-                        $stmt->execute();
-                }
-                $badge1 = "images/badges/complete-one-project-color.webp";
-            } elseif ($completed < 1) {
-                if ($badge1 == "unlocked") {
-                    $sql = "UPDATE users SET `complete-one-project`= 'locked' WHERE id=$profileID";
-                        $stmt = $_SESSION["conn"]->prepare($sql);
-                        $stmt->execute();
-                }
-                $badge1 = "images/badges/complete-one-project-mono.webp";
-            }
-        } else {
-            if ($badge1 == "unlocked") {
-                $badge1 = "images/badges/complete-one-project-color.webp";
-            } elseif ($badge1 == "locked") {
-                $badge1 = "images/badges/complete-one-project-mono.webp";
-            }
-        }
-    //* Completed 5 Projects
-    $badge2 = $user["complete-five-project"];
-        if ($userID == $profileID) {
-            if ($completed >= 5) {
-                if ($badge2 !== "unlocked") {
-                    $sql = "UPDATE users SET `complete-five-project`= 'unlocked' WHERE id=$profileID";
-                        $stmt = $_SESSION["conn"]->prepare($sql);
-                        $stmt->execute();
-                }
-                $badge2 = "images/badges/complete-five-project-color.webp";
-            } elseif ($completed < 5) {
-                if ($badge2 == "unlocked") {
-                    $sql = "UPDATE users SET `complete-five-project`= 'locked' WHERE id=$profileID";
-                        $stmt = $_SESSION["conn"]->prepare($sql);
-                        $stmt->execute();
-                }
-                $badge2 = "images/badges/complete-five-project-mono.webp";
-            }
-        } else {
-            if ($badge2 == "unlocked") {
-                $badge2 = "images/badges/complete-five-project-color.webp";
-            } elseif ($badge2 == "locked") {
-                $badge2 = "images/badges/complete-five-project-mono.webp";
-            }
-        }
-    //* Completed 10 Projects
-    $badge3 = $user["complete-ten-project"];
-        if ($userID == $profileID) {
-            if ($completed >= 10) {
-                if ($badge3 !== "unlocked") {
-                    $sql = "UPDATE users SET `complete-ten-project`= 'unlocked' WHERE id=$profileID";
-                        $stmt = $_SESSION["conn"]->prepare($sql);
-                        $stmt->execute();
-                }
-                $badge3 = "images/badges/complete-ten-project-color.webp";
-            } elseif ($completed < 10) {
-                if ($badge3 == "unlocked") {
-                    $sql = "UPDATE users SET `complete-ten-project`= 'locked' WHERE id=$profileID";
-                        $stmt = $_SESSION["conn"]->prepare($sql);
-                        $stmt->execute();
-                }
-                $badge3 = "images/badges/complete-ten-project-mono.webp";
-            }
-        } else {
-            if ($badge3 == "unlocked") {
-                $badge3 = "images/badges/complete-ten-project-color.webp";
-            } elseif ($badge3 == "locked") {
-                $badge3 = "images/badges/complete-ten-project-mono.webp";
-            }
-        }
-    //* Streak Fiend
-    $sql = "SELECT id FROM current_project WHERE users_id='$profileID' AND `every-streak`='unlocked'";
-        $result = $_SESSION["conn"]->query($sql);
-        $badge4 = $user["streak-fiend"];
-        if ($result->num_rows >= 1) {
-            if ($badge4 == "locked") {
-                $sql = "UPDATE users SET `streak-fiend`= 'unlocked' WHERE id=$profileID";
-                    $stmt = $_SESSION["conn"]->prepare($sql);
-                    $stmt->execute();
-            }
-        $badge4 = "images/badges/streak-fiend-color.webp";
-    } else {
-        // echo "not in array";
-        if ($badge4 == "unlocked") {
-            $sql = "UPDATE users SET `streak-fiend`= 'locked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
-        }
-        $badge4 = "images/badges/streak-fiend-mono.webp";
-    }
-    //* Vet Streaker
-    $sql = "SELECT id FROM current_project WHERE users_id='$profileID' AND `every-streak`='unlocked'";
-        $result = $_SESSION["conn"]->query($sql);
-        $badge5 = $user["vet-streaker"];
-        if ($result->num_rows >= 2) {
-            if ($badge5 == "locked") {
-                $sql = "UPDATE users SET `vet-streaker`= 'unlocked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
-            }
-            $badge5 = "images/badges/vet-streaker-color.webp";
-        } else {
-            if ($badge5 == "unlocked") {
-                $sql = "UPDATE users SET `vet-streaker`= 'locked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
-            }
-            $badge5 = "images/badges/vet-streaker-mono.webp";
-        }
-    //* Start First Project
-    $sql = "SELECT id FROM current_project WHERE users_id='$profileID'";
-        $results = $_SESSION["conn"]->query($sql);
-    if ($results->num_rows >= 1) {
-        $badge8 = $user["start-first-project"];
-        if ($badge8 == "locked") {
-            $sql = "UPDATE users SET `start-first-project`= 'unlocked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
-        }
-        $badge8 = "images/badges/start-first-project-color.webp";
-    } else {
-        $badge8 = "images/badges/start-first-project-mono.webp";
-    }
-    //* Alltime Tears
-    $sql = "SELECT `tears-wept` FROM current_project WHERE users_id='$profileID'";
-        $result = $_SESSION["conn"]->query($sql);
-        $tears = $result->fetch_assoc();
-    if ($tears) {
-        if (in_array("unlocked", $tears)) {
-        $badge10 = $user["tears-alltime"];
-        if ($badge10 == "locked") {
-            $sql = "UPDATE users SET `tears-alltime`= 'unlocked' WHERE id=$profileID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
-        }
-        $badge10 = "images/badges/tears-alltime-color.webp";
-        } else {
-            if ($badge10 == "unlocked") {
-                $sql = "UPDATE users SET `tears-alltime`= 'locked' WHERE id=$profileID";
-                    $stmt = $_SESSION["conn"]->prepare($sql);
-                    $stmt->execute();
-            }
-            $badge10 = "images/badges/tears-alltime-mono.webp";
-        }
-    }
+//     //? Badges
+//     //! Auto Badges
+//     //* Completed One Project
+//     $badge1 = $user["complete-one-project"];
+//         if ($userID == $profileID) {
+//             if ($completed >= 1) {
+//                 if ($badge1 !== "unlocked") {
+//                     $sql = "UPDATE users SET `complete-one-project`= 'unlocked' WHERE id=$profileID";
+//                         $stmt = $_SESSION["conn"]->prepare($sql);
+//                         $stmt->execute();
+//                 }
+//                 $badge1 = "images/badges/complete-one-project-color.webp";
+//             } elseif ($completed < 1) {
+//                 if ($badge1 == "unlocked") {
+//                     $sql = "UPDATE users SET `complete-one-project`= 'locked' WHERE id=$profileID";
+//                         $stmt = $_SESSION["conn"]->prepare($sql);
+//                         $stmt->execute();
+//                 }
+//                 $badge1 = "images/badges/complete-one-project-mono.webp";
+//             }
+//         } else {
+//             if ($badge1 == "unlocked") {
+//                 $badge1 = "images/badges/complete-one-project-color.webp";
+//             } elseif ($badge1 == "locked") {
+//                 $badge1 = "images/badges/complete-one-project-mono.webp";
+//             }
+//         }
+//     //* Completed 5 Projects
+//     $badge2 = $user["complete-five-project"];
+//         if ($userID == $profileID) {
+//             if ($completed >= 5) {
+//                 if ($badge2 !== "unlocked") {
+//                     $sql = "UPDATE users SET `complete-five-project`= 'unlocked' WHERE id=$profileID";
+//                         $stmt = $_SESSION["conn"]->prepare($sql);
+//                         $stmt->execute();
+//                 }
+//                 $badge2 = "images/badges/complete-five-project-color.webp";
+//             } elseif ($completed < 5) {
+//                 if ($badge2 == "unlocked") {
+//                     $sql = "UPDATE users SET `complete-five-project`= 'locked' WHERE id=$profileID";
+//                         $stmt = $_SESSION["conn"]->prepare($sql);
+//                         $stmt->execute();
+//                 }
+//                 $badge2 = "images/badges/complete-five-project-mono.webp";
+//             }
+//         } else {
+//             if ($badge2 == "unlocked") {
+//                 $badge2 = "images/badges/complete-five-project-color.webp";
+//             } elseif ($badge2 == "locked") {
+//                 $badge2 = "images/badges/complete-five-project-mono.webp";
+//             }
+//         }
+//     //* Completed 10 Projects
+//     $badge3 = $user["complete-ten-project"];
+//         if ($userID == $profileID) {
+//             if ($completed >= 10) {
+//                 if ($badge3 !== "unlocked") {
+//                     $sql = "UPDATE users SET `complete-ten-project`= 'unlocked' WHERE id=$profileID";
+//                         $stmt = $_SESSION["conn"]->prepare($sql);
+//                         $stmt->execute();
+//                 }
+//                 $badge3 = "images/badges/complete-ten-project-color.webp";
+//             } elseif ($completed < 10) {
+//                 if ($badge3 == "unlocked") {
+//                     $sql = "UPDATE users SET `complete-ten-project`= 'locked' WHERE id=$profileID";
+//                         $stmt = $_SESSION["conn"]->prepare($sql);
+//                         $stmt->execute();
+//                 }
+//                 $badge3 = "images/badges/complete-ten-project-mono.webp";
+//             }
+//         } else {
+//             if ($badge3 == "unlocked") {
+//                 $badge3 = "images/badges/complete-ten-project-color.webp";
+//             } elseif ($badge3 == "locked") {
+//                 $badge3 = "images/badges/complete-ten-project-mono.webp";
+//             }
+//         }
+//     //* Streak Fiend
+//     $sql = "SELECT id FROM current_project WHERE users_id='$profileID' AND `every-streak`='unlocked'";
+//         $result = $_SESSION["conn"]->query($sql);
+//         $badge4 = $user["streak-fiend"];
+//         if ($result->num_rows >= 1) {
+//             if ($badge4 == "locked") {
+//                 $sql = "UPDATE users SET `streak-fiend`= 'unlocked' WHERE id=$profileID";
+//                     $stmt = $_SESSION["conn"]->prepare($sql);
+//                     $stmt->execute();
+//             }
+//         $badge4 = "images/badges/streak-fiend-color.webp";
+//     } else {
+//         // echo "not in array";
+//         if ($badge4 == "unlocked") {
+//             $sql = "UPDATE users SET `streak-fiend`= 'locked' WHERE id=$profileID";
+//                 $stmt = $_SESSION["conn"]->prepare($sql);
+//                 $stmt->execute();
+//         }
+//         $badge4 = "images/badges/streak-fiend-mono.webp";
+//     }
+//     //* Vet Streaker
+//     $sql = "SELECT id FROM current_project WHERE users_id='$profileID' AND `every-streak`='unlocked'";
+//         $result = $_SESSION["conn"]->query($sql);
+//         $badge5 = $user["vet-streaker"];
+//         if ($result->num_rows >= 2) {
+//             if ($badge5 == "locked") {
+//                 $sql = "UPDATE users SET `vet-streaker`= 'unlocked' WHERE id=$profileID";
+//                 $stmt = $_SESSION["conn"]->prepare($sql);
+//                 $stmt->execute();
+//             }
+//             $badge5 = "images/badges/vet-streaker-color.webp";
+//         } else {
+//             if ($badge5 == "unlocked") {
+//                 $sql = "UPDATE users SET `vet-streaker`= 'locked' WHERE id=$profileID";
+//                 $stmt = $_SESSION["conn"]->prepare($sql);
+//                 $stmt->execute();
+//             }
+//             $badge5 = "images/badges/vet-streaker-mono.webp";
+//         }
+//     //* Start First Project
+//     $sql = "SELECT id FROM current_project WHERE users_id='$profileID'";
+//         $results = $_SESSION["conn"]->query($sql);
+//     if ($results->num_rows >= 1) {
+//         $badge8 = $user["start-first-project"];
+//         if ($badge8 == "locked") {
+//             $sql = "UPDATE users SET `start-first-project`= 'unlocked' WHERE id=$profileID";
+//                 $stmt = $_SESSION["conn"]->prepare($sql);
+//                 $stmt->execute();
+//         }
+//         $badge8 = "images/badges/start-first-project-color.webp";
+//     } else {
+//         $badge8 = "images/badges/start-first-project-mono.webp";
+//     }
+//     //* Alltime Tears
+//     $sql = "SELECT `tears-wept` FROM current_project WHERE users_id='$profileID'";
+//         $result = $_SESSION["conn"]->query($sql);
+//         $tears = $result->fetch_assoc();
+//     if ($tears) {
+//         if (in_array("unlocked", $tears)) {
+//         $badge10 = $user["tears-alltime"];
+//         if ($badge10 == "locked") {
+//             $sql = "UPDATE users SET `tears-alltime`= 'unlocked' WHERE id=$profileID";
+//                 $stmt = $_SESSION["conn"]->prepare($sql);
+//                 $stmt->execute();
+//         }
+//         $badge10 = "images/badges/tears-alltime-color.webp";
+//         } else {
+//             if ($badge10 == "unlocked") {
+//                 $sql = "UPDATE users SET `tears-alltime`= 'locked' WHERE id=$profileID";
+//                     $stmt = $_SESSION["conn"]->prepare($sql);
+//                     $stmt->execute();
+//             }
+//             $badge10 = "images/badges/tears-alltime-mono.webp";
+//         }
+//     }
 
 
-    //! Toggleable badges
-    //* Hydra Slayer
-    $badge6 = $user["hydra-slayer"];
-        if ($badge6 == "unlocked") {
-            $badge6 = "images/badges/hydra-slayer-color.webp";
-        } elseif ($badge6 == "locked") {
-            $badge6 = "images/badges/hydra-slayer-mono.webp";
-        }
-    //* Vet Guild
-    $badge7 = $user["vet-guild"];
-        if ($badge7 == "unlocked") {
-            $badge7 = "images/badges/vet-guild-color.webp";
-        } elseif ($badge7 == "locked") {
-            $badge7 = "images/badges/vet-guild-mono.webp";
-        }
-    //* Spicy Spicy
-    $badge9 = $user["spicy-spicy"];
-        if ($badge9 == "unlocked") {
-            $badge9 = "images/badges/spicy-spicy-color.webp";
-        } elseif ($badge9 == "locked") {
-            $badge9 = "images/badges/spicy-spicy-mono.webp";
-        }
+//     //! Toggleable badges
+//     //* Hydra Slayer
+//     $badge6 = $user["hydra-slayer"];
+//         if ($badge6 == "unlocked") {
+//             $badge6 = "images/badges/hydra-slayer-color.webp";
+//         } elseif ($badge6 == "locked") {
+//             $badge6 = "images/badges/hydra-slayer-mono.webp";
+//         }
+//     //* Vet Guild
+//     $badge7 = $user["vet-guild"];
+//         if ($badge7 == "unlocked") {
+//             $badge7 = "images/badges/vet-guild-color.webp";
+//         } elseif ($badge7 == "locked") {
+//             $badge7 = "images/badges/vet-guild-mono.webp";
+//         }
+//     //* Spicy Spicy
+//     $badge9 = $user["spicy-spicy"];
+//         if ($badge9 == "unlocked") {
+//             $badge9 = "images/badges/spicy-spicy-color.webp";
+//         } elseif ($badge9 == "locked") {
+//             $badge9 = "images/badges/spicy-spicy-mono.webp";
+//         }
 
-    if (isset($project["genre"])){
-        $sql = "SELECT created_at FROM current_project WHERE users_id='$profileID'";
-        $result = $_SESSION["conn"]->query($sql);
-        $dates = $result->fetch_assoc();
+//     if (isset($project["genre"])){
+//         $sql = "SELECT created_at FROM current_project WHERE users_id='$profileID'";
+//         $result = $_SESSION["conn"]->query($sql);
+//         $dates = $result->fetch_assoc();
             
-        $oldestDate = min($dates);
-    }
+//         $oldestDate = min($dates);
+//     }
 
-$sql = "SELECT `hydra-slayer` FROM users WHERE id=$userID";
-    $result = $_SESSION["conn"]->query($sql);
-    $overlay = $result->fetch_assoc();
+// $sql = "SELECT `hydra-slayer` FROM users WHERE id=$userID";
+//     $result = $_SESSION["conn"]->query($sql);
+//     $overlay = $result->fetch_assoc();
 
-$_SESSION["overlay"] = $overlay["hydra-slayer"];;
+// $_SESSION["overlay"] = $overlay["hydra-slayer"];;
 
-$default1 = "images/badges/complete-one-project-mono.webp";
-$default2 = "images/badges/complete-five-project-mono.webp";
-$default3 = "images/badges/complete-ten-project-mono.webp";
-$default4 = "images/badges/streak-fiend-mono.webp";
-$default5 = "images/badges/vet-streaker-mono.webp";
-$default6 = "images/badges/hydra-slayer-mono.webp";
-$default7 = "images/badges/vet-guild-mono.webp";
-$default8 = "images/badges/start-first-project-mono.webp";
-$default9 = "images/badges/spicy-spicy-mono.webp";
-$default10 = "images/badges/tears-alltime-mono.webp";
+// $default1 = "images/badges/complete-one-project-mono.webp";
+// $default2 = "images/badges/complete-five-project-mono.webp";
+// $default3 = "images/badges/complete-ten-project-mono.webp";
+// $default4 = "images/badges/streak-fiend-mono.webp";
+// $default5 = "images/badges/vet-streaker-mono.webp";
+// $default6 = "images/badges/hydra-slayer-mono.webp";
+// $default7 = "images/badges/vet-guild-mono.webp";
+// $default8 = "images/badges/start-first-project-mono.webp";
+// $default9 = "images/badges/spicy-spicy-mono.webp";
+// $default10 = "images/badges/tears-alltime-mono.webp";
 ?>
 
 <!DOCTYPE html>
