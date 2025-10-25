@@ -1030,7 +1030,9 @@ if ($startDate !== "0000-00-00") {
             $fire = "on";
             $lost = "not";
         }
-    } 
+    } else {
+        $lost = "lost";
+    }
 } else {
     if ($intervals == 1) {
         $streak = $streak + 1;
