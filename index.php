@@ -140,6 +140,7 @@ if (isset($_SESSION["user_id"])) {
                 $datedifference = $todayDate - $start_date;
                 $started = round($datedifference / (60 * 60 * 24));
                 if ($started >= 0) {
+                    echo "I should be here";
                     //? STREAK BADGES
                     $nows = time();
                     $your_dates = strtotime($update_date);
@@ -616,14 +617,12 @@ if (isset($_SESSION["user_id"])) {
                 
 
                 if ($startDate !== "0000-00-00") {
-                    echo "I should be here";
                 //* Math to decide if project start date has been reached
                 $start_date = strtotime($startDate);
                 $todayDate = time();
                 $datedifference = $todayDate - $start_date;
                 $started = round($datedifference / (60 * 60 * 24));
                 if ($started >= 0) {
-                    echo "I should be here";
                     //? STREAK BADGES
                     $nows = time();
                     $your_dates = strtotime($update_date);
