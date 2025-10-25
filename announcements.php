@@ -52,9 +52,11 @@ dbConnect();
                 <h2>New Updates and Improvements</h2>
                 <div class="list-wrapper">
                     <ul>
+                        <li>The website now has a mobile view version!</li>
                         <li>Users can now work on up to 5 projects at once</li>
                         <li>Many badges have been automated and can be earned by making certain progress on projects</li>
-                        <li></li>
+                        <li>Users can now choose between dark and light theme versions for three diffrent colors</li>
+                        <li>Projects can be deleted, archived, or finished</li>
                     </ul>
                 </div>
             </div>
