@@ -1007,7 +1007,7 @@ if (isset($_SESSION["user_id"])) {
             $displayPercentage = 0;
         }
 
-// echo "Interval of: "."$intervals"." |  ";
+echo "Interval of: "."$intervals"." |  ";
 // echo "You have a streak of: "."$streak"." |  ";
 //* increase or reset streak count
 if ($intervals == 1) {
@@ -1030,9 +1030,9 @@ if ($intervals == 1) {
 if ($displayGoalDate == "0000-00-00") {
     $lost = "lost";
 }
-echo $displayGoalDate;
-echo $fire;
-echo $lost;
+// echo $displayGoalDate;
+// echo $fire;
+// echo $lost;
 
 $update_date = date("Y-m-d");
 // echo "Today's date: "."$update_date";
