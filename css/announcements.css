@@ -5,9 +5,11 @@
     }
     .announce-container {
         display: flex;
+        flex-direction: column;
         width: 100%;
         height: 70vh;
-        justify-content: center;
+        align-items: center;
+        /* justify-content: center; */
     }
     .announce-contents{
         display: flex;
