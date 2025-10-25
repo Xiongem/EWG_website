@@ -133,13 +133,13 @@ if (isset($_SESSION["user_id"])) {
                         }
                     }
                     
-
-                    $start_date = strtotime($startDate);
-                    $todayDate = time();
-                    $datedifference = $todayDate - $start_date;
-                    $started = round($datedifference / (60 * 60 * 24));
-                    echo $started;
-
+                //* Math to decide if project start date has been reached
+                $start_date = strtotime($startDate);
+                $todayDate = time();
+                $datedifference = $todayDate - $start_date;
+                $started = round($datedifference / (60 * 60 * 24));
+                echo $started;
+                if ($started >= 0) {
                     //? STREAK BADGES
                     $nows = time();
                     $your_dates = strtotime($update_date);
@@ -256,6 +256,7 @@ if (isset($_SESSION["user_id"])) {
                         $badge11 = "images/badges/every-streak-mono.webp";
                         $badge12 = "images/badges/on-track-mono.webp";
                     }
+                }
                     //* First Daily
                     $badge10 = $project["first-daily"];
                         if ($badge10 == "unlocked") {
