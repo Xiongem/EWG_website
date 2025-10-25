@@ -167,6 +167,7 @@ $today = date("Y-m-d");
     function findDailyGoal(){
         var goal=document.getElementById( "goalNumber" ).value;
         var newGoal = goal.replace(/,/g,"");
+        var startDate=document.getElementById( "startDate" ).value;
         var goalDate=document.getElementById( "endDate" ).value;
         
         if(goalDate){
