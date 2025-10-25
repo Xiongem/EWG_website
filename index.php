@@ -608,6 +608,132 @@ if (isset($_SESSION["user_id"])) {
                 }
                 
 
+                if ($startDate !== "0000-00-00") {
+                //* Math to decide if project start date has been reached
+                $start_date = strtotime($startDate);
+                $todayDate = time();
+                $datedifference = $todayDate - $start_date;
+                $started = round($datedifference / (60 * 60 * 24));
+                echo $started;
+                if ($started >= 0) {
+                    //? STREAK BADGES
+                    $nows = time();
+                    $your_dates = strtotime($update_date);
+                    $datediffer = $nows - $your_dates;
+                    $intervals = round($datediffer / (60 * 60 * 24));
+                    //* if time since last word count update is one day or less
+                    if ($intervals <= 1) {
+                        //* 2 Day Streak
+                        if ($streak >= 2) {
+                            if ($project["streak-two"] !== "unlocked") {
+                                $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                            }
+                            $badge5 = "images/badges/streak-two-color.webp";
+                        }
+                        //* 3 Day Streak
+                        if ($streak >= 3) {
+                            if ($project["streak-three"] !== "unlocked") {
+                                $sql = "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                            }
+                            $badge6 = "images/badges/streak-three-color.webp";
+                        }
+                        //* Seven Day Streak
+                        if ($streak >= 7) {
+                            if ($project["streak-seven"] !== "unlocked") {
+                                $sql = "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                            }
+                            $badge7 = "images/badges/streak-seven-color.webp";
+                        }
+                        //* Fourteen Day Streak
+                        if ($streak >= 14) {
+                            if ($project["streak-fourteen"] !== "unlocked") {
+                                $sql = "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                            }
+                            $badge8 = "images/badges/streak-fourteen-color.webp";
+                        }
+                        //* Twenty-One Day Streak
+                        if ($streak >= 21) {
+                            if ($project["streak-twentyOne"] !== "unlocked") {
+                                $sql = "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                            }
+                            $badge9 = "images/badges/streak-twentyOne-color.webp";
+                        }
+                        //* Full Streak Math
+                        // $created_date = strtotime($created);
+                        $endDate = strtotime($displayGoalDate);
+                        $totalDays = $endDate - $start_date;
+                        $streakMath = round($totalDays / (60 * 60 * 24));
+                        $streakMath = $streakMath + 1;
+                        //* Every Streak
+                        if ($streak == $streakMath) {
+                            if ($project["every-streak"] !== "unlocked") {
+                                $sql = "UPDATE current_project SET `every-streak`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                            }
+                            $badge11 = "images/badges/every-streak-color.webp";
+                        } elseif ($streak !== $streakMath && $project["every-streak"] == "unlocked") {
+                            $sql = "UPDATE current_project SET `every-streak`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                            $badge11 = "images/badges/every-streak-mono.webp";
+                        }
+                        //* On track
+                        if ($dailyStreak == $streakMath) {
+                            if ($project["on-track"] !== "unlocked") {
+                                $sql = "UPDATE current_project SET `on-track`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                            }
+                            $badge12 = "images/badges/on-track-color.webp";
+                        } elseif ($dailyStreak !== $streakMath && $project["on-track"] == "unlocked") {
+                            $sql = "UPDATE current_project SET `on-track`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                            $badge12 = "images/badges/on-track-mono.webp";
+                        } elseif (isset($project["on-track"])) {
+                            $badge12 = $project["on-track"];
+                                if ($badge12 == "unlocked") {
+                                    $badge12 = "images/badges/on-track-color.webp";
+                                } elseif ($badge12 == "locked") {
+                                    $badge12 = "images/badges/on-track-mono.webp";
+                                }
+                        }
+                    } else {
+                        //* if it has been more than 1 day since word count was updated
+                        if ($streak > 1 || $streak < 0 && $project["streak-two"] !== "locked") {
+                            $sql = "UPDATE current_project SET `streak-two`= 'locked', `streak-three`= 'locked', `streak-seven`= 'locked', `streak-fourteen`= 'locked', `streak-twentyOne`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                        }
+                        //* lock every streak badge
+                        $sql = "UPDATE current_project SET `every-streak`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                        //* lock on track badge
+                        $sql = "UPDATE current_project SET `on-track`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                    $stmt = $_SESSION["conn"]->prepare($sql);
+                                    $stmt->execute();
+                        $badge5 = "images/badges/streak-two-mono.webp";
+                        $badge6 = "images/badges/streak-three-mono.webp";
+                        $badge7 = "images/badges/streak-seven-mono.webp";
+                        $badge8 = "images/badges/streak-fourteen-mono.webp";
+                        $badge9 = "images/badges/streak-twentyOne-mono.webp";
+                        $badge11 = "images/badges/every-streak-mono.webp";
+                        $badge12 = "images/badges/on-track-mono.webp";
+                    }
+                }
+            } else {
                 //? STREAK BADGES
                 $nows = time();
                 $your_dates = strtotime($update_date);
@@ -709,17 +835,13 @@ if (isset($_SESSION["user_id"])) {
                                 $stmt->execute();
                     }
                     //* lock every streak badge
-                    if ($badge11 == "unlocked") {
-                        $sql = "UPDATE current_project SET `every-streak`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
-                                    $stmt = $_SESSION["conn"]->prepare($sql);
-                                    $stmt->execute();
-                    }
+                    $sql = "UPDATE current_project SET `every-streak`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $stmt = $_SESSION["conn"]->prepare($sql);
+                                $stmt->execute();
                     //* lock on track badge
-                    if ($badge12 == "unlocked") {
-                        $sql = "UPDATE current_project SET `on-track`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
-                                    $stmt = $_SESSION["conn"]->prepare($sql);
-                                    $stmt->execute();
-                    }
+                    $sql = "UPDATE current_project SET `on-track`= 'locked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $stmt = $_SESSION["conn"]->prepare($sql);
+                                $stmt->execute();
                     $badge5 = "images/badges/streak-two-mono.webp";
                     $badge6 = "images/badges/streak-three-mono.webp";
                     $badge7 = "images/badges/streak-seven-mono.webp";
@@ -728,6 +850,7 @@ if (isset($_SESSION["user_id"])) {
                     $badge11 = "images/badges/every-streak-mono.webp";
                     $badge12 = "images/badges/on-track-mono.webp";
                 }
+            }
                 //* First Daily
                 $badge10 = $project["first-daily"];
                     if ($badge10 == "unlocked") {
