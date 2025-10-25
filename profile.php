@@ -69,7 +69,7 @@ if ($result->num_rows > 0) {
 } else {
     $genre_picture = "images/genre-covers/placeholder.webp";
     $title = "";
-    $info = 'Click <a href="newProject.php">here</a> to create your first project!'
+    $info = 'Click <a href="newProject.php">here</a> to create your first project!';
 }
     
     //? Badges
