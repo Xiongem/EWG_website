@@ -45,7 +45,7 @@ $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_st
 
 $sql = "SELECT display FROM current_project WHERE users_id='$profileID' AND current_state='current'";
 $result = $_SESSION["conn"]->query($sql);
-if ($result->num_rows > 0) {
+if ($result->num_rows > 1) {
     while ($display = $result->fetch_assoc()) {
 
     //* if user has selected a project to be active from project selection
