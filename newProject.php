@@ -104,7 +104,7 @@ $today = date("Y-m-d");
                 </div>
                 <div class="preview-section">
                     <h1>Preview</h1>
-                    <img class="preview-image" id="preview-image" src="images/genre-covers/placeholder(v3).webp" name="genrePreview">
+                    <img class="preview-image" id="preview-image" src="images/genre-covers/placeholder.webp" name="genrePreview">
                     <h2 id="preview-title"></h2>
                     <div class="grid-item">
                         <h3>Total:</h3>
