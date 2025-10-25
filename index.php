@@ -45,6 +45,7 @@ if (isset($_SESSION["user_id"])) {
                     $displayInfo = $project["info"];
                     $displayCount = $project["current_count"];
                     $displayGoal = $project["goal"];
+                    $startDate = $project["start_date"];
                     $displayGoalDate = $project["goal_date"];
                     $update_date = $project["update_date"];
                     $streak = $project["streak"];
@@ -132,6 +133,12 @@ if (isset($_SESSION["user_id"])) {
                         }
                     }
                     
+
+                    $start_date = strtotime($startDate);
+                    $end_date = strtotime($update_date);
+                    $datedifference = $start_date - $end_date;
+                    $started = round($datedifference / (60 * 60 * 24));
+                    echo $started;
 
                     //? STREAK BADGES
                     $nows = time();
