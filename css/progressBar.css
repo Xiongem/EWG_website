@@ -88,6 +88,9 @@
     .pb-background {
         min-height: 17em;
     }
+    .streak-fire {
+        width: 2.5em;
+    }
     .progress-info-wrapper {
         display: flex;
         justify-content: space-evenly;
