@@ -998,6 +998,7 @@ if (isset($_SESSION["user_id"])) {
 if ($intervals == 1) {
     $streak = $streak + 1;
     $fire = "off";
+    $lost = "not";
 } elseif ($intervals >= 2) {
     $streak = 1;
     if ($project["on-track"] !== "lost") {
@@ -1009,6 +1010,7 @@ if ($intervals == 1) {
 } else {
     $streak = $streak;
     $fire = "on";
+    $lost = "not";
 }
 
 $update_date = date("Y-m-d");
