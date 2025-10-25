@@ -1029,10 +1029,12 @@ if ($startDate !== "0000-00-00") {
             $fire = "on";
             $lost = "not";
         }
+        $began = "yes";
     } else {
         $fire = "off";
     }
 } else {
+    $began = "yes";
     if ($intervals == 1) {
         $streak = $streak + 1;
         $fire = "off";
@@ -1290,7 +1292,7 @@ else {
                     <p><?= $displayPercentage ?>%</p>
                 </div>
             </div>
-            <?php if (isset($_SESSION["user_id"])) {?>
+            <?php if (isset($_SESSION["user_id"]) && $began == "yes";) {?>
             <div class="added">
                 <span class="fa fa-plus" id="updateCount" onclick="showUpdateWords()"></span>
             </div>
