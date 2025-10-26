@@ -1053,7 +1053,6 @@ if ($startDate !== "0000-00-00") {
         $lost = "not";
     }
 }
-echo $began;
 if ($displayGoalDate == "0000-00-00") {
     $lost = "lost";
 }
@@ -1178,8 +1177,12 @@ else {
                     <div class="project-stats">
                         <p id="popup-goal">Goal: <?= $current_count ?>/<?= $goal ?></p>
                         <p><?= $progress ?>%</p>
-                        <?php if ($days !== "No Goal Date Set") { ?>
-                            <p id="popup-days-left">Days Left: <?= $days ?></p>
+                        <?php if ($days !== "No Goal Date Set") { 
+                                if ($began) { ?>
+                                    <p id="popup-days-left">Days Left: <?= $days ?></p>
+                                <?php } else { ?>
+                                    <p id="popup-days-until">Starts in: <?= $started ?></p>
+                                <?php } ?>
                         <?php }else { ?>
                             <p id="popup-days-left"><?= $days ?></p>
                             <?php } ?>
