@@ -1181,7 +1181,7 @@ else {
                                 if ($began) { ?>
                                     <p id="popup-days-left">Days Left: <?= $days ?></p>
                                 <?php } else { ?>
-                                    <p id="popup-days-until">Starts in: <?= $started ?></p>
+                                    <p id="popup-days-until">Starts in: <?= $started ?> days</p>
                                 <?php } ?>
                         <?php }else { ?>
                             <p id="popup-days-left"><?= $days ?></p>
