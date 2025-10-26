@@ -1281,11 +1281,19 @@ else {
                     <p><?= $displayCount ?>/<?= $displayGoal ?></p>
                 </div>
                 <?php if (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {?>
-                <!-- //* displays days left only if user has a goal date set -->
-                <div id="daysLeft" class="progress-info">
-                    <h2>Days Left:</h2>
-                    <p><?= $displayDays ?></p>
-                </div>
+                    <?php if ($began) { ?>
+                        <!-- //* displays days left, only if user has a goal date set -->
+                        <div id="daysLeft" class="progress-info">
+                            <h2>Days Left:</h2>
+                            <p><?= $displayDays ?></p>
+                        </div>
+                    <?php } else { ?>
+                         <!-- //* displays days until a project is set to start, only if user has a goal date set -->
+                        <div id="daysUntil" class="progress-info">
+                            <h2>Starts in:</h2>
+                            <p><?= $started ?> days</p>
+                        </div>
+                    <?php } ?>
                 <?php } ?>
                 <div id="dailyGoal" class="progress-info">
                     <h2>Daily Goal:</h2>
