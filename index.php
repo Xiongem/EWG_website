@@ -137,9 +137,9 @@ if (isset($_SESSION["user_id"])) {
                 //* Math to decide if project start date has been reached
                 $start_date = strtotime($startDate);
                 $todayDate = time();
-                $datedifference = $todayDate - $start_date;
+                $datedifference = $start_date - $todayDate;
                 $started = round($datedifference / (60 * 60 * 24));
-                if ($started >= 0) {
+                if ($started <= 0) {
                     //? STREAK BADGES
                     $nows = time();
                     $your_dates = strtotime($update_date);
@@ -619,9 +619,9 @@ if (isset($_SESSION["user_id"])) {
                 //* Math to decide if project start date has been reached
                 $start_date = strtotime($startDate);
                 $todayDate = time();
-                $datedifference = $todayDate - $start_date;
+                $datedifference = $start_date - $todayDate;
                 $started = round($datedifference / (60 * 60 * 24));
-                if ($started >= 0) {
+                if ($started <= 0) {
                     //? STREAK BADGES
                     $nows = time();
                     $your_dates = strtotime($update_date);
@@ -1010,7 +1010,7 @@ if (isset($_SESSION["user_id"])) {
 // echo "You have a streak of: "."$streak"." |  ";
 //* increase or reset streak count
 if ($startDate !== "0000-00-00") {
-    if ($started >= 0) {
+    if ($started <= 0) {
         $began = "yes";
         if ($intervals == 1) {
             $streak = $streak + 1;
