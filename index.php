@@ -1053,6 +1053,7 @@ if ($startDate !== "0000-00-00") {
         $lost = "not";
     }
 }
+echo $began;
 if ($displayGoalDate == "0000-00-00") {
     $lost = "lost";
 }
