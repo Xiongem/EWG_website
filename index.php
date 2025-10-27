@@ -1011,7 +1011,7 @@ if (isset($_SESSION["user_id"])) {
         }
 
 //* increase or reset streak count
-if ($startDate !== "0000-00-00") {
+if ($startDate !== "0000-00-00" && isset($project["genre"])) {
     if ($started <= 0) {
         $began = "yes";
         if ($intervals == 1) {
@@ -1061,7 +1061,6 @@ if ($displayGoalDate == "0000-00-00") {
 
 $update_date = date("Y-m-d");
 if (!isset($project["genre"])) {
-    echo "hello";
     $startDate = "nothing";
     $started = "nothing";
     $intervals = "nothing";
