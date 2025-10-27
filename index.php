@@ -1011,7 +1011,6 @@ if (isset($_SESSION["user_id"])) {
 //* increase or reset streak count
 if ($startDate !== "0000-00-00") {
     if ($started <= 0) {
-        echo "I should not see this";
         $began = "yes";
         if ($intervals == 1) {
             $streak = $streak + 1;
@@ -1063,9 +1062,9 @@ if ($displayGoalDate == "0000-00-00") {
 
 $update_date = date("Y-m-d");
 
-$timezone = date_default_timezone_get();
-$date = date('m/d/Y h:i:s a', time());
-echo $date;
+// $timezone = date_default_timezone_get();
+// $date = date('m/d/Y h:i:s a', time());
+// echo $date;
 // echo "Today's date: "."$update_date";
 //* Set Session Tokens
 $_SESSION["pfp"] = $pfp_set;
