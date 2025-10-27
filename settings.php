@@ -284,8 +284,9 @@ echo $timezone;
 <script>
     //* Loads correct timezone selection on page load
     var timezone = <?=$timezone?>;
-    var selected = document.getElementById('timezone');
-    selected.value = timezone;
+    // var selected = document.getElementById('timezone');
+    // selected.value = timezone;
+    $('#timezone').val(timezone);
 
     function clickHandle(evt, settingTab) {
         let i, tabcontent, tablinks;
