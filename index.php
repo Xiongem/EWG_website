@@ -19,6 +19,7 @@ if (isset($_SESSION["user_id"])) {
         $user = $result->fetch_assoc();
             $pfp = $user["pfp"];
             $username = $user["username"];
+            $timezone = $user["timezone"];
                 
             //* Setting pfp
             if ($pfp) {
@@ -1062,8 +1063,8 @@ if ($displayGoalDate == "0000-00-00") {
 
 $update_date = date("Y-m-d");
 
-date_default_timezone_set("Asia/Tokyo");
-// echo date_default_timezone_get();
+date_default_timezone_set("$timezone");
+// // echo date_default_timezone_get();
 
 $timezone = date_default_timezone_get();
 $date = date('m/d/Y h:i:s a', time());
