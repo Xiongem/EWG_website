@@ -283,10 +283,10 @@ echo $timezone;
     <?php makeFooter() ?>
 <script>
     //* Loads correct timezone selection on page load
-    var timezone = <?=$timezone?>;
-    // var selected = document.getElementById('timezone');
-    // selected.value = timezone;
-    $('#timezone').val(timezone);
+    var timeZone = <?=$timezone?>;
+    var selected = document.getElementById('timezone');
+    selected.value = timeZone;
+    // $('#timezone').val(timezone);
 
     function clickHandle(evt, settingTab) {
         let i, tabcontent, tablinks;
