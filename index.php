@@ -1065,9 +1065,10 @@ $update_date = date("Y-m-d");
 date_default_timezone_set("Asia/Tokyo");
 // echo date_default_timezone_get();
 
-// $timezone = date_default_timezone_get();
-// $date = date('m/d/Y h:i:s a', time());
-// echo $date;
+$timezone = date_default_timezone_get();
+$date = date('m/d/Y h:i:s a', time());
+echo "$timezone"."<br>";
+echo $date;
 // echo "Today's date: "."$update_date";
 //* Set Session Tokens
 $_SESSION["pfp"] = $pfp_set;
