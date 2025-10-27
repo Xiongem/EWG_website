@@ -1082,6 +1082,11 @@ $_SESSION["overlay"] = $user["hydra-slayer"];
     $displayProgress = 4;
     $displayPercentage = 0;
     $fire = "off";
+    $startDate = date("Y-m-d");
+    $started = "";
+    $intervals = "";
+    $streak = "";
+    $displayGoalDate = "";
 }
 //* Default Badges
 $default1 = "images/badges/quarter-quomplete-mono.webp";
