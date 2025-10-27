@@ -57,7 +57,7 @@
         border-radius: 4px;
         accent-color: var(--background-color);
         padding: 8px;
-        margin-bottom: 2em;
+        margin-bottom: 0.5em;
     }
     #timezone-title {
         font-size: 28px;
