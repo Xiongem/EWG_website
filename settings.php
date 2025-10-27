@@ -46,6 +46,11 @@ echo $timezone;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
+        //* Loads correct timezone selection on page load
+        var timezone = <?=$timezone?>;
+        var selected = document.getElementById('timezone');
+        selected.value = timezone;
+
         function checkName(){
             var username=document.getElementById( "username" ).value;
             
@@ -282,10 +287,10 @@ echo $timezone;
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
 <script>
-    //* Loads correct timezone selection on page load
-    var timezone = <?=$timezone?>;
-    var selected = document.getElementById('timezone');
-    selected.selectedIndex = timezone;
+    // //* Loads correct timezone selection on page load
+    // var timezone = <?=?>;
+    // var selected = document.getElementById('timezone');
+    // selected.selectedIndex = timezone;
 
     function clickHandle(evt, settingTab) {
         let i, tabcontent, tablinks;
