@@ -1142,6 +1142,7 @@ else {
 </head>
 <body id="body">
     <?php if (!isset($timezone)) { ?>
+        echo "hello";
         <div class="timezone-popup-wrapper" id="timezone-popup">
             <div class="timezone-popup">
                 <h1>Please Set Your Timezone</h1>
