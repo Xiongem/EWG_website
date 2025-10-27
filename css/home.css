@@ -550,13 +550,13 @@
 /**TABLET PORTRAIT*/
 @media only screen and (min-width: 720px) {
     .timezone-popup {
-        width: 60%;
+        width: 40%;
     }
     .project-select-wrapper {
         padding-right: 2em;
     }
     .project-select-popup {
-        width: 40%;
+        width: 60%;
         /* padding-left: 1em; */
     }
     .popup-image {
