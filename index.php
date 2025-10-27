@@ -1326,15 +1326,6 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     setTimeout(refresh, 200);
                 }
             </script>
-            <!-- <div class="button-wrapper">
-                <script>
-                    //* reloads the page after selecting a project through ajax
-                    function refresh(){
-                        location.reload();
-                    }
-                </script>
-                <button id="save" onclick="refresh()">Save</button>
-            </div> -->
         </div>
     </div>
     <?php } ?>
@@ -2259,7 +2250,6 @@ $default25 = "images/badges/cross-finish-mono.webp";
             }
         }
     }
-    
     </script>
 </body>
 </html>
