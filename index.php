@@ -1141,8 +1141,7 @@ else {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="body">
-    <?php if (!isset($timezone)) { ?>
-        echo "hello";
+    <?php if (!isset($timezone) || $timezone == "") { ?>
         <div class="timezone-popup-wrapper" id="timezone-popup">
             <div class="timezone-popup">
                 <h1>Please Set Your Timezone</h1>
