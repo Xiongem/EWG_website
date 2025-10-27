@@ -160,6 +160,14 @@
         accent-color: var(--background-color);
         padding: 8px;
     }
+    .form-select {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        border: var(--accent-2) solid 2px;
+        border-radius: 4px;
+        accent-color: var(--background-color);
+        padding: 8px;
+    }
     .form-content {
         display: flex;
         flex-direction: column;
