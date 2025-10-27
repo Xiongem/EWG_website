@@ -301,6 +301,10 @@
     .account-content {
         width: 50%;
     }
+    .timezone-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
     .button-wrapper {
         padding: 1em 3em;
     }
