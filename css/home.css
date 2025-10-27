@@ -600,6 +600,7 @@
 /**TABLET LANDSCAPE or SMALL DESKTOP*/
 @media only screen and (min-width: 1000px) {
     .timezone-popup {
+        width: 30%;
         margin-top: 9em;
     }
     .project-select-wrapper {
