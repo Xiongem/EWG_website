@@ -25,7 +25,7 @@
     .fa-caret-down {
         margin-left: 0.5em;
     }
-    .project-select-popup-wrapper {
+    /* .project-select-popup-wrapper {
         display: none;
         z-index: 10;
         position: absolute;
@@ -34,7 +34,7 @@
         height: 100%;
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
-    }
+    } */
     .project-select-popup {
         position: relative;
         display: flex;
@@ -100,7 +100,7 @@
         cursor: pointer;
     }
     /** Update Word Count Popup*/
-    .count-update-wrapper {
+    /* .count-update-wrapper {
         display: none;
         z-index: 10;
         position: absolute;
@@ -109,7 +109,7 @@
         height: 100%;
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
-    }
+    } */
     .count-update-popup {
         display: flex;
         position: relative;
