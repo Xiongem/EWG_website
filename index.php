@@ -1809,7 +1809,7 @@ else {
                     </div>
                 </div>
             </div>
-            <?php if (isset($_SESSION["user_id"])) {?>
+            <?php if (isset($_SESSION["user_id"]) && $began == "yes") {?>
             <div class="instruction-wrapper">
                 <p class="instruction">
                     To give yourself a badge, simply activate the toggle and click on a badge. 
