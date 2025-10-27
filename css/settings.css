@@ -161,6 +161,7 @@
         padding: 8px;
     }
     .form-select {
+        width: 100%;
         background-color: var(--background-color);
         color: var(--text-color);
         border: var(--accent-2) solid 2px;
