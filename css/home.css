@@ -599,6 +599,9 @@
 
 /**TABLET LANDSCAPE or SMALL DESKTOP*/
 @media only screen and (min-width: 1000px) {
+    .timezone-popup {
+        margin-top: 9em;
+    }
     .project-select-wrapper {
         padding-right: 3.5em;
     }
