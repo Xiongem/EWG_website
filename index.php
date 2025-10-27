@@ -1060,12 +1060,13 @@ if ($displayGoalDate == "0000-00-00") {
 }
 
 $update_date = date("Y-m-d");
-
-$startDate = "";
-$started = "";
-$intervals = "";
-$streak = "";
-$displayGoalDate = "";
+if (!isset($project["genre"])) {
+    $startDate = "nothing";
+    $started = "nothing";
+    $intervals = "nothing";
+    $streak = "nothing";
+    $displayGoalDate = "nothing";
+}
 
 //* Set Session Tokens
 $_SESSION["pfp"] = $pfp_set;
