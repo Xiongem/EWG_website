@@ -1036,7 +1036,6 @@ if ($startDate !== "0000-00-00") {
     }
 } else {
     $began = "yes";
-    echo "I should see this";
     if ($intervals == 1) {
         $streak = $streak + 1;
         $fire = "off";
@@ -1055,6 +1054,7 @@ if ($startDate !== "0000-00-00") {
         $lost = "not";
     }
 }
+ echo $intervals;
 if ($displayGoalDate == "0000-00-00") {
     $lost = "lost";
 }
