@@ -1142,6 +1142,9 @@ else {
 </head>
 <body id="body">
     <?php if (!isset($timezone) || $timezone == "") { ?>
+        <script>
+            hideBackground();
+        </script>
         <div class="timezone-popup-wrapper" id="timezone-popup">
             <div class="timezone-popup">
                 <h1 id="timezone-title">Please Set Your Timezone</h1>
@@ -1242,7 +1245,7 @@ else {
                         </select>
                     </div>
                     <div class="button-wrapper">
-                        <button class="save" type="submit">Save</button>
+                        <button class="save" type="submit" onclick="showBackground();">Submit</button>
                     </div>
                 </form>
             </div>

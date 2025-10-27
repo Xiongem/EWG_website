@@ -42,6 +42,11 @@ function hideBackground() {
   body.style.height = "100%";
   body.style.overflow = "hidden";
 }
+function showBackground() {
+  var body = document.getElementById("body");
+  body.style.height = "unset";
+  body.style.overflow = "unset";
+}
 
 function showProjectPopup() {
   var projectPopup = document.getElementById("project-popup");
