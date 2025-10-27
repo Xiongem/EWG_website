@@ -7,10 +7,11 @@ dbConnect();
 $userID = $_SESSION["user_id"];
 $username = $_POST["username"];
 
-$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET username=?, email=? WHERE id=$userID");
-$stmt->bind_param("ss",
+$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET username=?, email=?, `timezone`=? WHERE id=$userID");
+$stmt->bind_param("sss",
                     $_POST["username"],
-                    $_POST["email"]);
+                    $_POST["email"],
+                    $_POST["timezone"]);
 
 if ($stmt -> execute()) {
     header("Location: /profile.php?name=$username");
