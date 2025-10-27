@@ -25,6 +25,7 @@ if (isset($_SESSION["user_id"])) {
     if ($timezone) {
         $_SESSION["timezone"] = $timezone;
         date_default_timezone_set("$timezone");
+        echo $timezone;
     }
                 
     //* Sets user's pfp
