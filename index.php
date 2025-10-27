@@ -1130,7 +1130,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="body">
-    <?php if (!isset($timezone) || $timezone == "") { ?>
+    <?php if (isset($_SESSION["user_id"]) && !isset($timezone) || $timezone == "") { ?>
         <script>
             hideBackground();
         </script>
