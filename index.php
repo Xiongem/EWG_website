@@ -1011,6 +1011,7 @@ if (isset($_SESSION["user_id"])) {
 //* increase or reset streak count
 if ($startDate !== "0000-00-00") {
     if ($started <= 0) {
+        echo "I should not see this";
         $began = "yes";
         if ($intervals == 1) {
             $streak = $streak + 1;
@@ -1035,6 +1036,7 @@ if ($startDate !== "0000-00-00") {
     }
 } else {
     $began = "yes";
+    echo "I should see this";
     if ($intervals == 1) {
         $streak = $streak + 1;
         $fire = "off";
