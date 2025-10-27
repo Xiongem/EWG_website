@@ -283,7 +283,7 @@ echo $timezone;
     <?php makeFooter() ?>
 <script>
     //* Loads correct timezone selection on page load
-    var timeZone = <?=$timezone?>;
+    var timeZone = "<?=$timezone?>";
     var selected = document.getElementById('timezone');
     selected.value = timeZone;
     // $('#timezone').val(timezone);
