@@ -10,10 +10,11 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
 
-$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET bio=?, `fav-1`=?, `fav-2`=?, `fav-3`=? WHERE id=?");
-$stmt->bind_param("ssssi",
+$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET `timezone`=?, `bio`=?, `fav-1`=?, `fav-2`=?, `fav-3`=? WHERE id=?");
+$stmt->bind_param("sssssi",
+                    $_POST["timezone"],
                     $_POST["bio"],
-                   $_POST["fav-1"],
+                    $_POST["fav-1"],
                     $_POST["fav-2"],
                     $_POST["fav-3"],
                     $_SESSION["user_id"]);
