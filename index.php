@@ -1062,7 +1062,9 @@ if ($displayGoalDate == "0000-00-00") {
 // echo $lost;
 
 $update_date = date("Y-m-d");
-echo $update_date;
+
+$timezone = date_default_timezone_get();
+echo $timezone;
 // echo "Today's date: "."$update_date";
 //* Set Session Tokens
 $_SESSION["pfp"] = $pfp_set;
