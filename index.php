@@ -1144,7 +1144,7 @@ else {
     <?php if (!isset($timezone) || $timezone == "") { ?>
         <div class="timezone-popup-wrapper" id="timezone-popup">
             <div class="timezone-popup">
-                <h3 id="timezone-title">Please Set Your Timezone</h2>
+                <h3 id="timezone-title">Please Set Your Timezone</h3>
                 <form action="php-processes/update-timezone" method="post">
                     <div class="timezone-wrapper">
                         <label for="imezone">Choose Your Timezone:</label>
