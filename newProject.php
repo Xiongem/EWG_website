@@ -9,7 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 forceLogin();
 
-$_SESSION["timezone"] = $timezone;
+$timezone = $_SESSION["timezone"];
 date_default_timezone_set("$timezone");
 
 $userID = $_SESSION["user_id"];
