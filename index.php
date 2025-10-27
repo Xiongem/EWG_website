@@ -1069,7 +1069,7 @@ if ($displayGoalDate == "0000-00-00") {
 $update_date = date("Y-m-d");
 
 // $date = date('m/d/Y h:i:s a', time());
-echo "$timezone"."<br>";
+// echo "$timezone"."<br>";
 // echo $date;
 // echo "Today's date: "."$update_date";
 //* Set Session Tokens
