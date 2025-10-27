@@ -20,6 +20,11 @@ if (isset($_SESSION["user_id"])) {
             $pfp = $user["pfp"];
             $username = $user["username"];
             $timezone = $user["timezone"];
+
+    //* Set the user's timezone
+    if ($timezone) {
+        date_default_timezone_set("$timezone");
+    }
                 
             //* Setting pfp
             if ($pfp) {
@@ -1063,13 +1068,9 @@ if ($displayGoalDate == "0000-00-00") {
 
 $update_date = date("Y-m-d");
 
-date_default_timezone_set("$timezone");
-// // echo date_default_timezone_get();
-
-$timezone = date_default_timezone_get();
-$date = date('m/d/Y h:i:s a', time());
-echo "$timezone"."<br>";
-echo $date;
+// $date = date('m/d/Y h:i:s a', time());
+// echo "$timezone"."<br>";
+// echo $date;
 // echo "Today's date: "."$update_date";
 //* Set Session Tokens
 $_SESSION["pfp"] = $pfp_set;
