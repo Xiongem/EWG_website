@@ -2,17 +2,16 @@
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
-echo "hello"."<br>";
+
 // prepare and bind
 $userID = $_SESSION["user_id"];
 
 $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET `timezone`=? WHERE id=$userID");
 $stmt->bind_param("s",
                     $_POST["timezone"]);
-echo "bound"."<br>";
+
 if ($stmt -> execute()) {
-    // header("Location: /index.php");
-    echo "executed"."<br>";
+    header("Location: /index.php");
     exit;
 } else {
     die("an unexpected error occured");
