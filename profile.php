@@ -12,6 +12,9 @@ dbConnect();
 $name = $_GET["name"];
 $userID = $_SESSION["user_id"];
 
+$_SESSION["timezone"] = $timezone;
+date_default_timezone_set("$timezone");
+
 //* pull user info for get token
 $sql = "SELECT * FROM users WHERE username='$name'";
 $result = $_SESSION["conn"]->query($sql);

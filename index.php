@@ -23,6 +23,7 @@ if (isset($_SESSION["user_id"])) {
 
     //* Set the user's timezone
     if ($timezone) {
+        $_SESSION["timezone"] = $timezone;
         date_default_timezone_set("$timezone");
     }
                 

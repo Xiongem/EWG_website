@@ -11,6 +11,9 @@ dbConnect();
 $userID = htmlspecialchars($_SESSION["user_id"]);
 $projectID = $_GET["projectID"];
 
+$_SESSION["timezone"] = $timezone;
+date_default_timezone_set("$timezone");
+
 $sql = "SELECT * FROM current_project WHERE id='$projectID'";
 $result = $_SESSION["conn"]->query($sql);
 $project = $result->fetch_assoc();

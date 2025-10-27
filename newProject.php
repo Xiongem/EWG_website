@@ -9,6 +9,9 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 forceLogin();
 
+$_SESSION["timezone"] = $timezone;
+date_default_timezone_set("$timezone");
+
 $userID = $_SESSION["user_id"];
 
 $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND current_state='current'";

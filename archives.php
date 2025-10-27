@@ -11,6 +11,9 @@ dbConnect();
 forceLogin();
 
 $userID = htmlspecialchars($_SESSION["user_id"]);
+
+$_SESSION["timezone"] = $timezone;
+date_default_timezone_set("$timezone");
 ?>
 
 <!DOCTYPE html>
