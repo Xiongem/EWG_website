@@ -1061,6 +1061,7 @@ if ($displayGoalDate == "0000-00-00") {
 
 $update_date = date("Y-m-d");
 if (!isset($project["genre"])) {
+    echo "hello";
     $startDate = "nothing";
     $started = "nothing";
     $intervals = "nothing";
