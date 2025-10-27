@@ -160,7 +160,7 @@
         accent-color: var(--background-color);
         padding: 8px;
     }
-    .timezone {
+    .timezone-wrapper {
         padding-left: 2em;
     }
     .form-select {
