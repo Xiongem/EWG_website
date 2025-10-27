@@ -1142,7 +1142,7 @@ else {
 </head>
 <body id="body">
     <?php if (!isset($timezone) || $timezone == "") { ?>
-        <div class="timezone-popup-wrapper popup" id="timezone-popup">
+        <div class="timezone-popup-wrapper" id="timezone-popup">
             <div class="timezone-popup">
                 <h1 id="timezone-title">Please Set Your Timezone</h1>
                 <form action="php-processes/update-timezone" method="post">
@@ -1250,7 +1250,7 @@ else {
     <?php } ?>
     <!-- //* POPUP FOR CHOOSING ACTIVE PROJECTS-->
     <?php if (isset($_SESSION["user_id"])) { ?>
-    <div class="project-select-popup-wrapper popup" id="project-popup">
+    <div class="project-select-popup-wrapper" id="project-popup">
         <div class="project-select-popup">
             <div class="close-wrapper">
                 <i class="fa fa-close" onclick="hideProjectPopup()"></i>
@@ -1346,7 +1346,7 @@ else {
         </div>
     </div>
     <?php } ?>
-    <div class="count-update-wrapper popup" id="count-update-popup">
+    <div class="count-update-wrapper" id="count-update-popup">
         <div class="count-update-popup">
             <div class="close-wrapper">
                 <i class="fa fa-close" onclick="hideUpdateWords()"></i>
