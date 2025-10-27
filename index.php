@@ -33,6 +33,14 @@ if (isset($_SESSION["user_id"])) {
         $pfp_set = "images/pfp-icon.webp";
     }
 
+    if (!isset($project["genre"])) {
+        $startDate = "nothing";
+        $started = "nothing";
+        $intervals = "nothing";
+        $streak = "nothing";
+        $displayGoalDate = "nothing";
+    }
+
     //* Pull Project Info
     $sql = "SELECT display FROM current_project WHERE users_id='$userID' AND current_state='current'";
         $result = $_SESSION["conn"]->query($sql);
@@ -1060,13 +1068,6 @@ if ($displayGoalDate == "0000-00-00") {
 }
 
 $update_date = date("Y-m-d");
-if (!isset($project["genre"])) {
-    $startDate = "nothing";
-    $started = "nothing";
-    $intervals = "nothing";
-    $streak = "nothing";
-    $displayGoalDate = "nothing";
-}
 
 //* Set Session Tokens
 $_SESSION["pfp"] = $pfp_set;
