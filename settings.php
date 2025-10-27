@@ -26,6 +26,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
         } else {
             $pfp_set = "images/pfp-icon.webp";
         }
+echo $timezone;
 ?>
 
 <!DOCTYPE html>
