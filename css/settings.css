@@ -149,7 +149,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         width: 70%;
-        height: 70%;
+        height: 60%;
         padding-left: 2em;
     }
     .account-content input {
