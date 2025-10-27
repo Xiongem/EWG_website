@@ -139,6 +139,7 @@
         border-radius: 4px;
         accent-color: var(--background-color);
         padding: 8px;
+        margin-bottom: 2em;
     }
     .fav-content {
         display: flex;
