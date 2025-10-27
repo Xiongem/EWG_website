@@ -51,7 +51,7 @@ if ($result->num_rows > 1) {
             $title = $project["title"];
             $info = $project["info"];
     }}
-} elseif ($result->num_rows = 1) {
+} elseif ($result->num_rows == 1) {
     $sql = "SELECT * FROM current_project WHERE users_id='$profileID' AND current_state='current'";
     $result = $_SESSION["conn"]->query($sql);
     $project = $result->fetch_assoc();
