@@ -18,7 +18,6 @@ $sql = "SELECT current_state FROM current_project WHERE users_id=$userID AND cur
     $result = $_SESSION["conn"]->query($sql);
 
 $today = date("Y-m-d");
-echo $timezone;
 ?>
 
 <!DOCTYPE html>
