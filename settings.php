@@ -26,7 +26,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
         } else {
             $pfp_set = "images/pfp-icon.webp";
         }
-echo $timezone;
 ?>
 
 <!DOCTYPE html>
@@ -286,7 +285,6 @@ echo $timezone;
     var timeZone = "<?=$timezone?>";
     var selected = document.getElementById('timezone');
     selected.value = timeZone;
-    // $('#timezone').val(timezone);
 
     function clickHandle(evt, settingTab) {
         let i, tabcontent, tablinks;
