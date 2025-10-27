@@ -33,13 +33,7 @@ if (isset($_SESSION["user_id"])) {
         $pfp_set = "images/pfp-icon.webp";
     }
 
-    if (!isset($project["genre"])) {
-        $startDate = "nothing";
-        $started = "nothing";
-        $intervals = "nothing";
-        $streak = "nothing";
-        $displayGoalDate = "nothing";
-    }
+    
 
     //* Pull Project Info
     $sql = "SELECT display FROM current_project WHERE users_id='$userID' AND current_state='current'";
