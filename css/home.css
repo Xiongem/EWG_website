@@ -57,11 +57,11 @@
         border-radius: 4px;
         accent-color: var(--background-color);
         padding: 8px;
-        margin-bottom: 0.5em;
+        margin-bottom: 2em;
     }
     #timezone-title {
         font-size: 28px;
-        margin-bottom: 2em;
+        margin-bottom: 0.5em;
     }
     .project-select-popup-wrapper {
         display: none;
