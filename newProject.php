@@ -60,7 +60,7 @@ $today = date("Y-m-d");
         <div class="new-project-container">
             <form method="post" action="php-processes/create-newProject" name="createNewProject">
                 <div class="input-section">
-                    <label for="title">Title</label>
+                    <label for="title">Title</label><i class="required">*</i>
                     <input class="input" type="text" name="title" id="title"
                         placeholder="Awesome Title" require>
                     <label for="genre">Genre</label>
