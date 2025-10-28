@@ -660,3 +660,6 @@ a {
 .inactive {
     opacity: 0;
 }
+.required {
+    color: var(--warning);
+}

@@ -131,7 +131,7 @@
         margin: 1em 1em;
         cursor: pointer;
     }
-    #instruct {
+    .instruct {
         margin-bottom: 1em;
         color: var(--warning);
     }
@@ -201,7 +201,4 @@ input:invalid {
     background-color: grey;
     opacity: 0.6;
     cursor: not-allowed;
-}
-.required {
-    color: var(--warning);
 }

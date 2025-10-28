@@ -63,7 +63,7 @@
     <div class="account-wrapper">
         <form id="signup" action="php-processes/create-account" method="post">
             <div class="input-warpper">
-                <label for="username" id="usernameLabel">Username:</label>
+                <label for="username" id="usernameLabel">Username:<i class="required">*</i></label>
                 <input type="text" 
                     autocomplete="new-username" 
                     name="username" 
@@ -77,7 +77,7 @@
 
                 <span id="user-availability-status"></span>
 
-                <label for="email" id="emailLabel">Email:</label>
+                <label for="email" id="emailLabel">Email:<i class="required">*</i></label>
                 <input type="email" 
                     name="email" 
                     id="email" 
@@ -88,7 +88,7 @@
 
                 <span id="email-availability-status"></span>
 
-                <label for="pwd" id="passwordLabel">Password:</label>
+                <label for="pwd" id="passwordLabel">Password:<i class="required">*</i></label>
                 <input type="password"
                     autocomplete="new-password" 
                     name="pwd" 
@@ -99,7 +99,7 @@
                         and at least 8 or more characters"
                     required>
 
-                <label for="confirm_pwd">Confirm Password:</label>
+                <label for="confirm_pwd">Confirm Password:<i class="required">*</i></label>
                 <input type="password"
                     autocomplete="new-password" 
                     name="confirm_pwd" 
@@ -117,7 +117,7 @@
                 </div>
             </div>
             <?php if ($_SESSION["createAccount"] === false): ?>
-                <em>Invalid login</em>
+                <em class="required">Invalid login</em>
             <?php endif; ?>
             <div class="terms">
                 <p>By clicking the Submit button, you agree to our <a href="legal-docs/terms-use.html">Terms of Use</a>.</p>
