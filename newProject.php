@@ -63,7 +63,7 @@ $today = date("Y-m-d");
                     <label for="title">Title<i class="required">*</i></label>
                     <input class="input" type="text" name="title" id="title"
                         placeholder="Awesome Title" require>
-                    <label for="genre">Genre</label>
+                    <label for="genre">Genre<i class="required">*</i></label>
                     <select class="input" name="genre" id="genre" onchange="switchImage();" require>
                         <option name="placeholder" id="placeholder" value="0">Choose your genre</option>
                         <option name="adventure" id="adventure" value="1">Adventure</option>
@@ -86,10 +86,10 @@ $today = date("Y-m-d");
                         <option name="ya" id="ya" value="18">Young Adult</option>
                         <option name="childrens" id="childrens" value="19">Young Readers</option>
                     </select>
-                    <label for="goalNumber">Goal Number</label>
+                    <label for="goalNumber">Goal Number<i class="required">*</i></label>
                     <input class="input" type="text" name="goalNumber" id="goalNumber" pattern="^\d+(,\d+)?$"
                         placeholder="50,000" require>
-                    <label for="startDate">Start Date</label>
+                    <label for="startDate">Start Date<i class="required">*</i></label>
                     <input class="input" type="date" name="startDate" id="startDate" value="<?=$today?>" require>
                     <label for="endDate">End Date</label>
                     <input class="input" type="date" name="endDate" id="endDate" onchange="findDailyGoal()">
@@ -101,7 +101,7 @@ $today = date("Y-m-d");
                     <label for="dailyGoal">Daily Goal</label>
                     <input class="input" type="text" name="dailyGoal" id="dailyGoal" pattern="^\d+(,\d+)?$"
                         placeholder="100 (you can leave me blank)">
-                    <label class="summary" for="summary">Summary</label>
+                    <label class="summary" for="summary">Summary<i class="required">*</i></label>
                     <textarea class="summary input" name="summary" id="summary" maxlength="500" require
                         placeholder="Tell the world about your awesome project (max: 500 characters)"></textarea>
                 </div>
