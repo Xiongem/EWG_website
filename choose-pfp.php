@@ -1,3 +1,8 @@
+<?php
+ob_start();
+require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
+dbConnect();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
