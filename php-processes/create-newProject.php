@@ -70,7 +70,7 @@ if ($_POST["genre"] !== "" && $_POST["title"] !== "" && $_POST["summary"] !== ""
             //echo "params bound"."<br>";
     //execute statement
     if ($stmt1 -> execute() && $stmt2 -> execute()) {
-        $_SESSION["createProject"] = true;
+        unset($_SESSION["createProject"]);
         header("Location: /index.php");
             exit;
         } else {

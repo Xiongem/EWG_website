@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <?php endif; ?>
             <div class="forgot-password">
                 <a href="forgot-password.html">Forgot your password?</a>
-                <a href="account-create.html">Create a new account</a>
+                <a href="account-create.php">Create a new account</a>
             </div>
         </div>
     </div>

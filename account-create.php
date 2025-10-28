@@ -116,6 +116,9 @@
                     <span id="passwordError" class="error"></span>
                 </div>
             </div>
+            <?php if ($_SESSION["createAccount"] === false): ?>
+                <em>Invalid login</em>
+            <?php endif; ?>
             <div class="terms">
                 <p>By clicking the Submit button, you agree to our <a href="legal-docs/terms-use.html">Terms of Use</a>.</p>
             </div>
