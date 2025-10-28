@@ -45,40 +45,39 @@ if( is_numeric( $newDailyGoal ) ) {
 }
 
 if ($_POST["genre"] !== "" && $_POST["title"] !== "" && $_POST["summary"] !== "" && $_POST["goalNumber"] !== "" && $_POST["startDate"] !== "") {
-    echo "I should not be here";
-    // $stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET `display`=? WHERE `users_id`= $userID AND display='active';");
+    $stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET `display`=? WHERE `users_id`= $userID AND display='active';");
 
-    // $stmt2 = $_SESSION["conn"] -> prepare("INSERT INTO current_project 
-    //                         (username, genre, title, info, current_count, display, goal, `start_date`,  goal_date, daily_goal, current_state, users_id) 
-    //                         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    //     //echo "stmt prepared"."<br>";
-    //     //bind params
-    //     $stmt1->bind_param("s",
-    //                         $notActive);
-    //     $stmt2->bind_param("ssssisissisi",
-    //                         $username,
-    //                         $_POST["genre"],
-    //                         $_POST["title"],
-    //                         $_POST["summary"],
-    //                         $current_count,
-    //                         $display,
-    //                         $goal,
-    //                         $_POST["startDate"],
-    //                         $_POST["endDate"],
-    //                         $dailyGoal,
-    //                         $current_state,
-    //                         $_SESSION["user_id"]);
-    //         //echo "params bound"."<br>";
-    // //execute statement
-    // if ($stmt1 -> execute() && $stmt2 -> execute()) {
-    //     header("Location: /index.php");
-    //         exit;
-    //     } else {
-    //         die("unexpected error");
-    // }
+    $stmt2 = $_SESSION["conn"] -> prepare("INSERT INTO current_project 
+                            (username, genre, title, info, current_count, display, goal, `start_date`,  goal_date, daily_goal, current_state, users_id) 
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        //echo "stmt prepared"."<br>";
+        //bind params
+        $stmt1->bind_param("s",
+                            $notActive);
+        $stmt2->bind_param("ssssisissisi",
+                            $username,
+                            $_POST["genre"],
+                            $_POST["title"],
+                            $_POST["summary"],
+                            $current_count,
+                            $display,
+                            $goal,
+                            $_POST["startDate"],
+                            $_POST["endDate"],
+                            $dailyGoal,
+                            $current_state,
+                            $_SESSION["user_id"]);
+            //echo "params bound"."<br>";
+    //execute statement
+    if ($stmt1 -> execute() && $stmt2 -> execute()) {
+        header("Location: /index.php");
+            exit;
+        } else {
+            die("unexpected error");
+    }
 
-    // $stmt -> close();
-    // mysqli_close($conn);
+    $stmt -> close();
+    mysqli_close($conn);
 } else {
     die("Please fill in all required information");
 }
