@@ -145,12 +145,12 @@ if (isset($_SESSION["user_id"])) {
             if ($startDate !== "0000-00-00") {
                 //* Math to decide if project start date has been reached
                 $start_date = strtotime($startDate);
-                $todayDate = time();
+                $todayDate = strtotime(date("Y-m-d"));
                 $datedifference = $start_date - $todayDate;
                 $started = round($datedifference / (60 * 60 * 24));
                 if ($started <= 0) {
                     //? STREAK BADGES
-                    $nows = time();
+                    $nows = strtotime(date("Y-m-d"));
                     $your_dates = strtotime($update_date);
                     $datediffer = $nows - $your_dates;
                     $intervals = round($datediffer / (60 * 60 * 24));
@@ -271,7 +271,7 @@ if (isset($_SESSION["user_id"])) {
                 }
             } else {
                 //? STREAK BADGES
-                $nows = time();
+                $nows = strtotime(date("Y-m-d"));
                 $your_dates = strtotime($update_date);
                 $datediffer = $nows - $your_dates;
                 $intervals = round($datediffer / (60 * 60 * 24));
@@ -494,7 +494,7 @@ if (isset($_SESSION["user_id"])) {
 
 
                 //* Days left math
-                $now = time();
+                $now = strtotime(date("Y-m-d"));
                 $your_date = strtotime($displayGoalDate);
                 $divideDate = $your_date - $now;
                 $math = round($divideDate / (60 * 60 * 24));
@@ -539,7 +539,7 @@ if (isset($_SESSION["user_id"])) {
                 $created = $project["created_at"];
                 $displayDailyGoal = $project["daily_goal"];
                 if ($project["id"]) {
-                $displayPercentage = floor($displayCount / $displayGoal * 100);
+                    $displayPercentage = floor($displayCount / $displayGoal * 100);
                 }
                 
                 //* Badges
@@ -626,12 +626,12 @@ if (isset($_SESSION["user_id"])) {
                 if ($startDate !== "0000-00-00") {
                 //* Math to decide if project start date has been reached
                 $start_date = strtotime($startDate);
-                $todayDate = time();
+                $todayDate = strtotime(date("Y-m-d"));
                 $datedifference = $start_date - $todayDate;
                 $started = round($datedifference / (60 * 60 * 24));
                 if ($started <= 0) {
                     //? STREAK BADGES
-                    $nows = time();
+                    $nows = strtotime(date("Y-m-d"));
                     $your_dates = strtotime($update_date);
                     $datediffer = $nows - $your_dates;
                     $intervals = round($datediffer / (60 * 60 * 24));
@@ -752,7 +752,7 @@ if (isset($_SESSION["user_id"])) {
                 }
             } else {
                 //? STREAK BADGES
-                $nows = time();
+                $nows = strtotime(date("Y-m-d"));
                 $your_dates = strtotime($update_date);
                 $datediffer = $nows - $your_dates;
                 $intervals = round($datediffer / (60 * 60 * 24));
@@ -976,7 +976,7 @@ if (isset($_SESSION["user_id"])) {
 
 
                     //* Days left math
-                    $now = time();
+                    $now = strtotime(date("Y-m-d"));
                     $your_date = strtotime($displayGoalDate);
                     $divideDate = $your_date - $now;
                     $math = round($divideDate / (60 * 60 * 24));
@@ -1066,8 +1066,6 @@ echo "$your_dates"."<br>";
 
 
 $update_date = date("Y-m-d");
-$stringTime = strtotime(date("Y-m-d"));
-echo "$your_dates"."<br>";
 //* Set Session Tokens
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
