@@ -1066,7 +1066,7 @@ echo "$your_dates"."<br>";
 
 
 $update_date = date("Y-m-d");
-$stringTime = strtotime($update_date);
+$stringTime = strtotime(date("Y-m-d"));
 echo "$your_dates"."<br>";
 //* Set Session Tokens
 $_SESSION["pfp"] = $pfp_set;
