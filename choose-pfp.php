@@ -18,6 +18,9 @@
     <div class="chooses-pfp-container">
         <div class="chooses-pfp-contents">
             <h1>1. Choose an Image</h1>
+            <?php if ($_SESSION['pfpCreate'] === false): ?>
+                <em class="required">Please select a profile picture</em>
+            <?php endif; ?>
             <div class="badge-rows-pfp" id="row1">
             </div>
             <h1>2. Choose a Color</h1>

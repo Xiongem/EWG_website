@@ -20,7 +20,7 @@ $stmt->bind_param("sssssi",
                     $_SESSION["user_id"]);
 
 if ($stmt -> execute()) {
-        header("Location: /choose-pfp.html");
+        header("Location: /choose-pfp.php");
         exit;
     } else {
         die("an unexpected error occured");

@@ -8,17 +8,22 @@ dbConnect();
 // prepare and bind
 $userID = $_SESSION["user_id"];
 
-$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET pfp=? WHERE id=$userID");
-$stmt->bind_param("s",
-                        $_POST["choose-pfp"]);
+if ($_POST["choose-pfp"] !== "") {
+    $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET pfp=? WHERE id=$userID");
+    $stmt->bind_param("s",
+                            $_POST["choose-pfp"]);
 
-if ($stmt -> execute()) {
-    header("Location: /index.php");
-    exit;
+    if ($stmt -> execute()) {
+        unset($_SESSION['pfpCreate']);
+        header("Location: /index.php");
+        exit;
+    } else {
+        die("an unexpected error occured");
+    }
 } else {
-    die("an unexpected error occured");
+    $_SESSION['pfpCreate'] = false;
+    header("Location: /choose-pfp.php");
 }
-
 
 $stmt -> close();
 mysqli_close($conn);
