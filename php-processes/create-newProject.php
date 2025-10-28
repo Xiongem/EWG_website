@@ -44,7 +44,7 @@ if( is_numeric( $newDailyGoal ) ) {
     $dailyGoal = $newDailyGoal;
 }
 
-if (isset($_POST["genre"]) && isset($_POST["title"]) && isset($_POST["summary"]) && isset($_POST["goalNumber"]) && isset($_POST["startDate"])) {
+if ($_POST["genre"] !== "" && $_POST["title"] !== "" && $_POST["summary"] !== "" && $_POST["goalNumber"] !== "" && $_POST["startDate"] !== "") {
     echo "I should not be here";
     // $stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET `display`=? WHERE `users_id`= $userID AND display='active';");
 
