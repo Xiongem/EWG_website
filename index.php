@@ -1061,7 +1061,8 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
 if ($displayGoalDate == "0000-00-00") {
     $lost = "lost";
 }
-echo $intervals;
+echo "$nows"."<br>";
+echo "$your_dates"."<br>";
 $update_date = date("Y-m-d");
 
 //* Set Session Tokens
