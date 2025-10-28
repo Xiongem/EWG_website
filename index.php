@@ -1063,8 +1063,10 @@ if ($displayGoalDate == "0000-00-00") {
 }
 echo "$nows"."<br>";
 echo "$your_dates"."<br>";
-$update_date = date("Y-m-d");
+echo "$stringTime"."<br>";
 
+$update_date = date("Y-m-d");
+$stringTime = strtotime($update_date);
 //* Set Session Tokens
 $_SESSION["pfp"] = $pfp_set;
 $_SESSION["username"] = $username;
