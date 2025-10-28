@@ -131,6 +131,9 @@
         margin: 1em 1em;
         cursor: pointer;
     }
+    #instruct {
+        margin-bottom: 1em;
+    }
 }
 
 
