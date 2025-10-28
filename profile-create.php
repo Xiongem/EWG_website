@@ -20,8 +20,8 @@
             <h1>Create Your Profile</h1>
             <form action="php-processes/create-profile" id="profileCreation" method="post">
                 <div class="timezone-wrapper">
-                    <label for="imezone">Choose Your Timezone:</label>
-                    <select id="timezone" name="timezone" class="form-select">
+                    <label for="imezone">Choose Your Timezone:<i class="required">*</i></label>
+                    <select id="timezone" name="timezone" class="form-select" required>
                         <option value="Pacific/Midway">(GMT-11:00) Midway Island</option>
                         <option value="America/Adak">(GMT-10:00) Hawaii-Aleutian</option>
                         <option value="Etc/GMT+10">(GMT-10:00) Hawaii</option>
