@@ -62,9 +62,9 @@ $today = date("Y-m-d");
                 <div class="input-section">
                     <label for="title">Title</label>
                     <input class="input" type="text" name="title" id="title"
-                        placeholder="Awesome Title">
+                        placeholder="Awesome Title" require>
                     <label for="genre">Genre</label>
-                    <select class="input" name="genre" id="genre" onchange="switchImage();">
+                    <select class="input" name="genre" id="genre" onchange="switchImage();" require>
                         <option name="placeholder" id="placeholder" value="0">Choose your genre</option>
                         <option name="adventure" id="adventure" value="1">Adventure</option>
                         <option name="erotica" id="erotica" value="2">Erotica</option>
@@ -88,9 +88,9 @@ $today = date("Y-m-d");
                     </select>
                     <label for="goalNumber">Goal Number</label>
                     <input class="input" type="text" name="goalNumber" id="goalNumber" pattern="^\d+(,\d+)?$"
-                        placeholder="50,000">
+                        placeholder="50,000" require>
                     <label for="startDate">Start Date</label>
-                    <input class="input" type="date" name="startDate" id="startDate" value="<?=$today?>">
+                    <input class="input" type="date" name="startDate" id="startDate" value="<?=$today?>" require>
                     <label for="endDate">End Date</label>
                     <input class="input" type="date" name="endDate" id="endDate" onchange="findDailyGoal()">
                         <div class="checkbox-wrapper">
@@ -102,7 +102,7 @@ $today = date("Y-m-d");
                     <input class="input" type="text" name="dailyGoal" id="dailyGoal" pattern="^\d+(,\d+)?$"
                         placeholder="100 (you can leave me blank)">
                     <label class="summary" for="summary">Summary</label>
-                    <textarea class="summary input" name="summary" id="summary" maxlength="500"
+                    <textarea class="summary input" name="summary" id="summary" maxlength="500" require
                         placeholder="Tell the world about your awesome project (max: 500 characters)"></textarea>
                 </div>
                 <div class="preview-section">
