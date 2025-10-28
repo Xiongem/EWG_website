@@ -55,7 +55,7 @@ if ($_POST["username"] !== "" && $_POST["email"] !== "" && $_POST["pwd"] !== "")
 
         $user = $result->fetch_assoc();
 
-            $_SESSION['loggedin'] = true;
+            unset($_SESSION['loggedin']);
             $_SESSION["user_id"] = $user["id"];
             $_SESSION["createAccount"] = true;
             
