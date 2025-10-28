@@ -58,7 +58,9 @@ $today = date("Y-m-d");
     <div class="new-project-wrapper">
         <h1>Create a New Project</h1>
         <?php if ($_SESSION["createProject"] === false): ?>
-            <em>Please fill out all required (*) fields<em>
+            
+                <em>Please fill out all required (*) fields</em>
+            
         <?php endif; ?>
         <div class="new-project-container">
             <form method="post" action="php-processes/create-newProject" name="createNewProject">

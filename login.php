@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
             </form>
                 <?php if ($is_invalid): ?>
-                    <em>Invalid login<em>
+                    <em>Invalid login</em>
                 <?php endif; ?>
             <div class="forgot-password">
                 <a href="forgot-password.html">Forgot your password?</a>
