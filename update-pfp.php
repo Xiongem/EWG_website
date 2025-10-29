@@ -23,7 +23,7 @@ dbConnect();
     <div class="chooses-pfp-container">
         <div class="chooses-pfp-contents">
             <h1>1. Choose an Image</h1>
-            <?php if ($_SESSION['pfpUpdate'] === false): ?>
+            <?php if (!$_SESSION['pfpUpdate']): ?>
                 <em id="instruct" class="required">Please select a profile picture</em>
             <?php endif; ?>
             <div class="badge-rows-pfp" id="row1">
