@@ -15,17 +15,22 @@ $user = $result->fetch_assoc();
 
 $_SESSION["pfp"] = $_POST["choose-pfp"];
 
-$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET pfp=? WHERE id=$userID");
-$stmt->bind_param("s",
-                        $_POST["choose-pfp"]);
+if ($_POST["choose-pfp"] !== "") {
+    $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET pfp=? WHERE id=$userID");
+    $stmt->bind_param("s",
+                            $_POST["choose-pfp"]);
 
-if ($stmt -> execute()) {
-    header("Location: /profile.php?name=$username");
-    exit;
-} else {
-    die("an unexpected error occured");
+    if ($stmt -> execute()) {
+        unset($_SESSION['pfpUpdate']);
+        header("Location: /profile.php?name=$username");
+        exit;
+    } else {
+        die("an unexpected error occured");
+    }
+}  else {
+    $_SESSION['pfpUpdate'] = false;
+    header("Location: /update-pfp.php");
 }
-
 
 $stmt -> close();
 mysqli_close($conn);

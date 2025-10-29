@@ -44,13 +44,13 @@ $result = $_GET["result"];
                 <div class="content-wrapper">
                     <div class="user-wrapper">
                         <label for="username">Username/Name:</label>
-                        <input class="input" type="text" id="username" name="username" placeholder="required" require>
+                        <input class="input" type="text" id="username" name="username" placeholder="required" required>
                         <label for="email">Email:</label>
-                        <input class="input" type="email" id="email" name="email" placeholder="required" require>
+                        <input class="input" type="email" id="email" name="email" placeholder="required" required>
                     </div>
                     <div class="message-wrapper">
                         <label for="message">Message:</label>
-                        <textarea name="message" id="message" require></textarea>
+                        <textarea name="message" id="message" required></textarea>
                     </div>
                 </div>
                 <div class="contact-button">

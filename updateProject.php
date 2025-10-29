@@ -66,11 +66,11 @@ $project = $result->fetch_assoc();
         <div class="new-project-container">
             <form method="post" action="php-processes/update-project" name="createNewProject">
                 <div class="input-section">
-                    <label for="title">Title</label>
-                    <input class="input" type="text" name="title" id="title" 
+                    <label for="title">Title<i class="required">*</i></label>
+                    <input class="input" type="text" name="title" id="title" required
                         value="<?=$title?>">
-                    <label for="genre">Genre</label>
-                    <select class="input" name="genre" id="genre" onchange="switchImage();">
+                    <label for="genre">Genre<i class="required">*</i></label>
+                    <select class="input" name="genre" id="genre" onchange="switchImage();" required>
                         <option name="placeholder" id="placeholder" value="0">Choose your genre</option>
                         <option name="adventure" id="adventure" value="1">Adventure</option>
                         <option name="erotica" id="erotica" value="2">Erotica</option>
@@ -92,8 +92,8 @@ $project = $result->fetch_assoc();
                         <option name="ya" id="ya" value="18">Young Adult</option>
                         <option name="childrens" id="childrens" value="19">Young Readers</option>
                     </select>
-                    <label for="goalNumber">Goal Number</label>
-                    <input class="input" type="text" name="goalNumber" id="goalNumber" pattern="^\d+(,\d+)?$"
+                    <label for="goalNumber">Goal Number<i class="required">*</i></label>
+                    <input class="input" type="text" name="goalNumber" id="goalNumber" pattern="^\d+(,\d+)?$" required
                         value="<?=$goal?>">
                     <label for="endDate">End Date</label>
                     <input class="input" type="date" name="endDate" id="endDate" onchange="findDailyGoal()" value="<?=$goalDate?>">
@@ -105,8 +105,8 @@ $project = $result->fetch_assoc();
                     <label for="dailyGoal">Daily Goal</label>
                     <input class="input" type="text" name="dailyGoal" id="dailyGoal" pattern="^\d+(,\d+)?$"
                         value="<?=$dailyGoal?>">
-                    <label class="summary" for="summary">Summary</label>
-                    <textarea class="summary input" name="summary" id="summary" maxlength="500"
+                    <label class="summary" for="summary">Summary<i class="required">*</i></label>
+                    <textarea class="summary input" name="summary" id="summary" maxlength="500" required
                         ><?=$info?></textarea>
                     <input type="hidden" name="projectID" id="projectID" 
                         value="<?=$id?>">

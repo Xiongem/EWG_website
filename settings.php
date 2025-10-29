@@ -128,7 +128,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 <div class="appearance-contents">
                     <div class="pfp-change-wrapper">
                         <img id="change-pfp-image" src="<?=$pfp_set?>">
-                        <a href="update-pfp.html" class="update-button">Update Profile Picture</a>
+                        <a href="update-pfp.php" class="update-button">Update Profile Picture</a>
                     </div>
                     <div class="theme-change-wrapper">
                         <div class="theme-change-button">
@@ -151,12 +151,12 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     <div class="account-content">
                         <div class="form-content">
                             <label>Change Your Username:</label>
-                            <input type="text" name="username" id="username" value="<?=$username?>" onchange="checkName();">
+                            <input type="text" name="username" id="username" value="<?=$username?>" onchange="checkName();" required>
                             <span id="user-availability-status"></span>
                         </div>
                         <div class="form-content">
                             <label>Change Your Email Address:</label>
-                            <input type="email" name="email" id="email" value="<?=$email?>" onchange="checkEmail();">
+                            <input type="email" name="email" id="email" value="<?=$email?>" onchange="checkEmail();" required>
                             <span id="email-availability-status"></span>
                         </div>
                         <a href="forgot-password.html">Reset Your Password</a>

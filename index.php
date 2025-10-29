@@ -1354,7 +1354,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                             <option class="count-type-list" id="add" value="add">Add to total</option>
                         </div>
                     </select>
-                    <input type="text" pattern="^\d+(,\d+)?$" id="updateWordCount" name="updateWordCount">
+                    <input type="text" pattern="^\d+(,\d+)?$" id="updateWordCount" name="updateWordCount" required>
                     <input type="hidden" name="projectID" id="projectID" value="<?=$displayProjectID?>">
                 </div>
                 <div class="button-wrapper">
