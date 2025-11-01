@@ -57,6 +57,7 @@ if (isset($_SESSION["user_id"])) {
                     $startDate = $project["start_date"];
                     $displayGoalDate = $project["goal_date"];
                     $update_date = $project["update_date"];
+                    $dailyWords = $project["daily_words"];
                     $streak = $project["streak"];
                     $displayDailyGoal = $project["daily_goal"];
                     $dailyStreak = $project["daily_goal_streak"];
@@ -393,11 +394,16 @@ if (isset($_SESSION["user_id"])) {
             }
             //* First Daily
             $badge10 = $project["first-daily"];
-                if ($badge10 == "unlocked") {
-                    $badge10 = "images/badges/first-daily-color.webp";
-                } elseif ($badge10 == "locked") {
-                    $badge10 = "images/badges/first-daily-mono.webp";
-                }                        
+            if ($dailyStreak >= 1 || $badge10 == "unlocked") {
+                if ($badge10 !== "unlocked") {
+                    $sql = "UPDATE current_project SET `first-daily`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                        $stmt = $_SESSION["conn"]->prepare($sql);
+                        $stmt->execute();
+                }
+                $badge10 = "images/badges/first-daily-color.webp";
+            } else {
+                $badge10 = "images/badges/first-daily-mono.webp";
+            }                      
 
             //? TOGGLEABLE BADGES
             //* Outline
@@ -535,6 +541,7 @@ if (isset($_SESSION["user_id"])) {
                 $displayGoal = $project["goal"];
                 $displayGoalDate = $project["goal_date"];
                 $update_date = $project["update_date"];
+                $dailyWords = $project["daily_words"];
                 $streak = $project["streak"];
                 $created = $project["created_at"];
                 $displayDailyGoal = $project["daily_goal"];
@@ -874,11 +881,16 @@ if (isset($_SESSION["user_id"])) {
             }
                 //* First Daily
                 $badge10 = $project["first-daily"];
-                    if ($badge10 == "unlocked") {
-                        $badge10 = "images/badges/first-daily-color.webp";
-                    } elseif ($badge10 == "locked") {
-                        $badge10 = "images/badges/first-daily-mono.webp";
-                    }                        
+                if ($dailyStreak >= 1 || $badge10 == "unlocked") {
+                    if ($badge10 !== "unlocked") {
+                        $sql = "UPDATE current_project SET `first-daily`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $stmt = $_SESSION["conn"]->prepare($sql);
+                            $stmt->execute();
+                    }
+                    $badge10 = "images/badges/first-daily-color.webp";
+                } else {
+                    $badge10 = "images/badges/first-daily-mono.webp";
+                }                         
 
                 //? TOGGLEABLE BADGES
                 //* Outline
@@ -1018,11 +1030,21 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
     if ($started <= 0) {
         $began = "yes";
         if ($intervals == 1) {
+            if ($dailyWords !== 0) {
+                $sql = "UPDATE current_project SET `daily_words`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                        $stmt = $_SESSION["conn"]->prepare($sql);
+                        $stmt->execute();
+            }
             $streak = $streak + 1;
             $fire = "off";
             $lost = "not";
         } elseif ($intervals >= 2) {
             $streak = 1;
+            if ($dailyWords !== 0) {
+                $sql = "UPDATE current_project SET `daily_words`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                        $stmt = $_SESSION["conn"]->prepare($sql);
+                        $stmt->execute();
+            }
             if ($project["on-track"] !== "lost" && $update_date !== "0000-00-00") {
                 $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                     $stmt = $_SESSION["conn"]->prepare($sql);
@@ -1031,6 +1053,7 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
             }
             $fire = "off";
         } else {
+            $dailyWords = $dailyWords;
             $streak = $streak;
             $fire = "on";
             $lost = "not";
@@ -1041,11 +1064,21 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
 } else {
     $began = "yes";
     if ($intervals == 1) {
+        if ($dailyWords !== 0) {
+            $sql = "UPDATE current_project SET `daily_words`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
+        }
         $streak = $streak + 1;
         $fire = "off";
         $lost = "not";
     } elseif ($intervals >= 2) {
         $streak = 1;
+        if ($dailyWords !== 0) {
+            $sql = "UPDATE current_project SET `daily_words`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
+        }
         if ($project["on-track"] !== "lost" && $update_date !== "0000-00-00") {
             $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                 $stmt = $_SESSION["conn"]->prepare($sql);
@@ -1053,6 +1086,7 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
             $lost = "lost";
         }
     } else {
+        $dailyWords = $dailyWords;
         $streak = $streak;
         $fire = "on";
         $lost = "not";
