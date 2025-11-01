@@ -35,7 +35,8 @@ $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state
 
 //? REPLACE
 if ($choice == "replace") {
-    $dailyCount = $updateCount - $currentCount;
+    $replaceCount = $updateCount - $currentCount;
+    $dailyCount = $dailyWords + $replaceCount;
     if ($intervals == 1 && $dailyCount >= $dailyGoal) {
         $dailyStreak = $dailyStreak + 1;
     } elseif ($intervals >= 2) {
