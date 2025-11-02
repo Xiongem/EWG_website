@@ -1035,6 +1035,11 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
             }
+            if ($reached !== 0) {
+                $sql = "UPDATE current_project SET `reached`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                        $stmt = $_SESSION["conn"]->prepare($sql);
+                        $stmt->execute();
+            }
             $streak = $streak + 1;
             $fire = "off";
             $lost = "not";
@@ -1042,6 +1047,11 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
             $streak = 1;
             if ($dailyWords !== 0) {
                 $sql = "UPDATE current_project SET `daily_words`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                        $stmt = $_SESSION["conn"]->prepare($sql);
+                        $stmt->execute();
+            }
+            if ($reached !== 0) {
+                $sql = "UPDATE current_project SET `reached`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
             }
@@ -1069,6 +1079,11 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
                     $stmt = $_SESSION["conn"]->prepare($sql);
                     $stmt->execute();
         }
+        if ($reached !== 0) {
+            $sql = "UPDATE current_project SET `reached`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
+        }
         $streak = $streak + 1;
         $fire = "off";
         $lost = "not";
@@ -1076,6 +1091,11 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
         $streak = 1;
         if ($dailyWords !== 0) {
             $sql = "UPDATE current_project SET `daily_words`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                    $stmt = $_SESSION["conn"]->prepare($sql);
+                    $stmt->execute();
+        }
+        if ($reached !== 0) {
+            $sql = "UPDATE current_project SET `reached`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                     $stmt = $_SESSION["conn"]->prepare($sql);
                     $stmt->execute();
         }

@@ -31,16 +31,18 @@ $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state
             $firstDaily = $count["first-daily"];
             $dailyStreak = $count["daily_goal_streak"];
             $dailyWords = $count["daily_words"];
+            $reached = $count["reached"];
 
 
 //? REPLACE
 if ($choice == "replace") {
     $replaceCount = $updateCount - $currentCount;
     $dailyCount = $dailyWords + $replaceCount;
-    if ($intervals == 1 && $dailyCount >= $dailyGoal) {
+    if ($reached == 0 && $dailyCount >= $dailyGoal) {
         $dailyStreak = $dailyStreak + 1;
-    } elseif ($intervals >= 2) {
-        $dailyStreak = 1;
+        $sql = "UPDATE current_project SET `reached`= 1 WHERE users_id=$userID AND current_state='current' AND id=$projectID";
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
     } else {
         $dailyStreak = $dailyStreak;
     }
@@ -61,10 +63,11 @@ if ($choice == "replace") {
 } elseif ($choice == "add") {
     $newCount = $currentCount + $updateCount;
     $dailyCount = $updateCount + $dailyWords;
-    if ($intervals == 1 && $dailyCount >= $dailyGoal) {
+    if ($reached == 0 && $dailyCount >= $dailyGoal) {
         $dailyStreak = $dailyStreak + 1;
-    } elseif ($intervals >= 2) {
-        $dailyStreak = 1;
+        $sql = "UPDATE current_project SET `reached`= 1 WHERE users_id=$userID AND current_state='current' AND id=$projectID";
+            $stmt = $_SESSION["conn"]->prepare($sql);
+            $stmt->execute();
     } else {
         $dailyStreak = $dailyStreak;
     }
