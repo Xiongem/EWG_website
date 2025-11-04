@@ -1462,7 +1462,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <?php } ?>
                 <div id="dailyGoal" class="progress-info">
                     <h2>Daily Goal:</h2>
-                    <p><?= $displayDailyGoal ?></p>
+                    <p><?= $dailyWords ?>/<?= $displayDailyGoal ?></p>
                 </div>
                 <div id="goal" class="progress-info">
                     <h2>Percentage:</h2>
