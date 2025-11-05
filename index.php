@@ -1558,7 +1558,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <div class="auto-row rows">
                     <!-- //* First Daily-->
                     <div class="badge-wrapper" id="first-daily-wrapper">
-                        <img src="<?php if($badge10) {
+                        <img src="<?php if(isset($badge10)) {
                             echo $badge10;
                         }else{
                             echo $default10;
