@@ -1185,6 +1185,7 @@ $_SESSION["overlay"] = $user["hydra-slayer"];
     $streak = "";
     $displayGoalDate = "";
     $lost = "not";
+    $dailyWords = 0;
 }
 //* Default Badges
 $default1 = "images/badges/quarter-quomplete-mono.webp";
