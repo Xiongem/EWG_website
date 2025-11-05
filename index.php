@@ -174,9 +174,7 @@ if (isset($_SESSION["user_id"])) {
                                     $stmt->execute();
                             }
                             $badge5 = "images/badges/streak-two-color.webp";
-                        } else {
-                            $badge5 = "images/badges/streak-two-mono.webp";
-                        }
+                        } 
                         //* 3 Day Streak
                         if ($streak >= 3) {
                             if ($project["streak-three"] !== "unlocked") {
