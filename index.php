@@ -1109,6 +1109,7 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
         }
     } else {
         $fire = "off";
+        $lost = "not";
     }
 } else {
     $began = "yes";
