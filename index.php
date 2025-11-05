@@ -1435,7 +1435,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
             </script>
         </div>
     </div>
-    <?php } ?>
+    
     <div class="count-update-wrapper" id="count-update-popup">
         <div class="count-update-popup">
             <div class="close-wrapper">
@@ -1460,17 +1460,19 @@ $default25 = "images/badges/cross-finish-mono.webp";
             </form>
         </div>
     </div>
+    <?php } ?>
     <!-- //* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
         <?php makeNav() ?>
     </header>
+    <?php if (isset($_SESSION["user_id"])) { ?>
     <?php if ($result->num_rows > 1) { ?>
     <!-- //* BUTTON FOR SELECTING ACTIVE PROJECT TO SEE -->
     <div class="project-select-wrapper">
         <div class="project-select" onclick="showProjectPopup()">Switch Project <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i>
         </div>
     </div>
-    <?php } ?>
+    <?php }} ?>
     <!-- //* PROGRESS BAR-->
     <div class="pb-wrapper">
         <div class="pb-background">
