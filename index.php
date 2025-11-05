@@ -304,6 +304,8 @@ if (isset($_SESSION["user_id"])) {
                                 $stmt->execute();
                         }
                         $badge5 = "images/badges/streak-two-color.webp";
+                    } else {
+                        $badge5 = "images/badges/streak-two-mono.webp";
                     }
                     //* 3 Day Streak
                     if ($streak >= 3) {
@@ -313,6 +315,8 @@ if (isset($_SESSION["user_id"])) {
                                 $stmt->execute();
                         }
                         $badge6 = "images/badges/streak-three-color.webp";
+                    } else {
+                        $badge6 = "images/badges/streak-three-mono.webp";
                     }
                     //* Seven Day Streak
                     if ($streak >= 7) {
@@ -322,6 +326,8 @@ if (isset($_SESSION["user_id"])) {
                                 $stmt->execute();
                         }
                         $badge7 = "images/badges/streak-seven-color.webp";
+                    } else {
+                        $badge7 = "images/badges/streak-seven-mono.webp";
                     }
                     //* Fourteen Day Streak
                     if ($streak >= 14) {
@@ -331,6 +337,8 @@ if (isset($_SESSION["user_id"])) {
                                 $stmt->execute();
                         }
                         $badge8 = "images/badges/streak-fourteen-color.webp";
+                    } else {
+                        $badge8 = "images/badges/streak-fourteen-mono.webp";
                     }
                     //* Twenty-One Day Streak
                     if ($streak >= 21) {
@@ -340,6 +348,8 @@ if (isset($_SESSION["user_id"])) {
                                 $stmt->execute();
                         }
                         $badge9 = "images/badges/streak-twentyOne-color.webp";
+                    } else {
+                        $badge9 = "images/badges/streak-twentyOne-mono.webp";
                     }
                     //* Full Streak Math
                     $created_date = strtotime($created);
@@ -361,7 +371,11 @@ if (isset($_SESSION["user_id"])) {
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             $badge11 = "images/badges/every-streak-mono.webp";
+                        } else {
+                            $badge11 = "images/badges/every-streak-mono.webp";
                         }
+                    } else {
+                        $badge11 = "images/badges/every-streak-mono.webp";
                     }
                     //* On track
                     if ($project["on-track"] !== "lost") {
@@ -384,7 +398,11 @@ if (isset($_SESSION["user_id"])) {
                                 } elseif ($badge12 == "locked") {
                                     $badge12 = "images/badges/on-track-mono.webp";
                                 }
+                        } else {
+                            $badge12 = "images/badges/on-track-mono.webp";
                         }
+                    } else {
+                        $badge12 = "images/badges/on-track-mono.webp";
                     }
                 } else {
                     //* if it has been more than 1 day since word count was updated
