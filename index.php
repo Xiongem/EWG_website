@@ -85,6 +85,8 @@ if (isset($_SESSION["user_id"])) {
                         } elseif ($badge1 == "locked") {
                             $badge1 = "images/badges/quarter-quomplete-mono.webp";
                         }
+                    } else {
+                        $badge1 = "images/badges/quarter-quomplete-mono.webp";
                     }
                     //* Half Way
                     if (isset($project["half-way"])) {
@@ -1575,7 +1577,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Quarter Quomplete-->
                     <div class="badge-wrapper" id="quarter-quomplete-wrapper">
-                        <img src="<?php if(isset($badge1) || $badge1) {
+                        <img src="<?php if(isset($badge1)) {
                             echo $badge1;
                         }else{
                             echo $default1;
