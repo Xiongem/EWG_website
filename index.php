@@ -105,6 +105,8 @@ if (isset($_SESSION["user_id"])) {
                             $badge2 = "images/badges/half-way-mono.webp";
                         } elseif ($badge2 == "locked") {
                             $badge2 = "images/badges/half-way-mono.webp";
+                        } else {
+                            $badge2 = "images/badges/half-way-mono.webp";
                         }
                     }
                     //* All Downhill
@@ -124,6 +126,8 @@ if (isset($_SESSION["user_id"])) {
                             $badge3 = "images/badges/all-downhill-mono.webp";
                         } elseif ($badge3 == "locked") {
                             $badge3 = "images/badges/all-downhill-mono.webp";
+                        } else {
+                           $badge3 = "images/badges/all-downhill-mono.webp"; 
                         }
                     }
                     //* Cross Finish
@@ -142,6 +146,8 @@ if (isset($_SESSION["user_id"])) {
                             $stmt->execute();
                             $badge4 = "images/badges/cross-finish-mono.webp";
                         } elseif ($badge4 == "locked") {
+                            $badge4 = "images/badges/cross-finish-mono.webp";
+                        } else {
                             $badge4 = "images/badges/cross-finish-mono.webp";
                         }
                     }
