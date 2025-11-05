@@ -234,6 +234,8 @@ if (isset($_SESSION["user_id"])) {
                             } else {
                                 $badge11 = "images/badges/every-streak-mono.webp";
                             }
+                        } else {
+                            $badge11 = "images/badges/every-streak-mono.webp";
                         }
                         //* On track
                         if ($project["on-track"] !== "lost") {
@@ -259,6 +261,8 @@ if (isset($_SESSION["user_id"])) {
                             } else {
                                 $badge12 = "images/badges/on-track-mono.webp";
                             }
+                        } else {
+                            $badge12 = "images/badges/on-track-mono.webp";
                         }
                     } else {
                         //* if it has been more than 1 day since word count was updated
