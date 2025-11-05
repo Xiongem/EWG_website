@@ -20,6 +20,16 @@ class ComposerStaticInit31f20ee62e9158698b52c5f52fa76049
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'R' => 
+        array (
+            'Raven_' => 
+            array (
+                0 => __DIR__ . '/..' . '/sentry/sentry/lib',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -29,6 +39,7 @@ class ComposerStaticInit31f20ee62e9158698b52c5f52fa76049
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit31f20ee62e9158698b52c5f52fa76049::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit31f20ee62e9158698b52c5f52fa76049::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit31f20ee62e9158698b52c5f52fa76049::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit31f20ee62e9158698b52c5f52fa76049::$classMap;
 
         }, null, ClassLoader::class);
