@@ -1098,9 +1098,9 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
                 $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                     $stmt = $_SESSION["conn"]->prepare($sql);
                     $stmt->execute();
-                $lost = "lost";
             }
             $fire = "off";
+            $lost = "lost";
         } else {
             $dailyWords = $dailyWords;
             $streak = $streak;
@@ -1143,8 +1143,8 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
             $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                 $stmt = $_SESSION["conn"]->prepare($sql);
                 $stmt->execute();
-            $lost = "lost";
         }
+        $lost = "lost";
     } else {
         $dailyWords = $dailyWords;
         $streak = $streak;
