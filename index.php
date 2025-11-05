@@ -1570,7 +1570,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Quarter Quomplete-->
                     <div class="badge-wrapper" id="quarter-quomplete-wrapper">
-                        <img src="<?php if($badge1) {
+                        <img src="<?php if(isset($badge1)) {
                             echo $badge1;
                         }else{
                             echo $default1;
@@ -1582,7 +1582,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Half Way-->
                     <div class="badge-wrapper" id="half-way-wrapper">
-                        <img src="<?php if($badge2) {
+                        <img src="<?php if(isset($badge2)) {
                             echo $badge2;
                         }else{
                             echo $default2;
@@ -1594,7 +1594,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* All Downhill-->
                     <div class="badge-wrapper" id="all-downhill-wrapper">
-                        <img src="<?php if($badge3) {
+                        <img src="<?php if(isset($badge3)) {
                             echo $badge3;
                         }else{
                             echo $default3;
@@ -1606,7 +1606,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Cross Finish-->
                     <div class="badge-wrapper" id="cross-finish-wrapper">
-                        <img src="<?php if($badge4) {
+                        <img src="<?php if(isset($badge4)) {
                             echo $badge4;
                         }else{
                             echo $default4;
@@ -1621,7 +1621,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <div class="auto-row rows">
                     <!-- //* 2 Day Streak-->
                     <div class="badge-wrapper" id="streak-two-wrapper">
-                        <img src="<?php if($badge5) {
+                        <img src="<?php if(isset($badge5)) {
                             echo $badge5;
                         }else{
                             echo $default5;
@@ -1633,7 +1633,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* 3 Day Streak-->
                     <div class="badge-wrapper" id="streak-three-wrapper">
-                        <img src="<?php if($badge6) {
+                        <img src="<?php if(isset($badge6)) {
                             echo $badge6;
                         }else{
                             echo $default6;
@@ -1645,7 +1645,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* 7 Day Streak-->
                     <div class="badge-wrapper" id="streak-seven-wrapper">
-                        <img src="<?php if($badge7) {
+                        <img src="<?php if(isset($badge7)) {
                             echo $badge7;
                         }else{
                             echo $default7;
@@ -1657,7 +1657,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* 14 Day Streak-->
                     <div class="badge-wrapper" id="streak-fourteen-wrapper">
-                        <img src="<?php if($badge8) {
+                        <img src="<?php if(isset($badge8)) {
                             echo $badge8;
                         }else{
                             echo $default8;
@@ -1669,7 +1669,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* 21 Day Streak-->
                     <div class="badge-wrapper" id="streak-twentyOne-wrapper">
-                        <img src="<?php if($badge9) {
+                        <img src="<?php if(isset($badge9)) {
                             echo $badge9;
                         }else{
                             echo $default9;
@@ -1685,7 +1685,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <div class="auto-row rows">
                     <!-- //* Full Streak-->
                     <div class="badge-wrapper" id="every-streak-wrapper">
-                        <img src="<?php if($badge11) {
+                        <img src="<?php if(isset($badge11)) {
                             echo $badge11;
                         }else{
                             echo $default11;
@@ -1697,7 +1697,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Stayed on Track-->
                     <div class="badge-wrapper" id="on-track-wrapper">
-                        <img src="<?php if($badge12) {
+                        <img src="<?php if(isset($badge12)) {
                             echo $badge12;
                         }else{
                             echo $default12;
@@ -1717,7 +1717,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <div class="toggle-row rows">
                     <!-- //* Outlined-->
                     <div class="badge-wrapper" id="outline-wrapper">
-                        <img src="<?php if($badge13) {
+                        <img src="<?php if(isset($badge13)) {
                             echo $badge13;
                         }else{
                             echo $default13;
@@ -1730,7 +1730,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Pantser/Journey-->
                     <div class="badge-wrapper" id="journey-wrapper">
-                        <img src="<?php if($badge14) {
+                        <img src="<?php if(isset($badge14)) {
                             echo $badge14;
                         }else{
                             echo $default14;
@@ -1743,7 +1743,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Dual Wielding-->
                     <div class="badge-wrapper" id="dual-wielder-wrapper">
-                        <img src="<?php if($badge15) {
+                        <img src="<?php if(isset($badge15)) {
                             echo $badge15;
                         }else{
                             echo $default15;
@@ -1756,7 +1756,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Fresh Project-->
                     <div class="badge-wrapper" id="starting-freshl-wrapper">
-                        <img src="<?php if($badge16) {
+                        <img src="<?php if(isset($badge16)) {
                             echo $badge16;
                         }else{
                             echo $default16;
@@ -1772,7 +1772,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <div class="toggle-row rows">
                     <!-- //* Returning to WIP-->
                     <div class="badge-wrapper" id="ever-persist-wrapper">
-                        <img src="<?php if($badge17) {
+                        <img src="<?php if(isset($badge17)) {
                             echo $badge17;
                         }else{
                             echo $default17;
@@ -1785,7 +1785,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Backed up Project-->
                     <div class="badge-wrapper" id=back-it-up-wrapper">
-                        <img src="<?php if($badge18) {
+                        <img src="<?php if(isset($badge18)) {
                             echo $badge18;
                         }else{
                             echo $default18;
@@ -1799,7 +1799,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Guild Hall Gathering-->
                     <div class="badge-wrapper" id="gathering-wrapper">
-                        <img src="<?php if($badge19) {
+                        <img src="<?php if(isset($badge19)) {
                             echo $badge19;
                         }else{
                             echo $default19;
@@ -1812,7 +1812,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Hear Ye-->
                     <div class="badge-wrapper" id="hear-ye-wrapper">
-                        <img src="<?php if($badge20) {
+                        <img src="<?php if(isset($badge20)) {
                             echo $badge20;
                         }else{
                             echo $default20;
@@ -1825,7 +1825,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Breakthrough-->
                     <div class="badge-wrapper" id="breakthrough-wrapper">
-                        <img src="<?php if($badge21) {
+                        <img src="<?php if(isset($badge21)) {
                             echo $badge21;
                         }else{
                             echo $default21;
@@ -1841,7 +1841,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <div class="toggle-row rows">
                     <!-- //* Touch Grass-->
                     <div class="badge-wrapper" id="touch-grass-wrapper">
-                        <img src="<?php if($badge22) {
+                        <img src="<?php if(isset($badge22)) {
                             echo $badge22;
                         }else{
                             echo $default22;
@@ -1854,7 +1854,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Took Care of Business-->
                     <div class="badge-wrapper" id="business-wrapper">
-                        <img src="<?php if($badge23) {
+                        <img src="<?php if(isset($badge23)) {
                             echo $badge23;
                         }else{
                             echo $default23;
@@ -1867,7 +1867,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Tears Were Wept-->
                     <div class="badge-wrapper" id="tears-wept-wrapper">
-                        <img src="<?php if($badge24) {
+                        <img src="<?php if(isset($badge24)) {
                             echo $badge24;
                         }else{
                             echo $default24;
@@ -1880,7 +1880,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Finished Project-->
                     <div class="badge-wrapper" id="finish-him-wrapper">
-                        <img src="<?php if($badge25) {
+                        <img src="<?php if(isset($badge25)) {
                             echo $badge25;
                         }else{
                             echo $default25;
