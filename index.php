@@ -1575,7 +1575,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                     </div>
                     <!-- //* Quarter Quomplete-->
                     <div class="badge-wrapper" id="quarter-quomplete-wrapper">
-                        <img src="<?php if(isset($badge1)) {
+                        <img src="<?php if(isset($badge1) || $badge1) {
                             echo $badge1;
                         }else{
                             echo $default1;
