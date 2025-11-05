@@ -84,9 +84,9 @@ if (isset($_SESSION["user_id"])) {
                             $badge1 = "images/badges/quarter-quomplete-mono.webp";
                         } elseif ($badge1 == "locked") {
                             $badge1 = "images/badges/quarter-quomplete-mono.webp";
+                        } else {
+                            $badge1 = "images/badges/quarter-quomplete-mono.webp";
                         }
-                    } else {
-                        $badge1 = "images/badges/quarter-quomplete-mono.webp";
                     }
                     //* Half Way
                     if (isset($project["half-way"])) {
