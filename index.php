@@ -60,6 +60,7 @@ if (isset($_SESSION["user_id"])) {
                     $dailyWords = $project["daily_words"];
                     $streak = $project["streak"];
                     $displayDailyGoal = $project["daily_goal"];
+                    $reached = $project["reached"];
                     $dailyStreak = $project["daily_goal_streak"];
                     $created = $project["created_at"];
                     $displayPercentage = floor($displayCount / $displayGoal * 100);
@@ -580,6 +581,7 @@ if (isset($_SESSION["user_id"])) {
                 $dailyWords = $project["daily_words"];
                 $streak = $project["streak"];
                 $created = $project["created_at"];
+                $reached = $project["reached"];
                 $dailyStreak = $project["daily_goal_streak"];
                 $displayDailyGoal = $project["daily_goal"];
                 if ($project["id"]) {
