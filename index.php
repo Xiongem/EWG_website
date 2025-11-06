@@ -1126,7 +1126,12 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
             }
             $streak = $streak + 1;
             $fire = "off";
-            $lost = "not";
+            if ($project["on-track"] == "lost") {
+                $lost = "lost";
+            } else {
+                $lost = "not";
+            }
+            
         } elseif ($intervals >= 2) {
             $streak = 1;
             if ($dailyWords !== 0) {
@@ -1150,7 +1155,11 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
             $dailyWords = $dailyWords;
             $streak = $streak;
             $fire = "on";
-            $lost = "not";
+            if ($project["on-track"] == "lost") {
+                $lost = "lost";
+            } else {
+                $lost = "not";
+            }
         }
     } else {
         $fire = "off";
