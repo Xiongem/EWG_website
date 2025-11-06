@@ -8,6 +8,7 @@ ini_set('error_log', '/path/to/php_errors.log');
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+throwError();
 
 //* If user is logged in
 if (isset($_SESSION["user_id"])) {
