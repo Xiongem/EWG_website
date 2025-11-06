@@ -1532,7 +1532,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
             <div class="progress-info-wrapper">
                 <div id="current" class="progress-info">
                     <h2>Current:</h2>
-                    <p><?= $displayCount ?>/<?= $displayGoal ?></p>
+                    <p><?= $displayCount ?> / <?= $displayGoal ?></p>
                 </div>
                 <?php if (isset($displayGoalDate) && $displayGoalDate !== "0000-00-00") {?>
                     <?php if ($began) { ?>
@@ -1551,7 +1551,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <?php } ?>
                 <div id="dailyGoal" class="progress-info">
                     <h2>Daily Goal:</h2>
-                    <p><?= $dailyWords ?>/<?= $displayDailyGoal ?></p>
+                    <p><?= $dailyWords ?> / <?= $displayDailyGoal ?></p>
                 </div>
                 <div id="goal" class="progress-info">
                     <h2>Percentage:</h2>
