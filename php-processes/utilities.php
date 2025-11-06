@@ -301,6 +301,7 @@ function makeFooter() {
 
 //* sentry error testing
 function throwError() {
+    echo "error thrown";
     try {
     $this->functionFailsForSure();
     } catch (\Throwable $exception) {
