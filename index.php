@@ -1536,9 +1536,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
             <h1>Project Progress</h1>
             <div class="progress-bar">
                 <div class="border"></div>
-                <?php if ($lost !== "lost") { ?>
                 <img class="streak-fire" src="images/streak-<?=$fire?>.webp">
-                <?php } ?>
                 <div id="percentage" class="percentage clickable" style="width: <?= $displayProgress ?>%;"></div>
             </div>
             <div class="progress-info-wrapper">
