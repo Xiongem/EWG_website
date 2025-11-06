@@ -1268,7 +1268,6 @@ $default22 = "images/badges/touch-grass-mono.webp";
 $default23 = "images/badges/business-mono.webp";
 $default24 = "images/badges/tears-wept-mono.webp";
 $default25 = "images/badges/cross-finish-mono.webp";
-echo $lost;
 ?>
 
 <!DOCTYPE html>
