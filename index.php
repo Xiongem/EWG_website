@@ -2405,7 +2405,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
         }
     }
     //`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    let reloadTime = 600000; // 10 minutes in milliseconds
+    let reloadTime = 3600000; // 1 hour in milliseconds
 
     let reloadPage = function() {
         location.reload();
