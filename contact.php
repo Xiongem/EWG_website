@@ -77,11 +77,14 @@ $verified = 0;
                         <textarea name="message" id="message" required></textarea>
                     </div>
                 </div>
-                <?php if ($verified === 1) {?>
+                <script>
+                    if (verified === true) {
+                        document.getElementById("submit").style.display = "block";
+                    }
+                </script>
                 <div class="contact-button">
                     <input type="submit" id="submit" value="Submit">
                 </div>
-                <?php } ?>
             </form>
         </div>
     </div>
@@ -91,9 +94,8 @@ $verified = 0;
     <script>
         //* generates and verified captcha to prevent bots submitting contact forms
         let captcha;
-        // var verified = "";
         function generate() {
-
+            var verified = false;
             // Clear old input
             document.getElementById("capSubmit").value = "";
 
@@ -125,7 +127,7 @@ $verified = 0;
             if (usr_input == captcha.innerHTML) {
                 document.getElementById("captchaPopupWrapper").style.display = "none";
                 showBackground();
-                var <?php $verified ?> = 1;
+                var verified = true;
             }
             else {
                 let s = document.getElementById("key")

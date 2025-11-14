@@ -152,3 +152,7 @@
         margin-top: 9em;
     }
 }
+
+#submit {
+    display: none;
+}
