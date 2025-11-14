@@ -85,6 +85,7 @@
         padding-bottom: 0px;
         height: 40px;
         user-select: none;
+        background-color: aliceblue;
         text-decoration:line-through;
         font-style: italic;
         font-size: x-large;
