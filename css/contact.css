@@ -127,6 +127,9 @@
     .contact-content {
         width: 80%;
     }
+    .captchPopup {
+        width: 40%;
+    }
 }
 
 
@@ -146,5 +149,9 @@
     }
     #message {
         height: 26em;
+    }
+    .captchPopup {
+        width: 30%;
+        margin-top: 9em;
     }
 }
