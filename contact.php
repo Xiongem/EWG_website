@@ -32,7 +32,7 @@ $result = $_GET["result"];
     <header>
         <?php makeNav() ?>
     </header>
-    <div class="captchaPopupWrapper" id="captchaPopupWrapper" onload="generate(); hideBackground();">
+    <div class="captchaPopupWrapper" id="captchaPopupWrapper" onload="generate()">
         <div class="captchPopup">
             <div id="user-input" class="inline">
                 <input type="text" 
