@@ -88,7 +88,7 @@ $result = $_GET["result"];
             </div>
 
             <div class="inline" onclick="generate()">
-                <i class="fas fa-sync"></i>
+                <i class="fa fa-sync"></i>
             </div>
 
             <div id="image" 
