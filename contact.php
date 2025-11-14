@@ -33,7 +33,6 @@ $result = $_GET["result"];
         let captcha;
         function generate() {
             var verified = false;
-            console.log("hello");
             
             // Clear old input
             document.getElementById("capSubmit").value = "";
