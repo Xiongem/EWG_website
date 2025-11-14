@@ -91,7 +91,7 @@ $verified = 0;
     <script>
         //* generates and verified captcha to prevent bots submitting contact forms
         let captcha;
-        var verified = 
+        // var verified = "";
         function generate() {
 
             // Clear old input
