@@ -91,6 +91,7 @@ $verified = 0;
     <script>
         //* generates and verified captcha to prevent bots submitting contact forms
         let captcha;
+        var verified = 
         function generate() {
 
             // Clear old input
@@ -124,7 +125,7 @@ $verified = 0;
             if (usr_input == captcha.innerHTML) {
                 document.getElementById("captchaPopupWrapper").style.display = "none";
                 showBackground();
-                <?php $verified ?> = 1;
+                var <?php $verified ?> = 1;
             }
             else {
                 let s = document.getElementById("key")
