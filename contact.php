@@ -9,6 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
 $result = $_GET["result"];
+$verified = 0;
 ?>
 
 <!DOCTYPE html>
@@ -25,13 +26,36 @@ $result = $_GET["result"];
     <link rel="stylesheet" href="css/contact.css">
     <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
+    <script src="captcha.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body id="body">
     <!-- //* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
         <?php makeNav() ?>
     </header>
+    <div class="captchaPopupWrapper" id="captchaPopupWrapper" onload="generate(); hideBackground();">
+        <div class="captchPopup">
+            <div id="user-input" class="inline">
+                <input type="text" 
+                    id="capSubmit" 
+                    placeholder="Captcha code" />
+            </div>
+
+            <div class="inline" onclick="generate()">
+                <i class="fas fa-sync"></i>
+            </div>
+
+            <div id="image" 
+                class="inline" 
+                selectable="False">
+            </div>
+            <input type="submit" 
+                id="btn" 
+                onclick="printmsg()" />
+            <p id="key"></p>
+        </div>
+    </div>
     <div class="contact-wrapper">
         <div class="contact-content">
             <h1>Contact Us</h1>
@@ -53,14 +77,61 @@ $result = $_GET["result"];
                         <textarea name="message" id="message" required></textarea>
                     </div>
                 </div>
+                <?php if ($verified === 1) {?>
                 <div class="contact-button">
                     <input type="submit" id="submit" value="Submit">
                 </div>
+                <?php } ?>
             </form>
         </div>
     </div>
     <!-- //* FOOTER-->
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
+    <script>
+        //* generates and verified captcha to prevent bots submitting contact forms
+        let captcha;
+        function generate() {
+
+            // Clear old input
+            document.getElementById("capSubmit").value = "";
+
+            // Access the element to store
+            // the generated captcha
+            captcha = document.getElementById("image");
+            let uniquechar = "";
+
+            const randomchar =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            // Generate captcha for length of
+            // 5 with random character
+            for (let i = 1; i < 5; i++) {
+                uniquechar += randomchar.charAt(
+                    Math.random() * randomchar.length)
+            }
+
+            // Store generated input
+            captcha.innerHTML = uniquechar;
+        }
+
+        function printmsg() {
+            const usr_input = document
+                .getElementById("submit").value;
+
+            // Check whether the input is equal
+            // to generated captcha or not
+            if (usr_input == captcha.innerHTML) {
+                document.getElementById("captchaPopupWrapper").style.display = "none";
+                showBackground();
+                <?php $verified ?> = 1;
+            }
+            else {
+                let s = document.getElementById("key")
+                    .innerHTML = "not Matched";
+                generate();
+            }
+        }
+    </script>
 </body>
 </html>
