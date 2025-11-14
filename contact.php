@@ -74,6 +74,7 @@ $result = $_GET["result"];
                 generate();
             }
         }
+        generate();
     </script>
     <!-- //* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
