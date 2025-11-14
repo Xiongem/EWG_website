@@ -9,7 +9,6 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 
 $result = $_GET["result"];
-$verified = 0;
 ?>
 
 <!DOCTYPE html>
