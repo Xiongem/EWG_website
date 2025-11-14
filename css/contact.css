@@ -79,7 +79,6 @@
     }
     #image {
         margin-top: 10px;
-        box-shadow: 5px 5px 5px 5px gray;
         width: 60px;;
         padding: 20px;
         font-weight: 400;
@@ -93,7 +92,6 @@
         margin-left: 10px;  
     }
     #user-input {
-        box-shadow: 5px 5px 5px 5px gray;
         width:auto;
         margin-right: 10px;
         padding: 10px;
@@ -108,7 +106,6 @@
         display:inline-block;
     }
     #btn {
-        box-shadow: 5px 5px 5px grey;
         color: aqua;
         margin: 10px;
         background-color: brown;
