@@ -89,7 +89,7 @@ $result = $_GET["result"];
     <?php makeFooter() ?>
     <script>
         //* generates and verified captcha to prevent bots submitting contact forms
-        let captcha;
+        var captcha;
         var verified = false;
         function generate() {
             
