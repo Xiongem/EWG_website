@@ -78,13 +78,6 @@ $result = $_GET["result"];
                 <div class="contact-button">
                     <input type="submit" id="submit" value="Submit">
                 </div>
-                <script>
-                    if (verified === true) {
-                        document.getElementById("submit").disabled = false;
-                    } else {
-                        document.getElementById("submit").disabled = true;
-                    }
-                </script>
             </form>
         </div>
     </div>
@@ -137,6 +130,12 @@ $result = $_GET["result"];
             }
         }
         generate();
-    </script>
+
+        if (verified === true) {
+            document.getElementById("submit").disabled = false;
+        } else {
+            document.getElementById("submit").disabled = true;
+        }
+</script>
 </body>
 </html>
