@@ -87,7 +87,7 @@
         flex-direction: column;
     }
     #captcha {
-        height: 40%;
+        height: 80%;
         width: 80%;
         font-size: 30px;
         letter-spacing: 3px;
