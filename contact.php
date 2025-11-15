@@ -31,8 +31,8 @@ $result = $_GET["result"];
     <script>
         //* generates and verified captcha to prevent bots submitting contact forms
         let captcha;
+        var verified = false;
         function generate() {
-            var verified = false;
             
             // Clear old input
             document.getElementById("capSubmit").value = "";
@@ -124,7 +124,9 @@ $result = $_GET["result"];
                 </div>
                 <script>
                     if (verified === true) {
-                        document.getElementById("submit").style.display = "block";
+                        document.getElementById("submit").disabled = false;
+                    } else {
+                        document.getElementById("submit").disabled = true;
                     }
                 </script>
                 <div class="contact-button">
