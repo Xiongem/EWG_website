@@ -93,7 +93,7 @@ $result = $_GET["result"];
                     <input type="submit" id="submit" value="Submit">
                 </div>
                 <script>
-                    document.getElementById("submit").disabled = true;
+                    document.getElementById("submit").disabled = 'disabled';
                 </script>
             </form>
         </div>
