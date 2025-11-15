@@ -149,7 +149,7 @@ $result = $_GET["result"];
                 // output.innerHTML = "Correct!";
                 document.getElementById("captchaPopupWrapper").style.display = "none";
                 showBackground();
-                var verified = true;
+                verified = true;
             } else {
                 output.className = "incorrectCaptcha";
                 output.innerHTML = "Incorrect, please try again!";
