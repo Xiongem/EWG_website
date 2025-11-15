@@ -122,6 +122,9 @@ $result = $_GET["result"];
                         <textarea name="message" id="message" required></textarea>
                     </div>
                 </div>
+                <div class="contact-button">
+                    <input type="submit" id="submit" value="Submit">
+                </div>
                 <script>
                     if (verified === true) {
                         document.getElementById("submit").disabled = false;
@@ -129,9 +132,6 @@ $result = $_GET["result"];
                         document.getElementById("submit").disabled = true;
                     }
                 </script>
-                <div class="contact-button">
-                    <input type="submit" id="submit" value="Submit">
-                </div>
             </form>
         </div>
     </div>
