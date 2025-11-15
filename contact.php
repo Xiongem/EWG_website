@@ -34,7 +34,7 @@ $result = $_GET["result"];
     </header>
     <div class="captchaPopupWrapper" id="captchaPopupWrapper" onload="generate()">
         <div class="captchPopup">
-            <div id="user-input" class="inline">
+            <!-- <div id="user-input" class="inline">
                 <input type="text" 
                     id="capSubmit" 
                     placeholder="Captcha code" />
@@ -51,7 +51,20 @@ $result = $_GET["result"];
             <input type="submit" 
                 id="btn" 
                 onclick="printmsg()" />
-            <p id="key"></p>
+            <p id="key"></p> -->
+            <div class="center">
+                <div id="captchaBackground">
+                    <canvas id="captcha">captcha text</canvas>
+                    <input id="textBox" type="text" name="text">
+
+                    <div id="buttons">
+                        <input id="submitButton" type="submit">
+                        <button id="refreshButton" type="submit">Refresh</button>
+                    </div>
+
+                    <span id="output"></span>
+                </div>
+            </div>
         </div>
     </div>
     <div class="contact-wrapper">
@@ -89,54 +102,112 @@ $result = $_GET["result"];
     <?php makeFooter() ?>
     <script>
         //* generates and verified captcha to prevent bots submitting contact forms
-        var captcha;
-        var verified = false;
-        function generate() {
+        let captchaText = document.getElementById('captcha');
+        var ctx = captchaText.getContext("2d");
+        ctx.font = "30px Roboto";
+        ctx.fillStyle = "#08e5ff";
+
+        let userText = document.getElementById('textBox');
+        let submitButton = document.getElementById('submitButton');
+        let output = document.getElementById('output');
+        let refreshButton = document.getElementById('refreshButton');
+
+        var captchaStr = "";
+
+        let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G',
+                        'H', 'I', 'J', 'K', 'L', 'M', 'N', 
+                        'O', 'P', 'Q', 'R', 'S', 'T', 'U', 
+                        'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 
+                        'c', 'd', 'e', 'f', 'g', 'h', 'i', 
+                        'j', 'k', 'l', 'm', 'n', 'o', 'p', 
+                        'q', 'r', 's', 't', 'u', 'v', 'w', 
+                        'x', 'y', 'z', '0', '1', '2', '3', 
+                        '4', '5', '6', '7', '8', '9'];
+        
+        function generate_captcha() {
+            let emptyArr = [];
+
+            for (let i = 1; i <= 7; i++) {
+                emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
+            }
+
+            captchaStr = emptyArr.join('');
+
+            ctx.clearRect(0, 0, captchaText.width, captchaText.height);
+            ctx.fillText(captchaStr, captchaText.width/4, captchaText.height/2);
+
+            output.innerHTML = "";
+        }
+
+        generate_captcha();
+
+        function check_captcha() {
+            if (userText.value === captchaStr) {
+                output.className = "correctCaptcha";
+                output.innerHTML = "Correct!";
+            } else {
+                output.className = "incorrectCaptcha";
+                output.innerHTML = "Incorrect, please try again!";
+            }
+        }
+
+        userText.addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+            check_captcha();
+            }
+        });
+
+        submitButton.addEventListener('click', check_captcha);
+
+        refreshButton.addEventListener('click', generate_captcha);
+        // var captcha;
+        // var verified = false;
+        // function generate() {
             
-            // Clear old input
-            document.getElementById("capSubmit").reset();
+        //     // Clear old input
+        //     document.getElementById("capSubmit").reset();
 
-            // Access the element to store
-            // the generated captcha
-            captcha = document.getElementById("image");
-            let uniquechar = "";
+        //     // Access the element to store
+        //     // the generated captcha
+        //     captcha = document.getElementById("image");
+        //     let uniquechar = "";
 
-            const randomchar =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        //     const randomchar =
+        // "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-            // Generate captcha for length of
-            // 5 with random character
-            for (let i = 1; i < 5; i++) {
-                uniquechar += randomchar.charAt(
-                    Math.random() * randomchar.length)
-            }
+        //     // Generate captcha for length of
+        //     // 5 with random character
+        //     for (let i = 1; i < 5; i++) {
+        //         uniquechar += randomchar.charAt(
+        //             Math.random() * randomchar.length)
+        //     }
 
-            // Store generated input
-            captcha.innerHTML = uniquechar;
-        }
+        //     // Store generated input
+        //     captcha.innerHTML = uniquechar;
+        // }
 
-        function printmsg() {
-            const usr_input = document
-                .getElementById("capSubmit").value;
+        // function printmsg() {
+        //     const usr_input = document
+        //         .getElementById("capSubmit").value;
 
-            // Check whether the input is equal
-            // to generated captcha or not
-            if (usr_input == captcha.innerHTML) {
-                document.getElementById("captchaPopupWrapper").style.display = "none";
-                showBackground();
-                var verified = true;
-            }
-            else {
-                let s = document.getElementById("key")
-                    .innerHTML = "not Matched";
-                generate();
-            }
-        }
-        generate();
+        //     // Check whether the input is equal
+        //     // to generated captcha or not
+        //     if (usr_input == captcha.innerHTML) {
+        //         document.getElementById("captchaPopupWrapper").style.display = "none";
+        //         showBackground();
+        //         var verified = true;
+        //     }
+        //     else {
+        //         let s = document.getElementById("key")
+        //             .innerHTML = "not Matched";
+        //         generate();
+        //     }
+        // }
+        // generate();
 
-        if (verified === true) {
-            document.getElementById("submit").disabled = false;
-        }
+        // if (verified === true) {
+        //     document.getElementById("submit").disabled = false;
+        // }
 </script>
 </body>
 </html>
