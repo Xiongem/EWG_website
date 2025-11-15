@@ -53,7 +53,7 @@ $result = $_GET["result"];
                 onclick="printmsg()" />
             <p id="key"></p> -->
             <div class="center">
-                <h2>Enter CAPTCHA to proceed</h2>
+                <h3>Enter CAPTCHA to proceed</h3>
                 <div id="captchaBackground">
                     <canvas id="captcha">captcha text</canvas>
                     <input id="textBox" type="text" name="text">
