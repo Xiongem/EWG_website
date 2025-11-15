@@ -28,53 +28,6 @@ $result = $_GET["result"];
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="body">
-    <script>
-        //* generates and verified captcha to prevent bots submitting contact forms
-        let captcha;
-        var verified = false;
-        function generate() {
-            
-            // Clear old input
-            const usr_input = document.getElementById("capSubmit").reset();
-
-            // Access the element to store
-            // the generated captcha
-            captcha = document.getElementById("image");
-            let uniquechar = "";
-
-            const randomchar =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-            // Generate captcha for length of
-            // 5 with random character
-            for (let i = 1; i < 5; i++) {
-                uniquechar += randomchar.charAt(
-                    Math.random() * randomchar.length)
-            }
-
-            // Store generated input
-            captcha.innerHTML = uniquechar;
-        }
-
-        function printmsg() {
-            const usr_input = document
-                .getElementById("capSubmit").value;
-
-            // Check whether the input is equal
-            // to generated captcha or not
-            if (usr_input == captcha.innerHTML) {
-                document.getElementById("captchaPopupWrapper").style.display = "none";
-                showBackground();
-                var verified = true;
-            }
-            else {
-                let s = document.getElementById("key")
-                    .innerHTML = "not Matched";
-                generate();
-            }
-        }
-        generate();
-    </script>
     <!-- //* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
         <?php makeNav() ?>
@@ -138,5 +91,52 @@ $result = $_GET["result"];
     <!-- //* FOOTER-->
     <!-- //! Keep link to logo artist for permission to use-->
     <?php makeFooter() ?>
+    <script>
+        //* generates and verified captcha to prevent bots submitting contact forms
+        let captcha;
+        var verified = false;
+        function generate() {
+            
+            // Clear old input
+            const usr_input = document.getElementById("capSubmit").reset();
+
+            // Access the element to store
+            // the generated captcha
+            captcha = document.getElementById("image");
+            let uniquechar = "";
+
+            const randomchar =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            // Generate captcha for length of
+            // 5 with random character
+            for (let i = 1; i < 5; i++) {
+                uniquechar += randomchar.charAt(
+                    Math.random() * randomchar.length)
+            }
+
+            // Store generated input
+            captcha.innerHTML = uniquechar;
+        }
+
+        function printmsg() {
+            const usr_input = document
+                .getElementById("capSubmit").value;
+
+            // Check whether the input is equal
+            // to generated captcha or not
+            if (usr_input == captcha.innerHTML) {
+                document.getElementById("captchaPopupWrapper").style.display = "none";
+                showBackground();
+                var verified = true;
+            }
+            else {
+                let s = document.getElementById("key")
+                    .innerHTML = "not Matched";
+                generate();
+            }
+        }
+        generate();
+    </script>
 </body>
 </html>
