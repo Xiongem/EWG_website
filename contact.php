@@ -75,12 +75,12 @@ $result = $_GET["result"];
                         <textarea name="message" id="message" required></textarea>
                     </div>
                 </div>
-                <script>
-                    document.getElementById("submit").disabled = true;
-                </script>
                 <div class="contact-button">
                     <input type="submit" id="submit" value="Submit">
                 </div>
+                <script>
+                    document.getElementById("submit").disabled = true;
+                </script>
             </form>
         </div>
     </div>
