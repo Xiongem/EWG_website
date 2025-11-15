@@ -53,7 +53,7 @@ $result = $_GET["result"];
                 onclick="printmsg()" />
             <p id="key"></p> -->
             <div class="center">
-                <h3>Enter CAPTCHA to proceed</h3>
+                <h2>Enter CAPTCHA to proceed</h2>
                 <div id="captchaBackground">
                     <canvas id="captcha">captcha text</canvas>
                     <input id="textBox" type="text" name="text">
@@ -144,17 +144,24 @@ $result = $_GET["result"];
 
         function check_captcha() {
             if (userText.value === captchaStr) {
-                output.className = "correctCaptcha";
-                output.innerHTML = "Correct!";
+                // output.className = "correctCaptcha";
+                // output.innerHTML = "Correct!";
+                document.getElementById("captchaPopupWrapper").style.display = "none";
+                showBackground();
+                var verified = true;
             } else {
                 output.className = "incorrectCaptcha";
                 output.innerHTML = "Incorrect, please try again!";
             }
         }
 
+        if (verified === true) {
+            document.getElementById("submit").disabled = false;
+        }
+
         userText.addEventListener('keyup', function(e) {
             if (e.key === 'Enter') {
-            check_captcha();
+                check_captcha();
             }
         });
 
