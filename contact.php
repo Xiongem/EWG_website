@@ -90,11 +90,11 @@ $result = $_GET["result"];
                     </div>
                 </div>
                 <div class="contact-button">
-                    <input type="submit" id="submit" value="Submit">
+                    <input type="submit" id="submit" value="Submit" disabled>
                 </div>
-                <script>
+                <!-- <script>
                     document.getElementById("submit").disabled = 'disabled';
-                </script>
+                </script> -->
             </form>
         </div>
     </div>
@@ -103,7 +103,7 @@ $result = $_GET["result"];
     <?php makeFooter() ?>
     <script>
         //* generates and verified captcha to prevent bots submitting contact forms
-        var verified = false;
+        // var verified = false;
         let captchaText = document.getElementById('captcha');
         var ctx = captchaText.getContext("2d");
         ctx.font = "30px Roboto";
@@ -147,6 +147,7 @@ $result = $_GET["result"];
             if (userText.value === captchaStr) {
                 // output.className = "correctCaptcha";
                 // output.innerHTML = "Correct!";
+                document.getElementById("submit").disabled = false;
                 document.getElementById("captchaPopupWrapper").style.display = "none";
                 showBackground();
                 verified = true;
@@ -156,9 +157,9 @@ $result = $_GET["result"];
             }
         }
 
-        if (verified === true) {
-            document.getElementById("submit").disabled = false;
-        }
+        // if (verified === true) {
+        //     document.getElementById("submit").disabled = false;
+        // }
 
         userText.addEventListener('keyup', function(e) {
             if (e.key === 'Enter') {
