@@ -80,7 +80,7 @@
     #captchaBackground {
         height: 220px;
         width: 250px;
-        background-color: #2d3748;
+        /* background-color: #2d3748; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -104,13 +104,13 @@
     #submitButton {
         margin-top: 2em;
         margin-bottom: 2em;
-        background-color: #08e5ff;
+        background-color: var(--accent-1);
         border: 0px;
         font-weight: bold;
     }
 
     #refreshButton {
-        background-color: #08e5ff;
+        background-color: var(--accent-1);
         border: 0px;
         font-weight: bold;
     }
