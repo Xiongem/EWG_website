@@ -103,6 +103,7 @@ $result = $_GET["result"];
     <?php makeFooter() ?>
     <script>
         //* generates and verified captcha to prevent bots submitting contact forms
+        var verified = false;
         let captchaText = document.getElementById('captcha');
         var ctx = captchaText.getContext("2d");
         ctx.font = "30px Roboto";
