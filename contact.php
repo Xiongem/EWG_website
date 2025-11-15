@@ -91,7 +91,7 @@ $result = $_GET["result"];
         function generate() {
             
             // Clear old input
-            const usr_input = document.getElementById("capSubmit").reset();
+            document.getElementById("capSubmit").reset();
 
             // Access the element to store
             // the generated captcha
