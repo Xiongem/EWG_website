@@ -34,6 +34,24 @@ $result = $_GET["result"];
     </header>
     <div class="captchaPopupWrapper" id="captchaPopupWrapper" onload="generate()">
         <div class="captchPopup">
+            <!-- <div id="user-input" class="inline">
+                <input type="text" 
+                    id="capSubmit" 
+                    placeholder="Captcha code" />
+            </div>
+
+            <div class="inline" onclick="generate()">
+                <i class="fa fa-sync"></i>
+            </div>
+
+            <div id="image" 
+                class="inline" 
+                selectable="False">
+            </div>
+            <input type="submit" 
+                id="btn" 
+                onclick="printmsg()" />
+            <p id="key"></p> -->
             <div class="center">
                 <h3>Enter the text in blue below to proceed</h3>
                 <div id="captchaBackground">
@@ -145,6 +163,6 @@ $result = $_GET["result"];
         submitButton.addEventListener('click', check_captcha);
 
         refreshButton.addEventListener('click', generate_captcha);
-</>
+</script>
 </body>
 </html>
