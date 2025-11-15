@@ -58,7 +58,7 @@ $result = $_GET["result"];
 
         function printmsg() {
             const usr_input = document
-                .getElementById("submit").value;
+                .getElementById("capSubmit").value;
 
             // Check whether the input is equal
             // to generated captcha or not
