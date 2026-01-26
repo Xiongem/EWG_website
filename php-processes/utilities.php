@@ -298,12 +298,3 @@ function makeFooter() {
         HTML;
             echo $htmlContent;
 }
-
-//* sentry error testing
-function throwError() {
-    try {
-    $this->functionFailsForSure();
-    } catch (\Throwable $exception) {
-    \Sentry\captureException($exception);
-    }
-}
