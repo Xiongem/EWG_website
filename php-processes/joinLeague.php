@@ -14,16 +14,20 @@ $userID = $_SESSION["user_id"];
 
 echo $_POST['chooseLeague'];
 
-if ($_POST["chooseLeague"] == "casual") {
-    $league = "Casual";
-    $joined = 1;
-} elseif ($_POST["chooseLeague"] == "speedster") {
-    $league = "Speedster";
-    $joined = 1;
-} else {
-    $league = "";
-    $joined = 0;
+if(isset($_POST['chooseLeague'])) {
+    if ($_POST["chooseLeague"] == "casual") {
+        $league = "Casual";
+        $joined = 1;
+    } elseif ($_POST["chooseLeague"] == "speedster") {
+        $league = "Speedster";
+        $joined = 1;
+    } else {
+        $league = "";
+        $joined = 0;
+    }
 }
+
+
 
 // $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
 //     $stmt->bind_param("is",
