@@ -50,7 +50,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     </div> -->
                     <div class="option-wrapper">
                         <div class="radio-wrapper-9 radio">
-                            <input id="casual" type="radio" name="chooseLeague" value="casual">
+                            <input id="casual" type="radio" name="chooseLeague" value="casual" checked>
                             <label for="casual">Casual League</label>
                         </div>
                         <div class="radio-wrapper-9 radio">
