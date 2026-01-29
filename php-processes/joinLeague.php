@@ -23,7 +23,7 @@ if ($_POST["chooseLeague"] == "casual") {
     $joined = 0;
 }
 
-echo '$_POST["chooseLeague"]';
+echo $_POST["chooseLeague"];
 
 // $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
 //     $stmt->bind_param("is",
