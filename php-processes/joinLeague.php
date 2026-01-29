@@ -10,15 +10,15 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
 // xamppConnect();
 
-$userID = $_SESSION["user_id"];
+$userID = $_SESSION['user_id'];
 
 echo $_POST['chooseLeague'];
 
 if(isset($_POST['chooseLeague'])) {
-    if ($_POST["chooseLeague"] == "casual") {
+    if ($_POST['chooseLeague'] == "casual") {
         $league = "Casual";
         $joined = 1;
-    } elseif ($_POST["chooseLeague"] == "speedster") {
+    } elseif ($_POST['chooseLeague'] == "speedster") {
         $league = "Speedster";
         $joined = 1;
     } else {
