@@ -23,14 +23,16 @@ if ($_POST["chooseLeague"] == "casual") {
     $joined = 0;
 }
 
-$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
-    $stmt->bind_param("is",
-                            $joined,
-                            $league);
+echo $_POST["chooseLeague"];
 
-if ($stmt -> execute()) {
-    header("Location: /competition.php");
-    exit;
-} else {
-    die("an unexpected error occured");
-}
+// $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
+//     $stmt->bind_param("is",
+//                             $joined,
+//                             $league);
+
+// if ($stmt -> execute()) {
+//     header("Location: /competition.php");
+//     exit;
+// } else {
+//     die("an unexpected error occured");
+// }
