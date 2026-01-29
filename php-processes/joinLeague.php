@@ -25,6 +25,8 @@ if(isset($_POST['chooseLeague'])) {
         $league = "";
         $joined = 0;
     }
+} else {
+    echo"FUCK!";
 }
 
 
