@@ -44,10 +44,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             <div class="join-popup">
                 <h2>Join a League to Start Competing!</h2>
                 <form method="post" action="php-processes/joinLeague.php">
-                    <!-- <div class="option-wrapper">
-                        <input type="radio" id="casual" class="choose-league radio">
-                        <input type="radio" id="speedster" class="choose-league radio">
-                    </div> -->
                     <div class="option-wrapper">
                         <div class="radio-wrapper-9 radio">
                             <input id="casual" type="radio" name="chooseLeague" value="casual">
