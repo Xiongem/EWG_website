@@ -8,6 +8,7 @@
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+// xamppConnect();
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ dbConnect();
     <title>About</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
-    <link rel="website icon" type="webp" href="../images/comp-cat-beta.webp">
+    <link rel="website icon" type="webp" href="images/comp-cat-beta.webp">
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -43,7 +44,7 @@ dbConnect();
                 <p>-- The Elsewhere Writers Guild Developer</p>
             </div>
             <div class="elmo">
-                <img src="../images/gifs/burn-elmo.gif">
+                <img src="images/gifs/burn-elmo.gif">
             </div>
         </div>
     </div>

@@ -1,13 +1,14 @@
 <?php
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
-// ini_set('log_errors', 'On');
-// ini_set('error_log', '/path/to/php_errors.log');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 'On');
+ini_set('error_log', '/path/to/php_errors.log');
 
 
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+// xamppConnect();
 
 //* If user is logged in
 if (isset($_SESSION["user_id"])) {
@@ -20,6 +21,7 @@ if (isset($_SESSION["user_id"])) {
             $pfp = $user["pfp"];
             $username = $user["username"];
             $timezone = $user["timezone"];
+            $points = $user["points"];
 
     //* Set the user's timezone
     if ($timezone) {
@@ -74,6 +76,12 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `quarter-quomplete`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
+
+                            $updatePoints = $points + 5;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
+
                             $badge1 = "images/badges/quarter-quomplete-color.webp";
                         } elseif ($badge1 == "unlocked" && $displayPercentage >= 25) {
                             $badge1 = "images/badges/quarter-quomplete-color.webp";
@@ -95,6 +103,12 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `half-way`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
+
+                            $updatePoints = $points + 10;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
+
                             $badge2 = "images/badges/half-way-color.webp";
                         } elseif ($badge2 == "unlocked" && $displayPercentage >= 50) {
                             $badge2 = "images/badges/half-way-color.webp";
@@ -116,6 +130,12 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `all-downhill`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
+
+                            $updatePoints = $points + 25;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
+
                             $badge3 = "images/badges/all-downhill-color.webp";
                         } elseif ($badge3 == "unlocked" && $displayPercentage >= 75) {
                             $badge3 = "images/badges/all-downhill-color.webp";
@@ -137,6 +157,12 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
+
+                            $updatePoints = $points + 50;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
+
                             $badge4 = "images/badges/cross-finish-color.webp";
                         } elseif ($badge4 == "unlocked" && $displayPercentage >= 100) {
                             $badge4 = "images/badges/cross-finish-color.webp";
@@ -172,6 +198,11 @@ if (isset($_SESSION["user_id"])) {
                                 $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
+
+                                $updatePoints = $points + 5;
+                                $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                    $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                    $stmt2->execute();
                             }
                             $badge5 = "images/badges/streak-two-color.webp";
                         } 
@@ -181,6 +212,11 @@ if (isset($_SESSION["user_id"])) {
                                 $sql = "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
+
+                                $updatePoints = $points + 5;
+                                $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                    $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                    $stmt2->execute();
                             }
                             $badge6 = "images/badges/streak-three-color.webp";
                         }
@@ -190,6 +226,11 @@ if (isset($_SESSION["user_id"])) {
                                 $sql = "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
+
+                                $updatePoints = $points + 10;
+                                $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                    $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                    $stmt2->execute();
                             }
                             $badge7 = "images/badges/streak-seven-color.webp";
                         }
@@ -199,6 +240,11 @@ if (isset($_SESSION["user_id"])) {
                                 $sql = "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
+
+                                $updatePoints = $points + 15;
+                                $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                    $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                    $stmt2->execute();
                             }
                             $badge8 = "images/badges/streak-fourteen-color.webp";
                         }
@@ -208,6 +254,11 @@ if (isset($_SESSION["user_id"])) {
                                 $sql = "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
+
+                                $updatePoints = $points + 20;
+                                $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                    $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                    $stmt2->execute();
                             }
                             $badge9 = "images/badges/streak-twentyOne-color.webp";
                         }
@@ -297,6 +348,11 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
+
+                            $updatePoints = $points + 5;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
                         }
                         $badge5 = "images/badges/streak-two-color.webp";
                     }
@@ -306,6 +362,11 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
+
+                            $updatePoints = $points + 5;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
                         }
                         $badge6 = "images/badges/streak-three-color.webp";
                     }
@@ -315,6 +376,11 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
+
+                            $updatePoints = $points + 10;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
                         }
                         $badge7 = "images/badges/streak-seven-color.webp";
                     } 
@@ -324,6 +390,11 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
+
+                            $updatePoints = $points + 15;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
                         }
                         $badge8 = "images/badges/streak-fourteen-color.webp";
                     }
@@ -333,6 +404,11 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
+
+                            $updatePoints = $points + 20;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
                         }
                         $badge9 = "images/badges/streak-twentyOne-color.webp";
                     }
@@ -416,6 +492,11 @@ if (isset($_SESSION["user_id"])) {
                     $sql = "UPDATE current_project SET `first-daily`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
+                    $updatePoints = $points + 5;
+                        $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                            $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                            $stmt2->execute();
                 }
                 $badge10 = "images/badges/first-daily-color.webp";
             } else {
@@ -605,6 +686,12 @@ if (isset($_SESSION["user_id"])) {
                         $sql = "UPDATE current_project SET `quarter-quomplete`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
+                        $updatePoints = $points + 5;
+                        $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                            $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                            $stmt2->execute();
+
                         $badge1 = "images/badges/quarter-quomplete-color.webp";
                     } elseif ($badge1 == "unlocked" && $displayPercentage >= 25) {
                         $badge1 = "images/badges/quarter-quomplete-color.webp";
@@ -626,6 +713,12 @@ if (isset($_SESSION["user_id"])) {
                         $sql = "UPDATE current_project SET `half-way`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
+                        $updatePoints = $points + 10;
+                        $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                            $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                            $stmt2->execute();
+
                         $badge2 = "images/badges/half-way-color.webp";
                     } elseif ($badge2 == "unlocked" && $displayPercentage >= 50) {
                         $badge2 = "images/badges/half-way-color.webp";
@@ -647,6 +740,12 @@ if (isset($_SESSION["user_id"])) {
                         $sql = "UPDATE current_project SET `all-downhill`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
+                        $updatePoints = $points + 25;
+                        $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                            $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                            $stmt2->execute();
+
                         $badge3 = "images/badges/all-downhill-color.webp";
                     } elseif ($badge3 == "unlocked" && $displayPercentage >= 75) {
                         $badge3 = "images/badges/all-downhill-color.webp";
@@ -668,6 +767,12 @@ if (isset($_SESSION["user_id"])) {
                         $sql = "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
+                        $updatePoints = $points + 50;
+                        $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                            $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                            $stmt2->execute();
+
                         $badge4 = "images/badges/cross-finish-color.webp";
                     } elseif ($badge4 == "unlocked" && $displayPercentage >= 100) {
                         $badge4 = "images/badges/cross-finish-color.webp";
@@ -704,6 +809,11 @@ if (isset($_SESSION["user_id"])) {
                                 $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
+
+                                $updatePoints = $points + 5;
+                                $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                    $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                    $stmt2->execute();
                             }
                             $badge5 = "images/badges/streak-two-color.webp";
                         }
@@ -713,6 +823,11 @@ if (isset($_SESSION["user_id"])) {
                                 $sql = "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
+
+                                $updatePoints = $points + 5;
+                                $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                    $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                    $stmt2->execute();
                             }
                             $badge6 = "images/badges/streak-three-color.webp";
                         }
@@ -722,6 +837,11 @@ if (isset($_SESSION["user_id"])) {
                                 $sql = "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
+
+                                $updatePoints = $points + 10;
+                                $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                    $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                    $stmt2->execute();
                             }
                             $badge7 = "images/badges/streak-seven-color.webp";
                         }
@@ -731,6 +851,11 @@ if (isset($_SESSION["user_id"])) {
                                 $sql = "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
+
+                                $updatePoints = $points + 15;
+                                $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                    $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                    $stmt2->execute();
                             }
                             $badge8 = "images/badges/streak-fourteen-color.webp";
                         }
@@ -740,6 +865,11 @@ if (isset($_SESSION["user_id"])) {
                                 $sql = "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
+
+                                $updatePoints = $points + 20;
+                                $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                    $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                    $stmt2->execute();
                             }
                             $badge9 = "images/badges/streak-twentyOne-color.webp";
                         }
@@ -825,6 +955,11 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
+
+                            $updatePoints = $points + 5;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
                         }
                         $badge5 = "images/badges/streak-two-color.webp";
                     }
@@ -834,6 +969,11 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
+
+                            $updatePoints = $points + 5;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
                         }
                         $badge6 = "images/badges/streak-three-color.webp";
                     }
@@ -843,6 +983,11 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
+
+                            $updatePoints = $points + 10;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
                         }
                         $badge7 = "images/badges/streak-seven-color.webp";
                     }
@@ -852,6 +997,11 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
+
+                            $updatePoints = $points + 15;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
                         }
                         $badge8 = "images/badges/streak-fourteen-color.webp";
                     }
@@ -861,6 +1011,11 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
+
+                            $updatePoints = $points + 20;
+                            $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                                $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                                $stmt2->execute();
                         }
                         $badge9 = "images/badges/streak-twentyOne-color.webp";
                     }
@@ -941,9 +1096,14 @@ if (isset($_SESSION["user_id"])) {
                 $badge10 = $project["first-daily"];
                 if ($dailyStreak >= 1 || $badge10 == "unlocked") {
                     if ($badge10 !== "unlocked") {
-                        $sql = "UPDATE current_project SET `first-daily`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
-                            $stmt = $_SESSION["conn"]->prepare($sql);
-                            $stmt->execute();
+                        $sql1 = "UPDATE current_project SET `first-daily`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $stmt1 = $_SESSION["conn"]->prepare($sql1);
+                            $stmt1->execute();
+                        
+                        $updatePoints = $points + 5;
+                        $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                            $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                            $stmt2->execute();
                     }
                     $badge10 = "images/badges/first-daily-color.webp";
                 } else {
@@ -1499,7 +1659,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
                 <i class="fa fa-close" onclick="hideUpdateWords()"></i>
             </div>
             <h2>Update Word Count</h2>
-            <form action="php-processes/update-wordCount" method="post">
+            <form action="php-processes/update-wordCount.php" method="post">
                 <div class="count-type-select-wrapper">
                     <select class="count-type-select" id="wordCount" name="wordCount">
                         <p>Add/Replace Total <i class="fa fa-caret-down" id="down-icon" alt="down icon"></i></p>

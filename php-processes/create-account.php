@@ -8,6 +8,7 @@ ob_start();
 
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+// xamppConnect();
 
 if (empty($_POST["username"])) {
     die("Username is required");

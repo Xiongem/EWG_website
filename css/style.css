@@ -329,16 +329,13 @@ a {
     .mobileNav:hover .navMenu {
         display: block;
     }
-    /* .popup {
-        display: none;
-        z-index: 10;
-        position: absolute;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
-    } */
+    #sword-icon {
+        width: 14px;
+        height: auto;
+    }
+    .contest-wrapper {
+        padding-bottom: 1em;
+    }
 
 
     /** BADGE POPUPS*/
@@ -351,7 +348,6 @@ a {
     .badgeToPopup {
         display: none;
         position: absolute;
-        /* top: 0; */
         z-index: 2;
         flex-direction: column;
         align-items: center;
@@ -477,6 +473,11 @@ a {
         font-size: 18px;
     }
 }
+
+
+
+
+
 @media only screen and (min-width: 1000px) {
     .navMenu {
         width: 15%;
@@ -488,6 +489,8 @@ a {
         margin-top: 3em;
     }
 }
+
+
 
 
 

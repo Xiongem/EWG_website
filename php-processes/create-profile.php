@@ -7,7 +7,8 @@
 ob_start();
 
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
-dbConnect();
+// dbConnect();
+xamppConnect();
 
 
 $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET `timezone`=?, `bio`=?, `fav-1`=?, `fav-2`=?, `fav-3`=? WHERE id=?");

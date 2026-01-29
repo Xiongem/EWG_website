@@ -1,33 +1,17 @@
 <?php
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
-// ini_set('log_errors', 'On');
-// ini_set('error_log', '/path/to/php_errors.log');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 'On');
+ini_set('error_log', '/path/to/php_errors.log');
 
 $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    
-    // $servername = "localhost";
-    // $database = "u792691800_ewg_data";
-    // $username = "u792691800_Xiongem97";
-    // $password = "Hi5gem97*";
-
-    // // Create connection
-    
-    // $conn = mysqli_connect($servername, $username, $password, $database);
-    
-    // // Check connection
-    
-    // if (!$conn) {
-    
-    //     die("Connection failed: " . mysqli_connect_error());
-    
-    // }
 
     ob_start();
     require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
     dbConnect();
+// xamppConnect();
 
     //query
     $sql = sprintf("SELECT * FROM users

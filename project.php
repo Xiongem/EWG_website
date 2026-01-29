@@ -8,6 +8,8 @@
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+// xamppConnect();
+
 $userID = htmlspecialchars($_SESSION["user_id"]);
 $projectID = $_GET["projectID"];
 

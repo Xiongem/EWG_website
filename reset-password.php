@@ -3,8 +3,8 @@ $token = $_GET["token"];
 $token_hash = hash("sha256", $token);
 
 ob_start();
-require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
+// xamppConnect();
 
 $sql = "SELECT * FROM users WHERE reset_token_hash = ?";
     $stmt = $_SESSION["conn"] -> prepare($sql);
