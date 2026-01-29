@@ -53,7 +53,7 @@
     .radio {
         padding: 0.7em;
     }
-    /* .radio-wrapper-9 input[type=radio] {
+    .radio-wrapper-9 input[type=radio] {
         display: none;
         appearance: none;
     }
@@ -103,7 +103,7 @@
         border: 2px solid var(--accent-2);
         border-radius: 16px;
         cursor: pointer;
-    } */
+    }
 
 
     .global-wrapper {
