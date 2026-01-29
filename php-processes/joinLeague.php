@@ -12,7 +12,7 @@ dbConnect();
 
 $userID = $_SESSION["user_id"];
 
-echo $_POST["chooseLeague"];
+echo $_POST['chooseLeague'];
 
 if ($_POST["chooseLeague"] == "casual") {
     $league = "Casual";
