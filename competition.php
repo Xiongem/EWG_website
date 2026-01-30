@@ -106,11 +106,11 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             <form method="post" action="php-processes/update-leagues.php">
                 <div class="option-wrapper">
                     <div class="radio-wrapper-9 radio">
-                        <input id="changeCasual" type="radio" name="chooseLeague" value="casual">
+                        <input id="changeCasual" type="radio" name="changeLeague" value="casual">
                         <label for="changeCasual">Casual League</label>
                     </div>
                     <div class="radio-wrapper-9 radio">
-                        <input id="changeSpeedster" type="radio" name="chooseLeague" value="speedster">
+                        <input id="changeSpeedster" type="radio" name="changeLeague" value="speedster">
                         <label for="changeSpeedster">Speedster League</label>
                     </div>  
                 </div>
@@ -124,9 +124,9 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     $user = $result->fetch_assoc();
                         $joinedLeague = $user["league"];
 
-                if ($_POST["chooseLeague"] == "casual") {
+                if ($_POST["changeLeague"] == "casual") {
                     $league = "Casual";
-                } elseif ($_POST["chooseLeague"] == "speedster") {
+                } elseif ($_POST["changeLeague"] == "speedster") {
                     $league = "Speedster";
                 } else {
                     $league = $joinedLeague;
