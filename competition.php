@@ -45,14 +45,19 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 <h2>Join a League to Start Competing!</h2>
                 <form method="post" action="php-processes/joinLeague.php">
                     <div class="option-wrapper">
-                        <div class="radio-wrapper-9 radio">
+                        <!-- <div class="radio-wrapper-9 radio">
                             <input id="joinCasual" type="radio" name="chooseLeague" value="casual" onclick="checkJoin();">
                             <label for="joinCasual">Casual League</label>
                         </div>
                         <div class="radio-wrapper-9 radio">
                             <input id="joinSpeedster" type="radio" name="chooseLeague" value="speedster">
                             <label for="joinSpeedster">Speedster League</label>
-                        </div>  
+                        </div>   -->
+                        <select class="" name="chooseLeague" id="chooseLeague">
+                            <option name="casual" id="casual" value="casual"></option>
+                            <option></option>
+                            <option name="speedster" id="speedster" value="speedster"></option>
+                        </select>
                     </div>
                     <div class="button-wrapper">
                         <button type="submit" id="league-submit" class="league-btn">Save</button>
@@ -297,19 +302,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             }else if (!center.classList.contains('center')) {
                 center.classList.add('center');
             }
-        }
-
-        var radio = document.getElementById('joinCasual');
-        var speed = document.getElementById('joinCasual');
-        function checkJoin() {
-            speed.checked = true;
-        }
-
-        
-        console.log(radio.value);
-        
-        if (speed.checked) {
-            console.log("checked");
         }
     </script>
 </body>
