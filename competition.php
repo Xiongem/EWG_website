@@ -300,8 +300,9 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
         }
 
         var radio = document.getElementById('joinCasual');
+        var speed = document.getElementById('joinCasual');
         function checkJoin() {
-            radio.checked = true;
+            speed.checked = true;
         }
 
         
