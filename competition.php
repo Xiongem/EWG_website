@@ -300,7 +300,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
         }
 
         var radio = document.getElementById('casual');
-        if (radio.checked == true) {
+        if (radio.checked) {
             console.log("checked");
         }
     </script>
