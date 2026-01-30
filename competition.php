@@ -55,9 +55,9 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                         </div>   -->
                         <select class="" name="chooseLeague" id="chooseLeague">
                             <option name="placeholder" id="placeholder" value="">Choose your league</option>
-                            <option name="casual" id="casual" value="casual"></option>
+                            <option name="casual" id="casual" value="casual">Casual</option>
                             <option></option>
-                            <option name="speedster" id="speedster" value="speedster"></option>
+                            <option name="speedster" id="speedster" value="speedster">Speedster</option>
                         </select>
                     </div>
                     <div class="button-wrapper">
