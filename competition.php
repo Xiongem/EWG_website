@@ -77,20 +77,19 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                             $league = "";
                             $joined = 0;
                         }
+                        $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
+                            $stmt->bind_param("is",
+                                                    $joined,
+                                                    $league);
+
+                        if ($stmt -> execute()) {
+                            header("Location: /competition.php");
+                            exit;
+                        } else {
+                            die("an unexpected error occured");
+                        }
                     } else {
                         echo"FUCK!";
-                    }
-
-                    $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
-                        $stmt->bind_param("is",
-                                                $joined,
-                                                $league);
-
-                    if ($stmt -> execute()) {
-                        header("Location: /competition.php");
-                        exit;
-                    } else {
-                        die("an unexpected error occured");
                     }
                 ?>
             </div>
@@ -119,28 +118,30 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 </div>
             </form>
             <?php 
-                $sql = "SELECT * FROM users WHERE id=$userID";
-                    $result = $_SESSION["conn"]->query($sql);
-                    $user = $result->fetch_assoc();
-                        $joinedLeague = $user["league"];
+                if(isset($_POST['changeLeague'])) {
+                    $sql = "SELECT * FROM users WHERE id=$userID";
+                        $result = $_SESSION["conn"]->query($sql);
+                        $user = $result->fetch_assoc();
+                            $joinedLeague = $user["league"];
 
-                if ($_POST["changeLeague"] == "casual") {
-                    $league = "Casual";
-                } elseif ($_POST["changeLeague"] == "speedster") {
-                    $league = "Speedster";
-                } else {
-                    $league = $joinedLeague;
-                }
+                    if ($_POST["changeLeague"] == "casual") {
+                        $league = "Casual";
+                    } elseif ($_POST["changeLeague"] == "speedster") {
+                        $league = "Speedster";
+                    } else {
+                        $league = $joinedLeague;
+                    }
 
-                $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET league=? WHERE id=$userID");
-                    $stmt->bind_param("s",
-                                            $league);
+                    $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET league=? WHERE id=$userID");
+                        $stmt->bind_param("s",
+                                                $league);
 
-                if ($stmt -> execute()) {
-                    header("Location: /competition.php");
-                    exit;
-                } else {
-                    die("an unexpected error occured");
+                    if ($stmt -> execute()) {
+                        header("Location: /competition.php");
+                        exit;
+                    } else {
+                        die("an unexpected error occured");
+                    }
                 }
             ?>
         </div>
