@@ -46,7 +46,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 <form method="post">
                     <div class="option-wrapper">
                         <div class="radio-wrapper-9 radio">
-                            <input id="joinCasual" type="radio" name="chooseLeague" value="casual" onclick="checkJoin();">
+                            <input id="joinCasual" type="radio" name="chooseLeague" value="casual">
                             <label for="joinCasual">Casual League</label>
                         </div>
                         <div class="radio-wrapper-9 radio">
@@ -66,34 +66,32 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     </div>
                 </form>
                 <?php 
-                echo $_POST['test']; 
-
-                if(isset($_POST['chooseLeague'])) {
-                    if ($_POST['chooseLeague'] == "casual") {
-                        $league = "Casual";
-                        $joined = 1;
-                    } elseif ($_POST['chooseLeague'] == "speedster") {
-                        $league = "Speedster";
-                        $joined = 1;
+                    if(isset($_POST['chooseLeague'])) {
+                        if ($_POST['chooseLeague'] == "casual") {
+                            $league = "Casual";
+                            $joined = 1;
+                        } elseif ($_POST['chooseLeague'] == "speedster") {
+                            $league = "Speedster";
+                            $joined = 1;
+                        } else {
+                            $league = "";
+                            $joined = 0;
+                        }
                     } else {
-                        $league = "";
-                        $joined = 0;
+                        echo"FUCK!";
                     }
-                } else {
-                    echo"FUCK!";
-                }
 
-                $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
-                    $stmt->bind_param("is",
-                                            $joined,
-                                            $league);
+                    $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
+                        $stmt->bind_param("is",
+                                                $joined,
+                                                $league);
 
-                if ($stmt -> execute()) {
-                    header("Location: /competition.php");
-                    exit;
-                } else {
-                    die("an unexpected error occured");
-                }
+                    if ($stmt -> execute()) {
+                        header("Location: /competition.php");
+                        exit;
+                    } else {
+                        die("an unexpected error occured");
+                    }
                 ?>
             </div>
         </div>
@@ -120,6 +118,31 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     <button type="submit" id="change-submit" class="league-btn">Save</button>
                 </div>
             </form>
+            <?php 
+                $sql = "SELECT * FROM users WHERE id=$userID";
+                    $result = $_SESSION["conn"]->query($sql);
+                    $user = $result->fetch_assoc();
+                        $joinedLeague = $user["league"];
+
+                if ($_POST["chooseLeague"] == "casual") {
+                    $league = "Casual";
+                } elseif ($_POST["chooseLeague"] == "speedster") {
+                    $league = "Speedster";
+                } else {
+                    $league = $joinedLeague;
+                }
+
+                $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET league=? WHERE id=$userID");
+                    $stmt->bind_param("s",
+                                            $league);
+
+                if ($stmt -> execute()) {
+                    header("Location: /competition.php");
+                    exit;
+                } else {
+                    die("an unexpected error occured");
+                }
+            ?>
         </div>
     </div>
     <header>
