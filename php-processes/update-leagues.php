@@ -17,9 +17,9 @@ $sql = "SELECT * FROM users WHERE id=$userID";
     $user = $result->fetch_assoc();
         $joinedLeague = $user["league"];
 
-if ($_POST["chooseLeague"] == "casual") {
+if ($_POST["changeLeague"] == "casual") {
     $league = "Casual";
-} elseif ($_POST["chooseLeague"] == "speedster") {
+} elseif ($_POST["changeLeague"] == "speedster") {
     $league = "Speedster";
 } else {
     $league = $joinedLeague;

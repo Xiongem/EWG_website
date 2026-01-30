@@ -1,5 +1,16 @@
 <?php
 session_start();
+
+// Connection to xampp database for development and test
+// function xamppConnect() {
+//     $servername = "localhost";
+//     $database = "ewg";
+//     $username = "root";
+//     $password = "";
+//     $_SESSION["conn"] = mysqli_connect($servername, $username, $password, $database);
+//     if (!$_SESSION["conn"]) {die("Connection failed: " . mysqli_connect_error()); }
+// }
+// regular database connection
 function dbConnect() {
     $servername = "localhost";
     $database = "u792691800_ewg_data";
@@ -44,6 +55,7 @@ function makeNav() {
                             <a href="archives.php">Current/Past Projects</a>
                         </div>
                     </div>
+                    <a href="competition.php">Leagues</a>
                     <a href="announcements.php">News</a>
                     <a href="about.php">About</a>
                     <div class="desktop-user" id="user-logged-in">
@@ -74,6 +86,10 @@ function makeNav() {
                             <div class="projects">
                                 <a href="newProject.php">New Project 
                                     <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
+                                <div class="contest-wrapper">
+                                    <a href="competition.php">Leagues</a>
+                                        <img src="images/crossedSwords.svg" id="sword-icon" style="width: 14px; height: auto;">
+                                </div>
                                 <a href="archives.php">Archive 
                                     <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
                             </div>
@@ -121,6 +137,7 @@ function makeNav() {
                             <a href="archives.php">Current/Past Projects</a>
                         </div>
                     </div>
+                    <a href="competition.php">Leagues</a>
                     <a href="announcements.php">News</a>
                     <a href="about.php">About</a>
                     <div class="desktop-user" id="user-logged-in">
@@ -148,6 +165,10 @@ function makeNav() {
                             <div class="projects">
                                 <a href="newProject.php">New Project 
                                     <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
+                                <div class="contest-wrapper">
+                                    <a href="competition.php">Leagues</a>
+                                        <img src="images/crossedSwords.svg" id="sword-icon" style="width: 14px; height: auto;">
+                                </div>
                                 <a href="archives.php">Archive 
                                     <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
                             </div>
@@ -190,6 +211,7 @@ function makeNav() {
                             <a href="archives.php">Current/Past Projects</a>
                         </div>
                     </div>
+                    <a href="competition.php">Leagues</a>
                     <a href="announcements.php">News</a>
                     <a href="about.php">About</a>
                     <div class="desktop-user" id="user-logged-in">
@@ -217,6 +239,10 @@ function makeNav() {
                             <div class="projects">
                                 <a href="newProject.php">New Project 
                                     <i class="fa fa-plus" id="new-project-icon" alt="plus symbol icon"></i></a>
+                                <div class="contest-wrapper">
+                                    <a href="competition.php">Leagues</a>
+                                        <img src="images/crossedSwords.svg" id="sword-icon" style="width: 14px; height: auto;">
+                                </div>
                                 <a href="archives.php">Archive 
                                     <i class="fa fa-bookmark" id="bookmark-icon" alt="bookmark icon"></i></a>
                             </div>
@@ -242,7 +268,7 @@ function makeNav() {
 } else {
     $htmlContent = <<<HTML
         <div class="logo">
-                <img src="../images/comp-cat-beta.webp" alt="cat using computer logo">
+                <img src="images/comp-cat-beta.webp" alt="cat using computer logo">
         </div>
         <nav>
         <!-- //* DESKTOP NAVIGATION--> 

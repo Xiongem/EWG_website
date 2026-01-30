@@ -12,8 +12,6 @@ dbConnect();
 
 $userID = $_SESSION['user_id'];
 
-echo $_POST['test'];
-
 if(isset($_POST['chooseLeague'])) {
     if ($_POST['chooseLeague'] == "casual") {
         $league = "Casual";
@@ -25,11 +23,7 @@ if(isset($_POST['chooseLeague'])) {
         $league = "";
         $joined = 0;
     }
-} else {
-    echo"FUCK!";
 }
-
-
 
 $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
     $stmt->bind_param("is",
