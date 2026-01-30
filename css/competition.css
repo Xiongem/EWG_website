@@ -52,7 +52,7 @@
         margin-bottom: 0.5em;
     }
     .selection {
-        background-color: var(--accent-1);
+        background-color: var(--background-color);
         color: var(--text-color);
         border: var(--accent-2) solid 2px;
         border-radius: 4px;
