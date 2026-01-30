@@ -46,12 +46,12 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 <form method="post" action="php-processes/joinLeague.php">
                     <div class="option-wrapper">
                         <div class="radio-wrapper-9 radio">
-                            <input id="casual" type="radio" name="chooseLeague" value="casual">
-                            <label for="casual">Casual League</label>
+                            <input id="changeCasual" type="radio" name="chooseLeague" value="casual">
+                            <label for="changeCasual">Casual League</label>
                         </div>
                         <div class="radio-wrapper-9 radio">
-                            <input id="speedster" type="radio" name="chooseLeague" value="speedster">
-                            <label for="speedster">Speedster League</label>
+                            <input id="changeSpeedster" type="radio" name="chooseLeague" value="speedster">
+                            <label for="changeSpeedster">Speedster League</label>
                         </div>  
                     </div>
                     <div class="button-wrapper">
@@ -71,12 +71,12 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             <form method="post" action="php-processes/update-leagues.php">
                 <div class="option-wrapper">
                     <div class="radio-wrapper-9 radio">
-                        <input id="casual" type="radio" name="chooseLeague" value="casual">
-                        <label for="casual">Casual League</label>
+                        <input id="changeCasual" type="radio" name="chooseLeague" value="casual">
+                        <label for="changeCasual">Casual League</label>
                     </div>
                     <div class="radio-wrapper-9 radio">
-                        <input id="speedster" type="radio" name="chooseLeague" value="speedster">
-                        <label for="speedster">Speedster League</label>
+                        <input id="changeSpeedster" type="radio" name="chooseLeague" value="speedster">
+                        <label for="changeSpeedster">Speedster League</label>
                     </div>  
                 </div>
                 <div class="button-wrapper">
@@ -299,7 +299,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             }
         }
 
-        var radio = document.getElementById('casual');
+        var radio = document.getElementById('changeCasual');
         console.log(radio.value);
         
         if (radio.checked) {
