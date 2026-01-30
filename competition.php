@@ -102,7 +102,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             </div>
             <h3>Change Your League?</h3>
             <h5>Please note: you must be in a league for at least 30 days before you can change leagues.</h5>
-            <form method="post" action="php-processes/update-leagues.php">
+            <form method="post">
                 <div class="option-wrapper">
                     <div class="radio-wrapper-9 radio">
                         <input id="changeCasual" type="radio" name="changeLeague" value="casual">
