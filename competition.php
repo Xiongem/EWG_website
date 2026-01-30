@@ -65,7 +65,24 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                         <button type="submit" id="league-submit" class="league-btn">Save</button>
                     </div>
                 </form>
-                <?php echo $_POST['test']; ?>
+                <?php 
+                echo $_POST['test']; 
+                
+                if(isset($_POST['chooseLeague'])) {
+                    if ($_POST['chooseLeague'] == "casual") {
+                        $league = "Casual";
+                        $joined = 1;
+                    } elseif ($_POST['chooseLeague'] == "speedster") {
+                        $league = "Speedster";
+                        $joined = 1;
+                    } else {
+                        $league = "";
+                        $joined = 0;
+                    }
+                } else {
+                    echo"FUCK!";
+                }
+                ?>
             </div>
         </div>
     <?php } ?>
