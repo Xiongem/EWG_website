@@ -46,7 +46,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 <form method="post" action="php-processes/joinLeague.php">
                     <div class="option-wrapper">
                         <div class="radio-wrapper-9 radio">
-                            <input id="joinCasual" type="radio" name="chooseLeague" value="casual">
+                            <input id="joinCasual" type="radio" name="chooseLeague" value="casual" onclick="checkJoin();">
                             <label for="joinCasual">Casual League</label>
                         </div>
                         <div class="radio-wrapper-9 radio">
@@ -300,6 +300,11 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
         }
 
         var radio = document.getElementById('joinCasual');
+        function checkJoin() {
+            radio.checked = true;
+        }
+
+        
         console.log(radio.value);
         
         if (radio.checked) {
