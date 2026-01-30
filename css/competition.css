@@ -51,7 +51,7 @@
         padding: 0 1em;
         margin-bottom: 0.5em;
     }
-    .selection {
+    /* .selection {
         background-color: var(--background-color);
         color: var(--text-color);
         border: var(--accent-2) solid 2px;
@@ -59,8 +59,8 @@
         accent-color: var(--background-color);
         padding: 8px;
         height: 3em;
-    }
-    /* .radio {
+    } */
+    .radio {
         padding: 0.7em;
     }
     .radio-wrapper-9 input[type=radio] {
@@ -98,7 +98,7 @@
     }
     .radio-wrapper-9 input[type=radio] + label:empty:before {
         margin-right: 0;
-    } */
+    }
     .button-wrapper {
         display: flex;
         justify-content: end;

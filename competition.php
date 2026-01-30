@@ -45,21 +45,21 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 <h2>Join a League to Start Competing!</h2>
                 <form method="post">
                     <div class="option-wrapper">
-                        <!-- <div class="radio-wrapper-9 radio">
+                        <div class="radio-wrapper-9 radio">
                             <input id="joinCasual" type="radio" name="chooseLeague" value="casual" onclick="checkJoin();">
                             <label for="joinCasual">Casual League</label>
                         </div>
                         <div class="radio-wrapper-9 radio">
                             <input id="joinSpeedster" type="radio" name="chooseLeague" value="speedster">
                             <label for="joinSpeedster">Speedster League</label>
-                        </div>   -->
-                        <select class="selection" name="chooseLeague" id="chooseLeague">
+                        </div>  
+                        <!-- <select class="selection" name="chooseLeague" id="chooseLeague">
                             <option name="placeholder" id="placeholder" value="">Choose your league</option>
                             <option name="casual" id="casual" value="casual">Casual</option>
                             <option></option>
                             <option name="speedster" id="speedster" value="speedster">Speedster</option>
                         </select>
-                        <input type="hidden" name="test" id="test">
+                        <input type="hidden" name="test" id="test"> -->
                     </div>
                     <div class="button-wrapper">
                         <button type="submit" id="league-submit" class="league-btn">Save</button>
