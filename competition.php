@@ -308,7 +308,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
         
         console.log(radio.value);
         
-        if (radio.checked) {
+        if (speed.checked) {
             console.log("checked");
         }
     </script>
