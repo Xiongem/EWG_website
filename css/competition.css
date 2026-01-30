@@ -242,7 +242,7 @@
         height: 100%;
     }
     .join-popup, .changeLeague-popup {
-        width: 30%;
+        width: 20%;
     }
     .content-wrapper {
         display: flex;
