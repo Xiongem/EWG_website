@@ -59,6 +59,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                             <option></option>
                             <option name="speedster" id="speedster" value="speedster">Speedster</option>
                         </select>
+                        <input type="hidden" name="test" id="test" value="test">
                     </div>
                     <div class="button-wrapper">
                         <button type="submit" id="league-submit" class="league-btn">Save</button>
