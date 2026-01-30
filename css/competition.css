@@ -48,9 +48,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        padding: 1em;
+        padding: 0 1em;
     }
-    .radio {
+    /* .radio {
         padding: 0.7em;
     }
     .radio-wrapper-9 input[type=radio] {
@@ -88,7 +88,7 @@
     }
     .radio-wrapper-9 input[type=radio] + label:empty:before {
         margin-right: 0;
-    }
+    } */
     .button-wrapper {
         display: flex;
         justify-content: end;
@@ -205,6 +205,9 @@
 @media only screen and (min-width: 700px) {
     .join-popup, .changeLeague-popup {
         width: 60%;
+    }
+    .option-wrapper {
+        padding: 0 2em;
     }
     .content-wrapper {
         display: flex;
