@@ -88,8 +88,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                         } else {
                             die("an unexpected error occured");
                         }
-                    } else {
-                        echo"FUCK!";
                     }
                 ?>
             </div>
