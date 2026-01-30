@@ -53,7 +53,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                             <input id="joinSpeedster" type="radio" name="chooseLeague" value="speedster">
                             <label for="joinSpeedster">Speedster League</label>
                         </div>   -->
-                        <select class="" name="chooseLeague" id="chooseLeague">
+                        <select class="selection" name="chooseLeague" id="chooseLeague">
                             <option name="placeholder" id="placeholder" value="">Choose your league</option>
                             <option name="casual" id="casual" value="casual">Casual</option>
                             <option></option>

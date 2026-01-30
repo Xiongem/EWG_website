@@ -51,6 +51,14 @@
         padding: 0 1em;
         margin-bottom: 0.5em;
     }
+    .selection {
+        background-color: var(--accent-1);
+        color: var(--text-color);
+        border: var(--accent-2) solid 2px;
+        border-radius: 4px;
+        accent-color: var(--background-color);
+        padding: 8px;
+    }
     /* .radio {
         padding: 0.7em;
     }
