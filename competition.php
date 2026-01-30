@@ -54,6 +54,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                             <label for="joinSpeedster">Speedster League</label>
                         </div>   -->
                         <select class="" name="chooseLeague" id="chooseLeague">
+                            <option name="placeholder" id="placeholder" value="">Choose your league</option>
                             <option name="casual" id="casual" value="casual"></option>
                             <option></option>
                             <option name="speedster" id="speedster" value="speedster"></option>
