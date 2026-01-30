@@ -43,7 +43,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
         <div class="join-wrapper" id="join-wrapper">
             <div class="join-popup">
                 <h2>Join a League to Start Competing!</h2>
-                <form method="post" action="php-processes/joinLeague.php">
+                <form method="post">
                     <div class="option-wrapper">
                         <!-- <div class="radio-wrapper-9 radio">
                             <input id="joinCasual" type="radio" name="chooseLeague" value="casual" onclick="checkJoin();">
@@ -65,6 +65,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                         <button type="submit" id="league-submit" class="league-btn">Save</button>
                     </div>
                 </form>
+                <?php echo $_POST['test']; ?>
             </div>
         </div>
     <?php } ?>
