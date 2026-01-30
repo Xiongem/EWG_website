@@ -100,19 +100,6 @@ function hideDeletePopup() {
   body.style.overflow = "unset";
 }
 
-function showLeaguePopup() {
-  var deletePopup = document.getElementById("changeLeague-wrapper");
-  deletePopup.style.display = "flex";
-  deletePopup.scrollIntoView();
-  setTimeout(hideBackground, 500);
-}
-function hideLeaguePopup() {
-  var body = document.getElementById("body");
-  document.getElementById("changeLeague-wrapper").style.display = "none";
-  body.style.height = "unset";
-  body.style.overflow = "unset";
-}
-
 function goBack() {
   history.go(-1);
 }

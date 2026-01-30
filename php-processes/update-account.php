@@ -2,7 +2,6 @@
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
-// xamppConnect();
 
 // prepare and bind
 $userID = $_SESSION["user_id"];

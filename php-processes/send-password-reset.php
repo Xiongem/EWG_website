@@ -12,7 +12,6 @@ require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 
 $mail = new PHPMailer\PHPMailer\PHPMailer;
 dbConnect();
-// xamppConnect();
 
 $email = $_POST["email"];
 $token = bin2hex(random_bytes(16));

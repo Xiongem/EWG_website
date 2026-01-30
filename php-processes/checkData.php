@@ -4,7 +4,6 @@ ob_start();
 session_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
-// xamppConnect();
 
 if (! empty($_POST["username"])) {
     $sql = "SELECT * FROM users WHERE username=?";
