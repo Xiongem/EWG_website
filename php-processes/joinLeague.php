@@ -31,14 +31,14 @@ if(isset($_POST['chooseLeague'])) {
 
 
 
-// $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
-//     $stmt->bind_param("is",
-//                             $joined,
-//                             $league);
+$stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
+    $stmt->bind_param("is",
+                            $joined,
+                            $league);
 
-// if ($stmt -> execute()) {
-//     header("Location: /competition.php");
-//     exit;
-// } else {
-//     die("an unexpected error occured");
-// }
+if ($stmt -> execute()) {
+    header("Location: /competition.php");
+    exit;
+} else {
+    die("an unexpected error occured");
+}

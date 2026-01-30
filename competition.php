@@ -67,7 +67,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 </form>
                 <?php 
                 echo $_POST['test']; 
-                
+
                 if(isset($_POST['chooseLeague'])) {
                     if ($_POST['chooseLeague'] == "casual") {
                         $league = "Casual";
@@ -81,6 +81,18 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     }
                 } else {
                     echo"FUCK!";
+                }
+
+                $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
+                    $stmt->bind_param("is",
+                                            $joined,
+                                            $league);
+
+                if ($stmt -> execute()) {
+                    header("Location: /competition.php");
+                    exit;
+                } else {
+                    die("an unexpected error occured");
                 }
                 ?>
             </div>
