@@ -46,12 +46,12 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 <form method="post" action="php-processes/joinLeague.php">
                     <div class="option-wrapper">
                         <div class="radio-wrapper-9 radio">
-                            <input id="changeCasual" type="radio" name="chooseLeague" value="casual">
-                            <label for="changeCasual">Casual League</label>
+                            <input id="joinCasual" type="radio" name="chooseLeague" value="casual">
+                            <label for="joinCasual">Casual League</label>
                         </div>
                         <div class="radio-wrapper-9 radio">
-                            <input id="changeSpeedster" type="radio" name="chooseLeague" value="speedster">
-                            <label for="changeSpeedster">Speedster League</label>
+                            <input id="joinSpeedster" type="radio" name="chooseLeague" value="speedster">
+                            <label for="joinSpeedster">Speedster League</label>
                         </div>  
                     </div>
                     <div class="button-wrapper">
@@ -299,7 +299,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             }
         }
 
-        var radio = document.getElementById('changeCasual');
+        var radio = document.getElementById('joinCasual');
         console.log(radio.value);
         
         if (radio.checked) {
