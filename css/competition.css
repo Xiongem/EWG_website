@@ -58,6 +58,7 @@
         border-radius: 4px;
         accent-color: var(--background-color);
         padding: 8px;
+        height: 3em;
     }
     /* .radio {
         padding: 0.7em;
