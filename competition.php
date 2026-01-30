@@ -298,5 +298,10 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                 center.classList.add('center');
             }
         }
+
+        var radio = document.getElementById('casual');
+        if (radio.checked == true) {
+            console.log("checked");
+        }
     </script>
 </body>
