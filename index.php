@@ -20,6 +20,7 @@ if (isset($_SESSION["user_id"])) {
             $pfp = $user["pfp"];
             $username = $user["username"];
             $timezone = $user["timezone"];
+            $points = $user["points"];
 
     //* Set the user's timezone
     if ($timezone) {
