@@ -192,8 +192,8 @@ if (isset($_SESSION["user_id"])) {
                             if ($project["streak-two"] !== "unlocked") {
                                 $updatePoints = $points + 5;
                                 $sql = 
-                                "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
-                                UPDATE users SET points = $updatePoints WHERE id=$userID;";
+                                "UPDATE users SET points = $updatePoints WHERE id=$userID;
+                                UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
