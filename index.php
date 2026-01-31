@@ -85,6 +85,7 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `quarter-quomplete`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
+
                             $badge1 = "images/badges/quarter-quomplete-mono.webp";
                         } elseif ($badge1 == "locked") {
                             $badge1 = "images/badges/quarter-quomplete-mono.webp";
@@ -96,9 +97,13 @@ if (isset($_SESSION["user_id"])) {
                     if (isset($project["half-way"])) {
                     $badge2 = $project["half-way"];
                         if ($displayPercentage >= 50 && $project["half-way"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `half-way`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                            $updatePoints = $points + 10;
+                            $sql = 
+                            "UPDATE current_project SET `half-way`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active';
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
+
                             $badge2 = "images/badges/half-way-color.webp";
                         } elseif ($badge2 == "unlocked" && $displayPercentage >= 50) {
                             $badge2 = "images/badges/half-way-color.webp";
@@ -106,6 +111,7 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `half-way`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
+
                             $badge2 = "images/badges/half-way-mono.webp";
                         } elseif ($badge2 == "locked") {
                             $badge2 = "images/badges/half-way-mono.webp";
@@ -117,9 +123,13 @@ if (isset($_SESSION["user_id"])) {
                     if (isset($project["all-downhill"])) {
                     $badge3 = $project["all-downhill"];
                         if ($displayPercentage >= 75 && $project["all-downhill"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `all-downhill`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                            $updatePoints = $points + 25;
+                            $sql = 
+                            "UPDATE current_project SET `all-downhill`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active';
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
+
                             $badge3 = "images/badges/all-downhill-color.webp";
                         } elseif ($badge3 == "unlocked" && $displayPercentage >= 75) {
                             $badge3 = "images/badges/all-downhill-color.webp";
@@ -127,6 +137,7 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `all-downhill`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
+
                             $badge3 = "images/badges/all-downhill-mono.webp";
                         } elseif ($badge3 == "locked") {
                             $badge3 = "images/badges/all-downhill-mono.webp";
@@ -138,9 +149,13 @@ if (isset($_SESSION["user_id"])) {
                     if (isset($project["cross-finish"])) {
                     $badge4 = $project["cross-finish"];
                         if ($displayPercentage >= 100 && $project["cross-finish"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                            $updatePoints = $points + 50;
+                            $sql = 
+                            "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active';
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
+
                             $badge4 = "images/badges/cross-finish-color.webp";
                         } elseif ($badge4 == "unlocked" && $displayPercentage >= 100) {
                             $badge4 = "images/badges/cross-finish-color.webp";
@@ -148,6 +163,7 @@ if (isset($_SESSION["user_id"])) {
                             $sql = "UPDATE current_project SET `cross-finish`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
+
                             $badge4 = "images/badges/cross-finish-mono.webp";
                         } elseif ($badge4 == "locked") {
                             $badge4 = "images/badges/cross-finish-mono.webp";
@@ -173,7 +189,10 @@ if (isset($_SESSION["user_id"])) {
                         //* 2 Day Streak
                         if ($streak >= 2) {
                             if ($project["streak-two"] !== "unlocked") {
-                                $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $updatePoints = $points + 5;
+                                $sql = 
+                                "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                                UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
@@ -182,7 +201,10 @@ if (isset($_SESSION["user_id"])) {
                         //* 3 Day Streak
                         if ($streak >= 3) {
                             if ($project["streak-three"] !== "unlocked") {
-                                $sql = "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $updatePoints = $points + 5;
+                                $sql = 
+                                "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                                UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
@@ -191,7 +213,10 @@ if (isset($_SESSION["user_id"])) {
                         //* Seven Day Streak
                         if ($streak >= 7) {
                             if ($project["streak-seven"] !== "unlocked") {
-                                $sql = "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $updatePoints = $points + 10;
+                                $sql = 
+                                "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                                UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
@@ -200,7 +225,10 @@ if (isset($_SESSION["user_id"])) {
                         //* Fourteen Day Streak
                         if ($streak >= 14) {
                             if ($project["streak-fourteen"] !== "unlocked") {
-                                $sql = "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $updatePoints = $points + 15;
+                                $sql = 
+                                "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                                UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
@@ -209,7 +237,10 @@ if (isset($_SESSION["user_id"])) {
                         //* Twenty-One Day Streak
                         if ($streak >= 21) {
                             if ($project["streak-twentyOne"] !== "unlocked") {
-                                $sql = "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $updatePoints = $points + 15;
+                                $sql = 
+                                "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                                UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
@@ -298,7 +329,10 @@ if (isset($_SESSION["user_id"])) {
                     //* 2 Day Streak
                     if ($streak >= 2) {
                         if ($project["streak-two"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $updatePoints = $points + 5;
+                            $sql = 
+                            "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
                         }
@@ -307,7 +341,10 @@ if (isset($_SESSION["user_id"])) {
                     //* 3 Day Streak
                     if ($streak >= 3) {
                         if ($project["streak-three"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $updatePoints = $points + 5;
+                            $sql = 
+                            "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
                         }
@@ -316,7 +353,10 @@ if (isset($_SESSION["user_id"])) {
                     //* Seven Day Streak
                     if ($streak >= 7) {
                         if ($project["streak-seven"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $updatePoints = $points + 10;
+                            $sql = 
+                            "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
                         }
@@ -325,7 +365,10 @@ if (isset($_SESSION["user_id"])) {
                     //* Fourteen Day Streak
                     if ($streak >= 14) {
                         if ($project["streak-fourteen"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $updatePoints = $points + 15;
+                            $sql = 
+                            "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
                         }
@@ -334,7 +377,10 @@ if (isset($_SESSION["user_id"])) {
                     //* Twenty-One Day Streak
                     if ($streak >= 21) {
                         if ($project["streak-twentyOne"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $updatePoints = $points + 20;
+                            $sql = 
+                            "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
                         }
@@ -417,7 +463,10 @@ if (isset($_SESSION["user_id"])) {
             $badge10 = $project["first-daily"];
             if ($dailyStreak >= 1 || $badge10 == "unlocked") {
                 if ($badge10 !== "unlocked") {
-                    $sql = "UPDATE current_project SET `first-daily`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                    $updatePoints = $points + 5;
+                    $sql = 
+                    "UPDATE current_project SET `first-daily`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                    UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
                 }
@@ -606,9 +655,13 @@ if (isset($_SESSION["user_id"])) {
                 if (isset($project["quarter-quomplete"])) {
                 $badge1 = $project["quarter-quomplete"];
                     if ($displayPercentage >= 25 && $project["quarter-quomplete"] !== "unlocked") {
-                        $sql = "UPDATE current_project SET `quarter-quomplete`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                        $updatePoints = $points + 5;
+                        $sql = 
+                        "UPDATE current_project SET `quarter-quomplete`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active';
+                        UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
                         $badge1 = "images/badges/quarter-quomplete-color.webp";
                     } elseif ($badge1 == "unlocked" && $displayPercentage >= 25) {
                         $badge1 = "images/badges/quarter-quomplete-color.webp";
@@ -616,6 +669,7 @@ if (isset($_SESSION["user_id"])) {
                         $sql = "UPDATE current_project SET `quarter-quomplete`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
                         $badge1 = "images/badges/quarter-quomplete-mono.webp";
                     } elseif ($badge1 == "locked") {
                         $badge1 = "images/badges/quarter-quomplete-mono.webp";
@@ -627,9 +681,13 @@ if (isset($_SESSION["user_id"])) {
                 if (isset($project["half-way"])) {
                 $badge2 = $project["half-way"];
                     if ($displayPercentage >= 50 && $project["half-way"] !== "unlocked") {
-                        $sql = "UPDATE current_project SET `half-way`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                        $updatePoints = $points + 10;
+                        $sql = 
+                        "UPDATE current_project SET `half-way`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active';
+                        UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
                         $badge2 = "images/badges/half-way-color.webp";
                     } elseif ($badge2 == "unlocked" && $displayPercentage >= 50) {
                         $badge2 = "images/badges/half-way-color.webp";
@@ -637,6 +695,7 @@ if (isset($_SESSION["user_id"])) {
                         $sql = "UPDATE current_project SET `half-way`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
                         $badge2 = "images/badges/half-way-mono.webp";
                     } elseif ($badge2 == "locked") {
                         $badge2 = "images/badges/half-way-mono.webp";
@@ -648,9 +707,13 @@ if (isset($_SESSION["user_id"])) {
                 if (isset($project["all-downhill"])) {
                 $badge3 = $project["all-downhill"];
                     if ($displayPercentage >= 75 && $project["all-downhill"] !== "unlocked") {
-                        $sql = "UPDATE current_project SET `all-downhill`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                        $updatePoints = $points + 25;
+                        $sql = 
+                        "UPDATE current_project SET `all-downhill`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active';
+                        UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
                         $badge3 = "images/badges/all-downhill-color.webp";
                     } elseif ($badge3 == "unlocked" && $displayPercentage >= 75) {
                         $badge3 = "images/badges/all-downhill-color.webp";
@@ -658,6 +721,7 @@ if (isset($_SESSION["user_id"])) {
                         $sql = "UPDATE current_project SET `all-downhill`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
                         $badge3 = "images/badges/all-downhill-mono.webp";
                     } elseif ($badge3 == "locked") {
                         $badge3 = "images/badges/all-downhill-mono.webp";
@@ -669,9 +733,13 @@ if (isset($_SESSION["user_id"])) {
                 if (isset($project["cross-finish"])) {
                 $badge4 = $project["cross-finish"];
                     if ($displayPercentage >= 100 && $project["cross-finish"] !== "unlocked") {
-                        $sql = "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active'";
+                        $updatePoints = $points + 50;
+                        $sql = 
+                        "UPDATE current_project SET `cross-finish`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND display='active';
+                        UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
                         $badge4 = "images/badges/cross-finish-color.webp";
                     } elseif ($badge4 == "unlocked" && $displayPercentage >= 100) {
                         $badge4 = "images/badges/cross-finish-color.webp";
@@ -679,6 +747,7 @@ if (isset($_SESSION["user_id"])) {
                         $sql = "UPDATE current_project SET `cross-finish`= 'locked' WHERE users_id=$userID AND current_state='current' AND display='active'";
                         $stmt = $_SESSION["conn"]->prepare($sql);
                         $stmt->execute();
+
                         $badge4 = "images/badges/cross-finish-mono.webp";
                     } elseif ($badge4 == "locked") {
                         $badge4 = "images/badges/cross-finish-mono.webp";
@@ -705,7 +774,10 @@ if (isset($_SESSION["user_id"])) {
                         //* 2 Day Streak
                         if ($streak >= 2) {
                             if ($project["streak-two"] !== "unlocked") {
-                                $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $updatePoints = $points + 5;
+                                $sql = 
+                                "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                                UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
@@ -714,7 +786,10 @@ if (isset($_SESSION["user_id"])) {
                         //* 3 Day Streak
                         if ($streak >= 3) {
                             if ($project["streak-three"] !== "unlocked") {
-                                $sql = "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $updatePoints = $points + 5;
+                                $sql = 
+                                "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                                UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
@@ -723,7 +798,10 @@ if (isset($_SESSION["user_id"])) {
                         //* Seven Day Streak
                         if ($streak >= 7) {
                             if ($project["streak-seven"] !== "unlocked") {
-                                $sql = "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $updatePoints = $points + 10;
+                                $sql = 
+                                "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                                UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
@@ -732,7 +810,10 @@ if (isset($_SESSION["user_id"])) {
                         //* Fourteen Day Streak
                         if ($streak >= 14) {
                             if ($project["streak-fourteen"] !== "unlocked") {
-                                $sql = "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $updatePoints = $points + 15;
+                                $sql = 
+                                "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                                UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
@@ -741,7 +822,10 @@ if (isset($_SESSION["user_id"])) {
                         //* Twenty-One Day Streak
                         if ($streak >= 21) {
                             if ($project["streak-twentyOne"] !== "unlocked") {
-                                $sql = "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                                $updatePoints = $points + 20;
+                                $sql = 
+                                "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                                UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                     $stmt = $_SESSION["conn"]->prepare($sql);
                                     $stmt->execute();
                             }
@@ -826,7 +910,10 @@ if (isset($_SESSION["user_id"])) {
                     //* 2 Day Streak
                     if ($streak >= 2) {
                         if ($project["streak-two"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $updatePoints = $points + 5;
+                            $sql = 
+                            "UPDATE current_project SET `streak-two`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
                         }
@@ -835,7 +922,10 @@ if (isset($_SESSION["user_id"])) {
                     //* 3 Day Streak
                     if ($streak >= 3) {
                         if ($project["streak-three"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $updatePoints = $points + 5;
+                            $sql = 
+                            "UPDATE current_project SET `streak-three`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
                         }
@@ -844,7 +934,10 @@ if (isset($_SESSION["user_id"])) {
                     //* Seven Day Streak
                     if ($streak >= 7) {
                         if ($project["streak-seven"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $updatePoints = $points + 10;
+                            $sql = 
+                            "UPDATE current_project SET `streak-seven`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
                         }
@@ -853,7 +946,10 @@ if (isset($_SESSION["user_id"])) {
                     //* Fourteen Day Streak
                     if ($streak >= 14) {
                         if ($project["streak-fourteen"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $updatePoints = $points + 15;
+                            $sql = 
+                            "UPDATE current_project SET `streak-fourteen`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
                         }
@@ -862,7 +958,10 @@ if (isset($_SESSION["user_id"])) {
                     //* Twenty-One Day Streak
                     if ($streak >= 21) {
                         if ($project["streak-twentyOne"] !== "unlocked") {
-                            $sql = "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $updatePoints = $points + 20;
+                            $sql = 
+                            "UPDATE current_project SET `streak-twentyOne`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                            UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                                 $stmt = $_SESSION["conn"]->prepare($sql);
                                 $stmt->execute();
                         }
@@ -945,7 +1044,10 @@ if (isset($_SESSION["user_id"])) {
                 $badge10 = $project["first-daily"];
                 if ($dailyStreak >= 1 || $badge10 == "unlocked") {
                     if ($badge10 !== "unlocked") {
-                        $sql = "UPDATE current_project SET `first-daily`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                        $updatePoints = $points + 5;
+                        $sql = 
+                        "UPDATE current_project SET `first-daily`= 'unlocked' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID;
+                        UPDATE users SET `points`= $updatePoints WHERE id=$userID";
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
                     }
