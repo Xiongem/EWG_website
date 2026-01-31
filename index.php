@@ -79,6 +79,11 @@ if (isset($_SESSION["user_id"])) {
                             $stmt = $_SESSION["conn"]->prepare($sql);
                             $stmt->execute();
 
+                            // $updatePoints = $points + 5;
+                            // $sql2 = "UPDATE users SET `points`= $updatePoints WHERE id=$userID";
+                            //     $stmt2 = $_SESSION["conn"]->prepare($sql2);
+                            //     $stmt2->execute();
+
                             $badge1 = "images/badges/quarter-quomplete-color.webp";
                         } elseif ($badge1 == "unlocked" && $displayPercentage >= 25) {
                             $badge1 = "images/badges/quarter-quomplete-color.webp";
