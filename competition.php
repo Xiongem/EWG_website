@@ -8,7 +8,6 @@ ini_set('error_log', '/path/to/php_errors.log');
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
 dbConnect();
-// xamppConnect();
 
 forceLogin();
 
@@ -43,7 +42,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
         <div class="join-wrapper" id="join-wrapper">
             <div class="join-popup">
                 <h2>Join a League to Start Competing!</h2>
-                <form method="post">
+                <form method="post" action="php-processes/joinLeague.php">
                     <div class="option-wrapper">
                         <div class="radio-wrapper-9 radio">
                             <input id="joinCasual" type="radio" name="chooseLeague" value="casual">
@@ -65,31 +64,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                         <button type="submit" id="league-submit" class="league-btn">Save</button>
                     </div>
                 </form>
-                <?php 
-                    if(isset($_POST['chooseLeague'])) {
-                        if ($_POST['chooseLeague'] == "casual") {
-                            $league = "Casual";
-                            $joined = 1;
-                        } elseif ($_POST['chooseLeague'] == "speedster") {
-                            $league = "Speedster";
-                            $joined = 1;
-                        } else {
-                            $league = "";
-                            $joined = 0;
-                        }
-                        $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET joined=?, league=? WHERE id=$userID");
-                            $stmt->bind_param("is",
-                                                    $joined,
-                                                    $league);
-
-                        if ($stmt -> execute()) {
-                            header("Location: /competition.php");
-                            exit;
-                        } else {
-                            die("an unexpected error occured");
-                        }
-                    }
-                ?>
             </div>
         </div>
     <?php } ?>
@@ -100,7 +74,7 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
             </div>
             <h3>Change Your League?</h3>
             <h5>Please note: you must be in a league for at least 30 days before you can change leagues.</h5>
-            <form method="post">
+            <form method="post" action="php-processes/update-leagues.php">
                 <div class="option-wrapper">
                     <div class="radio-wrapper-9 radio">
                         <input id="changeCasual" type="radio" name="changeLeague" value="casual">
@@ -115,33 +89,6 @@ $userID = htmlspecialchars($_SESSION["user_id"]);
                     <button type="submit" id="change-submit" class="league-btn">Save</button>
                 </div>
             </form>
-            <?php 
-                if(isset($_POST['changeLeague'])) {
-                    $sql = "SELECT * FROM users WHERE id=$userID";
-                        $result = $_SESSION["conn"]->query($sql);
-                        $user = $result->fetch_assoc();
-                            $joinedLeague = $user["league"];
-
-                    if ($_POST["changeLeague"] == "casual") {
-                        $league = "Casual";
-                    } elseif ($_POST["changeLeague"] == "speedster") {
-                        $league = "Speedster";
-                    } else {
-                        $league = $joinedLeague;
-                    }
-
-                    $stmt = $_SESSION["conn"] -> prepare("UPDATE users SET league=? WHERE id=$userID");
-                        $stmt->bind_param("s",
-                                                $league);
-
-                    if ($stmt -> execute()) {
-                        header("Location: /competition.php");
-                        exit;
-                    } else {
-                        die("an unexpected error occured");
-                    }
-                }
-            ?>
         </div>
     </div>
     <header>
