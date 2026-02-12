@@ -47,8 +47,11 @@ $sql = "SELECT points FROM users WHERE id=$userID";
 if ($choice == "replace") {
     $replaceCount = $updateCount - $currentCount;
     $dailyCount = $dailyWords + $replaceCount;
-
-    $addPoints = round($replaceCount/250);
+    if ($replaceCount > 250) {
+        $addPoints = round($replaceCount/250);
+    } else {
+        $addPoints = $points;
+    }
 
     //? upticks the daily goal count
     if ($reached == 0 && $dailyCount >= $dailyGoal) {
@@ -77,7 +80,11 @@ if ($choice == "replace") {
     $newCount = $currentCount + $updateCount;
     $dailyCount = $updateCount + $dailyWords;
 
-    $addPoints = round($updateCount/250);
+    if ($newCount > 250) {
+        $addPoints = round($updateCount/250);
+    } else {
+        $addPoints = $points;
+    }
 
     if ($reached == 0 && $dailyCount >= $dailyGoal) {
         $dailyStreak = $dailyStreak + 1;
