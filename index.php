@@ -40,10 +40,9 @@ if (isset($_SESSION["user_id"])) {
     //* Pull Project Info
     $sql = "SELECT display FROM current_project WHERE users_id='$userID' AND current_state='current'";
         $result = $_SESSION["conn"]->query($sql);
-        if ($result->num_rows > 1) {
+        //* if user has selected a project to be active from project selection
+        if ($result->num_rows > 1) { 
             while ($display = $result->fetch_assoc()) {
-
-            //* if user has selected a project to be active from project selection
             if (in_array("active", $display)) { 
                 $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current' AND display='active'";
                 $result = $_SESSION["conn"]->query($sql);
@@ -654,8 +653,8 @@ if (isset($_SESSION["user_id"])) {
                         }
                     }                
                 }
+        //* User has no active projects yet
         } elseif ($result->num_rows > 0) {
-            //* User has no active projects yet
             $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current'";
             $result = $_SESSION["conn"]->query($sql);
             $project = $result->fetch_assoc();
@@ -1275,9 +1274,63 @@ if (isset($_SESSION["user_id"])) {
             $displayPercentage = 0;
         }
 
-//* increase or reset streak count
-if ($startDate !== "0000-00-00" && isset($project["genre"])) {
-    if ($started <= 0) {
+    //* increase or reset streak count
+    if ($startDate !== "0000-00-00" && isset($project["genre"])) {
+        if ($started <= 0) {
+            $began = "yes";
+            if ($intervals == 1) {
+                if ($dailyWords !== 0) {
+                    $sql = "UPDATE current_project SET `daily_words`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $stmt = $_SESSION["conn"]->prepare($sql);
+                            $stmt->execute();
+                }
+                if ($reached !== 0) {
+                    $sql = "UPDATE current_project SET `reached`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $stmt = $_SESSION["conn"]->prepare($sql);
+                            $stmt->execute();
+                }
+                $streak = $streak + 1;
+                $fire = "off";
+                if ($project["on-track"] == "lost") {
+                    $lost = "lost";
+                } else {
+                    $lost = "not";
+                }
+                
+            } elseif ($intervals >= 2) {
+                $streak = 1;
+                if ($dailyWords !== 0) {
+                    $sql = "UPDATE current_project SET `daily_words`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $stmt = $_SESSION["conn"]->prepare($sql);
+                            $stmt->execute();
+                }
+                if ($reached !== 0) {
+                    $sql = "UPDATE current_project SET `reached`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                            $stmt = $_SESSION["conn"]->prepare($sql);
+                            $stmt->execute();
+                }
+                if ($project["on-track"] !== "lost" && $update_date !== "0000-00-00") {
+                    $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
+                        $stmt = $_SESSION["conn"]->prepare($sql);
+                        $stmt->execute();
+                }
+                $fire = "off";
+                $lost = "lost";
+            } else {
+                $dailyWords = $dailyWords;
+                $streak = $streak;
+                $fire = "on";
+                if ($project["on-track"] == "lost") {
+                    $lost = "lost";
+                } else {
+                    $lost = "not";
+                }
+            }
+        } else {
+            $fire = "off";
+            $lost = "not";
+        }
+    } else {
         $began = "yes";
         if ($intervals == 1) {
             if ($dailyWords !== 0) {
@@ -1292,12 +1345,7 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
             }
             $streak = $streak + 1;
             $fire = "off";
-            if ($project["on-track"] == "lost") {
-                $lost = "lost";
-            } else {
-                $lost = "not";
-            }
-            
+            $lost = "not";
         } elseif ($intervals >= 2) {
             $streak = 1;
             if ($dailyWords !== 0) {
@@ -1315,79 +1363,29 @@ if ($startDate !== "0000-00-00" && isset($project["genre"])) {
                     $stmt = $_SESSION["conn"]->prepare($sql);
                     $stmt->execute();
             }
-            $fire = "off";
             $lost = "lost";
         } else {
             $dailyWords = $dailyWords;
             $streak = $streak;
             $fire = "on";
-            if ($project["on-track"] == "lost") {
-                $lost = "lost";
-            } else {
-                $lost = "not";
-            }
+            $lost = "not";
         }
-    } else {
-        $fire = "off";
-        $lost = "not";
     }
-} else {
-    $began = "yes";
-    if ($intervals == 1) {
-        if ($dailyWords !== 0) {
-            $sql = "UPDATE current_project SET `daily_words`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
-                    $stmt = $_SESSION["conn"]->prepare($sql);
-                    $stmt->execute();
-        }
-        if ($reached !== 0) {
-            $sql = "UPDATE current_project SET `reached`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
-                    $stmt = $_SESSION["conn"]->prepare($sql);
-                    $stmt->execute();
-        }
-        $streak = $streak + 1;
-        $fire = "off";
-        $lost = "not";
-    } elseif ($intervals >= 2) {
-        $streak = 1;
-        if ($dailyWords !== 0) {
-            $sql = "UPDATE current_project SET `daily_words`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
-                    $stmt = $_SESSION["conn"]->prepare($sql);
-                    $stmt->execute();
-        }
-        if ($reached !== 0) {
-            $sql = "UPDATE current_project SET `reached`= 0 WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
-                    $stmt = $_SESSION["conn"]->prepare($sql);
-                    $stmt->execute();
-        }
-        if ($project["on-track"] !== "lost" && $update_date !== "0000-00-00") {
-            $sql = "UPDATE current_project SET `on-track`= 'lost', `every-streak`= 'lost' WHERE users_id=$userID AND current_state='current' AND id=$displayProjectID";
-                $stmt = $_SESSION["conn"]->prepare($sql);
-                $stmt->execute();
-        }
+    if ($displayGoalDate == "0000-00-00") {
         $lost = "lost";
-    } else {
-        $dailyWords = $dailyWords;
-        $streak = $streak;
-        $fire = "on";
-        $lost = "not";
     }
-}
-if ($displayGoalDate == "0000-00-00") {
-    $lost = "lost";
-}
 
-$update_date = date("Y-m-d");
+    $update_date = date("Y-m-d");
 
-//* Set Session Tokens
-$_SESSION["pfp"] = $pfp_set;
-$_SESSION["username"] = $username;
-$_SESSION["streak"] = $streak;
-$_SESSION["intervals"] = $intervals;
-$_SESSION["update_date"] = $update_date;
-$_SESSION["overlay"] = $user["hydra-slayer"];
-
+    //* Set Session Tokens
+    $_SESSION["pfp"] = $pfp_set;
+    $_SESSION["username"] = $username;
+    $_SESSION["streak"] = $streak;
+    $_SESSION["intervals"] = $intervals;
+    $_SESSION["update_date"] = $update_date;
+    $_SESSION["overlay"] = $user["hydra-slayer"];
+//* User is not logged in
 }  else {
-    //* User is not logged in
     $pfp_set = "images/pfp-icon.webp";
     $displayTitle = "Really Cool Title";
     $displayGenrePicture = "images/genre-covers/placeholder.webp";
