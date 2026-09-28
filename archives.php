@@ -187,7 +187,7 @@ date_default_timezone_set("$timezone");
                         <?php if ($currentDisplay == "active") {?>
                             <i class="fa fa-star" id="<?=$projectID?>" alt="star icon"></i>
                         <?php } elseif ($state == "archived") { ?>
-                            <i class="fa fa-moon" id="<?=$projectID?>" alt="archive icon"></i>
+                            <i class="fa fa-gear" id="<?=$projectID?>" alt="archive icon"></i>
                         <?php } ?>
                         <?= $title ?>
                     </h2>
