@@ -87,7 +87,8 @@ date_default_timezone_set("$timezone");
                             </div>
                         </div>
                     </div>
-            <?php }} ?>
+            <?php }
+            }} ?>
             <script>
                 var project = id;
                     const boxes = document.querySelectorAll('.fa-star');
