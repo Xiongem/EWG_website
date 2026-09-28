@@ -93,7 +93,7 @@ date_default_timezone_set("$timezone");
                     </div>
             <?php }}} ?>
                 <script>
-                    var project = id;
+                    // var project = id;
                         const boxes = document.querySelectorAll('.fa-star');
                         for (const box of boxes) {
                             box.classList.add('inactive');
