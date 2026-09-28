@@ -38,7 +38,7 @@ date_default_timezone_set("$timezone");
     $sql = "SELECT display FROM current_project WHERE users_id='$userID' AND current_state='current' AND display='active'";
             $result = $_SESSION["conn"]->query($sql);
         if ($result->num_rows == 0) { ?>
-        
+
         <div class="project-select-popup-wrapper" id="project-popup">
             <div class="project-select-popup">
                 <div class="popup-header">
@@ -184,8 +184,8 @@ date_default_timezone_set("$timezone");
             <img src="<?= $genre_picture ?>" id="genreImage" alt="genre image">
             <div class="overview-info">
                     <h2 class="overview-title">
-                        <?php if ($state == "current") {?>
-                        <i class="fa fa-star" id="<?=$projectID?>" alt="star icon"></i>
+                        <?php if ($currentDisplay == "active") {?>
+                            <i class="fa fa-star" id="<?=$projectID?>" alt="star icon"></i>
                         <?php } ?>
                         <?= $title ?>
                     </h2>
