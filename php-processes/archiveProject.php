@@ -7,9 +7,11 @@ dbConnect();
 $userID = $_SESSION["user_id"];
 $projectID = $_GET["projectID"];
 $archived = "archived";
+$inactive = "inactive";
 
-$stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_state=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
-$stmt->bind_param("s",
+$stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_state=?, display=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
+$stmt->bind_param("s,s",
+                        $inactive,                        
                         $archived);
     echo "stmt prepared and bound!".'<br>';
 
