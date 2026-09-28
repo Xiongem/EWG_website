@@ -37,6 +37,7 @@ date_default_timezone_set("$timezone");
         //* Pull active project data
         $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current'";
             $result = $_SESSION["conn"]->query($sql);
+            echo $result->num_rows;
                 if ($result->num_rows > 0) {
                     while ($rows = $result->fetch_assoc()) {
                         $projectID = $rows["id"];
