@@ -87,38 +87,37 @@ date_default_timezone_set("$timezone");
                             </div>
                         </div>
                     </div>
-
-                </div>
-            </div>
-            <?php }
-            }}} ?>
-            <script>
-                var project = id;
-                    const boxes = document.querySelectorAll('.fa-star');
-                    for (const box of boxes) {
-                        box.classList.add('inactive');
-                    }
-                function refresh(){
-                    location.reload();
-                }
-                function projectSelect(id, display) {
-                    //assign values
+            <?php }}} ?>
+                <script>
                     var project = id;
-                    const boxes = document.querySelectorAll('.fa-star');
-                    for (const box of boxes) {
-                        box.classList.add('inactive');
+                        const boxes = document.querySelectorAll('.fa-star');
+                        for (const box of boxes) {
+                            box.classList.add('inactive');
+                        }
+                    function refresh(){
+                        location.reload();
                     }
+                    function projectSelect(id, display) {
+                        //assign values
+                        var project = id;
+                        const boxes = document.querySelectorAll('.fa-star');
+                        for (const box of boxes) {
+                            box.classList.add('inactive');
+                        }
 
-                    var i = document.getElementById(project);
-                    i.classList.remove("inactive");
-                    //begin post method
-                    $.post("php-processes/update-activeProject", {
-                        //DATA
-                        project: project
-                    });
-                    setTimeout(refresh, 300);
-                }
-            </script>
+                        var i = document.getElementById(project);
+                        i.classList.remove("inactive");
+                        //begin post method
+                        $.post("php-processes/update-activeProject", {
+                            //DATA
+                            project: project
+                        });
+                        setTimeout(refresh, 300);
+                    }
+                </script>
+            </div>
+        </div>
+    <?php } ?>
     <!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
         <?php makeNav() ?>
