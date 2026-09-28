@@ -1457,8 +1457,7 @@ $default25 = "images/badges/cross-finish-mono.webp";
     <?php if (isset($_SESSION["user_id"])) {
             if (!isset($timezone) || $timezone == "") { ?>
         <script>
-            //runs a function that blurs out the background and prevents user from 
-            // scrolling beyond current viewscreen
+            //*runs a function that blurs out the background and prevents user from scrolling beyond current viewscreen
             hideBackground();
         </script>
         <!-- //* Timezone popup -->
