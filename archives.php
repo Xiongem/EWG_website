@@ -33,7 +33,7 @@ date_default_timezone_set("$timezone");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <?php
+    <?php {
         //* Pull active project data
         $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current'";
             $result = $_SESSION["conn"]->query($sql);
@@ -64,30 +64,30 @@ date_default_timezone_set("$timezone");
                             }
         ?>
         <?php if ($currentDisplay !== "active") { ?>
-    <div class="project-select-popup-wrapper" id="project-popup">
-        <div class="project-select-popup">
-            <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>', '<?= $currentDisplay ?>')">
-                <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
-                <div class="project-info">
-                    <h3 id="popup-project-title">
-                        <i class="fa fa-star <?= $currentDisplay ?>" id="<?= $projectID ?>" alt="star icon"></i> 
-                        <?= $title ?></h3>
-                    <div class="project-stats">
-                        <p id="popup-goal">Goal: <?= $current_count ?>/<?= $goal ?></p>
-                        <p><?= $progress ?>%</p>
-                        <?php if ($days !== "No Goal Date Set") { 
-                                if ($began) { ?>
-                                    <p id="popup-days-left">Days Left: <?= $days ?></p>
-                                <?php } else { ?>
-                                    <p id="popup-days-until">Starts in: <?= $started ?> days</p>
-                                <?php } ?>
-                        <?php }else { ?>
-                            <p id="popup-days-left"><?= $days ?></p>
-                            <?php } ?>
+            <div class="project-select-popup-wrapper" id="project-popup">
+                <div class="project-select-popup">
+                    <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>', '<?= $currentDisplay ?>')">
+                        <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
+                        <div class="project-info">
+                            <h3 id="popup-project-title">
+                                <i class="fa fa-star <?= $currentDisplay ?>" id="<?= $projectID ?>" alt="star icon"></i> 
+                                <?= $title ?></h3>
+                            <div class="project-stats">
+                                <p id="popup-goal">Goal: <?= $current_count ?>/<?= $goal ?></p>
+                                <p><?= $progress ?>%</p>
+                                <?php if ($days !== "No Goal Date Set") { 
+                                        if ($began) { ?>
+                                            <p id="popup-days-left">Days Left: <?= $days ?></p>
+                                        <?php } else { ?>
+                                            <p id="popup-days-until">Starts in: <?= $started ?> days</p>
+                                        <?php } ?>
+                                <?php }else { ?>
+                                    <p id="popup-days-left"><?= $days ?></p>
+                                    <?php } ?>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <?php }} ?>
+            <?php } ?>
             <script>
                 var project = id;
                     const boxes = document.querySelectorAll('.fa-star');
@@ -117,6 +117,7 @@ date_default_timezone_set("$timezone");
             </script>
         </div>
     </div>
+    <?php }}} ?>
     <!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
         <?php makeNav() ?>
