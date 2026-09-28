@@ -34,7 +34,12 @@ date_default_timezone_set("$timezone");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <?php if ($currentDisplay !== "active") { ?>
+    <?php 
+    $sql = "SELECT display FROM current_project WHERE users_id='$userID' AND current_state='current'";
+            $result = $_SESSION["conn"]->query($sql);
+            $row = $result->fetch_assoc();
+                $currentDisplay = $row["display"];
+    if ($currentDisplay !== "active") { ?>
         <div class="project-select-popup-wrapper" id="project-popup">
             <div class="project-select-popup">
                 <div class="popup-header">
@@ -99,8 +104,8 @@ date_default_timezone_set("$timezone");
                             box.classList.add('inactive');
                         }
                     function refresh(){
-                        // location.reload();
-                        window.location.href = "index.php";
+                        location.reload();
+                        // window.location.href = "index.php";
                     }
                     function projectSelect(id, display) {
                         //assign values
