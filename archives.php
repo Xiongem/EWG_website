@@ -33,6 +33,9 @@ date_default_timezone_set("$timezone");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <?php if ($currentDisplay !== "active") { ?>
+        <div class="project-select-popup-wrapper" id="project-popup">
+            <div class="project-select-popup">
     <?php {
         //* Pull active project data
         $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current'";
@@ -62,11 +65,7 @@ date_default_timezone_set("$timezone");
                                 } elseif ($days < 0) {
                                     $days = "Project Past Due!";
                                 }
-                            }
-        ?>
-        <?php if ($currentDisplay !== "active") { ?>
-            <div class="project-select-popup-wrapper" id="project-popup">
-                <div class="project-select-popup">
+                            }?>
                     <div class="project-select-content" onclick="projectSelect('<?= $projectID ?>', '<?= $currentDisplay ?>')">
                         <img class="popup-image" src=<?= $genre_picture ?> alt="genre cover image">
                         <div class="project-info">
