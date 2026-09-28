@@ -99,7 +99,8 @@ date_default_timezone_set("$timezone");
                             box.classList.add('inactive');
                         }
                     function refresh(){
-                        location.reload();
+                        // location.reload();
+                        window.location.href = "index.php";
                     }
                     function projectSelect(id, display) {
                         //assign values
@@ -117,7 +118,7 @@ date_default_timezone_set("$timezone");
                             project: project
                         });
                         setTimeout(refresh, 300);
-                        // window.location.href = "index.php";
+                        
                     }
                 </script>
             </div>
