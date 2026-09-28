@@ -35,11 +35,10 @@ date_default_timezone_set("$timezone");
 </head>
 <body>
     <?php 
-    $sql = "SELECT display FROM current_project WHERE users_id='$userID' AND current_state='current'";
+    $sql = "SELECT display FROM current_project WHERE users_id='$userID' AND current_state='current' AND display='active'";
             $result = $_SESSION["conn"]->query($sql);
-            $row = $result->fetch_assoc();
-                $currentDisplay = $row["display"];
-    if ($currentDisplay !== "active") { ?>
+        if ($result->num_rows == 0) { ?>
+        
         <div class="project-select-popup-wrapper" id="project-popup">
             <div class="project-select-popup">
                 <div class="popup-header">
