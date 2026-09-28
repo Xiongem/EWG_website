@@ -87,8 +87,10 @@ date_default_timezone_set("$timezone");
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
             <?php }
-            }} ?>
+            }}} ?>
             <script>
                 var project = id;
                     const boxes = document.querySelectorAll('.fa-star');
@@ -116,9 +118,6 @@ date_default_timezone_set("$timezone");
                     setTimeout(refresh, 300);
                 }
             </script>
-        </div>
-    </div>
-    <?php } ?>
     <!--* NAVIGATION FOR BOTH MOBILE AND DESKTOP--> 
     <header>
         <?php makeNav() ?>
