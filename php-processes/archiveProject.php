@@ -10,7 +10,7 @@ $archived = "archived";
 $inactive = "inactive";
 
 $stmt = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_state=?, `display`=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
-$stmt->bind_param("s,s",                      
+$stmt->bind_param("ss",                      
                         $archived,
                         $inactive);
     echo "stmt prepared and bound!".'<br>';

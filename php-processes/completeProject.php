@@ -20,7 +20,7 @@ $user = $result->fetch_assoc();
 
 $stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_state=?, `display`=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
 $stmt2 = $_SESSION["conn"] -> prepare("UPDATE users SET projects_completed=? WHERE id=$userID");
-$stmt1->bind_param("s,s",
+$stmt1->bind_param("ss",
                         $completed,
                         $inactive);
 $stmt2->bind_param("s",
