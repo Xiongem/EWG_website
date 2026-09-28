@@ -136,6 +136,7 @@ date_default_timezone_set("$timezone");
         <h1>All Your Projects</h1>
         <div class="instruction-wrapper">
             <p><i class="fa fa-star" id="star-icon" alt="star icon"></i> = Active Project</p>
+            <p><i class="fa fa-folder" id="folder-icon" alt="folder icon"></i> = Archived Project</p>
         </div>
     </div>
     <div class="main-wrapper">
@@ -187,7 +188,7 @@ date_default_timezone_set("$timezone");
                         <?php if ($currentDisplay == "active") {?>
                             <i class="fa fa-star" id="<?=$projectID?>" alt="star icon"></i>
                         <?php } elseif ($state == "archived") { ?>
-                            <i class="fa fa-folder" id="<?=$projectID?>" alt="banned icon"></i>
+                            <i class="fa fa-folder" id="<?=$projectID?>" alt="folder icon"></i>
                         <?php } ?>
                         <?= $title ?>
                     </h2>
