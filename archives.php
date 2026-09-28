@@ -36,6 +36,9 @@ date_default_timezone_set("$timezone");
     <?php if ($currentDisplay !== "active") { ?>
         <div class="project-select-popup-wrapper" id="project-popup">
             <div class="project-select-popup">
+                <div class="popup-header">
+                    <h2>Choose Your Active Project</h2>
+                </div>
             <?php {
                 //* Pull active project data
                 $sql = "SELECT * FROM current_project WHERE users_id='$userID' AND current_state='current'";
