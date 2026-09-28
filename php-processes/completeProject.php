@@ -18,7 +18,7 @@ $user = $result->fetch_assoc();
     $newNumber = $numberCompleted + 1;
 
 
-$stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_state=?, display=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
+$stmt1 = $_SESSION["conn"] -> prepare("UPDATE current_project SET current_state=?, `display`=? WHERE users_id=$userID AND current_state='current' AND id=$projectID");
 $stmt2 = $_SESSION["conn"] -> prepare("UPDATE users SET projects_completed=? WHERE id=$userID");
 $stmt1->bind_param("s,s",
                         $completed,
